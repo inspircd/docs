@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+ROOT = File.dirname __dir__
+
+missing = Array.new
+Dir["#{ROOT}/docs/**/*.md"].each do |file|
+	File.read(file).scan(/\[[^\]]+\]\(\/([^\)]+?)(?:\#[^\)]+|\/)?\)/).each do |link|
+		next if File.exist? "#{ROOT}/docs/#{link[0]}.md"
+		next if File.exist? "#{ROOT}/docs/#{link[0]}/index.md"
+		missing << link[0] unless missing.include? link[0]
+	end
+end
+
+missing.sort.each do |link|
+	absolute_link = "#{ROOT}/docs/#{link}"
+	absolute_link += '/index.md' if File.exist? absolute_link
+	puts "Missing: #{absolute_link}"
+end
+puts "#{missing.size} missing!"
+exit missing.size
