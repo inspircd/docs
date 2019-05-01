@@ -59,7 +59,7 @@ The type field should be set to one of the following values:
 Value   | Module                                  | Description
 ------- | --------------------------------------- | -----------
 clients | *None*                                  | Listens for IRC client connections.
-httpd   | [httpd](/2/modules/httpd)               | Listens for HTTP connnections.
+httpd   | [httpd](/2/modules/httpd)               | Listens for HTTP connections.
 servers | [spanningtree](/2/modules/spanningtree) | Listens for IRC server connections.
 
 #### Example Usage

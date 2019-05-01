@@ -498,19 +498,19 @@ Sends a message to the target specified in `<target>`. This target can be a chan
 Sends a message to #channel saying "Hello!":
 
 ```plaintext
-/NOTICE #channel :Hello!
+/PRIVMSG #channel :Hello!
 ```
 
 Sends a message to Sadie saying "Hello!":
 
 ```plaintext
-/NOTICE Sadie :Hello!
+/PRIVMSG Sadie :Hello!
 ```
 
 Sends a message to all users on servers matching the glob pattern `*.example.com` saying "Hello!":
 
 ```plaintext
-/NOTICE $*.example.com :Hello!
+/PRIVMSG $*.example.com :Hello!
 ```
 
 ### `/QLINE <nick> [<duration> <reason>]`
@@ -779,7 +779,7 @@ h         | Show real hostnames rather than display hostnames (server operators 
 i         | Show users who have an ident (username) matching `<pattern>`.
 l         | Only show users on the local server.
 M         | Show users who have metadata attached to them with a key name matching `<pattern>` (server operators only).
-m         | Show users who have the modes listed in `<pattern>`. The pattern hould be in the same format as a mode change e.g. +ow-i (server operators only).
+m         | Show users who have the modes listed in `<pattern>`. The pattern should be in the same format as a mode change e.g. +ow-i (server operators only).
 o         | Only show server operators.
 p         | Show users who are connected to a port in the `<pattern>` range (server operators only).
 r         | Show users who have a real name matching `<pattern>`.
