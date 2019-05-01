@@ -31,7 +31,7 @@ Sends a server notice saying "I like turtles" to all server operators with the `
 ```plaintext
 /GLOBOPS :I like turtles.
 ```
-## Server Notice Masks
+### Server Notice Masks
 
 Character | Description
 --------- | -----------

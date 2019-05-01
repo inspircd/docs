@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 This module requires no other configuration.
 
-## Server Notice Masks
+### Server Notice Masks
 
 Character | Description
 --------- | -----------

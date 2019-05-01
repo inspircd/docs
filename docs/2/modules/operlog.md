@@ -30,7 +30,7 @@ tosnomask | Boolean | No            | Whether to log to snomask `r` (local) and 
 <operlog tosnomask="yes">
 ```
 
-## Server Notice Masks
+### Server Notice Masks
 
 Character | Description
 --------- | -----------

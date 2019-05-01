@@ -70,7 +70,7 @@ requirekey | Boolean | No            | Whether overriding server operators shoul
           requirekey="no">
 ```
 
-## Server Notice Masks
+### Server Notice Masks
 
 Character | Description
 --------- | -----------

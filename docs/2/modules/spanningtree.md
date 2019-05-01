@@ -232,7 +232,7 @@ Disconnects the local server us-hub.example.com with the reason "Updating InspIR
 /SQUIT us-hub.example.com :Updating InspIRCd
 ```
 
-## Server Notice Masks
+### Server Notice Masks
 
 Character | Description
 --------- | -----------
