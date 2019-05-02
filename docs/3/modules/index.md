@@ -88,7 +88,7 @@ Name                                                | Description
 [ircv3_batch](/3/modules/ircv3_batch)               | Provides the batch IRCv3 extension
 [ircv3_capnotify](/3/modules/ircv3_capnotify)       | Provides the cap-notify IRCv3 extension
 [ircv3_chghost](/3/modules/ircv3_chghost)           | Provides the chghost IRCv3 extension
-[ircv3_ctctags](/3/modules/ircv3_ctctags)           | Provides the DRAFT message-tags IRCv3 extension
+[ircv3_ctctags](/3/modules/ircv3_ctctags)           | Provides the message-tags IRCv3 extension
 [ircv3_echomessage](/3/modules/ircv3_echomessage)   | Provides the echo-message IRCv3 extension
 [ircv3_invitenotify](/3/modules/ircv3_invitenotify) | Provides the invite-notify IRCv3 extension
 [ircv3_servertime](/3/modules/ircv3_servertime)     | Provides the server-time IRCv3 extension

@@ -13,7 +13,3 @@ Shuts down the local server using the password "hunter2":
 ```plaintext
 /DIE hunter2
 ```
-
-
-
-

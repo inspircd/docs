@@ -24,6 +24,12 @@ Name       | Type    | Default Value | Description
 ---------- | ------- | ------------- | -----------
 opernotice | Boolean | Yes           | Whether to send a notice to snomask `a` (local) and snomask `A` (remote) when a users IP address changes.
 
+##### Example Usage
+
+```xml
+<cgiirc opernotice="yes">
+```
+
 #### `<cgihost>`
 
 The `<cgihost>` tag defines a specific IRC gateway. This tag can be defined as many times as required.

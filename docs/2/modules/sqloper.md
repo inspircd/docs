@@ -24,7 +24,7 @@ Name  | Type | Default Value                                                    
 ----- | ---- | ------------------------------------------------------------------------------------------------- | -----------
 dbid  | Text | *None*                                                                                            | **Required!** The name of the database connection to execute the query against.
 hash  | Text | *None*                                                                                            | The algorithm that server operator passwords are hashed with.
-query | Text | SELECT hostname as host, type FROM ircd_opers WHERE username='$username' AND password='$password' | The SQL query to retrieve server operator configuration   with.
+query | Text | SELECT hostname as host, type FROM ircd_opers WHERE username='$username' AND password='$password' | The SQL query to retrieve the server operator with.
 
 The query field can contain any of the following template variables:
 

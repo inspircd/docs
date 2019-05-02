@@ -24,6 +24,14 @@ Name  | Character | Type      | Parameter Syntax       | Description
 ----- | --------- | --------- | ---------------------- | -----------
 flood | f         | Parameter | `(*)<lines>:<seconds>` | Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
 
+#### Example Usage
+
+Prevents more than four messages in the last two seconds:
+
+```plaintext
+/MODE #channel +f 4:2
+```
+
 ### Exemptions
 
 Name  | Description

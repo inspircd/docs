@@ -1,6 +1,5 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-
 ### `/WHOWAS <nick>[,<nick>]`
 
 Requests information about users who were previously connected with the specified nicks.

@@ -29,3 +29,11 @@ maxtime | Duration | 30m           | The maximum time that can be set as a param
 Name         | Character | Type      | Parameter Syntax | Description
 ------------ | --------- | --------- | ---------------- | -----------
 kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked for rejoining until &lt;seconds&gt; seconds have passed.
+
+#### Example Usage
+
+Prevents kicked users from rejoining for 30 seconds:
+
+```plaintext
+/MODE #channel +J 30
+```

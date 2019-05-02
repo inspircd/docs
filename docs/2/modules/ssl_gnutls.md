@@ -97,3 +97,9 @@ sha256 | Generates fingerprints using the [SHA-256](https://en.wikipedia.org/wik
         showports="yes"
         starttls="yes">
 ```
+
+### Client Capabilities
+
+Name                                                   | Description
+------------------------------------------------------ | -----------
+[tls](https://ircv3.net/specs/extensions/tls-3.1.html) | Allows plain text connections to upgrade to TLS.

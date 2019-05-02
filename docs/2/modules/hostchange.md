@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<host>`
 
-The `<host>` tag defines settings about how the blockcaps module should behave. This tag can only be defined once.
+The `<host>` tag defines settings about how the hostchange module should behave. This tag can only be defined once.
 
 Name      | Type | Default Value | Description
 --------- | ---- | ------------- | -----------

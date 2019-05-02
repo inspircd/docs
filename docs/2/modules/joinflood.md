@@ -23,3 +23,11 @@ This module requires no other configuration.
 Name      | Character | Type      | Parameter Syntax    | Description
 --------- | --------- | --------- | ------------------- | -----------
 joinflood | j         | Parameter | `<joins>:<seconds>` | Prevents more than &lt;joins&gt; joins in the last &lt;seconds&gt; seconds.
+
+#### Example Usage
+
+Prevents more than two joins in the last five seconds:
+
+```plaintext
+/MODE #channel +j 2:5
+```

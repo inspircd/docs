@@ -16,7 +16,19 @@ To load this module use the following `<module>` tag:
 <module name="m_nonicks.so">
 ```
 
-This module requires no other configuration.
+#### `<nonicks>`
+
+The `<nonicks>` tag defines settings about how the nonicks module should behave. This tag can only be defined once.
+
+Name         | Type    | Default Value | Description
+------------ | ------- | ------------- | -----------
+operoverride | Boolean | Yes           | Whether server operators can change their nicknames regardless of channel mode `N` (nonick) being set. 
+
+##### Example Usage
+
+```xml
+<nonicks operoverride="yes">
+```
 
 ### Channel Modes
 

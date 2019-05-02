@@ -1,6 +1,5 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-
 ### `<options>`
 
 The `<options>` tag defines general configuration options. This tag can only be defined once.
@@ -25,7 +24,6 @@ suffixpart         | Text    | *None*         | If defined then the value to suf
 suffixquit         | Text    | *None*         | If defined then the value to suffix users' quit messages with.
 syntaxhints        | Boolean | No             | Whether to send syntax hints to users who send commands with not enough parameters.
 xlinemessage       | Text    | You're banned! | The message to send to users who have been banned from the server.
-
 
 The casemapping field should be set to one of the following values:
 
