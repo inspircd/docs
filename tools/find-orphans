@@ -4,16 +4,19 @@ PAGES = Dir["#{ROOT}/docs/**/*.md"]
 
 linked = [ "#{ROOT}/docs/index.md" ]
 PAGES.each do |file|
-	File.read(file).scan(/\[[^\]]+\]\(\/([^\)]+?)(?:\#[^\)]+|\/)?\)/).each do |link|
+	contents = File.read(file)
+	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)(?:\#[^\)]+|\/)?\)/).each do |link|
 		linked << "#{ROOT}/docs/#{link[0]}.md"
 		linked << "#{ROOT}/docs/#{link[0]}/index.md"
+	end
+	contents.scan(/\{!\s*(\S+)\s*!\}/).each do |fragment|
+		linked << "#{ROOT}/docs/#{fragment[0]}"
 	end
 end
 
 orphaned = 0
 PAGES.each do |file|
 	next if linked.include? file
-	next if File.basename(file)[0] == '_'
 	puts "Orphaned: #{file}"
 	orphaned += 1
 end
