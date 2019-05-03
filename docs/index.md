@@ -11,6 +11,7 @@ title: Introduction
 
 - [Frequently Asked Questions](/faq)
 - [License](/license)
+- [Release Procedure](/release-procedure)
 - [Versioning Policy](/versioning)
 
 </div>
