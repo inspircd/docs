@@ -4,7 +4,7 @@
 
 Restarts the local server. The `<server>` parameter MUST match the name of the local server.
 
-This command is only usable by server operators with DIE in one of their `<class>` blocks.
+This command is only usable by server operators with RESTART in one of their `<class>` blocks.
 
 #### Example Usage
 

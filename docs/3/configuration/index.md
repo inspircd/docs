@@ -5,7 +5,7 @@ title: Configuration
 
 ## InspIRCd Configuration
 
-This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/2/modules).
+This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {! 2/configuration/_admin.md !}
 {! 2/configuration/_badhost.md !}

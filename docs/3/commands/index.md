@@ -5,7 +5,7 @@ title: Commands
 
 ## InspIRCd Commands
 
-This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/2/modules).
+This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {! 2/commands/_cmd_admin.md !}
 {! 2/commands/_cmd_away.md !}
