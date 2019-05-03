@@ -11,7 +11,7 @@ casemapping        | Text    | rfc1459        | The casemapping to use when comp
 cyclehostsfromuser | Boolean | No             | Whether to send modes from the user rather than the server when sending a fake rejoin.
 defaultbind        | Text    | auto           | The IP version to bind using if an IP address is not specified.
 defaultmodes       | Text    | not            | The default modes to apply to newly created channels.
-exemptchanops      | Text    | *None*         | The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/2/modules/exemptchanops) for more information.
+exemptchanops      | Text    | *None*         | The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/3/modules/exemptchanops) for more information.
 fixedpart          | Text    | *None*         | If defined then a static value to replace users' part messages with.
 fixedquit          | Text    | *None*         | If defined then a static value to replace users' quit messages with.
 hostintopic        | Boolean | No             | Whether to show the full user mask of a topic setter rather than just their nickname.

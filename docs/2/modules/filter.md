@@ -36,7 +36,7 @@ The engine field should be set to the name of a regular expression engine.
 
 #### `<keyword>`
 
-The `<keyword>` tag defines an DNSBL to check connecting users against. This tag can be defined as many times as required.
+The `<keyword>` tag defines an inappropriate phrase. This tag can be defined as many times as required.
 
 Name     | Type     | Default Value  | Description
 -------- | -------- | -------------- | -----------

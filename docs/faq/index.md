@@ -53,7 +53,7 @@ Common services packages used with InspIRCd are:
 
 - [Atheme](https://atheme.github.io/atheme.html)
 
-### Why don't I have channel privileges even though i'm a server operator?
+### Why don't I have channel privileges even though I'm a server operator?
 
 Server operators do not automatically get channel privileges by default. You can change this by:
 
