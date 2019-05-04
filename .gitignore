@@ -1,3 +1,5 @@
 .*
+site
+
 !.git*
 !.travis.yml

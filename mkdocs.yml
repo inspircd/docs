@@ -20,6 +20,11 @@ markdown_extensions:
     - extra
     - markdown_include.include:
           base_path: docs
+plugins:
+  - exclude:
+      glob:
+        - _*
+  - search
 copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
 repo_url: https://github.com/inspircd/inspircd-docs
 site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
