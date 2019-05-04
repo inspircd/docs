@@ -17,7 +17,7 @@ Name       | Description
 3. Tag the release with `git tag VERSION`.
 4. Run `git push UPSTREAM BRANCH` and `git push UPSTREAM VERSION`.
 5. Add a [GitHub release](https://github.com/inspircd/inspircd/tags) for the VERSION on tag.
-6. Generate a list of contributors for the news post using `git log --pretty='  - %aN' PREVIOUS...v. | sort -fu`
+6. Generate a list of contributors for the news post using `git log --pretty='  - %aN' PREVIOUS...VERSION | sort -fu`
 7. Create a news post on the website using the list of contributors from the previous step.
 8. Mark the new news post as featured and unmark the old one.
 9. If the release is stable then update `misc.currentVersion` in the website config to VERSION.
