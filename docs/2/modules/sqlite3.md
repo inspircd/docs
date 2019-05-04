@@ -43,9 +43,5 @@ hostname | Text   | *None*        | **Required!** The path to where the SQLite d
 ```xml
 <database module="sqlite3"
           id="opers"
-          host="localhost"
-          port="3306"
-          user="ircd_opers"
-          pass="changeme"
-          name="inspircd">
+          hostname="/path/to/database.sq3">
 ```
