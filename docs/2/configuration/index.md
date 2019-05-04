@@ -1,5 +1,4 @@
 ---
-disable_toc: true
 title: Configuration
 ---
 

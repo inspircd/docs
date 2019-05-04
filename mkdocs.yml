@@ -1,3 +1,5 @@
+extra_css:
+  - css/fix-cinder-sidebar-scrolling.css
 nav:
     - InspIRCd 2:
         - Installation: /2/installation
