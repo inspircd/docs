@@ -20,9 +20,27 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - `<disabled>` has been moved from the core to the new disable module. All you will need to do in order to upgrade is to load this module.
 
+- `<gnutls:cafile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<gnutls:certfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<gnutls:crlfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<gnutls:keyfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
 - `<include:file>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
 
 - `<log:target>` is now relative to the log directory. Generally all you will need to do in order to upgrade is remove `logs/` from the path.
+
+- `<openssl:cafile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<openssl:certfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<openssl:crlfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<openssl:dhfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
+
+- `<openssl:keyfile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
 
 - `<options:defaultmodes>` must now include any default prefix modes. To keep v2 behaviour add "o" to the default modes.
 
@@ -94,6 +112,12 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - `<exemptchanops>` has been removed. If you wish to keep this behaviour you should rename it to `<maxlist mode="exemptchanops">`.
 
+- `<gnutls:advertisedports>` has been removed with no replacement.
+
+- `<gnutls:showports>` has been removed with no replacement (now always disabled).
+
+- `<gnutls:dhbits>` has been removed with no replacement. You must now provide a DH parameter file for the server to use instead.
+
 - `<gnutls:starttls>` has been removed. If you wish to keep this behaviour then you should load the new starttls module. See the documentation in modules.conf.example for more details.
 
 - `<host:prefix>` has been removed. If you wish to keep this behaviour you should move the prefix field to your `<hostchange>` blocks
@@ -107,6 +131,12 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 - `<options:cyclehosts>` has been removed. If you wish to keep this behaviour then you should load the new hostcycle module. See the documentation in modules.conf.example for more details.
 
 - `<options:ircumsgprefix>` has been removed with no replacement (now always disabled).
+
+- `<openssl:advertisedports>` has been removed with no replacement.
+
+- `<openssl:cipherserverpref>` has been removed with no replacement (now always enabled).
+
+- `<openssl:showports>` has been removed with no replacement (now always disabled).
 
 - `<openssl:sslv3>` has been removed with no replacement (now always disabled).
 
