@@ -48,9 +48,19 @@ Listens for GnuTLS-encrypted server connections on the *:7002 endpoint:
 
 ```xml
 <bind address="*"
-      port="7002"
+      port="7003"
       ...
       ssl="gnutls"
+      type="servers">
+```
+
+Listens for mbedTLS-encrypted server connections on the *:7002 endpoint:
+
+```xml
+<bind address="*"
+      port="7002"
+      ...
+      ssl="mbedtls"
       type="servers">
 ```
 
