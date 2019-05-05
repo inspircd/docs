@@ -4,7 +4,7 @@
 
 Kicks one or more users from the specified channel.
 
-You must at least a channel half-operator, or channel operator if that channel mode is not enabled, and must be an equal or higher rank to the user you are kicking.
+You must be at least a channel half-operator, or channel operator if that channel mode is not enabled, and must be an equal or higher rank to the user you are kicking.
 
 #### Example Usage
 

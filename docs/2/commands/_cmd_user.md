@@ -6,7 +6,7 @@ Specifies a username (ident) and real name (gecos) when connecting to the server
 
 #### Example Usage
 
-Specifies the username (ident) "jsmith" and the real name "John Smith <jsmith@example.com>":
+Specifies the username (ident) "jsmith" and the real name "John Smith &lt;jsmith@example.com&gt;":
 
 ```plaintext
 /USER jsmith * * :John Smith <jsmith@example.com>

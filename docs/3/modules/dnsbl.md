@@ -91,7 +91,7 @@ record  | DNSBL results will be compared against a numeric range of values. For 
        records="1,2,3,4,5"
        action="ZLINE"
        duration="7d"
-       reason="You are listed in the EFnet RBL. Please visit http://rbl.efnetrbl.org/?i=%ip% for more information.">
+       reason="You are listed in the EFnet RBL. Please visit https://rbl.efnetrbl.org/?i=%ip% for more information.">
 ```
 
 [torexit.dan.me.uk](https://www.dan.me.uk/dnsbl) is a DNSBL of [Tor](https://www.torproject.org) exit nodes.

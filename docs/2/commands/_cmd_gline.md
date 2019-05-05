@@ -22,7 +22,7 @@ G-lines sadie@example.com for one day with the reason "Testing":
 /GLINE sadie@example.com 86400 :Testing
 ```
 
-Removes an G-line on sadie@example.com:
+Removes a G-line on sadie@example.com:
 
 ```plaintext
 /GLINE sadie@example.com

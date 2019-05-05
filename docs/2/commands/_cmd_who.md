@@ -20,7 +20,7 @@ t         | Show users who have connected in the last `<pattern>` seconds.
 
 #### Example Usage
 
-Requests all users on the local server who have an away message matching `*brb`:
+Requests all users on the local server who have an away message matching `*brb*`:
 
 ```plaintext
 /WHO *brb* al

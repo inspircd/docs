@@ -7,7 +7,7 @@ The `<security>` tag defines configuration options relating to server security. 
 Name                | Type     | Default Value | Description
 ------------------- | -------- | ------------- | -----------
 allowcoreunload     | Boolean  | No            | Whether core modules can be unloaded by a server operator.
-announceinvites     | Text     | none          | Whether to send an announcement when a user is invited to a channel.
+announceinvites     | Text     | dynamic       | Whether to send an announcement when a user is invited to a channel.
 customversion       | Text     | Network IRCd  | A custom string to show in the `/VERSION` output.
 genericoper         | Boolean  | No            | Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
 hidebans            | Boolean  | No            | Whether to only show X-line messages to server operators.

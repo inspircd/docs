@@ -9,7 +9,7 @@ Name        | Type    | Default Value           | Description
 name        | Text    | *None*                  | If defined then the name of this connect class.
 allow       | Text    | *None*                  | A glob pattern or CIDR range for an IP address which is allowed to connect to the server. If this is defined then `deny` (below) MUST NOT be defined.
 deny        | Text    | *None*                  | A glob pattern or CIDR range for an IP address which is banned from connecting to the server. If this is defined then `allow` (above) MUST NOT be defined.
-commandrate | Number  | *None*                  | The number of millicommands per second that a user can execute.
+commandrate | Number  | *None*                  | The number of commands per millisecond that a user can execute.
 fakelag     | Boolean | Yes                     | Whether users should have their input/output delayed when they reach a soft limit rather than being killed.
 globalmax   | Number  | *None*                  | The maximum number of users who can exist on the entire network from the range specified in the allow field.
 hardsendq   | Number  | 1048576                 | The maximum amount of data allowed in a user's send queue before it is killed.
@@ -38,7 +38,7 @@ Denies connections to clients connecting from 3ffe::0/32:
          reason="The 6bone address space is deprecated">
 ```
 
-Defines a general connect class and then a SSL-only connect class that inherits from it:
+Defines an SSL-only connect class and then a general connect class to inherit from:
 
 ```xml
 <connect name="Secure"

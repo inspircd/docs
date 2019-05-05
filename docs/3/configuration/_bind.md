@@ -2,7 +2,7 @@
 
 ### `<bind>`
 
-The `<bind>` tag defines an endpoint to listen for connections on. This tag can only be defined once.
+The `<bind>` tag defines an endpoint to listen for connections on. This tag can be defined as many times as required.
 
 Name    | Type   | Default Value | Description
 ------- | ------ | ------------- | -----------
@@ -29,9 +29,9 @@ Listens for IRC client connections on 192.0.2.1:6667:
       type="clients">
 ```
 
-Listens for IRC server connections on *:6667:
+Listens for IRC server connections on *:7000:
 
 ```xml
-<bind port="6667"
-      type="clients">
+<bind port="7000"
+      type="servers">
 ```

@@ -6,7 +6,7 @@ title: Module Details (alltime)
 
 ### Description
 
-This module adds the `/ALLTIME` command which allows server operators to see the the current UTC time on all of the servers on the network.
+This module adds the `/ALLTIME` command which allows server operators to see the current UTC time on all of the servers on the network.
 
 ### Configuration
 

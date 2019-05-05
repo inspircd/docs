@@ -4,10 +4,10 @@
 
 The `<badip>` tag defines a permanent Z-line. This tag can be defined as many times as required.
 
-Name   | Type | Default Value | Description
------- | ---- | ------------- | -----------
-ipmask | Text | *None*        | **Required!** An IP address to Z-line.
-reason | Text | <Config>      | The reason for the Z-line being added.
+Name   | Type | Default Value  | Description
+------ | ---- | -------------- | -----------
+ipmask | Text | *None*         | **Required!** An IP address to Z-line.
+reason | Text | &lt;Config&gt; | The reason for the Z-line being added.
 
 #### Example Usage
 

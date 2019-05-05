@@ -15,5 +15,5 @@ Requests the hostname of Adam:
 Requests the hostname of Adam and Sadie:
 
 ```plaintext
-/USERHOST Adam
+/USERHOST Adam Sadie
 ```

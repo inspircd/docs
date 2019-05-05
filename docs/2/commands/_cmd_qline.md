@@ -22,7 +22,7 @@ Q-lines Sadie for one day with the reason "Testing":
 /QLINE Sadie 86400 :Testing
 ```
 
-Removes an Q-line on Adam:
+Removes a Q-line on Adam:
 
 ```plaintext
 /QLINE Adam

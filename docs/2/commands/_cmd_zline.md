@@ -22,7 +22,7 @@ Z-lines 192.0.2.0/24 for one day with the reason "Testing":
 /ZLINE 192.0.2.0/24 86400 :Testing
 ```
 
-Removes an Z-line on 192.0.2.1:
+Removes a Z-line on 192.0.2.1:
 
 ```plaintext
 /ZLINE 192.0.2.1

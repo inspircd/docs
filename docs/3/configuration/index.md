@@ -20,7 +20,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 3/configuration/_limits.md !}
 {! 3/configuration/_log.md !}
 {! 3/configuration/_maxlist.md !}
-{! 2/configuration/_module.md !}
+{! 3/configuration/_module.md !}
 {! 3/configuration/_oper.md !}
 {! 3/configuration/_options.md !}
 {! 3/configuration/_path.md !}

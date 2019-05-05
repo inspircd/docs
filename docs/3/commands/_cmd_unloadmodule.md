@@ -11,5 +11,5 @@ This command is only usable by server operators with UNLOADMODULE in one of thei
 Unloads the alias module:
 
 ```plaintext
-/UNLOADMODULE m_alias.so
+/UNLOADMODULE alias
 ```

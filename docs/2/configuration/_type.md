@@ -8,8 +8,8 @@ Name     | Type | Default Value | Description
 -------- | ---- | ------------- | -----------
 class    | Text | *None*        | If defined then a connect class to assign users who log into this server operator account to.
 classes  | Text | *None*        | If defined then a space-delimited list of `<class>` tags to inherit privileges from.
-name     | Text | *None*        | **Required!** The name for this server operator account.
-vhost    | Text | *None*        | If defined then a virtual hostname to set on users who log into this server operator account.
+name     | Text | *None*        | **Required!** The name for this server operator type.
+vhost    | Text | *None*        | If defined then a virtual hostname to set on users who log into a server operator account using this type.
 
 #### Example Usage
 

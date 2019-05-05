@@ -22,7 +22,7 @@ K-lines sadie@example.com for one day with the reason "Testing":
 /KLINE sadie@example.com 86400 :Testing
 ```
 
-Removes an K-line on sadie@example.com:
+Removes a K-line on sadie@example.com:
 
 ```plaintext
 /KLINE sadie@example.com

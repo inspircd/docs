@@ -6,7 +6,7 @@ Determines whether the specified nicknames are currently connected to the networ
 
 #### Example Usage
 
-Checks whether Adam, Attila, and Sadie are currently connected to network:
+Checks whether Adam, Attila, and Sadie are currently connected to the network:
 
 ```plaintext
 /ISON Adam Attila Sadie
