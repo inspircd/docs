@@ -26,7 +26,7 @@ quotes | Text | *None*        | The file to read or command to execute to obtain
 
 ##### Example Usage
 
-Obtains the quotes by reading conf/quotes.txt:
+Obtains the quotes by reading quotes.txt:
 
 ```xml
 <files ...

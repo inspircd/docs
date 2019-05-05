@@ -22,10 +22,10 @@ The `<xlinedb>` tag defines settings about how the xline_db module should behave
 
 Name     | Type | Default Value | Description
 -------- | ---- | ------------- | -----------
-filename | Text | data/xline.db | The location to read/write the X-line database from.
+filename | Text | xline.db      | The location to read/write the X-line database from.
 
 ##### Example Usage
 
 ```xml
-<xlinedb filename="data/xline.db">
+<xlinedb filename="xline.db">
 ```

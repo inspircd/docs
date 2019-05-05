@@ -26,7 +26,7 @@ OPERMOTD | Text | *None*        | The file to read or command to execute to obta
 
 ##### Example Usage
 
-Obtains the server operator message of the day by reading conf/opermotd.txt:
+Obtains the server operator message of the day by reading opermotd.txt:
 
 ```xml
 <files ...

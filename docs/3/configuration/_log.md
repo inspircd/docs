@@ -94,5 +94,5 @@ none    | Logs nothing.
 <log method="file"
      type="* -USERINPUT -USEROUTPUT"
      level="default"
-     target="logs/ircd.log">
+     target="ircd.log">
 ```
