@@ -1,6 +1,6 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-### `/INVITE [[<nick> <channel>] <duration>]`
+### `/INVITE [<nick> <channel> [<duration>]]`
 
 If `<nick>` and `<channel>` are specified then sends an invite to `<nick>` inviting them to join `<channel>`.
 

@@ -13,7 +13,7 @@ This command is only usable by server operators with ZLINE in one of their `<cla
 Z-lines 192.0.2.1 for one day with the reason "Testing":
 
 ```plaintext
-/ZLINE 192.0.2.0 1d :Testing
+/ZLINE 192.0.2.1 1d :Testing
 ```
 
 Z-lines 192.0.2.0/24 for one day with the reason "Testing":
