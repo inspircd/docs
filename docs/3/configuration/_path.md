@@ -2,7 +2,7 @@
 
 ### `<path>`
 
-The `<path>` tag defines the location of the modules directory. This tag can only be defined once.
+The `<path>` tag defines the location of the config, data, log, and module directories. This tag can only be defined once.
 
 Name      | Type | Default Value | Description
 --------- | ---- | ------------- | -----------

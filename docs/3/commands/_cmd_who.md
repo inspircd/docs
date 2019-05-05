@@ -44,7 +44,7 @@ u         | Include the user's username in the response.
 
 #### Example Usage
 
-Requests all users on the local server who have an away message matching `*brb`:
+Requests all users on the local server who have an away message matching `*brb*`:
 
 ```plaintext
 /WHO *brb* Al

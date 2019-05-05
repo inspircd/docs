@@ -14,7 +14,7 @@ Requests `p` (ports) statistics for the local server:
 
 ```plaintext
 /STATS p
-````
+```
 
 Requests `p` (ports) statistics for the remote server irc.eu.example.com:
 

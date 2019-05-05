@@ -20,7 +20,7 @@ This page only lists core commands. For details on the commands of a specific mo
 {! 2/commands/_cmd_kill.md !}
 {! 2/commands/_cmd_kline.md !}
 {! 2/commands/_cmd_list.md !}
-{! 2/commands/_cmd_loadmodule.md !}
+{! 3/commands/_cmd_loadmodule.md !}
 {! 2/commands/_cmd_lusers.md !}
 {! 3/commands/_cmd_mode.md !}
 {! 2/commands/_cmd_modules.md !}
@@ -37,13 +37,13 @@ This page only lists core commands. For details on the commands of a specific mo
 {! 2/commands/_cmd_qline.md !}
 {! 2/commands/_cmd_quit.md !}
 {! 3/commands/_cmd_rehash.md !}
-{! 2/commands/_cmd_reloadmodule.md !}
+{! 3/commands/_cmd_reloadmodule.md !}
 {! 3/commands/_cmd_restart.md !}
 {! 3/commands/_cmd_squery.md !}
 {! 2/commands/_cmd_stats.md !}
 {! 2/commands/_cmd_time.md !}
 {! 2/commands/_cmd_topic.md !}
-{! 2/commands/_cmd_unloadmodule.md !}
+{! 3/commands/_cmd_unloadmodule.md !}
 {! 2/commands/_cmd_user.md !}
 {! 2/commands/_cmd_userhost.md !}
 {! 2/commands/_cmd_version.md !}

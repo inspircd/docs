@@ -28,7 +28,7 @@ In order to build from source you will need to have the development tools for yo
 
 If you want to use any modules with third-party dependencies you should have pkg-config and the development headers for the dependency installed.
 
-Once you have dependencies installed you need to download the source code. You can choose between building the the most recent release or, if you enjoy living on the edge, the latest code committed to Git.
+Once you have dependencies installed you need to download the source code. You can choose between building the most recent release or, if you enjoy living on the edge, the latest code committed to Git.
 
 #### Release Tarball
 

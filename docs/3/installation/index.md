@@ -4,7 +4,7 @@ title: Installation
 
 ## Installing InspIRCd 3
 
-There are many different methods for installing InspIRCd. You should need to pick the method which fits your needs best.
+There are many different methods for installing InspIRCd. You should pick the method which fits your needs best.
 
 ### Docker
 

@@ -1,6 +1,6 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-### `/NOTICE <target>[,<target>]+ <message>`
+### `/PRIVMSG <target>[,<target>]+ <message>`
 
 Sends a message to the targets specified in `<target>`. These targets can be a channel, a user, or a server mask (requires the users/mass-message server operator privilege).
 
@@ -9,17 +9,17 @@ Sends a message to the targets specified in `<target>`. These targets can be a c
 Sends a message to #channel saying "Hello!":
 
 ```plaintext
-/NOTICE #channel :Hello!
+/PRIVMSG #channel :Hello!
 ```
 
 Sends a message to Sadie saying "Hello!":
 
 ```plaintext
-/NOTICE Sadie :Hello!
+/PRIVMSG Sadie :Hello!
 ```
 
 Sends a message to all users on servers matching the glob pattern `*.example.com` saying "Hello!":
 
 ```plaintext
-/NOTICE $*.example.com :Hello!
+/PRIVMSG $*.example.com :Hello!
 ```
