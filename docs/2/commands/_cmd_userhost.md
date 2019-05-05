@@ -1,6 +1,6 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-### `/USERHOST <nick> [<nick>]`
+### `/USERHOST <nick> [<nick>]+`
 
 Requests the hostname of the specified users.
 
