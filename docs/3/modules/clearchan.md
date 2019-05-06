@@ -30,8 +30,8 @@ Value | Description
 ----- | ----------- 
 KILL  | Kill all members of the channel (default behaviour).
 KICK  | Kick all members of the channel.
-G     | G-line all members of the channel.
-Z     | Z-line all members of the channel.
+G     | G-line all members of the channel for one hour.
+Z     | Z-line all members of the channel for one hour.
 
 #### Example Usage
 
@@ -50,5 +50,5 @@ Kicks all members of #spam:
 G-lines all members of #spam with the reason "Spamming is bad":
 
 ```plaintext
-/CLEARCHAN #spam :Spamming is bad
+/CLEARCHAN #spam G :Spamming is bad
 ```

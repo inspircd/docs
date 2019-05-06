@@ -22,7 +22,7 @@ The `<restrictmsg>` tag defines settings about how the restrictmsg module should
 
 Name  | Type    | Default Value | Description
 ----- | ------- | ------------- | -----------
-uline | Boolean | No            | Whether users are allowed to message other users on ulined servers (i.e. services pseudoclients).
+uline | Boolean | No            | Whether users are allowed to message other users on U-lined servers (i.e. services pseudoclients).
 
 ##### Example Usage
 

@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<alias>`
 
-The `<alias>` tag defines an custom channel or server command. This tag can be defined as many times as required.
+The `<alias>` tag defines a custom channel or server command. This tag can be defined as many times as required.
 
 Name           | Type    | Default Value | Description
 -------------- | ------- | ------------- | -----------
@@ -29,7 +29,7 @@ requires       | Text    | *None*        | If defined then the nickname of a use
 channelcommand | Boolean | No            | Whether the command can be executed as a channel command.
 usercommand    | Boolean | Yes           | Whether the command can be executed as a server command.
 operonly       | Boolean | No            | Whether the user executing the command must be a server operator.
-uline          | Boolean | No            | Whether the user specified in the requires value must be on a ulined server.
+uline          | Boolean | No            | Whether the user specified in the requires value must be on a U-lined server.
 
 The replacement field can contain any of the following template variables:
 
@@ -46,7 +46,7 @@ $vhost       | The virtual hostname of the user that executed the command.
 
 ##### Example Usage
 
-Defines an oper-only `/OPERSERV` server command that messages the OperServ client if it is on a ulined server:
+Defines an oper-only `/OPERSERV` server command that messages the OperServ client if it is on a U-lined server:
 
 ```xml
 <alias text="OPERSERV"

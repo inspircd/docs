@@ -37,4 +37,4 @@ Listens for plaintext haproxy connections on the 0.0.0.0:8080 endpoint:
 
 ## Special Notes
 
-If you are using this module must terminate SSL connections at your reverse proxy.
+If you are using this module you must terminate SSL connections at your reverse proxy.

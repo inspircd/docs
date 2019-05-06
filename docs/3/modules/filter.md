@@ -44,18 +44,18 @@ action   | Text     | none           | The action to take when a user does somet
 duration | Duration | 0s (Permanent) | If action is set to gline then the duration that users who match filters should be G-lined for.
 flags    | Text     | \*             | One or more flags that define what type of messages this filter applies to.
 pattern  | Text     | *None*         | The regex pattern to match against.
-reason   | Text     | *None*         | **Required!** The reason to give to users when they are being punished for doing something that matching this filter.
+reason   | Text     | *None*         | **Required!** The reason to give to users when they are being punished for doing something that matches this filter.
 
 The action field should be set to one of the following values:
 
 Value  | Description
 ------ | -----------
-block  | Block the message that matched the filter and inform server operators with the `a` (announcements) snomask.
+block  | Block the message that matched the filter and inform server operators with the `f` (filter) snomask.
 gline  | G-line the user that matched the filter.
 kill   | Kill the user that matched the filter.
 none   | Write the match to the log file and take no other action.
 shun   | Shun the user that matched the filter (requires [the shun module](/3/modules/shun)).
-silent | Block/replace the message that matched the filter.
+silent | Block the message that matched the filter.
 warn   | Warn the user that matched the filter.
 zline  | Z-line the user that matched the filter.
 
@@ -116,6 +116,13 @@ Removes a filter on \*fluffy?capybara\*:
 ```plaintext
 /FILTER *fluffy?capybara*
 ```
+
+### Server Notice Masks
+
+Character | Description
+--------- | -----------
+f         | Notifications about filter matches on the local server.
+F         | Notifications about filter matches on a remote server.
 
 ### Statistics
 

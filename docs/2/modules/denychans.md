@@ -18,14 +18,14 @@ To load this module use the following `<module>` tag:
 
 #### `<badchan>`
 
-The `<badchan>` tag defines an custom channel or server command. This tag can be defined as many times as required.
+The `<badchan>` tag defines a channel to prevent users from joining. This tag can be defined as many times as required.
 
 Name       | Type    | Default Value | Description
 ---------- | ------- | ------------- | -----------
 allowopers | Boolean | No            | Whether to allow server operators to join channels matching this rule.
 name       | Text    | *None*        | **Required!** A glob pattern for a channel name that users should be prevented from joining.
 reason     | Text    | *None*        | A message to tell a user who tries to join a channel that matches this rule.
-redirect   | Text    | *None*        | If defined then the name of a channel to join users to who try to join a channel matching this rule to.
+redirect   | Text    | *None*        | If defined then the name of a channel to join users to who try to join a channel matching this rule.
 
 ##### Example Usage
 
@@ -37,7 +37,7 @@ Bans channels matching #potato\* from being joined:
          allowopers="no">
 ```
 
-Redirects users joining channels #eggplant to #aubergine:
+Redirects users joining channel #eggplant to #aubergine:
 
 ```xml
 <badchan name="#eggplant"

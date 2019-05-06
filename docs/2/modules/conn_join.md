@@ -38,9 +38,9 @@ Forces all users in the Example class to join #example1 and #example2 on connect
 
 The `<autojoin>` tag defines settings about how the conn_join module should behave. This tag can only be defined once.
 
-Name       | Type | Default Value | Description
----------- | ---- | ------------- | -----------
-channel    | Text | *None*        | A comma-delimited list of channels for users to be joined to on connect.
+Name    | Type | Default Value | Description
+------- | ---- | ------------- | -----------
+channel | Text | *None*        | A comma-delimited list of channels for users to be joined to on connect.
 
 ##### Example Usage
 

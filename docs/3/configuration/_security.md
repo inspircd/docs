@@ -14,7 +14,7 @@ hidebans            | Boolean  | No            | Whether to only show X-line mes
 hidekills           | Text     | *None*        | If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
 hideserver          | Text     | *None*        | If defined then the text to show in place of a server name.
 hidesplits          | Boolean  | No            | Whether to hide server names in netsplit quits from non-server operators.
-hideulinekills      | Boolean  | No            | Whether to hide server notices about kills by users on ulined servers.
+hideulinekills      | Boolean  | No            | Whether to hide server notices about kills by users on U-lined servers.
 maxtargets          | Number   | 20            | The maximum number of targets a user may specify in a command.
 restrictbannedusers | Text     | Yes           | Whether to restrict the behaviour of users who are banned in a channel.
 runasgroup          | Text     | *None*        | If defined then the group to switch to after starting up (requires starting as root).

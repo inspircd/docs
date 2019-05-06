@@ -13,7 +13,7 @@ hidebans            | Boolean  | No            | Whether to only show X-line mes
 hidekills           | Text     | *None*        | If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
 hidemodes           | Text     | *None*        | The list modes to hide from users without channel privileges.
 hidesplits          | Boolean  | No            | Whether to hide server names in netsplit quits from non-server operators.
-hideulinekills      | Boolean  | No            | Whether to hide server notices about kills by users on ulined servers.
+hideulinekills      | Boolean  | No            | Whether to hide server notices about kills by users on U-lined servers.
 hidewhois           | Text     | *None*        | If defined then the text to show in place of a server name in `/WHOIS` output.
 maxtargets          | Number   | 20            | The maximum number of targets a user may specify in a command.
 operspywhois        | Text     | no            | Whether to show private/secret channels to operators with the users/auspex privilege.

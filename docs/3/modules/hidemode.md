@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<hidemode>`
 
-The `<hidemode>` tag defines settings about how the hidemode module should behave. This tag can only be defined once.
+The `<hidemode>` tag defines settings about how the hidemode module should behave. This tag can be defined as many times as required.
 
 Name | Type   | Default Value | Description
 ---- | ------ | ------------- | -----------

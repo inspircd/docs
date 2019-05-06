@@ -40,25 +40,25 @@ Loads [the botmode module](/2/modules/botmode) on servers matching \*.eu.example
 /GLOADMODULE m_botmode.so *.eu.example.com
 ```
 
-Unloads [the check module](/2/modules/check) on all servers:
+Reloads [the check module](/2/modules/check) on all servers:
 
 ```plaintext
-/GUNLOADMODULE m_check.so
+/GRELOADMODULE m_check.so
 ```
 
-Unloads [the check module](/2/modules/check) on servers matching \*.na.example.com:
+Reloads [the check module](/2/modules/check) on servers matching \*.na.example.com:
 
 ```plaintext
-/GUNLOADMODULE m_check.so *.na.example.com
+/GRELOADMODULE m_check.so *.na.example.com
 ```
 
-Reloads [the gecosban module](/2/modules/gecosban) on all servers:
+Unloads [the gecosban module](/2/modules/gecosban) on all servers:
 
 ```plaintext
 /GUNLOADMODULE m_gecosban.so
 ```
 
-Reloads [the gecosban module](/2/modules/gecosban) on servers matching \*.sea.example.com:
+Unloads [the gecosban module](/2/modules/gecosban) on servers matching \*.sea.example.com:
 
 ```plaintext
 /GUNLOADMODULE m_gecosban.so *.sea.example.com

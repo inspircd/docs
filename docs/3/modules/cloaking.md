@@ -41,7 +41,7 @@ Cloaking using the full mode:
 
 ```xml
 <cloak mode="full"
-       key="change me"
+       key="changeme"
        prefix="MyNet-"
        suffix=".IP">
 ```
@@ -50,7 +50,7 @@ Cloaking using the half mode:
 
 ```xml
 <cloak mode="half"
-       key="change me"
+       key="changeme"
        prefix="MyNet-"
        suffix=".IP"
        domainparts="3">

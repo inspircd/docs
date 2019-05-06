@@ -10,7 +10,7 @@ If `<<count>` is specified then only lists channels which contain less than `<co
 
 If `<pattern>` is specified then only lists channels with a name or a topic matching `<pattern>`.
 
-## Example Usage
+#### Example Usage
 
 Lists channels with more than five users:
 

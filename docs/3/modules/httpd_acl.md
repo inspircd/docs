@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<httpdacl>`
 
-The `<httpdacl>` tag defines settings about how the httpd_acl module should behave. This tag can only be defined once.
+The `<httpdacl>` tag defines settings about how the httpd_acl module should behave. This tag can be defined as many times as required.
 
 Name      | Type | Default Value | Description
 --------- | ---- | ------------- | -----------

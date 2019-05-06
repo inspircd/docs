@@ -22,7 +22,7 @@ The `<banfile>` tag defines a rule to use when determining if a file can be sent
 
 Name    | Type | Default Value | Description
 ------- | ---- | ------------- | -----------
-action  | Text | deny          | The action to take when a file matches the pattern.
+action  | Text | block         | The action to take when a file matches the pattern.
 pattern | Text | *None*        | **Required!** A glob pattern for the filename.
 
 The action field should be set to one of the following values:
@@ -30,7 +30,7 @@ The action field should be set to one of the following values:
 Value | Description
 ----- | -----------
 allow | Allows files matching the pattern to be sent.
-deny  | Denies file matching the pattern from being sent.
+block | Blocks file matching the pattern from being sent.
 
 ##### Example Usage
 
@@ -46,7 +46,7 @@ Allows only text files to be sent:
 ```xml
 <banfile action="allow"
          pattern="*.txt">
-<banfile action="deny"
+<banfile action="block"
          pattern="*">
 ```
 
@@ -56,7 +56,7 @@ The `<dccallow>` tag defines settings about how the dccallow module should behav
 
 Name       | Type    | Default Value | Description
 ---------- | ------- | ------------- | -----------
-action     | Text    | deny          | The default action to take if a file does not match a `<banfile>` rule.
+action     | Text    | block         | The default action to take if a file does not match a `<banfile>` rule.
 blockchat  | Boolean | No            | Whether DCC CHAT also requires the source to be on the DCC whitelist.
 length     | Number  | 0             | The default time a DCC whitelist entry is valid for. Setting this to 0 means the entry is permanent.
 maxentries | Number  | 20            | The maximum number of entries that a user can have on their DCC whitelist.
@@ -66,7 +66,7 @@ See the `<banfile>` documentation above for a list of possible values for the ac
 ##### Example Usage
 
 ```xml
-<dccallow action="deny"
+<dccallow action="block"
           blockchat="no"
           length="0"
           maxentries="20">

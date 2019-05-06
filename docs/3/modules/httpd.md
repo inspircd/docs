@@ -46,7 +46,7 @@ timeout | Duration | 10s           | The duration to timeout HTTP connections af
 ##### Example Usage
 
 ```xml
-<httpd timeout="10">
+<httpd timeout="10s">
 ```
 
 ### Special Notes

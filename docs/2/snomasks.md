@@ -47,6 +47,6 @@ o         | Notifications about users logging in and out of server operator acco
 O         | Notifications about users logging in and out of server operator accounts on a remote server.
 q         | Notifications about users disconnecting from the local server.
 Q         | Notifications about users disconnecting from a remote server.
-t         | Notification about *local and remote* attempts to use the /STATS command.
+t         | Notifications about *local and remote* attempts to use the `/STATS` command.
 x         | Notifications about X-lines being added/removed/expired on the local server.
 X         | Notifications about X-lines being added/removed/expired on a remote server.

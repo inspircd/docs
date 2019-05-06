@@ -22,5 +22,5 @@ This module requires no other configuration.
 
 Character | Description
 --------- | -----------
-j         | Notifications about nicknames being changed on the local server.
-J         | Notifications about nicknames being changed on a remote server.
+n         | Notifications about nicknames being changed on the local server.
+N         | Notifications about nicknames being changed on a remote server.

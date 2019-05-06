@@ -36,7 +36,7 @@ Disables DNSBL lookups for users in the WebChat class:
 
 #### `<dnsbl>`
 
-The `<dnsbl>` tag defines an DNSBL to check connecting users against. This tag can be defined as many times as required.
+The `<dnsbl>` tag defines a DNSBL to check connecting users against. This tag can be defined as many times as required.
 
 Name     | Type      | Default Value                 | Description
 -------- | --------- | ----------------------------- | -----------
