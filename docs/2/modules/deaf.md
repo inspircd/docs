@@ -23,7 +23,7 @@ The `<deaf>` tag defines settings about how the deaf module should behave. This 
 Name             | Type | Default Value | Description
 ---------------- | ---- | ------------- | -----------
 bypasschars      | Text | *None*        | A list of characters that a message to a normal user can begin with that exempt it from the deaf mode.
-bypasscharsuline | Text | *None*        | A list of characters that a message to a ulined user can begin with that exempt it from the deaf mode.
+bypasscharsuline | Text | *None*        | A list of characters that a message to a U-lined user can begin with that exempt it from the deaf mode.
 
 ##### Example Usage
 

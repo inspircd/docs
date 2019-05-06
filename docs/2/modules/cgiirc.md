@@ -78,7 +78,7 @@ Tells the cgiirc module that gateways with an IP matching "198.51.100.*" will se
 
 Name   | Parameter Count | Syntax                                      | Description
 ------ | --------------- | ------------------------------------------- | -----------
-WEBIRC | 4               | `<password> <gateway> <hostname> <address>` | Allows gateways to specify the IP address and hostname of users.
+WEBIRC | 4               | `<password> <gateway> <hostname> <address>` | Allows gateways to specify the hostname and IP address of users.
 
 More information about the `/WEBIRC` command is available on [the IRCv3 website](https://ircv3.net/specs/extensions/webirc.html).
 

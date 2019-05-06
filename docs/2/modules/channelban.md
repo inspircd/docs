@@ -31,3 +31,9 @@ Bans users in #evil from joining the channel:
 ```plaintext
 /MODE #channel +b j:#evil
 ```
+
+Bans users that have channel operator status in #evil from joining the channel:
+
+```plaintext
+/MODE #channel +b j:@#evil
+```

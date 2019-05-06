@@ -22,7 +22,7 @@ The `<cgiirc>` tag defines settings about how the cgiirc module should behave. T
 
 Name       | Type    | Default Value | Description
 ---------- | ------- | ------------- | -----------
-opernotice | Boolean | Yes           | Whether to send a notices to snomask `w` (local) and snomask `W` (remote) when a gateway tries to change an IP address.
+opernotice | Boolean | Yes           | Whether to send a notice to snomask `w` (local) and snomask `W` (remote) when a gateway tries to change an IP address.
 
 ##### Example Usage
 
@@ -36,7 +36,7 @@ The `<cgihost>` tag defines a specific IRC gateway. This tag can be defined as m
 
 Name        | Type | Default Value | Description
 ----------- | ---- | ------------- | -----------
-fingerprint | Text | *None*        | **Required for the webirc type if password is not set!** The SSL client fingerprint that the WebIRC gateway will authenticate with.
+fingerprint | Text | *None*        | **Required for the webirc type if password is not set!** The SSL client certificate fingerprint that the WebIRC gateway will authenticate with.
 mask        | Text | *None*        | **Required!** The IP address or hostname of the gateway.
 newident    | Text | gateway       | If the ident type is used then the value to replace usernames (idents) that contain hexadecimal-encoded IPv4 addresses.
 type        | Text | *None*        | **Required!** The type of authentication that the gateway uses.
@@ -60,7 +60,7 @@ Tells the cgiirc module that the \*.ident.gateway.example.com gateway will encod
          newident="wobble">
 ```
 
-Tells the cgiirc module that gateways with an IP matching 192.0.2.0/24 will send the IP address of users with the `/WEBIRC` command using SSL fingerprint authentication:
+Tells the cgiirc module that gateways with an IP matching 192.0.2.0/24 will send the IP address of users with the `/WEBIRC` command using SSL client certificate fingerprint authentication:
 
 ```xml
 <cgihost type="webirc"
@@ -68,7 +68,7 @@ Tells the cgiirc module that gateways with an IP matching 192.0.2.0/24 will send
          mask="192.0.2.0/24">
 ```
 
-Tells the cgiirc module that gateways with an hostname matching \*.webirc.gateway.example.com will send the IP address of users with the `/WEBIRC` command using password authentication:
+Tells the cgiirc module that gateways with a hostname matching \*.webirc.gateway.example.com will send the IP address of users with the `/WEBIRC` command using password authentication:
 
 ```xml
 <cgihost type="webirc"
@@ -81,7 +81,7 @@ Tells the cgiirc module that gateways with an hostname matching \*.webirc.gatewa
 
 Name   | Parameter Count  | Syntax                                                | Description
 ------ | ---------------- | ----------------------------------------------------- | -----------
-WEBIRC | 4-5              | `<password> <gateway> <hostname> <address> [<flags>]` | Allows gateways to specify the IP address and hostname of users.
+WEBIRC | 4-5              | `<password> <gateway> <hostname> <address> [<flags>]` | Allows gateways to specify the hostname and IP address of users.
 
 More information about the `/WEBIRC` command is available on [the IRCv3 website](https://ircv3.net/specs/extensions/webirc.html).
 

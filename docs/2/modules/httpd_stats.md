@@ -6,7 +6,7 @@ title: Module Details (httpd_stats)
 
 ### Description
 
-This module provides XML-serialised statistics about the server, channels, and users over HTTP via the /config path.
+This module provides XML-serialised statistics about the server, channels, and users over HTTP via the /stats path.
 
 ### Configuration
 

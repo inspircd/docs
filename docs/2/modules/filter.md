@@ -44,7 +44,7 @@ action   | Text     | none           | The action to take when a user does somet
 duration | Duration | 0s (Permanent) | If action is set to gline then the duration that users who match filters should be G-lined for.
 flags    | Text     | \*             | One or more flags that define what type of messages this filter applies to.
 pattern  | Text     | *None*         | The regex pattern to match against.
-reason   | Text     | *None*         | **Required!** The reason to give to users when they are being punished for doing something that matching this filter.
+reason   | Text     | *None*         | **Required!** The reason to give to users when they are being punished for doing something that matches this filter.
 
 The action field should be set to one of the following values:
 
@@ -54,7 +54,7 @@ block  | Block the message that matched the filter and inform server operators w
 gline  | G-line the user that matched the filter.
 kill   | Kill the user that matched the filter.
 none   | Write the match to the log file and take no other action.
-silent | Block/replace the message that matched the filter.
+silent | Block the message that matched the filter.
 
 The flags field should be set to one or more of the following values:
 

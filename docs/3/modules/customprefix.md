@@ -15,9 +15,10 @@ To load this module use the following `<module>` tag:
 ```xml
 <module name="customprefix">
 ```
+
 #### `<customprefix>`
 
-The `<customprefix>` tag defines an custom channel prefix mode. This tag can be defined as many times as required.
+The `<customprefix>` tag defines a custom channel prefix mode. This tag can be defined as many times as required.
 
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
@@ -27,7 +28,7 @@ prefix      | Text    | *None*        | The prefix character used for the mode.
 rank        | Number  | *None*        | The rank of the mode. Users with higher ranked prefix modes have privileges over users with lower ranks or no rank.
 ranktoset   | Number  | *None*        | The rank which is required to set this prefix mode.
 ranktounset | Number  | *None*        | The rank which is required to unset this prefix mode.
-depriv      | Boolean | *None*        | Whether a user with this prefix mode can remove it from themself?
+depriv      | Boolean | *None*        | Whether a user with this prefix mode can remove it from themself.
 change      | Boolean | No            | If enabled then allow modifying a channel prefix mode not created by the customprefix module.
 
 ##### Example Usage
@@ -70,6 +71,7 @@ Allows users with channel prefix mode `v` (voice) to remove it:
 <customprefix name="voice"
               change="yes"
               depriv="yes">
+```
 
 ### Special Notes
 

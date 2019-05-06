@@ -20,14 +20,14 @@ To load this module use the following `<module>` tag:
 
 The `<customtitle>` tag defines a title account. This tag can be defined as many times as required.
 
-Name      | Type | Default Value | Description
---------- | ---- | ------------- | -----------
-name      | Text | *None*        | **Required!** The username used when logging into the account.
-password  | Text | *None*        | **Required!** The password used when logging into the account.
-hash      | Text | *None*        | The algorithm that the password is hashed with.
-host      | Text | \*@\*         | A glob pattern for the user@host mask of users that can log into this account.
-title     | Text | *None*        | **Required!** The custom title shown in `/WHOIS` for users who log into this account.
-vhost     | Text | *None*        | The vhost for users who log into this account.
+Name     | Type | Default Value | Description
+-------- | ---- | ------------- | -----------
+name     | Text | *None*        | **Required!** The username used when logging into the account.
+password | Text | *None*        | **Required!** The password used when logging into the account.
+hash     | Text | *None*        | The algorithm that the password is hashed with.
+host     | Text | \*@\*         | A glob pattern for the user@host mask of users that can log into this account.
+title    | Text | *None*        | **Required!** The custom title shown in `/WHOIS` for users who log into this account.
+vhost    | Text | *None*        | The vhost for users who log into this account.
 
 {! 3/modules/_hash_table.md !}
 

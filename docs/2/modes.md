@@ -26,9 +26,9 @@ key        | k         | ParamBoth | `<key>`          | Prevents users from join
 limit      | l         | Parameter | `<count>`        | Allows no more than &lt;count&gt; users to join the channel.
 moderated  | m         | Switch    | *None*           | Prevents users without a prefix rank from messaging the channel.
 noextmsg   | n         | Switch    | *None*           | Prevents users who are not in the channel from messaging the channel.
-op         | o         | Prefix    | `<nick>`         | Grants channel operator status to `<nick>`.
-private    | p         | Switch    | *None*           | Hides the channel from people who are not a member. You probably want the `p` (private) channel mode rather than this.
-secret     | s         | Switch    | *None*           | Hides the channel from people who are not a member.
+op         | o         | Prefix    | `<nick>`         | Grants channel operator status to &lt;nick&gt;.
+private    | p         | Switch    | *None*           | Hides the channel in `/WHOIS` from people who are not a member. You probably want the `s` (secret) channel mode rather than this.
+secret     | s         | Switch    | *None*           | Hides the channel in `/WHOIS` and `/LIST` from people who are not a member.
 topiclock  | t         | Switch    | *None*           | Prevents non-channel operators from changing the channel topic.
 voice      | v         | Prefix    | `<nick>`         | Grants channel voice status to &lt;nick&gt;.
 

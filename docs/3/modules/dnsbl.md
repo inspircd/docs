@@ -36,7 +36,7 @@ Disables DNSBL lookups for users in the WebChat class:
 
 #### `<dnsbl>`
 
-The `<dnsbl>` tag defines an DNSBL to check connecting users against. This tag can be defined as many times as required.
+The `<dnsbl>` tag defines a DNSBL to check connecting users against. This tag can be defined as many times as required.
 
 Name     | Type      | Default Value                 | Description
 -------- | --------- | ----------------------------- | -----------
@@ -105,6 +105,13 @@ record  | DNSBL results will be compared against a numeric range of values. For 
        duration="7d"
        reason="Tor exit nodes are not allowed on this network. See https://metrics.torproject.org/rs.html#search/%ip% for more information.">
 ```
+
+### Server Notice Masks
+
+Character | Description
+--------- | -----------
+d         | Notifications about DNSBL hits on the local server.
+D         | Notifications about DNSBL hits on a remote server.
 
 ### Statistics
 

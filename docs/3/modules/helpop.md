@@ -27,12 +27,12 @@ nohelp | Text | There is no help for the topic you searched for. Please try agai
 ##### Example Usage
 
 ```xml
-<helpop helpmsg="There is no help for the topic you searched for. Please try again.">
+<helpmsg nohelp="There is no help for the topic you searched for. Please try again.">
 ```
 
 #### `<helpop>`
 
-The `<helpop>` tag defines an help topic. This tag can be defined as many times as required.
+The `<helpop>` tag defines a help topic. This tag can be defined as many times as required.
 
 Name  | Type | Default Value                 | Description
 ----- | ---- | ----------------------------- | -----------
@@ -80,7 +80,7 @@ helpop | h         | Switch | *None*           | Marks the user as being availab
 
 ### Special Notes
 
-You may find it useful to the predefined help file which ships with InspIRCd.
+You may find it useful to use the predefined help file which ships with InspIRCd.
 
 To use this add the following tag to your configuration:
 

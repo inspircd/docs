@@ -13,7 +13,7 @@ This module adds extended ban `G` which matches against two letter country codes
 To load this module use the following `<module>` tag:
 
 ```xml
-<module name="m_geoban.so">
+<module name="geoban">
 ```
 
 This module requires no other configuration.

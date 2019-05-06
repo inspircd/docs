@@ -28,7 +28,7 @@ allowinvite | A         | Switch | *None*           | Allows unprivileged users 
 
 Character | Type   | Ban Syntax | Description
 --------- | ------ | ---------- | -----------
-A         | Acting | `A:<mask>  | Bans &lt;mask&gt; from using the `/INVITE` command.
+A         | Acting | `A:<mask>` | Bans &lt;mask&gt; from using the `/INVITE` command.
 
 #### Example Usage
 

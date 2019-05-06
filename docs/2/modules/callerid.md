@@ -24,7 +24,7 @@ Name         | Type    | Default Value | Description
 ------------ | ------- | ------------- | -----------
 cooldown     | Number  | 10            | The number of seconds between notifying users of other users that want to message them.
 maxaccepts   | Number  | 16            | The maximum number of users who can be on a user's callerid whitelist.
-operoverride | Boolean | No            | Whether server operators can message users without being on an callerid whitelist.
+operoverride | Boolean | No            | Whether server operators can message users without being on a callerid whitelist.
 tracknick    | Boolean | No            | Whether to track nickname changes for users on a callerid whitelist.
 
 ##### Example Usage

@@ -13,7 +13,7 @@ This module allows the server administrator to assign users to connect classes b
 To load this module use the following `<module>` tag:
 
 ```xml
-<module name="m_geoclass.so">
+<module name="geoclass">
 ```
 
 #### `<connect>`

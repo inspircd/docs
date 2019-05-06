@@ -6,7 +6,7 @@ title: Module Details (connectban)
 
 ### Description
 
-This module zlines IP addresses which make excessive connections to the server.
+This module Z-lines IP addresses which make excessive connections to the server.
 
 ### Configuration
 
@@ -23,7 +23,7 @@ The `<connectban>` tag defines settings about how the connectban module should b
 Name        | Type     | Default Value | Description
 ----------- | -------- | ------------- | -----------
 banduration | Duration | 10m           | The duration that an IP address should be banned for.
-ipv4cidr    | Number   | 32            | The IPv6 CIDR range to treat as equivalent when looking for excessive connections.
+ipv4cidr    | Number   | 32            | The IPv4 CIDR range to treat as equivalent when looking for excessive connections.
 ipv6cidr    | Number   | 128           | The IPv6 CIDR range to treat as equivalent when looking for excessive connections.
 threshold   | Number   | 10            | The number of times that an IP address can connect within an hour.
 

@@ -29,7 +29,7 @@ commands        | Text    | *None*        | A space-delimited list of commands t
 chanmodes       | Text    | *None*        | A list of channel modes to disable.
 usermodes       | Text    | *None*        | A list of user modes to disable.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <disabled fakenonexistent="no"

@@ -35,5 +35,5 @@ Parts and rejoins the #example channel:
 Parts and rejoins the #example channel with "Be right back!" as the reason:
 
 ```plaintext
-/CYCLE #example :Be right back
+/CYCLE #example :Be right back!
 ```

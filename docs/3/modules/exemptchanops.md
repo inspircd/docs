@@ -26,7 +26,7 @@ exemptchanops | X         | List | `<restriction>:<mode>` | Exempts users with t
 
 #### Example Usage
 
-Exempts channel operators and above from channel mode `W` (regmoderated) (requires [the services_account module](/3/modules/services_account)):
+Exempts channel operators and above from channel mode `M` (regmoderated) (requires [the services_account module](/3/modules/services_account)):
 
 ```plaintext
 /MODE #channel +X regmoderated:o
@@ -38,8 +38,9 @@ The modules which ship with InspIRCd define the following restrictions:
 
 Name           | Description
 -------------- | -----------
+anticaps       | Exempts users from channel mode `B` (anticaps). Requires [the anticaps module](/3/modules/anticaps).
 auditorium-see | Exempts from the user list being hidden by channel mode `u` (auditorium). Requires [the auditorium module](/3/modules/auditorium).
-auditorium-vis | Exempts from the being hidden from the user list by channel mode `u` (auditorium). Requires [the auditorium module](/3/modules/auditorium).
+auditorium-vis | Exempts from being hidden from the user list by channel mode `u` (auditorium). Requires [the auditorium module](/3/modules/auditorium).
 blockcaps      | Exempts users from channel mode `B` (blockcaps). Requires [the blockcaps module](/3/modules/blockcaps).
 blockcolor     | Exempts users from channel mode `c` (blockcolor). Requires [the blockcolor module](/3/modules/blockcolor).
 censor         | Exempts users from channel mode `G` (censor). Requires [the censor module](/3/modules/censor).
@@ -49,6 +50,6 @@ nickflood      | Exempts users from channel mode `F` (nickflood). Requires [the 
 noctcp         | Exempts users from channel mode `C` (noctcp). Requires [the noctcp module](/3/modules/noctcp).
 nonick         | Exempts users from channel mode `N` (nonick). Requires [the nonicks module](/3/modules/nonicks).
 nonotice       | Exempts users from channel mode `T` (nonotice). Requires [the nonotice module](/3/modules/nonotice).
-regmoderated   | Exempts users from channel mode `W` (regmoderated). Requires [the services_account module](/3/modules/services_account).
+regmoderated   | Exempts users from channel mode `M` (regmoderated). Requires [the services_account module](/3/modules/services_account).
 stripcolor     | Exempts users from channel mode `S` (stripcolor). Requires [the stripcolor module](/3/modules/stripcolor).
 topiclock      | Exempts users from channel mode `t` (topiclock).

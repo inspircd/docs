@@ -31,35 +31,35 @@ GUNLOADMODULE | 1-2             | `<module> [<server>]` | Unloads &lt;module&gt;
 Loads [the botmode module](/3/modules/botmode) on all servers:
 
 ```plaintext
-/GLOADMODULE m_botmode.so
+/GLOADMODULE botmode
 ```
 
 Loads [the botmode module](/3/modules/botmode) on servers matching \*.eu.example.com:
 
 ```plaintext
-/GLOADMODULE m_botmode.so *.eu.example.com
+/GLOADMODULE botmode *.eu.example.com
 ```
 
-Unloads [the check module](/3/modules/check) on all servers:
+Reloads [the check module](/3/modules/check) on all servers:
 
 ```plaintext
-/GUNLOADMODULE m_check.so
+/GRELOADMODULE check
 ```
 
-Unloads [the check module](/3/modules/check) on servers matching \*.na.example.com:
+Reloads [the check module](/3/modules/check) on servers matching \*.na.example.com:
 
 ```plaintext
-/GUNLOADMODULE m_check.so *.na.example.com
+/GRELOADMODULE check *.na.example.com
 ```
 
-Reloads [the gecosban module](/3/modules/gecosban) on all servers:
+Unloads [the gecosban module](/3/modules/gecosban) on all servers:
 
 ```plaintext
-/GUNLOADMODULE m_gecosban.so
+/GUNLOADMODULE gecosban
 ```
 
-Reloads [the gecosban module](/3/modules/gecosban) on servers matching \*.sea.example.com:
+Unloads [the gecosban module](/3/modules/gecosban) on servers matching \*.sea.example.com:
 
 ```plaintext
-/GUNLOADMODULE m_gecosban.so *.sea.example.com
+/GUNLOADMODULE gecosban *.sea.example.com
 ```

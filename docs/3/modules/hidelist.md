@@ -18,12 +18,12 @@ To load this module use the following `<module>` tag:
 
 #### `<hidelist>`
 
-The `<hidelist>` tag defines settings about how the hidelist module should behave. This tag can only be defined once.
+The `<hidelist>` tag defines settings about how the hidelist module should behave. This tag can be defined as many times as required.
 
 Name | Type   | Default Value | Description
 ---- | ------ | ------------- | -----------
-mode | Text   | *None*        | The name of the prefix mode this rule applies to.
-rank | Number | 0             | The rank to restrict this prefix mode to.
+mode | Text   | *None*        | The name of the mode this rule applies to.
+rank | Number | 0             | The rank to restrict viewing this list mode list to.
 
 ##### Example Usage
 
