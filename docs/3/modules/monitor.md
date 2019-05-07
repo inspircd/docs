@@ -27,14 +27,14 @@ maxentries | Number | 30            | The maximum number of entries on a user's 
 ##### Example Usage
 
 ```xml
-<monitor maxmonitor="32">
+<monitor maxentries="32">
 ```
 
 ### Commands
 
-Name    | Parameter Count | Syntax                                       | Description
-------- | --------------- | -------------------------------------------- | -----------
-MONITOR | 1               | `(+|-) <nick>,[<nick>]`<br>`C`<br>`L`<br>`S` | Manipulates the contents of the executing user's monitor list.
+Name    | Parameter Count | Syntax                                        | Description
+------- | --------------- | --------------------------------------------- | -----------
+MONITOR | 1, 2            | `(+|-) <nick>,[<nick>]+`<br>`C`<br>`L`<br>`S` | Manipulates the contents of the executing user's monitor list.
 
 #### Example Usage
 
@@ -59,7 +59,7 @@ Removes all users from the monitor list:
 Lists all users on the monitor list:
 
 ```plaintext
-/MONITOR C
+/MONITOR L
 ```
 
 Shows the status of all monitored users:

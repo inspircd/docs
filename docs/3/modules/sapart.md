@@ -6,7 +6,7 @@ title: Module Details (sapart)
 
 ### Description
 
-This module adds the `/SAPART` command which allows server operators to force part users from a channel without having any privileges in the channel.
+This module adds the `/SAPART` command which allows server operators to force part users from one or more channels without having any privileges in these channels.
 
 ### Configuration
 
@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Commands
 
-Name   | Parameter Count | Syntax                        | Description
------- | --------------- | ----------------------------- | -----------
-SAPART | 2-3             | `<nick> <channel> [<reason>]` | Force parts &lt;nick&gt; from &gt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+Name   | Parameter Count | Syntax                                     | Description
+------ | --------------- | ------------------------------------------ | -----------
+SAPART | 2-3             | `<nick> <channel>[,<channel>]+ [<reason>]` | Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
 
 #### Example Usage
 

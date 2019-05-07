@@ -24,11 +24,17 @@ Name    | Type     | Default Value | Description
 ------- | -------- | ------------- | -----------
 maxtime | Duration | 30m           | The maximum time that can be set as a parameter for channel mode `J` (kicknorejoin).
 
+##### Example Usage
+
+```xml
+<kicknorejoin maxtime="30m">
+```
+
 ### Channel Modes
 
 Name         | Character | Type      | Parameter Syntax | Description
 ------------ | --------- | --------- | ---------------- | -----------
-kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked for rejoining until &lt;seconds&gt; seconds have passed.
+kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
 
 #### Example Usage
 

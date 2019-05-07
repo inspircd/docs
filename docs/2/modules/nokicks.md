@@ -28,7 +28,7 @@ nokick | Q         | Switch | *None*           | Prevents privileged users from 
 
 Character | Type   | Ban Syntax | Description
 --------- | ------ | ---------- | -----------
-Q         | Acting | `Q:<mask>` | Bans privileged users from &lt;mask&gt; from using the `/KICK` command.
+Q         | Acting | `Q:<mask>` | Bans privileged users matching &lt;mask&gt; from using the `/KICK` command.
 
 #### Example Usage
 

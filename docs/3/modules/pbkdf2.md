@@ -36,14 +36,14 @@ The `<pbkdf2prov>` tag defines settings for a specific hash algorithm. This tag 
 
 Name       | Type   | Default Value | Description
 ---------- | ------ | ------------- | -----------
-name       | Text   | *None*        | **Required!** The name of the hash algorithm to configure.
+hash       | Text   | *None*        | **Required!** The name of the hash algorithm to configure.
 iterations | Number | 12288         | The number of iterations of the hashing function that should be performed.
 length     | Number | 32            | The length of the derived key.
 
 ##### Example Usage
 
 ```xml
-<pbkdf2prov name="sha256"
+<pbkdf2prov hash="sha256"
             iterations="12288"
             length="32">
 ```

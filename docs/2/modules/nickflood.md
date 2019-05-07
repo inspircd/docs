@@ -36,4 +36,4 @@ Prevents more than three nickname changes in the last five seconds:
 
 Name  | Description
 ----- | -----------
-flood | Allows exempted users to send nickname changes at a higher rate than channel mode `F` (nickflood) allows.
+flood | Allows exempted users to change nicknames at a higher rate than channel mode `F` (nickflood) allows.

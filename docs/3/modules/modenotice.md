@@ -6,8 +6,7 @@ title: Module Details (modenotice)
 
 ### Description
 
-This module adds the `/MODENOTICE` command which Sends a message to all users with the specified user modes set.
-
+This module adds the `/MODENOTICE` command which sends a message to all users with the specified user modes set. If multiple user modes are specified, the notice is only sent to users who have all of them set.
 
 ### Configuration
 
@@ -23,7 +22,7 @@ This module requires no other configuration.
 
 Name       | Parameter Count | Syntax              | Description
 ---------- | --------------- | ------------------- | -----------
-MODENOTICE | 2               | `<modes> <message>` | Sends `<message>` to all users with the `<modes>` user modes set.
+MODENOTICE | 2               | `<modes> <message>` | Sends &lt;message&gt; to all users with the &lt;modes&gt; user modes set.
 
 #### Example Usage
 

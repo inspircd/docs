@@ -22,7 +22,7 @@ The `<nickflood>` tag defines settings about how the nickflood module should beh
 
 Name     | Type     | Default Value | Description
 -------- | -------- | ------------- | -----------
-duration | Duration | 1m            | The time period that a nick changes should be locked for once a nick flood has been detected.
+duration | Duration | 1m            | The time period that nick changes should be locked for once a nick flood has been detected.
 
 ##### Example Usage
 
@@ -48,4 +48,4 @@ Prevents more than three nickname changes in the last five seconds:
 
 Name  | Description
 ----- | -----------
-flood | Allows exempted users to send nickname changes at a higher rate than channel mode `F` (nickflood) allows.
+flood | Allows exempted users to change nicknames at a higher rate than channel mode `F` (nickflood) allows.

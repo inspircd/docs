@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name   | Parameter Count | Syntax                        | Description
 ------ | --------------- | ----------------------------- | -----------
-SAKICK | 2-3             | `<channel> <nick> [<reason>]` | Kicks &lt;nick&gt; from &gt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+SAKICK | 2-3             | `<channel> <nick> [<reason>]` | Kicks &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
 
 #### Example Usage
 

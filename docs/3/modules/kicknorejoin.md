@@ -16,19 +16,13 @@ To load this module use the following `<module>` tag:
 <module name="kicknorejoin">
 ```
 
-#### `<kicknorejoin>`
-
-The `<kicknorejoin>` tag defines settings about how the kicknorejoin module should behave. This tag can only be defined once.
-
-Name    | Type     | Default Value | Description
-------- | -------- | ------------- | -----------
-maxtime | Duration | 30m           | The maximum time that can be set as a parameter for channel mode `J` (kicknorejoin).
-
 ### Channel Modes
 
 Name         | Character | Type      | Parameter Syntax | Description
 ------------ | --------- | --------- | ---------------- | -----------
-kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked for rejoining until &lt;seconds&gt; seconds have passed.
+kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
+
+#### Example Usage
 
 Prevents kicked users from rejoining for 30 seconds:
 

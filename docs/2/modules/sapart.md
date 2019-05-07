@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name   | Parameter Count | Syntax                        | Description
 ------ | --------------- | ----------------------------- | -----------
-SAPART | 2-3             | `<nick> <channel> [<reason>]` | Force parts &lt;nick&gt; from &gt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+SAPART | 2-3             | `<nick> <channel> [<reason>]` | Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
 
 #### Example Usage
 

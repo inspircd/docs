@@ -45,7 +45,7 @@ OJOIN | 1               | `<channel>` | Joins &lt;channel&gt; with the server op
 Joins #example with the server operator-only `Y` (official-join) channel prefix mode:
 
 ```plaintext
-/JOIN #example
+/OJOIN #example
 ```
 
 ### Channel Modes

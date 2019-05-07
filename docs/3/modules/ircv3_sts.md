@@ -25,9 +25,9 @@ Name     | Type     | Default Value  | Description
 host     | Text     | *None*         | **Required!** A glob pattern for the hostname a user must send to use STS.
 duration | Duration | 60d            | The time period that the STS policy should last for.
 port     | Number   | *None*         | **Required!** The port that clients should connect on securely.
-preload  | Boolean  | No             | Whether the STS policy can be included
+preload  | Boolean  | No             | Whether the STS policy can be included in preload lists.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <sts host="*.example.com"
@@ -40,4 +40,4 @@ preload  | Boolean  | No             | Whether the STS policy can be included
 
 Name                                               | Description
 -------------------------------------------------- | -----------
-[sts](https://ircv3.net/specs/extensions/sts.html) | Defines a mechanism for clients to upgrade plain text IRC connections to TLS.
+[sts](https://ircv3.net/specs/extensions/sts.html) | Defines a mechanism for clients to upgrade plaintext IRC connections to TLS.

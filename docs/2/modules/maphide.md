@@ -28,5 +28,5 @@ maphide | Text | *None*        | The URL to provide to users who run the `/MAP` 
 
 ```xml
 <security ...
-          maphide="http://www.example.com/servers">
+          maphide="https://www.example.com/servers">
 ```

@@ -46,14 +46,14 @@ The `<randquote>` tag defines settings about how the randquote module should beh
 
 Name   | Type    | Default Value | Description
 ------ | ------- | ------------- | -----------
-file   | Text    | quotes        | The name of the field in `<files>` / `<execfiles>` to use when reading the quotes.
+file   | Text    | quotes        | The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the quotes.
 prefix | Text    | *None*        | If defined then text to prefix quotes with when sending them to a user.
 suffix | Text    | *None*        | If defined then text to suffix quotes with when sending them to a user.
 
 ##### Example Usage
 
 ```xml
-<randquote file="opermotd"
+<randquote file="quotes"
            prefix=""
            suffix="">
 ```

@@ -30,7 +30,7 @@ The engine field should be set to the name of a regular expression engine.
 
 {! 3/modules/_regex_table.md !}
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <rline engine="pcre"
@@ -40,9 +40,9 @@ The engine field should be set to the name of a regular expression engine.
 
 ### Commands
 
-Name  | Parameter Count | Syntax                            | Description
------ | --------------- | --------------------------------- | -----------
-RLINE | 1-3             | `<regex> [<duration> [<reason>]]` | Allows server operators to add and remove regular expression bans on nickname!username@hostname+realname masks.
+Name  | Parameter Count | Syntax                          | Description
+----- | --------------- | ------------------------------- | -----------
+RLINE | 1, 3            | `<regex> [<duration> <reason>]` | Allows server operators to add and remove regular expression bans on nickname!username@hostname+realname masks.
 
 #### Example Usage
 

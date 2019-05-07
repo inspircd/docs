@@ -24,13 +24,19 @@ Name   | Type | Default Value | Description
 ------ | ---- | ------------- | -----------
 notify | Text | notice        | How to notify channel members that a user would like to join the channel.
 
-The action field should be set to one of the following values:
+The notify field should be set to one of the following values:
 
 Value   | Description
 ------- | -----------
 both    | Send both numeric `710` (RPL_KNOCK) and a `NOTICE` when a user requests access to an invite-only channel.
 notice  | Send a `NOTICE` when a user requests access to an invite-only channel.
 numeric | Send numeric `710` (RPL_KNOCK) when a user requests access to an invite-only channel.
+
+##### Example Usage
+
+```xml
+<knock notify="notice">
+```
 
 ### Commands
 
@@ -43,7 +49,7 @@ KNOCK | 2               | `<channel> <reason>` | Requests permission to join &lt
 Knocks on #channel with the reason "Please let me in!":
 
 ```plaintext
-/KNOCK #channel :Please let me in
+/KNOCK #channel :Please let me in!
 ```
 
 ### Channel Modes

@@ -6,7 +6,7 @@ title: Module Details (remove)
 
 ### Description
 
-This module adds the `/REMOVE` command which allows channel operators to force part users from a channel.
+This module adds the `/FPART` and `/REMOVE` commands which allows channel operators to force part users from a channel.
 
 ### Configuration
 
@@ -31,6 +31,7 @@ supportnokicks | Boolean | No            | Whether to prevent use of the `/FPART
 <remove protectedrank="50000"
         supportnokicks="yes">
 ```
+
 ### Commands
 
 Name   | Parameter Count | Syntax                        | Description

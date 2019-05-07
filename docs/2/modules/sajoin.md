@@ -6,7 +6,7 @@ title: Module Details (sajoin)
 
 ### Description
 
-This module adds the `/SAJOIN` command which allows server operators to force users to join one or more channnels.
+This module adds the `/SAJOIN` command which allows server operators to force users to join a channel.
 
 ### Configuration
 
@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name   | Parameter Count | Syntax             | Description
 ------ | --------------- | ------------------ | -----------
-SAJOIN | 2               | `<nick> <channel>` | Forces &lt;nick&gt; to join &gt;channel&gt;.
+SAJOIN | 2               | `<nick> <channel>` | Forces &lt;nick&gt; to join &lt;channel&gt;.
 
 #### Example Usage
 

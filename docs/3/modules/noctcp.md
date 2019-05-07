@@ -28,7 +28,7 @@ noctcp | C         | Switch | *None*           | Enables blocking messages that 
 
 Name   | Description
 ------ | -----------
-noctcp | Allows exempted users to send messages that contain IRC formatting codes.
+noctcp | Allows exempted users to send messages that contain CTCPs.
 
 ### Extended Bans
 

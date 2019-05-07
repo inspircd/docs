@@ -6,7 +6,7 @@ title: Module Details (ident)
 
 ### Description
 
-This module allows the usernames (idents) of users to be looked up using the [RFC 1413 Identification Protocol](https://www.ietf.org/rfc/rfc1413.txt). This is useful for shared hosts where many users may be connecting from one IP address as it is allows you to ban specific users without banning the entire provider.
+This module allows the usernames (idents) of users to be looked up using the [RFC 1413 Identification Protocol](https://www.ietf.org/rfc/rfc1413.txt). This is useful for shared hosts where many users may be connecting from one IP address as it allows you to ban specific users without banning the entire provider.
 
 ### Configuration
 

@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name | Parameter Count | Syntax                              | Description
 ---- | --------------- | ----------------------------------- | -----------
-PROP | 1+              | `<target>[ (+|-)<name> [<value>]]+` | Allows users to add, remove, and view the modes of a specific target.
+PROP | 1+              | `<target> [(+|-)<name> [<value>]]+` | Allows users to add, remove, and view the modes of a specific target.
 
 #### Example Usage
 
@@ -56,7 +56,7 @@ Removes channel mode `o` (op) from Sadie in #channel:
 /PROP #channel -op Sadie
 ```
 
-### User Modes
+### Channel Modes
 
 Name     | Character | Type | Parameter Syntax   | Description
 -------- | --------- | ---- | ------------------ | -----------

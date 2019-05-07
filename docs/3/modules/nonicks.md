@@ -28,7 +28,7 @@ nonick | N         | Switch | *None*           | Prevents users from changing th
 
 Character | Type   | Ban Syntax | Description
 --------- | ------ | ---------- | -----------
-N         | Acting | `N:<mask>` | Bans privileged users from &lt;mask&gt; from changing their nickname whilst in the channel.
+N         | Acting | `N:<mask>` | Bans privileged users matching &lt;mask&gt; from changing their nickname whilst in the channel.
 
 #### Example Usage
 
