@@ -62,12 +62,12 @@ Listens for mbedTLS-encrypted server connections on the *:7000 endpoint:
 
 The `<sslprofile>` tag defines a SSL profile for sockets to use. This tag can be defined as many times as required.
 
-If no `<sslprofile>` tags are defined a default profile named `mbedtls` will be created.
+If no `<sslprofile>` tags are defined a default profile named `mbedtls` will be created. This profile will use the contents of the deprecated `<mbedtls>` tag if one has been defined.
 
 Name              | Type    | Default Value | Description
 ----------------- | ------- | ------------- | -----------
-name              | Text    | *None*        | **Required!** The name of this SSL profile.
-provider          | Text    | *None*        | **Required!** *This MUST be set to "mbedtls" to use the mbedTLS library*
+name              | Text    | *None*        | **Required!** The name of this SSL profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+provider          | Text    | *None*        | **Required!** *This MUST be set to "mbedtls" to use the mbedTLS library.*
 cafile            | Text    | *None*        | If defined then the path to the CA in PEM format.
 certfile          | Text    | cert.pem      | The path to the certificate in PEM format.
 ciphersuites      | Text    | *None*        | If defined then a colon-delimited list of [mbedTLS ciphersuites](https://tls.mbed.org/supported-ssl-ciphersuites).

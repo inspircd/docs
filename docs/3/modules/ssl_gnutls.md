@@ -62,12 +62,12 @@ Listens for GnuTLS-encrypted server connections on the *:7000 endpoint:
 
 The `<sslprofile>` tag defines a SSL profile for sockets to use. This tag can be defined as many times as required.
 
-If no `<sslprofile>` tags are defined a default profile named `gnutls` will be created.
+If no `<sslprofile>` tags are defined a default profile named `gnutls` will be created. This profile will use the contents of the deprecated `<gnutls>` tag if one has been defined.
 
 Name              | Type    | Default Value | Description
 ----------------- | ------- | ------------- | -----------
-name              | Text    | *None*        | **Required!** The name of this SSL profile.
-provider          | Text    | *None*        | **Required!** *This MUST be set to "gnutls" to use the GnuTLS library*
+name              | Text    | *None*        | **Required!** The name of this SSL profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+provider          | Text    | *None*        | **Required!** *This MUST be set to "gnutls" to use the GnuTLS library.*
 cafile            | Text    | ca.pem        | The path to the CA in PEM format.
 certfile          | Text    | cert.pem      | The path to the certificate in PEM format.
 crlfile           | Text    | crl.pem       | The path to the CRL in PEM format.
