@@ -10,7 +10,7 @@ As of InspIRCd 3.0.0 a new versioning policy has been adopted to allow users to 
 
 The format of an InspIRCd version number is now `<MAJOR>.<MINOR>.<PATCH>[-<LABEL>]`. These components are defined as follows:
 
-- MAJOR &mdash; Incremented when configuration, linking protocol, and/or module API (not module ABI, see below) compatibility is broken. Also incremented when the minimum C++ standard version and/or minimum C++ compiler version is raised.
+- MAJOR &mdash; Incremented when valid configuration, linking protocol, and/or module API (not module ABI, see below) compatibility is broken. Also incremented when the minimum C++ standard version and/or minimum C++ compiler version is raised.
 
 - MINOR &mdash; Incremented when a new feature, configuration, linking protocol, and/or module API is added in a backwards-compatible way.
 
