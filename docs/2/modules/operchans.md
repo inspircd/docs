@@ -35,5 +35,5 @@ O         | Matching | `O:<pattern>` | Checks whether users are logged into a se
 Bans users logged into server operator accounts matching `Evil*` from joining the channel:
 
 ```plaintext
-/MODE #channel +b r:Evil*
+/MODE #channel +b O:Evil*
 ```

@@ -27,9 +27,7 @@ antiredirect | Boolean | No            | Whether user mode `L` (antiredirect) is
 ##### Example Usage
 
 ```xml
-<redirect file="opermotd"
-           prefix=""
-           suffix="">
+<redirect antiredirect="yes">
 ```
 
 ### Channel Modes

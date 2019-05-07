@@ -42,7 +42,7 @@ size        | Number   | 512           | The maximum number of characters to che
 
 Name   | Character | Type      | Parameter Syntax                                | Description
 ------ | --------- | --------- | ----------------------------------------------- | -----------
-repeat | E         | Parameter | `[~|*]<lines>:<sec>[:<difference>][:<backlog>]` | Configures the messages that should be considered a repeat.
+repeat | E         | Parameter | `[~|*]<lines>:<sec>[:<difference>][:<backlog>]` | Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
 
 ##### Example Usage
 
@@ -56,4 +56,4 @@ Blocks more than two repeated messages in five seconds:
 
 Name   | Description
 ------ | -----------
-repeat | Allows exempted users to send repetitive at a higher rate than channel mode `F` (repeat) allows.
+repeat | Allows exempted users to send repetitive messages at a higher rate than channel mode `E` (repeat) allows.

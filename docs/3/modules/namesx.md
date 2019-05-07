@@ -26,4 +26,4 @@ Name                                                                     | Descr
 
 ### Special Notes
 
-The behaviour of this module can also be enabled using the legacy `/PROTOCTL UHNAMES` command. This only exists for compatibility with older clients and will be removed in a future release.
+The behaviour of this module can also be enabled using the legacy `/PROTOCTL NAMESX` command. This only exists for compatibility with older clients and will be removed in a future release.

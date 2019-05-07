@@ -16,22 +16,6 @@ To load this module use the following `<module>` tag:
 <module name="redirect">
 ```
 
-#### `<redirect>`
-
-The `<redirect>` tag defines settings about how the redirect module should behave. This tag can only be defined once.
-
-Name         | Type    | Default Value | Description
------------- | ------- | ------------- | -----------
-antiredirect | Boolean | No            | Whether user mode `L` (antiredirect) is enabled.
-
-##### Example Usage
-
-```xml
-<redirect file="opermotd"
-           prefix=""
-           suffix="">
-```
-
 ### Channel Modes
 
 Name     | Character | Type      | Parameter Syntax | Description

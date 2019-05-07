@@ -102,4 +102,4 @@ sha256 | Generates fingerprints using the [SHA-256](https://en.wikipedia.org/wik
 
 Name                                                   | Description
 ------------------------------------------------------ | -----------
-[tls](https://ircv3.net/specs/extensions/tls-3.1.html) | Allows plain text connections to upgrade to TLS.
+[tls](https://ircv3.net/specs/extensions/tls-3.1.html) | Allows plaintext connections to upgrade to TLS.

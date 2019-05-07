@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name     | Parameter Count | Syntax              | Description
 -------- | --------------- | ------------------- | -----------
-MKPASSWD | 1               | `<hash> <password>` | Hashes `<password>` using the `<hash>` algorithm.
+MKPASSWD | 2               | `<hash> <password>` | Hashes &lt;password&gt; using the &lt;hash&gt; algorithm.
 
 {! 3/modules/_hash_table.md !}
 

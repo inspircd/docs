@@ -22,7 +22,7 @@ This module extends the core `<files>` and `<execfiles>` tags with the following
 
 Name     | Type | Default Value | Description
 -------- | ---- | ------------- | -----------
-OPERMOTD | Text | *None*        | The file to read or command to execute to obtain the opermotd text.
+opermotd | Text | *None*        | The file to read or command to execute to obtain the opermotd text.
 
 ##### Example Usage
 
@@ -46,7 +46,7 @@ The `<opermotd>` tag defines settings about how the opermotd module should behav
 
 Name          | Type    | Default Value | Description
 ------------- | ------- | ------------- | -----------
-file          | Text    | opermotd      | The name of the field in `<files>` / `<execfiles>` to use when reading the server operator message of the day.
+file          | Text    | opermotd      | The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the server operator message of the day.
 onoper        | Boolean | Yes           | Whether to send the server operator message of the day to server operators when they log into their server operator account.
 processcolors | Boolean | No            | Whether to process IRC formatting escapes within the server operator message of the day.
 

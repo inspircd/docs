@@ -18,11 +18,11 @@ To load this module use the following `<module>` tag:
 
 #### `<allowchannel>`
 
-The `<allowchannel>` tag defines a channel which may be created by non-server operators. This tag can be defined as many times as required.
+The `<allowchannel>` tag defines a channel which may be created by unprivileged users. This tag can be defined as many times as required.
 
 Name | Type | Default Value | Description
 ---- | ---- | ------------- | -----------
-name | Text | *None*        | **Required!** The name of a channel which can be created by non-server operators.
+name | Text | *None*        | **Required!** A glob pattern for a channel name which can be created by unprivileged users.
 
 ##### Example Usage
 
@@ -32,13 +32,19 @@ Allows unprivileged users to create the #guests channel:
 <allowchannel name="#guests">
 ```
 
+Allows unprivileged users to create channels starting with "#user-":
+
+```xml
+<allowchannel name="#user-*">
+```
+
 #### `<restrictchans>`
 
 The `<restrictchans>` tag defines settings about how the restrictchans module should behave. This tag can only be defined once.
 
 Name            | Type    | Default Value | Description
 --------------- | ------- | ------------- | -----------
-allowregistered | Boolean | Yes           | Whether users who are logged into an account can create channels.
+allowregistered | Boolean | No            | Whether users who are logged into an account can create channels.
 
 ##### Example Usage
 

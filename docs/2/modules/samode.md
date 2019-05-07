@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name   | Parameter Count | Syntax                                  | Description
 ------ | --------------- | --------------------------------------- | -----------
-SAMODE | 2+              | `<target> <modes> [<mode-parameters>]+` | Changes the modes of &lt;target&gt; to &gt;modes&gt;[ &lt;mode-parameters&gt;]+
+SAMODE | 2+              | `<target> <modes> [<mode-parameters>]+` | Changes the modes of &lt;target&gt; to &lt;modes&gt; [&lt;mode-parameters&gt;]+
 
 #### Example Usage
 

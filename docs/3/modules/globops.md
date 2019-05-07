@@ -26,7 +26,7 @@ GLOBOPS | 1               | `<message>` | Sends &lt;message&gt; to all server op
 
 #### Example Usage
 
-Sends a server notice saying "I like turtles." to all server operators with the `g` (globops) snomask.
+Sends a server notice saying "I like turtles." to all server operators with the `g` (globops) snomask:
 
 ```plaintext
 /GLOBOPS :I like turtles.

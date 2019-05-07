@@ -26,18 +26,18 @@ modes | Text | *None*        | The user modes to set on server operators when th
 
 ##### Example Usage
 
-Forces Sadie to to have user modes `sw` (snomask, wallops) when logging into their server operator account:
+Forces Sadie to have user modes `sw` (snomask, wallops) and all available snomasks when logging into their server operator account:
 
 ```xml
 <oper name="Sadie"
       ...
-      modes="+sw *">
+      modes="+sw +*">
 ```
 
-Forces server operators of type NetAdmin to to have user modes `sw` (snomask, wallops) when logging into their server operator account:
+Forces server operators of type NetAdmin to have user modes `sw` (snomask, wallops) and all available snomasks when logging into their server operator account:
 
 ```xml
 <type name="NetAdmin"
       ...
-      modes="+sw *">
+      modes="+sw +*">
 ```

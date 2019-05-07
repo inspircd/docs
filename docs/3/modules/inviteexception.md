@@ -44,7 +44,7 @@ Exempts users matching `*!*@example.com` from the `i` (inviteonly) channel mode:
 /MODE #channel +I *!*@example.com
 ```
 
-Exempts users logged into the services account named Sadie from the `b` (ban) channel mode (requires [the services_account module](/3/modules/services_account)):
+Exempts users logged into the services account named Sadie from the `i` (inviteonly) channel mode (requires [the services_account module](/3/modules/services_account)):
 
 ```plaintext
 /MODE #channel +I R:Sadie

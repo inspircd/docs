@@ -22,4 +22,4 @@ This module requires no other configuration.
 
 Name                                                                   | Description
 ---------------------------------------------------------------------- | -----------
-[server-time](https://ircv3.net/specs/extensions/server-time-3.2.html) | Adds an `time` tag with the time the message was sent to all messages.
+[server-time](https://ircv3.net/specs/extensions/server-time-3.2.html) | Adds a `time` tag with the time the message was sent to all messages.

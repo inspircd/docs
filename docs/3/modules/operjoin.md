@@ -48,8 +48,8 @@ The `<operjoin>` tag defines settings about how the operjoin module should behav
 
 Name     | Type    | Default Value | Description
 -------- | ------- | ------------- | -----------
-channel  | Text    | *None*        | A comma-delimited list of channels for server operators to be joined to on connect.
-override | Boolean | No            | Whether to force  server operators into the channel regardless of any channel modes that might normally prevent them from joining.
+channel  | Text    | *None*        | A comma-delimited list of channels for server operators to be joined to when logging into their server operator account.
+override | Boolean | No            | Whether to force server operators into the channel regardless of any channel modes that might normally prevent them from joining.
 
 ##### Example Usage
 

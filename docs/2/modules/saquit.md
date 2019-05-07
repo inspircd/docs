@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Commands
 
-Name   | Parameter Count | Syntax              | Description
------- | --------------- | ------------------- | -----------
-SAQUIT | 1-2             | `<nick> [<reason>]` | Disconnects &lt;nick&gt; from the server optionally with the reason specified in &lt;reason&gt;.
+Name   | Parameter Count | Syntax            | Description
+------ | --------------- | ----------------- | -----------
+SAQUIT | 2               | `<nick> <reason>` | Disconnects &lt;nick&gt; from the server with the reason specified in &lt;reason&gt;.
 
 #### Example Usage
 

@@ -34,3 +34,11 @@ $nick         | The nickname of the connecting user.
 $nickrequired | The nickname of the user that must be online for a `/PASS` password to be forwarded.
 $pass         | The password sent by the connecting user using the `/PASS` command.
 $user         | The username (ident) of the connecting user.
+
+##### Example Usage
+
+```xml
+<passforward cmd="SQUERY $nickrequired :IDENTIFY $pass"
+             forwardmsg="NOTICE $nick :*** Forwarding PASS to $nickrequired"
+             nick="NickServ">
+```

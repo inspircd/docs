@@ -22,8 +22,8 @@ This module requires no other configuration.
 
 Name       | Parameter Count | Syntax                  | Description
 ---------- | --------------- | ----------------------- | -----------
-NICKLOCK   | 2               | `<old-nick> <new-nick>` | Changes the nickname of `<old-nick>` to `<new-nick>` and prevents them from changing their nickname.
-NICKUNLOCK | 1               | `<locked-nick>`         | Allows `<locked-nick>` to change their nickname.
+NICKLOCK   | 2               | `<old-nick> <new-nick>` | Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt; and prevents them from changing their nickname.
+NICKUNLOCK | 1               | `<locked-nick>`         | Allows &lt;locked-nick&gt; to change their nickname.
 
 #### Example Usage
 
@@ -33,8 +33,8 @@ Changes the nickname of Sadie to Sadie2 and prevents them from changing their ni
 /NICKLOCK Sadie Sadie2
 ```
 
-Allows Sadie to change their nickname:
+Allows Sadie2 to change their nickname:
 
 ```plaintext
-/NICKUNLOCK Sadie
+/NICKUNLOCK Sadie2
 ```
