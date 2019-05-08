@@ -62,3 +62,9 @@ Server operators do not automatically get channel privileges by default. You can
 - Overriding your lack of privileges using the override module ([v2 docs](/2/modules/override), [v3 docs](/3/modules/override)).
 
 - Giving yourself channel operator status using the samode module ([v2 docs](/2/modules/samode), [v3 docs](/3/modules/samode)).
+
+### Why does my server tell me "An unexpected TLS packet was received" or "error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record.c" when I try to connect using SSL/TLS?
+
+You are trying to connect using SSL/TLS but your server is not configured to listen for SSL/TLS connections.
+
+Check that you have a SSL module loaded and that your bind tag has the name of a SSL module (if you're using v2) or the name of a SSL profile (if you're using v3) in `<bind:ssl>`.
