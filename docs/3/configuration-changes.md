@@ -50,6 +50,8 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - `<xlinedb:filename>` is now relative to the data directory. Generally all you will need to do in order to upgrade is remove `data/` from the path.
 
+- `<sasl:target>` is now required. The module cannot be loaded unless a target is supplied.
+
 ## Moves
 
 - The `/MODENOTICE` command has been moved to the new modenotice module. See the documentation in modules.conf.example for more details.
