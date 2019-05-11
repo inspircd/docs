@@ -46,6 +46,8 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - `<permchanneldb:filename>` is now relative to the config directory. Generally all you will need to do in order to upgrade is move `permchannels.conf` to `conf/` and remove `data/` from the path.
 
+- `<sasl:target>` is now required. The module cannot be loaded unless a target is supplied.
+
 - `<type:name>` can now contain spaces. Any underscores in the type name will no longer be replaced with spaces. To keep v2 behaviour replace any underscores with spaces.
 
 - `<xlinedb:filename>` is now relative to the data directory. Generally all you will need to do in order to upgrade is remove `data/` from the path.
