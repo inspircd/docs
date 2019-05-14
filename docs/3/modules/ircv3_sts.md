@@ -16,6 +16,25 @@ To load this module use the following `<module>` tag:
 <module name="ircv3_sts">
 ```
 
+#### `<connect>`
+
+This module extends the core `<connect>` tags with the following fields:
+
+Name   | Type    | Default Value | Description
+------ | ------- | ------------- | -----------
+usests | Boolean | Yes           | [**New in v3.1.0!**](/3/change-log/#inspircd-310) Whether users in this connect class should have a STS policy advertised to them.
+
+##### Example Usage
+
+Disables STS policy advertisement for users in the LocalIPv4 class:
+
+```xml
+<connect name="LocalIPv4"
+         allow="127.0.0.0/8"
+         ...
+         usests="no">
+```
+
 #### `<sts>`
 
 The `<sts>` tag defines settings about how the sts module should behave. This tag can only be defined once.
