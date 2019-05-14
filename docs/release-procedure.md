@@ -20,6 +20,7 @@ Name       | Description
 6. Generate a list of contributors for the news post using `git log --pretty='  - %aN' PREVIOUS...VERSION | sort -fu`
 7. Create a news post on the website using the list of contributors from the previous step.
 8. Mark the new news post as featured and unmark the old one.
-9. If the release is stable then update `misc.currentVersion` in the website config to VERSION.
-10. Update the topic in `#InspIRCd` and `#InspIRCd.dev` on ChatSpike.
-11. Post a link to the news post on the [InspIRCd Twitter account](https://twitter.com/InspIRCdTeam) and, if notable, on [/r/irc](https://old.reddit.com/r/irc/).
+9. Update the change log on the documentation site.
+10. If the release is stable then update `misc.currentVersion` in the website config to VERSION.
+11. Update the topic in `#InspIRCd` and `#InspIRCd.dev` on ChatSpike.
+12. Post a link to the news post on the [InspIRCd Twitter account](https://twitter.com/InspIRCdTeam) and, if notable, on [/r/irc](https://old.reddit.com/r/irc/).

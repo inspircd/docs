@@ -35,10 +35,11 @@ title: Introduction
 
 - [Installation](/3/installation)
 - [Configuration](/3/configuration)
-    - [Changes since v2](/3/configuration-changes)
+    - [Upgrading from v2](/3/configuration-changes)
 - [Commands](/3/commands)
 - [Modes](/3/modes)
 - [Modules](/3/modules)
 - [SNOMasks](/3/snomasks)
+- [Change Log](/3/change-log)
 
 </div>
