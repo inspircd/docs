@@ -8,11 +8,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.1.0
 
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2019-05-17.**
 
 - Added a configure option, `--disable-auto-extras`, which disables automatically enabling extras for which the dependencies are available.
 
 - Added support for disabling a STS policy for users in specific connect classes. 
+
+- Added support for [the IRCv3 Message IDs specification](https://ircv3.net/specs/extensions/message-ids.html).
 
 - Developer: added support for modules overriding the default access checks for `NOTICE`, `PRIVMSG`, and `TAGMSG`.
 
@@ -20,7 +22,15 @@ This page lists changes which have happened between releases.
 
 - Developer: allowed child classes of SSLIOHook to override `GetCertificate()` and `GetFingerprint()`.
 
+- Fixed a **crash** in the silence module on some older versions of GCC.
+
+- Fixed linking against v2 servers running the ASCII case mapping module from inspircd-extras.
+
+- Fixed an inverted condition in the commonchans module which made the module not work.
+
 - Fixed configure not failing when invalid options were passed to it.
+
+- Fixed pending X-lines only being applied to a single user.
 
 - Fixed servers not specifying whether they are hidden. If no visibility is specified then servers default to the visibility of their parent server.
 

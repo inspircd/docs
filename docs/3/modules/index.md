@@ -91,6 +91,7 @@ Name                                                | Description
 [ircv3_ctctags](/3/modules/ircv3_ctctags)           | Provides the message-tags IRCv3 extension
 [ircv3_echomessage](/3/modules/ircv3_echomessage)   | Provides the echo-message IRCv3 extension
 [ircv3_invitenotify](/3/modules/ircv3_invitenotify) | Provides the invite-notify IRCv3 extension
+[ircv3_msgid](/3/modules/ircv3_msgid)               | Provides the msgid IRCv3 tag
 [ircv3_servertime](/3/modules/ircv3_servertime)     | Provides the server-time IRCv3 extension
 [ircv3_sts](/3/modules/ircv3_sts)                   | Provides IRCv3 Strict Transport Security policy advertisement
 [joinflood](/3/modules/joinflood)                   | Provides channel mode +j, join flood protection
