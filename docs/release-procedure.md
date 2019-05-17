@@ -12,6 +12,7 @@ Name       | Description
 `UPSTREAM` | The Git remote for the main InspIRCd repository.
 `VERSION`  | The new release's version number.
 
+0. Close the [release milestone](https://github.com/inspircd/inspircd/milestones) on GitHub.
 1. Ensure that the branch tip builds with no warnings. Checking [Travis CI](https://travis-ci.com/inspircd/inspircd) is helpful as it builds with `-Werror`.
 2. Update the version in `src/version.sh` and commit it.
 3. Tag the release with `git tag VERSION`.
