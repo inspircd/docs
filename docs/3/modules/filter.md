@@ -56,7 +56,7 @@ kill   | Kill the user that matched the filter.
 none   | Write the match to the log file and take no other action.
 shun   | Shun the user that matched the filter (requires [the shun module](/3/modules/shun)).
 silent | Block the message that matched the filter.
-warn   | Warn the user that matched the filter.
+warn   | Allow the message that matched the filter and inform server operators with the `f` (filter) snomask.
 zline  | Z-line the user that matched the filter.
 
 The flags field should be set to one or more of the following values:
