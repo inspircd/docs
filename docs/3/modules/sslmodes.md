@@ -40,7 +40,7 @@ sslonly | z         | Switch | *None*           | Prevents users who are not con
 
 Name       | Character | Type   | Parameter Syntax | Description
 ---------- | --------- | ------ | ---------------- | -----------
-sslqueries | z         | Switch | *None*           | Allows server operators to opt-in to overriding restrictions.
+sslqueries | z         | Switch | *None*           | Prevents messages from being sent to or received from a user that is not connected using SSL.
 
 ### Extended Bans
 
