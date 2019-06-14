@@ -1,5 +1,5 @@
 ---
-title: Configuration Changes
+title: v3 Configuration Changes
 ---
 
 ## Configuration changes since InspIRCd 2

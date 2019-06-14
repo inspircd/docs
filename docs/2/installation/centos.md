@@ -1,5 +1,5 @@
 ---
-title: CentOS Linux Installation
+title: v2 CentOS Linux Installation
 ---
 
 ## Installing InspIRCd 2 using the CentOS package

@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: v2 Installation
 ---
 
 ## Installing InspIRCd 2

@@ -1,5 +1,5 @@
 ---
-title: CentOS Linux Installation
+title: v3 CentOS Linux Installation
 ---
 
 ## Installing InspIRCd 3 using the CentOS package

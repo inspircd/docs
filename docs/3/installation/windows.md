@@ -1,5 +1,5 @@
 ---
-title: Microsoft Windows Installation
+title: v3 Microsoft Windows Installation
 ---
 
 ## Installing InspIRCd 3 using the Windows package

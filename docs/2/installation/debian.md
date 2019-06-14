@@ -1,5 +1,5 @@
 ---
-title: Debian Linux Installation
+title: v2 Debian Linux Installation
 ---
 
 ## Installing InspIRCd 2 using the Debian package

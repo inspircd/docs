@@ -1,5 +1,5 @@
 ---
-title: Debian Linux Installation
+title: v3 Debian Linux Installation
 ---
 
 ## Installing InspIRCd 3 using the Debian package

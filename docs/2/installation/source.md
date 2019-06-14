@@ -1,5 +1,5 @@
 ---
-title: Source Installation
+title: v2 Source Installation
 ---
 
 ## Installing InspIRCd 2 from source

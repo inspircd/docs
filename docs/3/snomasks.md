@@ -1,5 +1,5 @@
 ---
-title: Modes
+title: v3 Server Notice Masks
 ---
 
 ## InspIRCd Server Notice Masks

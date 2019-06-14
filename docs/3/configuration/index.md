@@ -1,5 +1,5 @@
 ---
-title: Configuration
+title: v3 Configuration
 ---
 
 ## InspIRCd Configuration

@@ -1,5 +1,5 @@
 ---
-title: Commands
+title: v2 Commands
 ---
 
 ## InspIRCd Commands

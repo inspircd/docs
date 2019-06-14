@@ -1,5 +1,5 @@
 ---
-title: Module Manager
+title: v2 Module Manager
 ---
 
 ## Managing third-party modules with Module Manager

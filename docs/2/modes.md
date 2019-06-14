@@ -1,5 +1,5 @@
 ---
-title: Modes
+title: v2 Modes
 ---
 
 ## InspIRCd Modes
