@@ -6,7 +6,7 @@ title: Module Details (close)
 
 <div class="alert alert-warning" role="alert" markdown="1">
 
-This module has been moved to inspircd-extras in the next major version of InspIRCd.
+This module has been moved to inspircd-contrib in the next major version of InspIRCd.
 
 </div>
 

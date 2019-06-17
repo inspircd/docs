@@ -24,7 +24,7 @@ This page lists changes which have happened between releases.
 
 - Fixed a **crash** in the silence module on some older versions of GCC.
 
-- Fixed linking against v2 servers running the ASCII case mapping module from inspircd-extras.
+- Fixed linking against v2 servers running the ASCII case mapping module from inspircd-contrib.
 
 - Fixed an inverted condition in the commonchans module which made the module not work.
 

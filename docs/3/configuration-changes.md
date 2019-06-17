@@ -56,11 +56,11 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The `/MODENOTICE` command has been moved to the new modenotice module. See the documentation in modules.conf.example for more details.
 
-- The close module has been moved to inspircd-extras. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_close` to install it.
+- The close module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_close` to install it.
 
 - The geoip module has been replaced with the geo_maxmind and geoclass modules. In order to upgrade load these modules and replace comma-delimited `<connect:geoip>` entries with space-delimited `<connect:country>` entries.  
 
-- The jumpserver module has been moved to inspircd-extras. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_jumpserver` to install it.
+- The jumpserver module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_jumpserver` to install it.
 
 - Server configuration for the ldapauth module has been moved to `<database>`. See the documentation in modules.conf.example for more details.
 
@@ -92,7 +92,7 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The regonlycreate module has been removed. If you wish to keep this behaviour then you should load the restrictchans module and enable the `<restrictchans:allowregistered>` setting.
 
-- The ripemd160 module has been removed. If you wish to keep this behaviour then you should install and load the hash_gnutls module from inspircd-extras.
+- The ripemd160 module has been removed. If you wish to keep this behaviour then you should install and load the hash_gnutls module from inspircd-contrib.
 
 - The testnet module has been removed with no replacement.
 
