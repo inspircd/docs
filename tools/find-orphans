@@ -5,7 +5,7 @@ PAGES = Dir["#{ROOT}/docs/**/*.md"]
 linked = [ "#{ROOT}/docs/index.md" ]
 PAGES.each do |file|
 	contents = File.read(file)
-	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)(?:\#[^\)]+|\/)?\)/).each do |link|
+	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
 		linked << "#{ROOT}/docs/#{link[0]}.md"
 		linked << "#{ROOT}/docs/#{link[0]}/index.md"
 	end
