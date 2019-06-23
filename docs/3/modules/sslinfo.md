@@ -22,19 +22,19 @@ This module extends the core `<connect>` tags with the following fields:
 
 Name       | Type | Default Value | Description
 ---------  | ---- | ------------- | -----------
-requiressl | Text | no            | Whether users must be using SSL to use this class.
+requiressl | Text | no            | Whether users must present an SSL client certificate to use this class.
 
 The requiressl field should be set to one of the following values:
 
 Value   | Description
 ------- | -----------
-no      | SSL is not required to use this class.
-trusted | SSL is required and and a CA-verified client certificate must be provided to use this class.
-yes     | SSL is required to use this class.
+no      | An SSL client certificate is not required to use this class.
+yes     | An SSL client certificate is required to use this class.
+trusted | An SSL client certificate signed by a trusted CA is required to use this class.
 
 ##### Example Usage
 
-Requires users to be using SSL to be assigned to the Secure class:
+Requires users to present an SSL client certificate to be assigned to the Secure class:
 
 ```xml
 <connect name="Secure"
