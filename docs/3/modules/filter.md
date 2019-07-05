@@ -20,9 +20,11 @@ To load this module use the following `<module>` tag:
 
 The `<filteropts>` tag defines settings about how the filter module should behave. This tag can only be defined once.
 
-Name   | Type | Default Value | Description
------- | ---- | ------------- | -----------
-engine | Text | *None*        | The regular expression engine to use for checking matches.
+Name          | Type    | Default Value | Description
+------------- | ------- | ------------- | -----------
+engine        | Text    | *None*        | The regular expression engine to use for checking matches.
+notifyuser    | Boolean | Yes           | Whether to notify users that match a block or silent filter that they have matched it.
+warnonselfmsg | Boolean | No            | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
 
 The engine field should be set to the name of a regular expression engine.
 
@@ -31,7 +33,9 @@ The engine field should be set to the name of a regular expression engine.
 ##### Example Usage
 
 ```xml
-<filteropts engine="glob">
+<filteropts engine="glob"
+            notifyuser="yes"
+            warnonselfmsg="no">
 ```
 
 #### `<keyword>`
@@ -63,13 +67,14 @@ The flags field should be set to one or more of the following values:
 
 Value | Description
 ----- | -----------
-\*    | Enable every flag. Equivalent to `cnoPpq`.
+\*    | Equivalent to the flags `cnoPpq`.
 c     | Strip color codes from messages before trying to match against filters.
 n     | Match against `NOTICE` messages.
 o     | Exempt server operators from matching this filter.
 P     | Match against `PART` messages.
 p     | Match against `PRIVMSG` messages.
 q     | Match against `QUIT` messages.
+r     | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Exempt registered users from matching this filter.
 
 ##### Example Usage
 

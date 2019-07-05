@@ -16,8 +16,23 @@ To load this module use the following `<module>` tag:
 <module name="messageflood">
 ```
 
-This module requires no other configuration.
+#### `<messageflood>`
 
+The `<messageflood>` tag defines settings about how the messageflood module should behave. This tag can only be defined once.
+
+Name    | Type    | Default Value | Description
+------- | ------- | ------------- | -----------
+notice  | Decimal | 1.0           | [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `NOTICE` message is equivalent to.
+privmsg | Decimal | 1.0           | [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `PRIVMSG` message is equivalent to.
+tagmsg  | Decimal | 0.2           | [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `NOTICE` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
+
+##### Example Usage
+
+```xml
+<messageflood notice="1.0"
+              privmsg="1.0"
+              tagmsg="0.2">
+```
 ### Channel Modes
 
 Name  | Character | Type      | Parameter Syntax       | Description

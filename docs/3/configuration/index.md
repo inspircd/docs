@@ -25,7 +25,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 3/configuration/_options.md !}
 {! 3/configuration/_path.md !}
 {! 3/configuration/_performance.md !}
-{! 2/configuration/_pid.md !}
+{! 3/configuration/_pid.md !}
 {! 3/configuration/_security.md !}
 {! 2/configuration/_server.md !}
 {! 2/configuration/_type.md !}

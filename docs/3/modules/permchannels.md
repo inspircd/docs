@@ -20,16 +20,18 @@ To load this module use the following `<module>` tag:
 
 The `<permchanneldb>` tag defines settings about how the permchannels module should behave. This tag can only be defined once.
 
-Name      | Type    | Default Value | Description
---------- | ------- | ------------- | -----------
-filename  | Text    | *None*        | If defined then the location to write a permchannels configuration file to.
-listmodes | Boolean | No            | Whether to save list modes to the permchannels configuration file.
+Name       | Type     | Default Value | Description
+---------- | -------- | ------------- | -----------
+filename   | Text     | *None*        | If defined then the location to write a permchannels configuration file to.
+listmodes  | Boolean  | No            | Whether to save list modes to the permchannels configuration file.
+saveperiod | Duration | 5s            | [**New in v3.2.0!**](/3/change-log/#inspircd-320) The time period between attempts to check whether the permchannel database needs to be written.
 
 ##### Example Usage
 
 ```xml
 <permchanneldb filename="permchannels.conf"
-               listmodes="yes">
+               listmodes="yes"
+               saveperiod="5s">
 ```
 
 #### `<permchannels>`

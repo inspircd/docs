@@ -86,6 +86,8 @@ requestclientcert  | Boolean | Yes           | Whether to request a SSL certific
 serverclearoptions | Number  | 0             | Raw integer value of options to clear on the server context.  Don't change this unless you know what you are doing.
 serversetoptions   | Number  | 0             | Raw integer value of options to set on the server context.  Don't change this unless you know what you are doing.
 tlsv1              | Boolean | No            | Whether the insecure TLSv1.0 protocol is enabled.
+tlsv11             | Boolean | Yes           | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether the TLSv1.1 protocol is enabled.
+tlsv12             | Boolean | Yes           | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether the TLSv1.2 protocol is enabled.
 
 The crlmode field should be set to one of the following values:
 
@@ -111,5 +113,7 @@ The hash field should be set to one of the values shown in `openssl list --diges
             keyfile="key.pem"
             renegotiation="no"
             requestclientcert="yes"
-            tlsv1="no">
+            tlsv1="no"
+            tlsv11="yes"
+            tlsv12="yes">
 ```
