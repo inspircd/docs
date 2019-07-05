@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.2.0
 
-**This version of InspIRCd was released on 2019-06-05.**
+**This version of InspIRCd was released on 2019-07-05.**
 
 - Added a configure option, `--example-dir`, which specifies the directory that example config files get installed into.
 
