@@ -23,7 +23,7 @@ This module requires no other configuration.
 Name         | Character | Type   | Parameter Syntax | Description
 ------------ | --------- | ------ | ---------------- | -----------
 c_registered | r         | Switch | *None*           | Marks the channel as being registered.
-reginvite    | L         | Switch | *None*           | Prevents users who are not logged into a services account from joining the channel.
+reginvite    | R         | Switch | *None*           | Prevents users who are not logged into a services account from joining the channel.
 regmoderated | M         | Switch | *None*           | Prevents users who are not logged into a services account from speaking in the channel.
 
 ### User Modes
