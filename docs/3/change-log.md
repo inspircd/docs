@@ -6,6 +6,53 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.3.0
+
+**This version of InspIRCd was released on 2019-08-23.**
+
+* Added PackageInfo directives for ArchLinux.
+
+* Changed the maximum value for `<chanfilter:maxlen>` from 100 to 250.
+
+* Developer: added an experimental header which implements the [IRCv3 Standard Replies draft](https://github.com/ircv3/ircv3-specifications/blob/master/extensions/standard-replies.md).
+
+* Developer: added the OnConnectionFail event for suspending a user connection which is about to fail.
+
+* Developer: added the `ExtensionItem::{To,From}{Human,Internal,Network}` methods to convert an extension item to and from various string forms.
+
+* Developer: added the `MessageEventListener` class for adding tags to server messages.
+
+* Developer: added the `{EventHandler,StreamSocket,UserIOHandler}::SwapInternals` methods to swap the internals of two sockets.
+
+* Developer: deprecated the ServerEventListener clas and split the events contained within it into the `ServerProtocol::{BroadcastEventListener,LinkEventListener,SyncEventListener} classes.
+
+* Developer: deprecated the `SerializeFormat` enum, and the `serialize`, `unserialize` methods of the `ExtensionItem` class, and the `LocalExtItem` class.
+
+* Fixed a **crash** in the MySQL module when built against mariadb-connector-c v3.0.5 or newer.
+
+* Fixed allowing the `sasl` capability to be requested when the SASL server is offline.
+
+* Fixed empty `GLOBOPS` and `WALLOPS` messages not failing with an `ERR_NOTEXTTOSEND` message.
+
+* Fixed listener sockets with `<bind:replace>` enabled not being replaced in some circumstances.
+
+* Fixed not applying IRCv3 `server-time` timestamps on the server the source is connecting from.
+
+* Fixed not being able to use the `O` (oper) extban to server operators with a space in their server operator type.
+
+* Fixed referring to registration timeouts as ping timeouts in the `conn_waitpong` module.
+
+* Fixed sending IRCv3 `account-notify` and `chghost` messages to a user who has not sent the `NICK` and `USER` commands yet.
+
+* Fixed sending IRCv3 `cap-notify` messages for capabilities which are not presently visible in `CAP LS`.
+
+* Fixed the `geo_maxmind` module trying to interpret an `AF_UNIX` endpoint as an IP address.
+
+* Improved the message sent to server operators when the maximum connections for a connect class is reached.
+
+* Updated the vendored `utfcpp` library to v3.1.
+
+
 ### InspIRCd 3.2.0
 
 **This version of InspIRCd was released on 2019-07-05.**
