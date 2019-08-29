@@ -28,7 +28,7 @@ This page lists changes which have happened between releases.
 
 * Developer: deprecated the `SerializeFormat` enum, and the `serialize`, `unserialize` methods of the `ExtensionItem` class, and the `LocalExtItem` class.
 
-* Fixed a **crash** in the MySQL module when built against mariadb-connector-c v3.0.5 or newer.
+* [Fixed a **crash** in the MySQL module when built against mariadb-connector-c v3.0.5 or newer](/security/2019-02).
 
 * Fixed allowing the `sasl` capability to be requested when the SASL server is offline.
 
@@ -163,7 +163,7 @@ This page lists changes which have happened between releases.
 
 - Developer: allowed child classes of SSLIOHook to override `GetCertificate()` and `GetFingerprint()`.
 
-- Fixed a **crash** in the silence module on some older versions of GCC.
+- [Fixed a **crash** in the silence module on some older versions of GCC](/security/2019-01).
 
 - Fixed linking against v2 servers running the ASCII case mapping module from inspircd-contrib.
 
