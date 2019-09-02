@@ -77,7 +77,7 @@ dhfile               | Text    | conf/dhparams.pem | The path to the certificate
 ecdhcurve            | Text    | prime256v1        | The ECDH curve. Requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_ECDH` enabled.
 hash                 | Text    | md5               | The hash algorithm used for SSL client fingerprints.
 keyfile              | Text    | conf/key.pem      | The path to the private key in PEM format.
-renegotiation        | Boolean | Yes               | Whether SSL renegotiation is enabled.
+renegotiation        | Boolean | Yes               | Whether SSL renegotiation is enabled. This setting requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_RENEGO_DETECTION` enabled to take effect. Renegotiation is *always* enabled otherwise.
 serverclearoptions   | Number  | 0                 | Raw integer value of options to clear on the server context.  Don't change this unless you know what you are doing.
 serversetoptions     | Number  | 0                 | Raw integer value of options to set on the server context.  Don't change this unless you know what you are doing.
 showports            | Boolean | Yes               | *Deprecated!* Whether to show an IP/port that clients can connect securely on in the 005 message.
