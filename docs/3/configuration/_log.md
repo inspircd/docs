@@ -29,6 +29,7 @@ CONFIG               | default<br>debug            | Messages relating to the co
 CONNECTCLASS         | debug                       | Messages relating to connect classes.
 CULLLIST             | debug                       | Messages relating to object cull lists.
 HEADER               | sparse                      | Messages relating to starting logging.
+MODE                 | debug                       | Messages relating to modes.
 MODULE               | default<br>debug            | Messages relating to modules.
 SOCKET               | default<br>debug            | Messages relating to network sockets.
 STARTUP              | default                     | Messages relating to the startup process.
