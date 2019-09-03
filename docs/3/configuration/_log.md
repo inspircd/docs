@@ -4,12 +4,13 @@
 
 The `<log>` tag defines a location to log to. This tag can be defined as many times as required.
 
-Name   | Type | Default Value | Description
------- | ---- | ------------- | -----------
-method | Text | file          | The method to use for storing logs.
-type   | Text | *None*        | **Required!** A space-delimited token list of types of message to log.
-level  | Text | default       | The level of messages to log.
-target | Text | *None*        | The location to write the log to.
+Name   | Type   | Default Value | Description
+------ | ------ | ------------- | -----------
+method | Text   | file          | The method to use for storing logs.
+type   | Text   | *None*        | **Required!** A space-delimited token list of types of message to log.
+level  | Text   | default       | The level of messages to log.
+target | Text   | *None*        | The location to write the log to.
+flush  | Number | 20            | After how many lines to flush the log to disk.
 
 The method field should be set to one of the following values:
 
@@ -94,5 +95,6 @@ none    | Logs nothing.
 <log method="file"
      type="* -USERINPUT -USEROUTPUT"
      level="default"
-     target="ircd.log">
+     target="ircd.log"
+     flush="20">
 ```
