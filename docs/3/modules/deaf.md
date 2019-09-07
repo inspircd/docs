@@ -38,10 +38,10 @@ privdeafuline    | Boolean | Yes           | Whether users on U-lined servers ar
 
 ### User Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-deaf     | d         | Switch | *None*           | Prevents the user from receiving channel messages.
-privdeaf | D         | Switch | *None*           | Prevents the user from receiving private messages.
+Name     | Character | Type   | Parameter Syntax | Usable By | Description
+-------- | --------- | ------ | ---------------- | --------- | -----------
+deaf     | d         | Switch | *None*           | Anyone    | Prevents the user from receiving channel messages.
+privdeaf | D         | Switch | *None*           | Anyone    | Prevents the user from receiving private messages.
 
 ### Special Notes
 

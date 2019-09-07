@@ -18,9 +18,9 @@ To load this module use the following `<module>` tag:
 
 ### Channel Modes
 
-Name         | Character | Type      | Parameter Syntax | Description
------------- | --------- | --------- | ---------------- | -----------
-kicknorejoin | J         | Parameter | `<seconds>`      | Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
+Name         | Character | Type      | Parameter Syntax | Usable By         | Description
+------------ | --------- | --------- | ---------------- | ----------------- | -----------
+kicknorejoin | J         | Parameter | `<seconds>`      | Channel operators | Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
 
 #### Example Usage
 

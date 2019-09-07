@@ -34,6 +34,6 @@ showfromopers | Boolean | Yes            | Whether to inform users of an oper do
 
 ### User Modes
 
-Name      | Character | Type   | Parameter Syntax | Description
---------- | --------- | ------ | ---------------- | -----------
-showwhois | W         | Switch | *None*           | Informs the user when someone does a `/WHOIS` query on their nick.
+Name      | Character | Type   | Parameter Syntax | Usable By                              | Description
+--------- | --------- | ------ | ---------------- | -------------------------------------- | -----------
+showwhois | W         | Switch | *None*           | Depends on &lt;showwhois:opersonly&gt; | Informs the user when someone does a `/WHOIS` query on their nick.

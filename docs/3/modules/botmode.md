@@ -22,6 +22,6 @@ This module requires no other configuration.
 
 ### User Modes
 
-Name | Character | Type   | Parameter Syntax | Description
----- | --------- | ------ | ---------------- | -----------
-bot  | B         | Switch | *None*           | Marks the user as a bot.
+Name | Character | Type   | Parameter Syntax | Usable By | Description
+---- | --------- | ------ | ---------------- | --------- | -----------
+bot  | B         | Switch | *None*           | Anyone    | Marks the user as a bot.

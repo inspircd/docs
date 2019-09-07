@@ -58,9 +58,9 @@ Cloaking using the half mode:
 
 ### User Modes
 
-Name  | Character | Type   | Parameter Syntax | Description
------ | --------- | ------ | ---------------- | -----------
-cloak | x         | Switch | *None*           | Enables hiding of the user's hostname.
+Name  | Character | Type   | Parameter Syntax | Usable By | Description
+----- | --------- | ------ | ---------------- | --------- | -----------
+cloak | x         | Switch | *None*           | Anyone    | Enables hiding of the user's hostname.
 
 ### Special Notes
 

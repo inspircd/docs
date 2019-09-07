@@ -58,9 +58,9 @@ Removes channel mode `o` (op) from Sadie in #channel:
 
 ### Channel Modes
 
-Name     | Character | Type | Parameter Syntax   | Description
--------- | --------- | ---- | ------------------ | -----------
-namebase | Z         | List | `<name>[=<value>]` | Allows users to add, remove, and view the modes of a specific target.
+Name     | Character | Type | Parameter Syntax   | Usable By                           | Description
+-------- | --------- | ---- | ------------------ | ----------------------------------- | -----------
+namebase | Z         | List | `<name>[=<value>]` | Depends on the mode in &lt;name&gt; | Allows users to add, remove, and view the modes of a specific target.
 
 #### Example Usage
 

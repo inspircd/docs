@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name   | Character | Type   | Parameter Syntax | Description
------- | --------- | ------ | ---------------- | -----------
-noctcp | C         | Switch | *None*           | Enables blocking messages that contain CTCPs.
+Name   | Character | Type   | Parameter Syntax | Usable By         | Description
+------ | --------- | ------ | ---------------- | ----------------- | -----------
+noctcp | C         | Switch | *None*           | Channel operators | Enables blocking messages that contain CTCPs.
 
 ### Exemptions
 

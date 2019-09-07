@@ -74,9 +74,9 @@ Responds with the contents of the "example" help topic:
 
 ### User Modes
 
-Name   | Character | Type   | Parameter Syntax | Description
------- | --------- | ------ | ---------------- | -----------
-helpop | h         | Switch | *None*           | Marks the user as being available for help.
+Name   | Character | Type   | Parameter Syntax | Usable By        | Description
+------ | --------- | ------ | ---------------- | ---------------- | -----------
+helpop | h         | Switch | *None*           | Server operators | Marks the user as being available for help.
 
 ### Special Notes
 

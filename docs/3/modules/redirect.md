@@ -18,9 +18,9 @@ To load this module use the following `<module>` tag:
 
 ### Channel Modes
 
-Name     | Character | Type      | Parameter Syntax | Description
--------- | --------- | --------- | ---------------- | -----------
-redirect | L         | Parameter | `<channel>`      | Redirects all new users to &lt;channel&gt; when the user limit is reached.
+Name     | Character | Type      | Parameter Syntax | Usable By         | Description
+-------- | --------- | --------- | ---------------- | ----------------- | -----------
+redirect | L         | Parameter | `<channel>`      | Channel operators | Redirects all new users to &lt;channel&gt; when the user limit is reached.
 
 #### Example Usage
 
@@ -32,9 +32,9 @@ Redirects new users from #channel to #channel-full when the user limit is reache
 
 ### User Modes
 
-Name         | Character | Type   | Parameter Syntax | Description
------------- | --------- | ------ | ---------------- | -----------
-antiredirect | L         | Switch | *None*           | Prevents users from being redirected by channel mode `L` (redirect).
+Name         | Character | Type   | Parameter Syntax | Usable By | Description
+------------ | --------- | ------ | ---------------- | --------- | -----------
+antiredirect | L         | Switch | *None*           | Anyone    | Prevents users from being redirected by channel mode `L` (redirect).
 
 ### Special Notes
 

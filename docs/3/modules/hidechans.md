@@ -32,6 +32,6 @@ affectsopers | Boolean | No            | Whether server operators are affected b
 
 ### User Modes
 
-Name      | Character | Type   | Parameter Syntax | Description
---------- | --------- | ------ | ---------------- | -----------
-hidechans | I         | Switch | *None*           | Hides the channels the user is in from their `/WHOIS` response.
+Name      | Character | Type   | Parameter Syntax | Usable By | Description
+--------- | --------- | ------ | ---------------- | --------- | -----------
+hidechans | I         | Switch | *None*           | Anyone    | Hides the channels the user is in from their `/WHOIS` response.

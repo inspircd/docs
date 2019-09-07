@@ -32,9 +32,9 @@ duration | Duration | 1m            | The time period that nick changes should b
 
 ### Channel Modes
 
-Name      | Character | Type      | Parameter Syntax      | Description
---------- | --------- | --------- | --------------------- | -----------
-nickflood | F         | Parameter | `<changes>:<seconds>` | Prevents more than &lt;changes&gt; nickname changes in the last &lt;seconds&gt; seconds.
+Name      | Character | Type      | Parameter Syntax      | Usable By         | Description
+--------- | --------- | --------- | --------------------- | ----------------- | -----------
+nickflood | F         | Parameter | `<changes>:<seconds>` | Channel operators | Prevents more than &lt;changes&gt; nickname changes in the last &lt;seconds&gt; seconds.
 
 #### Example Usage
 

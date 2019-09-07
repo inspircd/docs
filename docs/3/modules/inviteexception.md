@@ -32,9 +32,9 @@ bypasskey | Boolean | Yes           | Whether channel mode `I` (invex) allows jo
 
 ### Channel Modes
 
-Name  | Character | Type | Parameter Syntax | Description
------ | --------- | ---- | ---------------- | -----------
-invex | I         | List | `<mask>`         | Exempts users matching &lt;mask&gt; from the `i` (inviteonly) channel mode.
+Name  | Character | Type | Parameter Syntax | Usable By         | Description
+----- | --------- | ---- | ---------------- | ----------------- | -----------
+invex | I         | List | `<mask>`         | Channel operators | Exempts users matching &lt;mask&gt; from the `i` (inviteonly) channel mode.
 
 #### Example Usage
 

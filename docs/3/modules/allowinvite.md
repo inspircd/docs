@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name        | Character | Type   | Parameter Syntax | Description
------------ | --------- | ------ | ---------------- | -----------
-allowinvite | A         | Switch | *None*           | Allows unprivileged users to use the `/INVITE` command.
+Name        | Character | Type   | Parameter Syntax | Usable By         | Description
+----------- | --------- | ------ | ---------------- | ----------------- | -----------
+allowinvite | A         | Switch | *None*           | Channel operators | Allows unprivileged users to use the `/INVITE` command.
 
 ### Extended Bans
 

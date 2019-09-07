@@ -50,9 +50,9 @@ Joins #example with the server operator-only `Y` (official-join) channel prefix 
 
 ### Channel Modes
 
-Name          | Character | Type      | Parameter Syntax | Description
-------------- | --------- | --------- | ---------------- | -----------
-official-join | Y         | Prefix    | `<nick>`         | Grants channel official-join status to &lt;nick&gt;.
+Name          | Character | Type      | Parameter Syntax | Usable By        | Description
+------------- | --------- | --------- | ---------------- | ---------------- | -----------
+official-join | Y         | Prefix    | `<nick>`         | Server operators | Grants channel official-join status to &lt;nick&gt;.
 
 ### Special Notes
 

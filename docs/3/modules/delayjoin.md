@@ -20,6 +20,6 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name      | Character | Type   | Parameter Syntax | Description
---------- | --------- | ------ | ---------------- | -----------
-delayjoin | D         | Switch | *None*           | Prevents users from receiving JOIN messages until the joining user speaks.
+Name      | Character | Type   | Parameter Syntax | Usable By         | Description
+--------- | --------- | ------ | ---------------- | ----------------- | -----------
+delayjoin | D         | Switch | *None*           | Channel operators | Prevents users from receiving JOIN messages until the joining user speaks.

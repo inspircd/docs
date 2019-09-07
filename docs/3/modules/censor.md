@@ -42,15 +42,15 @@ Prevents users from saying the phrase "fluffy capybara":
 
 ### Channel Modes
 
-Name   | Character | Type   | Parameter Syntax | Description
------- | --------- | ------ | ---------------- | -----------
-censor | G         | Switch | *None*           | Enables censoring messages sent to the channel.
+Name   | Character | Type   | Parameter Syntax | Usable By         | Description
+------ | --------- | ------ | ---------------- | ----------------- | -----------
+censor | G         | Switch | *None*           | Channel operators | Enables censoring messages sent to the channel.
 
 ### User Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-u_censor | G         | Switch | *None*           | Enables censoring messages sent to the user.
+Name     | Character | Type   | Parameter Syntax | Usable By | Description
+-------- | --------- | ------ | ---------------- | --------- | -----------
+u_censor | G         | Switch | *None*           | Anyone    | Enables censoring messages sent to the user.
 
 ### Exemptions
 

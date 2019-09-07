@@ -20,15 +20,15 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name       | Character | Type   | Parameter Syntax | Description
----------- | --------- | ------ | ---------------- | -----------
-stripcolor | S         | Switch | *None*           | Enables stripping of IRC formatting codes from channel messages.
+Name       | Character | Type   | Parameter Syntax | Usable By         | Description
+---------- | --------- | ------ | ---------------- | ----------------- | -----------
+stripcolor | S         | Switch | *None*           | Channel operators | Enables stripping of IRC formatting codes from channel messages.
 
 ### User Modes
 
-Name         | Character | Type   | Parameter Syntax | Description
------------- | --------- | ------ | ---------------- | -----------
-u_stripcolor | S         | Switch | *None*           | Enables stripping of IRC formatting codes from private messages.
+Name         | Character | Type   | Parameter Syntax | Usable By | Description
+------------ | --------- | ------ | ---------------- | --------- | -----------
+u_stripcolor | S         | Switch | *None*           | Anyone    | Enables stripping of IRC formatting codes from private messages.
 
 ### Exemptions
 

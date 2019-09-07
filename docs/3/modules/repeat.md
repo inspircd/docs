@@ -40,9 +40,9 @@ size        | Number   | 512           | The maximum number of characters to che
 
 ### Channel Modes
 
-Name   | Character | Type      | Parameter Syntax                                | Description
------- | --------- | --------- | ----------------------------------------------- | -----------
-repeat | E         | Parameter | `[~|*]<lines>:<sec>[:<difference>][:<backlog>]` | Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
+Name   | Character | Type      | Parameter Syntax                                | Usable By         | Description
+------ | --------- | --------- | ----------------------------------------------- | ----------------- | -----------
+repeat | E         | Parameter | `[~|*]<lines>:<sec>[:<difference>][:<backlog>]` | Channel operators | Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
 
 ##### Example Usage
 

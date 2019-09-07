@@ -20,6 +20,6 @@ This module requires no other configuration.
 
 ### User Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-hideoper | h         | Switch | *None*           | Hides the user's server operator status from unprivileged users.
+Name     | Character | Type   | Parameter Syntax | Usable By        | Description
+-------- | --------- | ------ | ---------------- | ---------------- | -----------
+hideoper | h         | Switch | *None*           | Server operators | Hides the user's server operator status from unprivileged users.

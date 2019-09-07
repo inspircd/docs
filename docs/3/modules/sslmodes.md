@@ -32,15 +32,15 @@ enableumode | Boolean | No            | Whether user mode `z` (sslqueries) is en
 
 ### Channel Modes
 
-Name    | Character | Type   | Parameter Syntax | Description
-------- | --------- | ------ | ---------------- | -----------
-sslonly | z         | Switch | *None*           | Prevents users who are not connected using SSL from joining the channel.
+Name    | Character | Type   | Parameter Syntax | Usable By         | Description
+------- | --------- | ------ | ---------------- | ----------------- | -----------
+sslonly | z         | Switch | *None*           | Channel operators | Prevents users who are not connected using SSL from joining the channel.
 
 ### User Modes
 
-Name       | Character | Type   | Parameter Syntax | Description
----------- | --------- | ------ | ---------------- | -----------
-sslqueries | z         | Switch | *None*           | Prevents messages from being sent to or received from a user that is not connected using SSL.
+Name       | Character | Type   | Parameter Syntax | Usable By | Description
+---------- | --------- | ------ | ---------------- | --------- | -----------
+sslqueries | z         | Switch | *None*           | Anyone    | Prevents messages from being sent to or received from a user that is not connected using SSL.
 
 ### Extended Bans
 

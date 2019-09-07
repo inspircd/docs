@@ -74,9 +74,9 @@ requirekey  | Boolean | No            | Whether overriding server operators shou
 
 ### User Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-override | O         | Switch | *None*           | Allows server operators to opt-in to overriding restrictions.
+Name     | Character | Type   | Parameter Syntax | Usable By        | Description
+-------- | --------- | ------ | ---------------- | ---------------- | -----------
+override | O         | Switch | *None*           | Server operators | Allows server operators to opt-in to overriding restrictions.
 
 ### Server Notice Masks
 

@@ -34,9 +34,9 @@ uppercase | Text   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | A list of characters to treat 
 
 ### Channel Modes
 
-Name     | Character | Type      | Parameter Syntax                                   | Description
--------- | --------- | --------- | -------------------------------------------------- | -----------
-anticaps | B         | Parameter | `<ban|block|mute|kick|kickban>:<minlen>:<percent>` | Enables blocking excessively capitalised messages.
+Name     | Character | Type      | Parameter Syntax                                   | Usable By         | Description
+-------- | --------- | --------- | -------------------------------------------------- | ----------------- | -----------
+anticaps | B         | Parameter | `<ban|block|mute|kick|kickban>:<minlen>:<percent>` | Channel operators | Enables blocking excessively capitalised messages.
 
 #### Example Usage
 

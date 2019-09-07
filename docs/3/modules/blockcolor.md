@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name       | Character | Type   | Parameter Syntax | Description
----------- | --------- | ------ | ---------------- | -----------
-blockcolor | c         | Switch | *None*           | Enables blocking messages that contain IRC formatting codes.
+Name       | Character | Type   | Parameter Syntax | Usable By         | Description
+---------- | --------- | ------ | ---------------- | ----------------- | -----------
+blockcolor | c         | Switch | *None*           | Channel operators | Enables blocking messages that contain IRC formatting codes.
 
 ### Exemptions
 

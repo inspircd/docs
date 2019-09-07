@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name         | Character | Type | Parameter Syntax | Description
------------- | --------- | ---- | ---------------- | -----------
-banexception | e         | List | `<mask>`         | Exempts users matching &lt;mask&gt; from the `b` (ban) channel mode.
+Name         | Character | Type | Parameter Syntax | Usable By         | Description
+------------ | --------- | ---- | ---------------- | ----------------- | -----------
+banexception | e         | List | `<mask>`         | Channel operators | Exempts users matching &lt;mask&gt; from the `b` (ban) channel mode.
 
 #### Example Usage
 

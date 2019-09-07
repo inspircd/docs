@@ -31,9 +31,9 @@ allownotice | Boolean | Yes           | Whether the delaymsg module also affects
 ```
 ### Channel Modes
 
-Name     | Character | Type      | Parameter Syntax | Description
--------- | --------- | --------- | ---------------- | -----------
-delaymsg | d         | Parameter | `<seconds>`      | Prevents newly joined users from speaking until &lt;seconds&gt; seconds have passed.
+Name     | Character | Type      | Parameter Syntax | Usable By         | Description
+-------- | --------- | --------- | ---------------- | ----------------- | -----------
+delaymsg | d         | Parameter | `<seconds>`      | Channel operators | Prevents newly joined users from speaking until &lt;seconds&gt; seconds have passed.
 
 #### Example Usage
 

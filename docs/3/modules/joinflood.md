@@ -32,9 +32,9 @@ duration | Duration | 1m            | The time period that a channel should be l
 
 ### Channel Modes
 
-Name      | Character | Type      | Parameter Syntax    | Description
---------- | --------- | --------- | ------------------- | -----------
-joinflood | j         | Parameter | `<joins>:<seconds>` | Prevents more than &lt;joins&gt; joins in the last &lt;seconds&gt; seconds.
+Name      | Character | Type      | Parameter Syntax    | Usable By         | Description
+--------- | --------- | --------- | ------------------- | ----------------- | -----------
+joinflood | j         | Parameter | `<joins>:<seconds>` | Channel operators | Prevents more than &lt;joins&gt; joins in the last &lt;seconds&gt; seconds.
 
 #### Example Usage
 

@@ -36,9 +36,9 @@ opercansee | Boolean | Yes           | Whether server operators with the channel
 
 ### Channel Modes
 
-Name       | Character | Type   | Parameter Syntax | Description
----------- | --------- | ------ | ---------------- | -----------
-auditorium | u         | Switch | *None*           | Enables auditorium mode.
+Name       | Character | Type   | Parameter Syntax | Usable By         | Description
+---------- | --------- | ------ | ---------------- | ----------------- | -----------
+auditorium | u         | Switch | *None*           | Channel operators | Enables auditorium mode.
 
 ### Exemptions
 

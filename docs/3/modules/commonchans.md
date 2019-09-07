@@ -20,6 +20,6 @@ This module requires no other configuration.
 
 ### User Modes
 
-Name            | Character | Type   | Parameter Syntax | Description
---------------- | --------- | ------ | ---------------- | -----------
-deaf_commonchan | c         | Switch | *None*           | Requires other users to have a common channel before they can message this user.
+Name            | Character | Type   | Parameter Syntax | Usable By | Description
+--------------- | --------- | ------ | ---------------- | --------- | -----------
+deaf_commonchan | c         | Switch | *None*           | Anyone    | Requires other users to have a common channel before they can message this user.

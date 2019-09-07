@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name   | Character | Type | Parameter Syntax  | Description
------- | --------- | ---- | ----------------- | -----------
-autoop | w         | List | `<status>:<mask>` | Grants the &lt;status&gt; rank to users matching &lt;mask&gt; on join.
+Name   | Character | Type | Parameter Syntax  | Usable By         | Description
+------ | --------- | ---- | ----------------- | ----------------- | -----------
+autoop | w         | List | `<status>:<mask>` | Channel operators | Grants the &lt;status&gt; rank to users matching &lt;mask&gt; on join.
 
 #### Example Usage
 

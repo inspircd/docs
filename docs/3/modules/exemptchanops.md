@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name          | Character | Type | Parameter Syntax       | Description
-------------- | --------- | ---- | ---------------------- | -----------
-exemptchanops | X         | List | `<restriction>:<mode>` | Exempts users with the &lt;mode&gt; prefix mode or higher from &lt;restriction&gt;.
+Name          | Character | Type | Parameter Syntax       | Usable By         | Description
+------------- | --------- | ---- | ---------------------- | ----------------- | -----------
+exemptchanops | X         | List | `<restriction>:<mode>` | Channel operators | Exempts users with the &lt;mode&gt; prefix mode or higher from &lt;restriction&gt;.
 
 #### Example Usage
 

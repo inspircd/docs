@@ -20,18 +20,18 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name         | Character | Type   | Parameter Syntax | Description
------------- | --------- | ------ | ---------------- | -----------
-c_registered | r         | Switch | *None*           | Marks the channel as being registered.
-reginvite    | R         | Switch | *None*           | Prevents users who are not logged into a services account from joining the channel.
-regmoderated | M         | Switch | *None*           | Prevents users who are not logged into a services account from speaking in the channel.
+Name         | Character | Type   | Parameter Syntax | Usable By         | Description
+------------ | --------- | ------ | ---------------- | ----------------- | -----------
+c_registered | r         | Switch | *None*           | Channel operators | Marks the channel as being registered.
+reginvite    | R         | Switch | *None*           | Channel operators | Prevents users who are not logged into a services account from joining the channel.
+regmoderated | M         | Switch | *None*           | Channel operators | Prevents users who are not logged into a services account from speaking in the channel.
 
 ### User Modes
 
-Name         | Character | Type   | Parameter Syntax | Description
------------- | --------- | ------ | ---------------- | -----------
-regdeaf      | R         | Switch | *None*           | Prevents users who are not logged into a services account from messaging the user.
-u_registered | r         | Switch | *None*           | Marks the user as being logged into a services account.
+Name         | Character | Type   | Parameter Syntax | Usable By | Description
+------------ | --------- | ------ | ---------------- | --------- | -----------
+regdeaf      | R         | Switch | *None*           | Anyone    | Prevents users who are not logged into a services account from messaging the user.
+u_registered | r         | Switch | *None*           | Anyone    | Marks the user as being logged into a services account.
 
 ### Exemptions
 

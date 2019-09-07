@@ -54,6 +54,6 @@ Knocks on #channel with the reason "Please let me in!":
 
 ### Channel Modes
 
-Name    | Character | Type   | Parameter Syntax | Description
-------- | --------- | ------ | ---------------- | -----------
-noknock | K         | Switch | *None*           | Disables the usage of the `/KNOCK` command on this channel.
+Name    | Character | Type   | Parameter Syntax | Usable By         | Description
+------- | --------- | ------ | ---------------- | ----------------- | -----------
+noknock | K         | Switch | *None*           | Channel operators | Disables the usage of the `/KNOCK` command on this channel.

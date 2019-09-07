@@ -60,9 +60,9 @@ ts         | Number | *The current UNIX time* | The UNIX time at which the chann
 
 ### Channel Modes
 
-Name      | Character | Type   | Parameter Syntax | Description
---------- | --------- | ------ | ---------------- | -----------
-permanent | P         | Switch | *None*           | Prevents the channel from being deleted when the last user leaves.
+Name      | Character | Type   | Parameter Syntax | Usable By        | Description
+--------- | --------- | ------ | ---------------- | ---------------- | -----------
+permanent | P         | Switch | *None*           | Server operators | Prevents the channel from being deleted when the last user leaves.
 
 ### Special Notes
 

@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-operonly | O         | Switch | *None*           | Prevents non-server operators from joining the channel.
+Name     | Character | Type   | Parameter Syntax | Usable By        | Description
+-------- | --------- | ------ | ---------------- | ---------------- | -----------
+operonly | O         | Switch | *None*           | Server operators | Prevents non-server operators from joining the channel.
 
 ### Extended Bans
 

@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-nonotice | T         | Switch | *None*           | Enables blocking messages sent with the `/NOTICE` command.
+Name     | Character | Type   | Parameter Syntax | Usable By         | Description
+-------- | --------- | ------ | ---------------- | ----------------- | -----------
+nonotice | T         | Switch | *None*           | Channel operators | Enables blocking messages sent with the `/NOTICE` command.
 
 ### Exemptions
 

@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name   | Character | Type   | Parameter Syntax | Description
------- | --------- | ------ | ---------------- | -----------
-nokick | Q         | Switch | *None*           | Prevents privileged users from using the `/KICK` command.
+Name   | Character | Type   | Parameter Syntax | Usable By         | Description
+------ | --------- | ------ | ---------------- | ----------------- | -----------
+nokick | Q         | Switch | *None*           | Channel operators | Prevents privileged users from using the `/KICK` command.
 
 ### Extended Bans
 

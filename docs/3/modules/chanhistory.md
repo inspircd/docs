@@ -36,9 +36,9 @@ maxlines | Number  | 50            | The maximum number of lines of history that
 
 ### Channel Modes
 
-Name    | Character | Type      | Parameter Syntax   | Description
-------- | --------- | --------- | ------------------ | -----------
-history | H         | Parameter | `<count>:<period>` | Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.
+Name    | Character | Type      | Parameter Syntax   | Usable By         | Description
+------- | --------- | --------- | ------------------ | ----------------- | -----------
+history | H         | Parameter | `<count>:<period>` | Channel operators | Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.
 
 #### Example Usage
 

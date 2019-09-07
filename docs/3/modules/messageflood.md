@@ -35,9 +35,9 @@ tagmsg  | Decimal | 0.2           | [**New in v3.2.0!**](/3/change-log/#inspircd
 ```
 ### Channel Modes
 
-Name  | Character | Type      | Parameter Syntax       | Description
------ | --------- | --------- | ---------------------- | -----------
-flood | f         | Parameter | `(*)<lines>:<seconds>` | Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
+Name  | Character | Type      | Parameter Syntax       | Usable By         | Description
+----- | --------- | --------- | ---------------------- | ----------------- | -----------
+flood | f         | Parameter | `(*)<lines>:<seconds>` | Channel operators | Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
 
 #### Example Usage
 

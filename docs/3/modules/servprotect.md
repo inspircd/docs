@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### User Modes
 
-Name        | Character | Type   | Parameter Syntax | Description
------------ | --------- | ------ | ---------------- | -----------
-servprotect | k         | Switch | *None*           | Protects services pseudoclients against kicks, kills, and user mode changes.
+Name        | Character | Type   | Parameter Syntax | Usable By | Description
+----------- | --------- | ------ | ---------------- | --------- | -----------
+servprotect | k         | Switch | *None*           | Servers   | Protects services pseudoclients against kicks, kills, and user mode changes.
 
 ### Special Notes
 

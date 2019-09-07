@@ -20,9 +20,9 @@ This module requires no other configuration.
 
 ### Channel Modes
 
-Name   | Character | Type   | Parameter Syntax | Description
------- | --------- | ------ | ---------------- | -----------
-nonick | N         | Switch | *None*           | Prevents users from changing their nickname whilst in the channel.
+Name   | Character | Type   | Parameter Syntax | Usable By         | Description
+------ | --------- | ------ | ---------------- | ----------------- | -----------
+nonick | N         | Switch | *None*           | Channel operators | Prevents users from changing their nickname whilst in the channel.
 
 ### Extended Bans
 

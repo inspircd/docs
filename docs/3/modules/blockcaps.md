@@ -46,9 +46,9 @@ uppercase | Text   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | A list of characters to treat 
 
 ### Channel Modes
 
-Name      | Character | Type   | Parameter Syntax | Description
---------- | --------- | ------ | ---------------- | -----------
-blockcaps | B         | Switch | *None*           | Enables blocking excessively capitalised messages.
+Name      | Character | Type   | Parameter Syntax | Usable By         | Description
+--------- | --------- | ------ | ---------------- | ----------------- | -----------
+blockcaps | B         | Switch | *None*           | Channel operators | Enables blocking excessively capitalised messages.
 
 ### Exemptions
 

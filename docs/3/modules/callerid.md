@@ -56,6 +56,6 @@ Adds Sadie to your callerid whitelist and removes Adam from your callerid whitel
 
 ### User Modes
 
-Name     | Character | Type   | Parameter Syntax | Description
--------- | --------- | ------ | ---------------- | -----------
-callerid | g         | Switch | *None*           | Enables whitelisting of who can message the user.
+Name     | Character | Type   | Parameter Syntax | Usable By | Description
+-------- | --------- | ------ | ---------------- | --------- | -----------
+callerid | g         | Switch | *None*           | Anyone    | Enables whitelisting of who can message the user.

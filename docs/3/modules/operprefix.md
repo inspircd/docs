@@ -32,9 +32,9 @@ prefix | Text | !             | The prefix character to use for the `y` (operpre
 
 ### Channel Modes
 
-Name       | Character | Type      | Parameter Syntax | Description
----------- | --------- | --------- | ---------------- | -----------
-operprefix | y         | Prefix    | `<nick>`         | Grants channel operprefix status to &lt;nick&gt;.
+Name       | Character | Type      | Parameter Syntax | Usable By        | Description
+---------- | --------- | --------- | ---------------- | ---------------- | -----------
+operprefix | y         | Prefix    | `<nick>`         | Server operators | Grants channel operprefix status to &lt;nick&gt;.
 
 ### Special Notes
 

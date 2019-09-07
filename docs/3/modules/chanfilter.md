@@ -36,9 +36,9 @@ maxlen     | Number  | 35            | The maximum length of a parameter for cha
 
 ### Channel Modes
 
-Name   | Character | Type | Parameter Syntax | Description
------- | --------- | ---- | ---------------- | -----------
-filter | g         | List | `<glob>`         | Prevents users from sending messages that match &lt;glob&gt;.
+Name   | Character | Type | Parameter Syntax | Usable By         | Description
+------ | --------- | ---- | ---------------- | ----------------- | -----------
+filter | g         | List | `<glob>`         | Channel operators | Prevents users from sending messages that match &lt;glob&gt;.
 
 #### Example Usage
 
