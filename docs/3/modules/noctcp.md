@@ -16,13 +16,31 @@ To load this module use the following `<module>` tag:
 <module name="noctcp">
 ```
 
-This module requires no other configuration.
+#### `<noctcp>`
+
+The `<noctcp>` tag defines settings about how the noctcp module should behave. This tag can only be defined once.
+
+Name        | Type    | Default Value | Description
+----------- | ------- | ------------- | -----------
+enableumode | Boolean | No            | Whether user mode `T` (u_noctcp) is enabled.
+
+##### Example Usage
+
+```xml
+<noctcp enableumode="yes">
+```
 
 ### Channel Modes
 
 Name   | Character | Type   | Parameter Syntax | Usable By         | Description
 ------ | --------- | ------ | ---------------- | ----------------- | -----------
-noctcp | C         | Switch | *None*           | Channel operators | Enables blocking messages that contain CTCPs.
+noctcp | C         | Switch | *None*           | Channel operators | Enables blocking channel messages that contain CTCPs.
+
+### User Modes
+
+Name     | Character | Type   | Parameter Syntax | Usable By | Description
+-------- | --------- | ------ | ---------------- | --------- | -----------
+u_noctcp | T         | Switch | *None*           | Anyone    | Enables blocking private messages that contain CTCPs.
 
 ### Exemptions
 
