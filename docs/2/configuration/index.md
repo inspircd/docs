@@ -2,6 +2,8 @@
 title: v2 Configuration
 ---
 
+{! 2/_support.md !}
+
 ## InspIRCd Configuration
 
 This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/2/modules).

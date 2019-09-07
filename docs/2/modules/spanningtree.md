@@ -2,6 +2,8 @@
 title: Module Details (spanningtree)
 ---
 
+{! 2/_support.md !}
+
 ## The "spanningtree" Module
 
 ### Description

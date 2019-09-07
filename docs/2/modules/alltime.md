@@ -2,6 +2,8 @@
 title: Module Details (alltime)
 ---
 
+{! 2/_support.md !}
+
 ## The "alltime" Module
 
 ### Description

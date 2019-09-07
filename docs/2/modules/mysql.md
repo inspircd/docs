@@ -2,6 +2,8 @@
 title: Module Details (mysql)
 ---
 
+{! 2/_support.md !}
+
 ## The "mysql" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

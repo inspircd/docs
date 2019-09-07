@@ -2,6 +2,8 @@
 title: Module Details (chanhistory)
 ---
 
+{! 2/_support.md !}
+
 ## The "chanhistory" Module
 
 ### Description

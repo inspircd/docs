@@ -2,6 +2,8 @@
 title: Module Details (cloaking)
 ---
 
+{! 2/_support.md !}
+
 ## The "cloaking" Module
 
 ### Description

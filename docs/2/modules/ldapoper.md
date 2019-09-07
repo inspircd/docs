@@ -2,6 +2,8 @@
 title: Module Details (ldapoper)
 ---
 
+{! 2/_support.md !}
+
 ## The "ldapoper" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

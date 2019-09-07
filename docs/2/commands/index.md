@@ -2,6 +2,8 @@
 title: v2 Commands
 ---
 
+{! 2/_support.md !}
+
 ## InspIRCd Commands
 
 This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/2/modules).

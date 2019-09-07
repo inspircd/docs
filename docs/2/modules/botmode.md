@@ -2,6 +2,8 @@
 title: Module Details (botmode)
 ---
 
+{! 2/_support.md !}
+
 ## The "botmode" Module
 
 ### Description

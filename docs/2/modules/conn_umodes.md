@@ -2,6 +2,8 @@
 title: Module Details (conn_umodes)
 ---
 
+{! 2/_support.md !}
+
 ## The "conn_umodes" Module
 
 ### Description

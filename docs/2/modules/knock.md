@@ -2,6 +2,8 @@
 title: Module Details (knock)
 ---
 
+{! 2/_support.md !}
+
 ## The "knock" Module
 
 ### Description

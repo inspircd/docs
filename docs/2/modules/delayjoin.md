@@ -2,6 +2,8 @@
 title: Module Details (delayjoin)
 ---
 
+{! 2/_support.md !}
+
 ## The "delayjoin" Module
 
 ### Description

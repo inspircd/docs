@@ -2,6 +2,8 @@
 title: Module Details (chancreate)
 ---
 
+{! 2/_support.md !}
+
 ## The "chancreate" Module
 
 ### Description

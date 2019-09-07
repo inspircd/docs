@@ -2,6 +2,8 @@
 title: v2 CentOS Linux Installation
 ---
 
+{! 2/_support.md !}
+
 ## Installing InspIRCd 2 using the CentOS package
 
 An official package for CentOS is maintained by [Adam](https://github.com/Adam-). You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).

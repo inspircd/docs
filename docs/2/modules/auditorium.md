@@ -2,6 +2,8 @@
 title: Module Details (auditorium)
 ---
 
+{! 2/_support.md !}
+
 ## The "auditorium" Module
 
 ### Description

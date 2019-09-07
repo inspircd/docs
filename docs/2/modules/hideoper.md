@@ -2,6 +2,8 @@
 title: Module Details (hideoper)
 ---
 
+{! 2/_support.md !}
+
 ## The "hideoper" Module
 
 ### Description

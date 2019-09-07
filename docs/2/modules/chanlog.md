@@ -2,6 +2,8 @@
 title: Module Details (chanlog)
 ---
 
+{! 2/_support.md !}
+
 ## The "chanlog" Module
 
 ### Description

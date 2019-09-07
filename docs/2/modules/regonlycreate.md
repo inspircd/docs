@@ -2,6 +2,8 @@
 title: Module Details (regonlycreate)
 ---
 
+{! 2/_support.md !}
+
 ## The "regonlycreate" Module
 
 ### Description

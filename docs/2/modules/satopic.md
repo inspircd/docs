@@ -2,6 +2,8 @@
 title: Module Details (satopic)
 ---
 
+{! 2/_support.md !}
+
 ## The "satopic" Module
 
 ### Description

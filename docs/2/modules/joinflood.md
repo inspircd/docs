@@ -2,6 +2,8 @@
 title: Module Details (joinflood)
 ---
 
+{! 2/_support.md !}
+
 ## The "joinflood" Module
 
 ### Description

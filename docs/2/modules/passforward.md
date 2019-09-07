@@ -2,6 +2,8 @@
 title: Module Details (passforward)
 ---
 
+{! 2/_support.md !}
+
 ## The "passforward" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (lockserv)
 ---
 
+{! 2/_support.md !}
+
 ## The "lockserv" Module
 
 ### Description

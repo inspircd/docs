@@ -2,6 +2,8 @@
 title: Module Details (sqlite3)
 ---
 
+{! 2/_support.md !}
+
 ## The "sqlite3" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

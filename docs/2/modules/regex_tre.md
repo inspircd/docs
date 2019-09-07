@@ -2,6 +2,8 @@
 title: Module Details (regex_tre)
 ---
 
+{! 2/_support.md !}
+
 ## The "regex_tre" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

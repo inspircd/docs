@@ -2,6 +2,8 @@
 title: Module Details (rline)
 ---
 
+{! 2/_support.md !}
+
 ## The "rline" Module
 
 ### Description

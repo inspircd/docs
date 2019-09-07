@@ -2,6 +2,8 @@
 title: Module Details (nicklock)
 ---
 
+{! 2/_support.md !}
+
 ## The "nicklock" Module
 
 ### Description

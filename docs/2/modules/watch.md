@@ -2,6 +2,8 @@
 title: Module Details (watch)
 ---
 
+{! 2/_support.md !}
+
 ## The "watch" Module
 
 ### Description

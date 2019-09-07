@@ -2,6 +2,8 @@
 title: Module Details (channelban)
 ---
 
+{! 2/_support.md !}
+
 ## The "channelban" Module
 
 ### Description

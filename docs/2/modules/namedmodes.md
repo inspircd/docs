@@ -2,6 +2,8 @@
 title: Module Details (namedmodes)
 ---
 
+{! 2/_support.md !}
+
 ## The "namedmodes" Module
 
 ### Description

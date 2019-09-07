@@ -2,6 +2,8 @@
 title: Module Details (sapart)
 ---
 
+{! 2/_support.md !}
+
 ## The "sapart" Module
 
 ### Description

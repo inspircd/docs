@@ -2,6 +2,8 @@
 title: Module Details (globalload)
 ---
 
+{! 2/_support.md !}
+
 ## The "globalload" Module
 
 ### Description

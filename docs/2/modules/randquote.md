@@ -2,6 +2,8 @@
 title: Module Details (randquote)
 ---
 
+{! 2/_support.md !}
+
 ## The "randquote" Module
 
 ### Description

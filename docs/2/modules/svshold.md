@@ -2,6 +2,8 @@
 title: Module Details (svshold)
 ---
 
+{! 2/_support.md !}
+
 ## The "svshold" Module
 
 ### Description

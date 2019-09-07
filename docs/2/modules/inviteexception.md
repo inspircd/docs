@@ -2,6 +2,8 @@
 title: Module Details (inviteexception)
 ---
 
+{! 2/_support.md !}
+
 ## The "inviteexception" Module
 
 ### Description

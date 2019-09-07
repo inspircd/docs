@@ -2,6 +2,8 @@
 title: Module Details (regex_glob)
 ---
 
+{! 2/_support.md !}
+
 ## The "regex_glob" Module
 
 ### Description

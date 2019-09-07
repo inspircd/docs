@@ -2,6 +2,8 @@
 title: Module Details (namesx)
 ---
 
+{! 2/_support.md !}
+
 ## The "namesx" Module
 
 ### Description

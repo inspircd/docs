@@ -2,6 +2,8 @@
 title: Module Details (httpd_stats)
 ---
 
+{! 2/_support.md !}
+
 ## The "httpd_stats" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (connflood)
 ---
 
+{! 2/_support.md !}
+
 ## The "connflood" Module
 
 ### Description

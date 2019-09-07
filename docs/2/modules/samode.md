@@ -2,6 +2,8 @@
 title: Module Details (samode)
 ---
 
+{! 2/_support.md !}
+
 ## The "samode" Module
 
 ### Description

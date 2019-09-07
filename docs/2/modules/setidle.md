@@ -2,6 +2,8 @@
 title: Module Details (setidle)
 ---
 
+{! 2/_support.md !}
+
 ## The "setidle" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (httpd)
 ---
 
+{! 2/_support.md !}
+
 ## The "httpd" Module
 
 ### Description

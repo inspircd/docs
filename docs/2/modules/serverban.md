@@ -2,6 +2,8 @@
 title: Module Details (serverban)
 ---
 
+{! 2/_support.md !}
+
 ## The "serverban" Module
 
 ### Description

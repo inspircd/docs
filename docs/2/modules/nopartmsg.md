@@ -2,6 +2,8 @@
 title: Module Details (nopartmsg)
 ---
 
+{! 2/_support.md !}
+
 ## The "nopartmsg" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (dnsbl)
 ---
 
+{! 2/_support.md !}
+
 ## The "dnsbl" Module
 
 ### Description

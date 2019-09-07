@@ -2,6 +2,8 @@
 title: Module Details (alias)
 ---
 
+{! 2/_support.md !}
+
 ## The "alias" Module
 
 ### Description

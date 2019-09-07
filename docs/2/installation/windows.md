@@ -2,6 +2,8 @@
 title: v2 Microsoft Windows Installation
 ---
 
+{! 2/_support.md !}
+
 ## Installing InspIRCd 2 using the Windows package
 
 An official package for Windows is maintained by [Adam](https://github.com/Adam-). You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).

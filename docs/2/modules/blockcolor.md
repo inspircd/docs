@@ -2,6 +2,8 @@
 title: Module Details (blockcolor)
 ---
 
+{! 2/_support.md !}
+
 ## The "blockcolor" Module
 
 ### Description

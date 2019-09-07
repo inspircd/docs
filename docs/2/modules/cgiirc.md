@@ -2,6 +2,8 @@
 title: Module Details (cgiirc)
 ---
 
+{! 2/_support.md !}
+
 ## The "cgiirc" Module
 
 ### Description

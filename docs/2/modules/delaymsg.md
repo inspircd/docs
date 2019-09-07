@@ -2,6 +2,8 @@
 title: Module Details (delaymsg)
 ---
 
+{! 2/_support.md !}
+
 ## The "delaymsg" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (ssl_openssl)
 ---
 
+{! 2/_support.md !}
+
 ## The "ssl_openssl" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

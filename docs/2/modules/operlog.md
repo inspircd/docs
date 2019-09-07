@@ -2,6 +2,8 @@
 title: Module Details (operlog)
 ---
 
+{! 2/_support.md !}
+
 ## The "operlog" Module
 
 ### Description

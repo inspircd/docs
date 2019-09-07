@@ -2,6 +2,8 @@
 title: Module Details (banexception)
 ---
 
+{! 2/_support.md !}
+
 ## The "banexception" Module
 
 ### Description

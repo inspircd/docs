@@ -2,6 +2,8 @@
 title: Module Details (operprefix)
 ---
 
+{! 2/_support.md !}
+
 ## The "operprefix" Module
 
 ### Description

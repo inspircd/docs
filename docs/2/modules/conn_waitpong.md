@@ -2,6 +2,8 @@
 title: Module Details (conn_waitpong)
 ---
 
+{! 2/_support.md !}
+
 ## The "conn_waitpong" Module
 
 ### Description

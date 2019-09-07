@@ -2,6 +2,8 @@
 title: Module Details (chanfilter)
 ---
 
+{! 2/_support.md !}
+
 ## The "chanfilter" Module
 
 ### Description

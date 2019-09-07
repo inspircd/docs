@@ -2,6 +2,8 @@
 title: Module Details (sanick)
 ---
 
+{! 2/_support.md !}
+
 ## The "sanick" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (md5)
 ---
 
+{! 2/_support.md !}
+
 ## The "md5" Module
 
 ### Description

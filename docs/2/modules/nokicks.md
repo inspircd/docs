@@ -2,6 +2,8 @@
 title: Module Details (nokicks)
 ---
 
+{! 2/_support.md !}
+
 ## The "nokicks" Module
 
 ### Description

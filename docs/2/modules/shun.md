@@ -2,6 +2,8 @@
 title: Module Details (shun)
 ---
 
+{! 2/_support.md !}
+
 ## The "shun" Module
 
 ### Description

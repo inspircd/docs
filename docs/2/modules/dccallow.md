@@ -2,6 +2,8 @@
 title: Module Details (dccallow)
 ---
 
+{! 2/_support.md !}
+
 ## The "dccallow" Module
 
 ### Description

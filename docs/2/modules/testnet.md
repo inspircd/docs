@@ -2,6 +2,8 @@
 title: Module Details (testnet)
 ---
 
+{! 2/_support.md !}
+
 ## The "testnet" Module
 
 <div class="alert alert-danger" role="alert" markdown="1">

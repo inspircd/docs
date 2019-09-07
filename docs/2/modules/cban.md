@@ -2,6 +2,8 @@
 title: Module Details (cban)
 ---
 
+{! 2/_support.md !}
+
 ## The "cban" Module
 
 ### Description

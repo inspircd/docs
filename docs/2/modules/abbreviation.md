@@ -2,6 +2,8 @@
 title: Module Details (abbreviation)
 ---
 
+{! 2/_support.md !}
+
 ## The "abbreviation" Module
 
 ### Description

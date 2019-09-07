@@ -2,6 +2,8 @@
 title: Module Details (filter)
 ---
 
+{! 2/_support.md !}
+
 ## The "filter" Module
 
 ### Description

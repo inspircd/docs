@@ -2,6 +2,8 @@
 title: Module Details (messageflood)
 ---
 
+{! 2/_support.md !}
+
 ## The "messageflood" Module
 
 ### Description

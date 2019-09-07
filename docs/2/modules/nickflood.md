@@ -2,6 +2,8 @@
 title: Module Details (nickflood)
 ---
 
+{! 2/_support.md !}
+
 ## The "nickflood" Module
 
 ### Description

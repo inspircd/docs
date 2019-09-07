@@ -2,6 +2,8 @@
 title: Module Details (halfop)
 ---
 
+{! 2/_support.md !}
+
 ## The "halfop" Module
 
 <div class="alert alert-danger" role="alert" markdown="1">

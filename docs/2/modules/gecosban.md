@@ -2,6 +2,8 @@
 title: Module Details (gecosban)
 ---
 
+{! 2/_support.md !}
+
 ## The "gecosban" Module
 
 ### Description

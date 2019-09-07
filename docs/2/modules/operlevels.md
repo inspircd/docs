@@ -2,6 +2,8 @@
 title: Module Details (operlevels)
 ---
 
+{! 2/_support.md !}
+
 ## The "operlevels" Module
 
 ### Description

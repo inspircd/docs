@@ -2,6 +2,8 @@
 title: Module Details (silence)
 ---
 
+{! 2/_support.md !}
+
 ## The "silence" Module
 
 ### Description

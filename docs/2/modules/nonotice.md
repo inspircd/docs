@@ -2,6 +2,8 @@
 title: Module Details (nonotice)
 ---
 
+{! 2/_support.md !}
+
 ## The "nonotice" Module
 
 ### Description

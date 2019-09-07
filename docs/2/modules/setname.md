@@ -2,6 +2,8 @@
 title: Module Details (setname)
 ---
 
+{! 2/_support.md !}
+
 ## The "setname" Module
 
 ### Description

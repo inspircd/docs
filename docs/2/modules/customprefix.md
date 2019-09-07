@@ -2,6 +2,8 @@
 title: Module Details (customprefix)
 ---
 
+{! 2/_support.md !}
+
 ## The "customprefix" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (saquit)
 ---
 
+{! 2/_support.md !}
+
 ## The "saquit" Module
 
 ### Description

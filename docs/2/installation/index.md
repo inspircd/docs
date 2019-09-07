@@ -2,6 +2,8 @@
 title: v2 Installation
 ---
 
+{! 2/_support.md !}
+
 ## Installing InspIRCd 2
 
 There are many different methods for installing InspIRCd. You should pick the method which fits your needs best.

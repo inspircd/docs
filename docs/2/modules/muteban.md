@@ -2,6 +2,8 @@
 title: Module Details (muteban)
 ---
 
+{! 2/_support.md !}
+
 ## The "muteban" Module
 
 ### Description

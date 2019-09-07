@@ -2,6 +2,8 @@
 title: Module Details (sakick)
 ---
 
+{! 2/_support.md !}
+
 ## The "sakick" Module
 
 ### Description

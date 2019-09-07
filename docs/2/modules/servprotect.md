@@ -2,6 +2,8 @@
 title: Module Details (servprotect)
 ---
 
+{! 2/_support.md !}
+
 ## The "servprotect" Module
 
 ### Description

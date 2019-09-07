@@ -2,6 +2,8 @@
 title: Module Details (xline_db)
 ---
 
+{! 2/_support.md !}
+
 ## The "xline_db" Module
 
 ### Description

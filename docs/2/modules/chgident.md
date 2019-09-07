@@ -2,6 +2,8 @@
 title: Module Details (chgident)
 ---
 
+{! 2/_support.md !}
+
 ## The "chgident" Module
 
 ### Description

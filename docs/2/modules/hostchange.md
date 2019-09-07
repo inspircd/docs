@@ -2,6 +2,8 @@
 title: Module Details (hostchange)
 ---
 
+{! 2/_support.md !}
+
 ## The "hostchange" Module
 
 ### Description

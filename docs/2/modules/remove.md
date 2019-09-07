@@ -2,6 +2,8 @@
 title: Module Details (remove)
 ---
 
+{! 2/_support.md !}
+
 ## The "remove" Module
 
 ### Description

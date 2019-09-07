@@ -2,6 +2,8 @@
 title: Module Details (password_hash)
 ---
 
+{! 2/_support.md !}
+
 ## The "password_hash" Module
 
 ### Description

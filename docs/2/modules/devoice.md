@@ -2,6 +2,8 @@
 title: Module Details (devoice)
 ---
 
+{! 2/_support.md !}
+
 ## The "devoice" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (mlock)
 ---
 
+{! 2/_support.md !}
+
 ## The "mlock" Module
 
 ### Description

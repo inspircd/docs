@@ -2,6 +2,8 @@
 title: Module Details (connectban)
 ---
 
+{! 2/_support.md !}
+
 ## The "connectban" Module
 
 ### Description

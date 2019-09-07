@@ -2,6 +2,8 @@
 title: Module Details (ojoin)
 ---
 
+{! 2/_support.md !}
+
 ## The "ojoin" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (ident)
 ---
 
+{! 2/_support.md !}
+
 ## The "ident" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (sajoin)
 ---
 
+{! 2/_support.md !}
+
 ## The "sajoin" Module
 
 ### Description

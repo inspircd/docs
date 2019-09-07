@@ -2,6 +2,8 @@
 title: Module Details (uhnames)
 ---
 
+{! 2/_support.md !}
+
 ## The "uhnames" Module
 
 ### Description

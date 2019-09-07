@@ -2,6 +2,8 @@
 title: Module Details (geoip)
 ---
 
+{! 2/_support.md !}
+
 ## The "geoip" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

@@ -2,6 +2,8 @@
 title: Module Details (sethost)
 ---
 
+{! 2/_support.md !}
+
 ## The "sethost" Module
 
 ### Description

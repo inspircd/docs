@@ -2,6 +2,8 @@
 title: Module Details (sslmodes)
 ---
 
+{! 2/_support.md !}
+
 ## The "sslmodes" Module
 
 ### Description

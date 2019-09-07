@@ -2,6 +2,8 @@
 title: Module Details (conn_join)
 ---
 
+{! 2/_support.md !}
+
 ## The "conn_join" Module
 
 ### Description

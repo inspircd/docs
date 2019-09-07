@@ -2,6 +2,8 @@
 title: Module Details (allowinvite)
 ---
 
+{! 2/_support.md !}
+
 ## The "allowinvite" Module
 
 ### Description

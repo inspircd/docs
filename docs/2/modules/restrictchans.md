@@ -2,6 +2,8 @@
 title: Module Details (restrictchans)
 ---
 
+{! 2/_support.md !}
+
 ## The "restrictchans" Module
 
 ### Description

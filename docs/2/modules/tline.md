@@ -2,6 +2,8 @@
 title: Module Details (tline)
 ---
 
+{! 2/_support.md !}
+
 ## The "tline" Module
 
 ### Description

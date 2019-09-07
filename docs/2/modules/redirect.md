@@ -2,6 +2,8 @@
 title: Module Details (redirect)
 ---
 
+{! 2/_support.md !}
+
 ## The "redirect" Module
 
 ### Description

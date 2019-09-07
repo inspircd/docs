@@ -19,6 +19,7 @@ nav:
     - Issue Tracker: https://github.com/inspircd/inspircd/issues
     - Developer API: https://www.inspircd.org/api/
 markdown_extensions:
+    - admonition
     - extra
     - markdown_include.include:
           base_path: docs

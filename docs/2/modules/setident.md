@@ -2,6 +2,8 @@
 title: Module Details (setident)
 ---
 
+{! 2/_support.md !}
+
 ## The "setident" Module
 
 ### Description

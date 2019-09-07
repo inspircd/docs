@@ -2,6 +2,8 @@
 title: Module Details (jumpserver)
 ---
 
+{! 2/_support.md !}
+
 ## The "jumpserver" Module
 
 <div class="alert alert-warning" role="alert" markdown="1">

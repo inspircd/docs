@@ -2,6 +2,8 @@
 title: Module Details (sslinfo)
 ---
 
+{! 2/_support.md !}
+
 ## The "sslinfo" Module
 
 ### Description

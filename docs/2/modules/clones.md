@@ -2,6 +2,8 @@
 title: Module Details (clones)
 ---
 
+{! 2/_support.md !}
+
 ## The "clones" Module
 
 ### Description

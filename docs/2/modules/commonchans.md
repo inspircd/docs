@@ -2,6 +2,8 @@
 title: Module Details (commonchans)
 ---
 
+{! 2/_support.md !}
+
 ## The "commonchans" Module
 
 ### Description

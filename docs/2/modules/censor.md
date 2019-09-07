@@ -2,6 +2,8 @@
 title: Module Details (censor)
 ---
 
+{! 2/_support.md !}
+
 ## The "censor" Module
 
 ### Description

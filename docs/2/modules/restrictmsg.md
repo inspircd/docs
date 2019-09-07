@@ -2,6 +2,8 @@
 title: Module Details (restrictmsg)
 ---
 
+{! 2/_support.md !}
+
 ## The "restrictmsg" Module
 
 ### Description

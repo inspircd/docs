@@ -2,6 +2,8 @@
 title: v2 Module Manager
 ---
 
+{! 2/_support.md !}
+
 ## Managing third-party modules with Module Manager
 
 ### Summary

@@ -2,6 +2,8 @@
 title: Module Details (uninvite)
 ---
 
+{! 2/_support.md !}
+
 ## The "uninvite" Module
 
 ### Description

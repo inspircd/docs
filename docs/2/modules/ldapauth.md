@@ -2,6 +2,8 @@
 title: Module Details (ldapauth)
 ---
 
+{! 2/_support.md !}
+
 ## The "ldapauth" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

@@ -2,6 +2,8 @@
 title: Module Details (chanprotect)
 ---
 
+{! 2/_support.md !}
+
 ## The "chanprotect" Module
 
 <div class="alert alert-danger" role="alert" markdown="1">

@@ -2,6 +2,8 @@
 title: Module Details (showwhois)
 ---
 
+{! 2/_support.md !}
+
 ## The "showwhois" Module
 
 ### Description

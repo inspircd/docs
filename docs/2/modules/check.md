@@ -2,6 +2,8 @@
 title: Module Details (check)
 ---
 
+{! 2/_support.md !}
+
 ## The "check" Module
 
 ### Description

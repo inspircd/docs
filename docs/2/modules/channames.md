@@ -2,6 +2,8 @@
 title: Module Details (channames)
 ---
 
+{! 2/_support.md !}
+
 ## The "channames" Module
 
 ### Description

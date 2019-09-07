@@ -2,6 +2,8 @@
 title: v2 Source Installation
 ---
 
+{! 2/_support.md !}
+
 ## Installing InspIRCd 2 from source
 
 If there is no official InspIRCd package for your system and you don't want to use Docker you can build from source.

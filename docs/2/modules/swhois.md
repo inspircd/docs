@@ -2,6 +2,8 @@
 title: Module Details (swhois)
 ---
 
+{! 2/_support.md !}
+
 ## The "swhois" Module
 
 ### Description

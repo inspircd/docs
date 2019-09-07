@@ -2,6 +2,8 @@
 title: Module Details (operjoin)
 ---
 
+{! 2/_support.md !}
+
 ## The "operjoin" Module
 
 ### Description

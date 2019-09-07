@@ -2,6 +2,8 @@
 title: Module Details (denychans)
 ---
 
+{! 2/_support.md !}
+
 ## The "denychans" Module
 
 ### Description

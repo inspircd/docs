@@ -2,6 +2,8 @@
 title: Module Details (pgsql)
 ---
 
+{! 2/_support.md !}
+
 ## The "pgsql" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

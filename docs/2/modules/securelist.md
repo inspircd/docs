@@ -2,6 +2,8 @@
 title: Module Details (securelist)
 ---
 
+{! 2/_support.md !}
+
 ## The "securelist" Module
 
 ### Description

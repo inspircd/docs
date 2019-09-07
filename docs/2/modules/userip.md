@@ -2,6 +2,8 @@
 title: Module Details (userip)
 ---
 
+{! 2/_support.md !}
+
 ## The "userip" Module
 
 ### Description

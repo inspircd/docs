@@ -2,6 +2,8 @@
 title: Module Details (ripemd160)
 ---
 
+{! 2/_support.md !}
+
 ## The "ripemd160" Module
 
 <div class="alert alert-danger" role="alert" markdown="1">

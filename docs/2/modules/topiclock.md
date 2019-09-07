@@ -2,6 +2,8 @@
 title: Module Details (topiclock)
 ---
 
+{! 2/_support.md !}
+
 ## The "topiclock" Module
 
 ### Description

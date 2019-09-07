@@ -2,6 +2,8 @@
 title: Module Details (httpd_config)
 ---
 
+{! 2/_support.md !}
+
 ## The "httpd_config" Module
 
 ### Description

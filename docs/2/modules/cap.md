@@ -2,6 +2,8 @@
 title: Module Details (cap)
 ---
 
+{! 2/_support.md !}
+
 ## The "cap" Module
 
 ### Description

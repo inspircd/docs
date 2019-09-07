@@ -2,6 +2,8 @@
 title: Module Details (customtitle)
 ---
 
+{! 2/_support.md !}
+
 ## The "customtitle" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (autoop)
 ---
 
+{! 2/_support.md !}
+
 ## The "autoop" Module
 
 ### Description

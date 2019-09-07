@@ -2,6 +2,8 @@
 title: Module Details (globops)
 ---
 
+{! 2/_support.md !}
+
 ## The "globops" Module
 
 ### Description

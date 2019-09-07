@@ -2,6 +2,8 @@
 title: Module Details (override)
 ---
 
+{! 2/_support.md !}
+
 ## The "override" Module
 
 ### Description

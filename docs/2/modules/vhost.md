@@ -2,6 +2,8 @@
 title: Module Details (vhost)
 ---
 
+{! 2/_support.md !}
+
 ## The "vhost" Module
 
 ### Description

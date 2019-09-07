@@ -2,6 +2,8 @@
 title: Module Details (close)
 ---
 
+{! 2/_support.md !}
+
 ## The "close" Module
 
 <div class="alert alert-warning" role="alert" markdown="1">

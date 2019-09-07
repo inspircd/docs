@@ -2,6 +2,8 @@
 title: Module Details (blockcaps)
 ---
 
+{! 2/_support.md !}
+
 ## The "blockcaps" Module
 
 ### Description

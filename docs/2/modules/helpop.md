@@ -2,6 +2,8 @@
 title: Module Details (helpop)
 ---
 
+{! 2/_support.md !}
+
 ## The "helpop" Module
 
 ### Description

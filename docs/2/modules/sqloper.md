@@ -2,6 +2,8 @@
 title: Module Details (sqloper)
 ---
 
+{! 2/_support.md !}
+
 ## The "sqloper" Module
 
 ### Description

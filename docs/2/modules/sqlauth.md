@@ -2,6 +2,8 @@
 title: Module Details (sqlauth)
 ---
 
+{! 2/_support.md !}
+
 ## The "sqlauth" Module
 
 ### Description

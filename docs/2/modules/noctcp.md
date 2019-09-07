@@ -2,6 +2,8 @@
 title: Module Details (noctcp)
 ---
 
+{! 2/_support.md !}
+
 ## The "noctcp" Module
 
 ### Description

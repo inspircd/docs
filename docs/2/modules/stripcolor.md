@@ -2,6 +2,8 @@
 title: Module Details (stripcolor)
 ---
 
+{! 2/_support.md !}
+
 ## The "stripcolor" Module
 
 ### Description

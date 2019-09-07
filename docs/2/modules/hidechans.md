@@ -2,6 +2,8 @@
 title: Module Details (hidechans)
 ---
 
+{! 2/_support.md !}
+
 ## The "hidechans" Module
 
 ### Description

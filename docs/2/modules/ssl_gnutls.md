@@ -2,6 +2,8 @@
 title: Module Details (ssl_gnutls)
 ---
 
+{! 2/_support.md !}
+
 ## The "ssl_gnutls" Module
 
 <div class="alert alert-info" role="alert" markdown="1">

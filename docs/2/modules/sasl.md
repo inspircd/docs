@@ -2,6 +2,8 @@
 title: Module Details (sasl)
 ---
 
+{! 2/_support.md !}
+
 ## The "sasl" Module
 
 ### Description

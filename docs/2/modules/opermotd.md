@@ -2,6 +2,8 @@
 title: Module Details (opermotd)
 ---
 
+{! 2/_support.md !}
+
 ## The "opermotd" Module
 
 ### Description

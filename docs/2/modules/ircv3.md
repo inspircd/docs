@@ -2,6 +2,8 @@
 title: Module Details (ircv3)
 ---
 
+{! 2/_support.md !}
+
 ## The "ircv3" Module
 
 ### Description

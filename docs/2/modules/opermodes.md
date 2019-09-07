@@ -2,6 +2,8 @@
 title: Module Details (opermodes)
 ---
 
+{! 2/_support.md !}
+
 ## The "opermodes" Module
 
 ### Description

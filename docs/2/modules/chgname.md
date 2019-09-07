@@ -2,6 +2,8 @@
 title: Module Details (chgname)
 ---
 
+{! 2/_support.md !}
+
 ## The "chgname" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (seenicks)
 ---
 
+{! 2/_support.md !}
+
 ## The "seenicks" Module
 
 ### Description

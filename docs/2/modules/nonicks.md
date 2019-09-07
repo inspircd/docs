@@ -2,6 +2,8 @@
 title: Module Details (nonicks)
 ---
 
+{! 2/_support.md !}
+
 ## The "nonicks" Module
 
 ### Description

@@ -2,6 +2,8 @@
 title: Module Details (exemptchanops)
 ---
 
+{! 2/_support.md !}
+
 ## The "exemptchanops" Module
 
 ### Description

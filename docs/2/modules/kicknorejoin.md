@@ -2,6 +2,8 @@
 title: Module Details (kicknorejoin)
 ---
 
+{! 2/_support.md !}
+
 ## The "kicknorejoin" Module
 
 ### Description

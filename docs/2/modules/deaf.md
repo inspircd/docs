@@ -2,6 +2,8 @@
 title: Module Details (deaf)
 ---
 
+{! 2/_support.md !}
+
 ## The "deaf" Module
 
 ### Description

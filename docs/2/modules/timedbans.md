@@ -2,6 +2,8 @@
 title: Module Details (timedbans)
 ---
 
+{! 2/_support.md !}
+
 ## The "timedbans" Module
 
 ### Description

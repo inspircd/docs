@@ -2,6 +2,8 @@
 title: Module Details (blockamsg)
 ---
 
+{! 2/_support.md !}
+
 ## The "blockamsg" Module
 
 ### Description

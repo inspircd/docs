@@ -2,6 +2,8 @@
 title: Module Details (services_account)
 ---
 
+{! 2/_support.md !}
+
 ## The "services_account" Module
 
 ### Description

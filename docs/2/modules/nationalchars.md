@@ -2,6 +2,8 @@
 title: Module Details (nationalchars)
 ---
 
+{! 2/_support.md !}
+
 ## The "nationalchars" Module
 
 ### Description

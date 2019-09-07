@@ -2,6 +2,8 @@
 title: Module Details (operchans)
 ---
 
+{! 2/_support.md !}
+
 ## The "operchans" Module
 
 ### Description

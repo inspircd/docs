@@ -2,6 +2,8 @@
 title: Module Details (banredirect)
 ---
 
+{! 2/_support.md !}
+
 ## The "banredirect" Module
 
 ### Description

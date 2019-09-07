@@ -2,6 +2,8 @@
 title: Module Details (permchannels)
 ---
 
+{! 2/_support.md !}
+
 ## The "permchannels" Module
 
 ### Description
