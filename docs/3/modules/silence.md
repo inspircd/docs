@@ -62,6 +62,12 @@ Adds a `/SILENCE` entry which blocks all possible messages from users matching `
 /SILENCE *!*@example.com
 ```
 
+Adds a `/SILENCE` entry which exempts all possible messages from users matching `*!*@exempt.example.com`:
+
+```plaintext
+/SILENCE *!*@exempt.example.com x
+```
+
 Removes a `/SILENCE` entry which blocked private `NOTICE`, `PRIVMSG`, and `TAGMSG` messages from users matching `*!*@example.com`:
 
 ```plaintext
