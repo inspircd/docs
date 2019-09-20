@@ -12,6 +12,8 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The ldapoper module no longer needs to be enabled at build time but now depends on the new ldap module which does need to be enabled at build time.
 
+- The gnutls module no longer automatically generates DH parameters at runtime. Generally all you will need to do in order to upgrade is to regenerate your self-signed certificates with `inspircd-genssl` or run `certtool --generate-dh-params --sec-param normal --outfile dhparams.pem`.
+
 - The default for `<config:format>` has changed from `compat` to `xml`. If you have not set this value then you will need to set it to `compat` or switch all C-style `\` escapes to XML-style `&entity;` escapes.
 
 - The `users/samode-usermodes` oper privilege is now required in order to change the user modes of other users with `/SAMODE`.
