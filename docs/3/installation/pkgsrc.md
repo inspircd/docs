@@ -15,7 +15,7 @@ It is known to build on:
 * Darwin (macOS)
 * Linux (CentOS, etc)
 
-Other unix-likes probably work too.
+Other UNIX-likes probably work too.
 
 ### How do I install this package?
 
@@ -33,7 +33,7 @@ Using pkg_install:
 pkg_add inspircd
 ```
 
-#### Source package.
+#### Source package
 
 If you're not using NetBSD, you need to bootstrap first. Consult the [pkgsrc documentation](https://www.netbsd.org/docs/pkgsrc/platforms.html) for information on how to do this.
 
