@@ -14,9 +14,7 @@ An official InspIRCd Docker image is available on [Docker Hub](https://hub.docke
 
 ### Packages
 
-The InspIRCd development team provide prebuilt packages for some common platforms. If you are using
-one of these platforms and do not want to install any third party modules it is recommended that you
-use one of these.
+The InspIRCd team provide prebuilt packages for some common platforms. If you are using one of these platforms and do not want to install any third party modules it is recommended that you use one of these.
 
 * [CentOS Linux](/2/installation/centos)
 

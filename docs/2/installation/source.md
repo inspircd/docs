@@ -67,7 +67,7 @@ You will initially be prompted to enter the location which you want the InspIRCd
 
 After you have configured the paths you will be asked a question about whether you want to use epoll/kqueue/poll/ports. You can almost always leave this as the default value as the most optimal socket engine will be selected automatically.
 
-If you have installed the development for either GnuTLS or OpenSSL you will now be asked if you want to build them. If available you should always say yes but if you don't you can enable them later with `./configure --enable-gnutls` or `./configure --enable-openssl`. After doing this it will prompt you to enable a self-signed certificate for your server.
+If you have installed the development headers for either GnuTLS or OpenSSL you will now be asked if you want to build them. If available you should always say yes but if you don't you can enable them later with `./configure --enable-gnutls` or `./configure --enable-openssl`. After doing this it will prompt you to enable a self-signed certificate for your server.
 
 Finally, you will be asked if you want to check for updates to third-party modules. If you are installing the first time you don't need to do this but if you are rerunning `./configure` at a later date you might find it useful to do so.
 

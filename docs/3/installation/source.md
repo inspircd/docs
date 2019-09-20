@@ -61,13 +61,11 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd` direc
 
 Execute the `./configure` script from the directory which contains the InspIRCd sources from the previous step. This will start an interactive wizard to help you configure your installation.
 
-You will initially be prompted to enter the location which you want the InspIRCd files to be copied to. The default is to install into a self-contained folder in your home directory but you can do a system-wide install if you really must.
+You will initially be shown the installation paths that InspIRCd defaults to. The default is to install into a self-contained folder in your home directory but you can do a system-wide install if you really must. If the shown paths are okay then press enter to continue. Otherwise, enter "no", press enter, and fill in the paths that it prompts you for.
 
-After you have configured the paths you will be asked a question about whether you want to use epoll/kqueue/poll/ports. You can almost always leave this as the default value as the most optimal socket engine will be selected automatically.
+After you have configured the paths you will be asked whether you want to enable extra modules automatically based on whether you have the dependencies installed. If you want to do this then press enter to continue. Otherwise, enter "no", press enter, and select the extra modules that you want to use. You can enable modules later using `./configure --enable-extras m_foo.cpp` if you change your mind..
 
-If you have installed the development for either GnuTLS or OpenSSL you will now be asked if you want to build them. If available you should always say yes but if you don't you can enable them later with `./configure --enable-gnutls` or `./configure --enable-openssl`. After doing this it will prompt you to enable a self-signed certificate for your server.
-
-Finally, you will be asked if you want to check for updates to third-party modules. If you are installing the first time you don't need to do this but if you are rerunning `./configure` at a later date you might find it useful to do so.
+Finally, if you enabled a SSL module in the previous step, you will be asked if you want to generate a self-signed certificate for testing purposes. If you want to do this then press enter to continue and fill in the details it prompts you for. Otherwise, enter "no" , and press enter.
 
 #### Compilation
 
