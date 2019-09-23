@@ -157,9 +157,6 @@ quietbursts | Boolean | No            | Whether to inform server operators of us
 ```
 
 #### `<security>`
-    
-	HideSplits = security->getBool("hidesplits");
-    
 
 This module extends the core `<security>` tag with the following fields:
 
