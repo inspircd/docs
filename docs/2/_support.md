@@ -5,4 +5,4 @@
 
     InspIRCd v3 contains many new features including full support for all currently ratified IRCv3 extensions and WebSocket connections.
 
-    InspIRCd v3 installation instructions are available [here](/3/installation) and a list of breaking changes is available [here](/3/configuration-changes).
+    InspIRCd v3 installation instructions are available [here](/3/installation) and a list of breaking changes is available [here](/3/breaking-changes).

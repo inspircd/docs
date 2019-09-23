@@ -36,7 +36,7 @@ title: Introduction
 
 - [Installation](/3/installation)
 - [Configuration](/3/configuration)
-    - [Upgrading from v2](/3/configuration-changes)
+    - [Upgrading from v2](/3/breaking-changes)
 - [Commands](/3/commands)
 - [Modes](/3/modes)
 - [Modules](/3/modules)

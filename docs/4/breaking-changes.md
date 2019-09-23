@@ -1,5 +1,5 @@
 ---
-title: v4 Configuration Changes
+title: v4 Breaking Changes
 ---
 
 {! 4/_support.md !}

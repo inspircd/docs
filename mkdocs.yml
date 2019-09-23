@@ -27,6 +27,9 @@ plugins:
   - exclude:
       glob:
         - '**/_*'
+  - redirects:
+      redirect_maps:
+          3/configuration-changes.md: 3/breaking-changes.md
   - search
 copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
 repo_url: https://github.com/inspircd/inspircd-docs

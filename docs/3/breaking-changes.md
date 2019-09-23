@@ -1,8 +1,8 @@
 ---
-title: v3 Configuration Changes
+title: v3 Breaking Changes
 ---
 
-## Configuration changes since InspIRCd 2
+## Breaking changes since InspIRCd 2
 
 NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 3. There are many backwards compatible changes that have been made which are not listed in this document.
 
