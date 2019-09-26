@@ -200,7 +200,7 @@ Name     | Parameter Count | Syntax                                      | Descr
 CONNECT  | 1               | `<server>`                                  | Attempts to connect the local server to &lt;server&gt;.
 LINKS    | 0               | *None*                                      | Lists all servers connected to the current one.
 MAP      | 0               | *None*                                      | Shows a textual map of the network architecture.
-RCONNECT | 2               | `<remote-server-mask> <target-server-mask>` | Attempts to connect &lt;remote-server-mask&lt; to &lt;target-server-mask&gt;
+RCONNECT | 2               | `<remote-server-mask> <target-server-mask>` | Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
 RSQUIT   | 2               | `<server-mask> [<reason>]`                  | Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
 SQUIT    | 2               | `<server-mask> [<reason>]`                  | Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.
 
