@@ -51,5 +51,6 @@ noctcp         | Exempts users from channel mode `C` (noctcp). Requires [the noc
 nonick         | Exempts users from channel mode `N` (nonick). Requires [the nonicks module](/3/modules/nonicks).
 nonotice       | Exempts users from channel mode `T` (nonotice). Requires [the nonotice module](/3/modules/nonotice).
 regmoderated   | Exempts users from channel mode `M` (regmoderated). Requires [the services_account module](/3/modules/services_account).
+repeat         | Exempts users from channel mode `E` (repeat). Requires [the repeat module](/3/modules/repeat).
 stripcolor     | Exempts users from channel mode `S` (stripcolor). Requires [the stripcolor module](/3/modules/stripcolor).
-topiclock      | Exempts users from channel mode `t` (topiclock).
+topiclock      | Exempts users from channel mode `t` (topiclock). Requires [the topiclock module](/3/modules/topiclock).

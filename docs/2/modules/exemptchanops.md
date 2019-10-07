@@ -53,4 +53,4 @@ nonick         | Exempts users from channel mode `N` (nonick). Requires [the non
 nonotice       | Exempts users from channel mode `T` (nonotice). Requires [the nonotice module](/2/modules/nonotice).
 regmoderated   | Exempts users from channel mode `M` (regmoderated). Requires [the services_account module](/2/modules/services_account).
 stripcolor     | Exempts users from channel mode `S` (stripcolor). Requires [the stripcolor module](/2/modules/stripcolor).
-topiclock      | Exempts users from channel mode `t` (topiclock).
+topiclock      | Exempts users from channel mode `t` (topiclock). Requires [the topiclock module](/2/modules/topiclock).
