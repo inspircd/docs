@@ -63,3 +63,7 @@ Defines an SSL-only connect class and then a general connect class to inherit fr
          threshold="10"
          timeout="10">
 ```
+
+#### Special Notes
+
+If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable DNS lookups for your WebIRC gateway.

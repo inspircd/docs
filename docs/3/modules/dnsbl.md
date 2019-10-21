@@ -118,3 +118,7 @@ D         | Notifications about DNSBL hits on a remote server.
 Character | Description
 --------- | -----------
 d         | Lists information about DNSBL hits and misses.
+
+### Special Notes
+
+If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable DNSBL lookups for your WebIRC gateway.

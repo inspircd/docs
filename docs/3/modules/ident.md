@@ -59,3 +59,7 @@ timeout         | Duration | 5s            | The duration to timeout username (i
 <ident prefixunqueried="no"
        timeout="5s">
 ```
+
+### Special Notes
+
+If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable ident lookups for your WebIRC gateway.
