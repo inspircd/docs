@@ -22,7 +22,7 @@ The `<connflood>` tag defines settings about how the connflood module should beh
 
 Name     | Type     | Default Value | Description
 -------- | -------- | ------------- | -----------
-bootwait | Duration | *None*        | The duration to wait after starting up before connections should be throttled.
+bootwait | Duration | 2m            | The duration to wait after starting up before connections should be throttled.
 maxconns | Number   | *None*        | The maximum number of connections to allow before throttling.
 period   | Duration | *None*        | The duration after which the connection counter is reset.
 timeout  | Duration | *None*        | The duration to disallow connections for after passing the throttling threshold.
@@ -31,7 +31,7 @@ quitmsg  | Text     | *None*        | The message to quit throttled users with.
 ##### Example Usage
 
 ```xml
-<connflood bootwait="10s"
+<connflood bootwait="2m"
            maxconns="3"
            period="30s"
            timeout="30s"

@@ -6,6 +6,86 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.4.0
+
+**This version of InspIRCd was released on 2019-10-25.**
+
+* Added `<alias:stripcolor>` to allow stripping formatting codes before matching an alias.
+
+* Added `<cloak:ignorecase>` to ignore the case of a FQDN when cloaking.
+
+* Added a check for the `channels/auspex` privilege to the hidemode module.
+
+* Added a workaround for gateway IP addresses being banned by the connectban module.
+
+* Added more information to timedbans addition/expiry notices.
+
+* Added support for filtering part messages to the chanfilter module.
+
+* Developer: added `ConfigStatus::initial` to find out if the config is being loaded for the first time.
+
+* Developer: added `Events::ModuleEventProvider::{OnSubscribe,OnUnsubscribe}` to allow knowing when a module has subscribed to or unsubscribed from an event.
+
+* Developer: added a parameter to the `OnServerSplit` event which specifies whether the split was intended or not.
+
+* Developer: added an internal serialisation of the dccallow list.
+
+* Developer: added an internal serialisation of the silence list.
+
+* Developer: added the `GetId` method to the `Server` class.
+
+* Developer: added the `GetNumericToken` method to the `irc::sepstream` class.
+
+* Developer: added the `GetTypeStr` method to the `DNS::Manager` class.
+
+* Developer: added the `OnServerBurst` event for executing actions after a server has finished bursting.
+
+* Developer: added the `OnShutdown` event for executing actions shortly before shutdown.
+
+* Developer: added the experimental `Serializable` class &amp; API and implemented it in the `Extensible`, `User` and `LocalUser` classes.
+
+* Developer: changed `IS_{LOCAL,REMOTE,SERVER}` to be capable of handling null pointers.
+
+* Developer: exposed variable list modes via the `VLIST` 005 token to make things easier for client developers.
+
+* Disabled DNS, DNSBL, and ident lookups for unregistered KiwiIRC.com users in the example provider configs.
+
+* Documented the `repeat` exemption type.
+
+* Exempted the KiwiIRC.com servers from X-lines in the example provider configs.
+
+* Fixed a bug in the HAProxy module where it would ignore any data received in the same packet as the header when using TCP connections.
+
+* Fixed a crash on shutdown in the spanningtree module.
+
+* Fixed linker errors caused by build objects from one compiler being used by another.
+
+* Fixed not respecting the deprecated `<channels:users>` config tag.
+
+* Fixed the DNSBL module banning a user after their IP address has changed.
+
+* Fixed the IP addresses of the KiwiIRC.com servers in the example provider configs.
+
+* Fixed the `OnSetUserIP` event being fired before the connect class has changed.
+
+* Fixed the `u_noctcp` mode not being respected for CTCPs targeted at a channel.
+
+* Fixed the config example path not being updated when the config path is changed in interactive mode.
+
+* Fixed the example configs allowing voiced users to voice/devoice other users.
+
+* Fixed the example provider config files not being installed.
+
+* Fixed the silence module not being able to add or remove entries in some cases.
+
+* Fixed various issues relating to hostname resolution.
+
+* Raised the default value for `<connflood:bootwait>` from ten seconds to two minutes.
+
+* Replaced the gdbargs file with the `--eval-command` option inside the init script.
+
+* Updated the NetBSD `EV_SET` workaround now that upstream have fixed the issue.
+
 ### InspIRCd 3.3.0
 
 **This version of InspIRCd was released on 2019-08-23.**
@@ -51,7 +131,6 @@ This page lists changes which have happened between releases.
 * Improved the message sent to server operators when the maximum connections for a connect class is reached.
 
 * Updated the vendored `utfcpp` library to v3.1.
-
 
 ### InspIRCd 3.2.0
 

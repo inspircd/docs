@@ -20,13 +20,14 @@ To load this module use the following `<module>` tag:
 
 The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
 
-Name        | Type   | Default Value | Description
------------ | ------ | ------------- | -----------
-domainparts | Number | 3             | If the half mode is used then the maximum number of domain labels that should be visible.
-mode        | Text   | *None*        | The cloaking method to use.
-prefix      | Text   | *None*        | The value to prefix IP address cloaks with.
-suffix      | Text   | *None*        | The value to suffix IP address cloaks with.
-key         | Text   | *None*        | **Required for the half and full modes!** A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
+Name        | Type    | Default Value | Description
+----------- | ------- | ------------- | -----------
+domainparts | Number  | 3             | If the half mode is used then the maximum number of domain labels that should be visible.
+mode        | Text    | *None*        | The cloaking method to use.
+prefix      | Text    | *None*        | The value to prefix IP address cloaks with.
+suffix      | Text    | *None*        | The value to suffix IP address cloaks with.
+key         | Text    | *None*        | **Required for the half and full modes!** A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
+ignorecase  | Boolean | No            | [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to to ignore the case of a FQDN when cloaking.
 
 The mode field should be set to one of the following values:
 
@@ -43,7 +44,8 @@ Cloaking using the full mode:
 <cloak mode="full"
        key="changeme"
        prefix="MyNet-"
-       suffix=".IP">
+       suffix=".IP"
+       ignorecase="yes">
 ```
 
 Cloaking using the half mode:
@@ -53,7 +55,8 @@ Cloaking using the half mode:
        key="changeme"
        prefix="MyNet-"
        suffix=".IP"
-       domainparts="3">
+       domainparts="3"
+       ignorecase="yes">
 ```
 
 ### User Modes

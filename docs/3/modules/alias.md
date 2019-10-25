@@ -29,6 +29,7 @@ requires       | Text    | *None*        | If defined then the nickname of a use
 channelcommand | Boolean | No            | Whether the command can be executed as a channel command.
 usercommand    | Boolean | Yes           | Whether the command can be executed as a server command.
 operonly       | Boolean | No            | Whether the user executing the command must be a server operator.
+stripcolor     | Boolean | No            | [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to strip formatting codes before matching an alias.
 uline          | Boolean | No            | Whether the user specified in the requires value must be on a U-lined server.
 
 The replacement field can contain any of the following template variables:
@@ -55,6 +56,7 @@ Defines an oper-only `/OPERSERV` server command that messages the OperServ clien
        requires="OperServ"
        channelcommand="no"
        usercommand="yes"
+       stripcolor="no"
        operonly="yes"
        uline="yes">
 ```
