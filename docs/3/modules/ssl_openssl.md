@@ -78,7 +78,7 @@ crlfile            | Text    | *None*        | If defined then the path to the C
 crlmode            | Text    | chain         | The mode to use when checking for certificate revocations.
 crlpath            | Text    | *None*        | If defined then the path to the CRL directory.
 dhfile             | Text    | dhparams.pem  | The path to the certificate in PEM format.
-ecdhcurve          | Text    | prime256v1    | The ECDH curve. Requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_ECDH` enabled.
+ecdhcurve          | Text    | prime256v1    | The ECDH curve.
 hash               | Text    | md5           | The hash algorithm used for SSL client fingerprints.
 keyfile            | Text    | key.pem       | The path to the private key in PEM format.
 renegotiation      | Boolean | No            | Whether insecure SSL renegotiation is enabled.
