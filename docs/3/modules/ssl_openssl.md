@@ -102,7 +102,7 @@ The hash field should be set to one of the values shown in `openssl list --diges
 
 ```xml
 <sslprofile name="Clients"
-            provider="gnutls"
+            provider="openssl"
             cafile="ca.pem"
             certfile="cert.pem"
             ciphers="DEFAULT"
