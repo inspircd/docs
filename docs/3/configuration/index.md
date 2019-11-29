@@ -18,6 +18,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 2/configuration/_define.md !}
 {! 3/configuration/_dns.md !}
 {! 2/configuration/_exception.md !}
+{! 3/configuration/_include.md !}
 {! 2/configuration/_insane.md !}
 {! 3/configuration/_limits.md !}
 {! 3/configuration/_log.md !}

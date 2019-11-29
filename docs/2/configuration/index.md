@@ -23,6 +23,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 2/configuration/_disabled.md !}
 {! 2/configuration/_dns.md !}
 {! 2/configuration/_exception.md !}
+{! 2/configuration/_include.md !}
 {! 2/configuration/_insane.md !}
 {! 2/configuration/_limits.md !}
 {! 2/configuration/_log.md !}
