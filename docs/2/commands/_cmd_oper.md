@@ -2,7 +2,7 @@
 
 ### `/OPER <name> <password>`
 
-Logs into a server operator account with the specified name and password. 
+Logs into a server operator account with the specified name and password.
 
 #### Example Usage
 

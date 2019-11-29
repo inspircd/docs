@@ -75,7 +75,7 @@ dhfile            | Text    | dhparams.pem  | The path to the DH parameters in P
 hash              | Text    | md5           | The hash algorithm used for SSL client fingerprints.
 keyfile           | Text    | key.pem       | The path to the private key in PEM format.
 mindhbits         | Number  | 1024          | The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
-outrecsize        | Number  | 2048          | The maximum size of an outgoing GnuTLS record.  
+outrecsize        | Number  | 2048          | The maximum size of an outgoing GnuTLS record.
 priority          | Text    | NORMAL        | A [GnuTLS priority string](https://gnutls.org/manual/html_node/Priority-Strings.html).
 requestclientcert | Boolean | Yes           | Whether to request a SSL certificate from clients.
 strictpriority    | Boolean | No            | Whether to require that all tokens in the GnuTLS priority string are valid.

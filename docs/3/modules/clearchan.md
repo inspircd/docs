@@ -27,7 +27,7 @@ CLEARCHAN | 2-3             | `<channel> [<action>] [<reason>]` | Mass punishes 
 The action parameter should be set to one of the following values:
 
 Value | Description
------ | ----------- 
+----- | -----------
 KILL  | Kill all members of the channel (default behaviour).
 KICK  | Kick all members of the channel.
 G     | G-line all members of the channel for one hour.

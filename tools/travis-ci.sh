@@ -12,4 +12,5 @@ else
 	sudo apt-get install ruby --assume-yes --install-recommends
 	./tools/find-missing
 	./tools/find-orphans
+	./tools/find-whitespace
 fi

@@ -41,7 +41,7 @@ The `<websocket>` tag defines settings about how the websocket module should beh
 
 Name       | Type     | Default Value | Description
 ---------- | -------- | ------------- | -----------
-sendastext | Text     | Yes           | Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8. 
+sendastext | Text     | Yes           | Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
 
 ##### Example Usage
 

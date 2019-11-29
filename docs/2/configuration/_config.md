@@ -15,7 +15,6 @@ Value  | Description
 compat | Use the 1.2-style format with C-style escape sequences (e.g. `\n`).
 xml    | Use the 2.0-style format with XML-style escapes (e.g. `&nl;`) and `<define>`.
 
-
 #### Example Usage
 
 ```xml

@@ -6,7 +6,7 @@ title: Module Details (geoban)
 
 ### Description
 
-This module adds extended ban `G` which matches against two letter country codes. 
+This module adds extended ban `G` which matches against two letter country codes.
 
 ### Configuration
 

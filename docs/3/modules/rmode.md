@@ -34,7 +34,6 @@ Removes all bans on #example:
 
 Removes all bans on #example matching \*foo\*:
 
-
 ```plaintext
 /RMODE #example b *foo*
 ```

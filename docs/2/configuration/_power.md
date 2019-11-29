@@ -6,9 +6,9 @@ The `<power>` tag defines the passwords for the `/DIE` and `/RESTART` commands. 
 
 Name        | Type | Default Value | Description
 ----------- | ---- | ------------- | -----------
-hash        | Text | *None*        | If defined then the hash algorithm that the password fields are hashed with. 
-diepass     | Text | *None*        | The password for the `/DIE` command. 
-restartpass | Text | *None*        | The password for the `/RESTART` command. 
+hash        | Text | *None*        | If defined then the hash algorithm that the password fields are hashed with.
+diepass     | Text | *None*        | The password for the `/DIE` command.
+restartpass | Text | *None*        | The password for the `/RESTART` command.
 
 {! 2/modules/_hash_table.md !}
 

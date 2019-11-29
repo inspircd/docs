@@ -27,7 +27,7 @@ To disable all server notice masks simply remove user mode `s` (snomask) entirel
 /MODE YourNick -s
 ```
 
-A list of the valid server notice masks and what they do is listed below. 
+A list of the valid server notice masks and what they do is listed below.
 
 ### Server Notice Masks
 

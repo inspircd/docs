@@ -13,8 +13,6 @@ mandatorytag | Text    | *None*                      | If defined then a tag tha
 noexec       | Boolean | Yes (executable), No (file) | Whether to allow executable includes from within the included config.
 noinclude    | Boolean | No                          | Whether to allow file includes from within the included config.
 
-
-
 #### Example Usage
 
 Includes links.conf into the config:

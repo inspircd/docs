@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+problems = Array.new
+Dir["#{File.dirname __dir__}/docs/**/*.md"].each do |file|
+	contents = File.read file
+	if contents.match /\xA{3,}/
+		problems << { file: file, description: 'three or more consecutive empty lines' }
+	end
+	if contents.match /\x20\xA/
+		problems << { file: file, description: 'trailing whitespace' }
+	end
+	if contents.match /\xD/
+		problems << { file: file, description: 'Windows-style newline' }
+	end
+end
+
+problems.each do |problem|
+	puts "#{problem[:file]} has #{problem[:description]}!"
+end
+
+puts "#{problems.count} problems!"
+exit problems.count

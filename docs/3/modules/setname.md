@@ -22,7 +22,7 @@ The `<setname>` tag defines settings about how the setname module should behave.
 
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
-notifyopers | Boolean | Yes           | Whether to notify server operators when a user changes their real name. 
+notifyopers | Boolean | Yes           | Whether to notify server operators when a user changes their real name.
 operonly    | Boolean | No            | Whether the `/SETNAME` command can only be used by server operators.
 
 #### Example Usage

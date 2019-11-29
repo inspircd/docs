@@ -60,7 +60,7 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The close module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_close` to install it.
 
-- The geoip module has been replaced with the geo_maxmind and geoclass modules. In order to upgrade load these modules and replace comma-delimited `<connect:geoip>` entries with space-delimited `<connect:country>` entries.  
+- The geoip module has been replaced with the geo_maxmind and geoclass modules. In order to upgrade load these modules and replace comma-delimited `<connect:geoip>` entries with space-delimited `<connect:country>` entries.
 
 - The jumpserver module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_jumpserver` to install it.
 

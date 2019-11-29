@@ -1,7 +1,7 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
 ### `/WALLOPS <message>`
- 
+
 Sends a message to all users with the `w` (wallops) user mode enabled:
 
 This command is only usable by server operators with WALLOPS in one of their `<class>` blocks.

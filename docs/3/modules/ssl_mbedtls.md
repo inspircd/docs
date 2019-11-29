@@ -79,7 +79,7 @@ keyfile           | Text    | key.pem       | The path to the private key in PEM
 maxver            | Number  | *None*        | If defined then the maximum version of TLS to use.
 mindhbits         | Number  | 2048          | The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
 minver            | Number  | *None*        | If defined then the minimum version of TLS to use.
-outrecsize        | Number  | 2048          | The maximum size of an outgoing mbedTLS record.  
+outrecsize        | Number  | 2048          | The maximum size of an outgoing mbedTLS record.
 requestclientcert | Boolean | Yes           | Whether to request a SSL certificate from clients.
 
 The hash field should be set to one of the values shown [in the mbedTLS MD documentation](https://tls.mbed.org/api/group__hashing__module.html).

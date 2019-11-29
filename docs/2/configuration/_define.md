@@ -9,7 +9,6 @@ Name  | Type | Default Value | Description
 name  | Text | *None*        | **Required!** The name of the entity.
 value | Text | *None*        | The value to replace instances of the entity with.
 
-
 #### Example Usage
 
 Creates the `&ServerHost;` entity with a value of "example.com":

@@ -232,7 +232,7 @@ This page lists changes which have happened between releases.
 
 - Added a configure option, `--disable-auto-extras`, which disables automatically enabling extras for which the dependencies are available.
 
-- Added support for disabling a STS policy for users in specific connect classes. 
+- Added support for disabling a STS policy for users in specific connect classes.
 
 - Added support for [the IRCv3 Message IDs specification](https://ircv3.net/specs/extensions/message-ids.html).
 
