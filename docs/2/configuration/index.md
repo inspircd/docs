@@ -17,6 +17,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 2/configuration/_channels.md !}
 {! 2/configuration/_cidr.md !}
 {! 2/configuration/_class.md !}
+{! 2/configuration/_config.md !}
 {! 2/configuration/_connect.md !}
 {! 2/configuration/_define.md !}
 {! 2/configuration/_disabled.md !}
