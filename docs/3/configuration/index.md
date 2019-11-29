@@ -14,7 +14,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 2/configuration/_cidr.md !}
 {! 2/configuration/_class.md !}
 {! 3/configuration/_connect.md !}
-{! 2/configuration/_dns.md !}
+{! 3/configuration/_dns.md !}
 {! 2/configuration/_exception.md !}
 {! 2/configuration/_insane.md !}
 {! 3/configuration/_limits.md !}
