@@ -99,3 +99,6 @@ The hash field should be set to one of the values shown in `gnutls-cli --list | 
             requestclientcert="yes"
             strictpriority="no">
 ```
+## Special Notes
+
+If you are using a CA-provided certificate and key you will also need to provide a DH parameters file. This file can be generated using `certtool --generate-dh-params --sec-param normal --outfile dhparams.pem` and then be placed in your config directory. You may need to use `gnutls-certtool` instead of `certtool` on macOS and `--bits 2048` instead of `--sec-param normal` on GnuTLS 2.x.

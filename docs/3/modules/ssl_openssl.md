@@ -117,3 +117,7 @@ The hash field should be set to one of the values shown in `openssl list --diges
             tlsv11="yes"
             tlsv12="yes">
 ```
+
+## Special Notes
+
+If you are using a CA-provided certificate and key you will also need to provide a DH parameters file. This file can be generated using `openssl dhparam -out dhparams.pem 2048` and then be placed in your config directory.
