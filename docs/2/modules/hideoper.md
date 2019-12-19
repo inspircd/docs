@@ -24,4 +24,4 @@ This module requires no other configuration.
 
 Name     | Character | Type   | Parameter Syntax | Description
 -------- | --------- | ------ | ---------------- | -----------
-hideoper | h         | Switch | *None*           | Hides the user's server operator status from unprivileged users.
+hideoper | H         | Switch | *None*           | Hides the user's server operator status from unprivileged users.
