@@ -68,3 +68,16 @@ Server operators do not automatically get channel privileges by default. You can
 You are trying to connect using SSL/TLS but your server is not configured to listen for SSL/TLS connections.
 
 Check that you have a SSL module loaded and that your bind tag has the name of a SSL module (if you're using v2) or the name of a SSL profile (if you're using v3) in `<bind:ssl>`.
+
+### Why does my client not show mode changes/opped users on join/etc correctly when using InspIRCd v3?
+
+InspIRCd v3 changed the way that we emit messages in order to allow support for new IRCv3 extensions which require message tags to be implemented. The new way we emit messages is entirely valid according to the the formatting rules in part 2.3.1 of RFC 1459 (note two is of specific relevance here) but unfortunately several clients were found to be incompliant with the rules specified in this section.
+
+This issue is fixed in many clients already. Please make sure you have updated to the latest version and if you are still having an issue then please report it to your client author. Your client author might find it useful to know that [ircdocs provides test vectors](https://github.com/ircdocs/parser-tests) for testing their message parser compliance.
+
+This bug is known to be fixed in:
+
+- HexChat 2.14.3 (released December 2019).
+- Irssi 1.1.0 (released January 2018).
+- WeeChat v2.5 (released June 2019).
+- ZNC 1.7 (unreleased).
