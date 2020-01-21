@@ -4,13 +4,10 @@ title: Module Details (blockcaps)
 
 ## The "blockcaps" Module
 
-<div class="alert alert-danger" role="alert" markdown="1">
+!!! warning ""
+    This module has been deprecated and will be removed in the next major version of InspIRCd.
 
-This module has been deprecated and will be removed in the next major version of InspIRCd.
-
-You should use [the anticaps module](/3/modules/anticaps) instead.
-
-</div>
+    You should use [the anticaps module](/3/modules/anticaps) instead.
 
 ### Description
 

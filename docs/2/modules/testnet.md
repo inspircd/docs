@@ -6,11 +6,8 @@ title: Module Details (testnet)
 
 ## The "testnet" Module
 
-<div class="alert alert-danger" role="alert" markdown="1">
-
-This module has been deprecated and will be removed in the next major version of InspIRCd.
-
-</div>
+!!! warning ""
+    This module has been deprecated and will be removed in the next major version of InspIRCd.
 
 ### Description
 

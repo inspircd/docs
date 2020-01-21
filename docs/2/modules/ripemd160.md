@@ -6,13 +6,10 @@ title: Module Details (ripemd160)
 
 ## The "ripemd160" Module
 
-<div class="alert alert-danger" role="alert" markdown="1">
+!!! warning ""
+    This module has been deprecated and will be removed in the next major version of InspIRCd.
 
-This module has been deprecated and will be removed in the next major version of InspIRCd.
-
-You should use [the sha256 module](/2/modules/sha256) instead.
-
-</div>
+    You should use [the sha256 module](/2/modules/sha256) instead.
 
 ### Description
 

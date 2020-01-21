@@ -16,13 +16,10 @@ If you are running on a compatible UNIX system you can enable this module using 
 
 </div>
 
-<div class="alert alert-danger" role="alert" markdown="1">
+!!! warning ""
+    This module has been deprecated and will be removed in the next major version of InspIRCd.
 
-This module has been deprecated and will be removed in the next major version of InspIRCd.
-
-You should use [the regex_stdlib module](/3/modules/regex_stdlib) in bre (basic) or ere (extended) mode instead.
-
-</div>
+    You should use [the regex_stdlib module](/3/modules/regex_stdlib) in bre (basic) or ere (extended) mode instead.
 
 ### Description
 

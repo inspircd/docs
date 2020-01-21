@@ -6,11 +6,8 @@ title: Module Details (close)
 
 ## The "close" Module
 
-<div class="alert alert-warning" role="alert" markdown="1">
-
-This module has been moved to inspircd-contrib in the next major version of InspIRCd.
-
-</div>
+!!! warning ""
+    This module has been moved to [inspircd-contrib](/2/module-manager) in the next major version of InspIRCd.
 
 ### Description
 
