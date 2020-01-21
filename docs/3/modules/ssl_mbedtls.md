@@ -5,7 +5,7 @@ title: Module Details (ssl_mbedtls)
 ## The "ssl_mbedtls" Module
 
 !!! note ""
-    This module depends on third-party library ([mbedTLS](https://tls.mbed.org)) and must be manually enabled at compile time.
+    This module depends on a third-party library ([mbedTLS](https://tls.mbed.org)) and must be manually enabled at compile time.
 
     Once you have installed the dependency you can enable this module using the following command:
 
