@@ -72,9 +72,10 @@ q     | Match against `QUIT` messages.
 
 ##### Example Usage
 
-<div class="alert alert-info" role="alert" markdown="1">
-The following examples assume that the "glob" regex module is being used. See the `<filteropts>` documentation above for more information.
-</div>
+!!! note ""
+    The following examples assume that the "glob" regex module is being used.
+
+    See the `<filteropts>` documentation above for more information.
 
 G-lines unprivileged users for saying the phrase "fluffy capybara" in `PRIVMSG` and `NOTICE` messages:
 
@@ -94,9 +95,10 @@ FILTER | 1, 4-5          | `<pattern>`<br>`<pattern> <action> <flags> [<duration
 
 #### Example Usage
 
-<div class="alert alert-info" role="alert" markdown="1">
-The following examples assume that the "glob" regex module is being used. See the `<filteropts>` documentation above for more information.
-</div>
+!!! note ""
+    The following examples assume that the "glob" regex module is being used.
+
+    See the `<filteropts>` documentation above for more information.
 
 G-lines users for saying the phrase "fluffy capybara" in `/PRIVMSG` and `/NOTICE` messages:
 

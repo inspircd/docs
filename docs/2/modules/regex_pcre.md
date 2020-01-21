@@ -6,17 +6,12 @@ title: Module Details (regex_pcre)
 
 ## The "regex_pcre" Module
 
-<div class="alert alert-info" role="alert" markdown="1">
+!!! note ""
+    This module depends on a third-party library ([PCRE](https://www.pcre.org)) and must be manually enabled at compile time.
 
-This module depends on a third-party library ([PCRE](https://www.pcre.org)) and must be manually enabled at compile time.
+    Once you have installed the dependency you can enable this module using the following command:
 
-Once you have installed the dependency you can enable this module using the following command:
-
-```sh
-./configure --enable-extras=m_regex_pcre.cpp
-```
-
-</div>
+    <pre><code>./configure --enable-extras m_regex_pcre.cpp</code></pre>
 
 ### Description
 

@@ -4,17 +4,12 @@ title: Module Details (regex_stdlib)
 
 ## The "regex_stdlib" Module
 
-<div class="alert alert-info" role="alert" markdown="1">
+!!! note ""
+    This module depends on C++11-specific features and must be manually enabled at compile time.
 
-This module depends on C++11-specific features and must be manually enabled at compile time.
+    If you are building with a C++11-compatible compiler you can enable this module using the following command:
 
-If you are building with a C++11-compatible compiler you can enable this module using the following command:
-
-```sh
-./configure --enable-extras=m_regex_stdlib.cpp
-```
-
-</div>
+    <pre><code>./configure --enable-extras m_regex_stdlib.cpp</code></pre>
 
 ### Description
 

@@ -6,17 +6,12 @@ title: Module Details (regex_posix)
 
 ## The "regex_posix" Module
 
-<div class="alert alert-info" role="alert" markdown="1">
+!!! note ""
+    This module depends on a UNIX-specific system library and must be manually enabled at compile time.
 
-This module depends on a UNIX-specific system library and must be manually enabled at compile time.
+    If you are running on a UNIX system you can enable this module using the following command:
 
-If you are running on a compatible UNIX system you can enable this module using the following command:
-
-```sh
-./configure --enable-extras=m_regex_posix.cpp
-```
-
-</div>
+    <pre><code>./configure --enable-extras m_regex_posix.cpp</code></pre>
 
 ### Description
 

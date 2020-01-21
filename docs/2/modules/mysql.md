@@ -6,17 +6,12 @@ title: Module Details (mysql)
 
 ## The "mysql" Module
 
-<div class="alert alert-info" role="alert" markdown="1">
+!!! note ""
+    This module depends on a third-party library ([libmysqlclient](https://dev.mysql.com/downloads/connector/c/)) and must be manually enabled at compile time.
 
-This module depends on a third-party library ([libmysqlclient](https://dev.mysql.com/downloads/connector/c/)) and must be manually enabled at compile time.
+    Once you have installed the dependency you can enable this module using the following command:
 
-Once you have installed the dependency you can enable this module using the following command:
-
-```sh
-./configure --enable-extras=m_mysql.cpp
-```
-
-</div>
+    <pre><code>./configure --enable-extras m_mysql.cpp</code></pre>
 
 ### Description
 

@@ -48,9 +48,10 @@ RLINE | 1, 3            | `<regex> [<duration> <reason>]` | Allows server operat
 
 #### Example Usage
 
-<div class="alert alert-info" role="alert" markdown="1">
-The following examples assume that the "pcre" regex module is being used. See the `<rline>` documentation above for more information.
-</div>
+!!! note ""
+    The following examples assume that the "pcre" regex module is being used.
+
+    See the `<rline>` documentation above for more information.
 
 Bans users connecting from example.com for one week:
 

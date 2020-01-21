@@ -4,17 +4,12 @@ title: Module Details (ssl_openssl)
 
 ## The "ssl_openssl" Module
 
-<div class="alert alert-info" role="alert" markdown="1">
+!!! note ""
+    This module depends on third-party library ([OpenSSL](https://www.openssl.org)) and must be manually enabled at compile time.
 
-This module depends on third-party library ([OpenSSL](https://www.openssl.org)) and must be manually enabled at compile time.
+    Once you have installed the dependency you can enable this module using the following command:
 
-Once you have installed the dependency you can enable this module using the following command:
-
-```sh
-./configure --enable-extras=m_ssl_openssl.cpp
-```
-
-</div>
+    <pre><code>./configure --enable-extras m_ssl_openssl.cpp</code></pre>
 
 ### Description
 
