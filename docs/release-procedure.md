@@ -14,7 +14,7 @@ Name       | Description
 
 0. Close the [release milestone](https://github.com/inspircd/inspircd/milestones) on GitHub.
 0. Run `vendor/update` to check that the vendored third-party dependencies are up to date.
-0. Ensure that the branch tip builds with no warnings. Checking [Travis CI](https://travis-ci.com/inspircd/inspircd) is helpful as it builds with `-Werror`.
+0. Ensure that the branch tip builds with no warnings. Checking [GitHub Actions](https://github.com/inspircd/inspircd/actions) is helpful as it builds with `-Werror`.
 0. Run `tools/mkheaders` to update the copyright headers.
 0. Update the version in `src/version.sh` and commit it.
 0. Tag the release with `git tag VERSION`.
