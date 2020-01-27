@@ -2,19 +2,19 @@ extra_css:
   - css/fix-cinder-sidebar-scrolling.css
 nav:
     - InspIRCd 2:
-        - Installation: /2/installation
-        - Configuration: /2/configuration
-        - Commands: /2/commands
-        - Modes: /2/modes
-        - Modules: /2/modules
-        - SNOMasks: /2/snomasks
+        - Installation: 2/installation/index.md
+        - Configuration: 2/configuration/index.md
+        - Commands: 2/commands/index.md
+        - Modes: 2/modes.md
+        - Modules: 2/modules/index.md
+        - SNOMasks: 2/snomasks.md
     - InspIRCd 3:
-        - Installation: /3/installation
-        - Configuration: /3/configuration
-        - Commands: /3/commands
-        - Modes: /3/modes
-        - Modules: /3/modules
-        - SNOMasks: /3/snomasks
+        - Installation: 3/installation/index.md
+        - Configuration: 3/configuration/index.md
+        - Commands: 3/commands/index.md
+        - Modes: 3/modes.md
+        - Modules: 3/modules/index.md
+        - SNOMasks: 3/snomasks.md
     - Downloads: https://github.com/inspircd/inspircd/releases/latest
     - Issue Tracker: https://github.com/inspircd/inspircd/issues
     - Developer API: https://www.inspircd.org/api/
