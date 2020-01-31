@@ -4,6 +4,9 @@ title: Module Details (nationalchars)
 
 ## The "nationalchars" Module
 
+!!! warning ""
+    If you want to use a custom 8-bit character set then you're probably better off using [the codepage module](/3/modules/codepage) instead.
+
 ### Description
 
 This module allows the server administrator to define what characters are allowed in nicknames and channel names and how those characters should be compared in a case insensitive way.

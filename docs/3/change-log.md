@@ -6,6 +6,120 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.5.0
+
+**This version of InspIRCd was released on 2020-01-31.**
+
+- Added support for [the IRCv3 Labeled Response specification](https://ircv3.net/specs/extensions/labeled-response.html).
+
+- Added support for help topics to the helpop module.
+
+- Added support for pagination to the index output of the `HELPOP` command.
+
+- Added support for passing module names to --{disable,enable} using their short names (e.g. `--enable-extras ssl_gnutls`).
+
+- Added support for passing space-delimited module names to --{disable,enable}-extras (e.g. `--enable-extras "ssl_gnutls ssl_mbedtls"`).
+
+- Added support for the `X-Real-IP` and `X-Forwarded-For` headers to the websocket module.
+
+- Added the codepage module &mdash; a better solution for custom 8-bit character set support than the incredibly broken and undocumented nationalchars module.
+
+- Changed the default for `<waitpong:sendsnotice>` to `no`.
+
+- Changed the user count in `LUSERS` so that it no longer includes services pseudoclients.
+
+- Developer: add `Channel::WriteRemoteNotice` which sends a notice to remote users as well as local users.
+
+- Developer: add a status char option to `Channel::WriteNotice` for sending status messages.
+
+- Developer: add the `ClientProtocol::MessageTagEvent` class to allow handling message tags easier.
+
+- Developer: added `MessageTarget::GetName` to allow easily getting the name of a message target.
+
+- Developer: added a status char option to the `TagMessage` constructor for sending status messages.
+
+- Developer: added an "oper only" parameter to `Simple{Channel,User}ModeHandler`.
+
+- Developer: added empty string checks to the `Numerics::NoSuch{Channel,Nick}` constructors.
+
+- Developer: added several variadic overloads of the `IRCv3::Replies::Reply::Send` method.
+
+- Developer: added the `OnCommandBlocked` event for when the execution of a command is blocked.
+
+- Developer: added the `UserManager::ULineCount` method for counting pseudoclients on ulined servers.
+
+- Developer: added the `inspircd.org/poison` capability which rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
+
+- Developer: added the `stdalgo:delete_zero` method for deleting and zeroing a pointer.
+
+- Developer: deprecated the `ProtocolInterface::Send{Channel,User}Notice` methods in favour of `SendMessage`.
+
+- Developer: disabled `CULLLIST` log messages unless the server has been built in debug mode.
+
+- Developer: switched from Travis CI to GitHub Actions.
+
+- Developer: the `FailedPort` type now contains the config tag that the listener was created from.
+
+- Fix connections to ports which have an invalid I/O hook configured not being rejected.
+
+- Fix various Perl tools not looking in the right directory for the `make::*` modules.
+
+- Fixed a bug in `helpop.conf.example` where the SWHOIS key was not using the correct value name.
+
+- Fixed allowing `TAGMSG` messages to be sent without any tags attached.
+
+- Fixed boolean configuration options not being matched in a case insensitive way.
+
+- Fixed not using case insensitive comparisons for the DCCALLOW subcommands.
+
+- Fixed not using case insensitive matching when checking if a SSL rehash has been requested.
+
+- Fixed not using the `ERR_INVALIDMODEPARAM` numeric when not enough parameters are given to the `snomask` mode.
+
+- Fixed not using the `RPL_REHASHING` numeric for remote rehashes.
+
+- Fixed parsing CTCPs in the dccallow module.
+
+- Fixed prioritisation of custom events provided by modules.
+
+- Fixed spamming the log with DNS cache clearing notices when nothing was actually cleared.
+
+- Fixed status messages not working with the `TAGMSG` command.
+
+- Fixed the chanhistory module not storing message tags.
+
+- Fixed the chanhistory module not storing notices.
+
+- Fixed the chanhistory module storing CTCPs.
+
+- Fixed the legacy `PROTOCTL NAMESX` command not using case insensitive matching.
+
+- Fixed the legacy `PROTOCTL UHNAMES` command not using case insensitive matching.
+
+- Fixed the nationalchars module allowing nicknames which begin with a number.
+
+- Fixed the nationalchars module not rebuilding the 005 numerics on unload.
+
+- Fixed the nationalchars module not restoring the previous casemapping name on unload.
+
+- Fixed the systemd unit file starting InspIRCd before the network is online.
+
+- Fixed unnecessarily making `N*2-1` too many copies of the command arguments when processing a command with multiple targets.
+
+- Improve the warning process when starting InspIRCd as root.
+
+- Improved the ban message shown to users if they are banned by an extban.
+
+- Improved the output when a port can not be bound.
+
+- Removed the preceding `-` from the MOTD, server operator MOTD, and any custom MOTDs added with the showfile module.
+
+- Renamed `<chanhistory:notice>` to `<chanhistory:prefixmsg>` so the behaviour is less ambiguous.
+
+- Replace the Windows getopt\_long shim with the ya\_getopt library.
+
+- Updated the example MOTD and server operator MOTD to be a bit prettier and show off some of the escape codes.
+
 ### InspIRCd 3.4.0
 
 **This version of InspIRCd was released on 2019-10-25.**

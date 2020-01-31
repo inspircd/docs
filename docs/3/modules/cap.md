@@ -28,6 +28,12 @@ CAP  | 1-2             | `CLEAR`<br>`END`<br>`LIST`<br>`LS [<version>]`<br>`REQ 
 
 <!-- CAP is not documented here because it is not intended to be executed by users -->
 
+### Client Capabilities
+
+Name                | Description
+------------------- | -----------
+inspircd.org/poison | Rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
+
 ### Special Notes
 
 The `/CAP` command should generally not be executed by users. It is intended to be an entirely internal feature which is executed automatically by clients. Adding and removing capabilities manually may break your client.

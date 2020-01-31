@@ -39,14 +39,16 @@ Listens for plaintext WebSocket connections on the 0.0.0.0:8080 endpoint:
 
 The `<websocket>` tag defines settings about how the websocket module should behave. This tag can only be defined once.
 
-Name       | Type     | Default Value | Description
----------- | -------- | ------------- | -----------
-sendastext | Text     | Yes           | Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
+Name        | Type     | Default Value | Description
+----------- | -------- | ------------- | -----------
+proxyranges | Text     | *None*        | A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
+sendastext  | Text     | Yes           | Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
 
 ##### Example Usage
 
 ```xml
-<websocket sendastest="yes">
+<websocket proxyranges="192.0.2.0/24 198.51.100.*"
+           sendastest="yes">
 ```
 
 #### `<wsorigin>`

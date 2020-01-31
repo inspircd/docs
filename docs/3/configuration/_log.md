@@ -46,6 +46,7 @@ m_callerid           | default                     | Messages relating to [the c
 m_cap                | debug                       | Messages relating to [the cap module](/3/modules/cap).
 m_cgiirc             | default<br>debug            | Messages relating to [the cgiirc module](/3/modules/cgiirc).
 m_chanlog            | default                     | Messages relating to [the chanlog module](/3/modules/chanlog).
+m_codepage           | debug                       | Messages relating to [the codepage module](/3/modules/codepage).
 m_connectban         | debug                       | Messages relating to [the connectban module](/3/modules/connectban).
 m_customprefix       | debug                       | Messages relating to [the customprefix module](/3/modules/customprefix).
 m_disable            | default<br>debug            | Messages relating to [the disable module](/3/modules/disable).

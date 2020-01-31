@@ -23,11 +23,11 @@ The `<waitpong>` tag defines settings about how the conn_waitpong module should 
 Name           | Type    | Default Value | Description
 -------------- | ------- | ------------- | -----------
 killonbadreply | Boolean | Yes           | Whether to kill clients that respond with an incorrect ping value.
-sendsnotice    | Boolean | Yes           | Whether to tell a user to run `/QUOTE PONG ...` when waiting for a response.
+sendsnotice    | Boolean | No            | Whether to tell a user to run `/QUOTE PONG ...` when waiting for a response.
 
 ##### Example Usage
 
 ```xml
 <waitpong killonbadreply="yes"
-          sendsnotice="yes">
+          sendsnotice="no">
 ```

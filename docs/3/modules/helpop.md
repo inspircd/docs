@@ -37,12 +37,14 @@ The `<helpop>` tag defines a help topic. This tag can be defined as many times a
 Name  | Type | Default Value                 | Description
 ----- | ---- | ----------------------------- | -----------
 key   | Text | *None*                        | The name of this help topic.
+title | Text | *None*                        | [**New in v3.5.0!**](/3/change-log/#inspircd-350) The header for the help topic.
 value | Text | *None*                        | The contents of this help topic. This can be split over multiple lines if needed.
 
 ##### Example Usage
 
 ```xml
 <helpop key="test"
+        title="Testing?"
         value="This is a test!">
 ```
 

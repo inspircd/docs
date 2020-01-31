@@ -20,18 +20,18 @@ To load this module use the following `<module>` tag:
 
 The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
 
-Name     | Type    | Default Value | Description
--------- | ------- | ------------- | -----------
-bots     | Boolean | Yes           | Whether users with the bot user mode (+B) will receive history.
-notice   | Boolean | Yes           | Whether to send a notice before sending history.
-maxlines | Number  | 50            | The maximum number of lines of history that a channel can keep.
+Name      | Type    | Default Value | Description
+--------- | ------- | ------------- | -----------
+bots      | Boolean | Yes           | Whether users with the bot user mode (+B) will receive history.
+maxlines  | Number  | 50            | The maximum number of lines of history that a channel can keep.
+prefixmsg | Boolean | Yes           | Whether to send a notice before sending history.
 
 ##### Example Usage
 
 ```xml
 <chanhistory bots="yes"
-             notice="yes"
-             maxlines="50">
+             maxlines="50"
+             prefixmsg="yes">
 ```
 
 ### Channel Modes
