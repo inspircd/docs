@@ -31,9 +31,11 @@ plugins:
       redirect_maps:
           3/configuration-changes.md: 3/breaking-changes.md
   - search
+theme:
+  name: cinder
+  highlightjs: true
 copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
 repo_url: https://github.com/inspircd/inspircd-docs
 site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
 site_name: InspIRCd Documentation
 site_url: https://docs.inspircd.org/
-theme: cinder
