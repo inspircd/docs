@@ -91,7 +91,7 @@ Value | Description
 chain | Check if any certificate in the chain has been revoked.
 leaf  | Only check if the leaf certificate has been revoked.
 
-The hash field should be set to one of the values shown in `openssl list --digest-commands`:
+The hash field should be set to one of the values shown in `openssl list --digest-commands`.
 
 ### Example Usage
 

@@ -75,7 +75,7 @@ priority          | Text    | NORMAL        | A [GnuTLS priority string](https:/
 requestclientcert | Boolean | Yes           | Whether to request a SSL certificate from clients.
 strictpriority    | Boolean | No            | Whether to require that all tokens in the GnuTLS priority string are valid.
 
-The hash field should be set to one of the values shown in `gnutls-cli --list | grep ^Digests:`:
+The hash field should be set to one of the values shown in `gnutls-cli --list | grep ^Digests:`.
 
 ##### Example Usage
 
