@@ -6,7 +6,7 @@ title: Module Details (sqlite3)
 
 ## The "sqlite3" Module
 
-!!!! note ""
+!!! note ""
     This module depends on a third-party library ([SQLite](https://www.sqlite.org/index.html)) and must be manually enabled at compile time.
 
     Once you have installed the dependency you can enable this module using the following command:
