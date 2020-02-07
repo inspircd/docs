@@ -33,6 +33,22 @@ name | Text | *None*        | *Required!* The name of the codepage; sent to user
 <codepage name="latin1">
 ```
 
+#### `<cpcase>`
+
+The `<cpcase>` tag defines a mapping from lower case to upper case for two characters. This tag can be defined as many times as required.
+
+Name  | Type   | Default Value | Description
+----- | ------ | ------------- | -----------
+lower | Number | *None*        | A lower case character.
+upper | Number | *None*        | The upper case equivalent of the character in the `lower` field.
+
+Marks "À" as the upper case equivalent of "à" in the ISO 8859-1 codepage.
+
+```
+<cpcase lower="192"
+        upper="224">
+```
+
 #### `<cpchars>`
 
 The `<cpchars>` tag defines a single character or inclusive range of characters that are allowed in nicknames. This tag can be defined as many times as required.
