@@ -14,7 +14,7 @@ usermodes | Text | *None*        | The server operator-only user modes that serv
 
 #### Example Usage
 
-```
+```xml
 <class name="OperChat"
        commands="WALLOPS GLOBOPS"
        privs="users/mass-message"

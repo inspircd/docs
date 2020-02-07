@@ -44,7 +44,7 @@ upper | Number | *None*        | The upper case equivalent of the character in t
 
 Marks "À" as the upper case equivalent of "à" in the ISO 8859-1 codepage.
 
-```
+```xml
 <cpcase lower="192"
         upper="224">
 ```
@@ -64,14 +64,14 @@ index | Number  | *None*        | A character to allow in nicknames.
 
 Allows the character with the numeric code point 45 in a nickname except as the first character.
 
-```
+```xml
 <cpchars index="45"
          front="no">
 ```
 
 Allows characters with the numeric code points in the inclusive range 123 to 125 at any point in a nickname:
 
-```
+```xml
 <cpchars begin="123"
          end="125"
          front="yes">
