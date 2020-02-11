@@ -167,7 +167,7 @@ Name                                                      | Description
 [spanningtree](/3/modules/spanningtree)                   | Allows servers to be linked
 [sqlauth](/3/modules/sqlauth)                             | Allow/deny connections based upon an arbitrary SQL table
 [sqloper](/3/modules/sqloper)                             | Allows storage of oper credentials in an SQL table
-[sslinfo](/3/modules/sslinfo)                             | SSL Certificate Utilities
+[sslinfo](/3/modules/sslinfo)                             | Provides user SSL information and certificate utilities
 [sslmodes](/3/modules/sslmodes)                           | Provides user and channel mode +z to allow for SSL-only channels, queries and notices
 [starttls](/3/modules/starttls)                           | Provides the STARTTLS command
 [stripcolor](/3/modules/stripcolor)                       | Provides channel mode +S, strip ansi color
