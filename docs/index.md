@@ -36,6 +36,7 @@ title: Introduction
 
 - [Installation](/3/installation)
 - [Configuration](/3/configuration)
+    - [Useful Snippets](/3/configuration/useful-snippets)
     - [Upgrading from v2](/3/breaking-changes)
 - [Commands](/3/commands)
 - [Modes](/3/modes)
