@@ -8,7 +8,7 @@ title: Module Details (sslinfo)
 
 ### Description
 
-This module adds the `/SSLINFO` command which allows users to look up SSL certificate information for other users.
+This module adds user facing SSL information, various SSL configuration options, and the `/SSLINFO` command to look up SSL certificate information for other users.
 
 ### Configuration
 

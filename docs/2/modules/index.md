@@ -143,7 +143,7 @@ Name                                            | Description
 [spanningtree](/2/modules/spanningtree)         | Allows servers to be linked.
 [sqlauth](/2/modules/sqlauth)                   | Allow/Deny connections based upon an arbitrary SQL table.
 [sqloper](/2/modules/sqloper)                   | Allows storage of oper credentials in an SQL table.
-[sslinfo](/2/modules/sslinfo)                   | SSL Certificate Utilities.
+[sslinfo](/2/modules/sslinfo)                   | Provides user SSL information and certificate utilities.
 [sslmodes](/2/modules/sslmodes)                 | Provides channel mode +z to allow for Secure/SSL only channels.
 [stripcolor](/2/modules/stripcolor)             | Provides channel +S mode (strip ansi color).
 [svshold](/2/modules/svshold)                   | Implements SVSHOLD. Like Q:Lines, but can only be added/removed by Services.
