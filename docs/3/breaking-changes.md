@@ -16,11 +16,23 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The default for `<config:format>` has changed from `compat` to `xml`. If you have not set this value then you will need to set it to `compat` or switch all C-style `\` escapes to XML-style `&entity;` escapes.
 
+- The `channels/ignore-noctcp` oper privilege is now required in order to send a CTCP to a channel with the `T` (noctcp) mode set.
+
+- The `channels/restricted-create` oper privilege is now required in order to create channels if the restrictchans module is loaded.
+
+- The `users/ignore-commonchans` oper privilege is now required in order to send a message to a user with the `c` (deaf_commonchan) mode set without sharing common channels.
+
+- The `users/ignore-noctcp` oper privilege is now required in order to send a CTCP to a user with the `T` (u_noctcp) mode set.
+
+- The `users/ignore-privdeaf` oper privilege is now required in order to message a user with the `D` (privdeaf) mode set.
+
 - The `users/samode-usermodes` oper privilege is now required in order to change the user modes of other users with `/SAMODE`.
+
+- The `users/sajoin-others` oper privilege is now required in order to `/SAJOIN` users other than themselves.
 
 - `<cloak:key>` must now be at least 30 characters long. If your cloaking key is shorter than this you should define a stronger one in your `<cloak>` tag. You can define a second `<cloak>` tag with your old key to be used as a backup to avoid breaking any existing bans.
 
-- `<disabled>` has been moved from the core to the new disable module. All you will need to do in order to upgrade is to load this module.
+- `<disabled>` has been moved from the core to the new disable module. All you will need to do in order to upgrade is to load this module. The oper privileges `servers/use-disabled-commands` and `servers/use-disabled-modes` are now required in order for opers to bypass the disable module settings.
 
 - `<gnutls:cafile>` is now relative to the config directory. Generally all you will need to do in order to upgrade is remove `conf/` from the path.
 
