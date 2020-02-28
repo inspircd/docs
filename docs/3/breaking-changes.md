@@ -16,15 +16,15 @@ NOTE: This document only lists breaking changes between InspIRCd 2 and InspIRCd 
 
 - The default for `<config:format>` has changed from `compat` to `xml`. If you have not set this value then you will need to set it to `compat` or switch all C-style `\` escapes to XML-style `&entity;` escapes.
 
-- The `channels/ignore-noctcp` oper privilege is now required in order to send a CTCP to a +C channel.
+- The `channels/ignore-noctcp` oper privilege is now required in order to send a CTCP to a channel with the `T` (noctcp) mode set.
 
 - The `channels/restricted-create` oper privilege is now required in order to create channels if the restrictchans module is loaded.
 
-- The `users/ignore-commonchans` oper privilege is now required in order to send a message to a +c user without sharing common channels.
+- The `users/ignore-commonchans` oper privilege is now required in order to send a message to a user with the `c` (deaf_commonchan) mode set without sharing common channels.
 
-- The `users/ignore-noctcp` oper privilege is now required in order to send a CTCP to a +T user.
+- The `users/ignore-noctcp` oper privilege is now required in order to send a CTCP to a user with the `T` (u_noctcp) mode set.
 
-- The `users/ignore-privdeaf` oper privilege is now required in order to message users with +D set.
+- The `users/ignore-privdeaf` oper privilege is now required in order to message a user with the `D` (privdeaf) mode set.
 
 - The `users/samode-usermodes` oper privilege is now required in order to change the user modes of other users with `/SAMODE`.
 
