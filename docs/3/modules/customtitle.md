@@ -29,6 +29,9 @@ host     | Text | \*@\*         | A glob pattern for the user@host mask of users
 title    | Text | *None*        | **Required!** The custom title shown in `/WHOIS` for users who log into this account.
 vhost    | Text | *None*        | The vhost for users who log into this account.
 
+!!! warning ""
+    The `hash` field is currently optional but will be required in the next major version of InspIRCd.
+
 {! 3/modules/_hash_table.md !}
 
 ##### Example Usage

@@ -43,6 +43,11 @@ type        | Text | *None*        | **Required!** The type of authentication th
 password    | Text | *None*        | **Required for the webirc type if fingerprint is not set!** The password that the WebIRC gateway will authenticate with.
 hash        | Text | *None*        | If the webirc type is used the algorithm that the password is hashed with.
 
+!!! warning ""
+    The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
+
+{! 3/modules/_hash_table.md !}
+
 The type field should be set to one of the following values:
 
 Value      | Description

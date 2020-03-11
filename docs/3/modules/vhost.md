@@ -27,6 +27,9 @@ pass | Text | *None*        | **Required!** The password used when logging into 
 hash | Text | *None*        | The algorithm that the password is hashed with.
 host | Text | *None*        | The vhost for users who log into this account.
 
+!!! warning ""
+    The `hash` field is currently optional but will be required in the next major version of InspIRCd.
+
 {! 3/modules/_hash_table.md !}
 
 ##### Example Usage

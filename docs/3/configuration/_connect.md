@@ -29,6 +29,11 @@ softsendq        | Number   | 4096                    | The maximum number of by
 threshold        | Number   | 10                      | The maximum amount of penalty that a user can have before being fakelagged or killed if fakelag is turned off.
 timeout          | Duration | 1m30s                   | The number of seconds after which an unregistered user is timed out.
 
+!!! warning ""
+    The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
+
+{! 3/modules/_hash_table.md !}
+
 #### Example Usage
 
 Denies connections to clients connecting from 3ffe::0/32:
