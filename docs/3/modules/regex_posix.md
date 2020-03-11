@@ -11,11 +11,6 @@ title: Module Details (regex_posix)
 
     <pre><code>./configure --enable-extras m_regex_posix.cpp</code></pre>
 
-!!! warning ""
-    This module has been deprecated and will be removed in the next major version of InspIRCd.
-
-    You should use [the regex_stdlib module](/3/modules/regex_stdlib) in bre (basic) or ere (extended) mode instead.
-
 ### Description
 
 This module provides a regular expression engine which uses the [POSIX.2](https://www.gnu.org/software/libc/manual/html_node/POSIX-Regexp-Compilation.html#POSIX-Regexp-Compilation) regular expression matching system.
