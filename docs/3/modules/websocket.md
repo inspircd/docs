@@ -64,5 +64,5 @@ allow | Text | *None*        | **Required!** A glob pattern for an URL of a web 
 Allows access to the server from all subdomains of example.com:
 
 ```xml
-<wsorigin allow="https://*.example.com/">
+<wsorigin allow="https://*.example.com">
 ```
