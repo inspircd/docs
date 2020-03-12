@@ -41,7 +41,7 @@ The `<websocket>` tag defines settings about how the websocket module should beh
 
 Name        | Type     | Default Value | Description
 ----------- | -------- | ------------- | -----------
-proxyranges | Text     | *None*        | A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
+proxyranges | Text     | *None*        | [**New in v3.5.0!**](/3/change-log/#inspircd-350) A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
 sendastext  | Text     | Yes           | Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
 
 ##### Example Usage
