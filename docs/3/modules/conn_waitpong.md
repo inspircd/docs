@@ -20,10 +20,10 @@ To load this module use the following `<module>` tag:
 
 The `<waitpong>` tag defines settings about how the conn_waitpong module should behave. This tag can only be defined once.
 
-Name           | Type    | Default Value | Description
--------------- | ------- | ------------- | -----------
-killonbadreply | Boolean | Yes           | Whether to kill clients that respond with an incorrect ping value.
-sendsnotice    | Boolean | No            | Whether to tell a user to run `/QUOTE PONG ...` when waiting for a response.
+Name           | Type    | Default Value                      | Description
+-------------- | ------- | ---------------------------------- | -----------
+killonbadreply | Boolean | Yes                                | Whether to kill clients that respond with an incorrect ping value.
+sendsnotice    | Boolean | No (since 3.5)<br>Yes (3.0 to 3.4) | Whether to tell a user to run `/QUOTE PONG ...` when waiting for a response.
 
 ##### Example Usage
 
