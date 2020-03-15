@@ -48,7 +48,7 @@ sendastext  | Text     | Yes           | Whether to send messages to WebSocket c
 
 ```xml
 <websocket proxyranges="192.0.2.0/24 198.51.100.*"
-           sendastest="yes">
+           sendastext="yes">
 ```
 
 #### `<wsorigin>`
