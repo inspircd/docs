@@ -16,9 +16,9 @@ This page lists changes which have happened between releases.
 
 - Added support for pagination to the index output of the `HELPOP` command.
 
-- Added support for passing module names to --{disable,enable} using their short names (e.g. `--enable-extras ssl_gnutls`).
+- Added support for passing module names to `--{disable,enable}-extras` using their short names (e.g. `--enable-extras ssl_gnutls`).
 
-- Added support for passing space-delimited module names to --{disable,enable}-extras (e.g. `--enable-extras "ssl_gnutls ssl_mbedtls"`).
+- Added support for passing space-delimited module names to `--{disable,enable}-extras` (e.g. `--enable-extras "ssl_gnutls ssl_mbedtls"`).
 
 - Added support for the `X-Real-IP` and `X-Forwarded-For` headers to the websocket module.
 
