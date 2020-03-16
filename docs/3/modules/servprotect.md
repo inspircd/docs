@@ -26,4 +26,4 @@ servprotect | k         | Switch | *None*           | Servers   | Protects servi
 
 ### Special Notes
 
-This channel mode **can not** be set on normal users. It is intended specifically for services pseudoclients.
+This user mode **can not** be set on normal users. It is intended specifically for services pseudoclients.
