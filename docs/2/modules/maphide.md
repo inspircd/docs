@@ -24,7 +24,7 @@ This module extends the core `<security>` tag with the following fields:
 
 Name    | Type | Default Value | Description
 ------- | ---- | ------------- | -----------
-maphide | Text | *None*        | The URL to provide to users who run the `/MAP` and `/LINKS` commands.
+maphide | Text | *None*        | **Required!** The URL to provide to users who run the `/MAP` and `/LINKS` commands.
 
 ##### Example Usage
 

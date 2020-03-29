@@ -22,6 +22,7 @@ This module extends the core `<connect>` tags with the following fields:
 
 Name     | Type    | Default Value | Description
 -------- | ------- | ------------- | -----------
+dnsbl    | Text    | *None*        | Match users to this connect class by DNSBL name when using the MARK action.
 usednsbl | Boolean | Yes           | Whether users in this connect class should be looked up in a DNSBL.
 
 ##### Example Usage
