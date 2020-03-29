@@ -35,6 +35,14 @@ Disables DNSBL lookups for users in the WebChat class:
          usednsbl="no">
 ```
 
+Matches users that have been marked by a configured DNSBL named Proxies to a ProxyUser class:
+
+```xml
+<connect name="ProxyUser"
+         ...
+         dnsbl="Proxies">
+```
+
 #### `<dnsbl>`
 
 The `<dnsbl>` tag defines a DNSBL to check connecting users against. This tag can be defined as many times as required.
