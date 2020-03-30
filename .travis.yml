@@ -1,5 +1,0 @@
-dist: xenial
-notifications:
-  email: false
-language: minimal
-script: ./tools/travis-ci.sh

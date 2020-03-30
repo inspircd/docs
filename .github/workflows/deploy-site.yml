@@ -1,0 +1,17 @@
+name: Deploy the docs site
+on:
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+            sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
+            sudo pip3 install -r requirements.txt
+      - name: Deploy the docs site
+        run: |
+          git config --global user.name "InspIRCd Robot"
+          git config --global user.email "noreply@inspircd.org"
+          mkdocs gh-deploy --force --message 'Update website for docs commit {sha}.' --remote-branch gh-pages --remote-name https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git

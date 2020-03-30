@@ -1,0 +1,14 @@
+name: Pull request checks
+on:
+  - pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check for missing pages
+        run: ./tools/find-missing
+      - name: Check for orphaned pages
+        run: ./tools/find-orphans
+      - name: Check for trailing whitespace
+        run: ./tools/find-whitespace
