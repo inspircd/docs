@@ -20,11 +20,7 @@ The InspIRCd team provide prebuilt packages for some common platforms. If you ar
 
 * [Microsoft Windows](/3/installation/windows)
 
-Additionally, the following distribution packages are maintained by members of the InspIRCd team:
-
-* [pkgsrc](/3/installation/pkgsrc)
-
-Other distributions may ship their own InspIRCd packages. Using these is not recommended as they are frequently out of date and do not contain the latest security fixes applied upstream.
+Some distributions may ship their own InspIRCd packages. Using these is not recommended as they are frequently out of date and do not contain the latest security fixes applied upstream.
 
 ### Source
 
