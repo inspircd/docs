@@ -25,7 +25,7 @@ Name           | Type    | Default Value | Description
 text           | Text    | *None*        | **Required!** The name of the custom command.
 replace        | Text    | *None*        | **Required!** The message to replace the custom command with.
 format         | Text    | *None*        | If defined then a glob pattern that the command parameters must match.
-requires       | Text    | *None*        | If defined then the nickname of a user which most be online for the alias to work.
+requires       | Text    | *None*        | If defined then the nickname of a user which must be online for the alias to work.
 channelcommand | Boolean | No            | Whether the command can be executed as a channel command.
 usercommand    | Boolean | Yes           | Whether the command can be executed as a server command.
 operonly       | Boolean | No            | Whether the user executing the command must be a server operator.
