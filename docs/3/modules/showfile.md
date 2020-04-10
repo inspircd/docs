@@ -6,7 +6,7 @@ title: Module Details (showfile)
 
 ### Description
 
-This module adds support for showing the contents
+This module adds support for showing the contents of files to users when they execute a command.
 
 ### Configuration
 
