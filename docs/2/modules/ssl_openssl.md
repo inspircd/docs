@@ -15,7 +15,7 @@ title: Module Details (ssl_openssl)
 
 ### Description
 
-This module allows TLS-encrypting connections using the [OpenSSL](https://www.openssl.org) library.
+This module allows TLS encrypted connections using the [OpenSSL](https://www.openssl.org) library.
 
 ### Configuration
 
@@ -35,7 +35,7 @@ ssl  | *This MUST be set to "openssl" to listen for secure connections with Open
 
 ##### Example Usage
 
-Listens for OpenSSL-encrypted IRC connections on the *:6697 endpoint:
+Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint:
 
 ```xml
 <bind address="*"
@@ -45,7 +45,7 @@ Listens for OpenSSL-encrypted IRC connections on the *:6697 endpoint:
       type="clients">
 ```
 
-Listens for OpenSSL-encrypted server connections on the *:7000 endpoint:
+Listens for OpenSSL encrypted server connections on the *:7000 endpoint:
 
 ```xml
 <bind address="*"

@@ -44,7 +44,7 @@ servers | Listens for server connections.
 
 ##### Example Usage
 
-Listens for GnuTLS-encrypted server connections on the *:7002 endpoint:
+Listens for GnuTLS encrypted server connections on the *:7002 endpoint:
 
 ```xml
 <bind address="*"
@@ -54,7 +54,7 @@ Listens for GnuTLS-encrypted server connections on the *:7002 endpoint:
       type="servers">
 ```
 
-Listens for mbedTLS-encrypted server connections on the *:7002 endpoint:
+Listens for mbedTLS encrypted server connections on the *:7002 endpoint:
 
 ```xml
 <bind address="*"
@@ -64,7 +64,7 @@ Listens for mbedTLS-encrypted server connections on the *:7002 endpoint:
       type="servers">
 ```
 
-Listens for OpenSSL-encrypted server connections on the *:7001 endpoint:
+Listens for OpenSSL encrypted server connections on the *:7001 endpoint:
 
 ```xml
 <bind address="*"

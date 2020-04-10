@@ -13,7 +13,7 @@ title: Module Details (ssl_mbedtls)
 
 ### Description
 
-This module allows TLS-encrypting connections using the [mbedTLS](https://tls.mbed.org) library.
+This module allows TLS encrypted connections using the [mbedTLS](https://tls.mbed.org) library.
 
 ### Configuration
 
@@ -33,7 +33,7 @@ ssl  | *This MUST be set to the name of a mbedTLS SSL profile to listen for secu
 
 ##### Example Usage
 
-Listens for mbedTLS-encrypted IRC connections on the *:6697 endpoint:
+Listens for mbedTLS encrypted IRC connections on the *:6697 endpoint:
 
 ```xml
 <bind address="*"
@@ -43,7 +43,7 @@ Listens for mbedTLS-encrypted IRC connections on the *:6697 endpoint:
       type="clients">
 ```
 
-Listens for mbedTLS-encrypted server connections on the *:7000 endpoint:
+Listens for mbedTLS encrypted server connections on the *:7000 endpoint:
 
 ```xml
 <bind address="*"

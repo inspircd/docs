@@ -13,7 +13,7 @@ title: Module Details (ssl_gnutls)
 
 ### Description
 
-This module allows TLS-encrypting connections using the [GnuTLS](https://gnutls.org) library.
+This module allows TLS encrypted connections using the [GnuTLS](https://gnutls.org) library.
 
 ### Configuration
 
@@ -33,7 +33,7 @@ ssl  | *This MUST be set to the name of a GnuTLS SSL profile to listen for secur
 
 ##### Example Usage
 
-Listens for GnuTLS-encrypted IRC connections on the *:6697 endpoint:
+Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint:
 
 ```xml
 <bind address="*"
@@ -43,7 +43,7 @@ Listens for GnuTLS-encrypted IRC connections on the *:6697 endpoint:
       type="clients">
 ```
 
-Listens for GnuTLS-encrypted server connections on the *:7000 endpoint:
+Listens for GnuTLS encrypted server connections on the *:7000 endpoint:
 
 ```xml
 <bind address="*"
