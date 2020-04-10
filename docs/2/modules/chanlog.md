@@ -8,7 +8,7 @@ title: Module Details (chanlog)
 
 ### Description
 
-This module allows messages sent to snomasks to be logged to a channel
+This module allows messages sent to snomasks to be logged to a channel.
 
 ### Configuration
 
