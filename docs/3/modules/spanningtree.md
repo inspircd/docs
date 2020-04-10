@@ -91,14 +91,14 @@ Name        | Type     | Default Value | Description
 ----------- | -------- | ------------- | -----------
 allowmask   | Text     | *None*        | **Required!** One or more CIDR ranges or glob patterns that the remote server can connect from.
 bind        | Text     | *None*        | The IP address to bind to when connecting to the remote server.
-fingerprint | Text     | *None*        | If defined then the SSL client fingerprint of the remote server.
+fingerprint | Text     | *None*        | If defined then the TLS (SSL) client fingerprint of the remote server.
 hidden      | Boolean  | No            | Whether the server IP address is hidden from server operators.
 ipaddr      | Text     | *None*        | **Required!** The IP address or hostname of the remote server.
 name        | Text     | *None*        | **Required!** The hostname of the IRC server.
 port        | Number   | *None*        | If defined then the TCP port to connect to this server on.
 recvpass    | Text     | *None*        | **Required!** The password that the remote server will use to log into the local server.
 sendpass    | Text     | *None*        | **Required!** The password that the local server will use to log into the remote server.
-ssl         | Text     | *None*        | If defined then the name of a SSL profile to use for encrypting the connection with this server.
+ssl         | Text     | *None*        | If defined then the name of a TLS (SSL) profile to use for encrypting the connection with this server.
 statshidden | Boolean  | No            | Whether the server IP address is hidden in the `/STATS` output.
 timeout     | Duration | 30s            | The number of seconds to wait before declaring a server connection as having failed.
 

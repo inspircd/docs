@@ -35,7 +35,7 @@ module | Text    | *None*        | **Required!** *This MUST be set to "pgsql" to
 id     | Text    | *None*        | **Required!** The name that SQL-using modules can refer to this `<database>` tag using.
 host   | Text    | *None*        | **Required!** The hostname or IP address of a PostgreSQL server.
 port   | Number  | *None*        | **Required!** The port on which the PostgreSQL server is listening.
-ssl    | Boolean | No            | Whether to connect to the PostgreSQL server using SSL.
+ssl    | Boolean | No            | Whether to connect to the PostgreSQL server using TLS (SSL).
 user   | Text    | *None*        | **Required!** The username to log into the PostgreSQL server with.
 pass   | Text    | *None*        | **Required!** The password to log into the PostgreSQL server with.
 name   | Text    | *None*        | **Required!** The name of the PostgreSQL database to use.

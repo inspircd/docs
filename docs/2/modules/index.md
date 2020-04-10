@@ -143,7 +143,7 @@ Name                                            | Description
 [spanningtree](/2/modules/spanningtree)         | Allows servers to be linked.
 [sqlauth](/2/modules/sqlauth)                   | Allow/Deny connections based upon an arbitrary SQL table.
 [sqloper](/2/modules/sqloper)                   | Allows storage of oper credentials in an SQL table.
-[sslinfo](/2/modules/sslinfo)                   | Provides user SSL information and certificate utilities.
+[sslinfo](/2/modules/sslinfo)                   | Provides user TLS (SSL) information and certificate utilities.
 [sslmodes](/2/modules/sslmodes)                 | Provides channel mode +z to allow for Secure/SSL only channels.
 [stripcolor](/2/modules/stripcolor)             | Provides channel +S mode (strip ansi color).
 [svshold](/2/modules/svshold)                   | Implements SVSHOLD. Like Q:Lines, but can only be added/removed by Services.
@@ -175,5 +175,5 @@ Name                                    | Description
 [regex_stdlib](/2/modules/regex_stdlib) | Regex Provider Module for std::regex.
 [regex_tre](/2/modules/regex_tre)       | Regex Provider Module for TRE Regular Expressions.
 [sqlite3](/2/modules/sqlite3)           | sqlite3 provider.
-[ssl_gnutls](/2/modules/ssl_gnutls)     | Provides SSL support for clients.
-[ssl_openssl](/2/modules/ssl_openssl)   | Provides SSL support for clients.
+[ssl_gnutls](/2/modules/ssl_gnutls)     | Provides TLS (SSL) support for clients.
+[ssl_openssl](/2/modules/ssl_openssl)   | Provides TLS (SSL) support for clients.

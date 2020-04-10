@@ -38,7 +38,7 @@ Denies connections to clients connecting from 3ffe::0/32:
          reason="The 6bone address space is deprecated">
 ```
 
-Defines an SSL only connect class and then a general connect class to inherit from:
+Defines an TLS (SSL) only connect class and then a general connect class to inherit from:
 
 ```xml
 <connect name="Secure"

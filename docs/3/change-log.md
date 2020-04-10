@@ -72,7 +72,7 @@ This page lists changes which have happened between releases.
 
 - Fixed not using case insensitive comparisons for the DCCALLOW subcommands.
 
-- Fixed not using case insensitive matching when checking if a SSL rehash has been requested.
+- Fixed not using case insensitive matching when checking if a TLS (SSL) rehash has been requested.
 
 - Fixed not using the `ERR_INVALIDMODEPARAM` numeric when not enough parameters are given to the `snomask` mode.
 
@@ -256,7 +256,7 @@ This page lists changes which have happened between releases.
 
 - Added a warning when the user tries to build on OpenBSD as it ships very broken compilers.
 
-- Added a warning when the user tries to build without SSL support.
+- Added a warning when the user tries to build without TLS (SSL) support.
 
 - Added example config files for enabling support for IRCCloud and KiwiIRC.com on your server.
 
@@ -272,7 +272,7 @@ This page lists changes which have happened between releases.
 
 - Added `<permchanneldb:saveperiod>` to allow customising how often the permchannels module should check whether its database needs to be saved.
 
-- Added `<sslprofile:tlsv11>` and `<sslprofile:tlsv12>` to the ssl_openssl module to easily allow disabling old SSL versions.
+- Added `<sslprofile:tlsv11>` and `<sslprofile:tlsv12>` to the ssl_openssl module to easily allow disabling old TLS (SSL) versions.
 
 - Added `<xlinedb:saveperiod>` to allow customising how often the xline_db module should check whether its database needs to be saved.
 
@@ -336,7 +336,7 @@ This page lists changes which have happened between releases.
 
 - Made the error message sent by the alias module when an alias requires a U-lined target but the target is not U-lined more accurate.
 
-- Show how many users in a channel are not using SSL in the `ERR_ALLMUSTSSL` response.
+- Show how many users in a channel are not using TLS (SSL) in the `ERR_ALLMUSTSSL` response.
 
 - Updated the Module Manager source list for the new inspircd-contrib repository.
 

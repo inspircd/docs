@@ -59,4 +59,4 @@ preload  | Boolean  | No             | Whether the STS policy can be included in
 
 Name                                               | Description
 -------------------------------------------------- | -----------
-[sts](https://ircv3.net/specs/extensions/sts.html) | Defines a mechanism for clients to upgrade plaintext IRC connections to TLS.
+[sts](https://ircv3.net/specs/extensions/sts.html) | Defines a mechanism for clients to upgrade plaintext IRC connections to SSL (TLS).

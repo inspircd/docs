@@ -65,7 +65,7 @@ You will initially be shown the installation paths that InspIRCd defaults to. Th
 
 After you have configured the paths you will be asked whether you want to enable extra modules automatically based on whether you have the dependencies installed. If you want to do this then press enter to continue. Otherwise, enter "no", press enter, and select the extra modules that you want to use. You can enable modules later using `./configure --enable-extras m_foo.cpp` if you change your mind..
 
-Finally, if you enabled a SSL module in the previous step, you will be asked if you want to generate a self-signed certificate for testing purposes. If you want to do this then press enter to continue and fill in the details it prompts you for. Otherwise, enter "no" , and press enter.
+Finally, if you enabled a TLS (SSL) module in the previous step, you will be asked if you want to generate a self-signed certificate for testing purposes. If you want to do this then press enter to continue and fill in the details it prompts you for. Otherwise, enter "no" , and press enter.
 
 #### Compilation
 

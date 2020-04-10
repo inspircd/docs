@@ -15,7 +15,7 @@ title: Module Details (ssl_openssl)
 
 ### Description
 
-This module allows TLS encrypted connections using the [OpenSSL](https://www.openssl.org) library.
+This module allows TLS (SSL) encrypted connections using the [OpenSSL](https://www.openssl.org) library.
 
 ### Configuration
 
@@ -68,13 +68,13 @@ ciphers              | Text    | *None*            | If defined then an [OpenSSL
 cipherserverpref     | Boolean | Yes               | Whether the server's cipher preferences should be used instead of the client's.
 clientclearoptions   | Number  | 0                 | Raw integer value of options to clear on the client context. Don't change this unless you know what you are doing.
 clientsetoptions     | Number  | 0                 | Raw integer value of options to set on the client context. Don't change this unless you know what you are doing.
-compression          | Boolean | Yes               | Whether insecure SSL compression is enabled.
+compression          | Boolean | Yes               | Whether insecure TLS (SSL) compression is enabled.
 customcontextoptions | Boolean | No                | Whether custom context options (\{client,server}\{clear,set}options) are enabled.  Don't change this unless you know what you are doing.
 dhfile               | Text    | conf/dhparams.pem | The path to the certificate in PEM format.
 ecdhcurve            | Text    | prime256v1        | The ECDH curve. Requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_ECDH` enabled.
-hash                 | Text    | md5               | The hash algorithm used for SSL client fingerprints.
+hash                 | Text    | md5               | The hash algorithm used for TLS (SSL) client fingerprints.
 keyfile              | Text    | conf/key.pem      | The path to the private key in PEM format.
-renegotiation        | Boolean | Yes               | Whether SSL renegotiation is enabled. This setting requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_RENEGO_DETECTION` enabled to take effect. Renegotiation is *always* enabled otherwise.
+renegotiation        | Boolean | Yes               | Whether TLS (SSL) renegotiation is enabled. This setting requires the ssl_openssl module to be built with `INSPIRCD_OPENSSL_ENABLE_RENEGO_DETECTION` enabled to take effect. Renegotiation is *always* enabled otherwise.
 serverclearoptions   | Number  | 0                 | Raw integer value of options to clear on the server context.  Don't change this unless you know what you are doing.
 serversetoptions     | Number  | 0                 | Raw integer value of options to set on the server context.  Don't change this unless you know what you are doing.
 showports            | Boolean | Yes               | *Deprecated!* Whether to show an IP/port that clients can connect securely on in the 005 message.

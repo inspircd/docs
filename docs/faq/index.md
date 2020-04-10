@@ -67,7 +67,7 @@ Server operators do not automatically get channel privileges by default. You can
 
 You are trying to connect using SSL/TLS but your server is not configured to listen for SSL/TLS connections.
 
-Check that you have a SSL module loaded and that your bind tag has the name of a SSL module (if you're using v2) or the name of a SSL profile (if you're using v3) in `<bind:ssl>`.
+Check that you have a TLS (SSL) module loaded and that your bind tag has the name of a TLS (SSL) module (if you're using v2) or the name of a TLS (SSL) profile (if you're using v3) in `<bind:ssl>`.
 
 ### Why does my client not show mode changes/opped users on join/etc correctly when using InspIRCd v3?
 

@@ -6,7 +6,7 @@ title: Module Details (sslinfo)
 
 ### Description
 
-This module adds user facing SSL information, various SSL configuration options, and the `/SSLINFO` command to look up SSL certificate information for other users.
+This module adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the `/SSLINFO` command to look up TLS (SSL) certificate information for other users.
 
 ### Configuration
 
@@ -22,19 +22,19 @@ This module extends the core `<connect>` tags with the following fields:
 
 Name       | Type | Default Value | Description
 ---------  | ---- | ------------- | -----------
-requiressl | Text | no            | Whether users must be using SSL to use this class.
+requiressl | Text | no            | Whether users must be using TLS (SSL) to use this class.
 
 The requiressl field should be set to one of the following values:
 
 Value   | Description
 ------- | -----------
-no      | SSL is not required to use this class.
-trusted | SSL is required and and a CA-verified client certificate must be provided to use this class.
-yes     | SSL is required to use this class.
+no      | TLS (SSL) is not required to use this class.
+trusted | TLS (SSL) is required and and a CA-verified client certificate must be provided to use this class.
+yes     | TLS (SSL) is required to use this class.
 
 ##### Example Usage
 
-Requires users to be using SSL to be assigned to the Secure class:
+Requires users to be using TLS (SSL) to be assigned to the Secure class:
 
 ```xml
 <connect name="Secure"
@@ -49,8 +49,8 @@ This module extends the core `<oper>` tag with the following fields:
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
 autologin   | Boolean | No            | Whether to automatically log server operators in when they connect to the server.
-fingerprint | Text    | *None*        | If defined then a space-delimited list of fingerprints of this server operator's SSL client certificates.
-sslonly     | Boolean | No            | Whether this server operator must be connected using SSL to log into their account.
+fingerprint | Text    | *None*        | If defined then a space-delimited list of fingerprints of this server operator's TLS (SSL) client certificates.
+sslonly     | Boolean | No            | Whether this server operator must be connected using TLS (SSL) to log into their account.
 
 ##### Example Usage
 
@@ -68,7 +68,7 @@ The `<sslinfo>` tag defines settings about how the sethost module should behave.
 
 Name     | Type    | Default Value  | Description
 -------- | ------- | -------------- | -----------
-operonly | Boolean | No             | Whether user SSL certificate fingerprints are only visible to server operators.
+operonly | Boolean | No             | Whether user TLS (SSL) certificate fingerprints are only visible to server operators.
 
 ##### Example Usage
 
@@ -80,11 +80,11 @@ operonly | Boolean | No             | Whether user SSL certificate fingerprints 
 
 Name    | Parameter Count | Syntax       | Description
 ------- | --------------- | ------------ | -----------
-SSLINFO | 1               | `<nickname>` | Views the SSL certificate information for &lt;nickname&gt;.
+SSLINFO | 1               | `<nickname>` | Views the TLS (SSL) certificate information for &lt;nickname&gt;.
 
 #### Example Usage
 
-Views the SSL certificate information for Sadie:
+Views the TLS (SSL) certificate information for Sadie:
 
 ```plaintext
 /SSLINFO Sadie

@@ -167,8 +167,8 @@ Name                                                      | Description
 [spanningtree](/3/modules/spanningtree)                   | Allows servers to be linked
 [sqlauth](/3/modules/sqlauth)                             | Allow/deny connections based upon an arbitrary SQL table
 [sqloper](/3/modules/sqloper)                             | Allows storage of oper credentials in an SQL table
-[sslinfo](/3/modules/sslinfo)                             | Provides user SSL information and certificate utilities
-[sslmodes](/3/modules/sslmodes)                           | Provides user and channel mode +z to allow for SSL only channels, queries and notices
+[sslinfo](/3/modules/sslinfo)                             | Provides user TLS (SSL) information and certificate utilities
+[sslmodes](/3/modules/sslmodes)                           | Provides user and channel mode +z to allow for TLS (SSL) only channels, queries and notices
 [starttls](/3/modules/starttls)                           | Provides the STARTTLS command
 [stripcolor](/3/modules/stripcolor)                       | Provides channel mode +S, strip ansi color
 [svshold](/3/modules/svshold)                             | Implements SVSHOLD, like Q-lines, but can only be added/removed by Services
@@ -200,7 +200,7 @@ Name                                          | Description
 [regex_stdlib](/3/modules/regex_stdlib)       | Regex Provider Module for std::regex
 [regex_tre](/3/modules/regex_tre)             | Regex Provider Module for TRE Regular Expressions
 [sqlite3](/3/modules/sqlite3)                 | Provides SQLite3 support
-[ssl_gnutls](/3/modules/ssl_gnutls)           | Provides SSL support via GnuTLS
-[ssl_mbedtls](/3/modules/ssl_mbedtls)         | Provides SSL support via mbedTLS (PolarSSL)
-[ssl_openssl](/3/modules/ssl_openssl)         | Provides SSL support via OpenSSL
-[sslrehashsignal](/3/modules/sslrehashsignal) | Reloads SSL credentials on SIGUSR1
+[ssl_gnutls](/3/modules/ssl_gnutls)           | Provides TLS (SSL) support via GnuTLS
+[ssl_mbedtls](/3/modules/ssl_mbedtls)         | Provides TLS (SSL) support via mbedTLS (PolarSSL)
+[ssl_openssl](/3/modules/ssl_openssl)         | Provides TLS (SSL) support via OpenSSL
+[sslrehashsignal](/3/modules/sslrehashsignal) | Reloads TLS (SSL) credentials on SIGUSR1

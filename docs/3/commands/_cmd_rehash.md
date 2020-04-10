@@ -26,7 +26,7 @@ Reloads the server configuration for remote.example.com:
 /REHASH remote.example.com
 ```
 
-Reloads the SSL certificates (requires [the sslinfo module](/3/modules/sslinfo)):
+Reloads the TLS (SSL) certificates (requires [the sslinfo module](/3/modules/sslinfo)):
 
 ```plaintext
 /REHASH -ssl

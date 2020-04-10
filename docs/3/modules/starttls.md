@@ -22,7 +22,7 @@ The `<starttls>` tag defines settings about how the starttls module should behav
 
 Name     | Type     | Default Value | Description
 -------- | -------- | ------------- | -----------
-provider | Text     | *None*        | The name of the SSL profile to use for STARTTLS clients.
+provider | Text     | *None*        | The name of the TLS (SSL) profile to use for STARTTLS clients.
 
 ##### Example Usage
 
@@ -34,4 +34,4 @@ provider | Text     | *None*        | The name of the SSL profile to use for STA
 
 Name                                                   | Description
 ------------------------------------------------------ | -----------
-[tls](https://ircv3.net/specs/extensions/tls-3.1.html) | Allows plaintext connections to upgrade to TLS.
+[tls](https://ircv3.net/specs/extensions/tls-3.1.html) | Allows plaintext connections to upgrade to SSL (TLS).

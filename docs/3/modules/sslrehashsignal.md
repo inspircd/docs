@@ -6,7 +6,7 @@ title: Module Details (sslrehashsignal)
 
 ### Description
 
-This module allows the `SIGUSR1` signal to be sent to the server to reload SSL certificates.
+This module allows the `SIGUSR1` signal to be sent to the server to reload TLS (SSL) certificates.
 
 ### Configuration
 
@@ -22,4 +22,4 @@ This module requires no other configuration.
 
 Name    | Description
 ------- | -----------
-SIGUSR1 | Reloads the server's SSL certificates.
+SIGUSR1 | Reloads the server's TLS (SSL) certificates.

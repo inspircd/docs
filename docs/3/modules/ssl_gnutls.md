@@ -13,7 +13,7 @@ title: Module Details (ssl_gnutls)
 
 ### Description
 
-This module allows TLS encrypted connections using the [GnuTLS](https://gnutls.org) library.
+This module allows TLS (SSL) encrypted connections using the [GnuTLS](https://gnutls.org) library.
 
 ### Configuration
 
@@ -29,7 +29,7 @@ This module extends the core `<bind>` tags with the following keys:
 
 Name | Description
 ---- | -----------
-ssl  | *This MUST be set to the name of a GnuTLS SSL profile to listen for secure connections with GnuTLS.*
+ssl  | *This MUST be set to the name of a GnuTLS TLS (SSL) profile to listen for secure connections with GnuTLS.*
 
 ##### Example Usage
 
@@ -55,24 +55,24 @@ Listens for GnuTLS encrypted server connections on the *:7000 endpoint:
 
 #### `<sslprofile>`
 
-The `<sslprofile>` tag defines a SSL profile for sockets to use. This tag can be defined as many times as required.
+The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
 
 If no `<sslprofile>` tags are defined a default profile named `gnutls` will be created. This profile will use the contents of the deprecated `<gnutls>` tag if one has been defined.
 
 Name              | Type    | Default Value | Description
 ----------------- | ------- | ------------- | -----------
-name              | Text    | *None*        | **Required!** The name of this SSL profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+name              | Text    | *None*        | **Required!** The name of this TLS (SSL) profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
 provider          | Text    | *None*        | **Required!** *This MUST be set to "gnutls" to use the GnuTLS library.*
 cafile            | Text    | ca.pem        | The path to the CA in PEM format.
 certfile          | Text    | cert.pem      | The path to the certificate in PEM format.
 crlfile           | Text    | crl.pem       | The path to the CRL in PEM format.
 dhfile            | Text    | dhparams.pem  | The path to the DH parameters in PEM format.
-hash              | Text    | md5           | The hash algorithm used for SSL client fingerprints.
+hash              | Text    | md5           | The hash algorithm used for TLS (SSL) client fingerprints.
 keyfile           | Text    | key.pem       | The path to the private key in PEM format.
 mindhbits         | Number  | 1024          | The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
 outrecsize        | Number  | 2048          | The maximum size of an outgoing GnuTLS record.
 priority          | Text    | NORMAL        | A [GnuTLS priority string](https://gnutls.org/manual/html_node/Priority-Strings.html).
-requestclientcert | Boolean | Yes           | Whether to request a SSL certificate from clients.
+requestclientcert | Boolean | Yes           | Whether to request a TLS (SSL) certificate from clients.
 strictpriority    | Boolean | No            | Whether to require that all tokens in the GnuTLS priority string are valid.
 
 The hash field should be set to one of the values shown in `gnutls-cli --list | grep ^Digests:`.
