@@ -168,7 +168,7 @@ Name                                                      | Description
 [sqlauth](/3/modules/sqlauth)                             | Allows connecting users to be authenticated against an arbitrary SQL table.
 [sqloper](/3/modules/sqloper)                             | Allows server operators to be authenticated against an SQL table.
 [sslinfo](/3/modules/sslinfo)                             | Adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the /SSLINFO command to look up TLS (SSL) certificate information for other users.
-[sslmodes](/3/modules/sslmodes)                           | Adds channel mode z (sslonly) which prevents users who are not connecting using TLS (SSL) from joining the channel and user mode z (sslqueries) to prevent messages from non-SSL users.
+[sslmodes](/3/modules/sslmodes)                           | Adds channel mode z (sslonly) which prevents users who are not connecting using TLS (SSL) from joining the channel and user mode z (sslqueries) to prevent messages from non-TLS (SSL) users.
 [starttls](/3/modules/starttls)                           | Provides the IRCv3 tls client capability.
 [stripcolor](/3/modules/stripcolor)                       | Adds channel mode S (stripcolor) which allows channels to strip IRC formatting codes from messages.
 [svshold](/3/modules/svshold)                             | Adds the /SVSHOLD command which allows services to reserve nicknames.
