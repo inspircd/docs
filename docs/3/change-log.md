@@ -6,6 +6,92 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.6.0
+
+<!-- TODO: ensure changes after commit 256be7a are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<include:noenv>` to disable using environment variables in an included config file.
+
+- Added `<oper:snomasks>`  and `<type:snomasks>` to allow configuring the snomasks that a server operator can use.
+
+- Added `<options:modesinlist>` to allow customising whether channel modes are included with the `/LIST` response.
+
+- Added `<sasl:requiressl>` to require users to be connected via TLS (SSL) in order to be able to use SASL authentication.
+
+- Added support for the [RFC 2812](https://tools.ietf.org/html/rfc2812) `/SERVLIST` command.
+
+- Added support for using environment variables in the server configuration using the `&env.FOO;` syntax.
+
+- Added the `/ADMIN` and `/OPER` commands to the default list of commands that a shunned user can execute.
+
+- Added the `servers/ignore-shun` privilege to allow server operators to ignore shuns placed on them.
+
+- Developer: added a way to exempt a message from updating the origin user's idle time.
+
+- Developer: added an overloadable function to the `Command` class to allow configuring the message sent when a user executes a command that they need to be registered to use.
+
+- Developer: added an overloadable function to the `Command` class to allow configuring the message sent when a user executes a command without specifying enough parameters.
+
+- Developer: added multi-parameter overloads to the `IRCv3::Replies::Reply::SendIfCap` method.
+
+- Developer: added the `EventHandler::HasFd` method for checking if an event handler is configured with a file descriptor.
+
+- Developer: added the `Numerics::CannotSendTo` class for sending the "can not send to channel/user" numerics.
+
+- Developer: added the `USERMODES` 005 token to allow parsing mode changes easier.
+
+- Developer: added the `User::HasSnomaskPermission` method for checking if a user can use a snomask.
+
+- Developer: added the `UserManager::all_ulines` list which contains all services on U-lined servers.
+
+- Developer: deprecated the `XLineManager::InvokeStats` methods in favour of a new overload which uses a generic numeric.
+
+- Developer: stabilised support for the [IRCv3 Standard Replies](https://ircv3.net/specs/extensions/standard-replies) specification.
+
+- Fixed a bug where prevously changed display hostnames would be reset when a hostname lookup finishes.
+
+- Fixed a memory leak in the dccallow module.
+
+- Fixed being able to use the `MODE` command to look up the modes of a private or secret channel.
+
+- Fixed leaking HTTPd sockets if they were closed with data left in their outgoing buffer.
+
+- Fixed reloading core modules by their short name.
+
+- Fixed sending `RPL_WHOISCOUNTRY` for services pseudoclients.
+
+- Fixed sending mass-messages to other servers on the network.
+
+- Fixed server filters applying to mass-messages sent by server operators.
+
+- Fixed setting the permissions of a UNIX socket listener.
+
+- Fixed showing a malformed sts capability if the configuration was invalid on rehash.
+
+- Fixed silently failing when trying to load more than 31 capabilities.
+
+- Fixed the chanlog module writing duplicate log messages when sending snotices is enabled.
+
+- Fixed the entire DNS cache not being reloaded on rehash.
+
+- Fixed the restrictchans module not telling the user when they are prevented from creating a channel.
+
+- Fixed various config values using an empty value instead of the default if an empty value was specified.
+
+- Fixed warning snotices not being sent when a user fails to login to a server operator account which requires TLS (SSL) and/or a matching client certificate fingerprint.
+
+- Implemented support for [the IRCv3 SETNAME specification](https://ircv3.net/specs/extensions/setname.html).
+
+- Implemented support for multi-line CAP responses.
+
+- Improved the descriptions of all of the modules.
+
+- Improved the error message shown when trying to load a module which is too old or too new for the current version.
+
+- Improved the error messages shown by the ldap module.
+
 ### InspIRCd 3.5.0
 
 **This version of InspIRCd was released on 2020-01-31.**
