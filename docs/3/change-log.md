@@ -50,7 +50,7 @@ This page lists changes which have happened between releases.
 
 - Developer: stabilised support for the [IRCv3 Standard Replies](https://ircv3.net/specs/extensions/standard-replies) specification.
 
-- Fixed a bug where prevously changed display hostnames would be reset when a hostname lookup finishes.
+- Fixed a bug where previously changed display hostnames would be reset when a hostname lookup finishes.
 
 - Fixed a memory leak in the dccallow module.
 
@@ -132,7 +132,7 @@ This page lists changes which have happened between releases.
 
 - Developer: added the `OnCommandBlocked` event for when the execution of a command is blocked.
 
-- Developer: added the `UserManager::ULineCount` method for counting pseudoclients on ulined servers.
+- Developer: added the `UserManager::ULineCount` method for counting pseudoclients on U-lined servers.
 
 - Developer: added the `inspircd.org/poison` capability which rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
 
