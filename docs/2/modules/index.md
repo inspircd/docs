@@ -131,7 +131,7 @@ Name                                            | Description
 [seenicks](/2/modules/seenicks)                 | Provides support for seeing local and remote nickchanges via snomasks.
 [serverban](/2/modules/serverban)               | Extban 's' - server ban.
 [services_account](/2/modules/services_account) | Provides support for ircu-style services accounts, including chmode +R, etc.
-[servprotect](/2/modules/servprotect)           | Provides usermode +k to protect services from kicks, kills, and mode changes.
+[servprotect](/2/modules/servprotect)           | Provides user mode +k to protect services from kicks, kills, and channel prefix mode changes.
 [sethost](/2/modules/sethost)                   | Provides support for the SETHOST command.
 [setident](/2/modules/setident)                 | Provides support for the SETIDENT command.
 [setidle](/2/modules/setidle)                   | Allows opers to set their idle time.

@@ -153,7 +153,7 @@ Name                                                      | Description
 [seenicks](/3/modules/seenicks)                           | Sends a notice to snomasks n (local) and N (remote) when a user changes their nickname.
 [serverban](/3/modules/serverban)                         | Adds the s extended ban which check whether users are on a server matching the specified glob pattern.
 [services_account](/3/modules/services_account)           | Adds various channel and user modes relating to services accounts.
-[servprotect](/3/modules/servprotect)                     | Adds user mode k (servprotect) which protects services pseudoclients from being kicked, being killed, or having their user modes changed.
+[servprotect](/3/modules/servprotect)                     | Adds user mode k (servprotect) which protects services pseudoclients from being kicked, being killed, or having their channel prefix modes changed.
 [sethost](/3/modules/sethost)                             | Adds the /SETHOST command which allows server operators to change their displayed hostname.
 [setident](/3/modules/setident)                           | Adds the /SETIDENT command which allows server operators to change their username (ident).
 [setidle](/3/modules/setidle)                             | Adds the /SETIDLE command which allows server operators to change their idle time.

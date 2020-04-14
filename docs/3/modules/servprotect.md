@@ -6,7 +6,7 @@ title: Module Details (servprotect)
 
 ### Description
 
-This module adds user mode `k` (servprotect) which protects services pseudoclients from being kicked, being killed, or having their user modes changed.
+This module adds user mode `k` (servprotect) which protects services pseudoclients from being kicked, being killed, or having their channel prefix modes changed.
 
 ### Configuration
 
@@ -22,7 +22,7 @@ This module requires no other configuration.
 
 Name        | Character | Type   | Parameter Syntax | Usable By | Description
 ----------- | --------- | ------ | ---------------- | --------- | -----------
-servprotect | k         | Switch | *None*           | Servers   | Protects services pseudoclients against kicks, kills, and user mode changes.
+servprotect | k         | Switch | *None*           | Servers   | Protects services pseudoclients against kicks, kills, and channel prefix mode changes.
 
 ### Special Notes
 
