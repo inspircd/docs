@@ -29,14 +29,14 @@ The `<database>` tag defines a SQLite 3 database to connect to. This tag can be 
 
 Name     | Type   | Default Value | Description
 -------- | ------ | ------------- | -----------
-module   | Text   | *None*        | **Required!** *This MUST be set to "sqlite3" to connect to a SQLite 3 database.*
+module   | Text   | *None*        | **Required!** *This MUST be set to "sqlite" to connect to a SQLite 3 database.*
 id       | Text   | *None*        | **Required!** The name that SQL-using modules can refer to this `<database>` tag using.
 hostname | Text   | *None*        | **Required!** The path to where the SQLite database is stored.
 
 ##### Example Usage
 
 ```xml
-<database module="sqlite3"
+<database module="sqlite"
           id="opers"
           hostname="/path/to/database.sq3">
 ```
