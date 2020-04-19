@@ -1,8 +1,10 @@
 name: Pull request checks
 on:
   - pull_request
+  - push
 jobs:
   build:
+    if: (github.repository == 'inspircd/inspircd-docs' && github.event_name == 'pull_request') || (github.repository != 'inspircd/inspircd-docs' && github.event_name == 'push')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

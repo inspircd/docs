@@ -3,6 +3,7 @@ on:
   - push
 jobs:
   build:
+    if: github.repository == 'inspircd/inspircd-docs'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
