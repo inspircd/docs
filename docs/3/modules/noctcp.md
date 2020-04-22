@@ -6,7 +6,7 @@ title: "Module Details: noctcp (v3)"
 
 ### Description
 
-This module adds channel mode `C` (noctcp) which allows channels to block messages which contain CTCPs.
+This module adds channel mode `C` (noctcp) which allows channels to block messages which contain CTCPs and user mode `T` (u_noctcp) which allows users to block private messages that contain CTCPs.
 
 ### Configuration
 

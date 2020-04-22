@@ -114,7 +114,7 @@ Name                                                      | Description
 [nationalchars](/3/modules/nationalchars)                 | Allows the server administrator to define what characters are allowed in nicknames and channel names and how those characters should be compared in a case insensitive way.
 [nickflood](/3/modules/nickflood)                         | Adds channel mode F (nickflood) which helps protect against spammers which mass-change nicknames.
 [nicklock](/3/modules/nicklock)                           | Adds the /NICKLOCK command which allows server operators to change a user's nickname and prevent them from changing it again until they disconnect.
-[noctcp](/3/modules/noctcp)                               | Adds channel mode C (noctcp) which allows channels to block messages which contain CTCPs.
+[noctcp](/3/modules/noctcp)                               | Adds channel mode C (noctcp) which allows channels to block messages which contain CTCPs and user mode T (u_noctcp) which allows users to block private messages that contain CTCPs.
 [nokicks](/3/modules/nokicks)                             | Adds channel mode Q (nokick) which prevents privileged users from using the /KICK command.
 [nonicks](/3/modules/nonicks)                             | Adds channel mode N (nonick) which prevents users from changing their nickname whilst in the channel.
 [nonotice](/3/modules/nonotice)                           | Adds channel mode T (nonotice) which allows channels to block messages sent with the /NOTICE command.
