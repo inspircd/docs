@@ -16,7 +16,23 @@ To load this module use the following `<module>` tag:
 <module name="nonicks">
 ```
 
-This module requires no other configuration.
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                    | Description
+----------------------- | -----------
+channels/ignore-nonicks | Allows server operators to change their nick when on a channel with the `N` (nonick) mode set.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to change their nick when on a channel with the `N` (nonick) mode set.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... channels/ignore-nonicks ...">
+```
 
 ### Channel Modes
 

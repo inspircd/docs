@@ -16,7 +16,24 @@ To load this module use the following `<module>` tag:
 <module name="samode">
 ```
 
-This module requires no other configuration.
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                   | Description
+---------------------- | -----------
+users/samode-usermodes | Allows server operators to change the user modes of any other user using `/SAMODE`.
+
+#### Example Usage
+
+Allows server operators with the class named SACommands to `/SAMODE` the user modes of other users.
+
+```xml
+<class name="SACommands"
+       ...
+       commands="... SAMODE ..."
+       privs="... users/samode-usermodes ...">
+```
 
 ### Commands
 

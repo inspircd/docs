@@ -34,6 +34,24 @@ notifyuser      | Boolean | Yes            | Whether to notify shunned users tha
       notifyuser="yes">
 ```
 
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                 | Description
+-------------------- | -----------
+servers/ignore-shuns | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Allows server operators to ignore shuns.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to ignore shuns.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... servers/ignore-shun ...">
+```
+
 ### Commands
 
 Name | Parameter Count | Syntax                              | Description

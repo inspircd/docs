@@ -16,7 +16,23 @@ To load this module use the following `<module>` tag:
 <module name="commonchans">
 ```
 
-This module requires no other configuration.
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                     | Description
+------------------------ | -----------
+users/ignore-commonchans | Allows server operators to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... users/ignore-commonchans ...">
+```
 
 ### User Modes
 

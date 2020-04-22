@@ -16,7 +16,24 @@ To load this module use the following `<module>` tag:
 <module name="disable">
 ```
 
-This module requires no other configuration.
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                          | Description
+----------------------------- | -----------
+servers/use-disabled-commands | Allows server operators to use disabled commands.
+servers/use-disabled-modes    | Allows server operators to use disabled modes.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to use disabled commands and modes.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... servers/use-disabled-commands servers/use-disabled-modes ...">
+```
 
 ### `<disabled>`
 

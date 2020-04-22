@@ -30,6 +30,25 @@ enableumode | Boolean | No            | Whether user mode `T` (u_noctcp) is enab
 <noctcp enableumode="yes">
 ```
 
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                   | Description
+---------------------- | -----------
+channels/ignore-noctcp | Allows server operators to send a CTCP to a channel with the `C` (noctcp) mode set.
+users/ignore-noctcp    | Allows server operators to send a CTCP to a user with the `T` (u_noctcp) mode set.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to send a CTCP to a channel or user with the respective mode set.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... channels/ignore-noctcp users/ignore-noctcp ...">
+```
+
 ### Channel Modes
 
 Name   | Character | Type   | Parameter Syntax | Usable By         | Description

@@ -16,7 +16,24 @@ To load this module use the following `<module>` tag:
 <module name="sajoin">
 ```
 
-This module requires no other configuration.
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                | Description
+------------------- | -----------
+users/sajoin-others | Allows server operators to `/SAJOIN` users other than themselves.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to `/SAJOIN` users other than themselves.
+
+```xml
+<class name="BasicOper"
+       ...
+       commands="... SAJOIN ..."
+       privs="... users/sajoin-others ...">
+```
 
 ### Commands
 

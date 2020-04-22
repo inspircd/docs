@@ -51,3 +51,21 @@ allowregistered | Boolean | No            | Whether users who are logged into an
 ```xml
 <restrictchans allowregistered="yes">
 ```
+
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                       | Description
+-------------------------- | -----------
+channels/restricted-create | Allows server operators to create channels.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to create channels.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... channels/restriced-create ...">
+```

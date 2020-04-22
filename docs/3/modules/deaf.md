@@ -36,6 +36,24 @@ privdeafuline    | Boolean | Yes           | Whether users on U-lined servers ar
       privdeafuline="yes">
 ```
 
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                  | Description
+----------------------| -----------
+users/ignore-privdeaf | Allows server operators to message users with the `D` (privdeaf) mode set.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to message users with the `D` (privdeaf) mode set.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... users/ignore-privdeaf ...">
+```
+
 ### User Modes
 
 Name     | Character | Type   | Parameter Syntax | Usable By | Description

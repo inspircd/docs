@@ -13,6 +13,8 @@ chanmodes | Text | *None*        | The server operator-only channel modes that s
 usermodes | Text | *None*        | The server operator-only user modes that server operators with this class can change.
 snomasks  | Text | \*            | [**New in v3.6.0!**](/3/change-log/#inspircd-360) The server operator-only snomasks that server operators with this class can change.
 
+{! 3/configuration/_class_privs.md !}
+
 #### Example Usage
 
 ```xml
@@ -22,4 +24,9 @@ snomasks  | Text | \*            | [**New in v3.6.0!**](/3/change-log/#inspircd-
        chanmodes="*"
        usermodes="*"
        snomasks="gG">
+```
+
+```xml
+<class name="OperView"
+       privs="channels/auspex users/auspex users/channel-spy servers/auspex">
 ```

@@ -34,6 +34,24 @@ tracknick    | Boolean | No            | Whether to track nickname changes for u
           tracknick="no">
 ```
 
+#### `<class>`
+
+This module extends the core `<class:privs>` key with the following values:
+
+Name                  | Description
+--------------------- | -----------
+users/ignore-callerid | Allows server operators to message users using callerid without being on their callerid list.
+
+#### Example Usage
+
+Allows server operators with the class named BasicOper to message users using callerid without being on their callerid list.
+
+```xml
+<class name="BasicOper"
+       ...
+       privs="... users/ignore-callerid ...">
+```
+
 ### Commands
 
 Name    | Parameter Count | Syntax                                      | Description
