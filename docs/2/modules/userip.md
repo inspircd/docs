@@ -1,5 +1,5 @@
 ---
-title: Module Details (userip)
+title: Module Details: userip (v2)
 ---
 
 {! 2/_support.md !}

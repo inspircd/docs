@@ -1,5 +1,5 @@
 ---
-title: Module Details (denychans)
+title: Module Details: denychans (v3)
 ---
 
 ## The "denychans" Module

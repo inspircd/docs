@@ -1,5 +1,5 @@
 ---
-title: Module Details (namesx)
+title: Module Details: namesx (v3)
 ---
 
 ## The "namesx" Module

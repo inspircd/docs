@@ -1,5 +1,5 @@
 ---
-title: Module Details (permchannels)
+title: Module Details: permchannels (v2)
 ---
 
 {! 2/_support.md !}

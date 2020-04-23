@@ -1,5 +1,5 @@
 ---
-title: Module Details (sajoin)
+title: Module Details: sajoin (v3)
 ---
 
 ## The "sajoin" Module

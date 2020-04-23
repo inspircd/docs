@@ -1,5 +1,5 @@
 ---
-title: Module Details (chgident)
+title: Module Details: chgident (v3)
 ---
 
 ## The "chgident" Module

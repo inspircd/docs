@@ -1,5 +1,5 @@
 ---
-title: Module Details (nokicks)
+title: Module Details: nokicks (v3)
 ---
 
 ## The "nokicks" Module

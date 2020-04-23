@@ -1,5 +1,5 @@
 ---
-title: Module Details (autoop)
+title: Module Details: autoop (v3)
 ---
 
 ## The "autoop" Module

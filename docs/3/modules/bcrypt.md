@@ -1,5 +1,5 @@
 ---
-title: Module Details (bcrypt)
+title: Module Details: bcrypt (v3)
 ---
 
 ## The "bcrypt" Module

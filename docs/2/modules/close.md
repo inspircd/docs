@@ -1,5 +1,5 @@
 ---
-title: Module Details (close)
+title: Module Details: close (v2)
 ---
 
 {! 2/_support.md !}

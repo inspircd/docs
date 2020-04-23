@@ -1,5 +1,5 @@
 ---
-title: Module Details (autoop)
+title: Module Details: autoop (v2)
 ---
 
 {! 2/_support.md !}

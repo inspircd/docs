@@ -1,5 +1,5 @@
 ---
-title: Module Details (sqloper)
+title: Module Details: sqloper (v2)
 ---
 
 {! 2/_support.md !}

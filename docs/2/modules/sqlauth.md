@@ -1,5 +1,5 @@
 ---
-title: Module Details (sqlauth)
+title: Module Details: sqlauth (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (xline_db)
+title: Module Details: xline_db (v3)
 ---
 
 ## The "xline_db" Module

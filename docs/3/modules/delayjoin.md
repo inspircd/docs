@@ -1,5 +1,5 @@
 ---
-title: Module Details (delayjoin)
+title: Module Details: delayjoin (v3)
 ---
 
 ## The "delayjoin" Module

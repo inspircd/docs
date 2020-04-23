@@ -1,5 +1,5 @@
 ---
-title: Module Details (dnsbl)
+title: Module Details: dnsbl (v3)
 ---
 
 ## The "dnsbl" Module

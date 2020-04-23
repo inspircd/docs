@@ -1,5 +1,5 @@
 ---
-title: Module Details (delaymsg)
+title: Module Details: delaymsg (v3)
 ---
 
 ## The "delaymsg" Module

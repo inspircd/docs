@@ -1,5 +1,5 @@
 ---
-title: Module Details (ojoin)
+title: Module Details: ojoin (v2)
 ---
 
 {! 2/_support.md !}

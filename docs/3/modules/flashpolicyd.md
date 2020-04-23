@@ -1,5 +1,5 @@
 ---
-title: Module Details (flashpolicyd)
+title: Module Details: flashpolicyd (v3)
 ---
 
 ## The "flashpolicyd" Module

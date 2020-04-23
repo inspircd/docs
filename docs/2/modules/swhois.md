@@ -1,5 +1,5 @@
 ---
-title: Module Details (swhois)
+title: Module Details: swhois (v2)
 ---
 
 {! 2/_support.md !}

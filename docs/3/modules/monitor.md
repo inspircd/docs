@@ -1,5 +1,5 @@
 ---
-title: Module Details (monitor)
+title: Module Details: monitor (v3)
 ---
 
 ## The "monitor" Module

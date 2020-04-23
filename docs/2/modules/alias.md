@@ -1,5 +1,5 @@
 ---
-title: Module Details (alias)
+title: Module Details: alias (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (conn_waitpong)
+title: Module Details: conn_waitpong (v2)
 ---
 
 {! 2/_support.md !}

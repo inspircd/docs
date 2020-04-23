@@ -1,5 +1,5 @@
 ---
-title: Module Details (satopic)
+title: Module Details: satopic (v3)
 ---
 
 ## The "satopic" Module

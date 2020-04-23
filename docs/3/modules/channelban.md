@@ -1,5 +1,5 @@
 ---
-title: Module Details (channelban)
+title: Module Details: channelban (v3)
 ---
 
 ## The "channelban" Module

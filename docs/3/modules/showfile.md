@@ -1,5 +1,5 @@
 ---
-title: Module Details (showfile)
+title: Module Details: showfile (v3)
 ---
 
 ## The "showfile" Module

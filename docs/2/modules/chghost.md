@@ -1,5 +1,5 @@
 ---
-title: Module Details (chghost)
+title: Module Details: chghost (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (xline_db)
+title: Module Details: xline_db (v2)
 ---
 
 {! 2/_support.md !}

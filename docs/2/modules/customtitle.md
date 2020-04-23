@@ -1,5 +1,5 @@
 ---
-title: Module Details (customtitle)
+title: Module Details: customtitle (v2)
 ---
 
 {! 2/_support.md !}

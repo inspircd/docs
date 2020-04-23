@@ -1,5 +1,5 @@
 ---
-title: Module Details (operprefix)
+title: Module Details: operprefix (v2)
 ---
 
 {! 2/_support.md !}

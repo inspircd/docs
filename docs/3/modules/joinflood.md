@@ -1,5 +1,5 @@
 ---
-title: Module Details (joinflood)
+title: Module Details: joinflood (v3)
 ---
 
 ## The "joinflood" Module

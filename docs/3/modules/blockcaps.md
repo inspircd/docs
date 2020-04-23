@@ -1,5 +1,5 @@
 ---
-title: Module Details (blockcaps)
+title: Module Details: blockcaps (v3)
 ---
 
 ## The "blockcaps" Module

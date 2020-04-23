@@ -1,5 +1,5 @@
 ---
-title: Module Details (cloaking)
+title: Module Details: cloaking (v2)
 ---
 
 {! 2/_support.md !}

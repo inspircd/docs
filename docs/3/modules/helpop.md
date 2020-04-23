@@ -1,5 +1,5 @@
 ---
-title: Module Details (helpop)
+title: Module Details: helpop (v3)
 ---
 
 ## The "helpop" Module

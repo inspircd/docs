@@ -1,5 +1,5 @@
 ---
-title: Module Details (passforward)
+title: Module Details: passforward (v3)
 ---
 
 ## The "passforward" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details (exemptchanops)
+title: Module Details: exemptchanops (v2)
 ---
 
 {! 2/_support.md !}

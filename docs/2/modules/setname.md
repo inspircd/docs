@@ -1,5 +1,5 @@
 ---
-title: Module Details (setname)
+title: Module Details: setname (v2)
 ---
 
 {! 2/_support.md !}

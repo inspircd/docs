@@ -1,5 +1,5 @@
 ---
-title: Module Details (exemptchanops)
+title: Module Details: exemptchanops (v3)
 ---
 
 ## The "exemptchanops" Module

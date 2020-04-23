@@ -1,5 +1,5 @@
 ---
-title: Module Details (commonchans)
+title: Module Details: commonchans (v3)
 ---
 
 ## The "commonchans" Module

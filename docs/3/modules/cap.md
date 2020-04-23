@@ -1,5 +1,5 @@
 ---
-title: Module Details (cap)
+title: Module Details: cap (v3)
 ---
 
 ## The "cap" Module

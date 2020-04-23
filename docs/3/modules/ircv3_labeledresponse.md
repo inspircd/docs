@@ -1,5 +1,5 @@
 ---
-title: Module Details (ircv3_labeledresponse)
+title: Module Details: ircv3_labeledresponse (v3)
 ---
 
 ## The "ircv3_labeledresponse" Module

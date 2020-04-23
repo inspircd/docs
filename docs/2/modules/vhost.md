@@ -1,5 +1,5 @@
 ---
-title: Module Details (vhost)
+title: Module Details: vhost (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (uhnames)
+title: Module Details: uhnames (v3)
 ---
 
 ## The "uhnames" Module

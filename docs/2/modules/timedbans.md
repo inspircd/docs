@@ -1,5 +1,5 @@
 ---
-title: Module Details (timedbans)
+title: Module Details: timedbans (v2)
 ---
 
 {! 2/_support.md !}

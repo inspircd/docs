@@ -1,5 +1,5 @@
 ---
-title: Module Details (chancreate)
+title: Module Details: chancreate (v2)
 ---
 
 {! 2/_support.md !}

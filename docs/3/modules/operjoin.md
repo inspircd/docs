@@ -1,5 +1,5 @@
 ---
-title: Module Details (operjoin)
+title: Module Details: operjoin (v3)
 ---
 
 ## The "operjoin" Module

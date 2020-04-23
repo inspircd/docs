@@ -1,5 +1,5 @@
 ---
-title: Module Details (saquit)
+title: Module Details: saquit (v3)
 ---
 
 ## The "saquit" Module

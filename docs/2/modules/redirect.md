@@ -1,5 +1,5 @@
 ---
-title: Module Details (redirect)
+title: Module Details: redirect (v2)
 ---
 
 {! 2/_support.md !}

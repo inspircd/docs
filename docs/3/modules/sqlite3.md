@@ -1,5 +1,5 @@
 ---
-title: Module Details (sqlite3)
+title: Module Details: sqlite3 (v3)
 ---
 
 ## The "sqlite3" Module

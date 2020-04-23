@@ -1,5 +1,5 @@
 ---
-title: Module Details (hidemode)
+title: Module Details: hidemode (v3)
 ---
 
 ## The "hidemode" Module

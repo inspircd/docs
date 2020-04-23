@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_glob)
+title: Module Details: regex_glob (v2)
 ---
 
 {! 2/_support.md !}

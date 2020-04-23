@@ -1,5 +1,5 @@
 ---
-title: Module Details (md5)
+title: Module Details: md5 (v3)
 ---
 
 ## The "md5" Module

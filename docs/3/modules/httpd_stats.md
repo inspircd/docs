@@ -1,5 +1,5 @@
 ---
-title: Module Details (httpd_stats)
+title: Module Details: httpd_stats (v3)
 ---
 
 ## The "httpd_stats" Module

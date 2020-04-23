@@ -1,5 +1,5 @@
 ---
-title: Module Details (deaf)
+title: Module Details: deaf (v3)
 ---
 
 ## The "deaf" Module

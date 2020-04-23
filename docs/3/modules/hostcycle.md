@@ -1,5 +1,5 @@
 ---
-title: Module Details (hostcycle)
+title: Module Details: hostcycle (v3)
 ---
 
 ## The "hostcycle" Module

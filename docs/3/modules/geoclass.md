@@ -1,5 +1,5 @@
 ---
-title: Module Details (geoclass)
+title: Module Details: geoclass (v3)
 ---
 
 ## The "geoclass" Module

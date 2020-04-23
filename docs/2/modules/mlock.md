@@ -1,5 +1,5 @@
 ---
-title: Module Details (mlock)
+title: Module Details: mlock (v2)
 ---
 
 {! 2/_support.md !}

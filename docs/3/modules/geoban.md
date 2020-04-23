@@ -1,5 +1,5 @@
 ---
-title: Module Details (geoban)
+title: Module Details: geoban (v3)
 ---
 
 ## The "geoban" Module

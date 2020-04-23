@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_tre)
+title: Module Details: regex_tre (v2)
 ---
 
 {! 2/_support.md !}

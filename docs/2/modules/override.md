@@ -1,5 +1,5 @@
 ---
-title: Module Details (override)
+title: Module Details: override (v2)
 ---
 
 {! 2/_support.md !}

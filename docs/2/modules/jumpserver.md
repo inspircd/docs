@@ -1,5 +1,5 @@
 ---
-title: Module Details (jumpserver)
+title: Module Details: jumpserver (v2)
 ---
 
 {! 2/_support.md !}

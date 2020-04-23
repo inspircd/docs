@@ -1,5 +1,5 @@
 ---
-title: Module Details (denychans)
+title: Module Details: denychans (v2)
 ---
 
 {! 2/_support.md !}

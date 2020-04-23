@@ -1,5 +1,5 @@
 ---
-title: Module Details (botmode)
+title: Module Details: botmode (v2)
 ---
 
 {! 2/_support.md !}

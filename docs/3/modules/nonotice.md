@@ -1,5 +1,5 @@
 ---
-title: Module Details (nonotice)
+title: Module Details: nonotice (v3)
 ---
 
 ## The "nonotice" Module

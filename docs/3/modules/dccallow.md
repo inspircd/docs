@@ -1,5 +1,5 @@
 ---
-title: Module Details (dccallow)
+title: Module Details: dccallow (v3)
 ---
 
 ## The "dccallow" Module

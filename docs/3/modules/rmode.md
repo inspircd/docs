@@ -1,5 +1,5 @@
 ---
-title: Module Details (rmode)
+title: Module Details: rmode (v3)
 ---
 
 ## The "rmode" Module

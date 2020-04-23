@@ -1,5 +1,5 @@
 ---
-title: Module Details (setident)
+title: Module Details: setident (v3)
 ---
 
 ## The "setident" Module

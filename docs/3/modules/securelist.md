@@ -1,5 +1,5 @@
 ---
-title: Module Details (securelist)
+title: Module Details: securelist (v3)
 ---
 
 ## The "securelist" Module

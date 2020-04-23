@@ -1,5 +1,5 @@
 ---
-title: Module Details (ssl_mbedtls)
+title: Module Details: ssl_mbedtls (v3)
 ---
 
 ## The "ssl_mbedtls" Module

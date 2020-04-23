@@ -1,5 +1,5 @@
 ---
-title: Module Details (hideoper)
+title: Module Details: hideoper (v2)
 ---
 
 {! 2/_support.md !}

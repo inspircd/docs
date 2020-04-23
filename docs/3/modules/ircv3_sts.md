@@ -1,5 +1,5 @@
 ---
-title: Module Details (ircv3_sts)
+title: Module Details: ircv3_sts (v3)
 ---
 
 ## The "ircv3_sts" Module

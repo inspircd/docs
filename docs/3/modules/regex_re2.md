@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_re2)
+title: Module Details: regex_re2 (v3)
 ---
 
 ## The "regex_re2" Module

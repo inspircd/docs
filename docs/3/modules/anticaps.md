@@ -1,5 +1,5 @@
 ---
-title: Module Details (anticaps)
+title: Module Details: anticaps (v3)
 ---
 
 ## The "anticaps" Module

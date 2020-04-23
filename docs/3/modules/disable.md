@@ -1,5 +1,5 @@
 ---
-title: Module Details (disable)
+title: Module Details: disable (v3)
 ---
 
 ## The "disable" Module

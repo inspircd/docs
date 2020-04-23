@@ -1,5 +1,5 @@
 ---
-title: Module Details (connflood)
+title: Module Details: connflood (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (gecosban)
+title: Module Details: gecosban (v2)
 ---
 
 {! 2/_support.md !}

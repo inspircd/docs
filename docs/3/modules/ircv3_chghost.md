@@ -1,5 +1,5 @@
 ---
-title: Module Details (ircv3_chghost)
+title: Module Details: ircv3_chghost (v3)
 ---
 
 ## The "ircv3_chghost" Module

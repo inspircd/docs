@@ -1,5 +1,5 @@
 ---
-title: Module Details (operchans)
+title: Module Details: operchans (v3)
 ---
 
 ## The "operchans" Module

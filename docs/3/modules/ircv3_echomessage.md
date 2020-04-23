@@ -1,5 +1,5 @@
 ---
-title: Module Details (ircv3_echomessage)
+title: Module Details: ircv3_echomessage (v3)
 ---
 
 ## The "ircv3_echomessage" Module

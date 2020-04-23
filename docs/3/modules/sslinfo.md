@@ -1,5 +1,5 @@
 ---
-title: Module Details (sslinfo)
+title: Module Details: sslinfo (v3)
 ---
 
 ## The "sslinfo" Module

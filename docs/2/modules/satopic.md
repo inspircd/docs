@@ -1,5 +1,5 @@
 ---
-title: Module Details (satopic)
+title: Module Details: satopic (v2)
 ---
 
 {! 2/_support.md !}

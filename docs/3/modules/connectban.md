@@ -1,5 +1,5 @@
 ---
-title: Module Details (connectban)
+title: Module Details: connectban (v3)
 ---
 
 ## The "connectban" Module

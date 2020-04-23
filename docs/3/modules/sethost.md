@@ -1,5 +1,5 @@
 ---
-title: Module Details (sethost)
+title: Module Details: sethost (v3)
 ---
 
 ## The "sethost" Module

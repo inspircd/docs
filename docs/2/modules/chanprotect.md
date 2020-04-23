@@ -1,5 +1,5 @@
 ---
-title: Module Details (chanprotect)
+title: Module Details: chanprotect (v2)
 ---
 
 {! 2/_support.md !}

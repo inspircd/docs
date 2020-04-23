@@ -1,5 +1,5 @@
 ---
-title: Module Details (deaf)
+title: Module Details: deaf (v2)
 ---
 
 {! 2/_support.md !}

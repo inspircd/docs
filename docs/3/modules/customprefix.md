@@ -1,5 +1,5 @@
 ---
-title: Module Details (customprefix)
+title: Module Details: customprefix (v3)
 ---
 
 ## The "customprefix" Module

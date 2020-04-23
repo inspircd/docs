@@ -1,5 +1,5 @@
 ---
-title: Module Details (mysql)
+title: Module Details: mysql (v2)
 ---
 
 {! 2/_support.md !}

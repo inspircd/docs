@@ -1,5 +1,5 @@
 ---
-title: Module Details (sakick)
+title: Module Details: sakick (v3)
 ---
 
 ## The "sakick" Module

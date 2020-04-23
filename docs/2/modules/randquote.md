@@ -1,5 +1,5 @@
 ---
-title: Module Details (randquote)
+title: Module Details: randquote (v2)
 ---
 
 {! 2/_support.md !}

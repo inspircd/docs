@@ -1,5 +1,5 @@
 ---
-title: Module Details (opermotd)
+title: Module Details: opermotd (v3)
 ---
 
 ## The "opermotd" Module

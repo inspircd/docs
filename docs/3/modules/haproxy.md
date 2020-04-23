@@ -1,5 +1,5 @@
 ---
-title: Module Details (haproxy)
+title: Module Details: haproxy (v3)
 ---
 
 ## The "haproxy" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details (cban)
+title: Module Details: cban (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (cgiirc)
+title: Module Details: cgiirc (v3)
 ---
 
 ## The "cgiirc" Module

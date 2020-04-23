@@ -1,5 +1,5 @@
 ---
-title: Module Details (chanhistory)
+title: Module Details: chanhistory (v3)
 ---
 
 ## The "chanhistory" Module

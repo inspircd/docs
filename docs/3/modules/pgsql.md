@@ -1,5 +1,5 @@
 ---
-title: Module Details (pgsql)
+title: Module Details: pgsql (v3)
 ---
 
 ## The "pgsql" Module

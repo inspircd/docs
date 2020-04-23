@@ -1,5 +1,5 @@
 ---
-title: Module Details (abbreviation)
+title: Module Details: abbreviation (v3)
 ---
 
 ## The "abbreviation" Module

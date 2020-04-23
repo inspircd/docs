@@ -1,5 +1,5 @@
 ---
-title: Module Details (ldapauth)
+title: Module Details: ldapauth (v2)
 ---
 
 {! 2/_support.md !}

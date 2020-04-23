@@ -1,5 +1,5 @@
 ---
-title: Module Details (clones)
+title: Module Details: clones (v2)
 ---
 
 {! 2/_support.md !}

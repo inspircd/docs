@@ -1,5 +1,5 @@
 ---
-title: Module Details (operlog)
+title: Module Details: operlog (v2)
 ---
 
 {! 2/_support.md !}

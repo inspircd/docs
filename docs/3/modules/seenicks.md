@@ -1,5 +1,5 @@
 ---
-title: Module Details (seenicks)
+title: Module Details: seenicks (v3)
 ---
 
 ## The "seenicks" Module

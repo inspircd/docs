@@ -1,5 +1,5 @@
 ---
-title: Module Details (cban)
+title: Module Details: cban (v3)
 ---
 
 ## The "cban" Module

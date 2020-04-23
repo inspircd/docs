@@ -1,5 +1,5 @@
 ---
-title: Module Details (ircv3_ctctags)
+title: Module Details: ircv3_ctctags (v3)
 ---
 
 ## The "ircv3_ctctags" Module

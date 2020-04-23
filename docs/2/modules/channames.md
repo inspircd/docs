@@ -1,5 +1,5 @@
 ---
-title: Module Details (channames)
+title: Module Details: channames (v2)
 ---
 
 {! 2/_support.md !}

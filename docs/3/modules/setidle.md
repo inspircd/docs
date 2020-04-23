@@ -1,5 +1,5 @@
 ---
-title: Module Details (setidle)
+title: Module Details: setidle (v3)
 ---
 
 ## The "setidle" Module

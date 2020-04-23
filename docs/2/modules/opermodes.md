@@ -1,5 +1,5 @@
 ---
-title: Module Details (opermodes)
+title: Module Details: opermodes (v2)
 ---
 
 {! 2/_support.md !}

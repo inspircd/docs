@@ -1,5 +1,5 @@
 ---
-title: Module Details (serverban)
+title: Module Details: serverban (v3)
 ---
 
 ## The "serverban" Module

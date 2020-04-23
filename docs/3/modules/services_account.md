@@ -1,5 +1,5 @@
 ---
-title: Module Details (services_account)
+title: Module Details: services_account (v3)
 ---
 
 ## The "services_account" Module

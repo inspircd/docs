@@ -1,5 +1,5 @@
 ---
-title: Module Details (sakick)
+title: Module Details: sakick (v2)
 ---
 
 {! 2/_support.md !}

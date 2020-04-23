@@ -1,5 +1,5 @@
 ---
-title: Module Details (joinflood)
+title: Module Details: joinflood (v2)
 ---
 
 {! 2/_support.md !}

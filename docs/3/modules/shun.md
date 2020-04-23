@@ -1,5 +1,5 @@
 ---
-title: Module Details (shun)
+title: Module Details: shun (v3)
 ---
 
 ## The "shun" Module

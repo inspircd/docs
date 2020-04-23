@@ -1,5 +1,5 @@
 ---
-title: Module Details (ident)
+title: Module Details: ident (v2)
 ---
 
 {! 2/_support.md !}

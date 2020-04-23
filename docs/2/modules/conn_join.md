@@ -1,5 +1,5 @@
 ---
-title: Module Details (conn_join)
+title: Module Details: conn_join (v2)
 ---
 
 {! 2/_support.md !}

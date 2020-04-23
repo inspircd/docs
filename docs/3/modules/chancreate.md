@@ -1,5 +1,5 @@
 ---
-title: Module Details (chancreate)
+title: Module Details: chancreate (v3)
 ---
 
 ## The "chancreate" Module

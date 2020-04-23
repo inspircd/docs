@@ -1,5 +1,5 @@
 ---
-title: Module Details (namedmodes)
+title: Module Details: namedmodes (v3)
 ---
 
 ## The "namedmodes" Module

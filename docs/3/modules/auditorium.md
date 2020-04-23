@@ -1,5 +1,5 @@
 ---
-title: Module Details (auditorium)
+title: Module Details: auditorium (v3)
 ---
 
 ## The "auditorium" Module

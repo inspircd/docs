@@ -1,5 +1,5 @@
 ---
-title: Module Details (alias)
+title: Module Details: alias (v3)
 ---
 
 ## The "alias" Module

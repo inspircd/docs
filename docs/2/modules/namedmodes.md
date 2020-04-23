@@ -1,5 +1,5 @@
 ---
-title: Module Details (namedmodes)
+title: Module Details: namedmodes (v2)
 ---
 
 {! 2/_support.md !}

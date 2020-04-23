@@ -1,5 +1,5 @@
 ---
-title: Module Details (hidelist)
+title: Module Details: hidelist (v3)
 ---
 
 ## The "hidelist" Module

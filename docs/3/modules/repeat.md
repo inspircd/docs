@@ -1,5 +1,5 @@
 ---
-title: Module Details (repeat)
+title: Module Details: repeat (v3)
 ---
 
 ## The "repeat" Module

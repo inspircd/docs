@@ -1,5 +1,5 @@
 ---
-title: Module Details (sanick)
+title: Module Details: sanick (v3)
 ---
 
 ## The "sanick" Module

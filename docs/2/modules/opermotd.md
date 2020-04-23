@@ -1,5 +1,5 @@
 ---
-title: Module Details (opermotd)
+title: Module Details: opermotd (v2)
 ---
 
 {! 2/_support.md !}

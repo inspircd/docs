@@ -1,5 +1,5 @@
 ---
-title: Module Details (nickflood)
+title: Module Details: nickflood (v2)
 ---
 
 {! 2/_support.md !}

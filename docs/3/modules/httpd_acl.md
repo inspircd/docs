@@ -1,5 +1,5 @@
 ---
-title: Module Details (httpd_acl)
+title: Module Details: httpd_acl (v3)
 ---
 
 ## The "httpd_acl" Module

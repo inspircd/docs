@@ -1,5 +1,5 @@
 ---
-title: Module Details (delaymsg)
+title: Module Details: delaymsg (v2)
 ---
 
 {! 2/_support.md !}

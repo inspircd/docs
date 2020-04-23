@@ -1,5 +1,5 @@
 ---
-title: Module Details (regonlycreate)
+title: Module Details: regonlycreate (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (topiclock)
+title: Module Details: topiclock (v3)
 ---
 
 ## The "topiclock" Module

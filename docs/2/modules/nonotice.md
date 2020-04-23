@@ -1,5 +1,5 @@
 ---
-title: Module Details (nonotice)
+title: Module Details: nonotice (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (operprefix)
+title: Module Details: operprefix (v3)
 ---
 
 ## The "operprefix" Module

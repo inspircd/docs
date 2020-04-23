@@ -1,5 +1,5 @@
 ---
-title: Module Details (samode)
+title: Module Details: samode (v3)
 ---
 
 ## The "samode" Module

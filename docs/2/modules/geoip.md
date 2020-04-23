@@ -1,5 +1,5 @@
 ---
-title: Module Details (geoip)
+title: Module Details: geoip (v2)
 ---
 
 {! 2/_support.md !}

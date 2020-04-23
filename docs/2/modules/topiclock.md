@@ -1,5 +1,5 @@
 ---
-title: Module Details (topiclock)
+title: Module Details: topiclock (v2)
 ---
 
 {! 2/_support.md !}

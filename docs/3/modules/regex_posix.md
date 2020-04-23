@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_posix)
+title: Module Details: regex_posix (v3)
 ---
 
 ## The "regex_posix" Module

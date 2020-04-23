@@ -1,5 +1,5 @@
 ---
-title: Module Details (httpd_config)
+title: Module Details: httpd_config (v2)
 ---
 
 {! 2/_support.md !}

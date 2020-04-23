@@ -1,5 +1,5 @@
 ---
-title: Module Details (nationalchars)
+title: Module Details: nationalchars (v3)
 ---
 
 ## The "nationalchars" Module

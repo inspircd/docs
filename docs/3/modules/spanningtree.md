@@ -1,5 +1,5 @@
 ---
-title: Module Details (spanningtree)
+title: Module Details: spanningtree (v3)
 ---
 
 ## The "spanningtree" Module

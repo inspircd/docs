@@ -1,5 +1,5 @@
 ---
-title: Module Details (svshold)
+title: Module Details: svshold (v2)
 ---
 
 {! 2/_support.md !}

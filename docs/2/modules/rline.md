@@ -1,5 +1,5 @@
 ---
-title: Module Details (rline)
+title: Module Details: rline (v2)
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_pcre)
+title: Module Details: regex_pcre (v3)
 ---
 
 ## The "regex_pcre" Module

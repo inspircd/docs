@@ -1,5 +1,5 @@
 ---
-title: Module Details (lockserv)
+title: Module Details: lockserv (v3)
 ---
 
 ## The "lockserv" Module

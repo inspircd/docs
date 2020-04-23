@@ -1,5 +1,5 @@
 ---
-title: Module Details (watch)
+title: Module Details: watch (v2)
 ---
 
 {! 2/_support.md !}

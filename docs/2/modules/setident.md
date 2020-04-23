@@ -1,5 +1,5 @@
 ---
-title: Module Details (setident)
+title: Module Details: setident (v2)
 ---
 
 {! 2/_support.md !}

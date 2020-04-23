@@ -1,5 +1,5 @@
 ---
-title: Module Details (check)
+title: Module Details: check (v2)
 ---
 
 {! 2/_support.md !}

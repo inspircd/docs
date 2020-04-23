@@ -1,5 +1,5 @@
 ---
-title: Module Details (knock)
+title: Module Details: knock (v3)
 ---
 
 ## The "knock" Module

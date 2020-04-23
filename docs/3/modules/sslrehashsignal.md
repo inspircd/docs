@@ -1,5 +1,5 @@
 ---
-title: Module Details (sslrehashsignal)
+title: Module Details: sslrehashsignal (v3)
 ---
 
 ## The "sslrehashsignal" Module

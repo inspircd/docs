@@ -1,5 +1,5 @@
 ---
-title: Module Details (hidechans)
+title: Module Details: hidechans (v2)
 ---
 
 {! 2/_support.md !}

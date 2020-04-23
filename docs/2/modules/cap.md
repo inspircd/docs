@@ -1,5 +1,5 @@
 ---
-title: Module Details (cap)
+title: Module Details: cap (v2)
 ---
 
 {! 2/_support.md !}

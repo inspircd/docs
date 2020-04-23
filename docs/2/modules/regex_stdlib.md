@@ -1,5 +1,5 @@
 ---
-title: Module Details (regex_stdlib)
+title: Module Details: regex_stdlib (v2)
 ---
 
 {! 2/_support.md !}

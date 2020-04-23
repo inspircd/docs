@@ -1,5 +1,5 @@
 ---
-title: Module Details (nonicks)
+title: Module Details: nonicks (v3)
 ---
 
 ## The "nonicks" Module

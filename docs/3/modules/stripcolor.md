@@ -1,5 +1,5 @@
 ---
-title: Module Details (stripcolor)
+title: Module Details: stripcolor (v3)
 ---
 
 ## The "stripcolor" Module
