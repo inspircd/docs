@@ -1,5 +1,5 @@
 ---
-title: Module Details: allowinvite (v3)
+title: "Module Details: allowinvite (v3)"
 ---
 
 ## The "allowinvite" Module

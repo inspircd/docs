@@ -1,5 +1,5 @@
 ---
-title: Module Details: banredirect (v3)
+title: "Module Details: banredirect (v3)"
 ---
 
 ## The "banredirect" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: nopartmsg (v3)
+title: "Module Details: nopartmsg (v3)"
 ---
 
 ## The "nopartmsg" Module

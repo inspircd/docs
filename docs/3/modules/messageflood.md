@@ -1,5 +1,5 @@
 ---
-title: Module Details: messageflood (v3)
+title: "Module Details: messageflood (v3)"
 ---
 
 ## The "messageflood" Module

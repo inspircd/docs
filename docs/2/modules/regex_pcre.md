@@ -1,5 +1,5 @@
 ---
-title: Module Details: regex_pcre (v2)
+title: "Module Details: regex_pcre (v2)"
 ---
 
 {! 2/_support.md !}

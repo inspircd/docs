@@ -1,5 +1,5 @@
 ---
-title: Module Details: httpd_acl (v2)
+title: "Module Details: httpd_acl (v2)"
 ---
 
 {! 2/_support.md !}

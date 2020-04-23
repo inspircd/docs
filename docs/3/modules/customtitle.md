@@ -1,5 +1,5 @@
 ---
-title: Module Details: customtitle (v3)
+title: "Module Details: customtitle (v3)"
 ---
 
 ## The "customtitle" Module

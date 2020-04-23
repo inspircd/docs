@@ -1,5 +1,5 @@
 ---
-title: Module Details: chanfilter (v3)
+title: "Module Details: chanfilter (v3)"
 ---
 
 ## The "chanfilter" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: inviteexception (v3)
+title: "Module Details: inviteexception (v3)"
 ---
 
 ## The "inviteexception" Module

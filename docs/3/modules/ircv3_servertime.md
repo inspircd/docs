@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3_servertime (v3)
+title: "Module Details: ircv3_servertime (v3)"
 ---
 
 ## The "ircv3_servertime" Module

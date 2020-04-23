@@ -1,5 +1,5 @@
 ---
-title: Module Details: httpd (v3)
+title: "Module Details: httpd (v3)"
 ---
 
 ## The "httpd" Module

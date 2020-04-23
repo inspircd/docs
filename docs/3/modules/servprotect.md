@@ -1,5 +1,5 @@
 ---
-title: Module Details: servprotect (v3)
+title: "Module Details: servprotect (v3)"
 ---
 
 ## The "servprotect" Module

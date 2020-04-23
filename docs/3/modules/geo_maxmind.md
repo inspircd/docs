@@ -1,5 +1,5 @@
 ---
-title: Module Details: geo_maxmind (v3)
+title: "Module Details: geo_maxmind (v3)"
 ---
 
 ## The "geo_maxmind" Module

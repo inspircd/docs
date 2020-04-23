@@ -1,5 +1,5 @@
 ---
-title: Module Details: svshold (v3)
+title: "Module Details: svshold (v3)"
 ---
 
 ## The "svshold" Module

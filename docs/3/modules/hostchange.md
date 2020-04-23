@@ -1,5 +1,5 @@
 ---
-title: Module Details: hostchange (v3)
+title: "Module Details: hostchange (v3)"
 ---
 
 ## The "hostchange" Module

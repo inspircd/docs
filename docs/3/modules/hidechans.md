@@ -1,5 +1,5 @@
 ---
-title: Module Details: hidechans (v3)
+title: "Module Details: hidechans (v3)"
 ---
 
 ## The "hidechans" Module

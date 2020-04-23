@@ -1,5 +1,5 @@
 ---
-title: Module Details: chgname (v3)
+title: "Module Details: chgname (v3)"
 ---
 
 ## The "chgname" Module

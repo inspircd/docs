@@ -1,5 +1,5 @@
 ---
-title: Module Details: gecosban (v3)
+title: "Module Details: gecosban (v3)"
 ---
 
 ## The "gecosban" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: regex_glob (v3)
+title: "Module Details: regex_glob (v3)"
 ---
 
 ## The "regex_glob" Module

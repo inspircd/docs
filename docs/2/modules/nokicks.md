@@ -1,5 +1,5 @@
 ---
-title: Module Details: nokicks (v2)
+title: "Module Details: nokicks (v2)"
 ---
 
 {! 2/_support.md !}

@@ -1,5 +1,5 @@
 ---
-title: Module Details: conn_join (v3)
+title: "Module Details: conn_join (v3)"
 ---
 
 ## The "conn_join" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: botmode (v3)
+title: "Module Details: botmode (v3)"
 ---
 
 ## The "botmode" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: regex_posix (v2)
+title: "Module Details: regex_posix (v2)"
 ---
 
 {! 2/_support.md !}

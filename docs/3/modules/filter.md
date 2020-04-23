@@ -1,5 +1,5 @@
 ---
-title: Module Details: filter (v3)
+title: "Module Details: filter (v3)"
 ---
 
 ## The "filter" Module

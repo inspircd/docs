@@ -1,5 +1,5 @@
 ---
-title: Module Details: modenotice (v3)
+title: "Module Details: modenotice (v3)"
 ---
 
 ## The "modenotice" Module

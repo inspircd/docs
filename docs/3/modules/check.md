@@ -1,5 +1,5 @@
 ---
-title: Module Details: check (v3)
+title: "Module Details: check (v3)"
 ---
 
 ## The "check" Module

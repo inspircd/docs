@@ -1,5 +1,5 @@
 ---
-title: Module Details: seenicks (v2)
+title: "Module Details: seenicks (v2)"
 ---
 
 {! 2/_support.md !}

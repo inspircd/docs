@@ -1,5 +1,5 @@
 ---
-title: Module Details: restrictmsg (v3)
+title: "Module Details: restrictmsg (v3)"
 ---
 
 ## The "restrictmsg" Module

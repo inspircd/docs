@@ -1,5 +1,5 @@
 ---
-title: Module Details: md5 (v2)
+title: "Module Details: md5 (v2)"
 ---
 
 {! 2/_support.md !}

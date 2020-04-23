@@ -1,5 +1,5 @@
 ---
-title: Module Details: redirect (v3)
+title: "Module Details: redirect (v3)"
 ---
 
 ## The "redirect" Module

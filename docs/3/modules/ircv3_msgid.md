@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3_msgid (v3)
+title: "Module Details: ircv3_msgid (v3)"
 ---
 
 ## The "ircv3_msgid" Module

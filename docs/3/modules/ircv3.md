@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3 (v3)
+title: "Module Details: ircv3 (v3)"
 ---
 
 ## The "ircv3" Module

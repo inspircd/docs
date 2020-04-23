@@ -1,5 +1,5 @@
 ---
-title: Module Details: sha1 (v3)
+title: "Module Details: sha1 (v3)"
 ---
 
 ## The "sha1" Module

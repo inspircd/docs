@@ -1,5 +1,5 @@
 ---
-title: Module Details: watch (v3)
+title: "Module Details: watch (v3)"
 ---
 
 ## The "watch" Module

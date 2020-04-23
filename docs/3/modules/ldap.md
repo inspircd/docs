@@ -1,5 +1,5 @@
 ---
-title: Module Details: ldap (v3)
+title: "Module Details: ldap (v3)"
 ---
 
 ## The "ldap" Module

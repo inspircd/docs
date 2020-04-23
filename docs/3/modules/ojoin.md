@@ -1,5 +1,5 @@
 ---
-title: Module Details: ojoin (v3)
+title: "Module Details: ojoin (v3)"
 ---
 
 ## The "ojoin" Module

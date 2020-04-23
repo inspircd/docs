@@ -1,5 +1,5 @@
 ---
-title: Module Details: alltime (v3)
+title: "Module Details: alltime (v3)"
 ---
 
 ## The "alltime" Module

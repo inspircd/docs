@@ -1,5 +1,5 @@
 ---
-title: Module Details: conn_umodes (v3)
+title: "Module Details: conn_umodes (v3)"
 ---
 
 ## The "conn_umodes" Module

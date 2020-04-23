@@ -1,5 +1,5 @@
 ---
-title: Module Details: nicklock (v2)
+title: "Module Details: nicklock (v2)"
 ---
 
 {! 2/_support.md !}

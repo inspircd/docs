@@ -1,5 +1,5 @@
 ---
-title: Module Details: ssl_gnutls (v2)
+title: "Module Details: ssl_gnutls (v2)"
 ---
 
 {! 2/_support.md !}

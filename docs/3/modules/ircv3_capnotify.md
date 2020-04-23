@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3_capnotify (v3)
+title: "Module Details: ircv3_capnotify (v3)"
 ---
 
 ## The "ircv3_capnotify" Module

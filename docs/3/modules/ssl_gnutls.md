@@ -1,5 +1,5 @@
 ---
-title: Module Details: ssl_gnutls (v3)
+title: "Module Details: ssl_gnutls (v3)"
 ---
 
 ## The "ssl_gnutls" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: randquote (v3)
+title: "Module Details: randquote (v3)"
 ---
 
 ## The "randquote" Module

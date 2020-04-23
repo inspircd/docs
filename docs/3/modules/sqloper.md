@@ -1,5 +1,5 @@
 ---
-title: Module Details: sqloper (v3)
+title: "Module Details: sqloper (v3)"
 ---
 
 ## The "sqloper" Module

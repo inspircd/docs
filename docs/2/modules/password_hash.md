@@ -1,5 +1,5 @@
 ---
-title: Module Details: password_hash (v2)
+title: "Module Details: password_hash (v2)"
 ---
 
 {! 2/_support.md !}

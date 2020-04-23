@@ -1,5 +1,5 @@
 ---
-title: Module Details: services_account (v2)
+title: "Module Details: services_account (v2)"
 ---
 
 {! 2/_support.md !}

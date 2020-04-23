@@ -1,5 +1,5 @@
 ---
-title: Module Details: blockamsg (v3)
+title: "Module Details: blockamsg (v3)"
 ---
 
 ## The "blockamsg" Module

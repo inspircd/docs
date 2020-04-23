@@ -1,5 +1,5 @@
 ---
-title: Module Details: websocket (v3)
+title: "Module Details: websocket (v3)"
 ---
 
 ## The "websocket" Module

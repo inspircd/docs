@@ -1,5 +1,5 @@
 ---
-title: Module Details: ssl_openssl (v2)
+title: "Module Details: ssl_openssl (v2)"
 ---
 
 {! 2/_support.md !}

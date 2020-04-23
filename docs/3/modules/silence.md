@@ -1,5 +1,5 @@
 ---
-title: Module Details: silence (v3)
+title: "Module Details: silence (v3)"
 ---
 
 ## The "silence" Module

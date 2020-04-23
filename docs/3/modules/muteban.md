@@ -1,5 +1,5 @@
 ---
-title: Module Details: muteban (v3)
+title: "Module Details: muteban (v3)"
 ---
 
 ## The "muteban" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: tline (v3)
+title: "Module Details: tline (v3)"
 ---
 
 ## The "tline" Module

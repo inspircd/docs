@@ -1,5 +1,5 @@
 ---
-title: Module Details: showwhois (v3)
+title: "Module Details: showwhois (v3)"
 ---
 
 ## The "showwhois" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: clearchan (v3)
+title: "Module Details: clearchan (v3)"
 ---
 
 ## The "clearchan" Module

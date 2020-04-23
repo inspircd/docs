@@ -1,5 +1,5 @@
 ---
-title: Module Details: banexception (v3)
+title: "Module Details: banexception (v3)"
 ---
 
 ## The "banexception" Module

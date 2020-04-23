@@ -1,5 +1,5 @@
 ---
-title: Module Details: mysql (v3)
+title: "Module Details: mysql (v3)"
 ---
 
 ## The "mysql" Module

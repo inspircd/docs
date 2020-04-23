@@ -1,5 +1,5 @@
 ---
-title: Module Details: opermodes (v3)
+title: "Module Details: opermodes (v3)"
 ---
 
 ## The "opermodes" Module

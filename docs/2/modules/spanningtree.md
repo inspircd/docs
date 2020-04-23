@@ -1,5 +1,5 @@
 ---
-title: Module Details: spanningtree (v2)
+title: "Module Details: spanningtree (v2)"
 ---
 
 {! 2/_support.md !}

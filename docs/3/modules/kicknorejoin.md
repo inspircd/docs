@@ -1,5 +1,5 @@
 ---
-title: Module Details: kicknorejoin (v3)
+title: "Module Details: kicknorejoin (v3)"
 ---
 
 ## The "kicknorejoin" Module

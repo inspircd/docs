@@ -1,5 +1,5 @@
 ---
-title: Module Details: nickflood (v3)
+title: "Module Details: nickflood (v3)"
 ---
 
 ## The "nickflood" Module

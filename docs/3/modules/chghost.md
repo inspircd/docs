@@ -1,5 +1,5 @@
 ---
-title: Module Details: chghost (v3)
+title: "Module Details: chghost (v3)"
 ---
 
 ## The "chghost" Module

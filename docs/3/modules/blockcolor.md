@@ -1,5 +1,5 @@
 ---
-title: Module Details: blockcolor (v3)
+title: "Module Details: blockcolor (v3)"
 ---
 
 ## The "blockcolor" Module

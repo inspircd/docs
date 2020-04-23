@@ -1,5 +1,5 @@
 ---
-title: Module Details: password_hash (v3)
+title: "Module Details: password_hash (v3)"
 ---
 
 ## The "password_hash" Module

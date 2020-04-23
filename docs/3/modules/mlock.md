@@ -1,5 +1,5 @@
 ---
-title: Module Details: mlock (v3)
+title: "Module Details: mlock (v3)"
 ---
 
 ## The "mlock" Module

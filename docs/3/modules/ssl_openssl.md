@@ -1,5 +1,5 @@
 ---
-title: Module Details: ssl_openssl (v3)
+title: "Module Details: ssl_openssl (v3)"
 ---
 
 ## The "ssl_openssl" Module

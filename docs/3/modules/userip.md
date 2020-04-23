@@ -1,5 +1,5 @@
 ---
-title: Module Details: userip (v3)
+title: "Module Details: userip (v3)"
 ---
 
 ## The "userip" Module

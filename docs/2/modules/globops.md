@@ -1,5 +1,5 @@
 ---
-title: Module Details: globops (v2)
+title: "Module Details: globops (v2)"
 ---
 
 {! 2/_support.md !}

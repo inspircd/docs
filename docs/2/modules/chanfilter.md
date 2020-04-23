@@ -1,5 +1,5 @@
 ---
-title: Module Details: chanfilter (v2)
+title: "Module Details: chanfilter (v2)"
 ---
 
 {! 2/_support.md !}

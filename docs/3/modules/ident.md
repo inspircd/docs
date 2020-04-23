@@ -1,5 +1,5 @@
 ---
-title: Module Details: ident (v3)
+title: "Module Details: ident (v3)"
 ---
 
 ## The "ident" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: nicklock (v3)
+title: "Module Details: nicklock (v3)"
 ---
 
 ## The "nicklock" Module

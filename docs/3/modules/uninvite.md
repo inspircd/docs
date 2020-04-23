@@ -1,5 +1,5 @@
 ---
-title: Module Details: uninvite (v3)
+title: "Module Details: uninvite (v3)"
 ---
 
 ## The "uninvite" Module

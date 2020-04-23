@@ -1,5 +1,5 @@
 ---
-title: Module Details: codepage (v3)
+title: "Module Details: codepage (v3)"
 ---
 
 ## The "codepage" Module

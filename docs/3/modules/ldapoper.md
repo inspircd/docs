@@ -1,5 +1,5 @@
 ---
-title: Module Details: ldapoper (v3)
+title: "Module Details: ldapoper (v3)"
 ---
 
 ## The "ldapoper" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: httpd_stats (v2)
+title: "Module Details: httpd_stats (v2)"
 ---
 
 {! 2/_support.md !}

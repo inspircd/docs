@@ -1,5 +1,5 @@
 ---
-title: Module Details: dccallow (v2)
+title: "Module Details: dccallow (v2)"
 ---
 
 {! 2/_support.md !}

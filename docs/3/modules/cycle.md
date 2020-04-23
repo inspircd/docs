@@ -1,5 +1,5 @@
 ---
-title: Module Details: cycle (v3)
+title: "Module Details: cycle (v3)"
 ---
 
 ## The "cycle" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: sqlite3 (v2)
+title: "Module Details: sqlite3 (v2)"
 ---
 
 {! 2/_support.md !}

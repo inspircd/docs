@@ -1,5 +1,5 @@
 ---
-title: Module Details: swhois (v3)
+title: "Module Details: swhois (v3)"
 ---
 
 ## The "swhois" Module

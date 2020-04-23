@@ -1,5 +1,5 @@
 ---
-title: Module Details: regex_stdlib (v3)
+title: "Module Details: regex_stdlib (v3)"
 ---
 
 ## The "regex_stdlib" Module

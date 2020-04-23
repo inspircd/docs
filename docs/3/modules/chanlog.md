@@ -1,5 +1,5 @@
 ---
-title: Module Details: chanlog (v3)
+title: "Module Details: chanlog (v3)"
 ---
 
 ## The "chanlog" Module

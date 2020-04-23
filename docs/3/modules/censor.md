@@ -1,5 +1,5 @@
 ---
-title: Module Details: censor (v3)
+title: "Module Details: censor (v3)"
 ---
 
 ## The "censor" Module

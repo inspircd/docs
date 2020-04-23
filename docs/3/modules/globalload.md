@@ -1,5 +1,5 @@
 ---
-title: Module Details: globalload (v3)
+title: "Module Details: globalload (v3)"
 ---
 
 ## The "globalload" Module

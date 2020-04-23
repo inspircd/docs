@@ -1,5 +1,5 @@
 ---
-title: Module Details: ldapauth (v3)
+title: "Module Details: ldapauth (v3)"
 ---
 
 ## The "ldapauth" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: pbkdf2 (v3)
+title: "Module Details: pbkdf2 (v3)"
 ---
 
 ## The "pbkdf2" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: serverban (v2)
+title: "Module Details: serverban (v2)"
 ---
 
 {! 2/_support.md !}

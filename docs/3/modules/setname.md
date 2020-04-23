@@ -1,5 +1,5 @@
 ---
-title: Module Details: setname (v3)
+title: "Module Details: setname (v3)"
 ---
 
 ## The "setname" Module

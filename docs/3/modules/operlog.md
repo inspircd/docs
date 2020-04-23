@@ -1,5 +1,5 @@
 ---
-title: Module Details: operlog (v3)
+title: "Module Details: operlog (v3)"
 ---
 
 ## The "operlog" Module

@@ -1,5 +1,5 @@
 ---
-title: Module Details: cloaking (v3)
+title: "Module Details: cloaking (v3)"
 ---
 
 ## The "cloaking" Module

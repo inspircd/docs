@@ -1,5 +1,5 @@
 ---
-title: Module Details: remove (v3)
+title: "Module Details: remove (v3)"
 ---
 
 ## The "remove" Module

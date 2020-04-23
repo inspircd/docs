@@ -1,5 +1,5 @@
 ---
-title: Module Details: classban (v3)
+title: "Module Details: classban (v3)"
 ---
 
 ## The "classban" Module

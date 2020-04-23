@@ -1,5 +1,5 @@
 ---
-title: Module Details: rline (v3)
+title: "Module Details: rline (v3)"
 ---
 
 ## The "rline" Module

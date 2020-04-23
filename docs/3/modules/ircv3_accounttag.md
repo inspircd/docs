@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3_accounttag (v3)
+title: "Module Details: ircv3_accounttag (v3)"
 ---
 
 ## The "ircv3_accounttag" Module

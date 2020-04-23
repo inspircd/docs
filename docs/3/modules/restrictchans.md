@@ -1,5 +1,5 @@
 ---
-title: Module Details: restrictchans (v3)
+title: "Module Details: restrictchans (v3)"
 ---
 
 ## The "restrictchans" Module

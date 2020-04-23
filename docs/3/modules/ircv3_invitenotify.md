@@ -1,5 +1,5 @@
 ---
-title: Module Details: ircv3_invitenotify (v3)
+title: "Module Details: ircv3_invitenotify (v3)"
 ---
 
 ## The "ircv3_invitenotify" Module

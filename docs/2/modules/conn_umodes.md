@@ -1,5 +1,5 @@
 ---
-title: Module Details: conn_umodes (v2)
+title: "Module Details: conn_umodes (v2)"
 ---
 
 {! 2/_support.md !}

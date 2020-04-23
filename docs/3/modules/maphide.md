@@ -1,5 +1,5 @@
 ---
-title: Module Details: maphide (v3)
+title: "Module Details: maphide (v3)"
 ---
 
 ## The "maphide" Module

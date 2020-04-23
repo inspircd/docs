@@ -1,5 +1,5 @@
 ---
-title: Module Details: hideoper (v3)
+title: "Module Details: hideoper (v3)"
 ---
 
 ## The "hideoper" Module

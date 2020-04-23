@@ -1,5 +1,5 @@
 ---
-title: Module Details: sslmodes (v3)
+title: "Module Details: sslmodes (v3)"
 ---
 
 ## The "sslmodes" Module

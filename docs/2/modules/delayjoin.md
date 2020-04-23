@@ -1,5 +1,5 @@
 ---
-title: Module Details: delayjoin (v2)
+title: "Module Details: delayjoin (v2)"
 ---
 
 {! 2/_support.md !}

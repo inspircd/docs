@@ -1,5 +1,5 @@
 ---
-title: Module Details: override (v3)
+title: "Module Details: override (v3)"
 ---
 
 ## The "override" Module

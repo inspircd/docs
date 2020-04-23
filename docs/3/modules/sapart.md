@@ -1,5 +1,5 @@
 ---
-title: Module Details: sapart (v3)
+title: "Module Details: sapart (v3)"
 ---
 
 ## The "sapart" Module
