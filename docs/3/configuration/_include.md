@@ -20,8 +20,8 @@ Includes links.conf into the config:
 
 ```xml
 <include file="links.conf"
-         noexec="no"
          noenv="no"
+         noexec="no"
          noinclude="no"
          mandatorytag="link">
 ```
@@ -30,8 +30,8 @@ Includes all of the config files in 'modules' into the config:
 
 ```xml
 <include directory="modules"
-         noexec="no"
          noenv="no"
+         noexec="no"
          noinclude="no"
          mandatorytag="link">
 ```
@@ -40,8 +40,8 @@ Executes curl to download https://example.com/links.conf and include it into the
 
 ```xml
 <include executable="curl --silent https://example.com/links.conf"
-         noexec="yes"
          noenv="yes"
+         noexec="yes"
          noinclude="no"
          mandatorytag="link">
 ```
