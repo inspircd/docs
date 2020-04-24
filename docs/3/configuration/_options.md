@@ -16,6 +16,7 @@ fixedpart          | Text    | *None*         | If defined then a static value t
 fixedquit          | Text    | *None*         | If defined then a static value to replace users' quit messages with.
 hostintopic        | Boolean | No             | Whether to show the full user mask of a topic setter rather than just their nickname.
 invitebypassmodes  | Boolean | Yes            | Whether being invited to a channel allows the invitee to bypass channel modes which would otherwise prevent them from joining.
+modesinlist        | Boolean | Yes            | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to include the current channel modes in the `/LIST` output.
 nosnoticestack     | Boolean | No             | Whether to stop identical server notices from being stacked with "last message repeated X times".
 prefixpart         | Text    | *None*         | If defined then the value to prefix users' part messages with.
 prefixquit         | Text    | *None*         | If defined then the value to prefix users' quit messages with.
@@ -62,6 +63,7 @@ splitmsg | Split private/secret channels from normal channels in WHOIS responses
          hostintopic="yes"
          invitebypassmodes="yes"
          nosnoticestack="no"
+         modesinlist="no"
          prefixpart="&quot;"
          prefixquit="Quit: "
          splitwhois="no"

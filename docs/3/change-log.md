@@ -8,17 +8,21 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.6.0
 
-<!-- TODO: ensure changes after commit 256be7a are added to this list before release. -->
+**This version of InspIRCd was released on 2020-04-24.**
 
-**This version of InspIRCd has not yet been released.**
+- Added `<class:snomasks>` to allow configuring the snomasks that a server operator can use.
 
 - Added `<include:noenv>` to disable using environment variables in an included config file.
-
-- Added `<oper:snomasks>`  and `<type:snomasks>` to allow configuring the snomasks that a server operator can use.
 
 - Added `<options:modesinlist>` to allow customising whether channel modes are included with the `/LIST` response.
 
 - Added `<sasl:requiressl>` to require users to be connected via TLS (SSL) in order to be able to use SASL authentication.
+
+- Added `<securelist:showmsg>` to configure whether the user should be told that they need to wait to run `/LIST`.
+
+- Added support for [the IRCv3 SETNAME specification](https://ircv3.net/specs/extensions/setname.html).
+
+- Added support for multi-line CAP responses.
 
 - Added support for the [RFC 2812](https://tools.ietf.org/html/rfc2812) `/SERVLIST` command.
 
@@ -46,17 +50,29 @@ This page lists changes which have happened between releases.
 
 - Developer: added the `UserManager::all_ulines` list which contains all services on U-lined servers.
 
+- Developer: added the `inspircd.org/standard-replies` capability for opting-in to recieving IRCv3 Standard Replies instead of notices.
+
 - Developer: deprecated the `XLineManager::InvokeStats` methods in favour of a new overload which uses a generic numeric.
 
 - Developer: stabilised support for the [IRCv3 Standard Replies](https://ircv3.net/specs/extensions/standard-replies) specification.
 
+- [Fixed a **crash** in the pgsql module when connecting to a server fails](/security/2020-01).
+
 - Fixed a bug where previously changed display hostnames would be reset when a hostname lookup finishes.
+
+- Fixed a bunch of typos with mispell-fixer.
 
 - Fixed a memory leak in the dccallow module.
 
+- Fixed a memory leak in the pgsql module.
+
 - Fixed being able to use the `MODE` command to look up the modes of a private or secret channel.
 
+- Fixed being unable to log in to server operator accounts using the ldapauth module.
+
 - Fixed leaking HTTPd sockets if they were closed with data left in their outgoing buffer.
+
+- Fixed leaking the value of some server operator config options when a user tries to log into an account which requires TLS (SSL) or a client certificate fingerprint.
 
 - Fixed reloading core modules by their short name.
 
@@ -82,15 +98,15 @@ This page lists changes which have happened between releases.
 
 - Fixed warning snotices not being sent when a user fails to login to a server operator account which requires TLS (SSL) and/or a matching client certificate fingerprint.
 
-- Implemented support for [the IRCv3 SETNAME specification](https://ircv3.net/specs/extensions/setname.html).
-
-- Implemented support for multi-line CAP responses.
-
 - Improved the descriptions of all of the modules.
 
 - Improved the error message shown when trying to load a module which is too old or too new for the current version.
 
 - Improved the error messages shown by the ldap module.
+
+- Improved the output of the `SSLINFO` command.
+
+- Updated messages to refer to TLS as "TLS (SSL)" instead of SSL.
 
 ### InspIRCd 3.5.0
 

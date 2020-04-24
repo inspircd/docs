@@ -20,14 +20,16 @@ To load this module use the following `<module>` tag:
 
 The `<sasl>` tag defines settings about how the sasl module should behave. This tag can only be defined once.
 
-Name   | Type    | Default Value | Description
------- | ------- | ------------- | -----------
-target | Text    | *None*        | **Required!** A glob pattern for the server to route SASL requests to. This should usually be set to the name of your services server.
+Name       | Type    | Default Value | Description
+---------- | ------- | ------------- | -----------
+requiressl | Boolean | No            | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether TLS (SSL) is required to use SASL.
+target     | Text    | *None*        | **Required!** A glob pattern for the server to route SASL requests to. This should usually be set to the name of your services server.
 
 #### Example Usage
 
 ```xml
-<sasl target="services.example.com">
+<sasl requiressl="no"
+      target="services.example.com">
 ```
 
 ### Commands

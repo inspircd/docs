@@ -36,14 +36,16 @@ Adds an exception for the [irc.netsplit.de](http://irc.netsplit.de) crawler:
 
 The `<securelist>` tag defines settings about how the securelist module should behave. This tag can only be defined once.
 
-Name             | Type    | Default Value | Description
+Name             | Type     | Default Value | Description
 ---------------- | -------- | ------------- | -----------
 exemptregistered | Boolean  | No            | Whether registered users are exempt from waiting.
+showmsg          | Boolan   | No            | Whether to tell the user that they need to wait before using the `/LIST` comand.
 waittime         | Duration | 1m            | The time period that must pass before a user can use the `/LIST` command.
 
 #### Example Usage
 
 ```xml
 <securelist exemptregistered="yes"
+            showmsg="yes"
             waittime="60s">
 ```
