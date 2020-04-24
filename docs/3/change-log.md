@@ -50,7 +50,7 @@ This page lists changes which have happened between releases.
 
 - Developer: added the `UserManager::all_ulines` list which contains all services on U-lined servers.
 
-- Developer: added the `inspircd.org/standard-replies` capability for opting-in to recieving IRCv3 Standard Replies instead of notices.
+- Developer: added the `inspircd.org/standard-replies` capability for opting-in to receiving IRCv3 Standard Replies instead of notices.
 
 - Developer: deprecated the `XLineManager::InvokeStats` methods in favour of a new overload which uses a generic numeric.
 
@@ -60,7 +60,7 @@ This page lists changes which have happened between releases.
 
 - Fixed a bug where previously changed display hostnames would be reset when a hostname lookup finishes.
 
-- Fixed a bunch of typos with mispell-fixer.
+- Fixed a bunch of typos with misspell-fixer.
 
 - Fixed a memory leak in the dccallow module.
 
@@ -320,7 +320,7 @@ This page lists changes which have happened between releases.
 
 * Developer: added the `{EventHandler,StreamSocket,UserIOHandler}::SwapInternals` methods to swap the internals of two sockets.
 
-* Developer: deprecated the ServerEventListener clas and split the events contained within it into the `ServerProtocol::{BroadcastEventListener,LinkEventListener,SyncEventListener} classes.
+* Developer: deprecated the ServerEventListener class and split the events contained within it into the `ServerProtocol::{BroadcastEventListener,LinkEventListener,SyncEventListener} classes.
 
 * Developer: deprecated the `SerializeFormat` enum, and the `serialize`, `unserialize` methods of the `ExtensionItem` class, and the `LocalExtItem` class.
 

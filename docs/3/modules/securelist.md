@@ -39,7 +39,7 @@ The `<securelist>` tag defines settings about how the securelist module should b
 Name             | Type     | Default Value | Description
 ---------------- | -------- | ------------- | -----------
 exemptregistered | Boolean  | No            | Whether registered users are exempt from waiting.
-showmsg          | Boolan   | No            | Whether to tell the user that they need to wait before using the `/LIST` comand.
+showmsg          | Boolean  | No            | Whether to tell the user that they need to wait before using the `/LIST` command.
 waittime         | Duration | 1m            | The time period that must pass before a user can use the `/LIST` command.
 
 #### Example Usage

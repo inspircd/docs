@@ -10,7 +10,7 @@ directory    | Text    | *None*                                   | If defined t
 executable   | Text    | *None*                                   | If defined then the command to execute.
 file         | Text    | *None*                                   | If defined then the file to read.
 mandatorytag | Text    | *None*                                   | If defined then a tag that must exist in a config file for it to be valid.
-noenv        | boolean | Yes (executable)<br>No (directory, file) | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config
+noenv        | Boolean | Yes (executable)<br>No (directory, file) | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config.
 noexec       | Boolean | Yes (executable)<br>No (directory, file) | Whether to allow executable includes from within the included config.
 noinclude    | Boolean | No                                       | Whether to allow file includes from within the included config.
 
@@ -30,8 +30,8 @@ Includes all of the config files in 'modules' into the config:
 
 ```xml
 <include directory="modules"
-         noenv="no"
          noexec="no"
+         noenv="no"
          noinclude="no"
          mandatorytag="link">
 ```
@@ -40,8 +40,8 @@ Executes curl to download https://example.com/links.conf and include it into the
 
 ```xml
 <include executable="curl --silent https://example.com/links.conf"
-         noenv="yes"
          noexec="yes"
+         noenv="yes"
          noinclude="no"
          mandatorytag="link">
 ```
