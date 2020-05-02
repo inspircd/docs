@@ -80,4 +80,4 @@ This bug is known to be fixed in:
 - HexChat 2.14.3 (released December 2019).
 - Irssi 1.1.0 (released January 2018).
 - WeeChat v2.5 (released June 2019).
-- ZNC 1.7 (unreleased).
+- ZNC 1.8 (released May 2020).
