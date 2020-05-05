@@ -19,7 +19,7 @@ This page only lists core commands. For details on the commands of a specific mo
 {! 2/commands/_cmd_kick.md !}
 {! 2/commands/_cmd_kill.md !}
 {! 2/commands/_cmd_kline.md !}
-{! 2/commands/_cmd_list.md !}
+{! 3/commands/_cmd_list.md !}
 {! 3/commands/_cmd_loadmodule.md !}
 {! 2/commands/_cmd_lusers.md !}
 {! 3/commands/_cmd_mode.md !}
