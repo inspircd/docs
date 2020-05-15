@@ -109,7 +109,7 @@ The hash field should be set to one of the values shown in `openssl list --diges
             renegotiation="no"
             requestclientcert="yes"
             tlsv1="no"
-            tlsv11="yes"
+            tlsv11="no"
             tlsv12="yes">
 ```
 
