@@ -31,10 +31,16 @@ You can also combine this with other `<connect>` fields such as adding `port="66
 ```xml
 <connect allow="*"
          registered="no"
-         requireaccount="no">
+         name="before-reg">
+
+<connect allow="*"
+         requireaccount="yes"
+         registered="yes"
+         name="authed">
 
 <connect deny="*"
          registered="yes"
-         requireaccount="yes"
-         reason="You must authenticate using SASL to connect to this server.">
+         requireaccount="no"
+         reason="You must authenticate using SASL to connect to this server."
+         name="no-auth">
 ```
