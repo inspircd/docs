@@ -2,7 +2,7 @@
 
 ### `/LIST [(>|<)<count>|<pattern>]`
 
-Lists all channels visibile to the requesting user.
+Lists all channels visible to the requesting user which match the specified criteria. If no criteria is specified then all visible channels are listed.
 
 If `><count>` is specified then only lists channels which contain more than `<count>` users.
 
