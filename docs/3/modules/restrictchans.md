@@ -67,5 +67,5 @@ Allows server operators with the class named BasicOper to create channels.
 ```xml
 <class name="BasicOper"
        ...
-       privs="... channels/restriced-create ...">
+       privs="... channels/restricted-create ...">
 ```
