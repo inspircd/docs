@@ -26,11 +26,19 @@ haproxy | Listens for haproxy connections.
 
 ##### Example Usage
 
-Listens for plaintext haproxy connections on the 0.0.0.0:8080 endpoint:
+Listens for plaintext haproxy connections on the /tmp/inspircd.sock UNIX socket endpoint:
 
 ```xml
-<bind address="0.0.0.0"
-      port="8080"
+<bind path="/tmp/inspircd.sock"
+      ...
+      hook="haproxy">
+```
+
+Listens for plaintext haproxy connections on the 127.0.0.1:29583 endpoint:
+
+```xml
+<bind address="127.0.0.1"
+      port="29583"
       ...
       hook="haproxy">
 ```
