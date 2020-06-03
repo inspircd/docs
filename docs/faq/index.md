@@ -95,7 +95,7 @@ If you are using v2 and want to warn users to upgrade their client you can insta
 <client match="^irssi v(?:0\.|1\.0\.)"
         message="[WARNING] You have been detected as using an broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
 
-<client match="^WeeChat (?:2\.|2\.[0-4][\. ])"
+<client match="^WeeChat (?:1\.|2\.[0-4][\. ])"
         message="[WARNING] You have been detected as using an broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
 
 <client match="^ZNC (?:0\.|1\.[0-7][\. ])"
