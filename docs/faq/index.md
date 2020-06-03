@@ -91,17 +91,17 @@ If you are using v2 and want to warn users to upgrade their client you can insta
 <clientcheck engine="pcre">
 
 <client match="^AdiIRC (?:[0-2]\.|3\.[0-5] )"
-        message="[WARNING] You have been detected as using an broken version of AdiIRC. This client will have problems connecting in the future. Please upgrade to v3.6 or newer to fix this issue.">
+        message="[WARNING] You have been detected as using a broken version of AdiIRC. This client will have problems connecting in the future. Please upgrade to v3.6 or newer to fix this issue.">
 
 <client match="^HexChat 2\.(?:[0-9]\.|1[0-3]\.|14\.[0-2] )"
-        message="[WARNING] You have been detected as using an broken version of HexChat. This client will have problems connecting in the future. Please upgrade to v2.14.3 or newer to fix this issue.">
+        message="[WARNING] You have been detected as using a broken version of HexChat. This client will have problems connecting in the future. Please upgrade to v2.14.3 or newer to fix this issue.">
 
 <client match="^irssi v(?:0\.|1\.0\.)"
-        message="[WARNING] You have been detected as using an broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
+        message="[WARNING] You have been detected as using a broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
 
 <client match="^WeeChat (?:1\.|2\.[0-4][\. ])"
-        message="[WARNING] You have been detected as using an broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
+        message="[WARNING] You have been detected as using a broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
 
 <client match="^ZNC (?:0\.|1\.[0-7][\. ])"
-        message="[WARNING] You have been detected as using an broken version of ZNC. This client will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
+        message="[WARNING] You have been detected as using a broken version of ZNC. This client will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
 ```
