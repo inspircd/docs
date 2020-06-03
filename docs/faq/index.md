@@ -81,3 +81,23 @@ This bug is known to be fixed in:
 - Irssi 1.1.0 (released January 2018).
 - WeeChat v2.5 (released June 2019).
 - ZNC 1.8 (released May 2020).
+
+If you are using v2 and want to warn users to upgrade their client you can install the clientcheck contrib module via [the Module Manager](/2/module-manager) and use the following config:
+
+```xml
+<module name="m_clientcheck.so">
+
+<clientcheck engine="pcre">
+
+<client match="^HexChat 2\.(?:[0-9]\.|1[0-3]\.|14\.[0-2] )"
+        message="[WARNING] You have been detected as using an broken version of HexChat. This client will have problems connecting in the future. Please upgrade to v2.14.3 or newer to fix this issue.">
+
+<client match="^irssi v(?:0\.|1\.0\.)"
+        message="[WARNING] You have been detected as using an broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
+
+<client match="^WeeChat (?:2\.|2\.[0-4][\. ])"
+        message="[WARNING] You have been detected as using an broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
+
+<client match="^ZNC (?:0\.|1\.[0-7][\. ])"
+        message="[WARNING] You have been detected as using an broken version of ZNC. This client will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
+```
