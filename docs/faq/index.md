@@ -77,6 +77,7 @@ This issue is fixed in many clients already. Please make sure you have updated t
 
 This bug is known to be fixed in:
 
+- AdiIRC 3.6 (released November 2019)
 - HexChat 2.14.3 (released December 2019).
 - Irssi 1.1.0 (released January 2018).
 - WeeChat v2.5 (released June 2019).
@@ -88,6 +89,9 @@ If you are using v2 and want to warn users to upgrade their client you can insta
 <module name="m_clientcheck.so">
 
 <clientcheck engine="pcre">
+
+<client match="^AdiIRC (?:[0-2]\.|3\.[0-5] )"
+        message="[WARNING] You have been detected as using an broken version of AdiIRC. This client will have problems connecting in the future. Please upgrade to v3.6 or newer to fix this issue.">
 
 <client match="^HexChat 2\.(?:[0-9]\.|1[0-3]\.|14\.[0-2] )"
         message="[WARNING] You have been detected as using an broken version of HexChat. This client will have problems connecting in the future. Please upgrade to v2.14.3 or newer to fix this issue.">
