@@ -99,9 +99,9 @@ If you are using v2 and want to warn users to upgrade their client you can insta
 <clientmatch pattern="^irssi v(?:0\.|1\.0\.)"
              message="[WARNING] You have been detected as using a broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
 
-<clientmatch match="^WeeChat (?:1\.|2\.[0-4][\. ])"
+<clientmatch pattern="^WeeChat (?:1\.|2\.[0-4][\. ])"
              message="[WARNING] You have been detected as using a broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
 
-<clientmatch match="^ZNC (?:0\.|1\.[0-7][\. ])"
+<clientmatch pattern="^ZNC (?:0\.|1\.[0-7][\. ])"
              message="[WARNING] You have been detected as using a broken version of ZNC. This bouncer will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
 ```
