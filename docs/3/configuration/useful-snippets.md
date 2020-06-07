@@ -24,23 +24,23 @@ If you run a popular hosted client or a shared bouncer service that supports mod
 
 ### Requiring connections to use SASL
 
-To do this you create an allow connect class which only applies pre-connection and then a deny class which only applies post-connection which has `<connect:requireaccount>` set to yes (requires [the sasl module](/3/modules/sasl) and the [the services_account module](/3/modules/services_account)).
+To do this you create an allow connect class which only applies pre-connection and two connect classes that apply post-connection. The first being an allow connect class with `<connect:requireaccount>` set to yes (requires [the sasl module](/3/modules/sasl) and the [the services_account module](/3/modules/services_account)) and the second being a deny connect class with a reason explaining to the user why they cannot connect.
 
 You can also combine this with other `<connect>` fields such as adding `port="6660-6669"` to only apply to plain text connections or `webirc="*"` to only apply to connections via WebIRC gateways (requires [the cgiirc module](/3/modules/cgiirc)).
 
 ```xml
-<connect allow="*"
-         registered="no"
-         name="before-reg">
+<connect name="before-reg"
+         allow="*"
+         registered="no">
 
-<connect allow="*"
-         requireaccount="yes"
+<connect name="authed"
+         allow="*"
          registered="yes"
-         name="authed">
+         requireaccount="yes">
 
-<connect deny="*"
+<connect name="no-auth"
+         deny="*"
          registered="yes"
          requireaccount="no"
-         reason="You must authenticate using SASL to connect to this server."
-         name="no-auth">
+         reason="You must authenticate using SASL to connect to this server.">
 ```
