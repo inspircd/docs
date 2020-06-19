@@ -45,7 +45,7 @@ Adds the founder and admin channel prefix modes as seen in other IRC servers:
 
 <customprefix name="admin"
               letter="a"
-              prefix="&"
+              prefix="&amp;"
               rank="40000"
               ranktoset="50000"
               depriv="yes">
