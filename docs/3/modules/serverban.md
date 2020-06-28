@@ -6,7 +6,7 @@ title: "Module Details: serverban (v3)"
 
 ### Description
 
-This module adds the `s` extended ban which check whether users are on a server matching the specified glob pattern.
+This module adds the `s:` extended ban which check whether users are on a server matching the specified glob pattern.
 
 ### Configuration
 

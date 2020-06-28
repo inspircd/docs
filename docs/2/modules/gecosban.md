@@ -8,7 +8,7 @@ title: "Module Details: gecosban (v2)"
 
 ### Description
 
-This module adds the `r` extended ban which checks whether users have a real name (gecos) matching the specified glob pattern.
+This module adds the `r:` extended ban which checks whether users have a real name (gecos) matching the specified glob pattern.
 
 ### Configuration
 

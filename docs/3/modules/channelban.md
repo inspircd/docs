@@ -6,7 +6,7 @@ title: "Module Details: channelban (v3)"
 
 ### Description
 
-This module adds the `j` extended ban which checks whether users are in a channel matching the specified glob pattern.
+This module adds the `j:` extended ban which checks whether users are in a channel matching the specified glob pattern.
 
 ### Configuration
 
