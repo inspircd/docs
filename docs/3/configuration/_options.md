@@ -46,7 +46,7 @@ The splitwhois field should be set to one of the following values:
 Value    | Description
 -------- | -----------
 no       | Don't split private/secret channels from normal channels in WHOIS responses.
-yes      | Split private/secret channels from normal channels in WHOIS responses.
+split    | Split private/secret channels from normal channels in WHOIS responses.
 splitmsg | Split private/secret channels from normal channels in WHOIS responses with an explanation.
 
 #### Example Usage
