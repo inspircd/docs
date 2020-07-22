@@ -23,7 +23,7 @@ The `<sqlauth>` tag defines settings about how the sqlauth module should behave.
 Name         | Type    | Default Value | Description
 ------------ | ------- | ------------- | -----------
 allowpattern | Text    | *None*        | If defined then a glob pattern for nicknames that are exempted from the authentication requirement.
-column       | Text    | *None*        | **Required!** The name of the column that the password is located in.
+column       | Text    | *None*        | The name of the column that the password is located in.
 dbid         | Text    | *None*        | **Required!** The name of the database connection to execute the query against.
 hash         | Text    | md5,sha256    | A comma-delimited list of hash algorithms to check the password against.
 kdf          | Text    | *None*        | The name of a KDF to check the password against.

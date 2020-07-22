@@ -44,7 +44,7 @@ name   | Text    | *None*        | **Required!** The name of the PostgreSQL data
 <database module="pgsql"
           id="opers"
           host="localhost"
-          port="3306"
+          port="5432"
           ssl="yes"
           user="ircd_opers"
           pass="changeme"
