@@ -41,7 +41,6 @@ query | Text | SELECT * FROM ircd_opers WHERE active=1 | The SQL query to retrie
 
  For each row an <oper> will be defined using the field values returned. See the [<oper> configuration docs](https://docs.inspircd.org/3/configuration/#ltopergt) for column names, default values and required columns.
 
-
 ### Special Notes
 
 {! 3/modules/_sql_table.md !}
