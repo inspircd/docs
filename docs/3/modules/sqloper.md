@@ -34,8 +34,16 @@ query | Text | SELECT * FROM ircd_opers WHERE active=1 | The SQL query to retrie
          query="SELECT * FROM ircd_opers WHERE active=1">
 ```
 
+```xml
+<sqloper dbid="sqloper"
+         query="SELECT username as name, '*' as host, oper_class as type, sha256_password as password, 'sha256' as hash FROM users WHERE oper_class IS NOT NULL">
+```
+
+ For each row an <oper> will be defined using the field values returned. See the [<oper> configuration docs](https://docs.inspircd.org/3/configuration/#ltopergt) for column names, default values and required columns.
+
+
 ### Special Notes
 
 {! 3/modules/_sql_table.md !}
 
-Schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql).
+Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql). You can define your own schema as long as your query returns the required columns.
