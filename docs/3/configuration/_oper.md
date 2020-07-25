@@ -8,7 +8,7 @@ Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
 autologin   | Boolean | No            | If a fingerprint for this oper is specified, automatically log them in.
 class       | Text    | *None*        | If defined then a connect class to assign users who log into this server operator account to.
-fingerprint | Text    | *None*        | A space separated list of TLS client certificate fingerprints. These can be obtained by using the /SSLINFO command while the module is loaded, and is also noticed on connect.
+fingerprint | Text    | *None*        | A space separated list of of TLS client certificate fingerprints. These can be obtained by using the /SSLINFO command while the module is loaded, and is also noticed on connect.
 hash        | Text    | *None*        | If defined then the hash algorithm that the password field is hashed with.
 host        | Text    | *None*        | **Required!** A space-delimited list of glob patterns for the username@hostname mask that users must be connecting from to log into this server operator account.
 name        | Text    | *None*        | **Required!** The username for this server operator account.
