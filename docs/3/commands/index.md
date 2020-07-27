@@ -39,6 +39,7 @@ This page only lists core commands. For details on the commands of a specific mo
 {! 3/commands/_cmd_rehash.md !}
 {! 3/commands/_cmd_reloadmodule.md !}
 {! 3/commands/_cmd_restart.md !}
+{! 3/commands/_cmd_servlist.md !}
 {! 3/commands/_cmd_squery.md !}
 {! 2/commands/_cmd_stats.md !}
 {! 2/commands/_cmd_time.md !}
