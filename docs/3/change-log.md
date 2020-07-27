@@ -6,6 +6,56 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.7.0
+
+<!-- TODO: ensure changes after commit f953c431d5 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<botmode:forcenotice>` to allow forcing bots to use NOTICEs instead of PRIVMSGs.
+
+- Added a log message reminding admins that if they have defined a `<sslprofile>` tag they need to use the value of `<sslprofile:name>` in `<bind:ssl>` and `<link:ssl>` not the name of a TLS (SSL) module.
+
+- Added a warning about LibreSSL support being deprecated.
+
+- Added an error response when a user without the `users/mass-message` server operator privilege tries to send a mass-message.
+
+- Added support for disabling client-to-client tags without disabling features which depend on the `message-tags` capability.
+
+- Added support for disabling the creation/expiry notices sent to channel operators by the timedbans module.
+
+- Added the --portable `./configure` option to build in portable mode.
+
+- Added the `B` token to `/WHO` lines when the user in question is marked as a bot.
+
+- Added the `inspircd-testssl` tool for checking whether a server is configured correctly for TLS (SSL) connections.
+
+- Allowed server admins to disable the `/COMMANDS` command.
+
+- Developer: added support for changing the type of a message in OnUserPreMessage.
+
+- Developer: added the BOT 005 token to allow bots to automatically mark themselves as a bot.
+
+- Fixed `/SVSHOLD` sending a global snotice instead of a local one.
+
+- Fixed bcrypt and PBKDF2 hashes not being compared in a timing-safe way.
+
+- Fixed building InspIRCd when PWD does not contain the source tree.
+
+- Fixed shuns not being applied correctly.
+
+- Fixed the `/SERVLIST` command not being documented in the example helpop config.
+
+- Fixed the `<class:dnsbl>` option not matching marked DNSBL users.
+
+- Fixed the `<hostchange:ports>` option never matching users.
+
+- Fixed the ojoin module hardcoding the server operator mode instead of using a ModeReference.
+
+- Fixed WebSocket users not being detected as using a secure connection when they are.
+
+- Removed support for TLSA record generation from inspircd-genssl (no clients adopted this).
+
 ### InspIRCd 3.6.0
 
 **This version of InspIRCd was released on 2020-04-24.**
