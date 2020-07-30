@@ -16,7 +16,19 @@ To load this module use the following `<module>` tag:
 <module name="ircv3_ctctags">
 ```
 
-This module requires no other configuration.
+#### `<ctctags>`
+
+The `<ctctags>` tag defines settings about how the ircv3_ctctags module should behave. This tag can only be defined once.
+
+Name                | Type    | Default Value | Description
+------------------- | ------- | ------------- | -----------
+allowclientonlytags | Boolean | Yes           | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to allow clients to send client-to-client tags.
+
+#### Example Usage
+
+```xml
+<ctctags allowclientonlytags="yes">
+```
 
 ### Commands
 

@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.7.0
 
-<!-- TODO: ensure changes after commit f953c431d5 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2020-07-31.**
 
 - Added `<botmode:forcenotice>` to allow forcing bots to use NOTICEs instead of PRIVMSGs.
 
@@ -52,9 +50,13 @@ This page lists changes which have happened between releases.
 
 - Fixed the ojoin module hardcoding the server operator mode instead of using a ModeReference.
 
+- Fixed the systemd service depending on the Perl init script.
+
 - Fixed WebSocket users not being detected as using a secure connection when they are.
 
 - Removed support for TLSA record generation from inspircd-genssl (no clients adopted this).
+
+- Removed the example config file for KiwiIRC as requested by upstream.
 
 ### InspIRCd 3.6.0
 

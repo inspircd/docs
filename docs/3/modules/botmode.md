@@ -18,7 +18,19 @@ To load this module use the following `<module>` tag:
 <module name="botmode">
 ```
 
-This module requires no other configuration.
+#### `<botmode>`
+
+The `<botmode>` tag defines settings about how the botmode module should behave. This tag can only be defined once.
+
+Name        | Type    | Default Value | Description
+----------- | ------- | ------------- | -----------
+forcenotice | Boolean | No            | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to force bots to use notices.
+
+#### Example Usage
+
+```xml
+<botmode forcenotice="no">
+```
 
 ### User Modes
 

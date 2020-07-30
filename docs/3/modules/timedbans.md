@@ -16,7 +16,19 @@ To load this module use the following `<module>` tag:
 <module name="timedbans">
 ```
 
-This module requires no other configuration.
+#### `<timedbans>`
+
+The `<timedbans>` tag defines settings about how the timedbans module should behave. This tag can only be defined once.
+
+Name       | Type    | Default Value | Description
+---------- | ------- | ------------- | -----------
+sendnotice | Boolean | Yes           | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to send a notice to channel operators when a timed ban is added or expired.
+
+#### Example Usage
+
+```xml
+<timedbans sendnotice="yes">
+```
 
 ### Commands
 
