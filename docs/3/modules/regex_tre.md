@@ -9,7 +9,7 @@ title: "Module Details: regex_tre (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_regex_tre.cpp</code></pre>
+    <pre><code>./configure --enable-extras regex_tre</code></pre>
 
 ### Description
 

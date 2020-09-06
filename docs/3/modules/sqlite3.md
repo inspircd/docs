@@ -9,7 +9,7 @@ title: "Module Details: sqlite3 (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-     <pre><code>./configure --enable-extras m_sqlite3.cpp</code></pre>
+     <pre><code>./configure --enable-extras sqlite3</code></pre>
 
 ### Description
 

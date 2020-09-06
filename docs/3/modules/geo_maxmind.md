@@ -9,7 +9,7 @@ title: "Module Details: geo_maxmind (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_geo_maxmind.cpp</code></pre>
+    <pre><code>./configure --enable-extras geo_maxmind</code></pre>
 
 ### Description
 

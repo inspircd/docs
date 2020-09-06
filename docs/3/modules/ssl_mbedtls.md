@@ -9,7 +9,7 @@ title: "Module Details: ssl_mbedtls (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_ssl_mbedtls.cpp</code></pre>
+    <pre><code>./configure --enable-extras ssl_mbedtls</code></pre>
 
 ### Description
 

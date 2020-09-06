@@ -9,7 +9,7 @@ title: "Module Details: pgsql (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_pgsql.cpp</pre></code>
+    <pre><code>./configure --enable-extras pgsql</pre></code>
 
 ### Description
 

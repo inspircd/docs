@@ -9,7 +9,7 @@ title: "Module Details: regex_posix (v3)"
 
     If you are running on a UNIX system you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_regex_posix.cpp</code></pre>
+    <pre><code>./configure --enable-extras regex_posix</code></pre>
 
 ### Description
 

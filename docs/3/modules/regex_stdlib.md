@@ -9,7 +9,7 @@ title: "Module Details: regex_stdlib (v3)"
 
     If you are building with a C++11-compatible compiler you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_regex_stdlib.cpp</code></pre>
+    <pre><code>./configure --enable-extras regex_stdlib</code></pre>
 
 ### Description
 

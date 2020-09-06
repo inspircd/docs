@@ -9,7 +9,7 @@ title: "Module Details: ssl_openssl (v3)"
 
     Once you have installed the dependency you can enable this module using the following command:
 
-    <pre><code>./configure --enable-extras m_ssl_openssl.cpp</code></pre>
+    <pre><code>./configure --enable-extras ssl_openssl</code></pre>
 
 ### Description
 
