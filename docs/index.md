@@ -20,19 +20,6 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### InspIRCd 2
-
-- [Installation](/2/installation)
-- [Configuration](/2/configuration)
-- [Commands](/2/commands)
-- [Modes](/2/modes)
-- [Modules](/2/modules)
-- [SNOMasks](/2/snomasks)
-
-</div>
-
-<div class="col-md-4" markdown="1">
-
 ### InspIRCd 3
 
 - [Installation](/3/installation)
@@ -44,6 +31,21 @@ title: Introduction
 - [Modules](/3/modules)
 - [SNOMasks](/3/snomasks)
 - [Change Log](/3/change-log)
+
+</div>
+
+<div class="col-md-4" markdown="1">
+
+### InspIRCd 2
+
+**No security updates from 2021-01-01**
+
+- [Installation](/2/installation)
+- [Configuration](/2/configuration)
+- [Commands](/2/commands)
+- [Modes](/2/modes)
+- [Modules](/2/modules)
+- [SNOMasks](/2/snomasks)
 
 </div>
 
