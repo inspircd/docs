@@ -255,3 +255,7 @@ Character | Description
 --------- | -----------
 c         | Lists servers which the server may connect to or allow connections from.
 n         | Lists servers which the server may connect to or allow connections from.
+
+### Special Notes
+
+Linking non-local servers without TLS (SSL) is a serious privacy risk and will be removed in the next major version of InspIRCd.
