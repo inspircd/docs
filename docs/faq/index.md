@@ -105,3 +105,11 @@ If you are using v2 and want to warn users to upgrade their client you can insta
 <clientmatch pattern="^ZNC (?:0\.|1\.[0-7][\. ])"
              message="[WARNING] You have been detected as using a broken version of ZNC. This bouncer will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
 ```
+
+You may also wish to automatically kill users of unmaintained and insecure clients which will never be updated:
+
+```xml
+<clientmatch pattern="^xchat 2\.\d+.\d+"
+             action="kill"
+             message="[WARNING] You have been detected as using X-Chat. This client is unmaintained and contains many serious compatibility and security issues. Please migrate to HexChat v2.14.3 or newer to fix this issue.">
+```
