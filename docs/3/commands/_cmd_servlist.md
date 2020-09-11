@@ -2,7 +2,6 @@
 
 ### `/SERVLIST [<nick>`
 
-
 List network services that are currently connected to the network and visible to you. The optional glob-based nick parameter matches against the nickname of the network service.
 
 #### Example Usage
