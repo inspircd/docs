@@ -22,7 +22,7 @@ The `<bcrypt>` tag defines settings about how the bcrypt module should behave. T
 
 Name   | Type   | Default Value | Description
 ------ | ------ | ------------- | -----------
-rounds | Number | 10            | The number of rounds of the bcrypt algorithm that should be used.
+rounds | Number | 10            | The number of rounds of the EksBlowfishSetup algorithm that should be used.
 
 ##### Example Usage
 
