@@ -6,7 +6,7 @@ title: "Module Details: password_hash (v3)"
 
 ### Description
 
-This module adds the `/MKPASSWD` command which allows the generation of hashed passwords for use in the server configuration.
+This module allows passwords to be hashed and adds the `/MKPASSWD` command which allows the generation of hashed passwords for use in the server configuration.
 
 ### Configuration
 
