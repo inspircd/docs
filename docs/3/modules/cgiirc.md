@@ -82,6 +82,24 @@ Tells the cgiirc module that gateways with a hostname matching \*.webirc.gateway
          mask="*.webirc.gateway.example.com">
 ```
 
+#### `<connect>`
+
+This module extends the core `<connect>` tags with the following fields:
+
+Name   | Type | Default Value | Description
+------ | ---- | ------------- | -----------
+webirc | Text | *None*        | If defined then a glob pattern to match the name of a WebIRC gateway against.
+
+##### Example Usage
+
+Requires that users must be connecting via the "wibble" WebIRC gateway to use the Example class:
+
+```xml
+<connect name="Example"
+         ...
+         webirc="wibble">
+```
+
 ### Commands
 
 Name   | Parameter Count  | Syntax                                                | Description
