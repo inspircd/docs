@@ -1,5 +1,5 @@
 extra_css:
-  - css/fix-cinder-sidebar-scrolling.css
+  - css/fix-cinder-bugs.css
 nav:
     - InspIRCd 2:
         - Installation: 2/installation/index.md

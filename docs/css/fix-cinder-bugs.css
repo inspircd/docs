@@ -1,0 +1,12 @@
+@media (min-width: 992px) {
+	/* Allow the sidebar to scroll if it overflows the page. */
+	.bs-sidebar {
+		overflow-y: scroll;
+	}
+}
+
+/** Fix cinder headings being way too big which causes issues on mobile. */
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+	margin-top: 0 !important;
+	height: 0 !important;
+}
