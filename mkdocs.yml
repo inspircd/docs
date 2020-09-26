@@ -28,6 +28,10 @@ plugins:
   - exclude:
       glob:
         - '**/_*'
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+          remove_comments: true
   - redirects:
       redirect_maps:
           3/configuration-changes.md: 3/breaking-changes.md
