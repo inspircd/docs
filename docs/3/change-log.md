@@ -6,6 +6,42 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.8.0
+
+<!-- TODO: ensure changes after commit b8e417f4ea are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<shun:allowtags>` to allow configuring whether shunned users can send client-to-client tags.
+
+- Added `<shun:cleanedcommands>` to allow configuring the commands that shunned users can run but that will be censored.
+
+- Added a question to `./configure` for deleting previously created self-signed certificates.
+
+- Added a warning about non-local unencrypted server connections being insecure.
+
+- Added support for specifying the output directory when using `inspircd-genssl`.
+
+- Developer: added a non-const override of `CommandBase::Params::GetTags()` to allow the modification of tags in OnPreCommand.
+
+- Fixed `--{disable,enable}-extras` not erroring when an non-existent extra module is specified.
+
+- Fixed `<dnsbl:action>` not being matched case insensitively.
+
+- Fixed a bunch of outdated and/or incorrect comments in the example configs.
+
+- Fixed a bunch of warnings about deprecated copy constructors on C++11 compilers.
+
+- Fixed a minor crash in the disable module when a nonexistent mode is specified.
+
+- Fixed allowing many entries in `<limits>` to be set to 0 or more than the max line length.
+
+- Fixed the format of the `MAXLIST` 005 token.
+
+- Fixed the `NAMELEN` 005 token not being used.
+
+- Updated `./configure` to put store self-signed certificates in the .configure directory.
+
 ### InspIRCd 3.7.0
 
 **This version of InspIRCd was released on 2020-07-31.**
