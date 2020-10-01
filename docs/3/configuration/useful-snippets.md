@@ -8,12 +8,6 @@ title: v3 Configuration
 
 As of v3.4.0 InspIRCd ships with preconfigured files for enabling support for popular hosted clients on your server.
 
-To add support for KiwiIRC.com add the following include tag to your configuration:
-
-```xml
-<include file="examples/providers/kiwiirc-com.conf.example">
-```
-
 To add support for IRCCloud add the following include tag to your configuration:
 
 ```xml
