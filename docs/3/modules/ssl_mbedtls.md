@@ -84,9 +84,9 @@ The hash field should be set to one of the values shown [in the mbedTLS MD docum
 ```xml
 <sslprofile name="Clients"
             provider="mbedtls"
-            cafile="ca.pem"
+            cafile=""
             certfile="cert.pem"
-            crlfile="crl.pem"
+            crlfile=""
             dhfile="dhparams.pem"
             hash="sha256"
             keyfile="key.pem"

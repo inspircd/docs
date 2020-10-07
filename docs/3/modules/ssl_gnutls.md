@@ -82,9 +82,9 @@ The hash field should be set to one of the values shown in `gnutls-cli --list | 
 ```xml
 <sslprofile name="Clients"
             provider="gnutls"
-            cafile="ca.pem"
+            cafile=""
             certfile="cert.pem"
-            crlfile="crl.pem"
+            crlfile=""
             dhfile="dhparams.pem"
             hash="sha256"
             keyfile="key.pem"

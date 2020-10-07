@@ -100,6 +100,7 @@ The hash field should be set to one of the values shown in `openssl list --diges
             provider="openssl"
             cafile="ca.pem"
             certfile="cert.pem"
+            crlfile=""
             ciphers="DEFAULT"
             compression="no"
             dhfile="dhparams.pem"
