@@ -51,7 +51,7 @@ Name                                                      | Description
 [conn_umodes](/3/modules/conn_umodes)                     | Allows the server administrator to set user modes on connecting users.
 [conn_waitpong](/3/modules/conn_waitpong)                 | Requires all clients to respond to a PING request before they can fully connect.
 [connectban](/3/modules/connectban)                       | Z-lines IP addresses which make excessive connections to the server.
-[connflood](/3/modules/connflood)                         | Throttles IP addresses which make excessive connections to the server.
+[connflood](/3/modules/connflood)                         | Throttles excessive connections to the server.
 [customprefix](/3/modules/customprefix)                   | Allows the server administrator to configure custom channel prefix modes.
 [customtitle](/3/modules/customtitle)                     | Allows the server administrator to define accounts which can grant a custom title in /WHOIS and an optional virtual host.
 [cycle](/3/modules/cycle)                                 | Allows channel members to part and rejoin a channel without needing to worry about channel modes such as +i (inviteonly) which might prevent rejoining.
