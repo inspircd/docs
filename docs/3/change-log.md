@@ -8,9 +8,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.8.0
 
-<!-- TODO: ensure changes after commit b8e417f4ea are added to this list before release. -->
+<!-- TODO: ensure changes after commit ff88faf931 are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
+
+- Added `<joinflood:bootwait>` to allow disengaging channel mode `j` (joinflood) when a server first starts up.
+
+- Added `<joinflood:splitwait>` to allow disengaging channel mode `j` (joinflood) when a server splits from the network.
 
 - Added `<shun:allowtags>` to allow configuring whether shunned users can send client-to-client tags.
 
@@ -21,6 +25,8 @@ This page lists changes which have happened between releases.
 - Added a warning about non-local unencrypted server connections being insecure.
 
 - Added support for specifying the output directory when using `inspircd-genssl`.
+
+- Added support for the Argon2 key derivation function.
 
 - Developer: added a non-const override of `CommandBase::Params::GetTags()` to allow the modification of tags in OnPreCommand.
 
@@ -36,9 +42,11 @@ This page lists changes which have happened between releases.
 
 - Fixed allowing many entries in `<limits>` to be set to 0 or more than the max line length.
 
+- Fixed the `NAMELEN` 005 token not being used.
+
 - Fixed the format of the `MAXLIST` 005 token.
 
-- Fixed the `NAMELEN` 005 token not being used.
+- Fixed xlines not being rechecked when a user's real hostname changes.
 
 - Updated `./configure` to put store self-signed certificates in the .configure directory.
 
