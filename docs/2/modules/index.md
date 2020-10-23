@@ -49,7 +49,7 @@ Name                                            | Description
 [conn_join](/2/modules/conn_join)               | Forces users to join the specified channel(s) on connect.
 [conn_umodes](/2/modules/conn_umodes)           | Sets (and unsets) modes on users when they connect.
 [conn_waitpong](/2/modules/conn_waitpong)       | Require pong prior to registration.
-[connectban](/2/modules/connectban)             | Throttles the connections of IP ranges who try to connect flood.
+[connectban](/2/modules/connectban)             | Z-lines IP addresses which make excessive connections to the server.
 [connflood](/2/modules/connflood)               | Throttles excessive connections to the server.
 [customprefix](/2/modules/customprefix)         | Provides custom prefix channel modes.
 [customtitle](/2/modules/customtitle)           | Custom Title for users.
