@@ -8,7 +8,7 @@ title: "Module Details: connflood (v2)"
 
 ### Description
 
-This module throttles IP addresses which make excessive connections to the server.
+This module throttles excessive connections to the server.
 
 ### Configuration
 

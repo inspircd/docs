@@ -50,7 +50,7 @@ Name                                            | Description
 [conn_umodes](/2/modules/conn_umodes)           | Sets (and unsets) modes on users when they connect.
 [conn_waitpong](/2/modules/conn_waitpong)       | Require pong prior to registration.
 [connectban](/2/modules/connectban)             | Throttles the connections of IP ranges who try to connect flood.
-[connflood](/2/modules/connflood)               | Connection throttle.
+[connflood](/2/modules/connflood)               | Throttles excessive connections to the server.
 [customprefix](/2/modules/customprefix)         | Provides custom prefix channel modes.
 [customtitle](/2/modules/customtitle)           | Custom Title for users.
 [cycle](/2/modules/cycle)                       | Provides command CYCLE, acts as a server-side HOP command to part and rejoin a channel.
