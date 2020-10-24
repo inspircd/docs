@@ -28,7 +28,7 @@ Name                                            | Description
 [botmode](/2/modules/botmode)                   | Provides user mode +B to mark the user as a bot.
 [callerid](/2/modules/callerid)                 | Implementation of callerid, usermode +g, /accept.
 [cap](/2/modules/cap)                           | Client CAP extension support.
-[cban](/2/modules/cban)                         | Gives /cban, aka C:lines. Think Q:lines, for channels.
+[cban](/2/modules/cban)                         | Adds the /CBAN command which allows server operators to prevent channels from being created.
 [censor](/2/modules/censor)                     | Provides user and channel +G mode.
 [cgiirc](/2/modules/cgiirc)                     | Change user's hosts connecting from known CGI:IRC hosts.
 [chancreate](/2/modules/chancreate)             | Provides snomasks 'j' and 'J', to which notices about newly created channels are sent.

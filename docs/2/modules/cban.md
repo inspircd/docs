@@ -8,7 +8,7 @@ title: "Module Details: cban (v2)"
 
 ### Description
 
-This module adds the `/CBAN` command which allows server operators to prevent channels matching a glob from being created.
+This module adds the `/CBAN` command which allows server operators to prevent channels from being created.
 
 ### Configuration
 
@@ -34,10 +34,10 @@ Bans the #example channel for one week:
 /CBAN #example 7d :This channel is banned for a week
 ```
 
-Bans channels that match the glob #example* forever:
+Bans the #example channel forever:
 
 ```plaintext
-/CBAN #example* 0 :This channel is banned forever
+/CBAN #example 0 :This channel is banned forever
 ```
 
 Unbans the #example channel:
