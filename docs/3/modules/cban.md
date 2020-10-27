@@ -16,7 +16,19 @@ To load this module use the following `<module>` tag:
 <module name="cban">
 ```
 
-This module requires no other configuration.
+#### `<cban>`
+
+The `<cban>` tag defines settings about how the xban module should behave. This tag can only be defined once.
+
+Name | Type    | Default Value | Description
+---- | ------- | ------------- | -----------
+glob | Boolean | No            | [**New in v3.8.0!**](/3/change-log/#inspircd-380) Whether to use glob matching instead of case-insensitive string matching.
+
+##### Example Usage
+
+```xml
+<cban glob="yes">
+```
 
 ### Commands
 

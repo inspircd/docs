@@ -31,8 +31,8 @@ This page only lists core commands. For details on the commands of a specific mo
 {! 2/commands/_cmd_oper.md !}
 {! 2/commands/_cmd_part.md !}
 {! 2/commands/_cmd_pass.md !}
-{! 2/commands/_cmd_ping.md !}
-{! 2/commands/_cmd_pong.md !}
+{! 3/commands/_cmd_ping.md !}
+{! 3/commands/_cmd_pong.md !}
 {! 2/commands/_cmd_privmsg.md !}
 {! 2/commands/_cmd_qline.md !}
 {! 2/commands/_cmd_quit.md !}

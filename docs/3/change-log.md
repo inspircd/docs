@@ -8,9 +8,9 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.8.0
 
-<!-- TODO: ensure changes after commit ff88faf931 are added to this list before release. -->
+**This version of InspIRCd was released on 2020-10-30.**
 
-**This version of InspIRCd has not yet been released.**
+- Added `<cban:glob>` to allow using glob matches within cbans.
 
 - Added `<joinflood:bootwait>` to allow disengaging channel mode `j` (joinflood) when a server first starts up.
 
@@ -23,6 +23,8 @@ This page lists changes which have happened between releases.
 - Added a question to `./configure` for deleting previously created self-signed certificates.
 
 - Added a warning about non-local unencrypted server connections being insecure.
+
+- Added the new tinside server and IP blocks to the IRCCloud provider config file.`
 
 - Added support for specifying the output directory when using `inspircd-genssl`.
 
@@ -42,9 +44,15 @@ This page lists changes which have happened between releases.
 
 - Fixed allowing many entries in `<limits>` to be set to 0 or more than the max line length.
 
+- Fixed disconnecting users who try to enable user mode `x` (cloak) when the md5 module is not loaded.
+
+- Fixed not using short module names (i.e. foo instead of m_foo) in a bunch of places.
+
 - Fixed the `NAMELEN` 005 token not being used.
 
 - Fixed the format of the `MAXLIST` 005 token.
+
+- Fixed the syntax and help for the `/PING` command.
 
 - Fixed xlines not being rechecked when a user's real hostname changes.
 

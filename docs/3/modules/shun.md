@@ -20,16 +20,20 @@ To load this module use the following `<module>` tag:
 
 The `<shun>` tag defines settings about how the shun module should behave. This tag can only be defined once.
 
-Name            | Type    | Default Value  | Description
---------------- | ------- | -------------- | -----------
-affectsopers    | Boolean | No             | Whether server operators are affected by shuns.
-enabledcommands | Text    | PING PONG QUIT | A space-delimited list of commands that a shunned user is allowed to run.
-notifyuser      | Boolean | Yes            | Whether to notify shunned users that they are blocked from executing commands.
+Name            | Type    | Default Value                                                            | Description
+--------------- | ------- | ------------------------------------------------------------------------ | -----------
+affectsopers    | Boolean | No                                                                       | Whether server operators are affected by shuns.
+allowtags       | Boolean | No                                                                       | [**New in v3.8.0!**](/3/change-log/#inspircd-380) Whether shunned users can send message tags on allowed commands.
+cleanedcommands | Text    | AWAY PART QUIT                                                           | [**New in v3.8.0!**](/3/change-log/#inspircd-380) The commands to remove any messages from if allowed.
+enabledcommands | Text    | ADMIN OPER PING PONG QUIT *(since 3.6)*<br>PING PONG QUIT *(3.0 to 3.5)* | A space-delimited list of commands that a shunned user is allowed to run.
+notifyuser      | Boolean | Yes                                                                      | Whether to notify shunned users that they are blocked from executing commands.
 
 #### Example Usage
 
 ```xml
 <shun affectsopers="no"
+      allowtags="no"
+      cleanedcommands="AWAY PART QUIT"
       enabledcommands="ADMIN PING PONG QUIT"
       notifyuser="yes">
 ```
