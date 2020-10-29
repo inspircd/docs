@@ -31,3 +31,9 @@ Bans users connecting from the United States of America:
 ```plaintext
 /MODE #channel +b G:US
 ```
+
+Bans users whose country of origin can not be determined:
+
+```plaintext
+/MODE #channel +b G:XX
+```
