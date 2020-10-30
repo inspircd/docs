@@ -37,6 +37,7 @@ It is recommended that you ship as many extra modules as possible but due to GPL
 
 Module                                        | Library          | License             | GPLv2 compatible?
 --------------------------------------------- | ---------------- | ------------------- | -----------------
+[argon2](/3/modules/argon2)                   | libargon2        | Apache 2.0 / CC0    | Yes
 [geo_maxmind](/3/modules/geo_maxmind)         | libmaxminddb     | Apache 2.0          | **No**
 [ldap](/3/modules/ldap)                       | libldap2         | BSD-style           | Yes
 [mysql](/3/modules/mysql)                     | libmysqlclient   | GPLv2               | Yes

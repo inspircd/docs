@@ -190,6 +190,7 @@ These modules require third-party dependencies to be installed and have to be en
 
 Name                                          | Description
 --------------------------------------------- | -----------
+[argon2](/3/modules/argon2)                   | Allows other modules to generate Argon2 hashes.
 [geo_maxmind](/3/modules/geo_maxmind)         | Allows the server to perform geolocation lookups on both IP addresses and users.
 [ldap](/3/modules/ldap)                       | Provides the ability for LDAP modules to query a LDAP directory.
 [mysql](/3/modules/mysql)                     | Provides the ability for SQL modules to query a MySQL database.
