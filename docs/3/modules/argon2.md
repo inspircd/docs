@@ -43,7 +43,7 @@ Value  | Description
 ##### Example Usage
 
 ```xml
-<argon2 memory="128KB"
+<argon2 memory="128MB"
         iterations="3"
         lanes="1"
         threads="1"
@@ -76,7 +76,7 @@ Value  | Description
 ##### Example Usage
 
 ```xml
-<argon2d memory="128KB"
+<argon2d memory="128MB"
          iterations="3"
          lanes="1"
          threads="1"
@@ -109,7 +109,7 @@ Value  | Description
 ##### Example Usage
 
 ```xml
-<argon2i memory="128KB"
+<argon2i memory="128MB"
          iterations="3"
          lanes="1"
          threads="1"
@@ -142,7 +142,7 @@ Value  | Description
 ##### Example Usage
 
 ```xml
-<argon2id memory="128KB"
+<argon2id memory="128MB"
           iterations="3"
           lanes="1"
           threads="1"
