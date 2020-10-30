@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<cban>`
 
-The `<cban>` tag defines settings about how the xban module should behave. This tag can only be defined once.
+The `<cban>` tag defines settings about how the cban module should behave. This tag can only be defined once.
 
 Name | Type    | Default Value | Description
 ---- | ------- | ------------- | -----------

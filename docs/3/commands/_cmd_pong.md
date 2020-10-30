@@ -12,7 +12,7 @@ Responds to a ping from the local server with the cookie "wibble".
 /PONG wibble
 ```
 
-Responds to a ping from `irc2.example.com` with the cookie "wibble".
+Responds to a ping from `irc2.example.com` with the cookie "wobble".
 
 ```plaintext
 /PONG wobble irc2.example.com

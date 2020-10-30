@@ -24,14 +24,14 @@ The `<shun>` tag defines settings about how the shun module should behave. This 
 
 Name            | Type    | Default Value  | Description
 --------------- | ------- | -------------- | -----------
-affectsopers    | Boolean | No             | Whether server operators are affected by shuns.
+affectopers     | Boolean | No             | Whether server operators are affected by shuns.
 enabledcommands | Text    | PING PONG QUIT | A space-delimited list of commands that a shunned user is allowed to run.
 notifyuser      | Boolean | Yes            | Whether to notify shunned users that they are blocked from executing commands.
 
 #### Example Usage
 
 ```xml
-<shun affectsopers="no"
+<shun affectopers="no"
       enabledcommands="ADMIN PING PONG QUIT"
       notifyuser="yes">
 ```
