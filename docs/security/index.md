@@ -7,6 +7,8 @@ This page lists all security advisories which have been released for InspIRCd si
 ## 2020
 
 * [2020-01](/security/2020-01) &mdash; Use after free vulnerability in the pgsql module.
+* [2020-02](/security/2020-02) &mdash; Double free vulnerability in the websocket module.
+
 
 ## 2019
 

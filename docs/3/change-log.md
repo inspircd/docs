@@ -6,6 +6,29 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.8.1
+
+**This version of InspIRCd was released on 2020-11-20.**
+
+- Added a config file for using InspIRCd with AppArmor.
+
+- [Fixed a **crash** in the websocket module when a user behind a HTTP proxy is [GKZ]-lined](/security/2020-02).
+
+- Fixed a harmless compiler warning on recent versions of GCC.
+
+- Fixed an off by one error in the error message shown when an invalid option is passed on the command line.
+
+- Fixed connect class logging being unreliable and inconsistent.
+
+- Fixed continuing with event hooks when a user is quit in the "IP changed" event.
+
+- Fixed showing an incorrect error when a module could not be loaded.
+
+- Fixed the connectban and dnsbl modules executing before core_xline.
+
+- Fixed trailing and preceding whitespace not being stripped by `--{disable,enable}-extras`.
+
+
 ### InspIRCd 3.8.0
 
 **This version of InspIRCd was released on 2020-10-30.**
