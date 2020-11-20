@@ -4,15 +4,15 @@ title: v3 Debian Linux Installation
 
 ## Installing InspIRCd 3 using the Debian package
 
-An official package for Debian is maintained by [Adam](https://github.com/Adam-). You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).
+An official package for Debian is maintained by the InspIRCd Team. You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Debian 8 (jessie).
+This package can be installed on all x86-64 systems running Debian 10 (Buster) and 11 (Bullseye).
 
 ### How do I install this package?
 
-First, download the RPM package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt-get install wget`.
+First, download the .deb package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt-get install wget`.
 
 ```sh
 # Replace the URL here with the URL you obtained from the releases page.
