@@ -33,7 +33,7 @@ usercommand    | Boolean | Yes           | Whether the command can be executed a
 operonly       | Boolean | No            | Whether the user executing the command must be a server operator.
 uline          | Boolean | No            | Whether the user specified in the requires value must be on a U-lined server.
 
-The replacement field can contain any of the following template variables:
+The replace field can contain any of the following template variables:
 
 Variable   | Description
 ---------- | -----------

@@ -32,7 +32,7 @@ operonly       | Boolean | No            | Whether the user executing the comman
 stripcolor     | Boolean | No            | [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to strip formatting codes before matching an alias.
 uline          | Boolean | No            | Whether the user specified in the requires value must be on a U-lined server.
 
-The replacement field can contain any of the following template variables:
+The replace field can contain any of the following template variables:
 
 Variable     | Description
 ------------ | -----------
