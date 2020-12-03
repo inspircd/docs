@@ -60,7 +60,7 @@ Name                       | Description
 -------------------------- | -----------
 channels/restricted-create | Allows server operators to create channels.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to create channels.
 

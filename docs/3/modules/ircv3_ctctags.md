@@ -24,7 +24,7 @@ Name                | Type    | Default Value | Description
 ------------------- | ------- | ------------- | -----------
 allowclientonlytags | Boolean | Yes           | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to allow clients to send client-to-client tags.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <ctctags allowclientonlytags="yes">

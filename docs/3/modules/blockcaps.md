@@ -32,7 +32,7 @@ minlen    | Number | 1                          | The minimum length of a messag
 percent   | Number | 100                        | The percentage of a message which can be capitalised before it is blocked.
 uppercase | Text   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | A list of characters to treat as upper case letters.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <blockcaps lowercase="abcdefghijklmnopqrstuvwxyz"
@@ -59,7 +59,7 @@ Character | Type   | Ban Syntax | Description
 --------- | ------ | ---------- | -----------
 B         | Acting | `B:<mask>` | Bans &lt;mask&gt; from sending messages with excessive capitalisation.
 
-##### Example Usage
+#### Example Usage
 
 Bans users matching `*!*@example.com` from sending messages with excessive capitalisation:
 

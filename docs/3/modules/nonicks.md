@@ -24,7 +24,7 @@ Name                    | Description
 ----------------------- | -----------
 channels/ignore-nonicks | Allows server operators to change their nick when on a channel with the `N` (nonick) mode set.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to change their nick when on a channel with the `N` (nonick) mode set.
 

@@ -42,7 +42,7 @@ Name                  | Description
 --------------------- | -----------
 users/ignore-callerid | Allows server operators to message users using callerid without being on their callerid list.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to message users using callerid without being on their callerid list.
 

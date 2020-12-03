@@ -25,7 +25,7 @@ Name                          | Description
 servers/use-disabled-commands | Allows server operators to use disabled commands.
 servers/use-disabled-modes    | Allows server operators to use disabled modes.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to use disabled commands and modes.
 

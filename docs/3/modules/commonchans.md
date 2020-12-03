@@ -24,7 +24,7 @@ Name                     | Description
 ------------------------ | -----------
 users/ignore-commonchans | Allows server operators to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
 

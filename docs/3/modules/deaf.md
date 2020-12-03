@@ -44,7 +44,7 @@ Name                  | Description
 ----------------------| -----------
 users/ignore-privdeaf | Allows server operators to message users with the `D` (privdeaf) mode set.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to message users with the `D` (privdeaf) mode set.
 

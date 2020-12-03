@@ -39,7 +39,7 @@ Name                   | Description
 channels/ignore-noctcp | Allows server operators to send a CTCP to a channel with the `C` (noctcp) mode set.
 users/ignore-noctcp    | Allows server operators to send a CTCP to a user with the `T` (u_noctcp) mode set.
 
-#### Example Usage
+##### Example Usage
 
 Allows server operators with the class named BasicOper to send a CTCP to a channel or user with the respective mode set.
 

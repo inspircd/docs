@@ -24,7 +24,7 @@ Name       | Type    | Default Value | Description
 ---------- | ------- | ------------- | -----------
 sendnotice | Boolean | Yes           | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to send a notice to channel operators when a timed ban is added or expired.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <timedbans sendnotice="yes">

@@ -44,7 +44,7 @@ Name   | Character | Type      | Parameter Syntax                               
 ------ | --------- | --------- | ----------------------------------------------- | ----------------- | -----------
 repeat | E         | Parameter | `[~|*]<lines>:<sec>[:<difference>][:<backlog>]` | Channel operators | Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
 
-##### Example Usage
+#### Example Usage
 
 Blocks more than two repeated messages in five seconds:
 

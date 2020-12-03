@@ -25,7 +25,7 @@ Name      | Type   | Default Value              | Description
 lowercase | Text   | abcdefghijklmnopqrstuvwxyz | A list of characters to treat as lower case letters.
 uppercase | Text   | ABCDEFGHIJKLMNOPQRSTUVWXYZ | A list of characters to treat as upper case letters.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <anticaps lowercase="abcdefghijklmnopqrstuvwxyz"

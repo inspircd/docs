@@ -26,7 +26,7 @@ Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
 forcenotice | Boolean | No            | [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to force bots to use notices.
 
-#### Example Usage
+##### Example Usage
 
 ```xml
 <botmode forcenotice="no">
