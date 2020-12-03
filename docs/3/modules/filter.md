@@ -79,7 +79,7 @@ r     | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Exempt registered user
 ##### Example Usage
 
 !!! note ""
-    The following examples assume that the "glob" regex module is being used.
+    The following example assumes that the "glob" regex module is being used.
 
     See the `<filteropts>` documentation above for more information.
 

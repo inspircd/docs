@@ -73,7 +73,7 @@ q     | Match against `QUIT` messages.
 ##### Example Usage
 
 !!! note ""
-    The following examples assume that the "glob" regex module is being used.
+    The following example assumes that the "glob" regex module is being used.
 
     See the `<filteropts>` documentation above for more information.
 
