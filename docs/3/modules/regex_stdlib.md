@@ -13,7 +13,7 @@ title: "Module Details: regex_stdlib (v3)"
 
 ### Description
 
-This module provides a regular expression engine which uses the [C++11 std::regex](https://www.gnu.org/software/libc/manual/html_node/POSIX-Regexp-Compilation.html#POSIX-Regexp-Compilation) regular expression matching system.
+This module provides a regular expression engine which uses the [C++11 std::regex](https://en.cppreference.com/w/cpp/regex/syntax_option_type#Constants) regular expression matching system.
 
 ### Configuration
 
