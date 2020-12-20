@@ -34,7 +34,10 @@ plugins:
           remove_comments: true
   - redirects:
       redirect_maps:
+          2/index.md: index.md
           3/configuration-changes.md: 3/breaking-changes.md
+          3/index.md: index.md
+          4/index.md: index.md
   - search
 theme:
   name: cinder
