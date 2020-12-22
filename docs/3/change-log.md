@@ -50,7 +50,6 @@ This page lists changes which have happened between releases.
 
 - Send `RPL_SAVENICK` numerics (from irc2) whenever a user's nick is forcibly changed to their UUID.
 
-
 ### InspIRCd 3.8.1
 
 **This version of InspIRCd was released on 2020-11-20.**
@@ -72,7 +71,6 @@ This page lists changes which have happened between releases.
 - Fixed the connectban and dnsbl modules executing before core_xline.
 
 - Fixed trailing and preceding whitespace not being stripped by `--{disable,enable}-extras`.
-
 
 ### InspIRCd 3.8.0
 
