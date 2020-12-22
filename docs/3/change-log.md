@@ -6,6 +6,51 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.9.0
+
+<!-- TODO: ensure changes after commit aaee82ee30 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added a CAPAB client command that will kill server connections made to client ports with a helpful message.
+
+- Added example provider configs for DroneBL, the EFnet RBL, and the dan.me.uk Tor exit node DNSBL.
+
+- Added extbans to the S2S protocol to allow services to validate bans easier.
+
+- Added HTTP path normalisation to the httpd module.
+
+- Added support for specifying multiple hostmasks in `<cgiirc:mask>`.
+
+- Developer: Added `ServerConfig::GetServer{Desc,Name}()` to allow retrieving the visible server name and description easier.
+
+- Fixed `/MAP` column alignment not taking into account the length of the server version.
+
+- Fixed being able to call events provided by modules that are dying.
+
+- Fixed inconsistently hiding the server name when `<options:hideserver>` is set.
+
+- Fixed not being able to log into an server operator account with an IP whitelist when using ldapoper.
+
+- Fixed server operators not being able to see module versions in `/MODULES`.
+
+- Fixed the fallback linker flags for the argon2 module.
+
+- Fixed the name of the sha1 hash provider.
+
+- Fixed users with the same casemapped nick sometimes being lost by the codepage module.
+
+- Improved debug logging for HTTPd modules.
+
+- Improved debug logging for service registration and deregistration.
+
+- Improved the error messages sent by the httpd module.
+
+- Removed the SERVER stub command.
+
+- Send `RPL_SAVENICK` numerics (from irc2) whenever a user's nick is forcibly changed to their UUID.
+
+
 ### InspIRCd 3.8.1
 
 **This version of InspIRCd was released on 2020-11-20.**
