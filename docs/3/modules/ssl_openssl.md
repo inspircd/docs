@@ -57,7 +57,7 @@ Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an 
 
 The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
 
-If no `<sslprofile>` tags are defined a default profile named `openssl` will be created. This profile will use the contents of the deprecated `<openssl>` tag if one has been defined.
+If no `<sslprofile>` tags are defined a default profile named `openssl` will be created. This profile will use the contents of the deprecated `<openssl>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
 
 Name               | Type    | Default Value | Description
 ------------------ | ------- | ------------- | -----------
