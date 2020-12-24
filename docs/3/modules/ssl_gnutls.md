@@ -33,23 +33,23 @@ ssl  | *This MUST be set to the name of a GnuTLS TLS (SSL) profile to listen for
 
 ##### Example Usage
 
-Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint:
+Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint with an [SSL profile](#sslprofile) named "Clients":
 
 ```xml
 <bind address="*"
       port="6697"
       ...
-      ssl="gnutls"
+      ssl="Clients"
       type="clients">
 ```
 
-Listens for GnuTLS encrypted server connections on the *:7000 endpoint:
+Listens for GnuTLS encrypted server connections on the *:7000 endpoint with an [SSL profile](#sslprofile) named "Servers":
 
 ```xml
 <bind address="*"
       port="7000"
       ...
-      ssl="gnutls"
+      ssl="Servers"
       type="servers">
 ```
 

@@ -33,23 +33,23 @@ ssl  | *This MUST be set to the name of an OpenSSL TLS (SSL) profile to listen f
 
 ##### Example Usage
 
-Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint:
+Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint with an [SSL profile](#sslprofile) named "Clients":
 
 ```xml
 <bind address="*"
       port="6697"
       ...
-      ssl="openssl"
+      ssl="Clients"
       type="clients">
 ```
 
-Listens for OpenSSL encrypted server connections on the *:7000 endpoint:
+Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an [SSL profile](#sslprofile) named "Servers":
 
 ```xml
 <bind address="*"
       port="7000"
       ...
-      ssl="openssl"
+      ssl="Servers"
       type="servers">
 ```
 

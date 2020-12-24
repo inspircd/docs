@@ -33,23 +33,23 @@ ssl  | *This MUST be set to the name of a mbedTLS TLS (SSL) profile to listen fo
 
 ##### Example Usage
 
-Listens for mbedTLS encrypted IRC connections on the *:6697 endpoint:
+Listens for mbedTLS encrypted IRC connections on the *:6697 endpoint with an [SSL profile](#sslprofile) named "Clients":
 
 ```xml
 <bind address="*"
       port="6697"
       ...
-      ssl="mbedtls"
+      ssl="Clients"
       type="clients">
 ```
 
-Listens for mbedTLS encrypted server connections on the *:7000 endpoint:
+Listens for mbedTLS encrypted server connections on the *:7000 endpoint with an [SSL profile](#sslprofile) named "Servers":
 
 ```xml
 <bind address="*"
       port="7000"
       ...
-      ssl="mbedtls"
+      ssl="Servers"
       type="servers">
 ```
 

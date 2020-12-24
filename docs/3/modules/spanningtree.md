@@ -44,33 +44,13 @@ servers | Listens for server connections.
 
 ##### Example Usage
 
-Listens for GnuTLS encrypted server connections on the *:7002 endpoint:
+Listens for TLS encrypted server connections on the *:7002 endpoint with an SSL profile named "Servers":
 
 ```xml
 <bind address="*"
       port="7003"
       ...
-      ssl="gnutls"
-      type="servers">
-```
-
-Listens for mbedTLS encrypted server connections on the *:7002 endpoint:
-
-```xml
-<bind address="*"
-      port="7002"
-      ...
-      ssl="mbedtls"
-      type="servers">
-```
-
-Listens for OpenSSL encrypted server connections on the *:7001 endpoint:
-
-```xml
-<bind address="*"
-      port="7001"
-      ...
-      ssl="openssl"
+      ssl="Servers"
       type="servers">
 ```
 
@@ -100,7 +80,7 @@ recvpass    | Text     | *None*        | **Required!** The password that the rem
 sendpass    | Text     | *None*        | **Required!** The password that the local server will use to log into the remote server.
 ssl         | Text     | *None*        | If defined then the name of a TLS (SSL) profile to use for encrypting the connection with this server.
 statshidden | Boolean  | No            | Whether the server IP address is hidden in the `/STATS` output.
-timeout     | Duration | 30s            | The number of seconds to wait before declaring a server connection as having failed.
+timeout     | Duration | 30s           | The number of seconds to wait before declaring a server connection as having failed.
 
 ##### Example Usage
 
@@ -116,7 +96,7 @@ Automatically connects to hub1.example.com after 120 seconds, failing over to hu
       port="7000"
       recvpass="incoming!password"
       sendpass="outgoing!password"
-      ssl="gnutls"
+      ssl="Servers"
       timeout="15s">
 ```
 
