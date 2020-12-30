@@ -38,7 +38,9 @@ title: Introduction
 
 ### InspIRCd 2
 
-**No security updates from 2021-01-01**
+**EOL since 2021-01-01**
+
+**Please upgrade ASAP**
 
 - [Installation](/2/installation)
 - [Configuration](/2/configuration)
