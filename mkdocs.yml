@@ -1,11 +1,4 @@
 nav:
-    - InspIRCd 2:
-        - Installation: 2/installation/index.md
-        - Configuration: 2/configuration/index.md
-        - Commands: 2/commands/index.md
-        - Modes: 2/modes.md
-        - Modules: 2/modules/index.md
-        - SNOMasks: 2/snomasks.md
     - InspIRCd 3:
         - Installation: 3/installation/index.md
         - Configuration: 3/configuration/index.md
