@@ -26,6 +26,11 @@ plugins:
   - redirects:
       redirect_maps:
           2/index.md: index.md
+          2/installation/centos.md: 3/installation/centos.md
+          2/installation/debian.md: 3/installation/debian.md
+          2/installation/index.md: 3/installation/index.md
+          2/installation/source.md: 3/installation/source.md
+          2/installation/windows.md: 3/installation/windows.md
           3/configuration-changes.md: 3/breaking-changes.md
           3/index.md: index.md
           4/index.md: index.md

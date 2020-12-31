@@ -42,7 +42,6 @@ title: Introduction
 
 **Please upgrade ASAP**
 
-- [Installation](/2/installation)
 - [Configuration](/2/configuration)
 - [Commands](/2/commands)
 - [Modes](/2/modes)
