@@ -14,7 +14,7 @@ sourceport | Number | *None*        | If defined then the UDP port to connect fr
 #### Example Usage
 
 ```xml
-<dns server="8.8.8.8"
+<dns server="127.0.0.53"
      timeout="5"
      sourceip=""
      sourceport="0">

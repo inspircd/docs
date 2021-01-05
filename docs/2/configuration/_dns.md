@@ -12,6 +12,6 @@ timeout | Number | 5             | The number of seconds before timing out DNS l
 #### Example Usage
 
 ```xml
-<dns server="8.8.8.8"
+<dns server="127.0.0.53"
      timeout="5">
 ```
