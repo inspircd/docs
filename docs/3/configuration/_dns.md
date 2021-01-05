@@ -6,7 +6,7 @@ The `<dns>` tag defines the DNS server to use when looking up hostnames. This ta
 
 Name       | Type   | Default Value | Description
 ---------- | ------ | ------------- | -----------
-server     | Text   | *None*        | If defined then the DNS server to look up hostnames with.
+server     | Text   | *None*        | If defined then the DNS server to look up hostnames with. If not set then the first system resolver will be used.
 timeout    | Number | 5             | The number of seconds before timing out DNS lookups.
 sourceip   | Text   | *None*        | If defined then the IP address to connect from when doing DNS lookups.
 sourceport | Number | *None*        | If defined then the UDP port to connect from when doing DNS lookups.
