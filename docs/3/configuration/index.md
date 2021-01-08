@@ -15,7 +15,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 3/configuration/_class.md !}
 {! 3/configuration/_config.md !}
 {! 3/configuration/_connect.md !}
-{! 2/configuration/_define.md !}
+{! 3/configuration/_define.md !}
 {! 3/configuration/_dns.md !}
 {! 3/configuration/_exception.md !}
 {! 3/configuration/_include.md !}

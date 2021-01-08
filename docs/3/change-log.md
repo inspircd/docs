@@ -8,11 +8,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.9.0
 
-<!-- TODO: ensure changes after commit aaee82ee30 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 8d6b550e0b are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
 - Added a CAPAB client command that will kill server connections made to client ports with a helpful message.
+
+- Added config entities which can be used for formatting IRC messages.
 
 - Added example provider configs for DroneBL, the EFnet RBL, and the dan.me.uk Tor exit node DNSBL.
 
@@ -22,6 +24,8 @@ This page lists changes which have happened between releases.
 
 - Added support for specifying multiple hostmasks in `<cgiirc:mask>`.
 
+- Added support for the standard XML `&apos;`, `&gt;` and `&lt;` entities in the config.
+
 - Developer: Added `ServerConfig::GetServer{Desc,Name}()` to allow retrieving the visible server name and description easier.
 
 - Fixed `/MAP` column alignment not taking into account the length of the server version.
@@ -29,6 +33,8 @@ This page lists changes which have happened between releases.
 - Fixed being able to call events provided by modules that are dying.
 
 - Fixed inconsistently hiding the server name when `<options:hideserver>` is set.
+
+- Fixed not being able to classban a class with spaces in the name.
 
 - Fixed not being able to log into an server operator account with an IP whitelist when using ldapoper.
 
