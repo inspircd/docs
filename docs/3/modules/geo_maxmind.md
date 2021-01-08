@@ -20,7 +20,7 @@ This module allows the server to perform geolocation lookups on both IP addresse
 To load this module use the following `<module>` tag:
 
 ```xml
-<module name="m_geo_maxmind.so">
+<module name="geo_maxmind">
 ```
 
 #### `<maxmind>`
