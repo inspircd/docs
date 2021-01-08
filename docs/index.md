@@ -20,7 +20,7 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### InspIRCd 3
+### InspIRCd 3 (stable)
 
 - [Installation](/3/installation)
 - [Configuration](/3/configuration)
@@ -36,17 +36,9 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### InspIRCd 2
+### InspIRCd 4 (unstable)
 
-**EOL since 2021-01-01**
-
-**Please upgrade ASAP**
-
-- [Configuration](/2/configuration)
-- [Commands](/2/commands)
-- [Modes](/2/modes)
-- [Modules](/2/modules)
-- [SNOMasks](/2/snomasks)
+**Coming soon**
 
 </div>
 

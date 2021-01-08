@@ -6,12 +6,12 @@ title: v3 Configuration
 
 This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/3/modules).
 
-{! 2/configuration/_admin.md !}
+{! 3/configuration/_admin.md !}
 {! 3/configuration/_badhost.md !}
 {! 3/configuration/_badip.md !}
 {! 3/configuration/_badnick.md !}
 {! 3/configuration/_bind.md !}
-{! 2/configuration/_cidr.md !}
+{! 3/configuration/_cidr.md !}
 {! 3/configuration/_class.md !}
 {! 3/configuration/_config.md !}
 {! 3/configuration/_connect.md !}
@@ -19,7 +19,7 @@ This page only lists core configuration. For details on the configuration of a s
 {! 3/configuration/_dns.md !}
 {! 3/configuration/_exception.md !}
 {! 3/configuration/_include.md !}
-{! 2/configuration/_insane.md !}
+{! 3/configuration/_insane.md !}
 {! 3/configuration/_limits.md !}
 {! 3/configuration/_log.md !}
 {! 3/configuration/_maxlist.md !}
@@ -30,6 +30,6 @@ This page only lists core configuration. For details on the configuration of a s
 {! 3/configuration/_performance.md !}
 {! 3/configuration/_pid.md !}
 {! 3/configuration/_security.md !}
-{! 2/configuration/_server.md !}
-{! 2/configuration/_type.md !}
-{! 2/configuration/_whowas.md !}
+{! 3/configuration/_server.md !}
+{! 3/configuration/_type.md !}
+{! 3/configuration/_whowas.md !}

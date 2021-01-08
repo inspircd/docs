@@ -16,7 +16,7 @@ The number of users you can support per-server is dependent on your chosen modul
 
 ### How do I get prefixes like `%`, `~`, and `&`?
 
-These prefixes are provided by the customprefix module. You should load this module and then define the appropriate `<customprefix>` tags to add those prefixes ([v2 docs](/2/modules/customprefix), [v3 docs](/3/modules/customprefix)).
+These prefixes are provided by the customprefix module. You should load this module and then define the appropriate `<customprefix>` tags to add those prefixes ([v3 docs](/3/modules/customprefix)).
 
 ### How do I start InspIRCd when the system boots?
 
@@ -57,11 +57,11 @@ Common services packages used with InspIRCd are:
 
 Server operators do not automatically get channel privileges by default. You can change this by:
 
-- Giving server operators a channel status using the operprefix module ([v2 docs](/2/modules/operprefix), [v3 docs](/3/modules/operprefix)).
+- Giving server operators a channel status using the operprefix module ([v3 docs](/3/modules/operprefix)).
 
-- Overriding your lack of privileges using the override module ([v2 docs](/2/modules/override), [v3 docs](/3/modules/override)).
+- Overriding your lack of privileges using the override module ([v3 docs](/3/modules/override)).
 
-- Giving yourself channel operator status using the samode module ([v2 docs](/2/modules/samode), [v3 docs](/3/modules/samode)).
+- Giving yourself channel operator status using the samode module ([v3 docs](/3/modules/samode)).
 
 ### Why does my server tell me "An unexpected TLS packet was received" or "error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record.c" when I try to connect using SSL/TLS?
 
@@ -83,27 +83,27 @@ This bug is known to be fixed in:
 - WeeChat v2.5 (released June 2019).
 - ZNC 1.8 (released May 2020).
 
-If you are using v2 and want to warn users to upgrade their client you can install the clientcheck contrib module via [the Module Manager](/2/module-manager) and use the following config:
+If you want to warn users to upgrade their client you can install the clientcheck contrib module via the [Module Manager](/3/module-manager) and use the following config:
 
 ```xml
-<module name="m_clientcheck.so">
+<module name="clientcheck">
 
 <clientcheck engine="pcre">
 
 <clientmatch pattern="^AdiIRC (?:[0-2]\.|3\.[0-5] )"
-             message="[WARNING] You have been detected as using a broken version of AdiIRC. This client will have problems connecting in the future. Please upgrade to v3.6 or newer to fix this issue.">
+             message="[WARNING] You have been detected as using a broken version of AdiIRC. This client may encounter problems on this server. Please upgrade to v3.6 or newer to fix this issue.">
 
 <clientmatch pattern="^HexChat 2\.(?:[0-9]\.|1[0-3]\.|14\.[0-2] )"
-             message="[WARNING] You have been detected as using a broken version of HexChat. This client will have problems connecting in the future. Please upgrade to v2.14.3 or newer to fix this issue.">
+             message="[WARNING] You have been detected as using a broken version of HexChat. This client may encounter problems on this server. Please upgrade to v2.14.3 or newer to fix this issue.">
 
 <clientmatch pattern="^irssi v(?:0\.|1\.0\.)"
-             message="[WARNING] You have been detected as using a broken version of Irssi. This client will have problems connecting in the future. Please upgrade to v1.1.0 or newer to fix this issue.">
+             message="[WARNING] You have been detected as using a broken version of Irssi. This client may encounter problems on this server. Please upgrade to v1.1.0 or newer to fix this issue.">
 
 <clientmatch pattern="^WeeChat (?:1\.|2\.[0-4][\. ])"
-             message="[WARNING] You have been detected as using a broken version of WeeChat. This client will have problems connecting in the future. Please upgrade to v2.5.0 or newer to fix this issue.">
+             message="[WARNING] You have been detected as using a broken version of WeeChat. This client may encounter problems on this server. Please upgrade to v2.5.0 or newer to fix this issue.">
 
 <clientmatch pattern="^ZNC (?:0\.|1\.[0-7][\. ])"
-             message="[WARNING] You have been detected as using a broken version of ZNC. This bouncer will have problems connecting in the future. Please upgrade to v1.8.0 or newer to fix this issue.">
+             message="[WARNING] You have been detected as using a broken version of ZNC. This bouncer may encounter problems on this server. Please upgrade to v1.8.0 or newer to fix this issue.">
 ```
 
 You may also wish to automatically kill users of unmaintained and insecure clients which will never be updated:
