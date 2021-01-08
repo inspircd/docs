@@ -56,6 +56,4 @@ filter | Allows exempted users to send messages that contain censored phrases.
 
 ### Special Notes
 
-If you want to link against InspIRCd v2 servers you must not change `<chanfilter:maxlen>` from the default.
-
 Due to limitations of the IRC protocol filters containing spaces can not be added.

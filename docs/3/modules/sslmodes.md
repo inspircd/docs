@@ -55,7 +55,3 @@ Bans users with an TLS (SSL) client certificate fingerprint of 5d7499e1a3537687a
 ```plaintext
 /MODE #channel +b z:5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
 ```
-
-### Special Notes
-
-If you want to link against InspIRCd v2 servers you must not enable user mode `z` (sslqueries).

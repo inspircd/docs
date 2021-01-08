@@ -60,7 +60,3 @@ Name     | Character | Type   | Parameter Syntax | Usable By | Description
 -------- | --------- | ------ | ---------------- | --------- | -----------
 deaf     | d         | Switch | *None*           | Anyone    | Prevents the user from receiving channel messages.
 privdeaf | D         | Switch | *None*           | Anyone    | Prevents the user from receiving private messages.
-
-### Special Notes
-
-If you want to link against InspIRCd v2 servers you must not enable user mode `D` (privdeaf).
