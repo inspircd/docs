@@ -31,8 +31,8 @@ file        | Text | *None*        | The location of the locale file on disk.
 ##### Example Usage
 
 ```xml
-<nationalchars casemapping="iso88591"
-               file="/path/to/locales/iso88591">
+<nationalchars casemapping="cp1250"
+               file="/path/to/locales/cp1250">
 ```
 
 ### Special Notes

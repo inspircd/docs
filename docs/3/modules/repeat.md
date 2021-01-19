@@ -22,6 +22,7 @@ The `<repeat>` tag defines settings about how the repeat module should behave. T
 
 Name        | Type     | Default Value | Description
 ----------- | -------- | ------------- | -----------
+kickmessage | String   | Repeat flood  | [**New in v3.9.0!**](/3/change-log/#inspircd-390) The message to kick users who repeat flood with.
 maxbacklog  | Number   | 20            | The maximum size that can be specified for backlog. Set to 0 to disable multiline matching.
 maxdistance | Number   | 50            | The maximum percentage of difference between two lines we'll allow to match. Set to 0 to disable edit-distance matching.
 maxlines    | Number   | 20            | The maximum lines of backlog to match against.
@@ -31,7 +32,8 @@ size        | Number   | 512           | The maximum number of characters to che
 ##### Example Usage
 
 ```xml
-<repeat maxbacklog="20"
+<repeat kickmessage="Repeat flood"
+        maxbacklog="20"
         maxdistance="50"
         maxlines="20"
         maxtime="1h"

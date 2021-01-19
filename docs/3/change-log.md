@@ -8,13 +8,21 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.9.0
 
-<!-- TODO: ensure changes after commit 8d6b550e0b are added to this list before release. -->
+<!-- TODO: ensure changes after commit a601cf2f0d are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
+- Added `<chanhistory:enableumode>` to allow enabling user mode `N` (nohistory) which allows users to opt-out of receiving channel history on join.
+
 - Added a CAPAB client command that will kill server connections made to client ports with a helpful message.
 
+- Added a configure option, `--runtime-dir`, which specifies the directory that runtime files (i.e. the pid file) should be placed in.
+
+- Added a DNS error class to the DNSBL stats.
+
 - Added config entities which can be used for formatting IRC messages.
+
+- Added default compiler flags for the ssl_openssl module to make building on distributions where OpenSSL is part of the base system easier.
 
 - Added example provider configs for DroneBL, the EFnet RBL, and the dan.me.uk Tor exit node DNSBL.
 
@@ -26,11 +34,29 @@ This page lists changes which have happened between releases.
 
 - Added support for the standard XML `&apos;`, `&gt;` and `&lt;` entities in the config.
 
+- Added the `<dns:enabled>` option to allow disabling DNS lookups entirely.
+
+- Added the `<repeat:kickmessage>` option to allow configuring the message shown when a user is kicked by the repeat module.
+
+- Added the `<shun:allowconnect>` option to allow configuring whether shuns should only be applied to users who are fully connected to the server.
+
 - Developer: Added `ServerConfig::GetServer{Desc,Name}()` to allow retrieving the visible server name and description easier.
+
+- Developer: added support for casting a `Cap::Reference` to a `Cap::Capability*`.
+
+- Fixed `./configure --update` with cache files generated before v3.2.
 
 - Fixed `/MAP` column alignment not taking into account the length of the server version.
 
+- Fixed `<class:snomask>` not being parsed correctly when a type has multiple oper classes.
+
 - Fixed being able to call events provided by modules that are dying.
+
+- Fixed DNSBLs that return non-local addresses blocking connections.
+
+- Fixed GLOADMODULE, GUNLOADMODULE, and GRELOADMODULE not sending error numerics across the network.
+
+- Fixed handling DNSBLs that return invalid lookup results.
 
 - Fixed inconsistently hiding the server name when `<options:hideserver>` is set.
 
@@ -40,9 +66,17 @@ This page lists changes which have happened between releases.
 
 - Fixed server operators not being able to see module versions in `/MODULES`.
 
+- Fixed silently failing when a DNSBL returns no IPv4 results.
+
+- Fixed the DNS socket not being closed when core_dns is unloaded.
+
 - Fixed the fallback linker flags for the argon2 module.
 
 - Fixed the name of the sha1 hash provider.
+
+- Fixed the numeric sent when reloading a module which is not loaded.
+
+- Fixed trying to set snomasks on non-server operators with SAMODE
 
 - Fixed users with the same casemapped nick sometimes being lost by the codepage module.
 

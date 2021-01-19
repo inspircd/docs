@@ -20,16 +20,18 @@ To load this module use the following `<module>` tag:
 
 The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
 
-Name      | Type    | Default Value | Description
---------- | ------- | ------------- | -----------
-bots      | Boolean | Yes           | Whether users with the bot user mode (+B) will receive history.
-maxlines  | Number  | 50            | The maximum number of lines of history that a channel can keep.
-prefixmsg | Boolean | Yes           | Whether to send a notice before sending history.
+Name        | Type    | Default Value | Description
+----------- | ------- | ------------- | -----------
+bots        | Boolean | Yes           | Whether users with the bot user mode (+B) will receive history.
+enableumode | Boolean | No            | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether user mode `N` (Nohistory) is enabled.
+maxlines    | Number  | 50            | The maximum number of lines of history that a channel can keep.
+prefixmsg   | Boolean | Yes           | Whether to send a notice before sending history.
 
 ##### Example Usage
 
 ```xml
 <chanhistory bots="yes"
+             enableumode="yes"
              maxlines="50"
              prefixmsg="yes">
 ```
@@ -53,3 +55,12 @@ Replays up to 25 messages from the last two hours:
 ```plaintext
 /MODE #channel +H 25:2h
 ```
+
+### User Modes
+
+!!! note "New in v3.9.0!"
+    If you are using an older version you will need to upgrade to use this user mode.
+
+Name      | Character | Type   | Parameter Syntax | Usable By | Description
+--------- | --------- | ------ | ---------------- | --------- | -----------
+nohistory | N         | Switch | *None*           | Anyone    | Disables receiving channel history on join.
