@@ -23,7 +23,7 @@ The `<chanhistory>` tag defines settings about how the chanhistory module should
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
 bots        | Boolean | Yes           | Whether users with the bot user mode (+B) will receive history.
-enableumode | Boolean | No            | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether user mode `N` (Nohistory) is enabled.
+enableumode | Boolean | No            | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether user mode `N` (nohistory) is enabled.
 maxlines    | Number  | 50            | The maximum number of lines of history that a channel can keep.
 prefixmsg   | Boolean | Yes           | Whether to send a notice before sending history.
 
