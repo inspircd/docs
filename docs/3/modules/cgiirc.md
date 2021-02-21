@@ -104,11 +104,26 @@ Requires that users must be connecting via the "wibble" WebIRC gateway to use th
 
 Name   | Parameter Count  | Syntax                                                | Description
 ------ | ---------------- | ----------------------------------------------------- | -----------
+HEXIP  | 1                | `<hex-ip|real-ip>`                                    | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Encodes or decodes an IP between its human readable form and its hex form.
 WEBIRC | 4-5              | `<password> <gateway> <hostname> <address> [<flags>]` | Allows gateways to specify the hostname and IP address of users.
 
 More information about the `/WEBIRC` command is available on [the IRCv3 website](https://ircv3.net/specs/extensions/webirc.html).
 
 <!-- WEBIRC is not documented here because it is not intended to be executed by users -->
+
+#### Example Usage
+
+Decodes 7f000001 to its human readable form:
+
+```plaintext
+/HEXIP 7f000001
+```
+
+Encodes 127.0.0.1 to its hex form:
+
+```plaintext
+/HEXIP 127.0.0.1
+```
 
 ### Server Notice Masks
 

@@ -16,6 +16,24 @@ To load this module use the following `<module>` tag:
 <module name="connectban">
 ```
 
+#### `<connect>`
+
+This module extends the core `<connect>` tags with the following fields:
+
+Name          | Type    | Default Value | Description
+------------- | ------- | ------------- | -----------
+useconnectban | Boolean | yes           | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether to ban users in this class for making excessive connections to the server.
+
+##### Example Usage
+
+Disables excessive connection bans for users in the BNC class:
+
+```xml
+<connect name="BNC"
+         ...
+         useconnectban="no">
+```
+
 #### `<connectban>`
 
 The `<connectban>` tag defines settings about how the connectban module should behave. This tag can only be defined once.

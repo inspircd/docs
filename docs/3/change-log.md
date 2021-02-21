@@ -8,11 +8,15 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.9.0
 
-<!-- TODO: ensure changes after commit a601cf2f0d are added to this list before release. -->
+<!-- TODO: ensure changes after commit 6f4aee365b5af9a9c6f733be8dbfc3365d15a866 are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
 - Added `<chanhistory:enableumode>` to allow enabling user mode `N` (nohistory) which allows users to opt-out of receiving channel history on join.
+
+- Added `<connect:useconnectban>` to allow exempting classes from the connectban module.
+
+- Added `<connect:useconnflood>` to allow exempting classes from the connflood module.
 
 - Added a CAPAB client command that will kill server connections made to client ports with a helpful message.
 
@@ -34,6 +38,8 @@ This page lists changes which have happened between releases.
 
 - Added support for the standard XML `&apos;`, `&gt;` and `&lt;` entities in the config.
 
+- Added the `/HEXIP` command to the cgiirc module to allow encoding and decoding IP addresses from their ident format.
+
 - Added the `<dns:enabled>` option to allow disabling DNS lookups entirely.
 
 - Added the `<repeat:kickmessage>` option to allow configuring the message shown when a user is kicked by the repeat module.
@@ -50,6 +56,10 @@ This page lists changes which have happened between releases.
 
 - Fixed `<class:snomask>` not being parsed correctly when a type has multiple oper classes.
 
+- Fixed a bunch of inconsistent Perl version requirements.
+
+- Fixed a crash on shut down when started with `--debug --nofork`.
+
 - Fixed being able to call events provided by modules that are dying.
 
 - Fixed DNSBLs that return non-local addresses blocking connections.
@@ -60,25 +70,39 @@ This page lists changes which have happened between releases.
 
 - Fixed inconsistently hiding the server name when `<options:hideserver>` is set.
 
+- Fixed modulemanager storing files in the incorrect directory if not executed from the root of the source directory.
+
 - Fixed not being able to classban a class with spaces in the name.
 
 - Fixed not being able to log into an server operator account with an IP whitelist when using ldapoper.
+
+- Fixed sending `ERR_NOSUCHNICK` instead of `ERR_NOSUCHSERVICE` when a U-line alias requirement is unavailable.
 
 - Fixed server operators not being able to see module versions in `/MODULES`.
 
 - Fixed silently failing when a DNSBL returns no IPv4 results.
 
+- Fixed storing data files in `/var/inspircd` instead of `/var/lib/inspircd`.
+
 - Fixed the DNS socket not being closed when core_dns is unloaded.
 
 - Fixed the fallback linker flags for the argon2 module.
+
+- Fixed the grammar of the message broadcast when reloading the SSL profiles.
+
+- Fixed the helper script not storing Valgrind log files in the log directory.
 
 - Fixed the name of the sha1 hash provider.
 
 - Fixed the numeric sent when reloading a module which is not loaded.
 
+- Fixed the path specified in `--prefix` being relevant at runtime.
+
 - Fixed trying to set snomasks on non-server operators with SAMODE
 
 - Fixed users with the same casemapped nick sometimes being lost by the codepage module.
+
+- Fixed using the legacy TR1 header files when building with a C++11 compiler.
 
 - Improved debug logging for HTTPd modules.
 
@@ -89,6 +113,12 @@ This page lists changes which have happened between releases.
 - Removed the SERVER stub command.
 
 - Send `RPL_SAVENICK` numerics (from irc2) whenever a user's nick is forcibly changed to their UUID.
+
+- Updated the `/SERVLIST` command to match against and show the oper type of services pseudoclients.
+
+- Updated the `/SSLINFO` command to allow viewing information about channels.
+
+- Updated the IRCCloud example configs to exempt it from DNSBL lookups, connectban bans, and connflood throttles.
 
 ### InspIRCd 3.8.1
 

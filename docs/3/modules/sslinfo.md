@@ -78,9 +78,9 @@ operonly | Boolean | No             | Whether user TLS (SSL) certificate fingerp
 
 ### Commands
 
-Name    | Parameter Count | Syntax       | Description
-------- | --------------- | ------------ | -----------
-SSLINFO | 1               | `<nickname>` | Views the TLS (SSL) certificate information for &lt;nickname&gt;.
+Name    | Parameter Count | Syntax     | Description
+------- | --------------- | ---------- | -----------
+SSLINFO | 1               | `<target>` | Views the TLS (SSL) certificate information for &lt;target&gt;.
 
 #### Example Usage
 
@@ -88,6 +88,12 @@ Views the TLS (SSL) certificate information for Sadie:
 
 ```plaintext
 /SSLINFO Sadie
+```
+
+[**New in v3.9.0!**](/3/change-log/#inspircd-390) Views the TLS (SSL) certificate information for users in #wibble:
+
+```plaintext
+/SSLINFO #wibble
 ```
 
 ### Special Notes

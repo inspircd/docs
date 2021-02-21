@@ -37,3 +37,21 @@ quitmsg  | Text     | *None*                                 | The message to qu
            timeout="30s"
            quitmsg="Throttled">
 ```
+
+#### `<connect>`
+
+This module extends the core `<connect>` tags with the following fields:
+
+Name         | Type    | Default Value | Description
+------------ | ------- | ------------- | -----------
+useconnflood | Boolean | yes           | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether to throttle users in this class when excessive connections are being made to the server.
+
+##### Example Usage
+
+Disables connection flood throttling for users in the BNC class:
+
+```xml
+<connect name="BNC"
+         ...
+         useconnflood="no">
+```
