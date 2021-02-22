@@ -25,7 +25,7 @@ To load this module use the following `<module>` tag:
 
 #### `<bind>`
 
-This module extends the core `<bind>` tags with the following keys:
+This module extends [the core `<bind>` tags](/3/configuration#bind) with the following keys:
 
 Name | Description
 ---- | -----------

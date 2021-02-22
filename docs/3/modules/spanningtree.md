@@ -36,7 +36,7 @@ Automatically connects to hub1.example.com after 120 seconds, failing over to hu
 
 #### `<bind>`
 
-This module extends the core `<bind>` tags with the following listener types:
+This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
 
 Name    | Description
 ------- | -----------
@@ -102,7 +102,7 @@ Automatically connects to hub1.example.com after 120 seconds, failing over to hu
 
 #### `<options>`
 
-This module extends the core `<options>` tag with the following fields:
+This module extends [the core `<options>` tag](/3/configuration#options) with the following fields:
 
 Name           | Type     | Default Value | Description
 -------------- | -------- | ------------- | -----------
@@ -123,7 +123,7 @@ serverpingfreq | Duration | 1m            | The number of seconds to wait betwee
 
 #### `<performance>`
 
-This module extends the core `<performance>` tag with the following fields:
+This module extends [the core `<performance>` tag](/3/configuration#performance) with the following fields:
 
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------
@@ -138,7 +138,7 @@ quietbursts | Boolean | No            | Whether to inform server operators of us
 
 #### `<security>`
 
-This module extends the core `<security>` tag with the following fields:
+This module extends [the core `<security>` tag](/3/configuration#security) with the following fields:
 
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------

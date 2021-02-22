@@ -40,7 +40,7 @@ quitmsg  | Text     | *None*                                 | The message to qu
 
 #### `<connect>`
 
-This module extends the core `<connect>` tags with the following fields:
+This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
 
 Name         | Type    | Default Value | Description
 ------------ | ------- | ------------- | -----------

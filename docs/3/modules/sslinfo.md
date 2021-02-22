@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<connect>`
 
-This module extends the core `<connect>` tags with the following fields:
+This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
 
 Name       | Type | Default Value | Description
 ---------  | ---- | ------------- | -----------
@@ -44,7 +44,7 @@ Requires users to be using TLS (SSL) to be assigned to the Secure class:
 
 #### `<oper>`
 
-This module extends the core `<oper>` tag with the following fields:
+This module extends [the core `<oper>` tag](/3/configuration#oper) with the following fields:
 
 Name        | Type    | Default Value | Description
 ----------- | ------- | ------------- | -----------

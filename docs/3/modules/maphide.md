@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<security>`
 
-This module extends the core `<security>` tag with the following fields:
+This module extends [the core `<security>` tag](/3/configuration#security) with the following fields:
 
 Name    | Type | Default Value | Description
 ------- | ---- | ------------- | -----------

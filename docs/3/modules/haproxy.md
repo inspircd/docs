@@ -18,7 +18,7 @@ To load this module use the following `<module>` tag:
 
 #### `<bind>`
 
-This module extends the core `<bind>` tags with the following hook types:
+This module extends [the core `<bind>` tags](/3/configuration#bind) with the following hook types:
 
 Name    | Description
 ------- | -----------
