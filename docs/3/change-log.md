@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.9.0
 
-<!-- TODO: ensure changes after commit 6f4aee365b5af9a9c6f733be8dbfc3365d15a866 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2021-02-26.**
 
 - Added `<chanhistory:enableumode>` to allow enabling user mode `N` (nohistory) which allows users to opt-out of receiving channel history on join.
 
@@ -24,6 +22,8 @@ This page lists changes which have happened between releases.
 
 - Added a DNS error class to the DNSBL stats.
 
+- Added a human readable version of the geolocation data so it works in `/CHECK`.
+
 - Added config entities which can be used for formatting IRC messages.
 
 - Added default compiler flags for the ssl_openssl module to make building on distributions where OpenSSL is part of the base system easier.
@@ -33,6 +33,10 @@ This page lists changes which have happened between releases.
 - Added extbans to the S2S protocol to allow services to validate bans easier.
 
 - Added HTTP path normalisation to the httpd module.
+
+- Added snomask privileges to the `/CHECK` output of a server operator.
+
+- Added support for multi-prefix to `/WHOIS` channel lists.
 
 - Added support for specifying multiple hostmasks in `<cgiirc:mask>`.
 
@@ -75,6 +79,8 @@ This page lists changes which have happened between releases.
 - Fixed not being able to classban a class with spaces in the name.
 
 - Fixed not being able to log into an server operator account with an IP whitelist when using ldapoper.
+
+- Fixed NOTICE, PRIVMSG, and TAGMSG with multiple status message characters.
 
 - Fixed sending `ERR_NOSUCHNICK` instead of `ERR_NOSUCHSERVICE` when a U-line alias requirement is unavailable.
 
