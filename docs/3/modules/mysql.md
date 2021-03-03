@@ -48,5 +48,5 @@ charset | Text   | *None*        | If defined then a custom character set to use
           user="ircd_opers"
           pass="changeme"
           name="inspircd"
-          charset="utf8">
+          charset="utf8mb4">
 ```
