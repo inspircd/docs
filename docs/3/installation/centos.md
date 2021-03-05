@@ -39,6 +39,6 @@ The package should now be installed and you can proceed to set up your [configur
 
 Configuration files are stored in `/etc/inspircd`.
 
-Data files are stored in `/var/inspircd`.
+Data files are stored in `/var/lib/inspircd`.
 
 Log files are stored in `/var/log/inspircd`.
