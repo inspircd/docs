@@ -4,7 +4,7 @@
 
 Reloads the server configuration.
 
-If `<type>` is specified then then a specific module is rehashed on the local server.
+If `<type>` is specified then a specific module is rehashed on the local server.
 
 If `<server>` is specified then the specified server's configuration is reloaded.
 
