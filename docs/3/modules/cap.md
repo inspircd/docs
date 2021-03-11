@@ -30,9 +30,10 @@ CAP  | 1-2             | `CLEAR`<br>`END`<br>`LIST`<br>`LS [<version>]`<br>`REQ 
 
 ### Client Capabilities
 
-Name                | Description
-------------------- | -----------
-inspircd.org/poison | Rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
+Name                          | Description
+----------------------------- | -----------
+inspircd.org/poison           | Rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
+inspircd.org/standard-replies | Informs the server that the requesting client is capable of handling arbitrary [standard replies](https://ircv3.net/specs/extensions/standard-replies).
 
 ### Special Notes
 
