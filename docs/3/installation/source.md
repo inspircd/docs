@@ -61,7 +61,7 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd` direc
 
 Execute the `./configure` script from the directory which contains the InspIRCd sources from the previous step. This will start an interactive wizard to help you configure your installation.
 
-You will initially be shown the installation paths that InspIRCd defaults to. The default is to install into a self-contained folder in your home directory but you can do a system-wide install if you really must. If the shown paths are okay then press enter to continue. Otherwise, enter "no", press enter, and fill in the paths that it prompts you for.
+You will initially be shown the installation paths that InspIRCd defaults to. The default is to install into a self-contained folder in your home directory but you can change this if you want. If the shown paths are okay then press enter to continue. Otherwise, enter "no", press enter, and fill in the paths that it prompts you for.
 
 After you have configured the paths you will be asked whether you want to enable extra modules automatically based on whether you have the dependencies installed. If you want to do this then press enter to continue. Otherwise, enter "no", press enter, and select the extra modules that you want to use. You can enable modules later using `./configure --enable-extras foo` if you change your mind..
 
