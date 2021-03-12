@@ -13,7 +13,7 @@ title: "Module Details: regex_tre (v3)"
 
 ### Description
 
-This module provides a regular expression engine which uses the [TRE](https://laurikari.net/tre/) library.
+This module provides the `tre` regular expression engine which uses the [TRE](https://laurikari.net/tre/) library.
 
 ### Configuration
 

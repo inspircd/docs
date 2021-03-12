@@ -13,7 +13,7 @@ title: "Module Details: regex_pcre (v3)"
 
 ### Description
 
-This module provides a regular expression engine which uses the [PCRE](https://www.pcre.org) library.
+This module provides the `pcre` regular expression engine which uses the [PCRE](https://www.pcre.org) library.
 
 ### Configuration
 

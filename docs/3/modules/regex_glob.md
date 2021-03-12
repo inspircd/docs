@@ -6,7 +6,7 @@ title: "Module Details: regex_glob (v3)"
 
 ### Description
 
-This module provides a regular expression engine which uses the built-in glob matching system.
+This module provides the `glob` regular expression engine which uses the built-in glob matching system.
 
 ### Configuration
 

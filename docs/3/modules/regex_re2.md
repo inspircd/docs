@@ -13,7 +13,7 @@ title: "Module Details: regex_re2 (v3)"
 
 ### Description
 
-This module provides a regular expression engine which uses the [RE2](https://github.com/google/re2) library.
+This module provides the `re2` regular expression engine which uses the [RE2](https://github.com/google/re2) library.
 
 ### Configuration
 
