@@ -6,6 +6,54 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.10.0
+
+<!-- TODO: ensure changes after commit 37f068576e844da8b6d75853214ce7553adb3a15 are added to this list before release. -->
+
+ **This version of InspIRCd has not yet been released.**
+
+- Added a codepage file for iso-8859-2 casemapping.
+
+- Added a human readable version of the cloak list for use with `/CHECK`.
+
+- Added support for automatically enabling the ldap, regex_stdlib, and ssl_mbedtls modules when their dependencies are available.
+
+- Added support for serialising filters to a config file.
+
+- Added support for using the `--prefix` configure option with `--system`.
+
+- Changed the storage engine for the MySQL sqloper module from MyISAM to InnoDB.
+
+- Developer: added subclass of `IOHookProvider` for SSL modules.
+
+- Fixed a WHO request with flags but no fields being considered fuzzy.
+
+- Fixed configure not printing a newline after warnings in some cases.
+
+- Fixed miscounting DNSBL stats when a user disconnects or a DNSBL is down.
+
+- Fixed not being able to name a class a value beginning with `unnamed-`.
+
+- Fixed not being able to print coloured text to the standard error stream on Windows.
+
+- Fixed not being able to send a standard reply with no command in some cases.
+
+- Fixed not using the `ERR_INVALIDMODEPARAM` numeric when a parameter begins with `:` or contains a space.
+
+- Fixed not using the default value for a bool/duration/int/uint config field when an empty value is specified.
+
+- Fixed writing port bind errors to the standard output stream instead of the error stream.
+
+- Improved the output of `/STATS p` when multiple I/O hooks are in use.
+
+- Renamed `<bind:ssl>` to `<bind:sslprofile>` (old configs will still work).
+
+- Renamed `<link:ssl>` to `<link:sslprofile>` (old configs will still work).
+
+- Renamed the latin1 codepage file to iso-8859-1.
+
+- Warn about compiler and Perl versions for which support will be dropped in the future when using configure.
+
 ### InspIRCd 3.9.0
 
 **This version of InspIRCd was released on 2021-02-26.**
