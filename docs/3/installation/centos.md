@@ -35,6 +35,8 @@ sudo yum install "./inspircd-[VERSION].[OS].centos.x86_64.rpm"
 
 The package should now be installed and you can proceed to set up your [configuration](/3/configuration).
 
+Once you have configured your server you can start it by running `systemctl start inspircd.service` or, if you prefer not to use systemd, by running `inspircd`.
+
 ### Where does this package store important files?
 
 Configuration files are stored in `/etc/inspircd`.
