@@ -7,6 +7,13 @@ title: "Module Details: argon2 (v3)"
 !!! note "New in v3.8.0!"
     If you are using an older version you will need to upgrade to use this module.
 
+!!! note ""
+    This module depends on a third-party library ([Argon2](https://github.com/P-H-C/phc-winner-argon2)) and must be manually enabled at compile time.
+
+    Once you have installed the dependency you can enable this module using the following command:
+
+    <pre><code>./configure --enable-extras argon2</code></pre>
+
 ### Description
 
 This module allows other modules to generate [Argon2](https://en.wikipedia.org/wiki/Argon2) hashes.
