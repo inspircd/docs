@@ -43,13 +43,13 @@ Bans users matching `*!*@example.com` from joining \#channel:
 Sets the channel key for \#cheese to "cheddar":
 
 ```plaintext
-/MODE #channel +k cheddar
+/MODE #cheese +k cheddar
 ```
 
 Removes the channel key for \#cheese:
 
 ```plaintext
-/MODE #channel -k cheddar
+/MODE #cheese -k cheddar
 ```
 
 Limits \#channel to 100 users:
