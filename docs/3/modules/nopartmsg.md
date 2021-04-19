@@ -6,7 +6,7 @@ title: "Module Details: nopartmsg (v3)"
 
 ### Description
 
-This module adds the `p:` extended ban which blocks the part message of matching users.
+This module adds extended ban `p:` which blocks the part message of matching users.
 
 ### Configuration
 

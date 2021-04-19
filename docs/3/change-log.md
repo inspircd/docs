@@ -78,7 +78,7 @@ This page lists changes which have happened between releases.
 
 - Added example provider configs for DroneBL, the EFnet RBL, and the dan.me.uk Tor exit node DNSBL.
 
-- Added extbans to the S2S protocol to allow services to validate bans easier.
+- Added extended bans to the S2S protocol to allow services to validate bans easier.
 
 - Added HTTP path normalisation to the httpd module.
 
@@ -504,7 +504,7 @@ This page lists changes which have happened between releases.
 
 - Improve the warning process when starting InspIRCd as root.
 
-- Improved the ban message shown to users if they are banned by an extban.
+- Improved the ban message shown to users if they are banned by an extended ban.
 
 - Improved the output when a port can not be bound.
 
@@ -628,7 +628,7 @@ This page lists changes which have happened between releases.
 
 * Fixed not applying IRCv3 `server-time` timestamps on the server the source is connecting from.
 
-* Fixed not being able to use the `O` (oper) extban to server operators with a space in their server operator type.
+* Fixed not being able to use the `O` (oper) extended ban to server operators with a space in their server operator type.
 
 * Fixed referring to registration timeouts as ping timeouts in the `conn_waitpong` module.
 

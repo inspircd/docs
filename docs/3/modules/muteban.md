@@ -6,7 +6,7 @@ title: "Module Details: muteban (v3)"
 
 ### Description
 
-This module adds extended ban `m` which bans specific masks from speaking in a channel.
+This module adds extended ban `m:` which bans specific masks from speaking in a channel.
 
 ### Configuration
 

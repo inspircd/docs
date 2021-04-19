@@ -6,7 +6,7 @@ title: "Module Details: allowinvite (v3)"
 
 ### Description
 
-This module adds channel mode `A` (allowinvite) which allows unprivileged users to use the `/INVITE` command and extended ban `A` which bans specific masks from using the `/INVITE` command.
+This module adds channel mode `A` (allowinvite) which allows unprivileged users to use the `/INVITE` command and extended ban `A:` which bans specific masks from using the `/INVITE` command.
 
 ### Configuration
 

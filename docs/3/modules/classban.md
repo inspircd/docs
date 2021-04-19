@@ -6,7 +6,7 @@ title: "Module Details: classban (v3)"
 
 ### Description
 
-This module adds the `n:` extended ban which check whether users are in a connect class matching the specified glob pattern.
+This module adds extended ban `n:` which check whether users are in a connect class matching the specified glob pattern.
 
 ### Configuration
 
