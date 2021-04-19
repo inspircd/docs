@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.10.0
 
-<!-- TODO: ensure changes after commit 37f068576e844da8b6d75853214ce7553adb3a15 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 033127f583ba344dfe2306f37325ef3987fd42e3 are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
 
@@ -16,11 +16,31 @@ This page lists changes which have happened between releases.
 
 - Added a human readable version of the cloak list for use with `/CHECK`.
 
+- Added automatic pruning of expired entries to the chanhistory module.
+
+- Added extended ban `w:` which matches against a WebIRC gateway name.
+
+- Added more logging to the http_acl module to allow debugging access issues.
+
 - Added support for automatically enabling the ldap, regex_stdlib, and ssl_mbedtls modules when their dependencies are available.
+
+- Added support for multiple hosts in `<connect:allow>` and `<connect:deny>`.
+
+- Added support for optional includes that are only loaded if they exist.
+
+- Added support for per-DNSBL timeouts and raised the default for torexit.dan.me.uk to 10 seconds.
 
 - Added support for serialising filters to a config file.
 
 - Added support for using the `--prefix` configure option with `--system`.
+
+- Changed RPL_WHOISGATEWAY so it is visible by unprivileged users.
+
+- Changed the default runtime directory in system-wide mode to /var/run/inspircd to allow writing files after dropping root.
+
+- Changed the idle time in `/STATS P` to use a duration string instead of seconds.
+
+- Changed the onchans `/CHECK` entry to show all of a user's prefix modes.
 
 - Changed the storage engine for the MySQL sqloper module from MyISAM to InnoDB.
 
@@ -42,7 +62,13 @@ This page lists changes which have happened between releases.
 
 - Fixed not using the default value for a bool/duration/int/uint config field when an empty value is specified.
 
+- Fixed the deaf module not blocking tag messages.
+
+- Fixed the ldapauth module not using the `<ldapauth:useusername>` field when it is documented to.
+
 - Fixed writing port bind errors to the standard output stream instead of the error stream.
+
+- Improved the CTCP detection of the blockcolor module.
 
 - Improved the output of `/STATS p` when multiple I/O hooks are in use.
 
