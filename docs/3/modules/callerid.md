@@ -6,7 +6,7 @@ title: "Module Details: callerid (v3)"
 
 ### Description
 
-This module provides user mode `g` (bot) which allows users to require that other users are on their whitelist before messaging them.
+This module provides user mode `g` (callerid) which allows users to require that other users are on their whitelist before messaging them.
 
 ### Configuration
 
