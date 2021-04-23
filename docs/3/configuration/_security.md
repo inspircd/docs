@@ -8,7 +8,7 @@ Name                | Type     | Default Value | Description
 ------------------- | -------- | ------------- | -----------
 allowcoreunload     | Boolean  | No            | Whether core modules can be unloaded by a server operator.
 announceinvites     | Text     | dynamic       | Whether to send an announcement when a user is invited to a channel.
-customversion       | Text     | Network IRCd  | A custom string to show in the `/VERSION` output.
+customversion       | Text     | *None*        | A custom string to show in the `/VERSION` output.
 genericoper         | Boolean  | No            | Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
 hidebans            | Boolean  | No            | Whether to only show X-line messages to server operators.
 hidekills           | Text     | *None*        | If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
