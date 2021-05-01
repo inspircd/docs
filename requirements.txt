@@ -14,7 +14,7 @@ mkdocs-cinder==1.2.0
 mkdocs-exclude==1.0.2
 mkdocs-minify-plugin==0.4.0
 mkdocs-redirects==1.0.3
-nltk==3.5
+nltk==3.6.2
 PyYAML==5.4.1
 regex==2021.4.4
 six==1.15.0
