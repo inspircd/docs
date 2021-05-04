@@ -26,7 +26,7 @@ Name                                                      | Description
 [blockcaps](/3/modules/blockcaps)                         | Adds channel mode B (blockcaps) which allows channels to block messages which are excessively capitalised.
 [blockcolor](/3/modules/blockcolor)                       | Adds channel mode c (blockcolor) which allows channels to block messages which contain IRC formatting codes.
 [botmode](/3/modules/botmode)                             | Adds user mode B (bot) which marks users with it set as bots in their /WHOIS response.
-[callerid](/3/modules/callerid)                           | Provides user mode g (bot) which allows users to require that other users are on their whitelist before messaging them.
+[callerid](/3/modules/callerid)                           | Provides user mode g (callerid) which allows users to require that other users are on their whitelist before messaging them.
 [cap](/3/modules/cap)                                     | Implements support for the IRCv3 Client Capability Negotiation extension.
 [cban](/3/modules/cban)                                   | Adds the /CBAN command which allows server operators to prevent channels matching a glob from being created.
 [censor](/3/modules/censor)                               | Allows the server administrator to define inappropriate phrases that are not allowed to be used in private or channel messages.
