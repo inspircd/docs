@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.10.0
 
-<!-- TODO: ensure changes after commit 033127f583ba344dfe2306f37325ef3987fd42e3 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 876d6d3afe5b936d585159b6c4f444aed808b5b6 are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
 
@@ -66,9 +66,15 @@ This page lists changes which have happened between releases.
 
 - Fixed the ldapauth module not using the `<ldapauth:useusername>` field when it is documented to.
 
+- Fixed unknown DNS record types preventing the retrieval of other DNS records.
+
 - Fixed writing port bind errors to the standard output stream instead of the error stream.
 
 - Improved the CTCP detection of the blockcolor module.
+
+- Improved the messages sent when loading, unloading, or reloading modules.
+
+- Improved the messages sent when trying to set or unset an unknown mode.
 
 - Improved the output of `/STATS p` when multiple I/O hooks are in use.
 
