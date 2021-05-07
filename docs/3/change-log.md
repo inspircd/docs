@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.10.0
 
-<!-- TODO: ensure changes after commit 876d6d3afe5b936d585159b6c4f444aed808b5b6 are added to this list before release. -->
-
- **This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2020-05-14.**
 
 - Added a codepage file for iso-8859-2 casemapping.
 
@@ -48,6 +46,8 @@ This page lists changes which have happened between releases.
 
 - Fixed a WHO request with flags but no fields being considered fuzzy.
 
+- Fixed an off by one error in various bitsets.
+
 - Fixed configure not printing a newline after warnings in some cases.
 
 - Fixed miscounting DNSBL stats when a user disconnects or a DNSBL is down.
@@ -58,9 +58,13 @@ This page lists changes which have happened between releases.
 
 - Fixed not being able to send a standard reply with no command in some cases.
 
+- Fixed not sending ERR_BADCHANMASK in response to OJOIN/SAJOIN when a channel name is invalid.
+
 - Fixed not using the `ERR_INVALIDMODEPARAM` numeric when a parameter begins with `:` or contains a space.
 
 - Fixed not using the default value for a bool/duration/int/uint config field when an empty value is specified.
+
+- Fixed sending malformed pong messages in some cases.
 
 - Fixed the deaf module not blocking tag messages.
 

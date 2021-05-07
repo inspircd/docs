@@ -10,6 +10,7 @@ directory    | Text    | *None*                                   | If defined t
 executable   | Text    | *None*                                   | If defined then the command to execute.
 file         | Text    | *None*                                   | If defined then the file to read.
 mandatorytag | Text    | *None*                                   | If defined then a tag that must exist in a config file for it to be valid.
+missingokay  | Boolean | Yes                                      | [**New in v3.10.0!**](/3/change-log/#inspircd-3100) Whether to ignore config files that don't exist.
 noenv        | Boolean | Yes (executable)<br>No (directory, file) | [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config.
 noexec       | Boolean | Yes (executable)<br>No (directory, file) | Whether to allow executable includes from within the included config.
 noinclude    | Boolean | No                                       | Whether to allow file includes from within the included config.
@@ -23,7 +24,8 @@ Includes links.conf into the config:
          noenv="no"
          noexec="no"
          noinclude="no"
-         mandatorytag="link">
+         mandatorytag="link"
+         missingokay="no">
 ```
 
 Includes all of the config files in 'modules' into the config:

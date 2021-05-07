@@ -84,6 +84,7 @@ The following code pages for use with this module are present in the config exam
 Code page       | Include Tag
 --------------- | -----------
 ascii           | `<include file="examples/codepages/ascii.conf.example">`
-latin1          | `<include file="examples/codepages/latin1.conf.example">`
+iso-8859-1      | `<include file="examples/codepages/iso-8859-1.conf.example">`
+iso-8859-2      | `<include file="examples/codepages/iso-8859-2.conf.example">`
 rfc1459         | `<include file="examples/codepages/rfc1459.conf.example">`
 strict-rfc1459  | `<include file="examples/codepages/strict-rfc1459.conf.example">`

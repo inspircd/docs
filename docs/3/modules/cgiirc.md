@@ -125,6 +125,20 @@ Encodes 127.0.0.1 to its hex form:
 /HEXIP 127.0.0.1
 ```
 
+### Extended Bans
+
+Character | Type     | Ban Syntax    | Description
+--------- | -------- | ------------- | -----------
+w         | Matching | `w:<pattern>` | [**New in v3.10.0!**](/3/change-log/#inspircd-3100) Matches against the name of the gateway that WebIRC users are connecting from.
+
+#### Example Usage
+
+Bans users connecting via the CGI:IRC gateway:
+
+```plaintext
+/MODE #channel +b w:cgiirc
+```
+
 ### Server Notice Masks
 
 Character | Description

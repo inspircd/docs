@@ -58,6 +58,7 @@ ident    | Text      | *None*                        | If action is set to MARK 
 name     | Text      | *None*                        | **Required!** The human readable name of this DNSBL.
 reason   | Text      | Your IP has been blacklisted. | The message to send to users who's IP address is in a DNSBL. The template variable %ip% will be replaced with the IP address of the user.
 records  | No. Range | *None*                        | **Required for the record type!** A numeric range of DNSBL result types to match against.
+timeout  | Duration  | *Depends on `<dns:timeout>`*  | [**New in v3.10.0!**](/3/change-log/#inspircd-3100) The time period to wait for a response from this DNSBL.
 type     | Text      | record                        | The type of result that this DNSBL will provide.
 
 The action field should be set to one of the following values:
