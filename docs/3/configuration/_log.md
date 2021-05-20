@@ -6,7 +6,7 @@ The `<log>` tag defines a location to log to. This tag can be defined as many ti
 
 Name   | Type   | Default Value | Description
 ------ | ------ | ------------- | -----------
-method | Text   | file          | The method to use for storing logs.
+method | Text   | *None*        | The method to use for storing logs.
 type   | Text   | *None*        | **Required!** A space-delimited token list of types of message to log.
 level  | Text   | default       | The level of messages to log.
 target | Text   | *None*        | The location to write the log to.
