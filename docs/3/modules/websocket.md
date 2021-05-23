@@ -71,6 +71,7 @@ Allows access to the server from all subdomains of example.com:
 
 The following HTTP errors are sent by this module:
 
+ - HTTP 400 &mdash; Your WebSocket implementation has not sent the required HTTP `Origin` header.
  - HTTP 403 &mdash; You are attempting to connect from a non-whitelisted origin.
  - HTTP 501 &mdash; Your WebSocket implementation has not sent the required `Sec-WebSocket-Key` header.
  - HTTP 503 &mdash; You do not have [the sha1 module](/3/modules/sha1) loaded.
