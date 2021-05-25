@@ -117,3 +117,5 @@ The hash field should be set to one of the values shown in `openssl list --diges
 ## Special Notes
 
 If you are using a CA-provided certificate and key you will also need to provide a DH parameters file. This file can be generated using `openssl dhparam -out dhparams.pem 2048` and then be placed in your config directory.
+
+Mozilla publish [documentation on how to configure server-side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations) which can be used for selecting a secure OpenSSL configuration. We recommend using the intermediate profile to allow compatibility with as many clients as possible whilst maintaining a decent level of security.
