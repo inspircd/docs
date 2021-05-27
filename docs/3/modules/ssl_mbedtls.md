@@ -94,3 +94,7 @@ The hash field should be set to one of the values shown [in the mbedTLS MD docum
             outrecsize="2048"
             requestclientcert="yes">
 ```
+
+## Special Notes
+
+If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.
