@@ -36,7 +36,7 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### InspIRCd 4 (unstable)
+### InspIRCd 4 (development)
 
 **Coming soon**
 
