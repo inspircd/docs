@@ -38,12 +38,9 @@ title: Introduction
 
 ### InspIRCd 4 (development)
 
-**Coming soon**
+**Full docs coming soon**
+
+- [Upgrading from v3](/4/breaking-changes)
+- [Change Log](/4/change-log)
 
 </div>
-
-<!--
-List pages which are okay to be orphaned here:
-
-[!](/4/change-log)
--->
