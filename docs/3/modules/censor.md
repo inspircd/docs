@@ -4,6 +4,11 @@ title: "Module Details: censor (v3)"
 
 ## The "censor" Module
 
+!!! warning ""
+    This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
+    You should consider using [the filter module](/3/modules/filter) instead.
+
 ### Description
 
 This module allows the server administrator to define inappropriate phrases that are not allowed to be used in private or channel messages.

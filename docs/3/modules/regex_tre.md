@@ -11,6 +11,11 @@ title: "Module Details: regex_tre (v3)"
 
     <pre><code>./configure --enable-extras regex_tre</code></pre>
 
+!!! warning ""
+    This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
+    You should consider using [the regex_stdlib module](/3/modules/regex_stdlib) instead.
+
 ### Description
 
 This module provides the `tre` regular expression engine which uses the [TRE](https://laurikari.net/tre/) library.

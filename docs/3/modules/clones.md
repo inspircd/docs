@@ -4,6 +4,9 @@ title: "Module Details: clones (v3)"
 
 ## The "clones" Module
 
+!!! warning ""
+    This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
 ### Description
 
 This module adds the `/CLONES` command which allows server operators to view IP addresses from which there are more than a specified number of connections.
