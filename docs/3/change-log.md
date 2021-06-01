@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.10.0
 
-**This version of InspIRCd was released on 2020-05-14.**
+**This version of InspIRCd was released on 2021-05-14.**
 
 - Added a codepage file for iso-8859-2 casemapping.
 
