@@ -1,7 +1,7 @@
 click==8.0.1
 future==0.18.2
 htmlmin==0.1.12
-Jinja2==2.11.3
+Jinja2==3.0.1
 joblib==1.0.1
 jsmin==2.2.2
 livereload==2.6.3
