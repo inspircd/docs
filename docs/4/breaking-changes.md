@@ -14,7 +14,7 @@ title: v4 Breaking Changes
 
 - GnuTLS 3+ is now required by the ssl_gnutls module.
 
-- OpenSSL 1.1+ is now required by the ssl_gnutls module.
+- OpenSSL 1.1+ is now required by the ssl_openssl module.
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
