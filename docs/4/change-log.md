@@ -12,7 +12,7 @@ This page lists changes which have happened between releases.
 
 **This pre-release version of InspIRCd was released on 2021-06-01.**
 
-**IMPORTANT** &mdash; Various **breaking changes** have also been made. See [the breaking changes page](/4/breaking-changes) for details.
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 
 - Added support for case insensitive regular expressions.
 
