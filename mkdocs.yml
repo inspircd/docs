@@ -26,7 +26,6 @@ plugins:
   - redirects:
       redirect_maps:
           2/configuration/index.md: 3/configuration/index.md
-          2/configuration/index.md: 3/configuration/index.md
           2/index.md: index.md
           2/installation/centos.md: 3/installation/centos.md
           2/installation/debian.md: 3/installation/debian.md
@@ -93,7 +92,6 @@ plugins:
           2/modules/httpd_config.md: 3/modules/httpd_config.md
           2/modules/httpd_stats.md: 3/modules/httpd_stats.md
           2/modules/ident.md: 3/modules/ident.md
-          2/modules/index.md: 3/modules/index.md
           2/modules/index.md: 3/modules/index.md
           2/modules/inviteexception.md: 3/modules/inviteexception.md
           2/modules/ircv3.md: 3/modules/ircv3.md
@@ -185,11 +183,8 @@ plugins:
           2/modules/watch.md: 3/modules/watch.md
           2/modules/xline_db.md: 3/modules/xline_db.md
           2/snomasks.md: 3/snomasks.md
-          2/snomasks.md: 3/snomasks.md
-
           3/configuration-changes.md: 3/breaking-changes.md
           3/index.md: index.md
-
           4/index.md: index.md
   - search
 theme:
