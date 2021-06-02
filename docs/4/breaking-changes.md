@@ -20,17 +20,17 @@ title: v4 Breaking Changes
 
 ## Moves
 
-- `<disabled:fakenonexistant>` has been moved to `<disabled:fakenonexistent>`.
+- `<disabled:fakenonexistant>` has been moved to `<disabled:fakenonexistent>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<exemptfromfilter:channel>` has been moved to `<exemptfromfilter:target>`.
+- `<exemptfromfilter:channel>` has been moved to `<exemptfromfilter:target>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<limits:maxgecos>` has been moved to `<limits:maxreal>`.
+- `<limits:maxgecos>` has been moved to `<limits:maxreal>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<options:moronbanner>` has been moved to `<options:xlinemessage>`.
+- `<options:moronbanner>` has been moved to `<options:xlinemessage>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<repeat:maxsecs>` has been moved to `<repeat:maxtime>`.
+- `<repeat:maxsecs>` has been moved to `<repeat:maxtime>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<security:hidewhois>` has been moved to `<security:hideserver>`.
+- `<security:hidewhois>` has been moved to `<security:hideserver>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
 - The censor module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_censor` to install it.
 
