@@ -28,7 +28,7 @@ This page lists changes which have happened between releases.
 
 - Added support for sending 005 diffs when the server module state changes
 
-- Added support for the sha224, sha384, and sha256 hash algorithms.
+- Added support for the sha224, sha384, and sha512 hash algorithms.
 
 - Added the `servers/ignore-securelist` privilege to allow server operators to ignore the securelist module.
 
