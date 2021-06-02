@@ -4,6 +4,11 @@ title: "Module Details: flashpolicyd (v3)"
 
 ## The "flashpolicyd" Module
 
+!!! warning ""
+    This module has been removed in the next major version of InspIRCd.
+
+    Adobe Flash has been EOL since the end of 2020 and is not supported by modern browsers so you no longer need to provide support for it on your network.
+
 ### Description
 
 This module allows connection policies to be served to IRC clients that use Adobe Flash.
