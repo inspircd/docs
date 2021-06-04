@@ -47,7 +47,7 @@ CERT_DIR="/var/lib/dehydrated/certs/irc.example.com"
 INSPIRCD_CONFIG_DIR="/etc/inspircd"
 
 # The location of the InspIRCd pid file.
-INSPIRCD_PID_FILE="/var/lib/inspircd.pid"
+INSPIRCD_PID_FILE="/var/run/inspircd/inspircd.pid"
 
 # The user:group that InspIRCd runs as.
 INSPIRCD_OWNER="inspircd:inspircd"
