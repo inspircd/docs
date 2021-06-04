@@ -97,4 +97,6 @@ The hash field should be set to one of the values shown [in the mbedTLS MD docum
 
 ## Special Notes
 
+SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should use `/REHASH -ssl` or use [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
+
 If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.

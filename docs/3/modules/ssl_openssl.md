@@ -120,4 +120,6 @@ If you are using a CA-provided certificate and key you will also need to provide
 
 Mozilla publish [documentation on how to configure server-side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations) which can be used for selecting a secure OpenSSL configuration. We recommend using the intermediate profile to allow compatibility with as many clients as possible whilst maintaining a decent level of security.
 
+SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should use `/REHASH -ssl` or use [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
+
 If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.
