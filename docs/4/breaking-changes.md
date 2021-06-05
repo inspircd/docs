@@ -18,6 +18,8 @@ title: v4 Breaking Changes
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
+- `<class:snomasks>` no longer has a default value. In order to keep v3 behaviour you should set it to `*`.
+
 ## Moves
 
 - `<disabled:fakenonexistant>` has been moved to `<disabled:fakenonexistent>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
