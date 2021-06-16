@@ -19,3 +19,7 @@ Once the dependencies are installed you can run the site using the following com
 ```sh
 mkdocs serve
 ```
+
+### License
+
+This documentation is licensed under the same license as InspIRCd (GPLv2).
