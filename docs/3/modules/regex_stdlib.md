@@ -45,5 +45,5 @@ grep       | Use the regular expression grammar used by the grep utility in POSI
 ##### Example Usage
 
 ```xml
-<stdregex ecmascript="yes">
+<stdregex type="ecmascript">
 ```
