@@ -31,7 +31,6 @@ Name    | Description
 ------- | -----------
 SIGUSR1 | Reloads the server's TLS (SSL) certificates.
 
-
 ### Special Notes
 
 If you are using an automated tool such as Certbot for renewing your certificates you may find it useful to use the following script as a deploy hook:
