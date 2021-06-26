@@ -8,6 +8,8 @@ title: "Module Details: sqlauth (v3)"
 
 This module allows connecting users to be authenticated against an arbitrary SQL table.
 
+It only allows checking clients are allowed to connect (the `PASS` command), and does not provide any sort of user accounts (ie. no nickname registration, NickServ, or SASL).
+
 ### Configuration
 
 To load this module use the following `<module>` tag:
