@@ -53,10 +53,10 @@ Listens for IRC server connections on *:7000:
       free="no">
 ```
 
-Listens for IRC client connections on `/run/inspircd.sock`
+Listens for IRC client connections on `/run/inspircd/inspircd.sock`
 
 ```xml
-<bind path="/run/inspircd.sock"
+<bind path="/run/inspircd/inspircd.sock"
       type="clients"
       permissions="750"
       replace="yes">
