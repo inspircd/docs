@@ -26,10 +26,10 @@ haproxy | Listens for haproxy connections.
 
 ##### Example Usage
 
-Listens for plaintext haproxy connections on the /tmp/inspircd.sock UNIX socket endpoint:
+Listens for plaintext haproxy connections on the /run/inspircd.sock UNIX socket endpoint:
 
 ```xml
-<bind path="/tmp/inspircd.sock"
+<bind path="/run/inspircd.sock"
       ...
       hook="haproxy">
 ```
