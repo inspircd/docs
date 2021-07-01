@@ -8,6 +8,28 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a2
+
+**This pre-release version of InspIRCd was released on 2021-07-01.**
+
+- Fixed `<security:hideserver>` being able to be set to an invalid hostname.
+
+- Fixed building on Haiku.
+
+- Fixed building on Windows.
+
+- Fixed local idle times being incorrect.
+
+- Fixed module events not being fired correctly.
+
+- Fixed WHOIS numerics not including the source of the message.
+
+- Imported the opmoderated module from inspircd-contrib.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Refactored the compiler and linker flag logic in the makefile.
+
 ### InspIRCd 4.0.0a1
 
 **This pre-release version of InspIRCd was released on 2021-06-01.**
