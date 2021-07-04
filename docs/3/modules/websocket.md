@@ -77,3 +77,5 @@ The following HTTP errors are sent by this module:
  - HTTP 503 &mdash; You do not have [the sha1 module](/3/modules/sha1) loaded.
 
 If you add an encrypted WebSocket listener you should create a custom SSL profile that has `requestclientcert="no"` set. This is required to allow connections to your server using Google Chrome.
+
+Some reverse proxy providers (e.g. Cloudflare) drop idle WebSocket connections which can cause problems with this module. It is recommended that you avoid these providers.
