@@ -32,7 +32,7 @@ This page lists changes which have happened between releases.
 
 - Added support for using the `--prefix` configure option with `--system`.
 
-- Changed RPL_WHOISGATEWAY so it is visible by unprivileged users.
+- Changed `RPL_WHOISGATEWAY` so it is visible by unprivileged users.
 
 - Changed the default runtime directory in system-wide mode to /var/run/inspircd to allow writing files after dropping root.
 
@@ -44,7 +44,7 @@ This page lists changes which have happened between releases.
 
 - Developer: added subclass of `IOHookProvider` for SSL modules.
 
-- Fixed a WHO request with flags but no fields being considered fuzzy.
+- Fixed a `/WHO` request with flags but no fields being considered fuzzy.
 
 - Fixed an off by one error in various bitsets.
 
@@ -58,7 +58,7 @@ This page lists changes which have happened between releases.
 
 - Fixed not being able to send a standard reply with no command in some cases.
 
-- Fixed not sending ERR_BADCHANMASK in response to OJOIN/SAJOIN when a channel name is invalid.
+- Fixed not sending `ERR_BADCHANMASK` in response to OJOIN/SAJOIN when a channel name is invalid.
 
 - Fixed not using the `ERR_INVALIDMODEPARAM` numeric when a parameter begins with `:` or contains a space.
 
@@ -100,7 +100,7 @@ This page lists changes which have happened between releases.
 
 - Added `<connect:useconnflood>` to allow exempting classes from the connflood module.
 
-- Added a CAPAB client command that will kill server connections made to client ports with a helpful message.
+- Added a `/CAPAB` client command that will kill server connections made to client ports with a helpful message.
 
 - Added a configure option, `--runtime-dir`, which specifies the directory that runtime files (i.e. the pid file) should be placed in.
 
@@ -152,8 +152,6 @@ This page lists changes which have happened between releases.
 
 - Fixed DNSBLs that return non-local addresses blocking connections.
 
-- Fixed GLOADMODULE, GUNLOADMODULE, and GRELOADMODULE not sending error numerics across the network.
-
 - Fixed handling DNSBLs that return invalid lookup results.
 
 - Fixed inconsistently hiding the server name when `<options:hideserver>` is set.
@@ -173,6 +171,8 @@ This page lists changes which have happened between releases.
 - Fixed silently failing when a DNSBL returns no IPv4 results.
 
 - Fixed storing data files in `/var/inspircd` instead of `/var/lib/inspircd`.
+
+- Fixed the `/GLOADMODULE`, `/GUNLOADMODULE`, and `/GRELOADMODULE` commands not sending error numerics across the network.
 
 - Fixed the DNS socket not being closed when core_dns is unloaded.
 
@@ -200,7 +200,7 @@ This page lists changes which have happened between releases.
 
 - Improved the error messages sent by the httpd module.
 
-- Removed the SERVER stub command.
+- Removed the `/SERVER` stub command.
 
 - Send `RPL_SAVENICK` numerics (from irc2) whenever a user's nick is forcibly changed to their UUID.
 
@@ -310,13 +310,13 @@ This page lists changes which have happened between releases.
 
 - Developer: added support for changing the type of a message in OnUserPreMessage.
 
-- Developer: added the BOT 005 token to allow bots to automatically mark themselves as a bot.
+- Developer: added the `BOT` 005 token to allow bots to automatically mark themselves as a bot.
 
 - Fixed `/SVSHOLD` sending a global snotice instead of a local one.
 
 - Fixed bcrypt and PBKDF2 hashes not being compared in a timing-safe way.
 
-- Fixed building InspIRCd when PWD does not contain the source tree.
+- Fixed building InspIRCd when the current working directory does not contain the source tree.
 
 - Fixed shuns not being applied correctly.
 
@@ -496,13 +496,13 @@ This page lists changes which have happened between releases.
 
 - Fix various Perl tools not looking in the right directory for the `make::*` modules.
 
-- Fixed a bug in `helpop.conf.example` where the SWHOIS key was not using the correct value name.
+- Fixed a bug in `helpop.conf.example` where the swhois key was not using the correct value name.
 
 - Fixed allowing `TAGMSG` messages to be sent without any tags attached.
 
 - Fixed boolean configuration options not being matched in a case insensitive way.
 
-- Fixed not using case insensitive comparisons for the DCCALLOW subcommands.
+- Fixed not using case insensitive comparisons for the `/DCCALLOW` subcommands.
 
 - Fixed not using case insensitive matching when checking if a TLS (SSL) rehash has been requested.
 
@@ -524,9 +524,9 @@ This page lists changes which have happened between releases.
 
 - Fixed the chanhistory module storing CTCPs.
 
-- Fixed the legacy `PROTOCTL NAMESX` command not using case insensitive matching.
+- Fixed the legacy `/PROTOCTL NAMESX` command not using case insensitive matching.
 
-- Fixed the legacy `PROTOCTL UHNAMES` command not using case insensitive matching.
+- Fixed the legacy `/PROTOCTL UHNAMES` command not using case insensitive matching.
 
 - Fixed the nationalchars module allowing nicknames which begin with a number.
 
@@ -658,7 +658,7 @@ This page lists changes which have happened between releases.
 
 * Fixed allowing the `sasl` capability to be requested when the SASL server is offline.
 
-* Fixed empty `GLOBOPS` and `WALLOPS` messages not failing with an `ERR_NOTEXTTOSEND` message.
+* Fixed empty `/GLOBOPS` and `/WALLOPS` messages not failing with an `ERR_NOTEXTTOSEND` message.
 
 * Fixed listener sockets with `<bind:replace>` enabled not being replaced in some circumstances.
 
@@ -736,9 +736,13 @@ This page lists changes which have happened between releases.
 
 - Fixed outgoing UNIX socket server connections.
 
-- Fixed routing tags on TAGMSG messages between servers.
+- Fixed routing tags on `/TAGMSG` messages between servers.
 
 - Fixed server operators with the `channels/auspex` privilege not being able to request the topic of secret/private channels with the `/TOPIC` command.
+
+- Fixed the `/TAGMSG` message forwarding all tags regardless of whether they had been whitelisted.
+
+- Fixed the `<connect:usests>` option being inverted.
 
 - Fixed the autoop module checking the prefix mode add rank when removing list entries.
 
@@ -755,10 +759,6 @@ This page lists changes which have happened between releases.
 - Fixed the Perl helper script finding the location of the PID file.
 
 - Fixed the sslinfo module not being able to place WebIRC users into the appropriate connect classes.
-
-- Fixed the TAGMSG message forwarding all tags regardless of whether they had been whitelisted.
-
-- Fixed the `<connect:usests>` option being inverted.
 
 - Fixed various harmless compiler warnings in the httpd module.
 
@@ -820,7 +820,7 @@ This page lists changes which have happened between releases.
 
 - Fixed the filesystem permissions that files are installed with.
 
-- Fixed the MAXLIST 005 token not reflecting the true lower limit.
+- Fixed the `MAXLIST` 005 token not reflecting the true lower limit.
 
 - Fixed the parameters for the `/NAMES` command in the syntax hint and example helpop config.
 
