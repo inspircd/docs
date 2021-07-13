@@ -21,7 +21,7 @@ parent           | Text     | *None*                  | If defined then the name
 password         | Text     | *None*                  |  The password that the user must send to be put into this connect class.
 pingfreq         | Duration | 2m                      | The number of seconds this client can be idle for before sending it a `PING` message.
 port             | Number   | *None*                  | The port on which a client must be connecting to be put into this connect class.
-reason           | Number   | Unauthorised connection | If `<connect:deny>` is set then the reason to give when disconnecting a user.
+reason           | Text     | Unauthorised connection | If `<connect:deny>` is set then the reason to give when disconnecting a user.
 resolvehostnames | Boolean  | Yes                     | Whether to do DNS lookups for the hostnames of users in this class.
 recvq            | Number   | 4096                    | The maximum amount of data allowed in a user's receive queue before it is killed.
 registered       | Boolean  | *None*                  | If defined then whether this connect class matches a user in registration or a client that has completed registration.
