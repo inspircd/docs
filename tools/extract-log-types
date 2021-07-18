@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+if ARGV.empty? || !File.directory?(ARGV[0])
+	STDERR.puts "Usage: $PROGRAM_NAME <SOURCE>"
+	exit 1
+end
+
+%w(find pathname set).each do |lib|
+	require lib
+end
+
+types = Hash.new
+Find.find(ARGV[0]) do |path|
+	next unless File.file? path
+	next unless File.extname(path) == '.cpp'
+
+	File.read(path).scan(/\bLog\(("[^"]+"|MODNAME),\s+LOG_([A-Z]+),/).each do |type, level|
+		if type == 'MODNAME'
+			if path =~ /\/((?:m|core)_[a-z0-9_]+)(?:\.cpp|\/)?/
+				type = $~[1]
+			else
+				STDERR.puts "WTF: unable to extract module name from #{path}"
+				next
+			end
+		else
+			type = type[1...-1]
+		end
+
+		types[type] ||= Set.new
+		types[type] << level.downcase
+	end
+end
+
+if types.empty?
+	STDERR.puts "No log calls found. Did you specify the right directory?"
+	exit 1
+end
+
+longest = types.keys.max_by(&:length).length
+levelorder = %w(sparse default verbose debug rawio)
+types.sort.each do |type, levels|
+	padding = longest - type.length
+	levelstr = levels.to_a.sort_by { |obj| levelorder.index obj }.join('<br>')
+	puts "#{type}#{' ' * padding} | #{levelstr}"
+end

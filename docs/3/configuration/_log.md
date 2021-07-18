@@ -26,41 +26,47 @@ BANCACHE             | debug                       | Messages relating to the X-
 CHANNELS             | debug                       | Messages relating to channels.
 COMMAND              | default                     | Messages relating to command execution.
 CONFIG               | default<br>debug            | Messages relating to the configuration.
-CONNECTCLASS         | debug                       | Messages relating to connect classes.
+CONNECTCLASS         | default<br>debug            | Messages relating to connect classes.
 CULLLIST             | debug                       | Messages relating to object cull lists.
 HEADER               | sparse                      | Messages relating to starting logging.
 MODE                 | debug                       | Messages relating to modes.
 MODULE               | default<br>debug            | Messages relating to modules.
+SERIALIZE            | debug                       | Messages relating to object serialisation.
+SERVICE              | debug                       | Messages relating to service registration.
 SOCKET               | default<br>debug            | Messages relating to network sockets.
 STARTUP              | default                     | Messages relating to the startup process.
 USERINPUT            | rawio                       | Messages relating to user input.
 USEROUTPUT           | rawio                       | Messages relating to user output.
 USERS                | default<br>debug            | Messages relating to users.
 core_channel         | debug                       | Messages relating to channels.
-core_dns             | default<br>debug<br>sparse  | Messages relating to DNS lookups.
-core_hostname_lookup | default<br>debug            | Messages relating to user hostname lookups.
-core_oper            | default<br>sparse           | Messages relating to server operators.
+core_dns             | sparse<br>default<br>debug  | Messages relating to DNS lookups.
+core_hostname_lookup | debug                       | Messages relating to user hostname lookups.
+core_oper            | sparse<br>default           | Messages relating to server operators.
 core_reloadmodule    | debug                       | Messages relating to the RELOADMODULE command.
 core_whowas          | default                     | Messages relating to the WHOWAS command.
 m_callerid           | default                     | Messages relating to [the callerid module](/3/modules/callerid).
 m_cap                | debug                       | Messages relating to [the cap module](/3/modules/cap).
 m_cgiirc             | default<br>debug            | Messages relating to [the cgiirc module](/3/modules/cgiirc).
 m_chanlog            | default                     | Messages relating to [the chanlog module](/3/modules/chanlog).
+m_cloaking           | default                     | Messages relating to [the cloaking module](/3/modules/cloaking).
 m_codepage           | debug                       | Messages relating to [the codepage module](/3/modules/codepage).
 m_connectban         | debug                       | Messages relating to [the connectban module](/3/modules/connectban).
 m_customprefix       | debug                       | Messages relating to [the customprefix module](/3/modules/customprefix).
+m_customtitle        | default                     | Messages relating to [the customtitle module](/3/modules/customtitle).
+m_dccallow           | debug                       | Messages relating to [the dccallow module](/3/modules/dccallow).
 m_disable            | default<br>debug            | Messages relating to [the disable module](/3/modules/disable).
 m_dnsbl              | debug                       | Messages relating to [the dnsbl module](/3/modules/dnsbl).
 m_filter             | default<br>debug            | Messages relating to [the filter module](/3/modules/filter).
 m_geo_maxmind        | debug                       | Messages relating to [the geo_maxmind module](/3/modules/geo_maxmind).
 m_hidemode           | debug                       | Messages relating to [the hidemode module](/3/modules/hidemode).
+m_httpd              | debug                       | Messages relating to [the httpd module](/3/modules/httpd).
 m_httpd_acl          | debug                       | Messages relating to [the httpd_acl module](/3/modules/httpd_acl).
 m_httpd_config       | debug                       | Messages relating to [the httpd_config module](/3/modules/httpd_config).
 m_httpd_stats        | debug                       | Messages relating to [the httpd_stats module](/3/modules/httpd_stats).
 m_ident              | debug                       | Messages relating to [the ident module](/3/modules/ident).
 m_ircv3_sts          | debug                       | Messages relating to [the ircv3_sts module](/3/modules/ircv3_sts).
 m_ldapauth           | debug                       | Messages relating to [the ldapauth module](/3/modules/ldapauth).
-m_mysql              | default                     | Messages relating to [the mysql module](/3/modules/mysql).
+m_mysql              | default<br>debug            | Messages relating to [the mysql module](/3/modules/mysql).
 m_nationalchars      | default                     | Messages relating to [the nationalchars module](/3/modules/nationalchars).
 m_operlog            | default                     | Messages relating to [the operlog module](/3/modules/operlog).
 m_password_hash      | default                     | Messages relating to [the password_hash module](/3/modules/password_hash).
@@ -69,15 +75,17 @@ m_pgsql              | default<br>debug            | Messages relating to [the p
 m_regex_pcre         | debug                       | Messages relating to [the regex_pcre module](/3/modules/regex_pcre).
 m_sasl               | default<br>verbose<br>debug | Messages relating to [the sasl module](/3/modules/sasl).
 m_showfile           | default                     | Messages relating to [the showfile module](/3/modules/showfile).
+m_silence            | debug                       | Messages relating to [the silence module](/3/modules/silence).
 m_spanningtree       | default<br>debug<br>rawio   | Messages relating to [the spanningtree module](/3/modules/spanningtree).
-m_sqlite3            | default                     | Messages relating to [the sqlite3 module](/3/modules/sqlite3).
-m_sqloper            | sparse, default             | Messages relating to [the sqloper module](/3/modules/sqloper).
+m_sqlite3            | default<br>debug            | Messages relating to [the sqlite3 module](/3/modules/sqlite3).
+m_sqloper            | sparse<br>default           | Messages relating to [the sqloper module](/3/modules/sqloper).
 m_ssl_gnutls         | default<br>debug            | Messages relating to [the ssl_gnutls module](/3/modules/ssl_gnutls).
 m_ssl_mbedtls        | default<br>debug            | Messages relating to [the ssl_mbedtls module](/3/modules/ssl_mbedtls).
 m_ssl_openssl        | default<br>debug            | Messages relating to [the ssl_openssl module](/3/modules/ssl_openssl).
 m_sslinfo            | debug                       | Messages relating to [the sslinfo module](/3/modules/sslinfo).
 m_sslrehashsignal    | default                     | Messages relating to [the sslrehashsignal module](/3/modules/sslrehashsignal).
 m_topiclock          | default                     | Messages relating to [the topiclock module](/3/modules/topiclock).
+m_vhost              | default                     | Messages relating to [the vhost module](/3/modules/vhost).
 m_xline_db           | debug                       | Messages relating to [the xline_db module](/3/modules/xline_db).
 
 The level field should be set to one of the following values:
