@@ -157,3 +157,7 @@ Value  | Description
           saltlength="16"
           version="13">
 ```
+
+### Special Notes
+
+Argon2 is a memory-hard hashing function. If you are using an older system with low memory you should make sure to configure it appropriately for your system. Alternately, you should consider using another hashing function such as [bcrypt](/3/modules/bcrypt) or [HMAC-SHA256](/3/modules/sha256).
