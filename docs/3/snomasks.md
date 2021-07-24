@@ -2,7 +2,7 @@
 title: v3 Server Notice Masks
 ---
 
-## InspIRCd Server Notice Masks
+## Server Notice Masks
 
 Server notice masks (snomasks) are a method of filtering the messages sent to a server operator who has user mode `s` (snomask) enabled. They allow a server operator to only receive the messages that they care about.
 

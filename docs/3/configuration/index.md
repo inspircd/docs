@@ -2,7 +2,7 @@
 title: v3 Configuration
 ---
 
-## InspIRCd Configuration
+## Configuration
 
 !!! note ""
     If you are configuring your server from scratch you might find the example configuration files helpful.

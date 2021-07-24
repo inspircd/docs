@@ -2,7 +2,7 @@
 title: v3 Modes
 ---
 
-## InspIRCd Modes
+## Modes
 
 InspIRCd supports five types of mode:
 

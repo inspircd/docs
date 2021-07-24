@@ -2,7 +2,7 @@
 title: v3 Commands
 ---
 
-## InspIRCd Commands
+## Commands
 
 This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/3/modules).
 
