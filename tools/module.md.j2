@@ -1,0 +1,120 @@
+---
+title: "Module Details: {{name}} (v3)"
+---
+
+## The "{{name}}" Module
+
+### Description
+
+{{description}}
+
+### Configuration
+
+To load this module use the following `<module>` tag:
+
+```xml
+<module name="{{name}}">
+```
+
+{% if configuration -%}
+{% for tag in configuration -%}
+#### `{{tag.name}}`
+
+{{tag.description}}
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Default Value</th>
+    <th>Description</th>
+</tr>
+{% for attr in tag.attributes %}
+<tr>
+    <td>{{attr.name}}</td>
+    <td>{{attr.type}}</td>
+    <td>{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
+    <td>{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% if tag.details -%}
+{{tag.details}}
+{% endif -%}
+
+##### Example Usage
+
+{{tag.example}}
+
+{% endfor %}
+{%- else -%}
+This module requires no other configuration.
+
+{% endif -%}
+
+{% if chmodes -%}
+### Channel Modes
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Character</th>
+    <th>Type</th>
+    <th>Parameter Syntax</th>
+    <th>Usable by</th>
+    <th>Description</th>
+</tr>
+{% for mode in chmodes.chars %}
+<tr>
+    <td>{{mode.name}}</td>
+    <td>{{mode.char}}</td>
+    <td>{{mode.type}}</td>
+    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+    <td>{{mode.usable_by}}</td>
+    <td>{{mode.description}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% if chmodes.example -%}
+#### Example Usage
+
+{{chmodes.example}}
+
+{% endif -%}
+{% endif -%}
+
+{% if extbans -%}
+### Extended Bans
+
+<table>
+<tr>
+    <th>Character</th>
+    <th>Type</th>
+    <th>Ban Syntax</th>
+    <th>Description</th>
+</tr>
+{% for mode in extbans.chars %}
+<tr>
+    <td>{{mode.char}}</td>
+    <td>{{mode.type}}</td>
+    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+    <td>{{mode.description}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% if extbans.example -%}
+#### Example Usage
+
+{{extbans.example}}
+{% endif -%}
+{% endif -%}
+
+{% if special_notes -%}
+### Special Notes
+
+{{special_notes}}
+{% endif %}
+
