@@ -10,11 +10,7 @@ jobs:
       - name: Install dependencies
         run: |
             sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
-            sudo pip3 install -r requirements.txt
-
-      - name: Prebuild the docs site
-        run: |
-          ./tools/yml2md.py
+            sudo pip3 install -r requirements.txt .
 
       - name: Deploy the docs site
         if: github.repository == 'inspircd/inspircd-docs' && github.ref == 'refs/heads/master'

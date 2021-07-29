@@ -19,6 +19,7 @@ plugins:
   - exclude:
       glob:
         - '**/_*'
+  - inspircd_modules: {}
   - minify:
       minify_html: true
       htmlmin_opts:
@@ -34,9 +35,9 @@ plugins:
           2/installation/windows.md: 3/installation/windows.md
           2/modes.md: 3/modes.md
           2/module-manager.md: 3/module-manager.md
-          2/modules/abbreviation.md: 3/modules/abbreviation.md
-          2/modules/alias.md: 3/modules/alias.md
-          2/modules/allowinvite.md: 3/modules/allowinvite.md
+          2/modules/abbreviation.md: 3/modules/abbreviation.yml
+          2/modules/alias.md: 3/modules/alias.yml
+          2/modules/allowinvite.md: 3/modules/allowinvite.yml
           2/modules/alltime.md: 3/modules/alltime.md
           2/modules/auditorium.md: 3/modules/auditorium.md
           2/modules/autoop.md: 3/modules/autoop.md

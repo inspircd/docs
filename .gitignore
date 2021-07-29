@@ -1,6 +1,8 @@
 .*
 *.diff
 site
+dist
+*.egg-info
 
 !.git*
 !.travis.yml
