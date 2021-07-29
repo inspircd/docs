@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+"""
+Preprocesses data files docs/*/modules/*.yml into markdown, so they can
+be built by MkDocs like regular pages.
+"""
 
 import fnmatch
 import pathlib
@@ -47,6 +50,9 @@ class InspircdModulesPlugin(mkdocs.plugins.BasePlugin):
         self.module_template = self.env.get_template("module.md.j2")
 
     def on_files(self, files, config):
+        """Converts all original mkdocs.structure.files.File files to this
+        plugin's ExtendedFile class, which behaves the same but accepts .yml
+        files as input."""
         return mkdocs.structure.files.Files(
             [
                 ExtendedFile(file, config["site_dir"], config["use_directory_urls"])
@@ -55,5 +61,7 @@ class InspircdModulesPlugin(mkdocs.plugins.BasePlugin):
         )
 
     def on_page_read_source(self, page, config):
+        """Replaces MkDocs's open() to read source files by reading the file
+        directly and pre-rendering it to Markdown."""
         if page.file.is_inspircd_module_yaml():
             return yml2md(page.file, template=self.module_template)
