@@ -1,0 +1,66 @@
+name: denychans
+description: |-
+  This module allows the server administrator to prevent users from joining channels matching a glob.
+configuration:
+- name: <badchan>
+  description: |-
+    The `<badchan>` tag defines a channel to prevent users from joining. This tag can be defined as many times as required.
+  attributes:
+  - name: allowopers
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to allow server operators to join channels matching this rule.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for a channel name that users should be prevented from joining.
+  - name: reason
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A message to tell a user who tries to join a channel that matches this rule.
+  - name: redirect
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the name of a channel to join users to who try to join a channel matching this rule.
+  details: ""
+  example: |-
+    Bans channels matching #potato\* from being joined:
+
+    ```xml
+    <badchan name="#potato*"
+             reason="Discussion of vegetables is banned on this network!"
+             allowopers="no">
+    ```
+
+    Redirects users joining channel #eggplant to #aubergine:
+
+    ```xml
+    <badchan name="#eggplant"
+             redirect="#aubergine"
+             reason="This network uses British English."
+             allowopers="no">
+    ```
+- name: <goodchan>
+  description: |-
+    The `<goodchan>` tag defines an exemption to the rules specified with `<badchan>`. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for a channel name that users should be allowed to join regardless of any rules banning it.
+  details: ""
+  example: |-
+    ```xml
+    <goodchan name="#*ircd">
+    ```
+

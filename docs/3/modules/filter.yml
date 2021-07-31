@@ -1,0 +1,153 @@
+name: filter
+description: |-
+  This module adds the `/FILTER` command which allows server operators to define regex matches for inappropriate phrases that are not allowed to be used in channel messages, private messages, part messages, or quit messages.
+configuration:
+- name: <filteropts>
+  description: |-
+    The `<filteropts>` tag defines settings about how the filter module should behave. This tag can only be defined once.
+  attributes:
+  - name: engine
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The regular expression engine to use for checking matches.
+  - name: notifyuser
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to notify users that match a block or silent filter that they have matched it.
+  - name: warnonselfmsg
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
+  details: |+
+    The engine field should be set to the name of a regular expression engine.
+
+    {! 3/modules/_regex_table.md !}
+
+  example: |-
+    ```xml
+    <filteropts engine="glob"
+                notifyuser="yes"
+                warnonselfmsg="no">
+    ```
+- name: <keyword>
+  description: |-
+    The `<keyword>` tag defines an inappropriate phrase. This tag can be defined as many times as required.
+  attributes:
+  - name: action
+    type: Text
+    required: false
+    default: none
+    description: |-
+      The action to take when a user does something that matches this filter.
+  - name: duration
+    type: Duration
+    required: false
+    default: 0s (Permanent)
+    description: |-
+      If action is set to gline then the duration that users who match filters should be G-lined for.
+  - name: flags
+    type: Text
+    required: false
+    default: \*
+    description: |-
+      One or more flags that define what type of messages this filter applies to.
+  - name: pattern
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The regex pattern to match against.
+  - name: reason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The reason to give to users when they are being punished for doing something that matches this filter.
+  details: |+
+    The action field should be set to one of the following values:
+
+    Value  | Description
+    ------ | -----------
+    block  | Block the message that matched the filter and inform server operators with the `f` (filter) snomask.
+    gline  | G-line the user that matched the filter.
+    kill   | Kill the user that matched the filter.
+    none   | Write the match to the log file and take no other action.
+    shun   | Shun the user that matched the filter (requires [the shun module](/3/modules/shun)).
+    silent | Block the message that matched the filter.
+    warn   | Allow the message that matched the filter and inform server operators with the `f` (filter) snomask.
+    zline  | Z-line the user that matched the filter.
+
+    The flags field should be set to one or more of the following values:
+
+    Value | Description
+    ----- | -----------
+    \*    | Equivalent to the flags `cnoPpq`.
+    c     | Strip color codes from messages before trying to match against filters.
+    n     | Match against `NOTICE` messages.
+    o     | Exempt server operators from matching this filter.
+    P     | Match against `PART` messages.
+    p     | Match against `PRIVMSG` messages.
+    q     | Match against `QUIT` messages.
+    r     | [**New in v3.2.0!**](/3/change-log/#inspircd-320) Exempt registered users from matching this filter.
+
+  example: |-
+    !!! note ""
+        The following example assumes that the "glob" regex module is being used.
+
+        See the `<filteropts>` documentation above for more information.
+
+    G-lines unprivileged users for saying the phrase "fluffy capybara" in `PRIVMSG` and `NOTICE` messages:
+
+    ```xml
+    <keyword pattern="*fluffy?capybara*"
+             flags="nop"
+             action="gline"
+             duration="1h"
+             reason="Fluffy capybaras are too cute for this network!">
+    ```
+commands:
+- name: FILTER
+  param_count: 1, 4-5
+  syntax: '`<pattern>`<br>`<pattern> <action> <flags> [<duration>] <reason>`'
+  description: |-
+    Allows server operators to add and remove filters.
+example_commands: |-
+  !!! note ""
+      The following examples assume that the "glob" regex module is being used.
+
+      See the `<filteropts>` documentation above for more information.
+
+  G-lines users for saying the phrase "fluffy capybara" in `/PRIVMSG` and `/NOTICE` messages:
+
+  ```plaintext
+  /FILTER *fluffy?capybara* gline nop 1h :Fluffy capybaras are too cute for this network
+  ```
+
+  Kills users who have "spam" in their `/PART` message:
+
+  ```plaintext
+  /FILTER *spam* kill coP :Spam is off-topic on ExampleNet
+  ```
+
+  Removes a filter on \*fluffy?capybara\*:
+
+  ```plaintext
+  /FILTER *fluffy?capybara*
+  ```
+snomasks:
+- char: f
+  description: Notifications about filter matches on the local server.
+- char: F
+  description: Notifications about filter matches on a remote server.
+stats:
+- char: s
+  description: Lists all filters and filter-exempt targets.
+special_notes: |-
+  Having a high number of filters or having filters which take a long time to match can have significant impact on server performance.
+

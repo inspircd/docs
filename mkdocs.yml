@@ -75,15 +75,15 @@ plugins:
           2/modules/cycle.md: 3/modules/cycle.yml
           2/modules/dccallow.md: 3/modules/dccallow.yml
           2/modules/deaf.md: 3/modules/deaf.yml
-          2/modules/delayjoin.md: 3/modules/delayjoin.md
-          2/modules/delaymsg.md: 3/modules/delaymsg.md
-          2/modules/denychans.md: 3/modules/denychans.md
-          2/modules/dnsbl.md: 3/modules/dnsbl.md
-          2/modules/exemptchanops.md: 3/modules/exemptchanops.md
-          2/modules/filter.md: 3/modules/filter.md
-          2/modules/gecosban.md: 3/modules/gecosban.md
-          2/modules/globalload.md: 3/modules/globalload.md
-          2/modules/globops.md: 3/modules/globops.md
+          2/modules/delayjoin.md: 3/modules/delayjoin.yml
+          2/modules/delaymsg.md: 3/modules/delaymsg.yml
+          2/modules/denychans.md: 3/modules/denychans.yml
+          2/modules/dnsbl.md: 3/modules/dnsbl.yml
+          2/modules/exemptchanops.md: 3/modules/exemptchanops.yml
+          2/modules/filter.md: 3/modules/filter.yml
+          2/modules/gecosban.md: 3/modules/gecosban.yml
+          2/modules/globalload.md: 3/modules/globalload.yml
+          2/modules/globops.md: 3/modules/globops.yml
           2/modules/helpop.md: 3/modules/helpop.md
           2/modules/hidechans.md: 3/modules/hidechans.md
           2/modules/hideoper.md: 3/modules/hideoper.md

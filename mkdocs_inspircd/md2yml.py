@@ -167,7 +167,7 @@ def main(filename):
 
 def parse_configuration(groups, output):
     def parse_desc_and_attr(m):
-        if m.group("name") == "<class>":
+        if m.group("name") in ("<class>", "<bind>"):
             return {
                 "description": md_block(m.group("description")),
                 "extends": True,

@@ -1,0 +1,27 @@
+name: geoclass
+description: |-
+  This module allows the server administrator to assign users to connect classes by the country they are connecting from.
+configuration:
+- name: <connect>
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: country
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A space-delimited list of [ISO 3166-1 alpha-2 country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) that users must be connecting from to be assigned to this class.
+  details: ""
+  example: |-
+    Requires users to be connecting from China or Russia to be assigned to the Example class:
+
+    ```xml
+    <connect name="Example"
+             ...
+             country="CN RU">
+    ```
+stats:
+- char: G
+  description: Lists the number of users currently connected from each country.
+

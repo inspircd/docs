@@ -1,0 +1,24 @@
+name: geo_maxmind
+introduction: "!!! note \"\"\n    This module depends on a third-party library ([libMaxMindDB](https://maxmind.github.io/libmaxminddb/))\
+  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
+  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
+  \ --enable-extras geo_maxmind</code></pre>"
+description: |-
+  This module allows the server to perform geolocation lookups on both IP addresses and users.
+configuration:
+- name: <maxmind>
+  description: |-
+    The `<maxmind>` tag defines settings about how the geo_maxmind module should behave. This tag can only be defined once.
+  attributes:
+  - name: file
+    type: Text
+    required: false
+    default: GeoLite2-Country.mmdb
+    description: |-
+      The location of the GeoLite2 database to read locations from.
+  details: ""
+  example: |-
+    ```xml
+    <maxmind file="GeoLite2-Country.mmdb">
+    ```
+
