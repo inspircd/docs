@@ -19,7 +19,7 @@ plugins:
   - exclude:
       glob:
         - '**/_*'
-  - inspircd_modules: {}
+  - inspircd:
   - minify:
       minify_html: true
       htmlmin_opts:

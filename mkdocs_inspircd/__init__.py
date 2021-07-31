@@ -40,7 +40,7 @@ class ExtendedFile(mkdocs.structure.files.File):
         return fnmatch.fnmatch(self.src_path, "*/modules/*.yml")
 
 
-class InspircdModulesPlugin(mkdocs.plugins.BasePlugin):
+class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
         super().__init__()
         self.env = jinja2.Environment(
