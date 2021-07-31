@@ -1,0 +1,36 @@
+name: chghost
+description: |-
+  This module adds the `/CHGHOST` command which allows server operators to change the displayed hostname of a user.
+configuration:
+- name: <hostname>
+  description: |-
+    The `<hostname>` tag defines settings about how the chghost module should behave. This tag can only be defined once.
+  attributes:
+  - name: charmap
+    type: Text
+    required: false
+    default: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-_/0123456789
+    description: |-
+      The characters which are allowed in a hostname.
+  details: ""
+  example: |-
+    Allows hostnames to contain letters, numbers, `/`, `-`, `.', and `__`.
+
+    ```xml
+    <hostname charmap="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-_/0123456789">
+    ```
+commands:
+- name: CHGHOST
+  param_count: '2'
+  syntax: '`<nickname> <hostname>`'
+  description: |-
+    Changes the displayed hostname of &lt;nickname&gt; to &lt;hostname&gt;.
+example_commands: |-
+  Changes the hostname of Sadie to wibble.wobble:
+
+  ```plaintext
+  /CHGHOST Sadie wibble.wobble
+  ```
+special_notes: |-
+  This command only changes the displayed hostname of a user. Their real hostname will remain intact and still will match against bans.
+

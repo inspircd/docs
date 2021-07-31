@@ -1,0 +1,9 @@
+name: chancreate
+description: |-
+  This module sends a notice to snomasks `j` (local) and `J` (remote) when a channel is created.
+snotice_masks:
+- char: j
+  description: Notifications about channels being created on the local server.
+- char: J
+  description: Notifications about channels being created on a remote server.
+

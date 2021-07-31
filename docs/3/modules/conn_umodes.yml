@@ -1,0 +1,26 @@
+name: conn_umodes
+description: |-
+  This module allows the server administrator to set user modes on connecting users.
+configuration:
+- name: <connect>
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: modes
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The user modes to set on connecting users.
+  details: ""
+  example: |-
+    Forces all users in the Example class to have user modes `iw` (invisible, wallops):
+
+    ```xml
+    <connect name="Example"
+             ...
+             modes="+iw">
+    ```
+special_notes: |-
+  This module can set disabled modes which allows you to set user modes on users which they can not then remove.
+

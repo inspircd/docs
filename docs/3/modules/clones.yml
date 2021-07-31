@@ -1,0 +1,18 @@
+name: clones
+introduction: "!!! warning \"\"\n    This module has been moved to [inspircd-contrib](/3/module-manager)\
+  \ in the next major version of InspIRCd."
+description: |-
+  This module adds the `/CLONES` command which allows server operators to view IP addresses from which there are more than a specified number of connections.
+commands:
+- name: CLONES
+  param_count: '1'
+  syntax: '`<limit>`'
+  description: |-
+    Lists all IP addresses from which there are more than &lt;limit&gt; connections.
+example_commands: |-
+  Lists IP addresses from which there are more than five connections:
+
+  ```plaintext
+  /CLONES 5
+  ```
+

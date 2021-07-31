@@ -47,6 +47,12 @@ To load this module use the following `<module>` tag:
 ### Extended Bans
 (?P<extbans>.*?)
 )?(
+### Server Notice Masks
+(?P<snomasks>.*?)
+)?(
+### Statistics
+(?P<stats>.*?)
+)?(
 ### Special Notes
 (?P<special_notes>.*?)
 )?$"""
@@ -57,19 +63,27 @@ CONFIG_RE = r"""#### `(?P<name><\S*>)`
 (?P<description>.*?)
 
 (?P<attributes>Name.*?
-----.*?
-.*?)
+----.*?)
 
 (?P<details>.*?)##### Example Usage
 
-(?P<example>.*?
-```)
-"""
+(?P<example>.*?)
+(?=#)"""
 
 # Parse channel modes and extbans:
-MODES_RE = r"""(?P<chars>.*?)(
+MODES_RE = r"""(?P<description>.*?
+
+)?(?P<chars>(Name|Character).*?
+----.*?)(
 
 #### Example Usage
+(?P<example>.*))?$"""
+
+COMMANDS_RE = r"""(?P<commands>.*?)(
+
+(?P<details>.*?
+
+)?#### Example Usage
 (?P<example>.*))?$"""
 
 
@@ -138,6 +152,20 @@ def main(filename):
 
     output["description"] = md_block(groups["description"])
 
+    parse_configuration(groups, output)
+    parse_chmodes(groups, output)
+    parse_umodes(groups, output)
+    parse_commands(groups, output)
+    parse_caps(groups, output)
+    parse_exemptions(groups, output)
+    parse_extbans(groups, output)
+    parse_snomasks(groups, output)
+    parse_stats(groups, output)
+    parse_special_notes(groups, output)
+
+    print(yaml.dump(output, Dumper=Dumper))
+
+def parse_configuration(groups, output):
     configuration = groups["configuration"]
     if configuration.strip() != "This module requires no other configuration.":
         output["configuration"] = [
@@ -157,13 +185,15 @@ def main(filename):
                 "details": md_block(m.group("details")),
                 "example": md_block(m.group("example").strip()),
             }
-            for m in re.finditer(CONFIG_RE, configuration + "\n", re.DOTALL)
+            for m in re.finditer(CONFIG_RE, configuration + "\n#", re.DOTALL)
         ]
 
+def parse_chmodes(groups, output):
     chmodes = groups["chmodes"]
     if chmodes:
-        m = re.match(MODES_RE, chmodes, re.DOTALL)
+        m = re.match(MODES_RE, chmodes.strip(), re.DOTALL)
         output["chmodes"] = {
+            "description": m.group("description"),
             "chars": [
                 {
                     "name": row["Name"],
@@ -178,11 +208,13 @@ def main(filename):
             "example": md_block((m.group("example") or "").strip()),
         }
 
+def parse_umodes(groups, output):
     umodes = groups["umodes"]
     if umodes:
         # copy-pasted from the chmodes above
-        m = re.match(MODES_RE, umodes, re.DOTALL)
+        m = re.match(MODES_RE, umodes.strip(), re.DOTALL)
         output["umodes"] = {
+            "description": m.group("description"),
             "chars": [
                 {
                     "name": row["Name"],
@@ -197,10 +229,11 @@ def main(filename):
             "example": md_block((m.group("example") or "").strip()),
         }
 
+def parse_commands(groups, output):
     if groups["commands"]:
         commands = []
         commands = groups["commands"]
-        m = re.match(MODES_RE, commands, re.DOTALL)
+        m = re.match(COMMANDS_RE, commands, re.DOTALL)
         output["commands"] = [
             {
                 "name": row["Name"],
@@ -208,11 +241,14 @@ def main(filename):
                 "syntax": "None" if row["Syntax"] == "*None*" else row["Syntax"],
                 "description": md_block(row["Description"]),
             }
-            for row in parse_table(m.group("chars"))
+            for row in parse_table(m.group("commands"))
         ]
+        if m.group("details"):
+            output["command_details"] = md_block((m.group("details") or "").strip())
         if m.group("example"):
             output["example_commands"] = md_block((m.group("example") or "").strip())
 
+def parse_caps(groups, output):
     if groups["caps"]:
         commands = []
         output["client_caps"] = [
@@ -223,6 +259,27 @@ def main(filename):
             for row in parse_table(groups["caps"])
         ]
 
+def parse_stats(groups, output):
+    if groups["stats"]:
+        output["stats"] = [
+            {
+                "char": row["Character"],
+                "description": row["Description"],
+            }
+            for row in parse_table(groups["stats"])
+        ]
+
+def parse_snomasks(groups, output):
+    if groups["snomasks"]:
+        output["snomasks"] = [
+            {
+                "char": row["Character"],
+                "description": row["Description"],
+            }
+            for row in parse_table(groups["snomasks"])
+        ]
+
+def parse_exemptions(groups, output):
     if groups["exemptions"]:
         output["exemptions"] = [
             {
@@ -232,9 +289,11 @@ def main(filename):
             for row in parse_table(groups["exemptions"])
         ]
 
+def parse_extbans(groups, output):
     if groups["extbans"]:
-        m = re.match(MODES_RE, groups["extbans"], re.DOTALL)
+        m = re.match(MODES_RE, groups["extbans"].strip(), re.DOTALL)
         output["extbans"] = {
+            "description": m.group("description"),
             "chars": [
                 {
                     "char": row["Character"],
@@ -247,11 +306,10 @@ def main(filename):
             "example": md_block((m.group("example") or "").strip()),
         }
 
+def parse_special_notes(groups, output):
     if groups["special_notes"]:
         output["special_notes"] = md_block(groups["special_notes"].strip())
 
-    print(yaml.dump(output, Dumper=Dumper))
-        
 
 if __name__ == "__main__":
     (_, filename) = sys.argv

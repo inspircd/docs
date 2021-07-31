@@ -80,6 +80,10 @@ This module requires no other configuration.
 {% endfor %}
 </table>
 
+{%- if command_details is defined %}
+{{command_details}}
+{% endif %}
+
 {%- if example_commands is defined %}
 #### Example Usage
 
@@ -106,6 +110,8 @@ This module requires no other configuration.
 
 {% if chmodes is defined -%}
 ### Channel Modes
+
+{% if chmodes.description is defined %}{{chmodes.description}}{% endif %}
 
 <table>
 <tr>
@@ -138,6 +144,8 @@ This module requires no other configuration.
 
 {% if umodes is defined -%}
 ### User Modes
+
+{% if umodes.description is defined %}{{umodes.description}}{% endif %}
 
 <table>
 <tr>
@@ -188,6 +196,8 @@ This module requires no other configuration.
 {% if extbans is defined -%}
 ### Extended Bans
 
+{% if extbans.description is defined %}{{extbans.description}}{% endif %}
+
 <table>
 <tr>
     <th>Character</th>
@@ -209,7 +219,42 @@ This module requires no other configuration.
 #### Example Usage
 
 {{extbans.example}}
+
 {% endif -%}
+{% endif -%}
+
+{% if snomasks is defined -%}
+### Server Notice Masks
+
+<table>
+<tr>
+    <th>Character</th>
+    <th>Description</th>
+</tr>
+{% for mask in snomasks %}
+<tr>
+    <td>{{mask.char}}</td>
+    <td>{{mask.description}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif -%}
+
+{% if stats is defined -%}
+### Statistics
+
+<table>
+<tr>
+    <th>Character</th>
+    <th>Description</th>
+</tr>
+{% for stat in stats %}
+<tr>
+    <td>{{stat.char}}</td>
+    <td>{{stat.description}}</td>
+</tr>
+{% endfor %}
+</table>
 {% endif -%}
 
 {% if special_notes is defined and special_notes -%}

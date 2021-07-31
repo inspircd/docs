@@ -1,0 +1,32 @@
+name: channames
+description: |-
+  This module allows the server administrator to define what characters are allowed in channel names.
+configuration:
+- name: <channames>
+  description: |-
+    The `<channames>` tag defines settings about how the channames module should behave. This tag can only be defined once.
+  attributes:
+  - name: allowrange
+    type: No. Range
+    required: false
+    default: None
+    description: |-
+      The character ranges to allow in a channel name. This overrides denyrange if they overlap.
+  - name: denyrange
+    type: No. Range
+    required: false
+    default: None
+    description: |-
+      The character ranges to disallow in a channel name.
+  details: ""
+  example: |-
+    Bans characters other than letters, numbers, `#`, `-`, and `.`.
+
+    ```xml
+    <channames allowrange="35,45-46"
+               denyrange="1-47,58-64,91-96,123-255">
+    ```
+special_notes: "The following characters have special meaning in the IRC protocol\
+  \ and will never be allowed in a channel name:\n\n- 0x07 (bell)\t\n- 0x20 (space)\n\
+  - 0x2C (comma)"
+
