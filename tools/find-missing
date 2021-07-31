@@ -6,8 +6,8 @@ Dir["#{ROOT}/docs/**/*.md"].each do |file|
 	contents = File.read(file)
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
 		next if File.exist? "#{ROOT}/docs/#{link[0]}.md"
-		next if File.exist? "#{ROOT}/docs/#{link[0]}/index.md"
 		next if File.exist? "#{ROOT}/docs/#{link[0]}.yml"
+		next if File.exist? "#{ROOT}/docs/#{link[0]}/index.md"
 		missing << link[0] unless missing.include? link[0]
 	end
 	contents.scan(/\{!\s*(\S+)\s*!\}/).each do |fragment|
