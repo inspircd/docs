@@ -166,11 +166,21 @@ def main(filename):
     print(yaml.dump(output, Dumper=Dumper))
 
 def parse_configuration(groups, output):
-    configuration = groups["configuration"]
-    if configuration.strip() != "This module requires no other configuration.":
-        output["configuration"] = [
-            {
-                "name": m.group("name"),
+    def parse_desc_and_attr(m):
+        if m.group("name") == "<class>":
+            return {
+                "description": md_block(m.group("description")),
+                "extends": True,
+                "added_values": [
+                    {
+                        "name": row["Name"],
+                        "description": md_block(row["Description"]),
+                    }
+                    for row in parse_table(m.group("attributes"))
+                ],
+            }
+        else:
+            return {
                 "description": md_block(m.group("description")),
                 "attributes": [
                     {
@@ -182,6 +192,13 @@ def parse_configuration(groups, output):
                     }
                     for row in parse_table(m.group("attributes"))
                 ],
+            }
+    configuration = groups["configuration"]
+    if configuration.strip() != "This module requires no other configuration.":
+        output["configuration"] = [
+            {
+                "name": m.group("name"),
+                **parse_desc_and_attr(m),
                 "details": md_block(m.group("details")),
                 "example": md_block(m.group("example").strip()),
             }

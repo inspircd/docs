@@ -64,7 +64,7 @@ plugins:
           2/modules/chgname.md: 3/modules/chgname.yml
           2/modules/cloaking.md: 3/modules/cloaking.yml
           2/modules/clones.md: 3/modules/clones.yml
-          2/modules/commonchans.md: 3/modules/commonchans.md
+          2/modules/commonchans.md: 3/modules/commonchans.yml
           2/modules/conn_join.md: 3/modules/conn_join.yml
           2/modules/conn_umodes.md: 3/modules/conn_umodes.yml
           2/modules/conn_waitpong.md: 3/modules/conn_waitpong.yml
@@ -73,8 +73,8 @@ plugins:
           2/modules/customprefix.md: 3/modules/customprefix.yml
           2/modules/customtitle.md: 3/modules/customtitle.yml
           2/modules/cycle.md: 3/modules/cycle.yml
-          2/modules/dccallow.md: 3/modules/dccallow.md
-          2/modules/deaf.md: 3/modules/deaf.md
+          2/modules/dccallow.md: 3/modules/dccallow.yml
+          2/modules/deaf.md: 3/modules/deaf.yml
           2/modules/delayjoin.md: 3/modules/delayjoin.md
           2/modules/delaymsg.md: 3/modules/delaymsg.md
           2/modules/denychans.md: 3/modules/denychans.md

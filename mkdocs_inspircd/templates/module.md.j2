@@ -27,7 +27,7 @@ To load this module use the following `<module>` tag:
 
 {{tag.description}}
 
-{% if tag.attributes %}
+{% if tag.attributes is defined and tag.attributes %}
 <table>
 <tr>
     <th>Name</th>
@@ -41,6 +41,22 @@ To load this module use the following `<module>` tag:
     <td>{{attr.type}}</td>
     <td>{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
     <td>{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+{% if tag.extends is defined and tag.extends %}
+{# typically to extend `<class:privs>` #}
+<table>
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+</tr>
+{% for value in tag.added_values %}
+<tr>
+    <td>{{value.name}}</td>
+    <td>{{value.description}}</td>
 </tr>
 {% endfor %}
 </table>
