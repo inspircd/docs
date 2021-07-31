@@ -38,19 +38,19 @@ plugins:
           2/modules/abbreviation.md: 3/modules/abbreviation.yml
           2/modules/alias.md: 3/modules/alias.yml
           2/modules/allowinvite.md: 3/modules/allowinvite.yml
-          2/modules/alltime.md: 3/modules/alltime.md
-          2/modules/auditorium.md: 3/modules/auditorium.md
-          2/modules/autoop.md: 3/modules/autoop.md
-          2/modules/banexception.md: 3/modules/banexception.md
+          2/modules/alltime.md: 3/modules/alltime.yml
+          2/modules/auditorium.md: 3/modules/auditorium.yml
+          2/modules/autoop.md: 3/modules/autoop.yml
+          2/modules/banexception.md: 3/modules/banexception.yml
           2/modules/banredirect.md: 3/modules/banredirect.md
-          2/modules/blockamsg.md: 3/modules/blockamsg.md
-          2/modules/blockcaps.md: 3/modules/blockcaps.md
-          2/modules/blockcolor.md: 3/modules/blockcolor.md
-          2/modules/botmode.md: 3/modules/botmode.md
-          2/modules/callerid.md: 3/modules/callerid.md
-          2/modules/cap.md: 3/modules/cap.md
-          2/modules/cban.md: 3/modules/cban.md
-          2/modules/censor.md: 3/modules/censor.md
+          2/modules/blockamsg.md: 3/modules/blockamsg.yml
+          2/modules/blockcaps.md: 3/modules/blockcaps.yml
+          2/modules/blockcolor.md: 3/modules/blockcolor.yml
+          2/modules/botmode.md: 3/modules/botmode.yml
+          2/modules/callerid.md: 3/modules/callerid.yml
+          2/modules/cap.md: 3/modules/cap.yml
+          2/modules/cban.md: 3/modules/cban.yml
+          2/modules/censor.md: 3/modules/censor.yml
           2/modules/cgiirc.md: 3/modules/cgiirc.md
           2/modules/chancreate.md: 3/modules/chancreate.md
           2/modules/chanfilter.md: 3/modules/chanfilter.md

@@ -4,6 +4,11 @@ title: "Module Details: {{name}} (v3)"
 
 ## The "{{name}}" Module
 
+{% if introduction is defined -%}
+{{introduction}}
+
+{% endif -%}
+
 ### Description
 
 {{description}}
@@ -22,6 +27,7 @@ To load this module use the following `<module>` tag:
 
 {{tag.description}}
 
+{% if tag.attributes %}
 <table>
 <tr>
     <th>Name</th>
@@ -38,6 +44,7 @@ To load this module use the following `<module>` tag:
 </tr>
 {% endfor %}
 </table>
+{% endif %}
 
 {% if tag.details -%}
 {{tag.details}}
@@ -52,6 +59,50 @@ To load this module use the following `<module>` tag:
 This module requires no other configuration.
 
 {% endif -%}
+
+{% if commands is defined -%}
+### Commands
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Parameter Count</th>
+    <th>Syntax</th>
+    <th>Description</th>
+</tr>
+{% for command in commands %}
+<tr>
+    <td>{{command.name}}</td>
+    <td>{{command.param_count}}</td>
+    <td>{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
+    <td>{{command.description}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{%- if example_commands is defined %}
+#### Example Usage
+
+{{example_commands}}
+{% endif %}
+{% endif %}
+
+{% if client_caps is defined -%}
+### Client Capabilities
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+</tr>
+{% for cap in client_caps %}
+<tr>
+    <td>{{cap.name}}</td>
+    <td>{{cap.description}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
 
 {% if chmodes is defined -%}
 ### Channel Modes
@@ -85,6 +136,55 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
+{% if umodes is defined -%}
+### User Modes
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Character</th>
+    <th>Type</th>
+    <th>Parameter Syntax</th>
+    <th>Usable by</th>
+    <th>Description</th>
+</tr>
+{% for mode in umodes.chars %}
+<tr>
+    <td>{{mode.name}}</td>
+    <td>{{mode.char}}</td>
+    <td>{{mode.type}}</td>
+    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+    <td>{{mode.usable_by}}</td>
+    <td>{{mode.description}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% if umodes.example -%}
+#### Example Usage
+
+{{umodes.example}}
+
+{% endif -%}
+{% endif -%}
+
+{% if exemptions is defined -%}
+### Exemptions
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+</tr>
+{% for exemption in exemptions %}
+<tr>
+    <td>{{exemption.name}}</td>
+    <td>{{exemption.description}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif -%}
+
 {% if extbans is defined -%}
 ### Extended Bans
 
@@ -112,7 +212,7 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if special_notes -%}
+{% if special_notes is defined and special_notes -%}
 ### Special Notes
 
 {{special_notes}}

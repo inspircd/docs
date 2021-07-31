@@ -26,5 +26,3 @@ extbans:
         ```plaintext
         /MODE #channel +b A:*!*@example.com
         ```
-
-special_notes: ""

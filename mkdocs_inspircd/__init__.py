@@ -13,8 +13,8 @@ import jinja2
 import yaml
 
 
-def yml2md(file, template):
-    with open(file.abs_src_path) as fd:
+def yml2md(filename, template):
+    with open(filename) as fd:
         data = yaml.safe_load(fd)
     return template.render(data)
 
@@ -64,4 +64,4 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         """Replaces MkDocs's open() to read source files by reading the file
         directly and pre-rendering it to Markdown."""
         if page.file.is_inspircd_module_yaml():
-            return yml2md(page.file, template=self.module_template)
+            return yml2md(page.file.abs_src_path, template=self.module_template)
