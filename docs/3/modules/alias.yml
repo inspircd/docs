@@ -111,9 +111,6 @@ configuration:
                  prefix=".">
         ```
 
-chmodes: null
-extbans: null
-
 special_notes: |-
     If you are using services you may find it useful to use one of the predefined service files which ship with InspIRCd.
 

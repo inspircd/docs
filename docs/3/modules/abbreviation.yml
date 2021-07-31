@@ -5,10 +5,5 @@ description: |-
 
     If more than one command matches the specified abbreviation the server will respond with a list of commands that the abbreviation could possibly match.
 
-configuration: null
-
-chmodes: null
-extbans: null
-
 special_notes: |-
     This module will not allow you to abbreviate aliases added by [the alias module](/3/modules/alias) as aliases are not real commands. If you wish to shorten an alias you should add a short form version of that alias.

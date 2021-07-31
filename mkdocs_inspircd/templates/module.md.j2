@@ -16,7 +16,7 @@ To load this module use the following `<module>` tag:
 <module name="{{name}}">
 ```
 
-{% if configuration -%}
+{% if configuration is defined -%}
 {% for tag in configuration -%}
 #### `{{tag.name}}`
 
@@ -53,7 +53,7 @@ This module requires no other configuration.
 
 {% endif -%}
 
-{% if chmodes -%}
+{% if chmodes is defined -%}
 ### Channel Modes
 
 <table>
@@ -85,7 +85,7 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if extbans -%}
+{% if extbans is defined -%}
 ### Extended Bans
 
 <table>
