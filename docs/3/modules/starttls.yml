@@ -1,0 +1,24 @@
+name: starttls
+description: |-
+  This module provides the IRCv3 `tls` client capability.
+configuration:
+- name: <starttls>
+  description: |-
+    The `<starttls>` tag defines settings about how the starttls module should behave. This tag can only be defined once.
+  attributes:
+  - name: provider
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of the TLS (SSL) profile to use for STARTTLS clients.
+  details: ""
+  example: |-
+    ```xml
+    <starttls provider="gnutls">
+    ```
+client_caps:
+- name: '[tls](https://ircv3.net/specs/extensions/tls-3.1.html)'
+  description: |-
+    Allows plaintext connections to upgrade to SSL (TLS).
+

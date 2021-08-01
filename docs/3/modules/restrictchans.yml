@@ -1,0 +1,60 @@
+name: restrictchans
+description: |-
+  This module prevents unprivileged users from creating new channels.
+configuration:
+- name: <allowchannel>
+  description: |-
+    The `<allowchannel>` tag defines a channel which may be created by unprivileged users. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for a channel name which can be created by unprivileged users.
+  details: ""
+  example: |-
+    Allows unprivileged users to create the #guests channel:
+
+    ```xml
+    <allowchannel name="#guests">
+    ```
+
+    Allows unprivileged users to create channels starting with "#user-":
+
+    ```xml
+    <allowchannel name="#user-*">
+    ```
+- name: <restrictchans>
+  description: |-
+    The `<restrictchans>` tag defines settings about how the restrictchans module should behave. This tag can only be defined once.
+  attributes:
+  - name: allowregistered
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether users who are logged into an account can create channels.
+  details: ""
+  example: |-
+    ```xml
+    <restrictchans allowregistered="yes">
+    ```
+- name: <class>
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/restricted-create
+    description: |-
+      Allows server operators to create channels.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to create channels.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/restricted-create ...">
+    ```
+

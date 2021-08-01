@@ -1,0 +1,40 @@
+name: sasl
+description: |-
+  This module provides the IRCv3 `sasl` client capability.
+configuration:
+- name: <sasl>
+  description: |-
+    The `<sasl>` tag defines settings about how the sasl module should behave. This tag can only be defined once.
+  attributes:
+  - name: requiressl
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether TLS (SSL) is required to use SASL.
+  - name: target
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for the server to route SASL requests to. This should usually be set to the name of your services server.
+  details: ""
+  example: |-
+    ```xml
+    <sasl requiressl="no"
+          target="services.example.com">
+    ```
+commands:
+- name: AUTHENTICATE
+  param_count: '1'
+  syntax: '`*`<br>`<mechanism>`<br>`<base64>`'
+  description: |-
+    Allows clients to authenticate against a services account.
+  # AUTHENTICATE is not documented here because it is not intended to be executed by users
+client_caps:
+- name: '[sasl](https://ircv3.net/specs/extensions/sasl-3.1.html)'
+  description: |-
+    Enables support for SASL authentication.
+special_notes: |-
+  The `/AUTHENTICATE` command should generally not be executed by users. It is intended to be an entirely internal feature which is executed automatically by clients.
+

@@ -1,0 +1,50 @@
+name: remove
+description: |-
+  This module adds the `/FPART` and `/REMOVE` commands which allows channel operators to force part users from a channel.
+configuration:
+- name: <remove>
+  description: |-
+    The `<remove>` tag defines settings about how the remove module should behave. This tag can only be defined once.
+  attributes:
+  - name: protectedrank
+    type: Number
+    required: false
+    default: '50000'
+    description: |-
+      The rank above which users are protected from being force parted from a channel.
+  - name: supportnokicks
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to prevent use of the `/FPART` and `/REMOVE` commands when channel mode `Q` (nokick) is set.
+  details: ""
+  example: |-
+    ```xml
+    <remove protectedrank="50000"
+            supportnokicks="yes">
+    ```
+commands:
+- name: FPART
+  param_count: 2-3
+  syntax: '`<channel> <nick> [<reason>]`'
+  description: |-
+    Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+- name: REMOVE
+  param_count: 2-3
+  syntax: '`<nick> <channel> [<reason>]`'
+  description: |-
+    Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+example_commands: |-
+  Force parts Soni from #channel:
+
+  ```plaintext
+  /FPART #channel Soni :Disruptive behaviour is not allowed
+  ```
+
+  Force parts Soni from #channel:
+
+  ```plaintext
+  /REMOVE Soni #channel :Disruptive behaviour is not allowed
+  ```
+

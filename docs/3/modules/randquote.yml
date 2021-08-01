@@ -1,0 +1,60 @@
+name: randquote
+description: |-
+  This module allows random quotes to be sent to users when they connect to the server.
+configuration:
+- name: "<files>` &amp; `<execfiles>"
+  # FIXME ^ we need to do something about this hack
+  description: |-
+    This module extends the core `<files>` and `<execfiles>` tags with the following fields:
+  attributes:
+  - name: quotes
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The file to read or command to execute to obtain the quotes text.
+  details: ""
+  example: |-
+    Obtains the quotes by reading quotes.txt:
+
+    ```xml
+    <files ...
+           quotes="quotes.txt">
+    ```
+
+    Obtains the quotes by executing `curl https://www.example.com/quotes.txt`:
+
+    ```xml
+    <execfiles ...
+               quotes="curl https://www.example.com/quotes.txt">
+    ```
+- name: <randquote>
+  description: |-
+    The `<randquote>` tag defines settings about how the randquote module should behave. This tag can only be defined once.
+  attributes:
+  - name: file
+    type: Text
+    required: false
+    default: quotes
+    description: |-
+      The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the quotes.
+  - name: prefix
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then text to prefix quotes with when sending them to a user.
+  - name: suffix
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then text to suffix quotes with when sending them to a user.
+  details: ""
+  example: |-
+    ```xml
+    <randquote file="quotes"
+               prefix=""
+               suffix="">
+    ```
+

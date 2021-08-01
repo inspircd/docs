@@ -1,0 +1,100 @@
+name: sqlauth
+description: |-
+  This module allows connecting users to be authenticated against an arbitrary SQL table.
+
+  It only allows checking clients are allowed to connect (the `PASS` command), and does not provide any sort of user accounts (ie. no nickname registration, NickServ, or SASL).
+configuration:
+- name: <sqlauth>
+  description: |-
+    The `<sqlauth>` tag defines settings about how the sqlauth module should behave. This tag can only be defined once.
+  attributes:
+  - name: allowpattern
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a glob pattern for nicknames that are exempted from the authentication requirement.
+  - name: column
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of the column that the password is located in.
+  - name: dbid
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the database connection to execute the query against.
+  - name: hash
+    type: Text
+    required: false
+    default: md5,sha256
+    description: |-
+      A comma-delimited list of hash algorithms to check the password against.
+  - name: kdf
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of a KDF to check the password against.
+  - name: killreason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The message to kill users that fail to authenticate with.
+  - name: query
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The SQL query to authenticate users with. If this query returns one or more rows it is considered a success otherwise it is considered a failure.
+  - name: verbose
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to log failed authentications to snomask `a` (local) and snomask `A` (remote).
+  details: |+
+    The query field can contain any of the following template variables:
+
+    Variable    | Description
+    ----------- | -----------
+    $gecos      | The real name (gecos) of the connecting user.
+    $host       | The real hostname of the connecting user.
+    $ident      | The username (ident) of the connecting user.
+    $ip         | The IP address of the connecting user.
+    $md5pass    | An MD5 hash of the password sent with `/PASS` by the connecting user (requires [the md5 module](/3/modules/md5)).
+    $nick       | The nickname of the connecting user.
+    $pass       | The password sent with `/PASS` by the connecting user.
+    $server     | The name of the server the connecting user connected to.
+    $sha256pass | A SHA-256 hash of the password sent with `/PASS` by the connecting user (requires [the sha256 module](/3/modules/sha256)).
+    $uuid       | The UUID of the connecting user.
+
+  example: |-
+    Checks the password using the existence of a row returned from the database:
+
+    ```xml
+    <sqlauth allowpattern="Guest*"
+             hash="sha256"
+             dbid="sqlauth"
+             killreason="Access denied"
+             query="SELECT * FROM users WHERE name='$nick' AND password='$sha256pass' LIMIT 1"
+             verbose="no">
+    ```
+
+    Checks the password by comparing against a database field specified in the config:
+
+    ```xml
+    <sqlauth allowpattern="Guest*"
+             column="password"
+             kdf="bcrypt"
+             dbid="sqlauth"
+             killreason="Access denied"
+             query="SELECT * FROM users WHERE name='$nick' LIMIT 1"
+             verbose="no">
+    ```
+special_notes: |-
+  {! 3/modules/_sql_table.md !}
+

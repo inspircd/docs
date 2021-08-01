@@ -1,0 +1,56 @@
+name: watch
+description: |-
+  This module adds the `/WATCH` command which allows users to find out when their friends are connected to the server.
+configuration:
+- name: <watch>
+  description: |-
+    The `<watch>` tag defines settings about how the watch module should behave. This tag can only be defined once.
+  attributes:
+  - name: maxwatch
+    type: Number
+    required: false
+    default: '32'
+    description: |-
+      The maximum number of entries on a user's watch list.
+  details: ""
+  example: |-
+    ```xml
+    <watch maxwatch="32">
+    ```
+commands:
+- name: WATCH
+  param_count: '1'
+  syntax: '`[(+|-)<nick>]`<br>`C`<br>`L`<br>`S`'
+  description: |-
+    Manipulates the contents of the executing user's watch list.
+example_commands: |-
+  Adds Sadie to the watch list:
+
+  ```plaintext
+  /WATCH +Sadie
+  ```
+
+  Removes Sadie from the watch list:
+
+  ```plaintext
+  /WATCH -Sadie
+  ```
+
+  Removes all users from the watch list:
+
+  ```plaintext
+  /WATCH C
+  ```
+
+  Lists all users on the watch list:
+
+  ```plaintext
+  /WATCH C
+  ```
+
+  Shows the status of all watched users:
+
+  ```plaintext
+  /WATCH S
+  ```
+

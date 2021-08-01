@@ -273,6 +273,11 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
+{% if misc is defined -%}
+{{misc}}
+
+{% endif -%}
+
 {% if special_notes is defined and special_notes -%}
 ### Special Notes
 

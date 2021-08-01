@@ -1,0 +1,4 @@
+name: regex_glob
+description: |-
+  This module provides the `glob` regular expression engine which uses the built-in glob matching system.
+

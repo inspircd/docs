@@ -1,0 +1,39 @@
+name: setname
+description: |-
+  This module adds the `/SETNAME` command which allows users to change their real name (gecos).
+configuration:
+- name: <setname>
+  description: |-
+    The `<setname>` tag defines settings about how the setname module should behave. This tag can only be defined once.
+  attributes:
+  - name: notifyopers
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to notify server operators when a user changes their real name.
+  - name: operonly
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether the `/SETNAME` command can only be used by server operators.
+  details: ""
+  example: |-
+    ```xml
+    <setname notifyopers="yes"
+             operonly="no">
+    ```
+commands:
+- name: SETNAME
+  param_count: '1'
+  syntax: '`<realname>`'
+  description: |-
+    Changes the real name (gecos) of the user to &lt;realname&gt;.
+example_commands: |-
+  Changes the real name (gecos) of the user to "Wibble Wobble":
+
+  ```plaintext
+  /SETNAME :Wibble Wobble
+  ```
+

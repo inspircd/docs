@@ -65,7 +65,7 @@ CONFIG_RE = r"""#### `(?P<name><\S*>)`
 (?P<attributes>Name.*?
 ----.*?)
 
-(?P<details>.*?)##### Example Usage
+(?P<details>.*?)#####? Example Usage
 
 (?P<example>.*?)
 (?=#)"""

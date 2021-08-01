@@ -1,0 +1,56 @@
+name: sslmodes
+description: |-
+  This module adds channel mode `z` (sslonly) which prevents users who are not connecting using TLS (SSL) from joining the channel and user mode `z` (sslqueries) to prevent messages from non-TLS (SSL) users.
+configuration:
+- name: <sslmodes>
+  description: |-
+    The `<sslmodes>` tag defines settings about how the sslmodes module should behave. This tag can only be defined once.
+  attributes:
+  - name: enableumode
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user mode `z` (sslqueries) is enabled.
+  details: ""
+  example: |-
+    ```xml
+    <sslmodes enableumode="yes">
+    ```
+chmodes:
+  description: null
+  chars:
+  - name: sslonly
+    char: z
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Prevents users who are not connected using TLS (SSL) from joining the channel.
+  example: ""
+umodes:
+  description: null
+  chars:
+  - name: sslqueries
+    char: z
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Prevents messages from being sent to or received from a user that is not connected using TLS (SSL).
+  example: ""
+extbans:
+  description: null
+  chars:
+  - char: z
+    type: Matching
+    syntax: '`z:<pattern>`'
+    description: Checks whether users have an TLS (SSL) client certificate with a
+      fingerprint matching &lt;pattern&gt;.
+  example: |-
+    Bans users with an TLS (SSL) client certificate fingerprint of 5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249:
+
+    ```plaintext
+    /MODE #channel +b z:5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
+    ```
+

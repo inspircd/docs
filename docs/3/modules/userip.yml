@@ -1,0 +1,18 @@
+name: userip
+description: |-
+  This module adds the `/USERIP` command which allows users to find out the IP address of one or more connected users.
+commands:
+- name: USERIP
+  param_count: 1+
+  syntax: '`<nick> [<nick>]+`'
+  description: |-
+    Retrieves the IP address of the specified users.
+example_commands: |-
+  Looks up the IP address of Sadie:
+
+  ```plaintext
+  /USERIP Sadie
+  ```
+special_notes: |-
+  The `users/auspex` server operator privilege is required to view the IP address of other users.
+

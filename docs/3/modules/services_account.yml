@@ -1,0 +1,76 @@
+name: services_account
+description: |-
+  This module adds various channel and user modes relating to services accounts.
+chmodes:
+  description: null
+  chars:
+  - name: c_registered
+    char: r
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Marks the channel as being registered.
+  - name: reginvite
+    char: R
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Prevents users who are not logged into a services account from joining the channel.
+  - name: regmoderated
+    char: M
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Prevents users who are not logged into a services account from speaking in the channel.
+  example: ""
+umodes:
+  description: null
+  chars:
+  - name: regdeaf
+    char: R
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Prevents users who are not logged into a services account from messaging the user.
+  - name: u_registered
+    char: r
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Marks the user as being logged into a services account.
+  example: ""
+exemptions:
+- name: regmoderated
+  description: Allows exempted users to send messages to the channel without being
+    logged in.
+extbans:
+  description: null
+  chars:
+  - char: R
+    type: Matching
+    syntax: '`R:<pattern>`'
+    description: Checks whether users are logged into a services account matching
+      &lt;pattern&gt;.
+  - char: U
+    type: Matching
+    syntax: '`U:<pattern>`'
+    description: Checks whether users matching &lt;pattern&gt; are *not* logged into
+      a services account.
+  example: |-
+    Bans users logged into the services account named Soni:
+
+    ```plaintext
+    /MODE #channel +b R:Soni
+    ```
+
+    Bans users matching `*!*@example.com` that are not logged into a services account:
+
+    ```plaintext
+    /MODE #channel +b U:*!*@example.com
+    ```
+

@@ -1,0 +1,4 @@
+name: sha1
+description: |-
+  This module allows other modules to generate [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hashes.
+

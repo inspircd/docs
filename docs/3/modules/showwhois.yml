@@ -1,0 +1,38 @@
+name: showwhois
+description: |-
+  This module adds user mode `W` (showwhois) which allows users to be informed when someone does a `/WHOIS` query on their nick.
+configuration:
+- name: <showwhois>
+  description: |-
+    The `<showwhois>` tag defines settings about how the showwhois module should behave. This tag can only be defined once.
+  attributes:
+  - name: opersonly
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether user mode `W` (showwhois) can only be used by server operators.
+  - name: showfromopers
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to inform users of an oper doing a `/WHOIS` query on their nick.
+  details: ""
+  example: |-
+    ```xml
+    <showwhois opersonly="no"
+               showfromopers="no">
+    ```
+umodes:
+  description: null
+  chars:
+  - name: showwhois
+    char: W
+    type: Switch
+    syntax: None
+    usable_by: Depends on &lt;showwhois:opersonly&gt;
+    description: |-
+      Informs the user when someone does a `/WHOIS` query on their nick.
+  example: ""
+

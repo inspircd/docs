@@ -1,0 +1,51 @@
+name: securelist
+description: |-
+  This module prevents users from using the `/LIST` command until a predefined period has passed.
+configuration:
+- name: <securehost>
+  description: |-
+    The `<securehost>` tag defines an exception to the `/LIST` waiting period. This tag can be defined as many times as required.
+  attributes:
+  - name: exception
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern to match against the hostnames of users that run the `/LIST` command.
+  details: ""
+  example: |-
+    Adds an exception for the [irc.netsplit.de](http://irc.netsplit.de) crawler:
+
+    ```xml
+    <securehost exception="*@*.netsplit.de">
+    ```
+- name: <securelist>
+  description: |-
+    The `<securelist>` tag defines settings about how the securelist module should behave. This tag can only be defined once.
+  attributes:
+  - name: exemptregistered
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether registered users are exempt from waiting.
+  - name: showmsg
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to tell the user that they need to wait before using the `/LIST` command.
+  - name: waittime
+    type: Duration
+    required: false
+    default: 1m
+    description: |-
+      The time period that must pass before a user can use the `/LIST` command.
+  details: ""
+  example: |-
+    ```xml
+    <securelist exemptregistered="yes"
+                showmsg="yes"
+                waittime="60s">
+    ```
+
