@@ -66,8 +66,8 @@ chmodes:
 
 umodes:
   description: |-
-    !!! note" New in v3.9.0!"
-        If you are using an older version you will need to upgrade to use this user mode.\n\n"
+    !!! note "New in v3.9.0!"
+        If you are using an older version you will need to upgrade to use this user mode.
   chars:
   - name: nohistory
     char: N

@@ -5,6 +5,22 @@ description: |-
 
 configuration: []
 
+chmodes:
+  description: ""
+  chars:
+  - name: redirect
+    char: L
+    type: Parameter
+    syntax: '`<channel>`'
+    usable_by: Channel operators
+    description: Redirects all new users to &lt;channel&gt; when the user limit is reached.
+  example: |-
+    Redirects new users from #channel to #channel-full when the user limit is reached.
+
+    ```plaintext
+    /MODE #channel +L #channel-full
+    ```
+
 umodes:
   description: ""
   chars:

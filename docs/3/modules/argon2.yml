@@ -17,7 +17,7 @@ configuration:
   - name: memory
     type: Number
     required: false
-    default: 31072
+    default: 131072
     description: |-
       The memory hardness in kibibytes of the Argon2 algorithms.
   - name: iterations

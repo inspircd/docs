@@ -16,8 +16,8 @@ misc: |-
 
   Name    | Description
   ------- | -----------
-
   SIGUSR1 | Reloads the server's TLS (SSL) certificates.
+
 special_notes: |-
   If you are using an automated tool such as Certbot for renewing your certificates you may find it useful to use the following script as a deploy hook:
 
@@ -27,7 +27,7 @@ special_notes: |-
 
   # The location your renewal tool places your certificates.
   CERT_DIR="/var/lib/dehydrated/certs/irc.example.com"
-  #
+
   # The location of the InspIRCd config directory.
   INSPIRCD_CONFIG_DIR="/etc/inspircd"
 

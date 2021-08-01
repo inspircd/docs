@@ -42,14 +42,9 @@ configuration:
     --------------------- | -----------
     users/ignore-callerid | Allows server operators to message users using callerid without being on their callerid list.
   attributes: []
-  details: ""
-  example: |-
+  details: |-
     Allows server operators with the class named BasicOper to message users using callerid without being on their callerid list.
-
-    Name                  | Description
-    --------------------- | -----------
-    users/ignore-callerid | Allows server operators to message users using callerid without being on their callerid list.
-
+  example: |-
     ```xml
     <class name="BasicOper"
            ...

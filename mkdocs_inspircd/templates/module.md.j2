@@ -115,7 +115,7 @@ This module requires no other configuration.
 
 {{command_details}}
 
-{%- if example_commands %}
+{% if example_commands %}
 #### Example Usage
 
 {{example_commands}}
@@ -195,7 +195,7 @@ This module requires no other configuration.
 <th>Character</th>
 <th>Type</th>
 <th>Parameter Syntax</th>
-<th>Usable by</th>
+<th>Usable By</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -242,7 +242,7 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
-{% if extbans -%}
+{% if extbans %}
 ### Extended Bans
 
 {{extbans.description}}
@@ -276,7 +276,7 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if snomasks -%}
+{% if snomasks %}
 ### Server Notice Masks
 
 <table markdown="1">
@@ -297,7 +297,7 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
-{% if stats -%}
+{% if stats %}
 ### Statistics
 
 <table markdown="1">
