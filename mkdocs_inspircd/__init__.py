@@ -103,6 +103,6 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         """Inserts dynamic/generated text in markdown pages."""
         return (
             markdown
-            .replace("{{plugin_chmodes_table}}", self.chmodes_table(config))
-            .replace("{{plugin_umodes_table}}", self.umodes_table(config))
+            .replace("{{module_chmodes_table}}", self.chmodes_table(config))
+            .replace("{{module_umodes_table}}", self.umodes_table(config))
         )

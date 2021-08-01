@@ -79,4 +79,4 @@ Removes channel voice status from Sadie in \#channel:
 
 ### Modules
 
-{{plugin_chmodes_table}}
+{{module_chmodes_table}}

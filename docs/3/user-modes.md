@@ -1,5 +1,5 @@
 ---
-title: v3 Channel Modes
+title: v3 User Modes
 ---
 
 ## User Modes
@@ -42,5 +42,4 @@ Disables all enabled snomasks:
 
 ### Modules
 
-{{plugin_umodes_table}}
-
+{{module_umodes_table}}
