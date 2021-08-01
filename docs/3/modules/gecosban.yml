@@ -4,7 +4,7 @@ description: |-
   This module adds extended ban `r:` which checks whether users have a real name (gecos) matching the specified glob pattern.
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: a
     type: Matching

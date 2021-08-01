@@ -50,7 +50,7 @@ configuration:
     ```
 
 umodes:
-  description: null
+  description: ""
   chars:
   - name: helpop
     char: h

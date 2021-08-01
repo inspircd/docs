@@ -6,7 +6,7 @@ description: |-
 configuration: []
 
 umodes:
-  description: null
+  description: ""
   chars:
   - name: antiredirect
     char: L

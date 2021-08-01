@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `T` (nonotice) which allows channels to block messages sent with the `/NOTICE` command.
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: nonotice
     char: T
@@ -20,7 +20,7 @@ exemptions:
   description: Allows exempted users to send messages with the `/NOTICE` command.
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: T
     type: Acting

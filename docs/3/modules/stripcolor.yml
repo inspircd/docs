@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `S` (stripcolor) which allows channels to strip IRC formatting codes from messages.
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: stripcolor
     char: S
@@ -16,7 +16,7 @@ chmodes:
   example: ""
 
 umodes:
-  description: null
+  description: ""
   chars:
   - name: u_stripcolor
     char: S
@@ -33,7 +33,7 @@ exemptions:
     codes.
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: S
     type: Acting

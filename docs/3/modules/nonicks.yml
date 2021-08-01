@@ -23,7 +23,7 @@ configuration:
     ```
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: nonick
     char: N
@@ -35,7 +35,7 @@ chmodes:
   example: ""
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: N
     type: Acting

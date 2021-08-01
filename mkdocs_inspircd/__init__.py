@@ -45,7 +45,6 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         super().__init__()
         self.env = jinja2.Environment(
             loader=jinja2.PackageLoader(__name__),
-            undefined=jinja2.StrictUndefined,  # error when using undefined variables
         )
         self.module_template = self.env.get_template("module.md.j2")
 

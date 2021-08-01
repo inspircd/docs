@@ -29,7 +29,7 @@ configuration:
     ```
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: noknock
     char: K

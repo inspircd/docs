@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `Q` (nokick) which prevents privileged users from using the `/KICK` command.
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: nokick
     char: Q
@@ -16,7 +16,7 @@ chmodes:
   example: ""
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: Q
     type: Acting

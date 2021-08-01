@@ -28,7 +28,7 @@ configuration:
     ```
 
 umodes:
-  description: null
+  description: ""
   chars:
   - name: showwhois
     char: W

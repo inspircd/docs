@@ -4,7 +4,7 @@ description: |-
   This module adds various channel and user modes relating to services accounts.
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: c_registered
     char: r
@@ -30,7 +30,7 @@ chmodes:
   example: ""
 
 umodes:
-  description: null
+  description: ""
   chars:
   - name: regdeaf
     char: R
@@ -54,7 +54,7 @@ exemptions:
     logged in.
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: R
     type: Matching

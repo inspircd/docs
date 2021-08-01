@@ -4,10 +4,7 @@ title: "Module Details: {{name}} (v3)"
 
 ## The "{{name}}" Module
 
-{% if introduction is defined -%}
 {{introduction}}
-
-{% endif -%}
 
 ### Description
 
@@ -21,13 +18,13 @@ To load this module use the following `<module>` tag:
 <module name="{{name}}">
 ```
 
-{% if configuration is defined -%}
+{% if configuration -%}
 {% for tag in configuration -%}
 #### `{{tag.name}}`
 
 {{tag.description}}
 
-{% if tag.attributes is defined and tag.attributes %}
+{% if tag.attributes %}
 <table markdown="1">
 <thead>
 <tr>
@@ -50,7 +47,7 @@ To load this module use the following `<module>` tag:
 </table>
 {% endif %}
 
-{% if tag.extends is defined and tag.extends %}
+{% if tag.extends %}
 {# typically to extend `<class:privs>` #}
 <table markdown="1">
 <thead>
@@ -70,10 +67,7 @@ To load this module use the following `<module>` tag:
 </table>
 {% endif %}
 
-{% if tag.details -%}
 {{tag.details}}
-
-{% endif -%}
 
 ##### Example Usage
 
@@ -85,7 +79,7 @@ This module requires no other configuration.
 
 {% endif -%}
 
-{% if commands is defined -%}
+{% if commands -%}
 ### Commands
 
 <table markdown="1">
@@ -109,18 +103,16 @@ This module requires no other configuration.
 </tbody>
 </table>
 
-{%- if command_details is defined %}
 {{command_details}}
-{% endif %}
 
-{%- if example_commands is defined %}
+{%- if example_commands %}
 #### Example Usage
 
 {{example_commands}}
 {% endif %}
 {% endif %}
 
-{% if client_caps is defined -%}
+{% if client_caps -%}
 ### Client Capabilities
 
 <table markdown="1">
@@ -141,10 +133,10 @@ This module requires no other configuration.
 </table>
 {% endif %}
 
-{% if chmodes is defined -%}
+{% if chmodes -%}
 ### Channel Modes
 
-{% if chmodes.description is defined %}{{chmodes.description}}{% endif %}
+{{chmodes.description}}
 
 {% if chmodes.chars %}
 <table markdown="1">
@@ -181,10 +173,10 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if umodes is defined -%}
+{% if umodes -%}
 ### User Modes
 
-{% if umodes.description is defined %}{{umodes.description}}{% endif %}
+{{umodes.description}}
 
 <table markdown="1">
 <thead>
@@ -219,7 +211,7 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if exemptions is defined -%}
+{% if exemptions -%}
 ### Exemptions
 
 <table markdown="1">
@@ -240,10 +232,10 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
-{% if extbans is defined -%}
+{% if extbans -%}
 ### Extended Bans
 
-{% if extbans.description is defined %}{{extbans.description}}{% endif %}
+{{extbans.description}}
 
 <table markdown="1">
 <thead>
@@ -274,7 +266,7 @@ This module requires no other configuration.
 {% endif -%}
 {% endif -%}
 
-{% if snomasks is defined -%}
+{% if snomasks -%}
 ### Server Notice Masks
 
 <table markdown="1">
@@ -295,7 +287,7 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
-{% if stats is defined -%}
+{% if stats -%}
 ### Statistics
 
 <table markdown="1">
@@ -316,12 +308,12 @@ This module requires no other configuration.
 </table>
 {% endif -%}
 
-{% if misc is defined -%}
+{% if misc -%}
 {{misc}}
 
 {% endif -%}
 
-{% if special_notes is defined and special_notes -%}
+{% if special_notes -%}
 ### Special Notes
 
 {{special_notes}}

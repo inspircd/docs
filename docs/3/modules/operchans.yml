@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `O` (operonly) which prevents non-server operators from joining the channel.
 
 chmodes:
-  description: null
+  description: ""
   chars:
   - name: operonly
     char: O
@@ -16,7 +16,7 @@ chmodes:
   example: ""
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: O
     type: Matching

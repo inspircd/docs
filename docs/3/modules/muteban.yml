@@ -21,7 +21,7 @@ configuration:
     ```
 
 extbans:
-  description: null
+  description: ""
   chars:
   - char: m
     type: Acting

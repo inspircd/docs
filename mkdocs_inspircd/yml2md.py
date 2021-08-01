@@ -13,7 +13,6 @@ from . import yml2md
 def main(filename):
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + "/templates"),
-        undefined=jinja2.StrictUndefined,  # error when using undefined variables
     )
     module_template = env.get_template("module.md.j2")
 
