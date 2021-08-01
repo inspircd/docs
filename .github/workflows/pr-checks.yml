@@ -1,27 +1,27 @@
 name: Pull request checks
 on:
-- pull_request
-- push
+  - pull_request
+  - push
 jobs:
   build:
     if: (github.repository == 'inspircd/inspircd-docs' && github.event_name == 'pull_request') || (github.repository != 'inspircd/inspircd-docs' && github.event_name == 'push')
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: |
-          sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
-          sudo pip3 install -r requirements.txt
+      - name: Install dependencies
+        run: |
+            sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
+            sudo pip3 install -r requirements.txt
 
-    - name: Check for missing pages
-      run: ./tools/find-missing
+      - name: Check for missing pages
+        run: ./tools/find-missing
 
-    - name: Check for orphaned pages
-      run: ./tools/find-orphans
+      - name: Check for orphaned pages
+        run: ./tools/find-orphans
 
-    - name: Check for trailing whitespace
-      run: ./tools/find-whitespace
+      - name: Check for trailing whitespace
+        run: ./tools/find-whitespace
 
-    - name: Lint YAML
-      run: yamllint docs/
+      - name: Lint YAML
+        run: yamllint docs/
