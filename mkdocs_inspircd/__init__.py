@@ -4,6 +4,7 @@ be built by MkDocs like regular pages.
 """
 
 import fnmatch
+import functools
 import glob
 import pathlib
 import os.path
@@ -14,10 +15,14 @@ import jinja2
 import yaml
 
 
-def yml2md(filename, template):
+@functools.lru_cache(10240)
+def load_yaml(filename):
     with open(filename) as fd:
-        data = yaml.safe_load(fd)
-    return template.render(data)
+        return yaml.safe_load(fd)
+
+
+def yml2md(filename, template):
+    return template.render(load_yaml(filename))
 
 
 class ExtendedFile(mkdocs.structure.files.File):
@@ -71,8 +76,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         if self._modules is None:
             self._modules = []
             for module_file in glob.glob(config["docs_dir"] + "/3/modules/*.yml"):
-                with open(module_file) as fd:
-                    self._modules.append(yaml.safe_load(fd))
+                self._modules.append(load_yaml(module_file))
         return self._modules
 
     def chmodes_table(self, config):
