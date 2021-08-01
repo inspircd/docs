@@ -1,0 +1,31 @@
+name: hidechans
+description: |-
+  This module adds user mode `I` (hidechans) which hides the channels users with it set are in from their `/WHOIS` response.
+configuration:
+- name: <hidechans>
+  description: |-
+    The `<hidechans>` tag defines settings about how the hidechans module should behave. This tag can only be defined once.
+  attributes:
+  - name: affectsopers
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether server operators are affected by the user mode.
+  details: ""
+  example: |-
+    ```xml
+    <hidechans affectsopers="no">
+    ```
+umodes:
+  description: null
+  chars:
+  - name: hidechans
+    char: I
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Hides the channels the user is in from their `/WHOIS` response.
+  example: ""
+

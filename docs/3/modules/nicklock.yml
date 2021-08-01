@@ -1,0 +1,27 @@
+name: nicklock
+description: |-
+  This module adds the `/NICKLOCK` command which allows server operators to change a user's nickname and prevent them from changing it again until they disconnect.
+commands:
+- name: NICKLOCK
+  param_count: '2'
+  syntax: '`<old-nick> <new-nick>`'
+  description: |-
+    Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt; and prevents them from changing their nickname.
+- name: NICKUNLOCK
+  param_count: '1'
+  syntax: '`<locked-nick>`'
+  description: |-
+    Allows &lt;locked-nick&gt; to change their nickname.
+example_commands: |-
+  Changes the nickname of Sadie to Sadie2 and prevents them from changing their nickname:
+
+  ```plaintext
+  /NICKLOCK Sadie Sadie2
+  ```
+
+  Allows Sadie2 to change their nickname:
+
+  ```plaintext
+  /NICKUNLOCK Sadie2
+  ```
+

@@ -1,0 +1,74 @@
+name: ldap
+introduction: "!!! note \"\"\n    This module depends on a third-party library ([OpenLDAP](https://www.openldap.org))\
+  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
+  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
+  \ --enable-extras ldap</pre></code>"
+description: |-
+  This module provides the ability for LDAP modules to query a LDAP directory.
+configuration:
+- name: <database>
+  description: |-
+    The `<database>` tag defines a PostgreSQL database to connect to. This tag can be defined as many times as required.
+  attributes:
+  - name: module
+    type: Text
+    required: true
+    default: None
+    description: |-
+      *This MUST be set to "ldap" to connect to an LDAP directory.*
+  - name: id
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name that LDAP-using modules can refer to this `<database>` tag using.
+  - name: bindauth
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password for the Distinguished Name specified in the binddn field.
+  - name: binddn
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The Distinguished Name to bind to for searching,
+  - name: searchscope
+    type: Text
+    required: false
+    default: subtree
+    description: |-
+      The scope of the search for the LDAP entry.
+  - name: server
+    type: Text
+    required: false
+    default: None
+    description: |-
+      **Required** The `ldaps://` or `ldap://` URL for your LDAP server.
+  - name: timeout
+    type: Duration
+    required: false
+    default: 5s
+    description: |-
+      The time to wait before expiring an unresponsive LDAP connection.
+  details: |+
+    The searchscope field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    base     | Search only the LDAP object itself.
+    onelevel | Search the LDAP object and its immediate children.
+    subtree  | Search the LDAP object and all descendants.
+
+  example: |-
+    ```xml
+    <database module="ldap"
+              id="users"
+              bindauth="password"
+              binddn="cn=Manager,dc=inspircd,dc=org"
+              searchscope="subtree"
+              server="ldaps://localhost"
+              timeout="5s">
+    ```
+

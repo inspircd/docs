@@ -1,0 +1,73 @@
+name: mysql
+introduction: "!!! note \"\"\n    This module depends on a third-party library ([libmysqlclient](https://dev.mysql.com/downloads/connector/c/))\
+  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
+  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
+  \ --enable-extras mysql</code></pre>"
+description: |-
+  This module provides the ability for SQL modules to query a MySQL database.
+configuration:
+- name: <database>
+  description: |-
+    The `<database>` tag defines a MySQL database to connect to. This tag can be defined as many times as required.
+  attributes:
+  - name: module
+    type: Text
+    required: true
+    default: None
+    description: |-
+      *This MUST be set to "mysql" to connect to a MySQL database.*
+  - name: id
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name that SQL-using modules can refer to this `<database>` tag using.
+  - name: host
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The hostname or IP address of a MySQL server.
+  - name: port
+    type: Number
+    required: true
+    default: None
+    description: |-
+      The port on which the MySQL server is listening.
+  - name: user
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The username to log into the MySQL server with.
+  - name: pass
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password to log into the MySQL server with.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the MySQL database to use.
+  - name: charset
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a custom character set to use with the MySQL server.
+  details: ""
+  example: |-
+    ```xml
+    <database module="mysql"
+              id="opers"
+              host="localhost"
+              port="3306"
+              user="ircd_opers"
+              pass="changeme"
+              name="inspircd"
+              charset="utf8mb4">
+    ```
+

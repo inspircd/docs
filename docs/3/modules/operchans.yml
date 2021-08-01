@@ -1,0 +1,29 @@
+name: operchans
+description: |-
+  This module adds channel mode `O` (operonly) which prevents non-server operators from joining the channel.
+chmodes:
+  description: null
+  chars:
+  - name: operonly
+    char: O
+    type: Switch
+    syntax: None
+    usable_by: Server operators
+    description: |-
+      Prevents non-server operators from joining the channel.
+  example: ""
+extbans:
+  description: null
+  chars:
+  - char: O
+    type: Matching
+    syntax: '`O:<pattern>`'
+    description: Checks whether users are logged into a server operator account matching
+      &lt;pattern&gt;.
+  example: |-
+    Bans users logged into server operator accounts matching `Evil*` from joining the channel:
+
+    ```plaintext
+    /MODE #channel +b O:Evil*
+    ```
+

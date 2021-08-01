@@ -1,0 +1,35 @@
+name: hidemode
+description: |-
+  This module allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
+configuration:
+- name: <hidemode>
+  description: |-
+    The `<hidemode>` tag defines settings about how the hidemode module should behave. This tag can be defined as many times as required.
+  attributes:
+  - name: mode
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of the mode this rule applies to.
+  - name: rank
+    type: Number
+    required: false
+    default: '0'
+    description: |-
+      The rank to restrict viewing this mode change to.
+  details: ""
+  example: |-
+    Hides channel mode `b` (ban) changes from non-voiced users:
+
+    ```xml
+    <hidemode mode="ban"
+              rank="10000">
+    ```
+special_notes: |-
+  The ranks of the built-in channel prefix modes are:
+
+  - op (+o) &mdash; 30000
+
+  - voice (+v) &mdash; 10000
+

@@ -1,0 +1,92 @@
+name: helpop
+description: |-
+  This module adds the `/HELPOP` command which allows users to view help on various topics and user mode `h` (helpop) which marks a server operator as being available for help.
+configuration:
+- name: <helpmsg>
+  description: |-
+    The `<helpmsg>` tag defines responses to the /HELPOP command. This tag can only be defined once.
+  attributes:
+  - name: nohelp
+    type: Text
+    required: false
+    default: There is no help for the topic you searched for. Please try again.
+    description: |-
+      The message to respond with when a help topic does not exist.
+  details: ""
+  example: |-
+    ```xml
+    <helpmsg nohelp="There is no help for the topic you searched for. Please try again.">
+    ```
+- name: <helpop>
+  description: |-
+    The `<helpop>` tag defines a help topic. This tag can be defined as many times as required.
+  attributes:
+  - name: key
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of this help topic.
+  - name: title
+    type: Text
+    required: false
+    default: None
+    description: |-
+      [**New in v3.5.0!**](/3/change-log/#inspircd-350) The header for the help topic.
+  - name: value
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The contents of this help topic. This can be split over multiple lines if needed.
+  details: ""
+  example: |-
+    ```xml
+    <helpop key="test"
+            title="Testing?"
+            value="This is a test!">
+    ```
+umodes:
+  description: null
+  chars:
+  - name: helpop
+    char: h
+    type: Switch
+    syntax: None
+    usable_by: Server operators
+    description: |-
+      Marks the user as being available for help.
+  example: ""
+commands:
+- name: HELPOP
+  param_count: 0-1
+  syntax: '`[<topic>]`'
+  description: |-
+    Looks up help on a particular topic.
+example_commands: |-
+  Responds with the help introduction page:
+
+  ```plaintext
+  /HELPOP
+  ```
+
+  Responds with a list of all potential help topics:
+
+  ```plaintext
+  /HELPOP index
+  ```
+
+  Responds with the contents of the "example" help topic:
+
+  ```plaintext
+  /HELPOP example
+  ```
+special_notes: |-
+  You may find it useful to use the predefined help file which ships with InspIRCd.
+
+  To use this add the following tag to your configuration:
+
+  ```xml
+  <include file="examples/helpop.conf.example">
+  ```
+

@@ -53,7 +53,7 @@ To load this module use the following `<module>` tag:
 ### Statistics
 (?P<stats>.*?)
 )?(
-### Special Notes
+###? Special Notes
 (?P<special_notes>.*?)
 )?$"""
 

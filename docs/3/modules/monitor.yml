@@ -1,0 +1,56 @@
+name: monitor
+description: |-
+  This module adds the `/MONITOR` command which allows users to find out when their friends are connected to the server.
+configuration:
+- name: <monitor>
+  description: |-
+    The `<monitor>` tag defines settings about how the monitor module should behave. This tag can only be defined once.
+  attributes:
+  - name: maxentries
+    type: Number
+    required: false
+    default: '30'
+    description: |-
+      The maximum number of entries on a user's monitor list.
+  details: ""
+  example: |-
+    ```xml
+    <monitor maxentries="32">
+    ```
+commands:
+- name: MONITOR
+  param_count: 1, 2
+  syntax: '`(+|-) <nick>,[<nick>]+`<br>`C`<br>`L`<br>`S`'
+  description: |-
+    Manipulates the contents of the executing user's monitor list.
+example_commands: |-
+  Adds Sadie to the monitor list:
+
+  ```plaintext
+  /MONITOR + Sadie
+  ```
+
+  Removes Sadie from the monitor list:
+
+  ```plaintext
+  /MONITOR - Sadie
+  ```
+
+  Removes all users from the monitor list:
+
+  ```plaintext
+  /MONITOR C
+  ```
+
+  Lists all users on the monitor list:
+
+  ```plaintext
+  /MONITOR L
+  ```
+
+  Shows the status of all monitored users:
+
+  ```plaintext
+  /MONITOR S
+  ```
+

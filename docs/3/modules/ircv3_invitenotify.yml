@@ -1,0 +1,8 @@
+name: ircv3_invitenotify
+description: |-
+  This module provides the IRCv3 `invite-notify` client capability.
+client_caps:
+- name: '[invite-notify](https://ircv3.net/specs/extensions/invite-notify-3.2.html)'
+  description: |-
+    Notifies users when a user is invited to the channel.
+

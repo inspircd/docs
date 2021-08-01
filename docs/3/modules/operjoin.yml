@@ -1,0 +1,57 @@
+name: operjoin
+description: |-
+  This module allows the server administrator to force server operators to join one or more channels when logging into their server operator account.
+configuration:
+- name: "<oper>` &amp; `<type>"
+  # FIXME ^ we need to do something about this hack
+  description: |-
+    This module extends the core `<oper>` and `<type>` tags with the following fields:
+  attributes:
+  - name: autojoin
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A comma-delimited list of channels for server operators to be joined to when logging into their server operator account.
+  details: ""
+  example: |-
+    Forces Sadie to join #example1 and #example2 when logging into their server operator account:
+
+    ```xml
+    <oper name="Sadie"
+          ...
+          autojoin="#example1,#example2">
+    ```
+
+    Forces server operators of type NetAdmin to join #example1 and #example2 when logging into their server operator account:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
+          autojoin="#example1,#example2">
+    ```
+- name: <operjoin>
+  description: |-
+    The `<operjoin>` tag defines settings about how the operjoin module should behave. This tag can only be defined once.
+  attributes:
+  - name: channel
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A comma-delimited list of channels for server operators to be joined to when logging into their server operator account.
+  - name: override
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to force server operators into the channel regardless of any channel modes that might normally prevent them from joining.
+  details: ""
+  example: |-
+    Forces all server operators to join #example when logging into their server operator account:
+
+    ```xml
+    <operjoin channel="#example"
+              override="yes">
+    ```
+

@@ -1,0 +1,31 @@
+name: nonotice
+description: |-
+  This module adds channel mode `T` (nonotice) which allows channels to block messages sent with the `/NOTICE` command.
+chmodes:
+  description: null
+  chars:
+  - name: nonotice
+    char: T
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Enables blocking messages sent with the `/NOTICE` command.
+  example: ""
+exemptions:
+- name: nonotice
+  description: Allows exempted users to send messages with the `/NOTICE` command.
+extbans:
+  description: null
+  chars:
+  - char: T
+    type: Acting
+    syntax: '`T:<mask>`'
+    description: Bans &lt;mask&gt; from sending messages with the `/NOTICE` command.
+  example: |-
+    Bans users matching `*!*@example.com` from sending messages with the `/NOTICE` command:
+
+    ```plaintext
+    /MODE #channel +b T:*!*@example.com
+    ```
+

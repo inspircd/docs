@@ -1,0 +1,44 @@
+name: ircv3
+description: |-
+  This module provides the IRCv3 `account-notify`, `away-notify`, and `extended-join` client capabilities.
+configuration:
+- name: <ircv3>
+  description: |-
+    The `<ircv3>` tag defines settings about how the ircv3 module should behave. This tag can only be defined once.
+  attributes:
+  - name: accountnotify
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the `account-notify` client capability is enabled.
+  - name: awaynotify
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the `away-notify` client capability is enabled.
+  - name: extendedjoin
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the `extended-join` client capability is enabled.
+  details: ""
+  example: |-
+    ```xml
+    <ircv3 accountnotify="yes"
+           awaynotify="yes"
+           extendedjoin="yes">
+    ```
+client_caps:
+- name: '[account-notify](https://ircv3.net/specs/extensions/account-notify-3.1.html)'
+  description: |-
+    Allows the client to be notified when a user's account name changes.
+- name: '[away-notify](https://ircv3.net/specs/extensions/away-notify-3.1.html)'
+  description: |-
+    Allows the client to be notified when a user's away status changes.
+- name: '[extended-join](https://ircv3.net/specs/extensions/extended-join-3.1.html)'
+  description: |-
+    Extends the server-to-client JOIN message to include the joining user's account name and real name.
+

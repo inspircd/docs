@@ -1,0 +1,71 @@
+name: opermotd
+description: |-
+  This module adds the `/OPERMOTD` command which adds a special message of the day for server operators.
+configuration:
+- name: "<files>` &amp; `<execfiles>"
+  # FIXME ^ we need to do something about this hack
+  description: |-
+    This module extends the core `<files>` and `<execfiles>` tags with the following fields:
+  attributes:
+  - name: opermotd
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The file to read or command to execute to obtain the opermotd text.
+  details: ""
+  example: |-
+    Obtains the server operator message of the day by reading opermotd.txt:
+
+    ```xml
+    <files ...
+           opermotd="opermotd.txt">
+    ```
+
+    Obtains the server operator message of the day by executing `curl https://www.example.com/opermotd.txt`:
+
+    ```xml
+    <execfiles ...
+               opermotd="curl https://www.example.com/opermotd.txt">
+    ```
+- name: <opermotd>
+  description: |-
+    The `<opermotd>` tag defines settings about how the opermotd module should behave. This tag can only be defined once.
+  attributes:
+  - name: file
+    type: Text
+    required: false
+    default: opermotd
+    description: |-
+      The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the server operator message of the day.
+  - name: onoper
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send the server operator message of the day to server operators when they log into their server operator account.
+  details: ""
+  example: |-
+    ```xml
+    <opermotd file="opermotd"
+              onoper="yes">
+    ```
+commands:
+- name: OPERMOTD
+  param_count: 0-1
+  syntax: '`[<server>]`'
+  description: |-
+    Requests the server operator message of the day for &lt;server&gt;.
+example_commands: |-
+  Requests the server operator message of the day for the local server:
+
+  ```plaintext
+  /OPERMOTD
+  ```
+
+  Requests the server operator message of the day for irc.example.com:
+
+  ```plaintext
+  /OPERMOTD irc.example.com
+  ```
+

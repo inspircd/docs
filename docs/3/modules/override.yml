@@ -1,0 +1,92 @@
+name: override
+description: |-
+  This module allows server operators to be given privileges that allow them to ignore various channel-level restrictions.
+configuration:
+- name: "<oper>` &amp; `<type>"
+  # FIXME ^ we need to do something about this hack
+  description: |-
+    This module extends the core `<oper>` and `<type>` tags with the following fields:
+  attributes:
+  - name: override
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A space-delimited list of channel-level restrictions that a server operator can ignore.
+  details: |+
+    The override field should be set to one or more of the following values:
+
+    Value   | Description
+    ------- | -----------
+    BANWALK | Allows the server operator to ignore any bans which match them.
+    INVITE  | Allows the server operator to ignore channel mode `i` (inviteonly).
+    KEY     | Allows the server operator to ignore channel mode `k` (key).
+    KICK    | Allows the server operator to ignore channel privileges when kicking users.
+    LIMIT   | Allows the server operator to ignore channel mode `l` (limit).
+    MODE    | Allows the server operator to ignore channel privileges when changing channel modes.
+    TOPIC   | Allows the server operator to ignore channel privileges when changing channel topics.
+
+  example: |-
+    Allows Sadie to ignore any restrictions that might prevent them from joining a channel:
+
+    ```xml
+    <oper name="Sadie"
+          ...
+          override="BANWALK INVITE KEY LIMIT">
+    ```
+
+    Allows server operators of type NetAdmin to ignore any restrictions that might prevent them from joining a channel:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
+          override="BANWALK INVITE KEY LIMIT">
+    ```
+- name: <override>
+  description: |-
+    The `<override>` tag defines settings about how the override module should behave. This tag can only be defined once.
+  attributes:
+  - name: enableumode
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user mode `O` (override) needs to be enabled to override a restriction.
+  - name: noisy
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to inform the channel when a server operator overrides a restriction.
+  - name: requirekey
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether overriding server operators should have to specify a channel key of `override` when joining a channel.
+  details: ""
+  example: |-
+    ```xml
+    <override enableumode="yes"
+              noisy="no"
+              requirekey="no">
+    ```
+umodes:
+  description: null
+  chars:
+  - name: override
+    char: O
+    type: Switch
+    syntax: None
+    usable_by: Server operators
+    description: |-
+      Allows server operators to opt-in to overriding restrictions.
+  example: ""
+snomasks:
+- char: v
+  description: Notifications about server operators overriding channel-level restrictions
+    on the local server.
+- char: V
+  description: Notifications about server operators overriding channel-level restrictions
+    on a remote server.
+
