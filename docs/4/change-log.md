@@ -8,6 +8,24 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a3
+
+**This pre-release version of InspIRCd was released on 2021-08-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- The default value for `<limits:maxchan>` has been changed to 60.
+
+- The default value for `<limits:maxkick>` has been changed to 130.
+
+- The default value for `<limits:maxquit>` has been changed to 300.
+
+- The default value for `<limits:maxreal>` has been changed to 130.
+
+- The default value for `<limits:maxtopic>` has been changed to 330.
+
 ### InspIRCd 4.0.0a2
 
 **This pre-release version of InspIRCd was released on 2021-07-01.**

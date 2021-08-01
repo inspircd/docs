@@ -34,6 +34,8 @@ title: v4 Breaking Changes
 
 - `<security:hidewhois>` has been moved to `<security:hideserver>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
+- The `/PROTOCTL` command has been moved to inspircd-contrib. If you wish to keep this behaviour then you can run `./modulemanager install m_protoctl` to install it.
+
 - The censor module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_censor` to install it.
 
 - The cgiirc module has been renamed to gateway. In order to upgrade you should change your module tag to point to the new name.
@@ -91,6 +93,8 @@ title: v4 Breaking Changes
 - `inspircd-genssl` has been removed with no replacement. You should use a CA-validated certificate for your server rather than a self-signed one.
 
 - Compatibility with the 1202 (v2) protocol has been removed. You will need to link against an intermediary v3 server if you are upgrading from v2.
+
+- Support for Debian GNU/kFreeBSD has been dropped.
 
 - The blockcaps module has been removed. If you wish to keep this behaviour then you should load the anticaps module instead. See the documentation in modules.conf.example for more details.
 
