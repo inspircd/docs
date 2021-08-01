@@ -15,6 +15,7 @@ markdown_extensions:
     - extra
     - markdown_include.include:
           base_path: docs
+    - md_in_html
 plugins:
   - exclude:
       glob:

@@ -28,23 +28,23 @@ To load this module use the following `<module>` tag:
 {{tag.description}}
 
 {% if tag.attributes is defined and tag.attributes %}
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Default Value</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for attr in tag.attributes %}
-    <tr>
-        <td>{{attr.name}}</td>
-        <td>{{attr.type}}</td>
-        <td>{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
-        <td>{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{attr.name}}</td>
+<td markdown="1">{{attr.type}}</td>
+<td markdown="1">{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
+<td markdown="1">{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -52,19 +52,19 @@ To load this module use the following `<module>` tag:
 
 {% if tag.extends is defined and tag.extends %}
 {# typically to extend `<class:privs>` #}
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for value in tag.added_values %}
-    <tr>
-        <td>{{value.name}}</td>
-        <td>{{value.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{value.name}}</td>
+<td markdown="1">{{value.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -87,23 +87,23 @@ This module requires no other configuration.
 {% if commands is defined -%}
 ### Commands
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Parameter Count</th>
-        <th>Syntax</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Parameter Count</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for command in commands %}
-    <tr>
-        <td>{{command.name}}</td>
-        <td>{{command.param_count}}</td>
-        <td>{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
-        <td>{{command.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{command.name}}</td>
+<td markdown="1">{{command.param_count}}</td>
+<td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
+<td markdown="1">{{command.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -122,19 +122,19 @@ This module requires no other configuration.
 {% if client_caps is defined -%}
 ### Client Capabilities
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for cap in client_caps %}
-    <tr>
-        <td>{{cap.name}}</td>
-        <td>{{cap.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{cap.name}}</td>
+<td markdown="1">{{cap.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -146,27 +146,27 @@ This module requires no other configuration.
 {% if chmodes.description is defined %}{{chmodes.description}}{% endif %}
 
 {% if chmodes.chars %}
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Character</th>
-        <th>Type</th>
-        <th>Parameter Syntax</th>
-        <th>Usable by</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Character</th>
+<th>Type</th>
+<th>Parameter Syntax</th>
+<th>Usable by</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for mode in chmodes.chars %}
-    <tr>
-        <td>{{mode.name}}</td>
-        <td>{{mode.char}}</td>
-        <td>{{mode.type}}</td>
-        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-        <td>{{mode.usable_by}}</td>
-        <td>{{mode.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{mode.name}}</td>
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.usable_by}}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -185,27 +185,27 @@ This module requires no other configuration.
 
 {% if umodes.description is defined %}{{umodes.description}}{% endif %}
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Character</th>
-        <th>Type</th>
-        <th>Parameter Syntax</th>
-        <th>Usable by</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Character</th>
+<th>Type</th>
+<th>Parameter Syntax</th>
+<th>Usable by</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for mode in umodes.chars %}
-    <tr>
-        <td>{{mode.name}}</td>
-        <td>{{mode.char}}</td>
-        <td>{{mode.type}}</td>
-        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-        <td>{{mode.usable_by}}</td>
-        <td>{{mode.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{mode.name}}</td>
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.usable_by}}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -221,19 +221,19 @@ This module requires no other configuration.
 {% if exemptions is defined -%}
 ### Exemptions
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for exemption in exemptions %}
-    <tr>
-        <td>{{exemption.name}}</td>
-        <td>{{exemption.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{exemption.name}}</td>
+<td markdown="1">{{exemption.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -244,23 +244,23 @@ This module requires no other configuration.
 
 {% if extbans.description is defined %}{{extbans.description}}{% endif %}
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Character</th>
-        <th>Type</th>
-        <th>Ban Syntax</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Character</th>
+<th>Type</th>
+<th>Ban Syntax</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for mode in extbans.chars %}
-    <tr>
-        <td>{{mode.char}}</td>
-        <td>{{mode.type}}</td>
-        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-        <td>{{mode.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -276,19 +276,19 @@ This module requires no other configuration.
 {% if snomasks is defined -%}
 ### Server Notice Masks
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Character</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for mask in snomasks %}
-    <tr>
-        <td>{{mask.char}}</td>
-        <td>{{mask.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{mask.char}}</td>
+<td markdown="1">{{mask.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
@@ -297,19 +297,19 @@ This module requires no other configuration.
 {% if stats is defined -%}
 ### Statistics
 
-<table>
+<table markdown="1">
 <thead>
-    <tr>
-        <th>Character</th>
-        <th>Description</th>
-    </tr>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
 </thead>
-<tbody>
+<tbody markdown="1">
 {% for stat in stats %}
-    <tr>
-        <td>{{stat.char}}</td>
-        <td>{{stat.description}}</td>
-    </tr>
+<tr markdown="1">
+<td markdown="1">{{stat.char}}</td>
+<td markdown="1">{{stat.description}}</td>
+</tr>
 {% endfor %}
 </tbody>
 </table>
