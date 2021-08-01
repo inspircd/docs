@@ -103,10 +103,23 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             ]
         )
 
+    def extbans_table(self, config):
+        modules = self.modules(config)
+        template = self.env.get_template("extban_table.md.j2")
+        return template.render(
+            extbans=[
+                {**extban, "module": module["name"]}
+                for module in modules
+                if "extbans" in module
+                for extban in module["extbans"]["chars"]
+            ]
+        )
+
     def on_page_markdown(self, markdown, page, config, files):
         """Inserts dynamic/generated text in markdown pages."""
         return (
             markdown
             .replace("{{module_chmodes_table}}", self.chmodes_table(config))
             .replace("{{module_umodes_table}}", self.umodes_table(config))
+            .replace("{{module_extbans_table}}", self.extbans_table(config))
         )
