@@ -1,5 +1,5 @@
 name: Pull request checks
-"on":
+on:
 - pull_request
 - push
 jobs:
@@ -21,4 +21,4 @@ jobs:
     - name: Check for trailing whitespace
       run: ./tools/find-whitespace
     - name: Lint YAML
-      run: yamllint .
+      run: yamllint docs/
