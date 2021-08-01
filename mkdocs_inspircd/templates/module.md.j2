@@ -29,36 +29,44 @@ To load this module use the following `<module>` tag:
 
 {% if tag.attributes is defined and tag.attributes %}
 <table>
-<tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Default Value</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default Value</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for attr in tag.attributes %}
-<tr>
-    <td>{{attr.name}}</td>
-    <td>{{attr.type}}</td>
-    <td>{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
-    <td>{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
-</tr>
+    <tr>
+        <td>{{attr.name}}</td>
+        <td>{{attr.type}}</td>
+        <td>{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
+        <td>{% if attr.required %}<strong>Required</strong> {% endif %}{{attr.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif %}
 
 {% if tag.extends is defined and tag.extends %}
 {# typically to extend `<class:privs>` #}
 <table>
-<tr>
-    <th>Name</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for value in tag.added_values %}
-<tr>
-    <td>{{value.name}}</td>
-    <td>{{value.description}}</td>
-</tr>
+    <tr>
+        <td>{{value.name}}</td>
+        <td>{{value.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif %}
 
@@ -80,20 +88,24 @@ This module requires no other configuration.
 ### Commands
 
 <table>
-<tr>
-    <th>Name</th>
-    <th>Parameter Count</th>
-    <th>Syntax</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Parameter Count</th>
+        <th>Syntax</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for command in commands %}
-<tr>
-    <td>{{command.name}}</td>
-    <td>{{command.param_count}}</td>
-    <td>{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
-    <td>{{command.description}}</td>
-</tr>
+    <tr>
+        <td>{{command.name}}</td>
+        <td>{{command.param_count}}</td>
+        <td>{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
+        <td>{{command.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 
 {%- if command_details is defined %}
@@ -111,16 +123,20 @@ This module requires no other configuration.
 ### Client Capabilities
 
 <table>
-<tr>
-    <th>Name</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for cap in client_caps %}
-<tr>
-    <td>{{cap.name}}</td>
-    <td>{{cap.description}}</td>
-</tr>
+    <tr>
+        <td>{{cap.name}}</td>
+        <td>{{cap.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif %}
 
@@ -131,24 +147,28 @@ This module requires no other configuration.
 
 {% if chmodes.chars %}
 <table>
-<tr>
-    <th>Name</th>
-    <th>Character</th>
-    <th>Type</th>
-    <th>Parameter Syntax</th>
-    <th>Usable by</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Character</th>
+        <th>Type</th>
+        <th>Parameter Syntax</th>
+        <th>Usable by</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for mode in chmodes.chars %}
-<tr>
-    <td>{{mode.name}}</td>
-    <td>{{mode.char}}</td>
-    <td>{{mode.type}}</td>
-    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-    <td>{{mode.usable_by}}</td>
-    <td>{{mode.description}}</td>
-</tr>
+    <tr>
+        <td>{{mode.name}}</td>
+        <td>{{mode.char}}</td>
+        <td>{{mode.type}}</td>
+        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+        <td>{{mode.usable_by}}</td>
+        <td>{{mode.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif %}
 
@@ -166,24 +186,28 @@ This module requires no other configuration.
 {% if umodes.description is defined %}{{umodes.description}}{% endif %}
 
 <table>
-<tr>
-    <th>Name</th>
-    <th>Character</th>
-    <th>Type</th>
-    <th>Parameter Syntax</th>
-    <th>Usable by</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Character</th>
+        <th>Type</th>
+        <th>Parameter Syntax</th>
+        <th>Usable by</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for mode in umodes.chars %}
-<tr>
-    <td>{{mode.name}}</td>
-    <td>{{mode.char}}</td>
-    <td>{{mode.type}}</td>
-    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-    <td>{{mode.usable_by}}</td>
-    <td>{{mode.description}}</td>
-</tr>
+    <tr>
+        <td>{{mode.name}}</td>
+        <td>{{mode.char}}</td>
+        <td>{{mode.type}}</td>
+        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+        <td>{{mode.usable_by}}</td>
+        <td>{{mode.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 
 {% if umodes.example -%}
@@ -198,16 +222,20 @@ This module requires no other configuration.
 ### Exemptions
 
 <table>
-<tr>
-    <th>Name</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for exemption in exemptions %}
-<tr>
-    <td>{{exemption.name}}</td>
-    <td>{{exemption.description}}</td>
-</tr>
+    <tr>
+        <td>{{exemption.name}}</td>
+        <td>{{exemption.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif -%}
 
@@ -217,20 +245,24 @@ This module requires no other configuration.
 {% if extbans.description is defined %}{{extbans.description}}{% endif %}
 
 <table>
-<tr>
-    <th>Character</th>
-    <th>Type</th>
-    <th>Ban Syntax</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Character</th>
+        <th>Type</th>
+        <th>Ban Syntax</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for mode in extbans.chars %}
-<tr>
-    <td>{{mode.char}}</td>
-    <td>{{mode.type}}</td>
-    <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-    <td>{{mode.description}}</td>
-</tr>
+    <tr>
+        <td>{{mode.char}}</td>
+        <td>{{mode.type}}</td>
+        <td>{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+        <td>{{mode.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 
 {% if extbans.example -%}
@@ -245,16 +277,20 @@ This module requires no other configuration.
 ### Server Notice Masks
 
 <table>
-<tr>
-    <th>Character</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Character</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for mask in snomasks %}
-<tr>
-    <td>{{mask.char}}</td>
-    <td>{{mask.description}}</td>
-</tr>
+    <tr>
+        <td>{{mask.char}}</td>
+        <td>{{mask.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif -%}
 
@@ -262,16 +298,20 @@ This module requires no other configuration.
 ### Statistics
 
 <table>
-<tr>
-    <th>Character</th>
-    <th>Description</th>
-</tr>
+<thead>
+    <tr>
+        <th>Character</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
 {% for stat in stats %}
-<tr>
-    <td>{{stat.char}}</td>
-    <td>{{stat.description}}</td>
-</tr>
+    <tr>
+        <td>{{stat.char}}</td>
+        <td>{{stat.description}}</td>
+    </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endif -%}
 
