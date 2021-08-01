@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 ROOT = File.dirname __dir__
-PAGES = Dir["#{ROOT}/docs/**/*.md"]
+PAGES = Dir["#{ROOT}/docs/**/*.md", "#{ROOT}/docs/**/*.yml"]
 
 linked = [ "#{ROOT}/docs/index.md" ]
 PAGES.each do |file|
 	contents = File.read(file)
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
 		linked << "#{ROOT}/docs/#{link[0]}.md"
+		linked << "#{ROOT}/docs/#{link[0]}.yml"
 		linked << "#{ROOT}/docs/#{link[0]}/index.md"
 	end
 	contents.scan(/\{!\s*(\S+)\s*!\}/).each do |fragment|
