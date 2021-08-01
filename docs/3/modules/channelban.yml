@@ -22,4 +22,3 @@ extbans:
     ```plaintext
     /MODE #channel +b j:@#evil
     ```
-

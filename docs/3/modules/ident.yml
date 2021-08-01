@@ -63,4 +63,3 @@ configuration:
 
 special_notes: |-
   If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable ident lookups for your WebIRC gateway.
-

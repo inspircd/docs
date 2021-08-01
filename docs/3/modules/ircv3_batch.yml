@@ -7,4 +7,3 @@ client_caps:
 - name: '[batch](https://ircv3.net/specs/extensions/batch-3.2.html)'
   description: |-
     Adds support for batching multiple messages together.
-

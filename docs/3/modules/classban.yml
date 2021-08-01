@@ -16,4 +16,3 @@ extbans:
     ```plaintext
     /MODE #channel +b n:webchat
     ```
-

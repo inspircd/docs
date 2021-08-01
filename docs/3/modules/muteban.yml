@@ -28,4 +28,3 @@ extbans:
     syntax: '`m:<mask>`'
     description: Bans &lt;mask&gt; from speaking in the channel.
   example: ""
-

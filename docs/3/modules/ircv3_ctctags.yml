@@ -32,4 +32,3 @@ client_caps:
 - name: '[message-tags](https://ircv3.net/specs/extensions/message-tags.html)'
   description: |-
     Enables support for sending and receiving `TAGMSG` messages.
-

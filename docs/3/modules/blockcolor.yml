@@ -32,4 +32,3 @@ extbans:
     ```plaintext
     /MODE #channel +b c:*!*@example.com
     ```
-

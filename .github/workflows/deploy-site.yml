@@ -1,5 +1,5 @@
 name: Deploy the docs site
-on:
+"on":
   - push
 jobs:
   build:

@@ -84,4 +84,3 @@ extbans:
 
 special_notes: |-
   Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.
-

@@ -22,4 +22,3 @@ snomasks:
   description: Messages from server operators on the local server.
 - char: G
   description: Messages from server operators on a remote server.
-

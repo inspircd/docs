@@ -7,4 +7,3 @@ client_caps:
 - name: '[server-time](https://ircv3.net/specs/extensions/server-time-3.2.html)'
   description: |-
     Adds a `time` tag with the time the message was sent to all messages.
-

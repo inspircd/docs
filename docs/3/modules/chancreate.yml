@@ -8,4 +8,3 @@ snomasks:
   description: Notifications about channels being created on the local server.
 - char: J
   description: Notifications about channels being created on a remote server.
-

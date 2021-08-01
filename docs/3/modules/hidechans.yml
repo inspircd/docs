@@ -31,4 +31,3 @@ umodes:
     description: |-
       Hides the channels the user is in from their `/WHOIS` response.
   example: ""
-

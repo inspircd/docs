@@ -27,4 +27,3 @@ snomasks:
 - char: R
   description: Notifications about server operator-only commands being executed on
     a remote server.
-

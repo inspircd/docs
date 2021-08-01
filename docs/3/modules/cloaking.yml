@@ -88,4 +88,3 @@ umodes:
 
 special_notes: |-
   The first `<cloak>` tag will be used for the cloak set when a user enables user mode `x` (cloak). The rest will be generated and used to check bans. This allows you to migrate cloaking mode or to change your cloaking key without breaking your bans.
-

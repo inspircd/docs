@@ -77,4 +77,3 @@ umodes:
     description: |-
       Disables receiving channel history on join.
   example: ""
-

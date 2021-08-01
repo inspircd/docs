@@ -14,4 +14,3 @@ umodes:
     description: |-
       Hides the user's server operator status from unprivileged users.
   example: ""
-

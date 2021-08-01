@@ -23,4 +23,3 @@ extbans:
     ```plaintext
     /MODE #channel +b G:XX
     ```
-

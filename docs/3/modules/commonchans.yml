@@ -33,4 +33,3 @@ umodes:
     description: |-
       Requires other users to have a common channel before they can message this user.
   example: ""
-

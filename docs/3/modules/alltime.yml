@@ -9,4 +9,3 @@ commands:
   syntax: None
   description: |-
     Causes all servers on the network to respond with the current UTC time on the server.
-

@@ -28,4 +28,3 @@ configuration:
     <chanlog channel="#example"
              snomasks="cq">
     ```
-

@@ -164,11 +164,10 @@ extbans:
     ```
 
 snomasks:
-  - char: w
-    description: Notifications about gateways changing IP addresses on the local server.
-  - char: W
-    description: Notifications about gateways changing IP addresses on a remote server.
+- char: w
+  description: Notifications about gateways changing IP addresses on the local server.
+- char: W
+  description: Notifications about gateways changing IP addresses on a remote server.
 
 special_notes: |-
   The `/WEBIRC` command should generally not be executed by users. It is intended to be an entirely internal feature which is executed automatically by gateways.
-

@@ -7,4 +7,3 @@ client_caps:
 - name: '[account-tag](https://ircv3.net/specs/extensions/account-tag-3.2.html)'
   description: |-
     Adds an `account` tag with the services account of the sender to all messages.
-

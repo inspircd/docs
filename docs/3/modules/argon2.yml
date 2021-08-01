@@ -272,4 +272,3 @@ special_notes: |-
   system with low memory you should make sure to configure it appropriately for your
   system. Alternately, you should consider using another hashing function such as
   [bcrypt](/3/modules/bcrypt) or [HMAC-SHA256](/3/modules/sha256).
-

@@ -54,4 +54,3 @@ configuration:
     <autojoin channel="#example"
               delay="30s">
     ```
-

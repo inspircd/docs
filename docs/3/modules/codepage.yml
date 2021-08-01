@@ -101,4 +101,3 @@ special_notes: |-
   iso-8859-2      | `<include file="examples/codepages/iso-8859-2.conf.example">`
   rfc1459         | `<include file="examples/codepages/rfc1459.conf.example">`
   strict-rfc1459  | `<include file="examples/codepages/strict-rfc1459.conf.example">`
-

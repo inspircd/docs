@@ -20,4 +20,3 @@ special_notes: |-
   When setting a ban redirect the target channel should exist and the user setting the ban should have channel operator status in it.
 
   When the banredirect module is unloaded all ban redirects will be converted to normal bans.
-

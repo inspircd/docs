@@ -100,4 +100,3 @@ special_notes: |-
   You should remember to `<include>` the file specified in `<permchannels:filename>` in your server configuration.
 
   It is recommended that you set channel mode +P (permanent) on channels and let InspIRCd write a configuration file rather than manually defining permanent channels in your server configuration.
-

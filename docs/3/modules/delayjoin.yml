@@ -14,4 +14,3 @@ chmodes:
     description: |-
       Prevents users from receiving JOIN messages until the joining user speaks.
   example: ""
-

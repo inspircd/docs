@@ -44,4 +44,3 @@ client_caps:
 - name: '[extended-join](https://ircv3.net/specs/extensions/extended-join-3.1.html)'
   description: |-
     Extends the server-to-client JOIN message to include the joining user's account name and real name.
-

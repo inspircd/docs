@@ -46,4 +46,3 @@ special_notes: |-
   [httpd_acl](/3/modules/httpd_acl)       | Allows access to other HTTP resources to be restricted.
   [httpd_config](/3/modules/httpd_config) | Allows the server configuration to be viewed over HTTP.
   [httpd_stats](/3/modules/httpd_stats)   | Provides statistics about the server and the channels and users on it.
-

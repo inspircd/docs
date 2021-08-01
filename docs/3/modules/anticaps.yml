@@ -46,4 +46,3 @@ chmodes:
 exemptions:
 - name: anticaps
   description: Allows exempted users to send overly capitalised messages.
-

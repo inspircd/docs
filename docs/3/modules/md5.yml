@@ -5,4 +5,3 @@ description: |-
 
 special_notes: |-
   MD5 is widely considered insecure and should not be used for hashing passwords. You should use hmac-sha256 for this purpose instead (requires [the password_hash module](/3/modules/password_hash) and [the sha256 module](/3/modules/sha256)).
-

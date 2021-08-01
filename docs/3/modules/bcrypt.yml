@@ -19,4 +19,3 @@ configuration:
     ```xml
     <bcrypt rounds="10">
     ```
-

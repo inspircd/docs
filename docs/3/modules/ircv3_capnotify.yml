@@ -7,4 +7,3 @@ client_caps:
 - name: '[cap-notify](https://ircv3.net/specs/core/cap-notify-3.2.html)'
   description: |-
     Notifies users when client capabilities are added or removed.
-

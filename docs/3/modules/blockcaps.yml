@@ -74,4 +74,3 @@ extbans:
     ```plaintext
     /MODE #channel +b B:*!*@example.com
     ```
-

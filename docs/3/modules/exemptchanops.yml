@@ -41,4 +41,3 @@ special_notes: |-
   repeat         | Exempts users from channel mode `E` (repeat). Requires [the repeat module](/3/modules/repeat).
   stripcolor     | Exempts users from channel mode `S` (stripcolor). Requires [the stripcolor module](/3/modules/stripcolor).
   topiclock      | Exempts users from channel mode `t` (topiclock).
-

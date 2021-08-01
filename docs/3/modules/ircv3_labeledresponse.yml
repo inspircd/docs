@@ -12,4 +12,3 @@ client_caps:
 - name: '[labeled-response](https://ircv3.net/specs/extensions/labeled-response.html)'
   description: |-
     Enables support for the IRCv3 Labeled Response specification.
-

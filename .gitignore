@@ -6,3 +6,4 @@ site
 
 !.git*
 !.travis.yml
+!.yamllint

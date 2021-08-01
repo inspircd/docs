@@ -25,4 +25,3 @@ special_notes: |-
   The `/CAP` command should generally not be executed by users. It is
   intended to be an entirely internal feature which is executed automatically by clients.
   Adding and removing capabilities manually may break your client.
-

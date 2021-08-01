@@ -65,4 +65,3 @@ client_caps:
 - name: '[sts](https://ircv3.net/specs/extensions/sts.html)'
   description: |-
     Defines a mechanism for clients to upgrade plaintext IRC connections to SSL (TLS).
-

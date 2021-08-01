@@ -157,4 +157,3 @@ stats:
 
 special_notes: |-
   Having a high number of filters or having filters which take a long time to match can have significant impact on server performance.
-

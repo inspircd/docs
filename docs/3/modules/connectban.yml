@@ -67,4 +67,3 @@ configuration:
                 ipv6cidr="128"
                 threshold="10">
     ```
-

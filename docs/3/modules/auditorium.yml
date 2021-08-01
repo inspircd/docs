@@ -50,4 +50,3 @@ exemptions:
   description: Allows exempted users to see other channel members.
 - name: auditorium-vis
   description: Allows exempted users to be seen by other channel members.
-

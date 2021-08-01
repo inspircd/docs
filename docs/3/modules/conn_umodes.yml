@@ -26,4 +26,3 @@ configuration:
 
 special_notes: |-
   This module can set disabled modes which allows you to set user modes on users which they can not then remove.
-
