@@ -16,7 +16,9 @@ List      | Yes                          | Yes                          | Yes; u
 
 ### Channel Modes
 
-This page only lists core channel modes. For details on the channel modes of a specific module please refer to [the appropriate page for that module](/3/modules).
+#### Core
+
+This section only lists core channel modes. For details on the channel modes provided by modules, see below.
 
 Name       | Character | Type      | Parameter Syntax | Usable By         | Description
 ---------- | --------- | --------- | ---------------- | ----------------- | -----------
@@ -32,7 +34,7 @@ secret     | s         | Switch    | *None*           | Channel operators | Hide
 topiclock  | t         | Switch    | *None*           | Channel operators | Prevents non-channel operators from changing the channel topic.
 voice      | v         | Prefix    | `<nick>`         | Channel operators | Grants channel voice status to &lt;nick&gt;.
 
-#### Example Usage
+##### Example Usage
 
 Bans users matching `*!*@example.com` from joining \#channel:
 
@@ -82,9 +84,15 @@ Removes channel voice status from Sadie in \#channel:
 /MODE #channel -v Sadie
 ```
 
+#### Modules
+
+{{plugin_chmodes_table}}
+
 ### User Modes
 
-This page only lists core user modes. For details on the user modes of a specific module please refer to [the appropriate page for that module](/3/modules).
+#### Core
+
+This section only lists core user modes. For details on the user modes provided by modules, see below.
 
 Name      | Character | Type      | Parameter Syntax  | Usable By        | Description
 --------- | --------- | --------- | ----------------- | ---------------- | -----------
@@ -93,7 +101,7 @@ oper      | o         | Switch    | *None*            | Server operators | Marks
 snomask   | s         | Parameter | `(+|-)<snomasks>` | Server operators | Enables receiving the specified types of [server operator notice](/3/snomasks).
 wallops   | w         | Switch    | *None*            | Anyone           | Enables receiving `/WALLOPS` messages from server operators.
 
-#### Example Usage
+##### Example Usage
 
 Enables snomasks `l` (LINK) and `L` (REMOTELINK) and disables snomask `d` (DEBUG):
 
@@ -112,3 +120,7 @@ Disables all enabled snomasks:
 ```plaintext
 /MODE YourNick -s
 ```
+
+#### Modules
+
+{{plugin_umodes_table}}
