@@ -4,7 +4,7 @@
 
 Changes the modes which are set on a channel or a user.
 
-For a list of modes see [the modes page](/3/modes).
+For a list of modes see th [channel modes](/3/channel-modes) and [user modes](/3/user-modes) pages.
 
 #### Example Usage
 

@@ -4,6 +4,7 @@ be built by MkDocs like regular pages.
 """
 
 import fnmatch
+import glob
 import pathlib
 import os.path
 
@@ -43,6 +44,7 @@ class ExtendedFile(mkdocs.structure.files.File):
 class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
         super().__init__()
+        self._modules = None
         self.env = jinja2.Environment(
             loader=jinja2.PackageLoader(__name__),
         )
@@ -64,3 +66,43 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         directly and pre-rendering it to Markdown."""
         if page.file.is_inspircd_module_yaml():
             return yml2md(page.file.abs_src_path, template=self.module_template)
+
+    def modules(self, config):
+        if self._modules is None:
+            self._modules = []
+            for module_file in glob.glob(config["docs_dir"] + "/3/modules/*.yml"):
+                with open(module_file) as fd:
+                    self._modules.append(yaml.safe_load(fd))
+        return self._modules
+
+    def chmodes_table(self, config):
+        modules = self.modules(config)
+        template = self.env.get_template("mode_table.md.j2")
+        return template.render(
+            modes=[
+                {**mode, "module": module["name"]}
+                for module in modules
+                if "chmodes" in module
+                for mode in module["chmodes"]["chars"]
+            ]
+        )
+
+    def umodes_table(self, config):
+        modules = self.modules(config)
+        template = self.env.get_template("mode_table.md.j2")
+        return template.render(
+            modes=[
+                {**mode, "module": module["name"]}
+                for module in modules
+                if "umodes" in module
+                for mode in module["umodes"]["chars"]
+            ]
+        )
+
+    def on_page_markdown(self, markdown, page, config, files):
+        """Inserts dynamic/generated text in markdown pages."""
+        return (
+            markdown
+            .replace("{{plugin_chmodes_table}}", self.chmodes_table(config))
+            .replace("{{plugin_umodes_table}}", self.umodes_table(config))
+        )
