@@ -1,6 +1,8 @@
 name: pbkdf2
+
 description: |-
   This module allows other modules to generate [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) hashes.
+
 configuration:
 - name: <pbkdf2>
   description: |-
@@ -9,13 +11,13 @@ configuration:
   - name: iterations
     type: Number
     required: false
-    default: '12288'
+    default: 12288
     description: |-
       The number of iterations of the hashing function that should be performed.
   - name: length
     type: Number
     required: false
-    default: '32'
+    default: 32
     description: |-
       The length of the derived key.
   details: ""
@@ -37,13 +39,13 @@ configuration:
   - name: iterations
     type: Number
     required: false
-    default: '12288'
+    default: 12288
     description: |-
       The number of iterations of the hashing function that should be performed.
   - name: length
     type: Number
     required: false
-    default: '32'
+    default: 32
     description: |-
       The length of the derived key.
   details: ""
@@ -53,4 +55,3 @@ configuration:
                 iterations="12288"
                 length="32">
     ```
-

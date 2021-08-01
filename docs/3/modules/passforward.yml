@@ -1,6 +1,8 @@
 name: passforward
+
 description: |-
   This module allows the `/PASS` password to be forwarded to a services pseudoclient such as NickServ.
+
 configuration:
 - name: <passforward>
   description: |-
@@ -40,4 +42,3 @@ configuration:
                  forwardmsg="NOTICE $nick :*** Forwarding PASS to $nickrequired"
                  nick="NickServ">
     ```
-

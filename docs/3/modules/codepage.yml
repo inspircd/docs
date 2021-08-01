@@ -1,8 +1,12 @@
 name: codepage
-introduction: "!!! note \"New in v3.5.0!\"\n    If you are using an older version\
-  \ you will need to upgrade to use this module."
+
+introduction: |-
+  !!! note "New in v3.5.0!"
+      If you are using an older version you will need to upgrade to use this module.
+
 description: |-
   This module allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
+
 configuration:
 - name: <codepage>
   description: |-
@@ -61,6 +65,7 @@ configuration:
              end="125"
              front="yes">
     ```
+
 special_notes: |-
   The following code pages for use with this module are present in the config examples directory.
 

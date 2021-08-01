@@ -1,12 +1,15 @@
 name: chgident
+
 description: |-
   This module adds the `/CHGIDENT` command which allows server operators to change the username (ident) of a user.
+
 commands:
 - name: CHGIDENT
-  param_count: '2'
+  param_count: 2
   syntax: '`<nickname> <username>`'
   description: |-
     Changes the username (ident) of &lt;nickname&gt; to &lt;username&gt;.
+
 example_commands: |-
   Changes the username (ident) of Sadie to wibble:
 

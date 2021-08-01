@@ -1,10 +1,13 @@
 name: flashpolicyd
-introduction: "!!! warning \"\"\n    This module has been removed in the next major\
-  \ version of InspIRCd.\n\n    Adobe Flash has been EOL since the end of 2020 and\
-  \ is not supported by modern browsers so you no longer need to provide support for\
-  \ it on your network."
+
+introduction: |-
+  !!! warning ""
+      This module has been removed in the next major version of InspIRCd.
+      Adobe Flash has been EOL since the end of 2020 and\ is not supported by modern browsers so you no longer need to provide support for it on your network.
+
 description: |-
   This module allows connection policies to be served to IRC clients that use Adobe Flash.
+
 configuration:
 - name: <bind>
   description: |-
@@ -45,4 +48,3 @@ configuration:
     ```xml
     <flashpolicyd timeout="5s">
     ```
-

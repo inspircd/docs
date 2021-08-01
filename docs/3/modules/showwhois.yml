@@ -1,6 +1,8 @@
 name: showwhois
+
 description: |-
   This module adds user mode `W` (showwhois) which allows users to be informed when someone does a `/WHOIS` query on their nick.
+
 configuration:
 - name: <showwhois>
   description: |-
@@ -24,6 +26,7 @@ configuration:
     <showwhois opersonly="no"
                showfromopers="no">
     ```
+
 umodes:
   description: null
   chars:
@@ -35,4 +38,3 @@ umodes:
     description: |-
       Informs the user when someone does a `/WHOIS` query on their nick.
   example: ""
-

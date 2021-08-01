@@ -1,6 +1,8 @@
 name: connectban
+
 description: |-
   This module Z-lines IP addresses which make excessive connections to the server.
+
 configuration:
 - name: <connect>
   description: |-
@@ -41,19 +43,19 @@ configuration:
   - name: ipv4cidr
     type: Number
     required: false
-    default: '32'
+    default: 32
     description: |-
       The IPv4 CIDR range to treat as equivalent when looking for excessive connections.
   - name: ipv6cidr
     type: Number
     required: false
-    default: '128'
+    default: 128
     description: |-
       The IPv6 CIDR range to treat as equivalent when looking for excessive connections.
   - name: threshold
     type: Number
     required: false
-    default: '10'
+    default: 10
     description: |-
       The number of times that an IP address can connect within an hour.
   details: ""

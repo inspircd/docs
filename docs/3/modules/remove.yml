@@ -1,6 +1,8 @@
 name: remove
+
 description: |-
   This module adds the `/FPART` and `/REMOVE` commands which allows channel operators to force part users from a channel.
+
 configuration:
 - name: <remove>
   description: |-
@@ -9,7 +11,7 @@ configuration:
   - name: protectedrank
     type: Number
     required: false
-    default: '50000'
+    default: 50000
     description: |-
       The rank above which users are protected from being force parted from a channel.
   - name: supportnokicks
@@ -24,6 +26,7 @@ configuration:
     <remove protectedrank="50000"
             supportnokicks="yes">
     ```
+
 commands:
 - name: FPART
   param_count: 2-3
@@ -35,6 +38,7 @@ commands:
   syntax: '`<nick> <channel> [<reason>]`'
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+
 example_commands: |-
   Force parts Soni from #channel:
 
@@ -47,4 +51,3 @@ example_commands: |-
   ```plaintext
   /REMOVE Soni #channel :Disruptive behaviour is not allowed
   ```
-

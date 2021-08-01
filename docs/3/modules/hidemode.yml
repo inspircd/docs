@@ -1,6 +1,8 @@
 name: hidemode
+
 description: |-
   This module allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
+
 configuration:
 - name: <hidemode>
   description: |-
@@ -15,7 +17,7 @@ configuration:
   - name: rank
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       The rank to restrict viewing this mode change to.
   details: ""
@@ -26,6 +28,7 @@ configuration:
     <hidemode mode="ban"
               rank="10000">
     ```
+
 special_notes: |-
   The ranks of the built-in channel prefix modes are:
 

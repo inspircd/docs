@@ -1,6 +1,8 @@
 name: knock
+
 description: |-
   This module adds the `/KNOCK` command which allows users to request access to an invite-only channel and channel mode `K` (noknock) which allows channels to disable usage of this command.
+
 configuration:
 - name: <knock>
   description: |-
@@ -25,6 +27,7 @@ configuration:
     ```xml
     <knock notify="notice">
     ```
+
 chmodes:
   description: null
   chars:
@@ -36,12 +39,14 @@ chmodes:
     description: |-
       Disables the usage of the `/KNOCK` command on this channel.
   example: ""
+
 commands:
 - name: KNOCK
-  param_count: '2'
+  param_count: 2
   syntax: '`<channel> <reason>`'
   description: |-
     Requests permission to join &lt;channel&gt; with the reason specified in &lt;reason&gt;.
+
 example_commands: |-
   Knocks on #channel with the reason "Please let me in!":
 

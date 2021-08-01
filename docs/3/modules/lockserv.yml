@@ -1,8 +1,12 @@
 name: lockserv
-introduction: "!!! warning \"\"\n    This module has been moved to [inspircd-contrib](/3/module-manager)\
-  \ in the next major version of InspIRCd."
+
+introduction: |-
+  !!! warning ""
+      This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
 description: |-
   This module adds the `/LOCKSERV` and `/UNLOCKSERV` commands which allows server operators to control whether users can connect to the local server.
+
 commands:
 - name: LOCKSERV
   param_count: 0-1
@@ -10,10 +14,11 @@ commands:
   description: |-
     Disables access to the local server with an optional message.
 - name: UNLOCKSERV
-  param_count: '0'
+  param_count: 0
   syntax: None
   description: |-
     Enables access to the local server.
+
 example_commands: |-
   Stops the local server from accepting new connections with the message "Server is under maintenance. Come back later.":
 
@@ -26,6 +31,6 @@ example_commands: |-
   ```plaintext
   /UNLOCKSERV
   ```
+
 special_notes: |-
   If you accidentally disconnect whilst a server is locked you can disable the lock by rehashing the server.
-

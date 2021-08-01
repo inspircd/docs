@@ -1,6 +1,8 @@
 name: sethost
+
 description: |-
   This module adds the `/SETHOST` command which allows server operators to change their displayed hostname.
+
 configuration:
 - name: <hostname>
   description: |-
@@ -19,18 +21,20 @@ configuration:
     ```xml
     <hostname charmap="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-_/0123456789">
     ```
+
 commands:
 - name: SETHOST
-  param_count: '1'
+  param_count: 1
   syntax: '`<hostname>`'
   description: |-
     Changes the displayed hostname of the user to &lt;hostname&gt;.
+
 example_commands: |-
   Changes the hostname of the user to wibble.wobble:
 
   ```plaintext
   /SETHOST wibble.wobble
   ```
+
 special_notes: |-
   This command only changes the displayed hostname of the user. Their real hostname will remain intact and still will match against bans.
-

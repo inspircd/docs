@@ -1,6 +1,8 @@
 name: chanhistory
+
 description: |-
   This module adds channel mode `H` (history) which allows message history to be viewed on joining the channel.
+
 configuration:
 - name: <chanhistory>
   description: |-
@@ -21,7 +23,7 @@ configuration:
   - name: maxlines
     type: Number
     required: false
-    default: '50'
+    default: 50
     description: |-
       The maximum number of lines of history that a channel can keep.
   - name: prefixmsg
@@ -38,6 +40,7 @@ configuration:
                  maxlines="50"
                  prefixmsg="yes">
     ```
+
 chmodes:
   description: null
   chars:
@@ -60,9 +63,11 @@ chmodes:
     ```plaintext
     /MODE #channel +H 25:2h
     ```
+
 umodes:
-  description: "!!! note \"New in v3.9.0!\"\n    If you are using an older version\
-    \ you will need to upgrade to use this user mode.\n\n"
+  description: |-
+    !!! note" New in v3.9.0!"
+        If you are using an older version you will need to upgrade to use this user mode.\n\n"
   chars:
   - name: nohistory
     char: N

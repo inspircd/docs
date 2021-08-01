@@ -1,6 +1,8 @@
 name: securelist
+
 description: |-
   This module prevents users from using the `/LIST` command until a predefined period has passed.
+
 configuration:
 - name: <securehost>
   description: |-
@@ -48,4 +50,3 @@ configuration:
                 showmsg="yes"
                 waittime="60s">
     ```
-

@@ -1,6 +1,8 @@
 name: nickflood
+
 description: |-
   This module adds channel mode `F` (nickflood) which helps protect against spammers which mass-change nicknames.
+
 configuration:
 - name: <nickflood>
   description: |-
@@ -17,6 +19,7 @@ configuration:
     ```xml
     <nickflood duration="60s">
     ```
+
 chmodes:
   description: null
   chars:
@@ -33,6 +36,7 @@ chmodes:
     ```plaintext
     /MODE #channel +F 3:5
     ```
+
 exemptions:
 - name: flood
   description: Allows exempted users to change nicknames at a higher rate than channel

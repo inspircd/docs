@@ -1,10 +1,14 @@
 name: ssl_openssl
-introduction: "!!! note \"\"\n    This module depends on a third-party library ([OpenSSL](https://www.openssl.org))\
-  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
-  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
-  \ --enable-extras ssl_openssl</code></pre>"
+
+introduction: |-
+  !!! note
+      This module depends on a third-party library ([OpenSSL](https://www.openssl.org)) and must be manually enabled at compile time.
+      Once you have installed the dependency you can enable this module using the following command:
+      <pre><code>./configure --enable-extras ssl_openssl</code></pre>"
+
 description: |-
   This module allows TLS (SSL) encrypted connections using the [OpenSSL](https://www.openssl.org) library.
+
 configuration:
 - name: <bind>
   description: |-
@@ -35,6 +39,7 @@ configuration:
           ssl="Servers"
           type="servers">
     ```
+
 - name: <sslprofile>
   description: |-
     The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
@@ -74,13 +79,13 @@ configuration:
   - name: clientclearoptions
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       Raw integer value of options to clear on the client context. Don't change this unless you know what you are doing.
   - name: clientsetoptions
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       Raw integer value of options to set on the client context. Don't change this unless you know what you are doing.
   - name: compression
@@ -146,13 +151,13 @@ configuration:
   - name: serverclearoptions
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       Raw integer value of options to clear on the server context.  Don't change this unless you know what you are doing.
   - name: serversetoptions
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       Raw integer value of options to set on the server context.  Don't change this unless you know what you are doing.
   - name: tlsv1
@@ -202,6 +207,7 @@ configuration:
                 tlsv11="no"
                 tlsv12="yes">
     ```
+
 special_notes: |-
   If you are using a CA-provided certificate and key you will also need to provide a DH parameters file. This file can be generated using `openssl dhparam -out dhparams.pem 2048` and then be placed in your config directory.
 
@@ -210,4 +216,3 @@ special_notes: |-
   SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should use `/REHASH -ssl` or use [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
 
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.
-

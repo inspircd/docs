@@ -1,6 +1,8 @@
 name: opermodes
+
 description: |-
   This module allows the server administrator to set user modes on server operators when they log into their server operator account.
+
 configuration:
 - name: "<oper>` &amp; `<type>"
   # FIXME ^ we need to do something about this hack
@@ -30,4 +32,3 @@ configuration:
           ...
           modes="+sw +*">
     ```
-

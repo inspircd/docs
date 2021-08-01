@@ -1,6 +1,8 @@
 name: showfile
+
 description: |-
   This module adds support for showing the contents of files to users when they execute a command.
+
 configuration:
 - name: <showfile>
   description: |-
@@ -27,7 +29,7 @@ configuration:
   - name: endnumeric
     type: Number
     required: false
-    default: '309'
+    default: 309
     description: |-
       If the method field is set to numeric then the numeric to use to stop the response.
   - name: endtext
@@ -39,7 +41,7 @@ configuration:
   - name: intronumeric
     type: Number
     required: false
-    default: '308'
+    default: 308
     description: |-
       If the method field is set to numeric then the numeric to use to start the response.
   - name: introtext
@@ -51,7 +53,7 @@ configuration:
   - name: textnumeric
     type: Number
     required: false
-    default: '232'
+    default: 232
     description: |-
       If the method field is set to numeric then the numeric to use to show the response.
   details: |-

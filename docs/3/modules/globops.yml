@@ -1,18 +1,22 @@
 name: globops
+
 description: |-
   This module adds the `/GLOBOPS` command which allows server operators to send messages to all server operators with the `g` (globops) snomask.
+
 commands:
 - name: GLOBOPS
-  param_count: '1'
+  param_count: 1
   syntax: '`<message>`'
   description: |-
     Sends &lt;message&gt; to all server operators with the `g` (globops) snomask.
+
 example_commands: |-
   Sends a server notice saying "I like turtles." to all server operators with the `g` (globops) snomask:
 
   ```plaintext
   /GLOBOPS :I like turtles.
   ```
+
 snomasks:
 - char: g
   description: Messages from server operators on the local server.

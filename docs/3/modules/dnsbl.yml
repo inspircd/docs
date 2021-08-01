@@ -1,6 +1,8 @@
 name: dnsbl
+
 description: |-
   This module allows the server administrator to check the IP address of connecting users against a [DNSBL](https://en.wikipedia.org/wiki/DNSBL). This is useful for preventing malicious hosts from connecting to the server.
+
 configuration:
 - name: <connect>
   description: |-
@@ -159,14 +161,17 @@ configuration:
            duration="7d"
            reason="Tor exit nodes are not allowed on this network. See https://metrics.torproject.org/rs.html#search/%ip% for more information.">
     ```
+
 snomasks:
 - char: d
   description: Notifications about DNSBL hits on the local server.
 - char: D
   description: Notifications about DNSBL hits on a remote server.
+
 stats:
 - char: d
   description: Lists information about DNSBL hits and misses.
+
 special_notes: |-
   If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable DNSBL lookups for your WebIRC gateway.
 

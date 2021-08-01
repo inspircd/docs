@@ -1,6 +1,8 @@
 name: helpop
+
 description: |-
   This module adds the `/HELPOP` command which allows users to view help on various topics and user mode `h` (helpop) which marks a server operator as being available for help.
+
 configuration:
 - name: <helpmsg>
   description: |-
@@ -46,6 +48,7 @@ configuration:
             title="Testing?"
             value="This is a test!">
     ```
+
 umodes:
   description: null
   chars:
@@ -57,12 +60,14 @@ umodes:
     description: |-
       Marks the user as being available for help.
   example: ""
+
 commands:
 - name: HELPOP
   param_count: 0-1
   syntax: '`[<topic>]`'
   description: |-
     Looks up help on a particular topic.
+
 example_commands: |-
   Responds with the help introduction page:
 
@@ -81,6 +86,7 @@ example_commands: |-
   ```plaintext
   /HELPOP example
   ```
+
 special_notes: |-
   You may find it useful to use the predefined help file which ships with InspIRCd.
 
@@ -89,4 +95,3 @@ special_notes: |-
   ```xml
   <include file="examples/helpop.conf.example">
   ```
-

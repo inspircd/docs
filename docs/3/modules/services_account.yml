@@ -1,6 +1,8 @@
 name: services_account
+
 description: |-
   This module adds various channel and user modes relating to services accounts.
+
 chmodes:
   description: null
   chars:
@@ -26,6 +28,7 @@ chmodes:
     description: |-
       Prevents users who are not logged into a services account from speaking in the channel.
   example: ""
+
 umodes:
   description: null
   chars:
@@ -44,10 +47,12 @@ umodes:
     description: |-
       Marks the user as being logged into a services account.
   example: ""
+
 exemptions:
 - name: regmoderated
   description: Allows exempted users to send messages to the channel without being
     logged in.
+
 extbans:
   description: null
   chars:
@@ -73,4 +78,3 @@ extbans:
     ```plaintext
     /MODE #channel +b U:*!*@example.com
     ```
-

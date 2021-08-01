@@ -1,6 +1,8 @@
 name: operprefix
+
 description: |-
   This module adds the server operator-only `y` (operprefix) channel prefix mode.
+
 configuration:
 - name: <operprefix>
   description: |-
@@ -17,6 +19,7 @@ configuration:
     ```xml
     <operprefix prefix="!">
     ```
+
 chmodes:
   description: null
   chars:
@@ -28,6 +31,7 @@ chmodes:
     description: |-
       Grants channel operprefix status to &lt;nick&gt;.
   example: ""
+
 special_notes: |-
   The `y` (operprefix) channel prefix mode can not be directly set by users. To enable this channel prefix mode log into a server operator account.
 

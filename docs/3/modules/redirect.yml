@@ -1,7 +1,10 @@
 name: redirect
+
 description: |-
   This module allows users to be redirected to another channel when the user limit is reached.
+
 configuration: []
+
 umodes:
   description: null
   chars:
@@ -13,6 +16,6 @@ umodes:
     description: |-
       Prevents users from being redirected by channel mode `L` (redirect).
   example: ""
+
 special_notes: |-
   When setting a redirect the target channel should exist and the user setting the redirect should have channel operator status in it.
-

@@ -1,12 +1,16 @@
 name: argon2
-introduction: "!!! note \"New in v3.8.0!\"\n    If you are using an older version\
-  \ you will need to upgrade to use this module.\n\n!!! note \"\"\n    This module\
-  \ depends on a third-party library ([Argon2](https://github.com/P-H-C/phc-winner-argon2))\
-  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
-  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
-  \ --enable-extras argon2</code></pre>"
+
+introduction: |-
+  !!! note "New in v3.8.0!"
+      If you are using an older version you will need to upgrade to use this module.
+  !!! note ""
+      This module depends on a third-party library ([Argon2](https://github.com/P-H-C/phc-winner-argon2)) and must be manually enabled at compile time.
+      Once you have installed the dependency you can enable this module using the following command:
+      <pre><code>./configure --enable-extras argon2</code></pre>
+
 description: |-
   This module allows other modules to generate [Argon2](https://en.wikipedia.org/wiki/Argon2) hashes.
+
 configuration:
 - name: <argon2>
   description: |-
@@ -15,43 +19,43 @@ configuration:
   - name: memory
     type: Number
     required: false
-    default: '131072'
+    default: 31072
     description: |-
       The memory hardness in kibibytes of the Argon2 algorithms.
   - name: iterations
     type: Number
     required: false
-    default: '3'
+    default: 3
     description: |-
       The time hardness of the Argon2 algorithms.
   - name: lanes
     type: Number
     required: false
-    default: '1'
+    default: 1
     description: |-
       The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
-    default: '1'
+    default: 1
     description: |-
       The number of threads that generating an Argon2 hash can spawn.
   - name: length
     type: Number
     required: false
-    default: '32'
+    default: 32
     description: |-
       The length of the output in bytes.
   - name: saltlength
     type: Number
     required: false
-    default: '16'
+    default: 16
     description: |-
       The length of the salt in bytes.
   - name: version
     type: Number
     required: false
-    default: '13'
+    default: 13
     description: |-
       The version of the Argon2 algorithm to use.
   details: |-
@@ -264,6 +268,7 @@ configuration:
               saltlength="16"
               version="13">
     ```
+
 special_notes: |-
   Argon2 is a memory-hard hashing function. If you are using an older
   system with low memory you should make sure to configure it appropriately for your

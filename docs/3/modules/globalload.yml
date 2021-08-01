@@ -1,6 +1,8 @@
 name: globalload
+
 description: |-
   This module adds the `/GLOADMODULE`, `/GRELOADMODULE`, and `/GUNLOADMODULE` commands which allows server operators to load, reload, and unload modules on remote servers.
+
 commands:
 - name: GLOADMODULE
   param_count: 1-2
@@ -17,6 +19,7 @@ commands:
   syntax: '`<module> [<server>]`'
   description: |-
     Unloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is unloaded on all servers.
+
 example_commands: |-
   Loads [the botmode module](/3/modules/botmode) on all servers:
 
@@ -53,4 +56,3 @@ example_commands: |-
   ```plaintext
   /GUNLOADMODULE gecosban *.sea.example.com
   ```
-

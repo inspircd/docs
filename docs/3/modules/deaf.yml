@@ -1,6 +1,8 @@
 name: deaf
+
 description: |-
   This module adds user mode `d` (deaf) which prevents users from receiving channel messages.
+
 configuration:
 - name: <deaf>
   description: |-
@@ -55,6 +57,7 @@ configuration:
            ...
            privs="... users/ignore-privdeaf ...">
     ```
+
 umodes:
   description: null
   chars:

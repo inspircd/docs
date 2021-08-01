@@ -1,6 +1,8 @@
 name: httpd
+
 description: |-
   This module allows the server administrator to serve various useful resources over HTTP.
+
 configuration:
 - name: <bind>
   description: |-
@@ -35,6 +37,7 @@ configuration:
     ```xml
     <httpd timeout="10s">
     ```
+
 special_notes: |-
   The following HTTP resource modules can be used in conjunction with this module:
 

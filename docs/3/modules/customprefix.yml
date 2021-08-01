@@ -1,6 +1,8 @@
 name: customprefix
+
 description: |-
   This module allows the server administrator to configure custom channel prefix modes.
+
 configuration:
 - name: <customprefix>
   description: |-
@@ -95,6 +97,7 @@ configuration:
                   change="yes"
                   depriv="yes">
     ```
+
 special_notes: |-
   The ranks of the built-in channel prefix modes are:
 

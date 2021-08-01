@@ -1,6 +1,8 @@
 name: cgiirc
+
 description: |-
   This module adds the ability for IRC gateways to forward the real IP address of users connecting through them.
+
 configuration:
 - name: <cgiirc>
   description: |-
@@ -17,6 +19,7 @@ configuration:
     ```xml
     <cgiirc opernotice="yes">
     ```
+
 - name: <cgihost>
   description: |-
     The `<cgihost>` tag defines a specific IRC gateway. This tag can be defined as many times as required.
@@ -95,6 +98,7 @@ configuration:
              hash="bcrypt"
              mask="*.webirc.gateway.example.com">
     ```
+
 - name: <connect>
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
@@ -114,9 +118,10 @@ configuration:
              ...
              webirc="wibble">
     ```
+
 commands:
 - name: HEXIP
-  param_count: '1'
+  param_count: 1
   syntax: '`<hex-ip|real-ip>`'
   description: |-
     [**New in v3.9.0!**](/3/change-log/#inspircd-390) Encodes or decodes an IP between its human readable form and its hex form.
@@ -125,10 +130,12 @@ commands:
   syntax: '`<password> <gateway> <hostname> <address> [<flags>]`'
   description: |-
     Allows gateways to specify the hostname and IP address of users.
+
 command_details: |-
   More information about the `/WEBIRC` command is available on [the IRCv3 website](https://ircv3.net/specs/extensions/webirc.html).
 
-  <!-- WEBIRC is not documented here because it is not intended to be executed by users -->
+# WEBIRC is not documented here because it is not intended to be executed by users
+
 example_commands: |-
   Decodes 7f000001 to its human readable form:
 
@@ -141,6 +148,7 @@ example_commands: |-
   ```plaintext
   /HEXIP 127.0.0.1
   ```
+
 extbans:
   chars:
   - char: w

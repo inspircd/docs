@@ -1,6 +1,8 @@
 name: ldapauth
+
 description: |-
   This module allows connecting users to be authenticated against an LDAP database.
+
 configuration:
 - name: <ldapauth>
   description: |-

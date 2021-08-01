@@ -1,6 +1,8 @@
 name: haproxy
+
 description: |-
   This module allows IRC connections to be made using reverse proxies that implement the HAProxy PROXY protocol.
+
 configuration:
 - name: <bind>
   description: |-
@@ -28,6 +30,7 @@ configuration:
           ...
           hook="haproxy">
     ```
+
 special_notes: |-
   If you are using this module you must terminate TLS (SSL) connections at your reverse proxy.
 

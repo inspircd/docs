@@ -1,6 +1,8 @@
 name: namedmodes
+
 description: |-
   This module provides support for adding and removing modes via their long names.
+
 chmodes:
   description: null
   chars:
@@ -41,12 +43,14 @@ chmodes:
     ```plaintext
     /MODE #channel -Z op=Sadie
     ```
+
 commands:
 - name: PROP
   param_count: 1+
   syntax: '`<target> [(+|-)<name> [<value>]]+`'
   description: |-
     Allows users to add, remove, and view the modes of a specific target.
+
 example_commands: |-
   Lists all channel modes set on #channel:
 
@@ -77,4 +81,3 @@ example_commands: |-
   ```plaintext
   /PROP #channel -op Sadie
   ```
-

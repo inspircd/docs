@@ -1,6 +1,8 @@
 name: spanningtree
+
 description: |-
   This module allows linking multiple servers together as part of one network.
+
 configuration:
 - name: <autoconnect>
   description: |-
@@ -254,37 +256,39 @@ configuration:
     <uline server="services.example.com"
            silent="yes">
     ```
+
 commands:
 - name: CONNECT
-  param_count: '1'
+  param_count: 1
   syntax: '`<server>`'
   description: |-
     Attempts to connect the local server to &lt;server&gt;.
 - name: LINKS
-  param_count: '0'
+  param_count: 0
   syntax: None
   description: |-
     Lists all servers connected to the current one.
 - name: MAP
-  param_count: '0'
+  param_count: 0
   syntax: None
   description: |-
     Shows a textual map of the network architecture.
 - name: RCONNECT
-  param_count: '2'
+  param_count: 2
   syntax: '`<remote-server-mask> <target-server-mask>`'
   description: |-
     Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
 - name: RSQUIT
-  param_count: '2'
+  param_count: 2
   syntax: '`<server-mask> [<reason>]`'
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
 - name: SQUIT
-  param_count: '2'
+  param_count: 2
   syntax: '`<server-mask> [<reason>]`'
   description: |-
-    Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.
+    Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.=
+
 example_commands: |-
   Connects the local server to hub.example.com:
 
@@ -321,11 +325,13 @@ example_commands: |-
   ```plaintext
   /SQUIT us-hub.example.com :Updating InspIRCd
   ```
+
 snomasks:
 - char: l
   description: Messages relating to server linking on the local server.
 - char: L
   description: Messages relating to server linking on a remote server.
+
 stats:
 - char: c
   description: Lists servers which the server may connect to or allow connections
@@ -333,6 +339,6 @@ stats:
 - char: n
   description: Lists servers which the server may connect to or allow connections
     from.
+
 special_notes: |-
   Linking non-local servers without TLS (SSL) is a serious privacy risk and will be removed in the next major version of InspIRCd.
-

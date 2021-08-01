@@ -1,6 +1,8 @@
 name: opermotd
+
 description: |-
   This module adds the `/OPERMOTD` command which adds a special message of the day for server operators.
+
 configuration:
 - name: "<files>` &amp; `<execfiles>"
   # FIXME ^ we need to do something about this hack
@@ -50,12 +52,14 @@ configuration:
     <opermotd file="opermotd"
               onoper="yes">
     ```
+
 commands:
 - name: OPERMOTD
   param_count: 0-1
   syntax: '`[<server>]`'
   description: |-
     Requests the server operator message of the day for &lt;server&gt;.
+
 example_commands: |-
   Requests the server operator message of the day for the local server:
 
@@ -68,4 +72,3 @@ example_commands: |-
   ```plaintext
   /OPERMOTD irc.example.com
   ```
-

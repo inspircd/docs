@@ -1,6 +1,8 @@
 name: commonchans
+
 description: |-
   This module adds user mode `c` (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
+
 configuration:
 - name: <class>
   description: |-
@@ -19,6 +21,7 @@ configuration:
            ...
            privs="... users/ignore-commonchans ...">
     ```
+
 umodes:
   description: null
   chars:

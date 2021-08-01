@@ -1,6 +1,8 @@
 name: sslinfo
+
 description: |-
   This module adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the `/SSLINFO` command to look up TLS (SSL) certificate information for other users.
+
 configuration:
 - name: <connect>
   description: |-
@@ -75,12 +77,14 @@ configuration:
     ```xml
     <sslinfo operonly="no">
     ```
+
 commands:
 - name: SSLINFO
-  param_count: '1'
+  param_count: 1
   syntax: '`<target>`'
   description: |-
     Views the TLS (SSL) certificate information for &lt;target&gt;.
+
 example_commands: |-
   Views the TLS (SSL) certificate information for Sadie:
 
@@ -93,6 +97,6 @@ example_commands: |-
   ```plaintext
   /SSLINFO #wibble
   ```
+
 special_notes: |-
   {! 3/modules/_ssl_table.md !}
-

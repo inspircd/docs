@@ -1,10 +1,14 @@
 name: ssl_gnutls
-introduction: "!!! note \"\"\n    This module depends on a third-party library ([GnuTLS](https://gnutls.org))\
-  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
-  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
-  \ --enable-extras ssl_gnutls</code></pre>"
+
+introduction: |-
+  !!! note ""
+      This module depends on a third-party library ([GnuTLS](https://gnutls.org)) and must be manually enabled at compile time.
+      Once you have installed the dependency you can enable this module using the following command:
+      <pre><code>./configure --enable-extras ssl_gnutls</code></pre>
+
 description: |-
   This module allows TLS (SSL) encrypted connections using the [GnuTLS](https://gnutls.org) library.
+
 configuration:
 - name: <bind>
   description: |-
@@ -92,13 +96,13 @@ configuration:
   - name: mindhbits
     type: Number
     required: false
-    default: '1024'
+    default: 1024
     description: |-
       The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
   - name: outrecsize
     type: Number
     required: false
-    default: '2048'
+    default: 2048
     description: |-
       The maximum size of an outgoing GnuTLS record.
   - name: priority
@@ -138,10 +142,10 @@ configuration:
                 requestclientcert="yes"
                 strictpriority="no">
     ```
+
 special_notes: |-
   If you are using a CA-provided certificate and key you will also need to provide a DH parameters file. This file can be generated using `certtool --generate-dh-params --sec-param normal --outfile dhparams.pem` and then be placed in your config directory. You may need to use `gnutls-certtool` instead of `certtool` on macOS and `--bits 2048` instead of `--sec-param normal` on GnuTLS 2.x.
 
   SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should use `/REHASH -ssl` or use [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
 
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor (such as our Debian and Ubuntu packages) you may need to edit the AppArmor profile to allow InspIRCd to read them too.
-

@@ -1,6 +1,8 @@
 name: blockamsg
+
 description: |-
   This module blocks mass messages sent using the `/AME` and `/AMSG` commands that exist in clients such as mIRC and HexChat.
+
 configuration:
 - name: <blockamsg>
   description: |-

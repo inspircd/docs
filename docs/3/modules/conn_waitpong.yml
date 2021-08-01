@@ -1,6 +1,8 @@
 name: conn_waitpong
+
 description: |-
   This module requires all clients to respond to a PING request before they can fully connect. This is useful for preventing drive-by attacks from sources that can send data but not respond.
+
 configuration:
 - name: <waitpong>
   description: |-

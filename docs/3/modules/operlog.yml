@@ -1,6 +1,8 @@
 name: operlog
+
 description: |-
   This module allows the server administrator to make the server log when a server operator-only command is executed.
+
 configuration:
 - name: <operlog>
   description: |-
@@ -17,6 +19,7 @@ configuration:
     ```xml
     <operlog tosnomask="yes">
     ```
+
 snomasks:
 - char: r
   description: Notifications about server operator-only commands being executed on

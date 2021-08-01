@@ -1,16 +1,18 @@
 name: sakick
+
 description: |-
   This module adds the `/SAKICK` command which allows server operators to kick users from a channel without having any privileges in the channel.
+
 commands:
 - name: SAKICK
   param_count: 2-3
   syntax: '`<channel> <nick> [<reason>]`'
   description: |-
     Kicks &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+
 example_commands: |-
   Kicks emily from #channel:
 
   ```plaintext
   /SAKICK #channel emily :Your behaviour is inappropriate
   ```
-

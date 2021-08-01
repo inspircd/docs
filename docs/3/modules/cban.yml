@@ -1,6 +1,8 @@
 name: cban
+
 description: |-
   This module adds the `/CBAN` command which allows server operators to prevent channels matching a glob from being created.
+
 configuration:
 - name: <cban>
   description: |-
@@ -17,12 +19,14 @@ configuration:
     ```xml
     <cban glob="yes">
     ```
+
 commands:
 - name: CBAN
   param_count: 1-3
   syntax: '`<channel> [<duration> [<reason>]]`'
   description: |-
     Allows server operators to add and remove channel bans.
+
 example_commands: |-
   Bans the #example channel for one week:
 

@@ -1,6 +1,8 @@
 name: operchans
+
 description: |-
   This module adds channel mode `O` (operonly) which prevents non-server operators from joining the channel.
+
 chmodes:
   description: null
   chars:
@@ -12,6 +14,7 @@ chmodes:
     description: |-
       Prevents non-server operators from joining the channel.
   example: ""
+
 extbans:
   description: null
   chars:
@@ -26,4 +29,3 @@ extbans:
     ```plaintext
     /MODE #channel +b O:Evil*
     ```
-

@@ -1,6 +1,8 @@
 name: svshold
+
 description: |-
   This module adds the `/SVSHOLD` command which allows services to reserve nicknames. This is identical to a Q-line other than it can only be modified by a network service.
+
 commands:
 - name: SVSHOLD
   param_count: 1-3
@@ -12,6 +14,6 @@ commands:
 stats:
 - char: S
   description: Lists all nickname reservations.
+
 special_notes: |-
   SVSHOLDs are expired lazily when a lookup happens for performance reasons. This means that expiry messages may display later than expected.
-

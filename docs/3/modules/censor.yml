@@ -1,9 +1,14 @@
 name: censor
-introduction: "!!! warning \"\"\n    This module has been moved to [inspircd-contrib](/3/module-manager)\
-  \ in the next major version of InspIRCd.\n\n    You should consider using [the filter\
-  \ module](/3/modules/filter) instead."
+
+introduction: |-
+  !!! warning ""
+      This module has been moved to [inspircd-contrib](/3/module-manager)
+      in the next major version of InspIRCd.
+      You should consider using [the filter module](/3/modules/filter) instead.
+
 description: |-
   This module allows the server administrator to define inappropriate phrases that are not allowed to be used in private or channel messages.
+
 configuration:
 - name: <badword>
   description: |-
@@ -46,6 +51,7 @@ chmodes:
     description: |-
       Enables censoring messages sent to the channel.
   example: ""
+
 umodes:
   chars:
   - name: u_censor
@@ -56,14 +62,15 @@ umodes:
     description: |-
       Enables censoring messages sent to the user.
   example: ""
+
 exemptions:
 - name: censor
   description: Allows exempted users to send messages that contain censored phrases.
+
 special_notes: |-
   The censor module does not support any kind of advanced (glob, regex,
   etc) matching or punishment other than message blocking. If you need that you should
   use [the filter module](/3/modules/filter) instead.
-
 
   You should take care to avoid [the Scunthorpe problem](https://en.wikipedia.org/wiki/Scunthorpe_problem)
   when adding badwords.

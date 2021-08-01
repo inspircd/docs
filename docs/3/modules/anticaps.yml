@@ -1,6 +1,8 @@
 name: anticaps
+
 description: |-
   This module adds channel mode `B` (anticaps) which allows channels to block messages which are excessively capitalised.
+
 configuration:
 - name: <anticaps>
   description: |-
@@ -24,6 +26,7 @@ configuration:
     <anticaps lowercase="abcdefghijklmnopqrstuvwxyz"
               uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
     ```
+
 chmodes:
   chars:
   - name: anticaps
@@ -39,6 +42,7 @@ chmodes:
     ```plaintext
     /MODE #channel +B kick:5:75
     ```
+
 exemptions:
 - name: anticaps
   description: Allows exempted users to send overly capitalised messages.

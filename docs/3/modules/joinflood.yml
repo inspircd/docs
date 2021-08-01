@@ -1,6 +1,8 @@
 name: joinflood
+
 description: |-
   This module adds channel mode `j` (joinflood) which helps protect against spammers which mass-join channels.
+
 configuration:
 - name: <joinflood>
   description: |-
@@ -31,6 +33,7 @@ configuration:
                duration="1m"
                splitwait="30s">
     ```
+
 chmodes:
   description: null
   chars:

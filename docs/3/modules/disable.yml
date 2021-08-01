@@ -1,6 +1,8 @@
 name: disable
+
 description: |-
   This module allows commands, channel modes, and user modes to be disabled.
+
 configuration:
 - name: <class>
   description: |-

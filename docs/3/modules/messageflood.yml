@@ -1,6 +1,8 @@
 name: messageflood
+
 description: |-
   This module adds channel mode `f` (flood) which helps protect against spammers which mass-message channels.
+
 configuration:
 - name: <messageflood>
   description: |-
@@ -9,19 +11,19 @@ configuration:
   - name: notice
     type: Decimal
     required: false
-    default: '1.0'
+    default: 1.0
     description: |-
       [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `NOTICE` message is equivalent to.
   - name: privmsg
     type: Decimal
     required: false
-    default: '1.0'
+    default: 1.0
     description: |-
       [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `PRIVMSG` message is equivalent to.
   - name: tagmsg
     type: Decimal
     required: false
-    default: '0.2'
+    default: 0.2
     description: |-
       [**New in v3.2.0!**](/3/change-log/#inspircd-320) The number of lines that a single `NOTICE` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
   details: ""
@@ -31,6 +33,7 @@ configuration:
                   privmsg="1.0"
                   tagmsg="0.2">
     ```
+
 exemptions:
 - name: flood
   description: Allows exempted users to send messages at a higher rate than channel

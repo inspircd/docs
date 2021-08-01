@@ -1,6 +1,8 @@
 name: geoclass
+
 description: |-
   This module allows the server administrator to assign users to connect classes by the country they are connecting from.
+
 configuration:
 - name: <connect>
   description: |-
@@ -21,6 +23,7 @@ configuration:
              ...
              country="CN RU">
     ```
+
 stats:
 - char: G
   description: Lists the number of users currently connected from each country.

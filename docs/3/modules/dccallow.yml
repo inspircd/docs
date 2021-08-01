@@ -1,6 +1,8 @@
 name: dccallow
+
 description: |-
   This module allows the server administrator to configure what files are allowed to be sent via DCC SEND and allows users to configure who can send them DCC CHAT and DCC SEND requests.
+
 configuration:
 - name: <banfile>
   description: |-
@@ -61,13 +63,13 @@ configuration:
   - name: length
     type: Number
     required: false
-    default: '0'
+    default: 0
     description: |-
       The default time a DCC whitelist entry is valid for. Setting this to 0 means the entry is permanent.
   - name: maxentries
     type: Number
     required: false
-    default: '20'
+    default: 20
     description: |-
       The maximum number of entries that a user can have on their DCC whitelist.
   details: |-
@@ -80,12 +82,14 @@ configuration:
               length="0"
               maxentries="20">
     ```
+
 commands:
 - name: DCCALLOW
   param_count: 1-2
   syntax: '`[+]<nick> [<time>]`<br>`-<nick>`<br>`HELP`<br>`LIST`'
   description: |-
     Allows users to add other users to their DCC whitelist, remove other users from their DCC whitelist, and view the users on their DCC whitelist.
+
 example_commands: |-
   Lists all users on your DCC whitelist:
 

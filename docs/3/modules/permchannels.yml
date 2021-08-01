@@ -1,6 +1,8 @@
 name: permchannels
+
 description: |-
   This module adds channel mode `P` (permanent) which prevents the channel from being deleted when the last user leaves.
+
 configuration:
 - name: <permchanneldb>
   description: |-
@@ -81,6 +83,7 @@ configuration:
                   topicts="956188800"
                   ts="726192000">
     ```
+
 chmodes:
   description: null
   chars:
@@ -92,6 +95,7 @@ chmodes:
     description: |-
       Prevents the channel from being deleted when the last user leaves.
   example: ""
+
 special_notes: |-
   You should remember to `<include>` the file specified in `<permchannels:filename>` in your server configuration.
 

@@ -1,6 +1,8 @@
 name: filter
+
 description: |-
   This module adds the `/FILTER` command which allows server operators to define regex matches for inappropriate phrases that are not allowed to be used in channel messages, private messages, part messages, or quit messages.
+
 configuration:
 - name: <filteropts>
   description: |-
@@ -111,12 +113,14 @@ configuration:
              duration="1h"
              reason="Fluffy capybaras are too cute for this network!">
     ```
+
 commands:
 - name: FILTER
   param_count: 1, 4-5
   syntax: '`<pattern>`<br>`<pattern> <action> <flags> [<duration>] <reason>`'
   description: |-
     Allows server operators to add and remove filters.
+
 example_commands: |-
   !!! note ""
       The following examples assume that the "glob" regex module is being used.
@@ -140,14 +144,17 @@ example_commands: |-
   ```plaintext
   /FILTER *fluffy?capybara*
   ```
+
 snomasks:
 - char: f
   description: Notifications about filter matches on the local server.
 - char: F
   description: Notifications about filter matches on a remote server.
+
 stats:
 - char: s
   description: Lists all filters and filter-exempt targets.
+
 special_notes: |-
   Having a high number of filters or having filters which take a long time to match can have significant impact on server performance.
 

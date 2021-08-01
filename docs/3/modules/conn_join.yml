@@ -1,6 +1,8 @@
 name: conn_join
+
 description: |-
   This module allows the server administrator to force users to join one or more channels on connect.
+
 configuration:
 - name: <connect>
   description: |-

@@ -1,9 +1,12 @@
 name: nationalchars
-introduction: "!!! warning \"\"\n    If you want to use a custom 8-bit character set\
-  \ then you're probably better off using [the codepage module](/3/modules/codepage)\
-  \ instead."
+
+introduction: |-
+  !!! warning ""
+      If you want to use a custom 8-bit character set then you're probably better off using [the codepage module](/3/modules/codepage) instead.
+
 description: |-
   This module allows the server administrator to define what characters are allowed in nicknames and channel names and how those characters should be compared in a case insensitive way.
+
 configuration:
 - name: <nationalchars>
   description: |-
@@ -27,8 +30,8 @@ configuration:
     <nationalchars casemapping="cp1250"
                    file="/path/to/locales/cp1250">
     ```
+
 special_notes: |-
   A list of files for use with this module are present in the locales directory which exists in the root of the source tarball.
 
   You can also create your own locale file. See the rules documented in `locales/readme.txt` for more information.
-

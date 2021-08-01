@@ -1,6 +1,8 @@
 name: cloaking
+
 description: |-
   This module adds user mode `x` (cloak) which allows user hostnames to be hidden.
+
 configuration:
 - name: <cloak>
   description: |-
@@ -9,7 +11,7 @@ configuration:
   - name: domainparts
     type: Number
     required: false
-    default: '3'
+    default: 3
     description: |-
       If the half mode is used then the maximum number of domain labels that should be visible.
   - name: mode
@@ -71,6 +73,7 @@ configuration:
            domainparts="3"
            ignorecase="yes">
     ```
+
 umodes:
   description: null
   chars:
@@ -82,6 +85,7 @@ umodes:
     description: |-
       Enables hiding of the user's hostname.
   example: ""
+
 special_notes: |-
   The first `<cloak>` tag will be used for the cloak set when a user enables user mode `x` (cloak). The rest will be generated and used to check bans. This allows you to migrate cloaking mode or to change your cloaking key without breaking your bans.
 

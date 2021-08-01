@@ -1,6 +1,8 @@
 name: auditorium
+
 description: |-
   This module adds channel mode `u` (auditorium) which hides unprivileged users in a channel from each other. This is done by suppressing joins, parts, quits, kicks, `/NAMES` responses, and `/WHO` responses for unprivileged users.
+
 configuration:
 - name: <auditorium>
   description: |-
@@ -25,8 +27,13 @@ configuration:
     description: |-
       Whether server operators with the channels/auspex privilege can see other channel members.
   details: ""
-  example: "```xml\n<auditorium opcansee=\"no\"\n            opvisible=\"no\"\n  \
-    \          opercansee=\"yes\">\n```"
+  example: |-
+    ```xml
+    <auditorium opcansee="no"
+                opvisible="no"
+                opercansee="yes">
+    ```
+
 chmodes:
   chars:
   - name: auditorium
@@ -37,6 +44,7 @@ chmodes:
     description: |-
       Enables auditorium mode.
   example: ''
+
 exemptions:
 - name: auditorium-see
   description: Allows exempted users to see other channel members.

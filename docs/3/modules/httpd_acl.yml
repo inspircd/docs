@@ -1,6 +1,8 @@
 name: httpd_acl
+
 description: |-
   This module allows the server administrator to control who can access resources served over HTTP with [the httpd module](/3/modules/httpd).
+
 configuration:
 - name: <httpdacl>
   description: |-

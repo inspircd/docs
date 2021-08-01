@@ -1,16 +1,18 @@
 name: uninvite
+
 description: |-
   This module adds the `/UNINVITE` command which allows users who have invited another user to a channel to withdraw their invite.
+
 commands:
 - name: UNINVITE
-  param_count: '1'
+  param_count: 1
   syntax: '`<nick> <channel>`'
   description: |-
     Withdraws the invite for &lt;nick&gt; to join &lt;channel&gt;
+
 example_commands: |-
   Withdraws the invite for Adam to join #secret:
 
   ```plaintext
   /UNINVITE Adam #secret
   ```
-

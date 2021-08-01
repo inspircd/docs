@@ -1,6 +1,8 @@
 name: noctcp
+
 description: |-
   This module adds channel mode `C` (noctcp) which allows channels to block messages which contain CTCPs and user mode `T` (u_noctcp) which allows users to block private messages that contain CTCPs.
+
 configuration:
 - name: <noctcp>
   description: |-
@@ -37,6 +39,7 @@ configuration:
            ...
            privs="... channels/ignore-noctcp users/ignore-noctcp ...">
     ```
+
 chmodes:
   description: null
   chars:
@@ -48,6 +51,7 @@ chmodes:
     description: |-
       Enables blocking channel messages that contain CTCPs.
   example: ""
+
 umodes:
   description: null
   chars:
@@ -59,9 +63,11 @@ umodes:
     description: |-
       Enables blocking private messages that contain CTCPs.
   example: ""
+
 exemptions:
 - name: noctcp
   description: Allows exempted users to send messages that contain CTCPs.
+
 extbans:
   description: null
   chars:
@@ -75,6 +81,7 @@ extbans:
     ```plaintext
     /MODE #channel +b C:*!*@example.com
     ```
+
 special_notes: |-
   Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.
 

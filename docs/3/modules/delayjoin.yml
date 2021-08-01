@@ -1,6 +1,8 @@
 name: delayjoin
+
 description: |-
   This module adds channel mode `D` (delayjoin) which hides JOIN messages from users until they speak.
+
 chmodes:
   description: null
   chars:

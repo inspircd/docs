@@ -1,6 +1,8 @@
 name: randquote
+
 description: |-
   This module allows random quotes to be sent to users when they connect to the server.
+
 configuration:
 - name: "<files>` &amp; `<execfiles>"
   # FIXME ^ we need to do something about this hack
@@ -57,4 +59,3 @@ configuration:
                prefix=""
                suffix="">
     ```
-

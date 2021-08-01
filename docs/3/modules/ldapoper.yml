@@ -1,6 +1,8 @@
 name: ldapoper
+
 description: |-
   This module allows server operators to be authenticated against an LDAP database.
+
 configuration:
 - name: <ldapoper>
   description: |-
@@ -31,4 +33,3 @@ configuration:
               baserdn="ou=People,dc=example,dc=com"
               dbid="ldap-opers">
     ```
-

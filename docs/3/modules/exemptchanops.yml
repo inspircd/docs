@@ -1,6 +1,8 @@
 name: exemptchanops
+
 description: |-
   This module adds channel mode `X` (exemptchanops) which allows channel operators to grant exemptions to various channel-level restrictions.
+
 chmodes:
   description: null
   chars:
@@ -17,6 +19,7 @@ chmodes:
     ```plaintext
     /MODE #channel +X regmoderated:o
     ```
+
 special_notes: |-
   The modules which ship with InspIRCd define the following restrictions:
 

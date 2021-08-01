@@ -1,6 +1,8 @@
 name: banexception
+
 description: |-
   This module adds channel mode `e` (banexception) which allows channel operators to exempt user masks from the `b` (ban) channel mode.
+
 chmodes:
   chars:
   - name: banexception
@@ -10,23 +12,17 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Exempts users matching &lt;mask&gt; from the `b` (ban) channel mode.
-  example: 'Exempts users matching `*!*@example.com` from the `b` (ban) channel mode:
-
+  example: |-
+    Exempts users matching `*!*@example.com` from the `b` (ban) channel mode:
 
     ```plaintext
-
     /MODE #channel +e *!*@example.com
-
     ```
-
 
     Exempts users logged into the services account named Sadie from the `b` (ban)
     channel mode (requires [the services_account module](/3/modules/services_account)):
 
-
     ```plaintext
-
     /MODE #channel +e R:Sadie
-
-    ```'
+    ```
 

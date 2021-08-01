@@ -1,6 +1,8 @@
 name: chanlog
+
 description: |-
   This module allows messages sent to snomasks to be logged to a channel.
+
 configuration:
 - name: <chanlog>
   description: |-

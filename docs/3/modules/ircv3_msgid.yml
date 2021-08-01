@@ -1,6 +1,9 @@
 name: ircv3_msgid
-introduction: "!!! note \"New in v3.1.0!\"\n    If you are using an older version\
-  \ you will need to upgrade to use this module."
+
+introduction: |-
+  !!! note "New in v3.1.0!"
+      If you are using an older version you will need to upgrade to use this module.
+
 description: |-
   This module provides support for [the IRCv3 Message IDs specification](https://ircv3.net/specs/extensions/message-ids.html).
 

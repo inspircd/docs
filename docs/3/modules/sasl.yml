@@ -1,6 +1,8 @@
 name: sasl
+
 description: |-
   This module provides the IRCv3 `sasl` client capability.
+
 configuration:
 - name: <sasl>
   description: |-
@@ -24,17 +26,19 @@ configuration:
     <sasl requiressl="no"
           target="services.example.com">
     ```
+
 commands:
 - name: AUTHENTICATE
-  param_count: '1'
+  param_count: 1
   syntax: '`*`<br>`<mechanism>`<br>`<base64>`'
   description: |-
     Allows clients to authenticate against a services account.
   # AUTHENTICATE is not documented here because it is not intended to be executed by users
+
 client_caps:
 - name: '[sasl](https://ircv3.net/specs/extensions/sasl-3.1.html)'
   description: |-
     Enables support for SASL authentication.
+
 special_notes: |-
   The `/AUTHENTICATE` command should generally not be executed by users. It is intended to be an entirely internal feature which is executed automatically by clients.
-

@@ -1,6 +1,8 @@
 name: nonicks
+
 description: |-
   This module adds channel mode `N` (nonick) which prevents users from changing their nickname whilst in the channel.
+
 configuration:
 - name: <class>
   description: |-
@@ -19,6 +21,7 @@ configuration:
            ...
            privs="... channels/ignore-nonicks ...">
     ```
+
 chmodes:
   description: null
   chars:
@@ -30,6 +33,7 @@ chmodes:
     description: |-
       Prevents users from changing their nickname whilst in the channel.
   example: ""
+
 extbans:
   description: null
   chars:

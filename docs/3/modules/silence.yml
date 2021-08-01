@@ -1,6 +1,8 @@
 name: silence
+
 description: |-
   This module adds the `/SILENCE` command which allows users to ignore other users on server-side.
+
 configuration:
 - name: <silence>
   description: |-
@@ -15,7 +17,7 @@ configuration:
   - name: maxentries
     type: Number
     required: false
-    default: '32'
+    default: 32
     description: |-
       The maximum number of entries that can be on a `/SILENCE` list.
   details: ""
@@ -24,12 +26,14 @@ configuration:
     <silence exemptuline="yes"
              maxentries="32">
     ```
+
 commands:
 - name: SILENCE
   param_count: 1-2
   syntax: '`[(+|-)<mask> [<flags>]]`'
   description: |-
     Allows users to add users to their `/SILENCE` list, remove users from their `/SILENCE` list, and list users on their `/SILENCE` list.
+
 command_details: |-
   The flags in the second parameter should be set to one of the following values:
 
@@ -46,6 +50,7 @@ command_details: |-
   T    | Matches a TAGMSG targeted at a user.
   t    | Matches a TAGMSG targeted at a channel.
   x    | Exempt the mask from silence rules.
+
 example_commands: |-
   Adds a `/SILENCE` entry which blocks all possible messages from users matching `*!*@example.com`:
 
@@ -70,4 +75,3 @@ example_commands: |-
   ```plaintext
   /SILENCE
   ```
-

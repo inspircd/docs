@@ -1,6 +1,8 @@
 name: servprotect
+
 description: |-
   This module adds user mode `k` (servprotect) which protects services pseudoclients from being kicked, being killed, or having their channel prefix modes changed.
+
 umodes:
   description: null
   chars:
@@ -12,6 +14,6 @@ umodes:
     description: |-
       Protects services pseudoclients against kicks, kills, and channel prefix mode changes.
   example: ""
+
 special_notes: |-
   This user mode **can not** be set on normal users. It is intended specifically for services pseudoclients.
-

@@ -1,6 +1,8 @@
 name: hidechans
+
 description: |-
   This module adds user mode `I` (hidechans) which hides the channels users with it set are in from their `/WHOIS` response.
+
 configuration:
 - name: <hidechans>
   description: |-
@@ -17,6 +19,7 @@ configuration:
     ```xml
     <hidechans affectsopers="no">
     ```
+
 umodes:
   description: null
   chars:

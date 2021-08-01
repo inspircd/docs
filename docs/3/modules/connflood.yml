@@ -1,6 +1,8 @@
 name: connflood
+
 description: |-
   This module throttles excessive connections to the server.
+
 configuration:
 - name: <connflood>
   description: |-

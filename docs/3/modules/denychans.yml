@@ -1,6 +1,8 @@
 name: denychans
+
 description: |-
   This module allows the server administrator to prevent users from joining channels matching a glob.
+
 configuration:
 - name: <badchan>
   description: |-

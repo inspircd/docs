@@ -1,6 +1,8 @@
 name: operjoin
+
 description: |-
   This module allows the server administrator to force server operators to join one or more channels when logging into their server operator account.
+
 configuration:
 - name: "<oper>` &amp; `<type>"
   # FIXME ^ we need to do something about this hack
@@ -54,4 +56,3 @@ configuration:
     <operjoin channel="#example"
               override="yes">
     ```
-

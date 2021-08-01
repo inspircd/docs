@@ -1,6 +1,8 @@
 name: conn_umodes
+
 description: |-
   This module allows the server administrator to set user modes on connecting users.
+
 configuration:
 - name: <connect>
   description: |-
@@ -21,6 +23,7 @@ configuration:
              ...
              modes="+iw">
     ```
+
 special_notes: |-
   This module can set disabled modes which allows you to set user modes on users which they can not then remove.
 

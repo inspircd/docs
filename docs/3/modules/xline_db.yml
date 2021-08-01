@@ -1,6 +1,8 @@
 name: xline_db
+
 description: |-
   This module allows X-lines to be saved and reloaded on restart.
+
 configuration:
 - name: <xlinedb>
   description: |-
@@ -24,4 +26,3 @@ configuration:
     <xlinedb filename="xline.db"
              saveperiod="5s">
     ```
-

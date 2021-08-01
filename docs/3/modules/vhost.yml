@@ -1,6 +1,8 @@
 name: vhost
+
 description: |-
   This module allows the server administrator to define accounts which can grant a custom virtual host.
+
 configuration:
 - name: <vhost>
   description: |-
@@ -45,16 +47,17 @@ configuration:
            hash="hmac-sha256"
            host="helper.example.com">
     ```
+
 commands:
 - name: VHOST
-  param_count: '2'
+  param_count: 2
   syntax: '`<username> <password>`'
   description: |-
     Log into the account with the specified username and password.
+
 example_commands: |-
   Logs into the account with the name Sadie and password fl00fyc4pyb4r4:
 
   ```plaintext
   /VHOST Sadie fl00fyc4pyb4r4
   ```
-

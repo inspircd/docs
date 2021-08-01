@@ -1,6 +1,8 @@
 name: swhois
+
 description: |-
   This module adds the `/SWHOIS` command which adds custom lines to a user's WHOIS response.
+
 configuration:
 - name: "<oper>` &amp; `<type>"
   # FIXME ^ we need to do something about this hack
@@ -22,16 +24,17 @@ configuration:
           ...
           swhois="hates cheese">
     ```
+
 commands:
 - name: SWHOIS
-  param_count: '2'
+  param_count: 2
   syntax: '`<nick> <line>`'
   description: |-
     Sets the custom WHOIS line for &lt;nick&gt; to &lt;line&gt;.
+
 example_commands: |-
   Sets the custom WHOIS line for Sadie to "hates cheese":
 
   ```plaintext
   /SWHOIS Sadie :hates cheese
   ```
-

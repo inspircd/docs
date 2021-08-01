@@ -1,6 +1,8 @@
 name: ircv3_echomessage
+
 description: |-
   This module provides the IRCv3 `echo-message` client capability.
+
 client_caps:
 - name: '[echo-message](https://ircv3.net/specs/core/echo-message-3.2.html)'
   description: |-

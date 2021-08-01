@@ -1,6 +1,8 @@
 name: restrictchans
+
 description: |-
   This module prevents unprivileged users from creating new channels.
+
 configuration:
 - name: <allowchannel>
   description: |-
@@ -57,4 +59,3 @@ configuration:
            ...
            privs="... channels/restricted-create ...">
     ```
-

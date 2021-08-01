@@ -1,9 +1,13 @@
 name: blockcaps
-introduction: "!!! warning \"\"\n    This module has been deprecated and will be removed\
-  \ in the next major version of InspIRCd.\n\n    You should use [the anticaps module](/3/modules/anticaps)\
-  \ instead."
+
+introduction: |-
+  !!! warning ""
+      This module has been deprecated and will be removed in the next major version of InspIRCd.
+      You should use [the anticaps module](/3/modules/anticaps) instead."
+
 description: |-
   This module adds channel mode `B` (blockcaps) which allows channels to block messages which are excessively capitalised.
+
 configuration:
 - name: <blockcaps>
   description: |-
@@ -18,13 +22,13 @@ configuration:
   - name: minlen
     type: Number
     required: false
-    default: '1'
+    default: 1
     description: |-
       The minimum length of a message to block excessive capitalisation.
   - name: percent
     type: Number
     required: false
-    default: '100'
+    default: 100
     description: |-
       The percentage of a message which can be capitalised before it is blocked.
   - name: uppercase
@@ -41,6 +45,7 @@ configuration:
                percent="100"
                uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
     ```
+
 chmodes:
   chars:
   - name: blockcaps
@@ -51,9 +56,11 @@ chmodes:
     description: |-
       Enables blocking excessively capitalised messages.
   example: ""
+
 exemptions:
 - name: blockcaps
   description: Allows exempted users to send overly capitalised messages.
+
 extbans:
   chars:
   - char: B

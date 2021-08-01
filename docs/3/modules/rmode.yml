@@ -1,12 +1,15 @@
 name: rmode
+
 description: |-
   This module allows removal of channel list modes using glob patterns.
+
 commands:
 - name: RMODE
   param_count: 2-3
   syntax: '`<channel> <mode> [<pattern>]`'
   description: |-
     Removes all &lt;mode&gt; list modes matching &lt;pattern&gt;, or all if no pattern is specified.
+
 example_commands: |-
   Removes all bans on #example:
 
@@ -19,4 +22,3 @@ example_commands: |-
   ```plaintext
   /RMODE #example b *foo*
   ```
-

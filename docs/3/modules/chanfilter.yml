@@ -1,6 +1,8 @@
 name: chanfilter
+
 description: |-
   This module adds channel mode `g` (filter) which allows channel operators to define glob patterns for inappropriate phrases that are not allowed to be used in the channel.
+
 configuration:
 - name: <chanfilter>
   description: |-
@@ -21,7 +23,7 @@ configuration:
   - name: maxlen
     type: Number
     required: false
-    default: '35'
+    default: 35
     description: |-
       The maximum length of a parameter for channel mode `g` (filter).
   details: ""
@@ -31,6 +33,7 @@ configuration:
                 notifyuser="yes"
                 maxlen="50">
     ```
+
 chmodes:
   chars:
   - name: filter
@@ -46,9 +49,11 @@ chmodes:
     ```plaintext
     /MODE #channel +g *fluffy?capybara*
     ```
+
 exemptions:
 - name: filter
   description: Allows exempted users to send messages that contain censored phrases.
+
 special_notes: |-
   Due to limitations of the IRC protocol filters containing spaces can not be added.
 

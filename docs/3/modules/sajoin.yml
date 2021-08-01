@@ -1,6 +1,8 @@
 name: sajoin
+
 description: |-
   This module adds the `/SAJOIN` command which allows server operators to force users to join one or more channels.
+
 configuration:
 - name: <class>
   description: |-
@@ -20,6 +22,7 @@ configuration:
            commands="... SAJOIN ..."
            privs="... users/sajoin-others ...">
     ```
+
 commands:
 - name: SAJOIN
   param_count: 1-2
@@ -38,4 +41,3 @@ example_commands: |-
   ```plaintext
   /SAJOIN #channel
   ```
-

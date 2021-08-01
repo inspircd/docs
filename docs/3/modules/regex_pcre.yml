@@ -1,8 +1,10 @@
 name: regex_pcre
-introduction: "!!! note \"\"\n    This module depends on a third-party library ([PCRE](https://www.pcre.org))\
-  \ and must be manually enabled at compile time.\n\n    Once you have installed the\
-  \ dependency you can enable this module using the following command:\n\n    <pre><code>./configure\
-  \ --enable-extras regex_pcre</code></pre>"
+
+introduction: |-
+  !!! note ""
+      This module depends on a third-party library ([PCRE](https://www.pcre.org)) and must be manually enabled at compile time.
+      Once you have installed the dependency you can enable this module using the following command:
+      <pre><code>./configure --enable-extras regex_pcre</code></pre>
+
 description: |-
   This module provides the `pcre` regular expression engine which uses the [PCRE](https://www.pcre.org) library.
-

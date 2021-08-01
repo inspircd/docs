@@ -1,6 +1,8 @@
 name: ircv3_sts
+
 description: |-
   This module adds support for the IRCv3 Strict Transport Security specification.
+
 configuration:
 - name: <connect>
   description: |-
@@ -58,6 +60,7 @@ configuration:
          port="6697"
          preload="yes">
     ```
+
 client_caps:
 - name: '[sts](https://ircv3.net/specs/extensions/sts.html)'
   description: |-

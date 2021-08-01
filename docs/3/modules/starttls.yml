@@ -1,6 +1,8 @@
 name: starttls
+
 description: |-
   This module provides the IRCv3 `tls` client capability.
+
 configuration:
 - name: <starttls>
   description: |-
@@ -17,8 +19,8 @@ configuration:
     ```xml
     <starttls provider="gnutls">
     ```
+
 client_caps:
 - name: '[tls](https://ircv3.net/specs/extensions/tls-3.1.html)'
   description: |-
     Allows plaintext connections to upgrade to SSL (TLS).
-
