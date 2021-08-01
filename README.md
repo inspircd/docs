@@ -9,7 +9,7 @@ This repository contains the sources for the documentation available at [docs.in
 The documentation is built with [MkDocs](https://www.mkdocs.org). You can install this along with all of the other dependencies using [pip](https://pip.pypa.io/en/stable/) using the following command:
 
 ```sh
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt .
 ```
 
 Depending on your system you may need to run this as root for a system-wide install.
