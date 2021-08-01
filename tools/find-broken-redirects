@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require 'yaml'
+
+ROOT = File.dirname __dir__
+
+missing = Array.new
+config = YAML.load_file "#{ROOT}/mkdocs.yml"
+config['plugins']['redirects']['redirect_maps'].values.each do |link|
+    next if File.exist? "#{ROOT}/docs/#{link}"
+    missing << link unless missing.include? link
+end
+
+missing.sort.each do |link|
+	absolute_link = "#{ROOT}/docs/#{link}"
+	puts "Missing redirect target: #{absolute_link}"
+end
+puts "#{missing.size} missing!"
+exit missing.size
