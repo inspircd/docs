@@ -4,8 +4,7 @@ description: |-
   This module allows server operators to be given privileges that allow them to ignore various channel-level restrictions.
 
 configuration:
-- name: "<oper>` &amp; `<type>"
-  # FIXME ^ we need to do something about this hack
+- name: [<oper>, <type>]
   description: |-
     This module extends the core `<oper>` and `<type>` tags with the following fields:
   attributes:
