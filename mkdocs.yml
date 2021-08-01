@@ -3,7 +3,8 @@ nav:
         - Installation: 3/installation/index.md
         - Configuration: 3/configuration/index.md
         - Commands: 3/commands/index.md
-        - Modes: 3/modes.md
+        - Channel Modes: 3/channel-modes.md
+        - User Modes: 3/user-modes.md
         - Modules: 3/modules/index.md
         - SNOMasks: 3/snomasks.md
         - Change Log: 3/change-log.md
@@ -33,7 +34,7 @@ plugins:
           2/installation/index.md: 3/installation/index.md
           2/installation/source.md: 3/installation/source.md
           2/installation/windows.md: 3/installation/windows.md
-          2/modes.md: 3/modes.md
+          2/modes.md: 3/channel-modes.md
           2/module-manager.md: 3/module-manager.md
           2/modules/abbreviation.md: 3/modules/abbreviation.yml
           2/modules/alias.md: 3/modules/alias.yml
@@ -186,6 +187,7 @@ plugins:
           2/snomasks.md: 3/snomasks.md
           3/configuration-changes.md: 3/breaking-changes.md
           3/index.md: index.md
+          3/modes.md: 3/channel-modes.md
           4/index.md: index.md
   - search
 theme:
