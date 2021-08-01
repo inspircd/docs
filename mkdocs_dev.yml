@@ -1,0 +1,197 @@
+nav:
+    - InspIRCd 3:
+        - Installation: 3/installation/index.md
+        - Configuration: 3/configuration/index.md
+        - Commands: 3/commands/index.md
+        - Channel Modes: 3/channel-modes.md
+        - User Modes: 3/user-modes.md
+        - Modules: 3/modules/index.md
+        - SNOMasks: 3/snomasks.md
+        - Change Log: 3/change-log.md
+    - Downloads: https://github.com/inspircd/inspircd/releases/latest
+    - Issue Tracker: https://github.com/inspircd/inspircd/issues
+    - Developer API: https://www.inspircd.org/api/
+markdown_extensions:
+    - admonition
+    - extra
+    - markdown_include.include:
+          base_path: docs
+plugins:
+    exclude:
+      glob:
+        - '**/_*'
+    inspircd:
+    redirects:
+      redirect_maps:
+          2/configuration/index.md: 3/configuration/index.md
+          2/index.md: index.md
+          2/installation/centos.md: 3/installation/centos.md
+          2/installation/debian.md: 3/installation/debian.md
+          2/installation/index.md: 3/installation/index.md
+          2/installation/source.md: 3/installation/source.md
+          2/installation/windows.md: 3/installation/windows.md
+          2/modes.md: 3/channel-modes.md
+          2/module-manager.md: 3/module-manager.md
+          2/modules/abbreviation.md: 3/modules/abbreviation.yml
+          2/modules/alias.md: 3/modules/alias.yml
+          2/modules/allowinvite.md: 3/modules/allowinvite.yml
+          2/modules/alltime.md: 3/modules/alltime.yml
+          2/modules/auditorium.md: 3/modules/auditorium.yml
+          2/modules/autoop.md: 3/modules/autoop.yml
+          2/modules/banexception.md: 3/modules/banexception.yml
+          2/modules/banredirect.md: 3/modules/banredirect.yml
+          2/modules/blockamsg.md: 3/modules/blockamsg.yml
+          2/modules/blockcaps.md: 3/modules/blockcaps.yml
+          2/modules/blockcolor.md: 3/modules/blockcolor.yml
+          2/modules/botmode.md: 3/modules/botmode.yml
+          2/modules/callerid.md: 3/modules/callerid.yml
+          2/modules/cap.md: 3/modules/cap.yml
+          2/modules/cban.md: 3/modules/cban.yml
+          2/modules/censor.md: 3/modules/censor.yml
+          2/modules/cgiirc.md: 3/modules/cgiirc.yml
+          2/modules/chancreate.md: 3/modules/chancreate.yml
+          2/modules/chanfilter.md: 3/modules/chanfilter.yml
+          2/modules/chanhistory.md: 3/modules/chanhistory.yml
+          2/modules/chanlog.md: 3/modules/chanlog.yml
+          2/modules/channames.md: 3/modules/channames.yml
+          2/modules/channelban.md: 3/modules/channelban.yml
+          2/modules/check.md: 3/modules/check.yml
+          2/modules/chghost.md: 3/modules/chghost.yml
+          2/modules/chgident.md: 3/modules/chgident.yml
+          2/modules/chgname.md: 3/modules/chgname.yml
+          2/modules/cloaking.md: 3/modules/cloaking.yml
+          2/modules/clones.md: 3/modules/clones.yml
+          2/modules/commonchans.md: 3/modules/commonchans.yml
+          2/modules/conn_join.md: 3/modules/conn_join.yml
+          2/modules/conn_umodes.md: 3/modules/conn_umodes.yml
+          2/modules/conn_waitpong.md: 3/modules/conn_waitpong.yml
+          2/modules/connectban.md: 3/modules/connectban.yml
+          2/modules/connflood.md: 3/modules/connflood.yml
+          2/modules/customprefix.md: 3/modules/customprefix.yml
+          2/modules/customtitle.md: 3/modules/customtitle.yml
+          2/modules/cycle.md: 3/modules/cycle.yml
+          2/modules/dccallow.md: 3/modules/dccallow.yml
+          2/modules/deaf.md: 3/modules/deaf.yml
+          2/modules/delayjoin.md: 3/modules/delayjoin.yml
+          2/modules/delaymsg.md: 3/modules/delaymsg.yml
+          2/modules/denychans.md: 3/modules/denychans.yml
+          2/modules/dnsbl.md: 3/modules/dnsbl.yml
+          2/modules/exemptchanops.md: 3/modules/exemptchanops.yml
+          2/modules/filter.md: 3/modules/filter.yml
+          2/modules/gecosban.md: 3/modules/gecosban.yml
+          2/modules/globalload.md: 3/modules/globalload.yml
+          2/modules/globops.md: 3/modules/globops.yml
+          2/modules/helpop.md: 3/modules/helpop.yml
+          2/modules/hidechans.md: 3/modules/hidechans.yml
+          2/modules/hideoper.md: 3/modules/hideoper.yml
+          2/modules/hostchange.md: 3/modules/hostchange.yml
+          2/modules/httpd.md: 3/modules/httpd.yml
+          2/modules/httpd_acl.md: 3/modules/httpd_acl.yml
+          2/modules/httpd_config.md: 3/modules/httpd_config.yml
+          2/modules/httpd_stats.md: 3/modules/httpd_stats.yml
+          2/modules/ident.md: 3/modules/ident.yml
+          2/modules/index.md: 3/modules/index.md
+          2/modules/inviteexception.md: 3/modules/inviteexception.yml
+          2/modules/ircv3.md: 3/modules/ircv3.yml
+          2/modules/joinflood.md: 3/modules/joinflood.yml
+          2/modules/kicknorejoin.md: 3/modules/kicknorejoin.yml
+          2/modules/knock.md: 3/modules/knock.yml
+          2/modules/ldapauth.md: 3/modules/ldapauth.yml
+          2/modules/ldapoper.md: 3/modules/ldapoper.yml
+          2/modules/lockserv.md: 3/modules/lockserv.yml
+          2/modules/maphide.md: 3/modules/maphide.yml
+          2/modules/md5.md: 3/modules/md5.yml
+          2/modules/messageflood.md: 3/modules/messageflood.yml
+          2/modules/mlock.md: 3/modules/mlock.yml
+          2/modules/muteban.md: 3/modules/muteban.yml
+          2/modules/mysql.md: 3/modules/mysql.yml
+          2/modules/namedmodes.md: 3/modules/namedmodes.yml
+          2/modules/namesx.md: 3/modules/namesx.yml
+          2/modules/nationalchars.md: 3/modules/nationalchars.yml
+          2/modules/nickflood.md: 3/modules/nickflood.yml
+          2/modules/nicklock.md: 3/modules/nicklock.yml
+          2/modules/noctcp.md: 3/modules/noctcp.yml
+          2/modules/nokicks.md: 3/modules/nokicks.yml
+          2/modules/nonicks.md: 3/modules/nonicks.yml
+          2/modules/nonotice.md: 3/modules/nonotice.yml
+          2/modules/nopartmsg.md: 3/modules/nopartmsg.yml
+          2/modules/ojoin.md: 3/modules/ojoin.yml
+          2/modules/operchans.md: 3/modules/operchans.yml
+          2/modules/operjoin.md: 3/modules/operjoin.yml
+          2/modules/operlevels.md: 3/modules/operlevels.yml
+          2/modules/operlog.md: 3/modules/operlog.yml
+          2/modules/opermodes.md: 3/modules/opermodes.yml
+          2/modules/opermotd.md: 3/modules/opermotd.yml
+          2/modules/operprefix.md: 3/modules/operprefix.yml
+          2/modules/override.md: 3/modules/override.yml
+          2/modules/passforward.md: 3/modules/passforward.yml
+          2/modules/password_hash.md: 3/modules/password_hash.yml
+          2/modules/permchannels.md: 3/modules/permchannels.yml
+          2/modules/pgsql.md: 3/modules/pgsql.yml
+          2/modules/randquote.md: 3/modules/randquote.yml
+          2/modules/redirect.md: 3/modules/redirect.yml
+          2/modules/regex_glob.md: 3/modules/regex_glob.yml
+          2/modules/regex_pcre.md: 3/modules/regex_pcre.yml
+          2/modules/regex_posix.md: 3/modules/regex_posix.yml
+          2/modules/regex_stdlib.md: 3/modules/regex_stdlib.yml
+          2/modules/regex_tre.md: 3/modules/regex_tre.yml
+          2/modules/remove.md: 3/modules/remove.yml
+          2/modules/restrictchans.md: 3/modules/restrictchans.yml
+          2/modules/restrictmsg.md: 3/modules/restrictmsg.yml
+          2/modules/rline.md: 3/modules/rline.yml
+          2/modules/sajoin.md: 3/modules/sajoin.yml
+          2/modules/sakick.md: 3/modules/sakick.yml
+          2/modules/samode.md: 3/modules/samode.yml
+          2/modules/sanick.md: 3/modules/sanick.yml
+          2/modules/sapart.md: 3/modules/sapart.yml
+          2/modules/saquit.md: 3/modules/saquit.yml
+          2/modules/sasl.md: 3/modules/sasl.yml
+          2/modules/satopic.md: 3/modules/satopic.yml
+          2/modules/securelist.md: 3/modules/securelist.yml
+          2/modules/seenicks.md: 3/modules/seenicks.yml
+          2/modules/serverban.md: 3/modules/serverban.yml
+          2/modules/services_account.md: 3/modules/services_account.yml
+          2/modules/servprotect.md: 3/modules/servprotect.yml
+          2/modules/sethost.md: 3/modules/sethost.yml
+          2/modules/setident.md: 3/modules/setident.yml
+          2/modules/setidle.md: 3/modules/setidle.yml
+          2/modules/setname.md: 3/modules/setname.yml
+          2/modules/sha256.md: 3/modules/sha256.yml
+          2/modules/showwhois.md: 3/modules/showwhois.yml
+          2/modules/shun.md: 3/modules/shun.yml
+          2/modules/silence.md: 3/modules/silence.yml
+          2/modules/spanningtree.md: 3/modules/spanningtree.yml
+          2/modules/sqlauth.md: 3/modules/sqlauth.yml
+          2/modules/sqlite3.md: 3/modules/sqlite3.yml
+          2/modules/sqloper.md: 3/modules/sqloper.yml
+          2/modules/ssl_gnutls.md: 3/modules/ssl_gnutls.yml
+          2/modules/ssl_openssl.md: 3/modules/ssl_openssl.yml
+          2/modules/sslinfo.md: 3/modules/sslinfo.yml
+          2/modules/sslmodes.md: 3/modules/sslmodes.yml
+          2/modules/stripcolor.md: 3/modules/stripcolor.yml
+          2/modules/svshold.md: 3/modules/svshold.yml
+          2/modules/swhois.md: 3/modules/swhois.yml
+          2/modules/timedbans.md: 3/modules/timedbans.yml
+          2/modules/tline.md: 3/modules/tline.yml
+          2/modules/topiclock.md: 3/modules/topiclock.yml
+          2/modules/uhnames.md: 3/modules/uhnames.yml
+          2/modules/uninvite.md: 3/modules/uninvite.yml
+          2/modules/userip.md: 3/modules/userip.yml
+          2/modules/vhost.md: 3/modules/vhost.yml
+          2/modules/watch.md: 3/modules/watch.yml
+          2/modules/xline_db.md: 3/modules/xline_db.yml
+          2/snomasks.md: 3/snomasks.md
+          3/configuration-changes.md: 3/breaking-changes.md
+          3/index.md: index.md
+          3/modes.md: 3/channel-modes.md
+          4/index.md: index.md
+    search:
+theme:
+  name: cinder
+  highlightjs: true
+  disable_nav_previous_next: true
+copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
+repo_url: https://github.com/inspircd/inspircd-docs
+site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
+site_name: InspIRCd Documentation
+site_url: https://docs.inspircd.org/
