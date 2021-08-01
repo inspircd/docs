@@ -1,0 +1,79 @@
+name: chanhistory
+
+description: |-
+  This module adds channel mode `H` (history) which allows message history to be viewed on joining the channel.
+
+configuration:
+- name: <chanhistory>
+  description: |-
+    The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
+  attributes:
+  - name: bots
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users with the bot user mode (+B) will receive history.
+  - name: enableumode
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether user mode `N` (nohistory) is enabled.
+  - name: maxlines
+    type: Number
+    required: false
+    default: 50
+    description: |-
+      The maximum number of lines of history that a channel can keep.
+  - name: prefixmsg
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send a notice before sending history.
+  details: ""
+  example: |-
+    ```xml
+    <chanhistory bots="yes"
+                 enableumode="yes"
+                 maxlines="50"
+                 prefixmsg="yes">
+    ```
+
+chmodes:
+  description: ""
+  chars:
+  - name: history
+    char: H
+    type: Parameter
+    syntax: '`<count>:<period>`'
+    usable_by: Channel operators
+    description: |-
+      Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.
+  example: |-
+    Replays up to 10 messages from the last 30 minutes:
+
+    ```plaintext
+    /MODE #channel +H 10:1800
+    ```
+
+    Replays up to 25 messages from the last two hours:
+
+    ```plaintext
+    /MODE #channel +H 25:2h
+    ```
+
+umodes:
+  description: |-
+    !!! note "New in v3.9.0!"
+        If you are using an older version you will need to upgrade to use this user mode.
+  chars:
+  - name: nohistory
+    char: N
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Disables receiving channel history on join.
+  example: ""

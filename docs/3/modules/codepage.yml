@@ -1,0 +1,103 @@
+name: codepage
+
+introduction: |-
+  !!! note "New in v3.5.0!"
+      If you are using an older version you will need to upgrade to use this module.
+
+description: |-
+  This module allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
+
+configuration:
+- name: <codepage>
+  description: |-
+    The `<codepage>` tag defines settings about how the codepage module should behave. This tag can only be defined once.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the codepage; sent to users in the `005` (RPL_ISUPPORT) numeric.
+  details: ""
+  example: |-
+    ```xml
+    <codepage name="latin1">
+    ```
+- name: <cpcase>
+  description: |-
+    The `<cpcase>` tag defines a mapping from lower case to upper case for two characters. This tag can be defined as many times as required.
+  attributes:
+  - name: lower
+    type: Number
+    required: false
+    default: None
+    description: |-
+      A lower case character.
+  - name: upper
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The upper case equivalent of the character in the `lower` field.
+  example: |-
+    Marks "À" as the upper case equivalent of "à" in the ISO 8859-1 codepage.
+
+    ```xml
+    <cpcase lower="192"
+            upper="224">
+    ```
+- name: <cpchars>
+  description: |-
+    The `<cpchars>` tag defines a single character or inclusive range of characters that are allowed in nicknames.
+    This tag can be defined as many times as required.
+  attributes:
+  - name: begin
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The start of an inclusive range of characters to allow in nicknames.
+  - name: end
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The end of an inclusive range of characters to allow in nicknames.
+  - name: front
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether the characters specified in this tag can exist at the start of a nickname.
+  - name: index
+    type: Number
+    required: false
+    default: None
+    description: |-
+      A character to allow in nicknames.
+  example: |-
+    Allows the character with the numeric code point 45 in a nickname except as the first character.
+
+    ```xml
+    <cpchars index="45"
+             front="no">
+    ```
+
+    Allows characters with the numeric code points in the inclusive range 123 to 125 at any point in a nickname:
+
+    ```xml
+    <cpchars begin="123"
+             end="125"
+             front="yes">
+    ```
+
+special_notes: |-
+  The following code pages for use with this module are present in the config examples directory.
+
+  Code page       | Include Tag
+  --------------- | -----------
+  ascii           | `<include file="examples/codepages/ascii.conf.example">`
+  iso-8859-1      | `<include file="examples/codepages/iso-8859-1.conf.example">`
+  iso-8859-2      | `<include file="examples/codepages/iso-8859-2.conf.example">`
+  rfc1459         | `<include file="examples/codepages/rfc1459.conf.example">`
+  strict-rfc1459  | `<include file="examples/codepages/strict-rfc1459.conf.example">`

@@ -1,0 +1,18 @@
+name: classban
+
+description: |-
+  This module adds extended ban `n:` which check whether users are in a connect class matching the specified glob pattern.
+
+extbans:
+  description: ""
+  chars:
+  - char: n
+    type: Matching
+    syntax: '`n:<pattern>`'
+    description: Checks whether users are in a connect class &lt;pattern&gt;.
+  example: |-
+    Bans users in the "webchat" connect class from joining the channel:
+
+    ```plaintext
+    /MODE #channel +b n:webchat
+    ```

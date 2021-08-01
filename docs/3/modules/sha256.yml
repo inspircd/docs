@@ -1,0 +1,4 @@
+name: sha256
+
+description: |-
+  This module allows other modules to generate [SHA-256](https://en.wikipedia.org/wiki/SHA-2) hashes.

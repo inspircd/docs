@@ -1,0 +1,158 @@
+name: ssl_mbedtls
+
+introduction: ""
+
+depends_on:
+  what: a third-party library ([mbedTLS](https://tls.mbed.org))
+
+description: |-
+  This module allows TLS (SSL) encrypted connections using the [mbedTLS](https://tls.mbed.org) library.
+
+configuration:
+- name: <bind>
+  description: |-
+    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following keys:
+  extends: true
+  added_values:
+  - name: ssl
+    description: |-
+      *This MUST be set to the name of a mbedTLS TLS (SSL) profile to listen for secure connections with mbedTLS.*
+  details: ""
+  example: |-
+    Listens for mbedTLS encrypted IRC connections on the *:6697 endpoint with an [SSL profile](#sslprofile) named "Clients":
+
+    ```xml
+    <bind address="*"
+          port="6697"
+          ...
+          ssl="Clients"
+          type="clients">
+    ```
+
+    Listens for mbedTLS encrypted server connections on the *:7000 endpoint with an [SSL profile](#sslprofile) named "Servers":
+
+    ```xml
+    <bind address="*"
+          port="7000"
+          ...
+          ssl="Servers"
+          type="servers">
+    ```
+- name: <sslprofile>
+  description: |-
+    The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
+
+    If no `<sslprofile>` tags are defined a default profile named `mbedtls` will be created. This profile will use the contents of the deprecated `<mbedtls>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of this TLS (SSL) profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+  - name: provider
+    type: Text
+    required: true
+    default: None
+    description: |-
+      *This MUST be set to "mbedtls" to use the mbedTLS library.*
+  - name: cafile
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the path to the CA in PEM format.
+  - name: certfile
+    type: Text
+    required: false
+    default: cert.pem
+    description: |-
+      The path to the certificate in PEM format.
+  - name: ciphersuites
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a colon-delimited list of [mbedTLS ciphersuites](https://tls.mbed.org/supported-ssl-ciphersuites).
+  - name: crlfile
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the path to the CRL in PEM format.
+  - name: curves
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a colon-delimited list of curves for use with ECDHE.
+  - name: dhfile
+    type: Text
+    required: false
+    default: dhparams.pem
+    description: |-
+      The path to the DH parameters in PEM format.
+  - name: hash
+    type: Text
+    required: false
+    default: sha256
+    description: |-
+      The hash algorithm used for TLS (SSL) client fingerprints.
+  - name: keyfile
+    type: Text
+    required: false
+    default: key.pem
+    description: |-
+      The path to the private key in PEM format.
+  - name: maxver
+    type: Number
+    required: false
+    default: None
+    description: |-
+      If defined then the maximum version of TLS (SSL) to use.
+  - name: mindhbits
+    type: Number
+    required: false
+    default: 2048
+    description: |-
+      The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
+  - name: minver
+    type: Number
+    required: false
+    default: None
+    description: |-
+      If defined then the minimum version of TLS (SSL) to use.
+  - name: outrecsize
+    type: Number
+    required: false
+    default: 2048
+    description: |-
+      The maximum size of an outgoing mbedTLS record.
+  - name: requestclientcert
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to request a TLS (SSL) certificate from clients.
+  details: |-
+    The hash field should be set to one of the values shown [in the mbedTLS MD documentation](https://tls.mbed.org/api/group__hashing__module.html).
+
+  example: |-
+    ```xml
+    <sslprofile name="Clients"
+                provider="mbedtls"
+                cafile=""
+                certfile="cert.pem"
+                crlfile=""
+                dhfile="dhparams.pem"
+                hash="sha256"
+                keyfile="key.pem"
+                mindhbits="2048"
+                outrecsize="2048"
+                requestclientcert="yes">
+    ```
+
+special_notes: |-
+  SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should use `/REHASH -ssl` or use [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
+
+  If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.

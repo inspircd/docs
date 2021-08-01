@@ -1,0 +1,102 @@
+name: sslinfo
+
+description: |-
+  This module adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the `/SSLINFO` command to look up TLS (SSL) certificate information for other users.
+
+configuration:
+- name: <connect>
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: requiressl
+    type: Text
+    required: false
+    default: 'no'
+    description: |-
+      Whether users must be using TLS (SSL) to use this class.
+  details: |-
+    The requiressl field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    no      | TLS (SSL) is not required to use this class.
+    trusted | TLS (SSL) is required and and a CA-verified client certificate must be provided to use this class.
+    yes     | TLS (SSL) is required to use this class.
+
+  example: |-
+    Requires users to be using TLS (SSL) to be assigned to the Secure class:
+
+    ```xml
+    <connect name="Secure"
+             ...
+             requiressl="yes">
+    ```
+- name: <oper>
+  description: |-
+    This module extends [the core `<oper>` tag](/3/configuration#oper) with the following fields:
+  attributes:
+  - name: autologin
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to automatically log server operators in when they connect to the server.
+  - name: fingerprint
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a space-delimited list of fingerprints of this server operator's TLS (SSL) client certificates.
+  - name: sslonly
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether this server operator must be connected using TLS (SSL) to log into their account.
+  details: ""
+  example: |-
+    ```xml
+    <oper name="Sadie"
+          ...
+          autologin="no"
+          fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
+          sslonly="yes">
+    ```
+- name: <sslinfo>
+  description: |-
+    The `<sslinfo>` tag defines settings about how the sethost module should behave. This tag can only be defined once.
+  attributes:
+  - name: operonly
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user TLS (SSL) certificate fingerprints are only visible to server operators.
+  details: ""
+  example: |-
+    ```xml
+    <sslinfo operonly="no">
+    ```
+
+commands:
+- name: SSLINFO
+  param_count: 1
+  syntax: '`<target>`'
+  description: |-
+    Views the TLS (SSL) certificate information for &lt;target&gt;.
+
+example_commands: |-
+  Views the TLS (SSL) certificate information for Sadie:
+
+  ```plaintext
+  /SSLINFO Sadie
+  ```
+
+  [**New in v3.9.0!**](/3/change-log/#inspircd-390) Views the TLS (SSL) certificate information for users in #wibble:
+
+  ```plaintext
+  /SSLINFO #wibble
+  ```
+
+special_notes: |-
+  {! 3/modules/_ssl_table.md !}

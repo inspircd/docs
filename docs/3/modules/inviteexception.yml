@@ -1,0 +1,44 @@
+name: inviteexception
+
+description: |-
+  This module adds channel mode `I` (invex) which allows channel operators to exempt user masks from the `i` (inviteonly) channel mode.
+
+configuration:
+- name: <inviteexception>
+  description: |-
+    The `<inviteexception>` tag defines settings about how the inviteexception module should behave. This tag can only be defined once.
+  attributes:
+  - name: bypasskey
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether channel mode `I` (invex) allows joining users to bypass the `k` (key) channel mode.
+  details: ""
+  example: |-
+    ```xml
+    <inviteexception bypasskey="yes">
+    ```
+
+chmodes:
+  description: ""
+  chars:
+  - name: invex
+    char: I
+    type: List
+    syntax: '`<mask>`'
+    usable_by: Channel operators
+    description: |-
+      Exempts users matching &lt;mask&gt; from the `i` (inviteonly) channel mode.
+  example: |-
+    Exempts users matching `*!*@example.com` from the `i` (inviteonly) channel mode:
+
+    ```plaintext
+    /MODE #channel +I *!*@example.com
+    ```
+
+    Exempts users logged into the services account named Sadie from the `i` (inviteonly) channel mode (requires [the services_account module](/3/modules/services_account)):
+
+    ```plaintext
+    /MODE #channel +I R:Sadie
+    ```

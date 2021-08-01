@@ -1,0 +1,127 @@
+name: alias
+
+description: |-
+    This module allows the server administrator to define custom channel commands (e.g. `!kick`) and server commands (e.g. `/OPERSERV`).
+
+configuration:
+- name: "<alias>"
+  description: |-
+      The `<alias>` tag defines a custom channel or server command. This tag can be defined as many times as required.
+
+  attributes:
+  - name: text
+    type: Text
+    required: true
+    default: None
+    description: The name of the custom command.
+  - name: replace
+    type: Text
+    required: true
+    default: None
+    description: The message to replace the custom command with.
+  - name: format
+    type: Text
+    required: false
+    default: None
+    description: If defined then a glob pattern that the command parameters must match.
+  - name: requires
+    type: Text
+    required: false
+    default: None
+    description: If defined then the nickname of a user which must be online for the alias to work.
+  - name: channelcommand
+    type: Boolean
+    required: false
+    default: 'No'
+    description: Whether the command can be executed as a channel command.
+  - name: usercommand
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: Whether the command can be executed as a server command.
+  - name: operonly
+    type: Boolean
+    required: false
+    default: 'No'
+    description: Whether the user executing the command must be a server operator.
+  - name: stripcolor
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+        [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to strip formatting codes before matching an alias.
+  - name: uline
+    type: Boolean
+    required: false
+    default: 'No'
+    description: Whether the user specified in the requires value must be on a U-lined server.
+
+
+  details: |-
+      The replace field can contain any of the following template variables:
+
+      Variable     | Description
+      ------------ | -----------
+      $1 to $9     | The value of the parameter at the specified position.
+      $1- to $9-   | The values of the parameters at and after the specified position.
+      $chan        | If executed as a channel command then the name of the channel.
+      $host        | The real hostname of the user that executed the command.
+      $ident       | The username (ident) of the user that executed the command.
+      $nick        | The nickname of the user that executed the command.
+      $requirement | The nickname specified in the requires field.
+      $vhost       | The virtual hostname of the user that executed the command.
+
+  example: |-
+      Defines an oper-only `/OPERSERV` server command that messages the OperServ client if it is on a U-lined server:
+
+      ```xml
+      <alias text="OPERSERV"
+             replace="PRIVMSG OperServ :$2-"
+             format="*"
+             requires="OperServ"
+             channelcommand="no"
+             usercommand="yes"
+             stripcolor="no"
+             operonly="yes"
+             uline="yes">
+      ```
+
+- name: "<fantasy>"
+
+  description: |-
+      The `<fantasy>` tag defines settings about custom channel commands. This tag can only be defined once.
+
+  attributes:
+  - name: allowbots
+    type: Boolean
+    required: false
+    default: 'No'
+    description: Whether users with the bot user mode (+B) can execute channel commands.
+  - name: prefix
+    type: Text
+    required: false
+    default: "!"
+    description: The prefix that indicates that a message is a channel command
+
+  details: ""
+
+  example: |-
+    ```xml
+    <fantasy allowbots="no"
+             prefix=".">
+    ```
+
+special_notes: |-
+  If you are using services you may find it useful to use one of the predefined service files which ship with InspIRCd.
+
+  If you are using Anope for your services add the following tag to your configuration:
+
+  ```xml
+  <include file="examples/services/anope.conf.example">
+  ```
+
+  If you are using Atheme for your services add the following tag to your configuration:
+
+  ```xml
+  <include file="examples/services/atheme.conf.example">
+  ```

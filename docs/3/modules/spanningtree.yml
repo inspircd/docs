@@ -1,0 +1,344 @@
+name: spanningtree
+
+description: |-
+  This module allows linking multiple servers together as part of one network.
+
+configuration:
+- name: <autoconnect>
+  description: |-
+    The `<autoconnect>` tag defines one or more servers to attempt to connect to. This tag can be defined as many times as required.
+  attributes:
+  - name: period
+    type: Duration
+    required: false
+    default: None
+    description: |-
+      The time period to wait between server connection attempts.
+  - name: server
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A space-delimited list of servers to attempt to connect to.
+  details: ""
+  example: |-
+    Automatically connects to hub1.example.com after 120 seconds, failing over to hub2.example.com and then hub3.example.com if connecting to the previous server fails:
+
+    ```xml
+    <autoconnect period="2m"
+                 server="hub1.example.com hub2.example.com hub3.example.com">
+    ```
+- name: <bind>
+  description: |-
+    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
+  extends: true
+  added_values:
+  - name: servers
+    description: |-
+      Listens for server connections.
+  details: ""
+  example: |-
+    Listens for TLS encrypted server connections on the *:7002 endpoint with an SSL profile named "Servers":
+
+    ```xml
+    <bind address="*"
+          port="7003"
+          ...
+          ssl="Servers"
+          type="servers">
+    ```
+
+    Listens for unencrypted server connections on the 127.0.0.1:7000 endpoint:
+
+    ```xml
+    <bind address="127.0.0.1"
+          port="7000"
+          ...
+          type="servers">
+    ```
+- name: <link>
+  description: |-
+    The `<link>` tag defines a server to link with. This tag can be defined as many times as required.
+  attributes:
+  - name: allowmask
+    type: Text
+    required: true
+    default: None
+    description: |-
+      One or more CIDR ranges or glob patterns that the remote server can connect from.
+  - name: bind
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The IP address to bind to when connecting to the remote server.
+  - name: fingerprint
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the TLS (SSL) client fingerprint of the remote server.
+  - name: hidden
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether the server IP address is hidden from server operators.
+  - name: ipaddr
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The IP address or hostname of the remote server.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The hostname of the IRC server.
+  - name: port
+    type: Number
+    required: false
+    default: None
+    description: |-
+      If defined then the TCP port to connect to this server on.
+  - name: recvpass
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password that the remote server will use to log into the local server.
+  - name: sendpass
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password that the local server will use to log into the remote server.
+  - name: ssl
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the name of a TLS (SSL) profile to use for encrypting the connection with this server.
+  - name: statshidden
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether the server IP address is hidden in the `/STATS` output.
+  - name: timeout
+    type: Duration
+    required: false
+    default: 30s
+    description: |-
+      The number of seconds to wait before declaring a server connection as having failed.
+  details: ""
+  example: |-
+    Automatically connects to hub1.example.com after 120 seconds, failing over to hub2.example.com and then hub3.example.com if connecting to the previous server fails:
+
+    ```xml
+    <link allowmask="192.0.2.0/24 198.51.100.*"
+          bind="203.0.113.2"
+          fingerprint="1fba42fde3c4e76b7cca45764faf5cc1a7c903a77e0f2bc978d990280b15906f"
+          hidden="no"
+          ipaddr="server-1a4.example.net"
+          name="hub.example.com"
+          port="7000"
+          recvpass="incoming!password"
+          sendpass="outgoing!password"
+          ssl="Servers"
+          timeout="15s">
+    ```
+- name: <options>
+  description: |-
+    This module extends [the core `<options>` tag](/3/configuration#options) with the following fields:
+  attributes:
+  - name: allowmismatch
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether optionally common modules can be loaded on one server but not the other.
+  - name: announcets
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to announce changes in channel creation time.
+  - name: pingwarning
+    type: Duration
+    required: false
+    default: 15s
+    description: |-
+      The number of seconds to wait before warning server operators that a server has not responded to a ping.
+  - name: serverpingfreq
+    type: Duration
+    required: false
+    default: 1m
+    description: |-
+      The number of seconds to wait between pinging servers.
+  details: ""
+  example: |-
+    ```xml
+    <options ...
+             allowmismatch="no"
+             announcets="no"
+             pingwarning="15"
+             serverpingfreq="120">
+    ```
+- name: <performance>
+  description: |-
+    This module extends [the core `<performance>` tag](/3/configuration#performance) with the following fields:
+  attributes:
+  - name: quietbursts
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to inform server operators of users who connect during a network merge.
+  details: ""
+  example: |-
+    ```xml
+    <performance ...
+                 quietbursts="yes">
+    ```
+- name: <security>
+  description: |-
+    This module extends [the core `<security>` tag](/3/configuration#security) with the following fields:
+  attributes:
+  - name: flatlinks
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to flatten the output of `/LINKS` to avoid leaking network architecture.
+  - name: hidesplits
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to show `*.net *.split` instead of the server names when a netsplit happens
+  - name: hideulines
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to hide U-lined servers from the output of `/LINKS` and `/MAP`.
+  details: ""
+  example: |-
+    ```xml
+    <security ...
+              flatlinks="no"
+              hidesplits="no"
+              hideulines="no">
+    ```
+- name: <uline>
+  description: |-
+    The `<uline>` tag defines one or more services servers. This tag can be defined as many times as required.
+  attributes:
+  - name: server
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The name of a services server. You must NOT specify a server that normal users can connect to here.
+  - name: silent
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether server operators should be informed of users on this server connecting and disconnecting.
+  details: ""
+  example: |-
+    Marks services.example.com as a silent services server:
+
+    ```xml
+    <uline server="services.example.com"
+           silent="yes">
+    ```
+
+commands:
+- name: CONNECT
+  param_count: 1
+  syntax: '`<server>`'
+  description: |-
+    Attempts to connect the local server to &lt;server&gt;.
+- name: LINKS
+  param_count: 0
+  syntax: None
+  description: |-
+    Lists all servers connected to the current one.
+- name: MAP
+  param_count: 0
+  syntax: None
+  description: |-
+    Shows a textual map of the network architecture.
+- name: RCONNECT
+  param_count: 2
+  syntax: '`<remote-server-mask> <target-server-mask>`'
+  description: |-
+    Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
+- name: RSQUIT
+  param_count: 2
+  syntax: '`<server-mask> [<reason>]`'
+  description: |-
+    Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
+- name: SQUIT
+  param_count: 2
+  syntax: '`<server-mask> [<reason>]`'
+  description: |-
+    Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.
+
+example_commands: |-
+  Connects the local server to hub.example.com:
+
+  ```plaintext
+  /CONNECT hub.example.com
+  ```
+
+  Connects the remote server eu-hub.example.com to us-hub.example.com:
+
+  ```plaintext
+  /RCONNECT eu-hub.example.com us-hub.example.com
+  ```
+
+  Disconnects the remote server eu-hub.example.com with no reason:
+
+  ```plaintext
+  /RSQUIT eu-hub.example.com
+  ```
+
+  Disconnects the remote server us-hub.example.com with the reason "Updating InspIRCd":
+
+  ```plaintext
+  /RSQUIT us-hub.example.com :Updating InspIRCd
+  ```
+
+  Disconnects the local server eu-hub.example.com with no reason:
+
+  ```plaintext
+  /SQUIT eu-hub.example.com
+  ```
+
+  Disconnects the local server us-hub.example.com with the reason "Updating InspIRCd":
+
+  ```plaintext
+  /SQUIT us-hub.example.com :Updating InspIRCd
+  ```
+
+snomasks:
+- char: l
+  description: Messages relating to server linking on the local server.
+- char: L
+  description: Messages relating to server linking on a remote server.
+
+stats:
+- char: c
+  description: Lists servers which the server may connect to or allow connections
+    from.
+- char: n
+  description: Lists servers which the server may connect to or allow connections
+    from.
+
+special_notes: |-
+  Linking non-local servers without TLS (SSL) is a serious privacy risk and will be removed in the next major version of InspIRCd.

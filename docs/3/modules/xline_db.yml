@@ -1,0 +1,28 @@
+name: xline_db
+
+description: |-
+  This module allows X-lines to be saved and reloaded on restart.
+
+configuration:
+- name: <xlinedb>
+  description: |-
+    The `<xlinedb>` tag defines settings about how the xline_db module should behave. This tag can only be defined once.
+  attributes:
+  - name: filename
+    type: Text
+    required: false
+    default: xline.db
+    description: |-
+      The location to read/write the X-line database from.
+  - name: saveperiod
+    type: Duration
+    required: false
+    default: 5s
+    description: |-
+      [**New in v3.2.0!**](/3/change-log/#inspircd-320) The time period between attempts to check whether the X-line database needs to be written.
+  details: ""
+  example: |-
+    ```xml
+    <xlinedb filename="xline.db"
+             saveperiod="5s">
+    ```

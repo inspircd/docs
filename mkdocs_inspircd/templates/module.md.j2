@@ -1,0 +1,331 @@
+---
+title: "Module Details: {{name}} (v3)"
+---
+
+## The "{{name}}" Module
+
+{{introduction}}
+
+{% if depends_on is defined -%}
+!!! note ""
+    This module depends on {{depends_on.what}} and must be manually enabled at compile time.
+
+    {{depends_on.condition|default('Once you have installed the dependency')}} you can enable this module using the following command:
+
+    <pre><code>./configure --enable-extras {{name}}</code></pre>
+
+{% endif -%}
+
+### Description
+
+{{description}}
+
+### Configuration
+
+To load this module use the following `<module>` tag:
+
+```xml
+<module name="{{name}}">
+```
+
+{% if configuration -%}
+{% for tag in configuration -%}
+#### `{{tag.name}}`
+
+{{tag.description}}
+
+{% if tag.attributes %}
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for attr in tag.attributes %}
+<tr markdown="1">
+<td markdown="1">{{attr.name}}</td>
+<td markdown="1">{{attr.type}}</td>
+<td markdown="1">{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
+<td markdown="1">{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% if tag.extends %}
+{# typically to extend `<class:privs>` #}
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for value in tag.added_values %}
+<tr markdown="1">
+<td markdown="1">{{value.name}}</td>
+<td markdown="1">{{value.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{{tag.details}}
+
+##### Example Usage
+
+{{tag.example}}
+
+{% endfor %}
+{%- else -%}
+This module requires no other configuration.
+
+{% endif -%}
+
+{% if commands -%}
+### Commands
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Parameter Count</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for command in commands %}
+<tr markdown="1">
+<td markdown="1">{{command.name}}</td>
+<td markdown="1">{{command.param_count}}</td>
+<td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
+<td markdown="1">{{command.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{{command_details}}
+
+{% if example_commands %}
+#### Example Usage
+
+{{example_commands}}
+{% endif %}
+{% endif %}
+
+{% if client_caps -%}
+### Client Capabilities
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for cap in client_caps %}
+<tr markdown="1">
+<td markdown="1">{{cap.name}}</td>
+<td markdown="1">{{cap.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% if chmodes -%}
+### Channel Modes
+
+{{chmodes.description}}
+
+{% if chmodes.chars %}
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Character</th>
+<th>Type</th>
+<th>Parameter Syntax</th>
+<th>Usable By</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for mode in chmodes.chars %}
+<tr markdown="1">
+<td markdown="1">{{mode.name}}</td>
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.usable_by}}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% if chmodes.example -%}
+#### Example Usage
+
+{{chmodes.example}}
+
+{% endif -%}
+{% endif -%}
+
+{% if umodes -%}
+### User Modes
+
+{{umodes.description}}
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Character</th>
+<th>Type</th>
+<th>Parameter Syntax</th>
+<th>Usable By</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for mode in umodes.chars %}
+<tr markdown="1">
+<td markdown="1">{{mode.name}}</td>
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.usable_by}}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% if umodes.example -%}
+#### Example Usage
+
+{{umodes.example}}
+
+{% endif -%}
+{% endif -%}
+
+{% if exemptions -%}
+### Exemptions
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for exemption in exemptions %}
+<tr markdown="1">
+<td markdown="1">{{exemption.name}}</td>
+<td markdown="1">{{exemption.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif -%}
+
+{% if extbans %}
+### Extended Bans
+
+{{extbans.description}}
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Character</th>
+<th>Type</th>
+<th>Ban Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for mode in extbans.chars %}
+<tr markdown="1">
+<td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.type}}</td>
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+<td markdown="1">{{mode.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% if extbans.example -%}
+#### Example Usage
+
+{{extbans.example}}
+
+{% endif -%}
+{% endif -%}
+
+{% if snomasks %}
+### Server Notice Masks
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for mask in snomasks %}
+<tr markdown="1">
+<td markdown="1">{{mask.char}}</td>
+<td markdown="1">{{mask.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif -%}
+
+{% if stats %}
+### Statistics
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for stat in stats %}
+<tr markdown="1">
+<td markdown="1">{{stat.char}}</td>
+<td markdown="1">{{stat.description}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif -%}
+
+{% if misc -%}
+{{misc}}
+
+{% endif -%}
+
+{% if special_notes -%}
+### Special Notes
+
+{{special_notes}}
+{% endif %}
+

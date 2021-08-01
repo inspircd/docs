@@ -1,0 +1,76 @@
+name: blockcaps
+
+introduction: |-
+  !!! warning ""
+      This module has been deprecated and will be removed in the next major version of InspIRCd.
+
+      You should use [the anticaps module](/3/modules/anticaps) instead.
+
+description: |-
+  This module adds channel mode `B` (blockcaps) which allows channels to block messages which are excessively capitalised.
+
+configuration:
+- name: <blockcaps>
+  description: |-
+    The `<blockcaps>` tag defines settings about how the blockcaps module should behave. This tag can only be defined once.
+  attributes:
+  - name: lowercase
+    type: Text
+    required: false
+    default: abcdefghijklmnopqrstuvwxyz
+    description: |-
+      A list of characters to treat as lower case letters.
+  - name: minlen
+    type: Number
+    required: false
+    default: 1
+    description: |-
+      The minimum length of a message to block excessive capitalisation.
+  - name: percent
+    type: Number
+    required: false
+    default: 100
+    description: |-
+      The percentage of a message which can be capitalised before it is blocked.
+  - name: uppercase
+    type: Text
+    required: false
+    default: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    description: |-
+      A list of characters to treat as upper case letters.
+  details: ""
+  example: |-
+    ```xml
+    <blockcaps lowercase="abcdefghijklmnopqrstuvwxyz"
+               minlen="1"
+               percent="100"
+               uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+    ```
+
+chmodes:
+  chars:
+  - name: blockcaps
+    char: B
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Enables blocking excessively capitalised messages.
+  example: ""
+
+exemptions:
+- name: blockcaps
+  description: Allows exempted users to send overly capitalised messages.
+
+extbans:
+  chars:
+  - char: B
+    type: Acting
+    syntax: '`B:<mask>`'
+    description: Bans &lt;mask&gt; from sending messages with excessive capitalisation.
+  example: |-
+    Bans users matching `*!*@example.com` from sending messages with excessive capitalisation:
+
+    ```plaintext
+    /MODE #channel +b B:*!*@example.com
+    ```

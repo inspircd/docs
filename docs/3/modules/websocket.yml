@@ -1,0 +1,75 @@
+name: websocket
+
+description: |-
+  This module allows WebSocket clients to connect to the IRC server.
+
+configuration:
+- name: <bind>
+  description: |-
+    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following hook types:
+  extends: true
+  added_values:
+  - name: websocket
+    description: |-
+      Listens for WebSocket connections.
+  details: ""
+  example: |-
+    Listens for plaintext WebSocket connections on the 0.0.0.0:8080 endpoint:
+
+    ```xml
+    <bind address="0.0.0.0"
+          port="8080"
+          ...
+          hook="websocket">
+    ```
+- name: <websocket>
+  description: |-
+    The `<websocket>` tag defines settings about how the websocket module should behave. This tag can only be defined once.
+  attributes:
+  - name: proxyranges
+    type: Text
+    required: false
+    default: None
+    description: |-
+      [**New in v3.5.0!**](/3/change-log/#inspircd-350) A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
+  - name: sendastext
+    type: Text
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
+  details: ""
+  example: |-
+    ```xml
+    <websocket proxyranges="192.0.2.0/24 198.51.100.*"
+               sendastext="yes">
+    ```
+- name: <wsorigin>
+  description: |-
+    The `<wsorigin>` tag defines an WebSocket origin that is allowed to connect to the server. This tag can be defined as many times as required.
+  attributes:
+  - name: allow
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for an URL of a web page that is allowed to connect.
+  details: ""
+  example: |-
+    Allows access to the server from all subdomains of example.com:
+
+    ```xml
+    <wsorigin allow="https://*.example.com">
+    ```
+
+special_notes: |-
+  The following HTTP errors are sent by this module:
+
+   - HTTP 400 &mdash; Your WebSocket implementation has not sent the required `Origin` header.
+   - HTTP 403 &mdash; You are attempting to connect from a non-whitelisted origin.
+   - HTTP 501 &mdash; Your WebSocket implementation has not sent the required `Sec-WebSocket-Key` header.
+   - HTTP 503 &mdash; You do not have [the sha1 module](/3/modules/sha1) loaded.
+
+  If you add an encrypted WebSocket listener you should create a custom SSL profile that has `requestclientcert="no"` set. This is required to allow connections to your server using Google Chrome.
+
+  Some reverse proxy providers (e.g. Cloudflare) drop idle WebSocket connections which can cause problems with this module. It is recommended that you avoid these providers.

@@ -1,0 +1,35 @@
+name: ldapoper
+
+description: |-
+  This module allows server operators to be authenticated against an LDAP database.
+
+configuration:
+- name: <ldapoper>
+  description: |-
+    The `<ldapoper>` tag defines settings about how the ldapoper module should behave. This tag can only be defined once.
+  attributes:
+  - name: attribute
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The attribute which is used to locate an account by name. On POSIX systems this is usually "uid".
+  - name: baserdn
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The base Distinguished Name to search in for users.
+  - name: dbid
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The id of the `<database>` tag that contains the required LDAP configuration.
+  details: ""
+  example: |-
+    ```xml
+    <ldapoper attribute="uid"
+              baserdn="ou=People,dc=example,dc=com"
+              dbid="ldap-opers">
+    ```

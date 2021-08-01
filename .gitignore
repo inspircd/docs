@@ -1,5 +1,8 @@
 .*
 *.diff
+*.egg-info
+dist
 site
 
 !.git*
+!.yamllint

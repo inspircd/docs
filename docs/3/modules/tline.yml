@@ -1,0 +1,18 @@
+name: tline
+
+description: |-
+  This module adds the `/TLINE` command which allows server operators to determine how many users would be affected by an X-line on a specified pattern.
+
+commands:
+- name: TLINE
+  param_count: 1
+  syntax: '`<pattern>`'
+  description: |-
+    Determines how many users would be affected by an X-line on &lt;pattern&gt;.
+
+example_commands: |-
+  Determines how many users would be affected by an X-line on `*!*@example.com`:
+
+  ```plaintext
+  /TLINE *!*@example.com
+  ```

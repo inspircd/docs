@@ -1,0 +1,63 @@
+name: vhost
+
+description: |-
+  This module allows the server administrator to define accounts which can grant a custom virtual host.
+
+configuration:
+- name: <vhost>
+  description: |-
+    The `<vhost>` tag defines a virtual host account. This tag can be defined as many times as required.
+  attributes:
+  - name: user
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The username used when logging into the account.
+  - name: pass
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password used when logging into the account.
+  - name: hash
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The algorithm that the password is hashed with.
+  - name: host
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The vhost for users who log into this account.
+  details: |-
+    !!! warning ""
+        The `hash` field is currently optional but will be required in the next major version of InspIRCd.
+
+    {! 3/modules/_hash_table.md !}
+
+  example: |-
+    Adds a virtual host account with the username Sadie and a hashed password:
+
+    ```xml
+    <vhost user="Sadie"
+           pass="Ohf74jA8$GwQ083Z/Jl2Vi6WpYKu2ABTU5HAKO+Zk8NWw7sdt7cQ"
+           hash="hmac-sha256"
+           host="helper.example.com">
+    ```
+
+commands:
+- name: VHOST
+  param_count: 2
+  syntax: '`<username> <password>`'
+  description: |-
+    Log into the account with the specified username and password.
+
+example_commands: |-
+  Logs into the account with the name Sadie and password fl00fyc4pyb4r4:
+
+  ```plaintext
+  /VHOST Sadie fl00fyc4pyb4r4
+  ```

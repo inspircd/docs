@@ -1,0 +1,56 @@
+name: conn_join
+
+description: |-
+  This module allows the server administrator to force users to join one or more channels on connect.
+
+configuration:
+- name: <connect>
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: autojoin
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A comma-delimited list of channels for users in this connect class to be joined to on connect.
+  - name: autojoindelay
+    type: Duration
+    required: false
+    default: 15m
+    description: |-
+      The duration to wait before joining users to the specified channels.
+  details: ""
+  example: |-
+    Forces all users in the Example class to join #example1 and #example2 30 seconds after connecting:
+
+    ```xml
+    <connect name="Example"
+             ...
+             autojoin="#example1,#example2"
+             autojoindelay="30s">
+    ```
+- name: <autojoin>
+  description: |-
+    The `<autojoin>` tag defines settings about how the conn_join module should behave. This tag can only be defined once.
+  attributes:
+  - name: channel
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A comma-delimited list of channels for users to be joined to on connect.
+  - name: delay
+    type: Duration
+    required: false
+    default: 15m
+    description: |-
+      The duration to wait before joining users to the specified channels.
+  details: ""
+  example: |-
+    Forces all users to join #example on connect 30 seconds after connecting:
+
+    ```xml
+    <autojoin channel="#example"
+              delay="30s">
+    ```

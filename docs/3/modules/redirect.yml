@@ -1,0 +1,37 @@
+name: redirect
+
+description: |-
+  This module allows users to be redirected to another channel when the user limit is reached.
+
+configuration: []
+
+chmodes:
+  description: ""
+  chars:
+  - name: redirect
+    char: L
+    type: Parameter
+    syntax: '`<channel>`'
+    usable_by: Channel operators
+    description: Redirects all new users to &lt;channel&gt; when the user limit is reached.
+  example: |-
+    Redirects new users from #channel to #channel-full when the user limit is reached.
+
+    ```plaintext
+    /MODE #channel +L #channel-full
+    ```
+
+umodes:
+  description: ""
+  chars:
+  - name: antiredirect
+    char: L
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Prevents users from being redirected by channel mode `L` (redirect).
+  example: ""
+
+special_notes: |-
+  When setting a redirect the target channel should exist and the user setting the redirect should have channel operator status in it.

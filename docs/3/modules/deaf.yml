@@ -1,0 +1,78 @@
+name: deaf
+
+description: |-
+  This module adds user mode `d` (deaf) which prevents users from receiving channel messages.
+
+configuration:
+- name: <deaf>
+  description: |-
+    The `<deaf>` tag defines settings about how the deaf module should behave. This tag can only be defined once.
+  attributes:
+  - name: bypasschars
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A list of characters that a message to a normal user can begin with that exempt it from the deaf mode.
+  - name: bypasscharsuline
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A list of characters that a message to a U-lined user can begin with that exempt it from the deaf mode.
+  - name: enableprivdeaf
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user mode `D` (privdeaf) is enabled.
+  - name: privdeafuline
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users on U-lined servers are exempt from user mode `D` (privdeaf).
+  details: ""
+  example: |-
+    ```xml
+    <deaf bypasschars="!."
+          bypasscharsuline="!."
+          enableprivdeaf="yes"
+          privdeafuline="yes">
+    ```
+- name: <class>
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: users/ignore-privdeaf
+    description: |-
+      Allows server operators to message users with the `D` (privdeaf) mode set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to message users with the `D` (privdeaf) mode set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... users/ignore-privdeaf ...">
+    ```
+
+umodes:
+  description: ""
+  chars:
+  - name: deaf
+    char: d
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Prevents the user from receiving channel messages.
+  - name: privdeaf
+    char: D
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Prevents the user from receiving private messages.
+  example: ""

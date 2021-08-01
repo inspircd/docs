@@ -1,0 +1,50 @@
+name: nonicks
+
+description: |-
+  This module adds channel mode `N` (nonick) which prevents users from changing their nickname whilst in the channel.
+
+configuration:
+- name: <class>
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-nonicks
+    description: |-
+      Allows server operators to change their nick when on a channel with the `N` (nonick) mode set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to change their nick when on a channel with the `N` (nonick) mode set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-nonicks ...">
+    ```
+
+chmodes:
+  description: ""
+  chars:
+  - name: nonick
+    char: N
+    type: Switch
+    syntax: None
+    usable_by: Channel operators
+    description: |-
+      Prevents users from changing their nickname whilst in the channel.
+  example: ""
+
+extbans:
+  description: ""
+  chars:
+  - char: N
+    type: Acting
+    syntax: '`N:<mask>`'
+    description: Bans privileged users matching &lt;mask&gt; from changing their nickname
+      whilst in the channel.
+  example: |-
+    Bans privileged users matching `*!*@example.com` from changing their nickname whilst in the channel.
+
+    ```plaintext
+    /MODE #channel +b N:*!*@example.com
+    ```

@@ -1,0 +1,55 @@
+name: cban
+
+description: |-
+  This module adds the `/CBAN` command which allows server operators to prevent channels matching a glob from being created.
+
+configuration:
+- name: <cban>
+  description: |-
+    The `<cban>` tag defines settings about how the cban module should behave. This tag can only be defined once.
+  attributes:
+  - name: glob
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      [**New in v3.8.0!**](/3/change-log/#inspircd-380) Whether to use glob matching instead of case-insensitive string matching.
+  details: ""
+  example: |-
+    ```xml
+    <cban glob="yes">
+    ```
+
+commands:
+- name: CBAN
+  param_count: 1-3
+  syntax: '`<channel> [<duration> [<reason>]]`'
+  description: |-
+    Allows server operators to add and remove channel bans.
+
+example_commands: |-
+  Bans the #example channel for one week:
+
+  ```plaintext
+  /CBAN #example 7d :This channel is banned for a week
+  ```
+
+  Bans channels that match the glob #example* forever:
+
+  ```plaintext
+  /CBAN #example* 0 :This channel is banned forever
+  ```
+
+  Unbans the #example channel:
+
+  ```plaintext
+  /CBAN #example
+  ```
+
+stats:
+- char: C
+  description: Lists all channel bans.
+
+special_notes: |-
+  CBANs are expired lazily when a lookup happens for performance reasons.
+  This means that expiry messages may display later than expected.

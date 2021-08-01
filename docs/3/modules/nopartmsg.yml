@@ -1,0 +1,18 @@
+name: nopartmsg
+
+description: |-
+  This module adds extended ban `p:` which blocks the part message of matching users.
+
+extbans:
+  description: ""
+  chars:
+  - char: p
+    type: Acting
+    syntax: '`p:<mask>`'
+    description: Bans &lt;mask&gt; from sending a `/PART` message.
+  example: |-
+    Bans users matching `*!*@example.com` from sending a `/PART` message:
+
+    ```plaintext
+    /MODE #channel +b p:*!*@example.com
+    ```

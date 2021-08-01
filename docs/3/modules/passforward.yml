@@ -1,0 +1,44 @@
+name: passforward
+
+description: |-
+  This module allows the `/PASS` password to be forwarded to a services pseudoclient such as NickServ.
+
+configuration:
+- name: <passforward>
+  description: |-
+    The `<passforward>` tag defines settings about how the passforward module should behave. This tag can only be defined once.
+  attributes:
+  - name: cmd
+    type: Text
+    required: false
+    default: SQUERY $nickrequired :IDENTIFY $pass
+    description: |-
+      The command to use when forwarding the `/PASS` password.
+  - name: forwardmsg
+    type: Text
+    required: false
+    default: NOTICE $nick :*** Forwarding PASS to $nickrequired
+    description: |-
+      The command to use when informing the connecting user that their `/PASS` password is being forwarded.
+  - name: nick
+    type: Text
+    required: false
+    default: NickServ
+    description: |-
+      The nickname of the user that must be online for a `/PASS` password to be forwarded.
+  details: |-
+    The cmd and forwardmsg fields can contain any of the following template variables:
+
+    Variable      | Description
+    ------------- | -----------
+    $nick         | The nickname of the connecting user.
+    $nickrequired | The nickname of the user that must be online for a `/PASS` password to be forwarded.
+    $pass         | The password sent by the connecting user using the `/PASS` command.
+    $user         | The username (ident) of the connecting user.
+
+  example: |-
+    ```xml
+    <passforward cmd="SQUERY $nickrequired :IDENTIFY $pass"
+                 forwardmsg="NOTICE $nick :*** Forwarding PASS to $nickrequired"
+                 nick="NickServ">
+    ```

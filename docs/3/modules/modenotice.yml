@@ -1,0 +1,22 @@
+name: modenotice
+
+introduction: |-
+  !!! warning ""
+      This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
+description: |-
+  This module adds the `/MODENOTICE` command which sends a message to all users with the specified user modes set. If multiple user modes are specified, the notice is only sent to users who have all of them set.
+
+commands:
+- name: MODENOTICE
+  param_count: 2
+  syntax: '`<modes> <message>`'
+  description: |-
+    Sends &lt;message&gt; to all users with the &lt;modes&gt; user modes set.
+
+example_commands: |-
+  Sends a message to every user with user mode `i` (invisible) set:
+
+  ```plaintext
+  /MODENOTICE i :Hello invisible people!
+  ```

@@ -1,0 +1,176 @@
+name: dnsbl
+
+description: |-
+  This module allows the server administrator to check the IP address of connecting users against a [DNSBL](https://en.wikipedia.org/wiki/DNSBL). This is useful for preventing malicious hosts from connecting to the server.
+
+configuration:
+- name: <connect>
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: dnsbl
+    type: Text
+    required: false
+    default: None
+    description: |-
+      Match users to this connect class by DNSBL name when using the MARK action.
+  - name: usednsbl
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users in this connect class should be looked up in a DNSBL.
+  details: ""
+  example: |-
+    Disables DNSBL lookups for users in the WebChat class:
+
+    ```xml
+    <connect name="WebChat"
+             ...
+             usednsbl="no">
+    ```
+
+    Matches users that have been marked by a configured DNSBL named Proxies to a ProxyUser class:
+
+    ```xml
+    <connect name="ProxyUser"
+             ...
+             dnsbl="Proxies">
+    ```
+- name: <dnsbl>
+  description: |-
+    The `<dnsbl>` tag defines a DNSBL to check connecting users against. This tag can be defined as many times as required.
+  attributes:
+  - name: action
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The action to take against users who's IP address is in this DNSBL.
+  - name: bitmask
+    type: Number
+    required: false
+    default: None
+    description: |-
+      **Required for the bitmask type!** A bitmask of DNSBL result types to match against.
+  - name: domain
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The domain name of this DNSBL.
+  - name: duration
+    type: Duration
+    required: false
+    default: 1m
+    description: |-
+      If action is set to GLINE, KLINE, or ZLINE then the duration for an X-line to last for.
+  - name: host
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If action is set to MARK then a new hostname to set on users who's IP address is in this DNSBL.
+  - name: ident
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If action is set to MARK then a new username (ident) to set on users who's IP address is in this DNSBL.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The human readable name of this DNSBL.
+  - name: reason
+    type: Text
+    required: false
+    default: Your IP has been blacklisted.
+    description: |-
+      The message to send to users who's IP address is in a DNSBL. The template variable %ip% will be replaced with the IP address of the user.
+  - name: records
+    type: 'No. Range'
+    required: false
+    default: None
+    description: |-
+      **Required for the record type!** A numeric range of DNSBL result types to match against.
+  - name: timeout
+    type: Duration
+    required: false
+    default: '*Depends on `<dns:timeout>`*'
+    description: |-
+      [**New in v3.10.0!**](/3/change-log/#inspircd-3100) The time period to wait for a response from this DNSBL.
+  - name: type
+    type: Text
+    required: false
+    default: record
+    description: |-
+      The type of result that this DNSBL will provide.
+  details: |-
+    The action field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    GLINE | G-line users who's IP address is in the DNSBL.
+    KILL  | Kill users who's IP address is in the DNSBL.
+    KLINE | K-line users who's IP address is in the DNSBL.
+    MARK  | Marks users who's IP address is in the DNSBL.
+    ZLINE | Z-line users who's IP address is in the DNSBL.
+
+    The type field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    bitmask | DNSBL results will be compared against the [bit mask](https://en.wikipedia.org/wiki/Mask_(computing)) specified in the bitmask field to see if the IP address in question is in a DNSBL. For example, `15` would match against DNSBL result types 1, 2, 4, and 8.
+    record  | DNSBL results will be compared against a numeric range of values. For example, `1-3,4,5` would match all DNSBL result types between 1 and 5.
+
+  example: |-
+    [DroneBL](https://dronebl.org) is a DNSBL for IRC networks:
+
+    ```xml
+    <dnsbl name="DroneBL"
+           domain="dnsbl.dronebl.org"
+           type="record"
+           records="3,5,6,7,8,9,10,11,13,14,15,16,17,19"
+           action="ZLINE"
+           duration="7d"
+           reason="You are listed in DroneBL. Please visit https://dronebl.org/lookup.do?ip=%ip% for more information.">
+    ```
+
+    [EFnet RBL](https://rbl.efnetrbl.org) is a DNSBL of undesirable IP addresses detected by the [EFnet IRC Network](http://www.efnet.org/):
+
+    ```xml
+    <dnsbl name="EFnet RBL"
+           domain="rbl.efnetrbl.org"
+           type="record"
+           records="1,2,3,4,5"
+           action="ZLINE"
+           duration="7d"
+           reason="You are listed in the EFnet RBL. Please visit https://rbl.efnetrbl.org/?i=%ip% for more information.">
+    ```
+
+    [torexit.dan.me.uk](https://www.dan.me.uk/dnsbl) is a DNSBL of [Tor](https://www.torproject.org) exit nodes.
+
+    ```xml
+    <dnsbl name="torexit.dan.me.uk"
+           domain="torexit.dan.me.uk"
+           type="record"
+           records="100"
+           action="ZLINE"
+           duration="7d"
+           reason="Tor exit nodes are not allowed on this network. See https://metrics.torproject.org/rs.html#search/%ip% for more information.">
+    ```
+
+snomasks:
+- char: d
+  description: Notifications about DNSBL hits on the local server.
+- char: D
+  description: Notifications about DNSBL hits on a remote server.
+
+stats:
+- char: d
+  description: Lists information about DNSBL hits and misses.
+
+special_notes: |-
+  If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable DNSBL lookups for your WebIRC gateway.

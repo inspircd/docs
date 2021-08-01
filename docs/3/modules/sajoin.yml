@@ -1,0 +1,43 @@
+name: sajoin
+
+description: |-
+  This module adds the `/SAJOIN` command which allows server operators to force users to join one or more channels.
+
+configuration:
+- name: <class>
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: users/sajoin-others
+    description: |-
+      Allows server operators to `/SAJOIN` users other than themselves.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to `/SAJOIN` users other than themselves.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           commands="... SAJOIN ..."
+           privs="... users/sajoin-others ...">
+    ```
+
+commands:
+- name: SAJOIN
+  param_count: 1-2
+  syntax: '`[<nick>] <channel>[,<channel>]+`'
+  description: |-
+    Forces &lt;nick&gt; to join &lt;channel&gt;. If no nick is specified, forces the server operator issuing the command to join.
+example_commands: |-
+  Forces Sadie to join #channel:
+
+  ```plaintext
+  /SAJOIN Sadie #channel
+  ```
+
+  Forces the server operator issuing the command to join #channel:
+
+  ```plaintext
+  /SAJOIN #channel
+  ```

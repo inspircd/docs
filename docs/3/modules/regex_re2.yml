@@ -1,0 +1,9 @@
+name: regex_re2
+
+introduction: ""
+
+depends_on:
+  what: a third-party library ([RE2](https://github.com/google/re2))
+
+description: |-
+  This module provides the `re2` regular expression engine which uses the [RE2](https://github.com/google/re2) library.

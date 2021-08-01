@@ -1,0 +1,40 @@
+name: sqlite3
+
+introduction: ""
+
+depends_on:
+  what: a third-party library ([SQLite](https://www.sqlite.org/index.html))
+
+description: |-
+  This module provides the ability for SQL modules to query a SQLite 3 database.
+
+configuration:
+- name: <database>
+  description: |-
+    The `<database>` tag defines a SQLite 3 database to connect to. This tag can be defined as many times as required.
+  attributes:
+  - name: module
+    type: Text
+    required: true
+    default: None
+    description: |-
+      *This MUST be set to "sqlite" to connect to a SQLite 3 database.*
+  - name: id
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name that SQL-using modules can refer to this `<database>` tag using.
+  - name: hostname
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The path to where the SQLite database is stored.
+  details: ""
+  example: |-
+    ```xml
+    <database module="sqlite"
+              id="opers"
+              hostname="/path/to/database.sq3">
+    ```

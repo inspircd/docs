@@ -1,0 +1,74 @@
+name: showfile
+
+description: |-
+  This module adds support for showing the contents of files to users when they execute a command.
+
+configuration:
+- name: <showfile>
+  description: |-
+    The `<showfile>` tag defines a command to show the contents of a file. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the command that users should execute to receive this file.
+  - name: file
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the field in `&lt;files&gt;` / `&lt;execfiles&gt;` to use when reading the file.
+  - name: method
+    type: Text
+    required: false
+    default: numeric
+    description: |-
+      The method to use to send the message to the user.
+  - name: endnumeric
+    type: Number
+    required: false
+    default: 309
+    description: |-
+      If the method field is set to numeric then the numeric to use to stop the response.
+  - name: endtext
+    type: Text
+    required: false
+    default: End of COMMAND
+    description: |-
+      If the method field is set to numeric then the message to use in the stopping numeric.
+  - name: intronumeric
+    type: Number
+    required: false
+    default: 308
+    description: |-
+      If the method field is set to numeric then the numeric to use to start the response.
+  - name: introtext
+    type: Text
+    required: false
+    default: Showing COMMAND
+    description: |-
+      If the method field is set to numeric then the message to use in the starting numeric.
+  - name: textnumeric
+    type: Number
+    required: false
+    default: 232
+    description: |-
+      If the method field is set to numeric then the numeric to use to show the response.
+  details: |-
+    The method field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    numeric | Send the message using the specified numerics.
+    msg     | Send the message using `PRIVMSG`.
+    notice  | Send the message using `NOTICE`.
+
+  example: |-
+    ```xml
+    <showfile name="RULES"
+              file="rules.txt"
+              introtext="Server rules:"
+              endtext="End of server rules.">
+    ```

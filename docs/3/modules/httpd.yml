@@ -1,0 +1,48 @@
+name: httpd
+
+description: |-
+  This module allows the server administrator to serve various useful resources over HTTP.
+
+configuration:
+- name: <bind>
+  description: |-
+    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
+  extends: true
+  added_values:
+  - name: httpd
+    description: |-
+      Listens for HTTP connections.
+  details: ""
+  example: |-
+    Listens for plaintext HTTP connections on the 127.0.0.1:8080 endpoint:
+
+    ```xml
+    <bind address="127.0.0.1"
+          port="8080"
+          ...
+          type="httpd">
+    ```
+- name: <httpd>
+  description: |-
+    The `<httpd>` tag defines settings about how the httpd module should behave. This tag can only be defined once.
+  attributes:
+  - name: timeout
+    type: Duration
+    required: false
+    default: 10s
+    description: |-
+      The duration to timeout HTTP connections after.
+  details: ""
+  example: |-
+    ```xml
+    <httpd timeout="10s">
+    ```
+
+special_notes: |-
+  The following HTTP resource modules can be used in conjunction with this module:
+
+  Name                                    | Description
+  --------------------------------------- | -----------
+  [httpd_acl](/3/modules/httpd_acl)       | Allows access to other HTTP resources to be restricted.
+  [httpd_config](/3/modules/httpd_config) | Allows the server configuration to be viewed over HTTP.
+  [httpd_stats](/3/modules/httpd_stats)   | Provides statistics about the server and the channels and users on it.

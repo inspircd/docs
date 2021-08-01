@@ -1,0 +1,18 @@
+name: serverban
+
+description: |-
+  This module adds extended ban `s:` which check whether users are on a server matching the specified glob pattern.
+
+extbans:
+  description: ""
+  chars:
+  - char: s
+    type: Matching
+    syntax: '`s:<pattern>`'
+    description: Checks whether users are on a server matching &lt;pattern&gt;.
+  example: |-
+    Bans users on irc2.example.com from joining the channel:
+
+    ```plaintext
+    /MODE #channel +b s:irc2.example.com
+    ```

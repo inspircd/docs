@@ -1,0 +1,90 @@
+name: cloaking
+
+description: |-
+  This module adds user mode `x` (cloak) which allows user hostnames to be hidden.
+
+configuration:
+- name: <cloak>
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  attributes:
+  - name: domainparts
+    type: Number
+    required: false
+    default: 3
+    description: |-
+      If the half mode is used then the maximum number of domain labels that should be visible.
+  - name: mode
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The cloaking method to use.
+  - name: prefix
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The value to prefix IP address cloaks with.
+  - name: suffix
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The value to suffix IP address cloaks with.
+  - name: key
+    type: Text
+    required: false
+    default: None
+    description: |-
+      **Required for the half and full modes!** A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
+  - name: ignorecase
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to to ignore the case of a FQDN when cloaking.
+  details: |-
+    The mode field should be set to one of the following values:
+
+    Value       | Description
+    ----------- | -----------
+    full        | Cloak the user completely using three slices for common CIDR bans (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+    half        | Cloak only the unique portion of a hostname. The last two segments of a hostname, /16 subnet of a IPv4 address, or /48 subnet of a IPv6 adddress will be visible.
+
+  example: |-
+    Cloaking using the full mode:
+
+    ```xml
+    <cloak mode="full"
+           key="changeme"
+           prefix="MyNet-"
+           suffix=".IP"
+           ignorecase="yes">
+    ```
+
+    Cloaking using the half mode:
+
+    ```xml
+    <cloak mode="half"
+           key="changeme"
+           prefix="MyNet-"
+           suffix=".IP"
+           domainparts="3"
+           ignorecase="yes">
+    ```
+
+umodes:
+  description: ""
+  chars:
+  - name: cloak
+    char: x
+    type: Switch
+    syntax: None
+    usable_by: Anyone
+    description: |-
+      Enables hiding of the user's hostname.
+  example: ""
+
+special_notes: |-
+  The first `<cloak>` tag will be used for the cloak set when a user enables user mode `x` (cloak). The rest will be generated and used to check bans. This allows you to migrate cloaking mode or to change your cloaking key without breaking your bans.

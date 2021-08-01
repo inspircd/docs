@@ -1,0 +1,58 @@
+name: chanfilter
+
+description: |-
+  This module adds channel mode `g` (filter) which allows channel operators to define glob patterns for inappropriate phrases that are not allowed to be used in the channel.
+
+configuration:
+- name: <chanfilter>
+  description: |-
+    The `<chanfilter>` tag defines settings about how the chanfilter module should behave. This tag can only be defined once.
+  attributes:
+  - name: hidemask
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether users can see the inappropriate phrase that their message matched.
+  - name: notifyuser
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to notify users when they have matched a filter.
+  - name: maxlen
+    type: Number
+    required: false
+    default: 35
+    description: |-
+      The maximum length of a parameter for channel mode `g` (filter).
+  details: ""
+  example: |-
+    ```xml
+    <chanfilter hidemask="no"
+                notifyuser="yes"
+                maxlen="50">
+    ```
+
+chmodes:
+  chars:
+  - name: filter
+    char: g
+    type: List
+    syntax: '`<glob>`'
+    usable_by: Channel operators
+    description: |-
+      Prevents users from sending messages that match &lt;glob&gt;.
+  example: |-
+    Prevents users from saying the phrase "fluffy capybara":
+
+    ```plaintext
+    /MODE #channel +g *fluffy?capybara*
+    ```
+
+exemptions:
+- name: filter
+  description: Allows exempted users to send messages that contain censored phrases.
+
+special_notes: |-
+  Due to limitations of the IRC protocol filters containing spaces can not be added.
