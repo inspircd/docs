@@ -43,7 +43,7 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Enables auditorium mode.
-  example: ''
+  example: ""
 
 exemptions:
 - name: auditorium-see
