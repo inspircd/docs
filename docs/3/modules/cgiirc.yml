@@ -57,7 +57,7 @@ configuration:
     default: None
     description: |-
       If the webirc type is used the algorithm that the password is hashed with.
-  details: |+
+  details: |-
     !!! warning ""
         The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
 

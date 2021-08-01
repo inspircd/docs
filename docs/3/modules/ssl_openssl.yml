@@ -173,7 +173,7 @@ configuration:
     default: 'Yes'
     description: |-
       [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether the TLSv1.2 protocol is enabled.
-  details: |+
+  details: |-
     The crlmode field should be set to one of the following values:
 
     Value | Description

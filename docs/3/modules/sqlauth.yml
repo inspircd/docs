@@ -56,7 +56,7 @@ configuration:
     default: 'No'
     description: |-
       Whether to log failed authentications to snomask `a` (local) and snomask `A` (remote).
-  details: |+
+  details: |-
     The query field can contain any of the following template variables:
 
     Variable    | Description

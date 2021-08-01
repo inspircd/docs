@@ -42,7 +42,7 @@ configuration:
     default: None
     description: |-
       The vhost for users who log into this account.
-  details: |+
+  details: |-
     !!! warning ""
         The `hash` field is currently optional but will be required in the next major version of InspIRCd.
 

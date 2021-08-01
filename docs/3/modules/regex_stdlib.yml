@@ -16,7 +16,7 @@ configuration:
     default: ecmascript
     description: |-
       The regular expression grammar to use when matching.
-  details: |+
+  details: |-
     The type field should be set to one of the following values:
 
     Value      | Description

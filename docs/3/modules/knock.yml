@@ -12,7 +12,7 @@ configuration:
     default: notice
     description: |-
       How to notify channel members that a user would like to join the channel.
-  details: |+
+  details: |-
     The notify field should be set to one of the following values:
 
     Value   | Description

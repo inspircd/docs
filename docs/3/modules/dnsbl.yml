@@ -105,7 +105,7 @@ configuration:
     default: record
     description: |-
       The type of result that this DNSBL will provide.
-  details: |+
+  details: |-
     The action field should be set to one of the following values:
 
     Value | Description

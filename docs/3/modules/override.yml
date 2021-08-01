@@ -13,7 +13,7 @@ configuration:
     default: None
     description: |-
       A space-delimited list of channel-level restrictions that a server operator can ignore.
-  details: |+
+  details: |-
     The override field should be set to one or more of the following values:
 
     Value   | Description

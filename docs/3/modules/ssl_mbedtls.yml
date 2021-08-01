@@ -131,7 +131,7 @@ configuration:
     default: 'Yes'
     description: |-
       Whether to request a TLS (SSL) certificate from clients.
-  details: |+
+  details: |-
     The hash field should be set to one of the values shown [in the mbedTLS MD documentation](https://tls.mbed.org/api/group__hashing__module.html).
 
   example: |-

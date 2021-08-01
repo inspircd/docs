@@ -12,7 +12,7 @@ configuration:
     default: 'no'
     description: |-
       Whether users must be using TLS (SSL) to use this class.
-  details: |+
+  details: |-
     The requiressl field should be set to one of the following values:
 
     Value   | Description

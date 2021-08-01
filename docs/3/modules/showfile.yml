@@ -54,7 +54,7 @@ configuration:
     default: '232'
     description: |-
       If the method field is set to numeric then the numeric to use to show the response.
-  details: |+
+  details: |-
     The method field should be set to one of the following values:
 
     Value   | Description

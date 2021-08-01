@@ -18,7 +18,7 @@ configuration:
     default: killopers
     description: |-
       The action to take when the module has detected a user sending a mass message.
-  details: |+
+  details: |-
     The action field should be set to one of the following values:
 
     Value       | Description

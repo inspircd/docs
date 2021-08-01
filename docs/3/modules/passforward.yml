@@ -24,7 +24,7 @@ configuration:
     default: NickServ
     description: |-
       The nickname of the user that must be online for a `/PASS` password to be forwarded.
-  details: |+
+  details: |-
     The cmd and forwardmsg fields can contain any of the following template variables:
 
     Variable      | Description

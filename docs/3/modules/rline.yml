@@ -24,7 +24,7 @@ configuration:
     default: 'No'
     description: |-
       Whether to add a Z-line on the IP address of users that match a R-line.
-  details: |+
+  details: |-
     The engine field should be set to the name of a regular expression engine.
 
     {! 3/modules/_regex_table.md !}

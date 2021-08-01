@@ -42,7 +42,7 @@ configuration:
     default: None
     description: |-
       **Required for the set action!** The hostname to set on this user.
-  details: |+
+  details: |-
     The action field should be set to one of the following values:
 
     Value      | Description

@@ -42,7 +42,7 @@ configuration:
     default: None
     description: |-
       **Required for the blacklist type!** A comma-delimited list of IP addresses to allow access to this path from.
-  details: |+
+  details: |-
     The types field should be set to one or more of the following values:
 
     Value     | Description

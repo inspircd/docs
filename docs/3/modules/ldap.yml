@@ -52,7 +52,7 @@ configuration:
     default: 5s
     description: |-
       The time to wait before expiring an unresponsive LDAP connection.
-  details: |+
+  details: |-
     The searchscope field should be set to one of the following values:
 
     Value    | Description

@@ -24,7 +24,7 @@ configuration:
     default: 'No'
     description: |-
       [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
-  details: |+
+  details: |-
     The engine field should be set to the name of a regular expression engine.
 
     {! 3/modules/_regex_table.md !}
@@ -69,7 +69,7 @@ configuration:
     default: None
     description: |-
       The reason to give to users when they are being punished for doing something that matches this filter.
-  details: |+
+  details: |-
     The action field should be set to one of the following values:
 
     Value  | Description

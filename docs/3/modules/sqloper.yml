@@ -18,7 +18,7 @@ configuration:
     default: SELECT * FROM ircd_opers WHERE active=1
     description: |-
       The SQL query to retrieve the server operators with.
-  details: |+
+  details: |-
     {! 3/modules/_hash_table.md !}
 
   example: |-

@@ -54,7 +54,7 @@ configuration:
     default: '13'
     description: |-
       The version of the Argon2 algorithm to use.
-  details: |+
+  details: |-
     The version field should be set to one of the following values:
 
     Value  | Description
@@ -118,7 +118,7 @@ configuration:
     default: '*See &gt;argon2:version&gt;*'
     description: |-
       The version of the Argon2d algorithm to use.
-  details: |+
+  details: |-
     The version field should be set to one of the following values:
 
     Value  | Description
@@ -182,7 +182,7 @@ configuration:
     default: '*See &gt;argon2:version&gt;*'
     description: |-
       The version of the Argon2i algorithm to use.
-  details: |+
+  details: |-
     The version field should be set to one of the following values:
 
     Value  | Description
@@ -246,7 +246,7 @@ configuration:
     default: '*See &gt;argon2:version&gt;*'
     description: |-
       The version of the Argon2id algorithm to use.
-  details: |+
+  details: |-
     The version field should be set to one of the following values:
 
     Value  | Description
