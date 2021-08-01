@@ -23,7 +23,7 @@ configuration:
   - name: tracknick
     type: Boolean
     required: false
-    default: No
+    default: 'No'
     description: |-
       Whether to track nickname changes for users on a callerid whitelist.
   details: ""

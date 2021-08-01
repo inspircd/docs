@@ -17,7 +17,7 @@ configuration:
   - name: sendsnotice
     type: Boolean
     required: false
-    default: No *(since 3.5)*<br>Yes *(3.0 to 3.4)*
+    default: 'No *(since 3.5)*<br>Yes *(3.0 to 3.4)*'
     description: |-
       Whether to tell a user to run `/QUOTE PONG ...` when waiting for a response.
   details: ""

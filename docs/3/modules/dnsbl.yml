@@ -90,7 +90,7 @@ configuration:
     description: |-
       The message to send to users who's IP address is in a DNSBL. The template variable %ip% will be replaced with the IP address of the user.
   - name: records
-    type: No. Range
+    type: 'No. Range'
     required: false
     default: None
     description: |-

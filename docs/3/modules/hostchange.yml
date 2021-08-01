@@ -21,7 +21,7 @@ configuration:
     description: |-
       A glob pattern or CIDR range that a user must be connecting from to match against this rule.
   - name: ports
-    type: No. Range
+    type: 'No. Range'
     required: false
     default: None
     description: |-

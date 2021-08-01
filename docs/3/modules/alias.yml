@@ -32,28 +32,28 @@ configuration:
       - name: channelcommand
         type: Boolean
         required: false
-        default: No
+        default: 'No'
         description: Whether the command can be executed as a channel command.
       - name: usercommand
         type: Boolean
         required: false
-        default: Yes
+        default: 'Yes'
         description: Whether the command can be executed as a server command.
       - name: operonly
         type: Boolean
         required: false
-        default: No
+        default: 'No'
         description: Whether the user executing the command must be a server operator.
       - name: stripcolor
         type: Boolean
         required: false
-        default: No
+        default: 'No'
         description: |-
             [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to strip formatting codes before matching an alias.
       - name: uline
         type: Boolean
         required: false
-        default: No
+        default: 'No'
         description: Whether the user specified in the requires value must be on a U-lined server.
 
 
@@ -95,7 +95,7 @@ configuration:
       - name: allowbots
         type: Boolean
         required: false
-        default: No
+        default: 'No'
         description: Whether users with the bot user mode (+B) can execute channel commands.
       - name: prefix
         type: Text
