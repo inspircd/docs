@@ -5,5 +5,4 @@ dist
 site
 
 !.git*
-!.travis.yml
 !.yamllint
