@@ -28,7 +28,7 @@ title: Introduction
     - [Upgrading from v2](/3/breaking-changes)
 - [Commands](/3/commands)
 - [Channel Modes](/3/channel-modes)
-- [Extended Bans](/3/extended-bans)
+    - [Extended Bans](/3/extended-bans)
 - [User Modes](/3/user-modes)
 - [Modules](/3/modules)
 - [SNOMasks](/3/snomasks)
