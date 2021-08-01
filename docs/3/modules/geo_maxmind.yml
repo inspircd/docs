@@ -1,10 +1,8 @@
 name: geo_maxmind
 
-introduction: |-
-  !!! note ""
-      This module depends on a third-party library ([libMaxMindDB](https://maxmind.github.io/libmaxminddb/)) and must be manually enabled at compile time.
-      Once you have installed the\ dependency you can enable this module using the following command:
-      <pre><code>./configure --enable-extras geo_maxmind</code></pre>
+introduction: ""
+depends_on:
+  what: a third-party library ([libMaxMindDB](https://maxmind.github.io/libmaxminddb/))
 
 description: |-
   This module allows the server to perform geolocation lookups on both IP addresses and users.

@@ -6,6 +6,16 @@ title: "Module Details: {{name}} (v3)"
 
 {{introduction}}
 
+{% if depends_on is defined -%}
+!!! note ""
+    This module depends on {{depends_on.what}} and must be manually enabled at compile time.
+
+    {{depends_on.condition|default('Once you have installed the dependency')}} you can enable this module using the following command:
+
+    <pre><code>./configure --enable-extras {{name}}</code></pre>
+
+{% endif -%}
+
 ### Description
 
 {{description}}

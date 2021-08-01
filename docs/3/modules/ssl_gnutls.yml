@@ -1,10 +1,9 @@
 name: ssl_gnutls
 
-introduction: |-
-  !!! note ""
-      This module depends on a third-party library ([GnuTLS](https://gnutls.org)) and must be manually enabled at compile time.
-      Once you have installed the dependency you can enable this module using the following command:
-      <pre><code>./configure --enable-extras ssl_gnutls</code></pre>
+introduction: ""
+
+depends_on:
+  what: a third-party library ([GnuTLS](https://gnutls.org))
 
 description: |-
   This module allows TLS (SSL) encrypted connections using the [GnuTLS](https://gnutls.org) library.

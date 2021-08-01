@@ -1,10 +1,9 @@
 name: ssl_mbedtls
 
-introduction: |-
-  !!! note ""
-      This module depends on a third-party library ([mbedTLS](https://tls.mbed.org)) and must be manually enabled at compile time.
-      Once you have installed the dependency you can enable this module using the following command:
-      <pre><code>./configure --enable-extras ssl_mbedtls</code></pre
+introduction: ""
+
+depends_on:
+  what: a third-party library ([mbedTLS](https://tls.mbed.org))
 
 description: |-
   This module allows TLS (SSL) encrypted connections using the [mbedTLS](https://tls.mbed.org) library.
