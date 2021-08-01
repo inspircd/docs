@@ -129,6 +129,7 @@ This module requires no other configuration.
 
 {% if chmodes.description is defined %}{{chmodes.description}}{% endif %}
 
+{% if chmodes.chars %}
 <table>
 <tr>
     <th>Name</th>
@@ -149,6 +150,7 @@ This module requires no other configuration.
 </tr>
 {% endfor %}
 </table>
+{% endif %}
 
 {% if chmodes.example -%}
 #### Example Usage

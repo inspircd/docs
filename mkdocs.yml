@@ -42,7 +42,7 @@ plugins:
           2/modules/auditorium.md: 3/modules/auditorium.yml
           2/modules/autoop.md: 3/modules/autoop.yml
           2/modules/banexception.md: 3/modules/banexception.yml
-          2/modules/banredirect.md: 3/modules/banredirect.md
+          2/modules/banredirect.md: 3/modules/banredirect.yml
           2/modules/blockamsg.md: 3/modules/blockamsg.yml
           2/modules/blockcaps.md: 3/modules/blockcaps.yml
           2/modules/blockcolor.md: 3/modules/blockcolor.yml
