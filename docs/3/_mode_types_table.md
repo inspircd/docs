@@ -1,6 +1,6 @@
 <!-- This file contains a page fragment. Any changes will affect all pages that include it. -->
 
-InspIRCd supports five types of channel mode:
+InspIRCd supports five types of mode:
 
 Type      | Parameter when adding?       | Parameter when removing?     | Can be set multiple times?                                        | Description
 --------- | ---------------------------- | ---------------------------- | ----------------------------------------------------------------- | -----------
