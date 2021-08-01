@@ -16,7 +16,7 @@ mkdocs-minify-plugin==0.4.0
 mkdocs-redirects==1.0.3
 nltk==3.6.2
 PyYAML==5.4.1
-regex==2021.4.4
+regex==2021.7.6
 six==1.16.0
 tornado==6.1
 tqdm==4.62.0
