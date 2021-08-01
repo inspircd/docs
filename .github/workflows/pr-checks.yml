@@ -16,9 +16,12 @@ jobs:
 
     - name: Check for missing pages
       run: ./tools/find-missing
+
     - name: Check for orphaned pages
       run: ./tools/find-orphans
+
     - name: Check for trailing whitespace
       run: ./tools/find-whitespace
+
     - name: Lint YAML
       run: yamllint docs/
