@@ -29,9 +29,9 @@ To disable all server notice masks simply remove user mode `s` (snomask) entirel
 
 A list of the valid server notice masks and what they do is listed below.
 
-### Server Notice Masks
+### Core SNOMasks
 
-This page only lists core snomasks. For details on the snomasks of a specific module please refer to [the appropriate page for that module](/3/modules).
+Core snomasks are server notice masks which are always available. For details on snomasks provided by modules, see the modules section below.
 
 Character | Description
 --------- | -----------
@@ -48,3 +48,7 @@ Q         | Notifications about users disconnecting from a remote server.
 t         | Notifications about *local and remote* attempts to use the `/STATS` command.
 x         | Notifications about X-lines being added/removed/expired on the local server.
 X         | Notifications about X-lines being added/removed/expired on a remote server.
+
+### Module SNOMasks
+
+{{module_snomasks_table}}
