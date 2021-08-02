@@ -116,6 +116,18 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             ]
         )
 
+    def snomasks_table(self, config):
+        modules = self.modules(config)
+        template = self.env.get_template("snomask_table.md.j2")
+        return template.render(
+            snomasks=[
+                {**snomask, "module": module["name"]}
+                for module in modules
+                if "snomasks" in module
+                for snomask in module["snomasks"]
+            ]
+        )
+
     def on_page_markdown(self, markdown, page, config, files):
         """Inserts dynamic/generated text in markdown pages."""
         return (
@@ -124,4 +136,5 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             .replace("{{module_umodes_table}}", self.umodes_table(config))
             .replace("{{module_acting_extbans_table}}", self.extbans_table(config, "Acting"))
             .replace("{{module_matching_extbans_table}}", self.extbans_table(config, "Matching"))
+            .replace("{{module_snomasks_table}}", self.snomasks_table(config))
         )
