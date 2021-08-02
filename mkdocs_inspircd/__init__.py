@@ -3,6 +3,7 @@ Preprocesses data files docs/*/modules/*.yml into markdown, so they can
 be built by MkDocs like regular pages.
 """
 
+import collections
 import fnmatch
 import functools
 import glob
@@ -130,8 +131,22 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
     def core_config_tags(self, config):
         template = self.env.get_template("config_tags.md.j2")
+
+        # This can be done in the templates directly, but has awful performance;
+        # so let's compute these extensions in pure Python.
+        tag_extensions = collections.defaultdict(list)
+        for module in self.modules(config):
+            for module_tag in module.get("configuration", []):
+                if module_tag.get("extends", False):
+                    if isinstance(module_tag["name"], str):
+                        tag_extensions[module_tag["name"]].append(module["name"])
+                    else:
+                        for name in module_tag["name"]:
+                            tag_extensions[name].append(module["name"])
+
         return template.render(
-            configuration=load_yaml(config["docs_dir"] + "/3/configuration/_data.yml")
+            configuration=load_yaml(config["docs_dir"] + "/3/configuration/_data.yml"),
+            tag_extensions=tag_extensions
         )
 
     def on_page_markdown(self, markdown, page, config, files):

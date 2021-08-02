@@ -28,6 +28,14 @@
 
 {{tag.details}}
 
+{% if tag_extensions[tag.name] %}
+The following modules extend the possible values used in this tag:
+
+{% for module_name in tag_extensions[tag.name]|sort -%}
+* [{{module_name}}](/3/modules/{{module_name}}/)
+{% endfor %}
+{% endif %}
+
 #### Example Usage
 
 {{tag.example}}
