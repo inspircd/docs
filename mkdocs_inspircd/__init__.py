@@ -132,17 +132,24 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def core_config_tags(self, config):
         template = self.env.get_template("config_tags.md.j2")
 
-        # This can be done in the templates directly, but has awful performance;
-        # so let's compute these extensions in pure Python.
         tag_extensions = collections.defaultdict(list)
         for module in self.modules(config):
             for module_tag in module.get("configuration", []):
                 if module_tag.get("extends", False):
+                    # Some modules describe two tags at the same time
                     if isinstance(module_tag["name"], str):
-                        tag_extensions[module_tag["name"]].append(module["name"])
+                        tag_names = [module_tag["name"]]
                     else:
-                        for name in module_tag["name"]:
-                            tag_extensions[name].append(module["name"])
+                        tag_names = module_tag["name"]
+
+                    for name in tag_names:
+                        for added_value in module_tag.get("added_values", []):
+                            tag_extensions[name].append(
+                                {
+                                    "module": module["name"],
+                                    **added_value,
+                                }
+                            )
 
         return template.render(
             configuration=load_yaml(config["docs_dir"] + "/3/configuration/_data.yml"),

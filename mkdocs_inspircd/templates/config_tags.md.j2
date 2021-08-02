@@ -29,11 +29,28 @@
 {{tag.details}}
 
 {% if tag_extensions[tag.name] %}
-The following modules extend the possible values used in this tag:
+#### Extra values
 
-{% for module_name in tag_extensions[tag.name]|sort -%}
-* [{{module_name}}](/3/modules/{{module_name}}/)
+The following values are also be available, assuming the corresponding module is loaded.
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for added_value in tag_extensions[tag.name]|sort(attribute='name') -%}
+<tr markdown="1">
+<td markdown="1">{{added_value.name}}</td>
+<td markdown="1">[{{added_value.module}}](/3/modules/{{added_value.module}}/)</td>
+<td markdown="1">{{added_value.description}}</td>
+</tr>
 {% endfor %}
+</tbody>
+</table>
 {% endif %}
 
 #### Example Usage
