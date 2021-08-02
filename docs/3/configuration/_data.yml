@@ -1,0 +1,1537 @@
+- name: <admin>
+  description: |-
+    The `<admin>` tag defines contact details for the server administrator. This tag can only be defined once.
+  attributes:
+  - name: name
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the real name of the server operator.
+  - name: nick
+    type: Text
+    required: false
+    default: admin
+    description: |-
+      The nickname of the server operator.
+  - name: email
+    type: Text
+    required: false
+    default: null@example.com
+    description: |-
+      The email address of the server operator.
+  details: ""
+  example: |-
+    ```xml
+    <admin name="John Doe"
+           nick="JDoe123"
+           email="jdoe123@example.com">
+    ```
+
+- name: <badhost>
+  description: |-
+    The `<badhost>` tag defines a permanent K-line. This tag can be defined as many times as required.
+  attributes:
+  - name: host
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A user@host to K-line.
+  - name: reason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The reason for the K-line being added.
+  details: ""
+  example: |-
+    ```xml
+    <badhost host="*@example.com"
+             reason="Spamming">
+    ```
+
+- name: <badip>
+  description: |-
+    The `<badip>` tag defines a permanent Z-line. This tag can be defined as many times as required.
+  attributes:
+  - name: ipmask
+    type: Text
+    required: true
+    default: None
+    description: |-
+      An IP address to Z-line.
+  - name: reason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The reason for the Z-line being added.
+  details: ""
+  example: |-
+    ```xml
+    <badip ipmask="192.0.2.0/24"
+           reason="Spamming">
+    ```
+
+- name: <badnick>
+  description: |-
+    The `<badnick>` tag defines a permanent Q-line. This tag can be defined as many times as required.
+  attributes:
+  - name: nick
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A nickname to Q-line.
+  - name: reason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The reason for the Q-line being added.
+  details: ""
+  example: |-
+    ```xml
+    <badnick nick="NickServ"
+             reason="Reserved for a network service">
+    ```
+
+- name: <bind>
+  description: |-
+    The `<bind>` tag defines an endpoint to listen for connections on. This tag can be defined as many times as required.
+  attributes:
+  - name: address
+    type: Text
+    required: false
+    default: None
+    description: |-
+      *TCP/IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
+  - name: port
+    type: Number
+    required: false
+    default: None
+    description: |-
+      **Required for TCP/IP listeners!** The TCP port to listen for connections on.
+  - name: defer
+    type: Duration
+    required: false
+    default: '0'
+    description: |-
+      *TCP/IP listeners only!* The number of seconds to defer a connection for whilst waiting for it to send data (not supported on Windows).
+  - name: hook
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the name of a module that provides middleware for this listener.
+  - name: free
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      *TCP/IP listeners only!* Whether to allow binding on TCP/IP endpoints which may not be usable yet (not supported on Windows).
+  - name: path
+    type: Text
+    required: false
+    default: None
+    description: |-
+      **Required for UNIX listeners!** The UNIX socket endpoint to listen for connections on (not supported on Windows).
+  - name: permissions
+    type: Number
+    required: false
+    default: None
+    description: |-
+      *UNIX listeners only!* The permissions to use for the UNIX socket (only supported on Linux).
+  - name: replace
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      *UNIX listeners only!* Whether to replace the UNIX socket file if it already exists (not supported on Windows).
+  - name: type
+    type: Text
+    required: false
+    default: clients
+    description: |-
+      The type of connection to be allowed on this endpoint.
+  details: |+
+    If defined the hook field should be set to one of the following values:
+
+    Value     | Module                            | Description
+    --------- | --------------------------------- | -----------
+    haproxy   | [haproxy](/3/modules/haproxy)     | Listens for connections that use the HAProxy Proxy protocol.
+    websocket | [websocket](/3/modules/websocket) | Listens for connections that use WebSocket framing.
+
+    The type field should be set to one of the following values:
+
+    Value        | Module                                  | Description
+    ------------ | --------------------------------------- | -----------
+    clients      | *None*                                  | Listens for IRC client connections.
+    flashpolicyd | [flashpolicyd](/3/modules/flashpolicyd) | Listens for Adobe Flash policy connections.
+    httpd        | [httpd](/3/modules/httpd)               | Listens for HTTP connections.
+    servers      | [spanningtree](/3/modules/spanningtree) | Listens for IRC server connections.
+
+  example: |-
+    Listens for IRC client connections on 192.0.2.1:6667:
+
+    ```xml
+    <bind address="192.0.2.1"
+          port="6667"
+          type="clients"
+          defer="0s"
+          free="no">
+    ```
+
+    Listens for IRC server connections on *:7000:
+
+    ```xml
+    <bind port="7000"
+          type="servers"
+          defer="5s"
+          free="no">
+    ```
+
+    Listens for IRC client connections on `/run/inspircd/inspircd.sock`
+
+    ```xml
+    <bind path="/run/inspircd/inspircd.sock"
+          type="clients"
+          permissions="750"
+          replace="yes">
+    ```
+
+- name: <cidr>
+  description: |-
+    The `<cidr>` tag defines the number of bits of an IP address that should be looked at when locating clones. This tag can only be defined once.
+  attributes:
+  - name: ipv4clone
+    type: Number
+    required: false
+    default: '32'
+    description: |-
+      The number of bits (0-32) of an IPv4 address that should be looked at when locating clones.
+  - name: ipv6clone
+    type: Number
+    required: false
+    default: '128'
+    description: |-
+      The number of bits (0-128) of an IPv6 address that should be looked at when locating clones.
+  details: ""
+  example: |-
+    ```xml
+    <cidr ipv4clone="32"
+          ipv6clone="128">
+    ```
+
+- name: <class>
+  description: |-
+    The `<class>` tag defines a set of server operator privileges. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A name that uniquely identifies this server operator class.
+  - name: commands
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A space-delimited list of server operator-only commands that server operators with this class can execute.
+  - name: privs
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A space-delimited list of server operator privileges that server operators with this class have.
+  - name: chanmodes
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The server operator-only channel modes that server operators with this class can change.
+  - name: usermodes
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The server operator-only user modes that server operators with this class can change.
+  - name: snomasks
+    type: Text
+    required: false
+    default: \*
+    description: |-
+      [**New in v3.6.0!**](/3/change-log/#inspircd-360) The server operator-only snomasks that server operators with this class can change.
+  details: |+
+    {! 3/configuration/_class_privs.md !}
+
+  example: |-
+    ```xml
+    <class name="OperChat"
+           commands="WALLOPS GLOBOPS"
+           privs="users/mass-message"
+           chanmodes="*"
+           usermodes="*"
+           snomasks="gG">
+    ```
+
+    ```xml
+    <class name="OperView"
+           privs="channels/auspex users/auspex users/channel-spy servers/auspex">
+    ```
+
+- name: <config>
+  description: |-
+    The `<config>` tag allows you to to define how the config is parsed. This tag can be defined as many times as required.
+  attributes:
+  - name: format
+    type: Text
+    required: false
+    default: xml
+    description: |-
+      The config format to use.
+  details: |+
+    The format field should be set to one of the following values:
+
+    Value  | Description
+    ------ | -----------
+    compat | *Deprecated!* Use the 1.2-style format with C-style escape sequences (e.g. `\n`).
+    xml    | Use the 2.0-style format with XML-style escapes (e.g. `&nl;`), numeric entities (e.g. `&#10;`) and `<define>`.
+
+  example: |-
+    ```xml
+    <config format="xml">
+    ```
+
+- name: <connect>
+  description: |-
+    The `<connect>` tag defines a class that users can be filtered into when they connect to the server. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the name of this connect class.
+  - name: allow
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A glob pattern or CIDR range for an IP address which is allowed to connect to the server. If this is defined then `deny` (below) MUST NOT be defined.
+  - name: deny
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A glob pattern or CIDR range for an IP address which is banned from connecting to the server. If this is defined then `allow` (above) MUST NOT be defined.
+  - name: commandrate
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The number of millicommands (1000 equals 1 command) per second that a user can execute.
+  - name: fakelag
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users should have their input/output delayed when they reach a soft limit rather than being killed.
+  - name: globalmax
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The maximum number of users who can exist on the entire network from the range specified in the allow field.
+  - name: hardsendq
+    type: Number
+    required: false
+    default: '1048576'
+    description: |-
+      The maximum amount of data allowed in a user's send queue before it is killed.
+  - name: limit
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The maximum number of users who can be in this connect class.
+  - name: localmax
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The maximum number of users who can exist on the local server from the range specified in the allow field.
+  - name: maxchans
+    type: Number
+    required: false
+    default: None
+    description: |-
+      If defined then the maximum number of channels that a user in this class can be in.
+  - name: maxconnwarn
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to send a server notice when a connect class limit is reached.
+  - name: parent
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the name of the class to inherit most *core* settings from.
+  - name: password
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The password that the user must send to be put into this connect class.
+  - name: pingfreq
+    type: Duration
+    required: false
+    default: 2m
+    description: |-
+      The number of seconds this client can be idle for before sending it a `PING` message.
+  - name: port
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The port on which a client must be connecting to be put into this connect class.
+  - name: reason
+    type: Text
+    required: false
+    default: Unauthorised connection
+    description: |-
+      If `<connect:deny>` is set then the reason to give when disconnecting a user.
+  - name: resolvehostnames
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to do DNS lookups for the hostnames of users in this class.
+  - name: recvq
+    type: Number
+    required: false
+    default: '4096'
+    description: |-
+      The maximum amount of data allowed in a user's receive queue before it is killed.
+  - name: registered
+    type: Boolean
+    required: false
+    default: None
+    description: |-
+      If defined then whether this connect class matches a user in registration or a client that has completed registration.
+  - name: softsendq
+    type: Number
+    required: false
+    default: '4096'
+    description: |-
+      The maximum number of bytes of data that can be in a user's send queue before the server stops processing their input to allow the send queue to drain.
+  - name: threshold
+    type: Number
+    required: false
+    default: '10'
+    description: |-
+      The maximum amount of penalty that a user can have before being fakelagged or killed if fakelag is turned off.
+  - name: timeout
+    type: Duration
+    required: false
+    default: 1m30s
+    description: |-
+      The number of seconds after which an unregistered user is timed out.
+  details: |+
+    !!! warning ""
+        The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
+
+    {! 3/modules/_hash_table.md !}
+
+  example: |-
+    Denies connections to clients connecting from 3ffe::0/32:
+
+    ```xml
+    <connect name="6bone"
+             deny="3ffe::0/32"
+             reason="The 6bone address space is deprecated">
+    ```
+
+    Defines an TLS (SSL) only connect class and then a general connect class to inherit from:
+
+    ```xml
+    <connect name="Secure"
+             parent="Main"
+             port="6697">
+
+    <connect name="Main"
+             allow="*"
+             commandrate="1000"
+             fakelag="on"
+             globalmax="3"
+             hardsendq="1M"
+             limit="5000"
+             localmax="3"
+             maxchans="30"
+             maxconnwarn="no"
+             pingfreq="120"
+             recvq="8K"
+             resolvehostnames="yes"
+             softsendq="8192"
+             threshold="10"
+             timeout="10">
+    ```
+
+    #### Special Notes
+
+    If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable DNS lookups for your WebIRC gateway.
+
+- name: <define>
+  description: |-
+    The `<define>` tag allows you to to define XML-style entities which you can use in your config to avoid duplication. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of the entity.
+  - name: value
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The value to replace instances of the entity with.
+  details: |+
+    The following entities are already defined:
+
+    Name                  | Description
+    --------------------- | -----------
+    `&amp;`               | An ampersand.
+    `&apos;`              | [**New in v3.9.0!**](/3/change-log/#inspircd-390) A single quote. This can be used unescaped but is supported for compatibility with XML generators.
+    `&env.NAME;`          | The value of the `NAME` environment variable when InspIRCd was first started.
+    `&gt;`                | [**New in v3.9.0!**](/3/change-log/#inspircd-390) A greater than symbol. This can be used unescaped but is supported for compatibility with XML generators.
+    `&irc.bold;`          | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message bold.
+    `&irc.color;`         | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message colored. Should be followed by color codes in the format `FG[,BG]`. See [ircdocs](https://modern.ircdocs.horse/formatting.html#colors) for more information.
+    `&irc.italic;`        | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message italic.
+    `&irc.monospace;`     | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message monospace (not widely supported).
+    `&irc.reset;`         | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Disables all text formatting for subsequent text.
+    `&irc.reverse;`       | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message reversed.
+    `&irc.strikethrough;` | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message struckthrough (not widely supported).
+    `&irc.underline;`     | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message underlined
+    `&lt;`                | [**New in v3.9.0!**](/3/change-log/#inspircd-390) A less than symbol. This can be used unescaped but is supported for compatibility with XML generators.
+    `&nl;`                | A new line.
+    `&quot;`              | A double quote.
+
+  example: |-
+    Creates the `&ServerHost;` entity with a value of "example.com":
+
+    ```xml
+    <define name="ServerHost"
+            value="example.com">
+    ```
+
+- name: <dns>
+  description: |-
+    The `<dns>` tag defines the DNS server to use when looking up hostnames. This tag can only be defined once.
+  attributes:
+  - name: enabled
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether DNS lookups are enabled.
+  - name: server
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the DNS server to look up hostnames with. If not set then the first system resolver will be used.
+  - name: timeout
+    type: Number
+    required: false
+    default: '5'
+    description: |-
+      The number of seconds before timing out DNS lookups.
+  - name: sourceip
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the IP address to connect from when doing DNS lookups.
+  - name: sourceport
+    type: Number
+    required: false
+    default: None
+    description: |-
+      If defined then the UDP port to connect from when doing DNS lookups.
+  details: ""
+  example: |-
+    ```xml
+    <dns enabled="yes"
+         server="127.0.0.53"
+         timeout="5"
+         sourceip=""
+         sourceport="0">
+    ```
+
+- name: <exception>
+  description: |-
+    The `<exception>` tag defines a permanent E-line. This tag can be defined as many times as required.
+  attributes:
+  - name: host
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A user@host to E-line.
+  - name: reason
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The reason for the E-line being added.
+  details: ""
+  example: |-
+    ```xml
+    <exception host="*@localhost"
+               reason="Local connections">
+    ```
+
+- name: <include>
+  description: |-
+    The `<include>` tag allows you include the contents of a file or the output of a command into your config file. This tag can be defined as many times as required.
+  attributes:
+  - name: directory
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the directory to look for .conf files in.
+  - name: executable
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the command to execute.
+  - name: file
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the file to read.
+  - name: mandatorytag
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a tag that must exist in a config file for it to be valid.
+  - name: missingokay
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      [**New in v3.10.0!**](/3/change-log/#inspircd-3100) Whether to ignore config files that don't exist.
+  - name: noenv
+    type: Boolean
+    required: false
+    default: Yes (executable)<br>No (directory, file)
+    description: |-
+      [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config.
+  - name: noexec
+    type: Boolean
+    required: false
+    default: Yes (executable)<br>No (directory, file)
+    description: |-
+      Whether to allow executable includes from within the included config.
+  - name: noinclude
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to allow file includes from within the included config.
+  details: ""
+  example: |-
+    Includes links.conf into the config:
+
+    ```xml
+    <include file="links.conf"
+             noenv="no"
+             noexec="no"
+             noinclude="no"
+             mandatorytag="link"
+             missingokay="no">
+    ```
+
+    Includes all of the config files in 'modules' into the config:
+
+    ```xml
+    <include directory="modules"
+             noenv="no"
+             noexec="no"
+             noinclude="no"
+             mandatorytag="link">
+    ```
+
+    Executes curl to download https://example.com/links.conf and include it into the config:
+
+    ```xml
+    <include executable="curl --silent https://example.com/links.conf"
+             noenv="yes"
+             noexec="yes"
+             noinclude="no"
+             mandatorytag="link">
+    ```
+
+- name: <insane>
+  description: |-
+    The `<insane>` tag defines limits to protect against overly wide X-lines being created. This tag can only be defined once.
+  attributes:
+  - name: hostmasks
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to bypass the limit for E-lines, G-lines, and K-lines.
+  - name: ipmasks
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to bypass the limit for Z-lines.
+  - name: nickmasks
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to bypass the limit for Q-lines.
+  - name: trigger
+    type: Decimal
+    required: false
+    default: '95.5'
+    description: |-
+      The percentage of connected users who must match the X-line for it to be rejected as overly wide.
+  details: ""
+  example: |-
+    ```xml
+    <insane hostmasks="no"
+            ipmasks="no"
+            nickmasks="no"
+            trigger="95.5">
+    ```
+
+- name: <limits>
+  description: |-
+    The `<limits>` tag defines the maximum length of user-configurable fields. This tag can only be defined once.
+  attributes:
+  - name: maxaway
+    type: Number
+    required: false
+    default: '200'
+    description: |-
+      The maximum length of an away message.
+  - name: maxchan
+    type: Number
+    required: false
+    default: '64'
+    description: |-
+      The maximum length of a channel name.
+  - name: maxhost
+    type: Number
+    required: false
+    default: '64'
+    description: |-
+      The maximum length of a hostname.
+  - name: maxident
+    type: Number
+    required: false
+    default: '10'
+    description: |-
+      The maximum length of a username (ident).
+  - name: maxkick
+    type: Number
+    required: false
+    default: '255'
+    description: |-
+      The maximum length of a kick message.
+  - name: maxmodes
+    type: Number
+    required: false
+    default: '20'
+    description: |-
+      The maximum number of non-flag modes that can be changed in a single `MODE` message.
+  - name: maxnick
+    type: Number
+    required: false
+    default: '30'
+    description: |-
+      The maximum length of a nickname.
+  - name: maxquit
+    type: Number
+    required: false
+    default: '255'
+    description: |-
+      The maximum length of a quit message.
+  - name: maxreal
+    type: Number
+    required: false
+    default: '128'
+    description: |-
+      The maximum length of a real name (gecos).
+  - name: maxtopic
+    type: Number
+    required: false
+    default: '307'
+    description: |-
+      The maximum length of a channel topic.
+  details: ""
+  example: |-
+    ```xml
+    <limits maxaway="200"
+            maxchan="64"
+            maxhost="64"
+            maxident="11"
+            maxkick="255"
+            maxmodes="20"
+            maxnick="32"
+            maxquit="255"
+            maxreal="128"
+            maxtopic="307">
+    ```
+
+- name: <log>
+  description: |-
+    The `<log>` tag defines a location to log to. This tag can be defined as many times as required.
+  attributes:
+  - name: method
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The method to use for storing logs.
+  - name: type
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A space-delimited token list of types of message to log.
+  - name: level
+    type: Text
+    required: false
+    default: default
+    description: |-
+      The level of messages to log.
+  - name: target
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The location to write the log to.
+  - name: flush
+    type: Number
+    required: false
+    default: '20'
+    description: |-
+      After how many lines to flush the log to disk.
+  details: |+
+    The method field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    file  | The specified log types should be written to a file.
+
+    The type field should be set to one or more of the following values:
+
+    Value                | Logging Levels Used         | Description
+    -------------------- | --------------------------- | -----------
+    BANCACHE             | debug                       | Messages relating to the X-line result cache.
+    CHANNELS             | debug                       | Messages relating to channels.
+    COMMAND              | default                     | Messages relating to command execution.
+    CONFIG               | default<br>debug            | Messages relating to the configuration.
+    CONNECTCLASS         | default<br>debug            | Messages relating to connect classes.
+    CULLLIST             | debug                       | Messages relating to object cull lists.
+    HEADER               | sparse                      | Messages relating to starting logging.
+    MODE                 | debug                       | Messages relating to modes.
+    MODULE               | default<br>debug            | Messages relating to modules.
+    SERIALIZE            | debug                       | Messages relating to object serialisation.
+    SERVICE              | debug                       | Messages relating to service registration.
+    SOCKET               | default<br>debug            | Messages relating to network sockets.
+    STARTUP              | default                     | Messages relating to the startup process.
+    USERINPUT            | rawio                       | Messages relating to user input.
+    USEROUTPUT           | rawio                       | Messages relating to user output.
+    USERS                | default<br>debug            | Messages relating to users.
+    core_channel         | debug                       | Messages relating to channels.
+    core_dns             | sparse<br>default<br>debug  | Messages relating to DNS lookups.
+    core_hostname_lookup | debug                       | Messages relating to user hostname lookups.
+    core_oper            | sparse<br>default           | Messages relating to server operators.
+    core_reloadmodule    | debug                       | Messages relating to the RELOADMODULE command.
+    core_whowas          | default                     | Messages relating to the WHOWAS command.
+    m_callerid           | default                     | Messages relating to [the callerid module](/3/modules/callerid).
+    m_cap                | debug                       | Messages relating to [the cap module](/3/modules/cap).
+    m_cgiirc             | default<br>debug            | Messages relating to [the cgiirc module](/3/modules/cgiirc).
+    m_chanlog            | default                     | Messages relating to [the chanlog module](/3/modules/chanlog).
+    m_cloaking           | default                     | Messages relating to [the cloaking module](/3/modules/cloaking).
+    m_codepage           | debug                       | Messages relating to [the codepage module](/3/modules/codepage).
+    m_connectban         | debug                       | Messages relating to [the connectban module](/3/modules/connectban).
+    m_customprefix       | debug                       | Messages relating to [the customprefix module](/3/modules/customprefix).
+    m_customtitle        | default                     | Messages relating to [the customtitle module](/3/modules/customtitle).
+    m_dccallow           | debug                       | Messages relating to [the dccallow module](/3/modules/dccallow).
+    m_disable            | default<br>debug            | Messages relating to [the disable module](/3/modules/disable).
+    m_dnsbl              | debug                       | Messages relating to [the dnsbl module](/3/modules/dnsbl).
+    m_filter             | default<br>debug            | Messages relating to [the filter module](/3/modules/filter).
+    m_geo_maxmind        | debug                       | Messages relating to [the geo_maxmind module](/3/modules/geo_maxmind).
+    m_hidemode           | debug                       | Messages relating to [the hidemode module](/3/modules/hidemode).
+    m_httpd              | debug                       | Messages relating to [the httpd module](/3/modules/httpd).
+    m_httpd_acl          | debug                       | Messages relating to [the httpd_acl module](/3/modules/httpd_acl).
+    m_httpd_config       | debug                       | Messages relating to [the httpd_config module](/3/modules/httpd_config).
+    m_httpd_stats        | debug                       | Messages relating to [the httpd_stats module](/3/modules/httpd_stats).
+    m_ident              | debug                       | Messages relating to [the ident module](/3/modules/ident).
+    m_ircv3_sts          | debug                       | Messages relating to [the ircv3_sts module](/3/modules/ircv3_sts).
+    m_ldapauth           | debug                       | Messages relating to [the ldapauth module](/3/modules/ldapauth).
+    m_mysql              | default<br>debug            | Messages relating to [the mysql module](/3/modules/mysql).
+    m_nationalchars      | default                     | Messages relating to [the nationalchars module](/3/modules/nationalchars).
+    m_operlog            | default                     | Messages relating to [the operlog module](/3/modules/operlog).
+    m_password_hash      | default                     | Messages relating to [the password_hash module](/3/modules/password_hash).
+    m_permchannels       | default<br>debug            | Messages relating to [the permchannels module](/3/modules/permchannels).
+    m_pgsql              | default<br>debug            | Messages relating to [the pgsql module](/3/modules/pgsql).
+    m_regex_pcre         | debug                       | Messages relating to [the regex_pcre module](/3/modules/regex_pcre).
+    m_sasl               | default<br>verbose<br>debug | Messages relating to [the sasl module](/3/modules/sasl).
+    m_showfile           | default                     | Messages relating to [the showfile module](/3/modules/showfile).
+    m_silence            | debug                       | Messages relating to [the silence module](/3/modules/silence).
+    m_spanningtree       | default<br>debug<br>rawio   | Messages relating to [the spanningtree module](/3/modules/spanningtree).
+    m_sqlite3            | default<br>debug            | Messages relating to [the sqlite3 module](/3/modules/sqlite3).
+    m_sqloper            | sparse<br>default           | Messages relating to [the sqloper module](/3/modules/sqloper).
+    m_ssl_gnutls         | default<br>debug            | Messages relating to [the ssl_gnutls module](/3/modules/ssl_gnutls).
+    m_ssl_mbedtls        | default<br>debug            | Messages relating to [the ssl_mbedtls module](/3/modules/ssl_mbedtls).
+    m_ssl_openssl        | default<br>debug            | Messages relating to [the ssl_openssl module](/3/modules/ssl_openssl).
+    m_sslinfo            | debug                       | Messages relating to [the sslinfo module](/3/modules/sslinfo).
+    m_sslrehashsignal    | default                     | Messages relating to [the sslrehashsignal module](/3/modules/sslrehashsignal).
+    m_topiclock          | default                     | Messages relating to [the topiclock module](/3/modules/topiclock).
+    m_vhost              | default                     | Messages relating to [the vhost module](/3/modules/vhost).
+    m_xline_db           | debug                       | Messages relating to [the xline_db module](/3/modules/xline_db).
+
+    The level field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    rawio   | Logs raw I/O traffic.
+    debug   | Logs debug information.
+    verbose | Logs verbose information.
+    default | Logs general information.
+    sparse  | Log errors and other infrequent information.
+    none    | Logs nothing.
+
+  example: |-
+    ```xml
+    <log method="file"
+         type="* -USERINPUT -USEROUTPUT"
+         level="default"
+         target="ircd.log"
+         flush="20">
+    ```
+
+- name: <maxlist>
+  description: |-
+    The `<maxlist>` tag defines the number of list modes which can be created in a channel. This tag can be defined as many times as required.
+  attributes:
+  - name: chan
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A glob pattern for channels that this limit applies to.
+  - name: mode
+    type: Number
+    required: false
+    default: None
+    description: |-
+      The character or name for the mode this limit applies to. If not defined then it applies to all modes.
+  - name: limit
+    type: Number
+    required: true
+    default: None
+    description: |-
+      The number of bans which can be created in these channels.
+  details: ""
+  example: |-
+    ```xml
+    <maxlist chan="#largechan"
+             mode="b"
+             limit="500">
+
+    <maxlist chan="*"
+             limit="100">
+    ```
+
+- name: <module>
+  description: |-
+    The `<module>` tag defines a module to load. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name of a module to load.
+  details: ""
+  example: |-
+    ```xml
+    <module name="ssl_gnutls">
+    ```
+
+- name: <oper>
+  description: |-
+    The `<oper>` tag defines a server operator account. This tag can be defined as many times as required.
+  attributes:
+  - name: class
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a connect class to assign users who log into this server operator account to.
+  - name: hash
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the hash algorithm that the password field is hashed with.
+  - name: host
+    type: Text
+    required: true
+    default: None
+    description: |-
+      A space-delimited list of glob patterns for the username@hostname mask that users must be connecting from to log into this server operator account.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The username for this server operator account.
+  - name: password
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The password for this server operator account.
+  - name: type
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The type of server operator this account is.
+  - name: vhost
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a virtual hostname to set on users who log into this server operator account.
+  details: |+
+    {! 3/modules/_hash_table.md !}
+
+  example: |-
+    ```xml
+    <oper name="Sadie"
+          password="7H8Tqm+i$jaG48RHAcoLXSB3Guzaf1bQehaNRNbblMoNrHPdguvU"
+          hash="hmac-sha256"
+          class="ServerOperators"
+          host="*@bnc.example.com"
+          type="NetAdmin"
+          vhost="staff.example.net">
+    ```
+
+- name: <options>
+  description: |-
+    The `<options>` tag defines general configuration options. This tag can only be defined once.
+  attributes:
+  - name: allowzerolimit
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to allow channels to have channel mode `l` (limit) set to 0.
+  - name: casemapping
+    type: Text
+    required: false
+    default: rfc1459
+    description: |-
+      The casemapping to use when comparing channel and nicknames insensitively.
+  - name: cyclehostsfromuser
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to send modes from the user rather than the server when sending a fake rejoin.
+  - name: defaultbind
+    type: Text
+    required: false
+    default: auto
+    description: |-
+      The IP version to bind using if an IP address is not specified.
+  - name: defaultmodes
+    type: Text
+    required: false
+    default: not
+    description: |-
+      The default modes to apply to newly created channels.
+  - name: exemptchanops
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/3/modules/exemptchanops) for more information.
+  - name: fixedpart
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a static value to replace users' part messages with.
+  - name: fixedquit
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a static value to replace users' quit messages with.
+  - name: hostintopic
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to show the full user mask of a topic setter rather than just their nickname.
+  - name: invitebypassmodes
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether being invited to a channel allows the invitee to bypass channel modes which would otherwise prevent them from joining.
+  - name: modesinlist
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to include the current channel modes in the `/LIST` output.
+  - name: nosnoticestack
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to stop identical server notices from being stacked with "last message repeated X times".
+  - name: prefixpart
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the value to prefix users' part messages with.
+  - name: prefixquit
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the value to prefix users' quit messages with.
+  - name: splitwhois
+    type: Text
+    required: false
+    default: 'no'
+    description: |-
+      Whether to split private/secret channels from normal channels in WHOIS responses.
+  - name: suffixpart
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the value to suffix users' part messages with.
+  - name: suffixquit
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the value to suffix users' quit messages with.
+  - name: syntaxhints
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to send syntax hints to users who send commands with not enough parameters.
+  - name: xlinemessage
+    type: Text
+    required: false
+    default: You're banned!
+    description: |-
+      The message to send to users who have been banned from the server.
+  details: |+
+    The casemapping field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    ascii   | Use the ASCII case mapping for nicknames and channels.
+    rfc1459 | Use the broken RFC1459 casemapping for nicknames and channels.
+
+    The defaultbind field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    auto  | Bind to :: if IPv6 support is available. Otherwise, bind to 0.0.0.0.
+    ipv4  | Bind to 0.0.0.0 by default.
+    ipv6  | Bind to :: by default.
+
+    The splitwhois field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    no       | Don't split private/secret channels from normal channels in WHOIS responses.
+    split    | Split private/secret channels from normal channels in WHOIS responses.
+    splitmsg | Split private/secret channels from normal channels in WHOIS responses with an explanation.
+
+  example: |-
+    ```xml
+    <options allowzerolimit="no"
+             casemapping="ascii"
+             cyclehostsfromuser="no"
+             defaultbind="auto"
+             defaultmodes="nost"
+             exemptchanops=""
+             fixedpart=""
+             fixedquit=""
+             hostintopic="yes"
+             invitebypassmodes="yes"
+             nosnoticestack="no"
+             modesinlist="no"
+             prefixpart="&quot;"
+             prefixquit="Quit: "
+             splitwhois="no"
+             suffixpart="&quot;"
+             suffixquit=""
+             syntaxhints="yes"
+             xlinemessage="You're banned. Email abuse@example.com to appeal this decision.">
+    ```
+
+- name: <path>
+  description: |-
+    The `<path>` tag defines the location of the config, data, log, and module directories. This tag can only be defined once.
+  attributes:
+  - name: configdir
+    type: Text
+    required: false
+    default: conf
+    description: |-
+      The location of the config directory.
+  - name: datadir
+    type: Text
+    required: false
+    default: data
+    description: |-
+      The location of the data directory.
+  - name: logdir
+    type: Text
+    required: false
+    default: logs
+    description: |-
+      The location of the logs directory.
+  - name: moduledir
+    type: Text
+    required: false
+    default: modules
+    description: |-
+      The location of the modules directory.
+  - name: runtimedir
+    type: Text
+    required: false
+    default: data
+    description: |-
+      [**New in v3.9.0!**](/3/change-log/#inspircd-390) The location of the runtime directory.
+  details: ""
+  example: |-
+    ```xml
+    <path configdir="conf"
+          datadir="data"
+          logdir="logs"
+          moduledir="modules"
+          runtimedir="data">
+    ```
+
+- name: <performance>
+  description: |-
+    The `<performance>` tag defines configuration options relating to server performance. This tag can only be defined once.
+  attributes:
+  - name: clonesonconnect
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to check for clones when a user connects to the server.
+  - name: netbuffersize
+    type: Number
+    required: false
+    default: '10240'
+    description: |-
+      The size of the buffer used to receive data from users.
+  - name: softlimit
+    type: Number
+    required: false
+    default: '*Varies*'
+    description: |-
+      The maximum number of connections to allow to the IRC server.
+  - name: somaxconn
+    type: Number
+    required: false
+    default: '*Varies*'
+    description: |-
+      The maximum number of connections that may be waiting in the connection accept queue.
+  - name: timeskipwarn
+    type: Duration
+    required: false
+    default: 2s
+    description: |-
+      The amount of time the server clock can skip by before server operators are warned about lag.
+  details: ""
+  example: |-
+    ```xml
+    <performance clonesonconnect="yes"
+                 netbuffersize="10240"
+                 softlimit="15000"
+                 somaxconn="128"
+                 timeskipwarn="2s">
+    ```
+
+- name: <pid>
+  description: |-
+    The `<pid>` tag defines the location of the pidfile. This tag can only be defined once.
+  attributes:
+  - name: file
+    type: Text
+    required: false
+    default: inspircd.pid
+    description: |-
+      The location of the pidfile.
+  details: ""
+  example: |-
+    ```xml
+    <pid file="inspircd.pid">
+    ```
+
+- name: <security>
+  description: |-
+    The `<security>` tag defines configuration options relating to server security. This tag can only be defined once.
+  attributes:
+  - name: allowcoreunload
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether core modules can be unloaded by a server operator.
+  - name: announceinvites
+    type: Text
+    required: false
+    default: dynamic
+    description: |-
+      Whether to send an announcement when a user is invited to a channel.
+  - name: customversion
+    type: Text
+    required: false
+    default: None
+    description: |-
+      A custom string to show in the `/VERSION` output.
+  - name: genericoper
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
+  - name: hidebans
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to only show X-line messages to server operators.
+  - name: hidekills
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
+  - name: hideserver
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the text to show in place of a server name.
+  - name: hidesplits
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to hide server names in netsplit quits from non-server operators.
+  - name: hideulinekills
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to hide server notices about kills by users on U-lined servers.
+  - name: maxtargets
+    type: Number
+    required: false
+    default: '20'
+    description: |-
+      The maximum number of targets a user may specify in a command.
+  - name: restrictbannedusers
+    type: Text
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to restrict the behaviour of users who are banned in a channel.
+  - name: runasgroup
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the group to switch to after starting up (requires starting as root).
+  - name: runasuser
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the user to switch to after starting up (requires starting as root).
+  - name: userstats
+    type: Text
+    required: false
+    default: None
+    description: |-
+      The `/STATS` characters that a non-server operator can view.
+  details: |+
+    The announceinvites field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    none    | Don't send any invite announcements.
+    ops     | Send invite announcements to channel operators and higher ranked users.
+    dynamic | Send invites to channel half-operators (if available) and higher ranked users.
+    all     | Send invites to all channel members.
+
+    The restrictbannedusers field should be set to one of the following values:
+
+    Value  | Description
+    ------ | -----------
+    yes    | Banned users should be restricted.
+    no     | Banned users should not be restricted.
+    silent | Banned users should be restricted but should not be informed.
+
+  example: |-
+    ```xml
+    <security allowcoreunload="no"
+              announceinvites="dynamic"
+              customversion=""
+              genericoper="no"
+              hidebans="yes"
+              hidekills=""
+              hideserver=""
+              hidesplits="no"
+              hideulinekills="yes"
+              maxtargets="20"
+              restrictbannedusers="yes"
+              runasgroup=""
+              runasuser=""
+              userstats="Pu">
+    ```
+
+- name: <server>
+  description: |-
+    The `<server>` tag defines settings about the local server. This tag can only be defined once.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The hostname of the local server.
+  - name: description
+    type: Text
+    required: false
+    default: Configure Me
+    description: |-
+      A description of the local server.
+  - name: network
+    type: Text
+    required: false
+    default: Network
+    description: |-
+      The name of the IRC network the local server is attached to.
+  - name: id
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a unique server identifier in the format [0-9][0-9A-Z][0-9A-Z].
+  details: ""
+  example: |-
+    ```xml
+    <server name="irc.eu.example.com"
+            description="ExampleNet's European server"
+            network="ExampleNet"
+            id="34C">
+    ```
+
+- name: <type>
+  description: |-
+    The `<type>` tag defines a type of server operator. This tag can be defined as many times as required.
+  attributes:
+  - name: class
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a connect class to assign users who log into this server operator account to.
+  - name: classes
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a space-delimited list of `<class>` tags to inherit privileges from.
+  - name: name
+    type: Text
+    required: true
+    default: None
+    description: |-
+      The name for this server operator type.
+  - name: vhost
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then a virtual hostname to set on users who log into a server operator account using this type.
+  details: ""
+  example: |-
+    ```xml
+    <type name="NetAdmin"
+          class="ServerOperators"
+          classes="BanControl HostCloak OperChat SACommands ServerLink Shutdown"
+          vhost="staff.example.net">
+    ```
+
+- name: <whowas>
+  description: |-
+    The `<whowas>` tag defines the configuration of the `/WHOWAS` database. This tag can only be defined once.
+  attributes:
+  - name: groupsize
+    type: Number
+    required: false
+    default: '0'
+    description: |-
+      The maximum number of `/WHOWAS` entries for a nickname.
+  - name: maxgroups
+    type: Number
+    required: false
+    default: '0'
+    description: |-
+      The maximum number of `/WHOWAS` nickname groups.
+  - name: maxkeep
+    type: Duration
+    required: false
+    default: 1h
+    description: |-
+      The period of time to keep `/WHOWAS` records for.
+  details: ""
+  example: |-
+    ```xml
+    <whowas groupsize="10"
+            maxgroups="100000"
+            maxkeep="3d">
+    ```
+
