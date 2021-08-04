@@ -20,4 +20,3 @@ example: |-
   <badip ipmask="192.0.2.0/24"
          reason="Spamming">
   ```
-

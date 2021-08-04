@@ -20,4 +20,3 @@ example: |-
   <badnick nick="NickServ"
            reason="Reserved for a network service">
   ```
-

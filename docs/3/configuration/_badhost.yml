@@ -20,4 +20,3 @@ example: |-
   <badhost host="*@example.com"
            reason="Spamming">
   ```
-

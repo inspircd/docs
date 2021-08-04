@@ -27,4 +27,3 @@ example: |-
           maxgroups="100000"
           maxkeep="3d">
   ```
-
