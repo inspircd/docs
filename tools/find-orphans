@@ -2,7 +2,7 @@
 ROOT = File.dirname __dir__
 PAGES = Dir["#{ROOT}/docs/**/*.md", "#{ROOT}/docs/**/*.yml"]
 
-linked = [ "#{ROOT}/docs/index.md", "#{ROOT}/docs/*/configuration/_.yml" ]
+linked = Dir[ "#{ROOT}/docs/index.md", "#{ROOT}/docs/*/configuration/_*.yml" ]
 PAGES.each do |file|
 	contents = File.read(file)
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
