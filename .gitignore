@@ -1,6 +1,7 @@
 .*
 *.diff
 *.egg-info
+*.pyc
 dist
 site
 
