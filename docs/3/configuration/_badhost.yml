@@ -1,0 +1,22 @@
+name: <badhost>
+description: |-
+  The `<badhost>` tag defines a permanent K-line. This tag can be defined as many times as required.
+attributes:
+- name: host
+  type: Text
+  required: true
+  default: None
+  description: |-
+    A user@host to K-line.
+- name: reason
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The reason for the K-line being added.
+details: ""
+example: |-
+  ```xml
+  <badhost host="*@example.com"
+           reason="Spamming">
+  ```

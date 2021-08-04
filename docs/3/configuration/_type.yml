@@ -1,0 +1,36 @@
+name: <type>
+description: |-
+  The `<type>` tag defines a type of server operator. This tag can be defined as many times as required.
+attributes:
+- name: class
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a connect class to assign users who log into this server operator account to.
+- name: classes
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a space-delimited list of `<class>` tags to inherit privileges from.
+- name: name
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The name for this server operator type.
+- name: vhost
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a virtual hostname to set on users who log into a server operator account using this type.
+details: ""
+example: |-
+  ```xml
+  <type name="NetAdmin"
+        class="ServerOperators"
+        classes="BanControl HostCloak OperChat SACommands ServerLink Shutdown"
+        vhost="staff.example.net">
+  ```

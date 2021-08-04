@@ -1,0 +1,84 @@
+name: <include>
+description: |-
+  The `<include>` tag allows you include the contents of a file or the output of a command into your config file. This tag can be defined as many times as required.
+attributes:
+- name: directory
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then the directory to look for .conf files in.
+- name: executable
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then the command to execute.
+- name: file
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then the file to read.
+- name: mandatorytag
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a tag that must exist in a config file for it to be valid.
+- name: missingokay
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    [**New in v3.10.0!**](/3/change-log/#inspircd-3100) Whether to ignore config files that don't exist.
+- name: noenv
+  type: Boolean
+  required: false
+  default: Yes (executable)<br>No (directory, file)
+  description: |-
+    [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config.
+- name: noexec
+  type: Boolean
+  required: false
+  default: Yes (executable)<br>No (directory, file)
+  description: |-
+    Whether to allow executable includes from within the included config.
+- name: noinclude
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to allow file includes from within the included config.
+details: ""
+example: |-
+  Includes links.conf into the config:
+
+  ```xml
+  <include file="links.conf"
+           noenv="no"
+           noexec="no"
+           noinclude="no"
+           mandatorytag="link"
+           missingokay="no">
+  ```
+
+  Includes all of the config files in 'modules' into the config:
+
+  ```xml
+  <include directory="modules"
+           noenv="no"
+           noexec="no"
+           noinclude="no"
+           mandatorytag="link">
+  ```
+
+  Executes curl to download https://example.com/links.conf and include it into the config:
+
+  ```xml
+  <include executable="curl --silent https://example.com/links.conf"
+           noenv="yes"
+           noexec="yes"
+           noinclude="no"
+           mandatorytag="link">
+  ```

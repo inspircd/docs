@@ -1,0 +1,29 @@
+name: <admin>
+description: |-
+  The `<admin>` tag defines contact details for the server administrator. This tag can only be defined once.
+attributes:
+- name: name
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then the real name of the server operator.
+- name: nick
+  type: Text
+  required: false
+  default: admin
+  description: |-
+    The nickname of the server operator.
+- name: email
+  type: Text
+  required: false
+  default: null@example.com
+  description: |-
+    The email address of the server operator.
+details: ""
+example: |-
+  ```xml
+  <admin name="John Doe"
+         nick="JDoe123"
+         email="jdoe123@example.com">
+  ```

@@ -1,0 +1,22 @@
+name: <cidr>
+description: |-
+  The `<cidr>` tag defines the number of bits of an IP address that should be looked at when locating clones. This tag can only be defined once.
+attributes:
+- name: ipv4clone
+  type: Number
+  required: false
+  default: '32'
+  description: |-
+    The number of bits (0-32) of an IPv4 address that should be looked at when locating clones.
+- name: ipv6clone
+  type: Number
+  required: false
+  default: '128'
+  description: |-
+    The number of bits (0-128) of an IPv6 address that should be looked at when locating clones.
+details: ""
+example: |-
+  ```xml
+  <cidr ipv4clone="32"
+        ipv6clone="128">
+  ```

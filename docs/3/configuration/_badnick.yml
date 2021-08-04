@@ -1,0 +1,22 @@
+name: <badnick>
+description: |-
+  The `<badnick>` tag defines a permanent Q-line. This tag can be defined as many times as required.
+attributes:
+- name: nick
+  type: Text
+  required: true
+  default: None
+  description: |-
+    A nickname to Q-line.
+- name: reason
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The reason for the Q-line being added.
+details: ""
+example: |-
+  ```xml
+  <badnick nick="NickServ"
+           reason="Reserved for a network service">
+  ```
