@@ -154,8 +154,7 @@ extbans:
   - char: w
     type: Matching
     syntax: '`w:<pattern>`'
-    description: '[**New in v3.10.0!**](/3/change-log/#inspircd-3100) Matches against
-      the name of the gateway that WebIRC users are connecting from.'
+    description: "[**New in v3.10.0!**](/3/change-log/#inspircd-3100) Matches against the name of the gateway that WebIRC users are connecting from."
   example: |-
     Bans users connecting via the CGI:IRC gateway:
 

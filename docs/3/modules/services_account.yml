@@ -50,8 +50,7 @@ umodes:
 
 exemptions:
 - name: regmoderated
-  description: Allows exempted users to send messages to the channel without being
-    logged in.
+  description: Allows exempted users to send messages to the channel without being logged in.
 
 extbans:
   description: ""
@@ -59,13 +58,11 @@ extbans:
   - char: R
     type: Matching
     syntax: '`R:<pattern>`'
-    description: Checks whether users are logged into a services account matching
-      &lt;pattern&gt;.
+    description: Checks whether users are logged into a services account matching &lt;pattern&gt;.
   - char: U
     type: Matching
     syntax: '`U:<pattern>`'
-    description: Checks whether users matching &lt;pattern&gt; are *not* logged into
-      a services account.
+    description: Checks whether users matching &lt;pattern&gt; are *not* logged into a services account.
   example: |-
     Bans users logged into the services account named Soni:
 

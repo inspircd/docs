@@ -87,8 +87,6 @@ umodes:
 
 snomasks:
 - char: v
-  description: Notifications about server operators overriding channel-level restrictions
-    on the local server.
+  description: Notifications about server operators overriding channel-level restrictions on the local server.
 - char: V
-  description: Notifications about server operators overriding channel-level restrictions
-    on a remote server.
+  description: Notifications about server operators overriding channel-level restrictions on a remote server.

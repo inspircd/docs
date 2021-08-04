@@ -22,8 +22,6 @@ configuration:
 
 snomasks:
 - char: r
-  description: Notifications about server operator-only commands being executed on
-    the local server.
+  description: Notifications about server operator-only commands being executed on the local server.
 - char: R
-  description: Notifications about server operator-only commands being executed on
-    a remote server.
+  description: Notifications about server operator-only commands being executed on a remote server.

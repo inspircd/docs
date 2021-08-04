@@ -334,11 +334,9 @@ snomasks:
 
 stats:
 - char: c
-  description: Lists servers which the server may connect to or allow connections
-    from.
+  description: Lists servers which the server may connect to or allow connections from.
 - char: n
-  description: Lists servers which the server may connect to or allow connections
-    from.
+  description: Lists servers which the server may connect to or allow connections from.
 
 special_notes: |-
   Linking non-local servers without TLS (SSL) is a serious privacy risk and will be removed in the next major version of InspIRCd.

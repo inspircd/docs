@@ -36,8 +36,7 @@ configuration:
   - name: banmessage
     type: Text
     required: false
-    default: Your IP range has been attempting to connect too many times in too short
-      a duration. Wait a while, and you will be able to connect.
+    default: Your IP range has been attempting to connect too many times in too short a duration. Wait a while, and you will be able to connect.
     description: |-
       The message to give to clients that are connect banned.
   - name: ipv4cidr

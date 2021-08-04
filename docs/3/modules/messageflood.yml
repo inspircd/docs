@@ -51,5 +51,4 @@ chmodes:
 
 exemptions:
 - name: flood
-  description: Allows exempted users to send messages at a higher rate than channel
-    mode `f` (flood) allows.
+  description: Allows exempted users to send messages at a higher rate than channel mode `f` (flood) allows.

@@ -21,8 +21,7 @@ extbans:
   - char: Q
     type: Acting
     syntax: '`Q:<mask>`'
-    description: Bans privileged users matching &lt;mask&gt; from using the `/KICK`
-      command.
+    description: Bans privileged users matching &lt;mask&gt; from using the `/KICK` command.
   example: |-
     Bans privileged users matching `*!*@example.com` from using the `/KICK` command:
 

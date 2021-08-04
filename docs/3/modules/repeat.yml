@@ -74,5 +74,4 @@ chmodes:
 
 exemptions:
 - name: repeat
-  description: Allows exempted users to send repetitive messages at a higher rate
-    than channel mode `E` (repeat) allows.
+  description: Allows exempted users to send repetitive messages at a higher rate than channel mode `E` (repeat) allows.
