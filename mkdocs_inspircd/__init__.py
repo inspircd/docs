@@ -103,7 +103,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             ]
         )
 
-    def extbans_table(self, config):
+    def extbans_table(self, config, type):
         modules = self.modules(config)
         template = self.env.get_template("extban_table.md.j2")
         return template.render(
@@ -112,6 +112,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                 for module in modules
                 if "extbans" in module
                 for extban in module["extbans"]["chars"]
+                if extban["type"] == type
             ]
         )
 
@@ -121,5 +122,6 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             markdown
             .replace("{{module_chmodes_table}}", self.chmodes_table(config))
             .replace("{{module_umodes_table}}", self.umodes_table(config))
-            .replace("{{module_extbans_table}}", self.extbans_table(config))
+            .replace("{{module_acting_extbans_table}}", self.extbans_table(config, "Acting"))
+            .replace("{{module_matching_extbans_table}}", self.extbans_table(config, "Matching"))
         )
