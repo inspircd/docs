@@ -4,7 +4,7 @@ title: v3 Extended Bans
 
 ## Extended Bans
 
-Some [list modes](/3/channel-modes), such as [channel mode `b` (ban)](/3/channel-modes) take a `<nick>!<user>@<host>` mask as their parameter. These list modes can be extended to support alternate forms of matching and actions.
+Some [list modes](/3/channel-modes), such as [channel mode `b` (ban)](/3/channel-modes), take a `<nick>!<user>@<host>` mask as their parameter. These list modes can be extended to support alternate forms of matching and actions.
 
 ### Acting
 
