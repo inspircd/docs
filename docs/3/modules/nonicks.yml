@@ -42,7 +42,7 @@ extbans:
     syntax: '`N:<mask>`'
     description: Bans users matching &lt;mask&gt; from changing their nickname whilst in the channel.
   example: |-
-    Bans privileged users matching `*!*@example.com` from changing their nickname whilst in the channel.
+    Bans users matching `*!*@example.com` from changing their nickname whilst in the channel.
 
     ```plaintext
     /MODE #channel +b N:*!*@example.com
