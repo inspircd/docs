@@ -4,6 +4,7 @@ nav:
         - Configuration: 3/configuration/index.md
         - Commands: 3/commands/index.md
         - Channel Modes: 3/channel-modes.md
+        - Extended Bans: 3/extended-bans.md
         - User Modes: 3/user-modes.md
         - Modules: 3/modules/index.md
         - SNOMasks: 3/snomasks.md
