@@ -67,7 +67,7 @@ configuration:
     ```xml
     <hostchange action="addnick"
                 mask="*"
-                port="6697"
+                ports="6697"
                 suffix=".secureusers.example.com">
     ```
 
