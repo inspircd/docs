@@ -1,0 +1,20 @@
+name: <execfiles>
+description: |-
+  The `<execfiles>` runs a shell command, and reads its output. The purpose of the output depends on what field commands are defined in.
+
+  Note that commands are only run on rehash, so changes are not automatically detected.
+attributes:
+- name: motd
+  type: Text
+  required: false
+  default: None
+  description: |-
+    A file used as the Message Of The Day, ie. shown to users when they connect or use the `/MOTD` command.
+details: |-
+  The working directory of the commands is InspIRCd's configuration directory. This is `/etc/inspircd` if installed with your package manager, and the main `conf/` directory otherwise. It is **NOT** the directory of the current config file.
+example: |-
+  Downloads `https://www.example.com/motd.txt` and uses it as Message Of The Day:
+
+  ```xml
+  <execfiles motd="wget -O - https://www.example.com/motd.txt">
+  ```
