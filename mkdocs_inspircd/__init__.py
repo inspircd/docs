@@ -3,6 +3,7 @@ Preprocesses data files docs/*/modules/*.yml into markdown, so they can
 be built by MkDocs like regular pages.
 """
 
+import collections
 import fnmatch
 import functools
 import glob
@@ -119,6 +120,28 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             for snomask in module["snomasks"]
         ]
 
+    def extra_tag_fields(self, config):
+        extra_tag_fields = collections.defaultdict(list)
+
+        for module in self.modules(config):
+            for module_tag in module.get("configuration", []):
+                if module_tag.get("extends", False):
+                    # Some modules describe two tags at the same time
+                    if isinstance(module_tag["name"], str):
+                        tag_names = [module_tag["name"]]
+                    else:
+                        tag_names = module_tag["name"]
+
+                    for name in tag_names:
+                        for field in module_tag.get("attributes", []):
+                            extra_tag_fields[name].append(
+                                {
+                                    "module": module["name"],
+                                    **field,
+                                }
+                            )
+        return extra_tag_fields
+
     def core_config_tags(self, config):
         paths = glob.glob(config["docs_dir"] + "/3/configuration/_*.yml")
         paths.sort()  # sorts by command name
@@ -135,7 +158,8 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "acting_module_extbans": self.extbans(config, "Acting"),
             "matching_module_extbans": self.extbans(config, "Matching"),
             "module_snomasks": self.snomasks(config),
-            "core_config_tags": self.core_config_tags(config)
+            "extra_tag_fields": self.extra_tag_fields(config),
+            "core_config_tags": self.core_config_tags(config),
         }
         template = env.from_string(markdown)
         return template.render(context)
