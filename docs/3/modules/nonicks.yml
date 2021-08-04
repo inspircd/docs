@@ -40,8 +40,7 @@ extbans:
   - char: N
     type: Acting
     syntax: '`N:<mask>`'
-    description: Bans privileged users matching &lt;mask&gt; from changing their nickname
-      whilst in the channel.
+    description: Bans users matching &lt;mask&gt; from changing their nickname whilst in the channel.
   example: |-
     Bans privileged users matching `*!*@example.com` from changing their nickname whilst in the channel.
 
