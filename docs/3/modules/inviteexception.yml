@@ -1,7 +1,7 @@
 name: inviteexception
 
 description: |-
-  This module adds channel mode `I` (invex) which allows channel operators to exempt user masks from the `i` (inviteonly) channel mode.
+  This module adds channel mode `I` (invex) which allows channel operators to exempt user masks from channel mode `i` (inviteonly).
 
 configuration:
 - name: <inviteexception>
@@ -13,7 +13,7 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether channel mode `I` (invex) allows joining users to bypass the `k` (key) channel mode.
+      Whether channel mode `I` (invex) allows joining users to bypass channel mode `k` (key).
   details: ""
   example: |-
     ```xml
@@ -29,15 +29,15 @@ chmodes:
     syntax: '`<mask>`'
     usable_by: Channel operators
     description: |-
-      Exempts users matching &lt;mask&gt; from the `i` (inviteonly) channel mode.
+      Exempts users matching &lt;mask&gt; from channel mode `i` (inviteonly).
   example: |-
-    Exempts users matching `*!*@example.com` from the `i` (inviteonly) channel mode:
+    Exempts users matching `*!*@example.com` from channel mode `i` (inviteonly):
 
     ```plaintext
     /MODE #channel +I *!*@example.com
     ```
 
-    Exempts users logged into the services account named Sadie from the `i` (inviteonly) channel mode (requires [the services_account module](/3/modules/services_account)):
+    Exempts users logged into the services account named Sadie from channel mode `i` (inviteonly) (requires [the services_account module](/3/modules/services_account)):
 
     ```plaintext
     /MODE #channel +I R:Sadie

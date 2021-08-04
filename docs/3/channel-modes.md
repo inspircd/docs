@@ -22,7 +22,7 @@ limit      | l         | Parameter | `<count>`        | Channel operators | Allo
 moderated  | m         | Switch    | *None*           | Channel operators | Prevents users without a prefix rank from messaging the channel.
 noextmsg   | n         | Switch    | *None*           | Channel operators | Prevents users who are not in the channel from messaging the channel.
 op         | o         | Prefix    | `<nick>`         | Channel operators | Grants channel operator status to &lt;nick&gt;.
-private    | p         | Switch    | *None*           | Channel operators | Hides the channel in `/WHOIS` from people who are not a member. You probably want the `s` (secret) channel mode rather than this.
+private    | p         | Switch    | *None*           | Channel operators | Hides the channel in `/WHOIS` from people who are not a member. You probably want channel mode `s` (secret) rather than this.
 secret     | s         | Switch    | *None*           | Channel operators | Hides the channel in `/WHOIS` and `/LIST` from people who are not a member.
 topiclock  | t         | Switch    | *None*           | Channel operators | Prevents non-channel operators from changing the channel topic.
 voice      | v         | Prefix    | `<nick>`         | Channel operators | Grants channel voice status to &lt;nick&gt;.
