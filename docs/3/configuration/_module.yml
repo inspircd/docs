@@ -1,0 +1,15 @@
+name: <module>
+description: |-
+  The `<module>` tag defines a module to load. This tag can be defined as many times as required.
+attributes:
+- name: name
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The name of a module to load.
+details: ""
+example: |-
+  ```xml
+  <module name="ssl_gnutls">
+  ```

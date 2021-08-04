@@ -1,0 +1,36 @@
+name: <insane>
+description: |-
+  The `<insane>` tag defines limits to protect against overly wide X-lines being created. This tag can only be defined once.
+attributes:
+- name: hostmasks
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to bypass the limit for E-lines, G-lines, and K-lines.
+- name: ipmasks
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to bypass the limit for Z-lines.
+- name: nickmasks
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to bypass the limit for Q-lines.
+- name: trigger
+  type: Decimal
+  required: false
+  default: '95.5'
+  description: |-
+    The percentage of connected users who must match the X-line for it to be rejected as overly wide.
+details: ""
+example: |-
+  ```xml
+  <insane hostmasks="no"
+          ipmasks="no"
+          nickmasks="no"
+          trigger="95.5">
+  ```

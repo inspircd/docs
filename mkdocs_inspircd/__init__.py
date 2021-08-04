@@ -130,8 +130,10 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
     def core_config_tags(self, config):
         template = self.env.get_template("config_tags.md.j2")
+        paths = glob.glob(config["docs_dir"] + "/3/configuration/_*.yml")
+        paths.sort()  # sorts by command name
         return template.render(
-            configuration=load_yaml(config["docs_dir"] + "/3/configuration/_data.yml")
+            configuration=[load_yaml(path) for path in paths],
         )
 
     def on_page_markdown(self, markdown, page, config, files):

@@ -1,0 +1,32 @@
+name: <maxlist>
+description: |-
+  The `<maxlist>` tag defines the number of list modes which can be created in a channel. This tag can be defined as many times as required.
+attributes:
+- name: chan
+  type: Text
+  required: true
+  default: None
+  description: |-
+    A glob pattern for channels that this limit applies to.
+- name: mode
+  type: Number
+  required: false
+  default: None
+  description: |-
+    The character or name for the mode this limit applies to. If not defined then it applies to all modes.
+- name: limit
+  type: Number
+  required: true
+  default: None
+  description: |-
+    The number of bans which can be created in these channels.
+details: ""
+example: |-
+  ```xml
+  <maxlist chan="#largechan"
+           mode="b"
+           limit="500">
+
+  <maxlist chan="*"
+           limit="100">
+  ```

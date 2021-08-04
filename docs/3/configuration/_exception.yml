@@ -1,0 +1,22 @@
+name: <exception>
+description: |-
+  The `<exception>` tag defines a permanent E-line. This tag can be defined as many times as required.
+attributes:
+- name: host
+  type: Text
+  required: true
+  default: None
+  description: |-
+    A user@host to E-line.
+- name: reason
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The reason for the E-line being added.
+details: ""
+example: |-
+  ```xml
+  <exception host="*@localhost"
+             reason="Local connections">
+  ```

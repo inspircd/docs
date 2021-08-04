@@ -1,0 +1,59 @@
+name: <oper>
+description: |-
+  The `<oper>` tag defines a server operator account. This tag can be defined as many times as required.
+attributes:
+- name: class
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a connect class to assign users who log into this server operator account to.
+- name: hash
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then the hash algorithm that the password field is hashed with.
+- name: host
+  type: Text
+  required: true
+  default: None
+  description: |-
+    A space-delimited list of glob patterns for the username@hostname mask that users must be connecting from to log into this server operator account.
+- name: name
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The username for this server operator account.
+- name: password
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The password for this server operator account.
+- name: type
+  type: Text
+  required: true
+  default: None
+  description: |-
+    The type of server operator this account is.
+- name: vhost
+  type: Text
+  required: false
+  default: None
+  description: |-
+    If defined then a virtual hostname to set on users who log into this server operator account.
+details: |+
+  {! 3/modules/_hash_table.md !}
+
+example: |-
+  ```xml
+  <oper name="Sadie"
+        password="7H8Tqm+i$jaG48RHAcoLXSB3Guzaf1bQehaNRNbblMoNrHPdguvU"
+        hash="hmac-sha256"
+        class="ServerOperators"
+        host="*@bnc.example.com"
+        type="NetAdmin"
+        vhost="staff.example.net">
+  ```

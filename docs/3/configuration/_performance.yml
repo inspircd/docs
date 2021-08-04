@@ -1,0 +1,44 @@
+name: <performance>
+description: |-
+  The `<performance>` tag defines configuration options relating to server performance. This tag can only be defined once.
+attributes:
+- name: clonesonconnect
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether to check for clones when a user connects to the server.
+- name: netbuffersize
+  type: Number
+  required: false
+  default: '10240'
+  description: |-
+    The size of the buffer used to receive data from users.
+- name: softlimit
+  type: Number
+  required: false
+  default: '*Varies*'
+  description: |-
+    The maximum number of connections to allow to the IRC server.
+- name: somaxconn
+  type: Number
+  required: false
+  default: '*Varies*'
+  description: |-
+    The maximum number of connections that may be waiting in the connection accept queue.
+- name: timeskipwarn
+  type: Duration
+  required: false
+  default: 2s
+  description: |-
+    The amount of time the server clock can skip by before server operators are warned about lag.
+details: ""
+example: |-
+  ```xml
+  <performance clonesonconnect="yes"
+               netbuffersize="10240"
+               softlimit="15000"
+               somaxconn="128"
+               timeskipwarn="2s">
+  ```
+
