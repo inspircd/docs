@@ -79,4 +79,6 @@ Removes channel voice status from Sadie in \#channel:
 
 ### Modules
 
-{{module_chmodes_table}}
+{# use the template defined in mkdocs_inspircd/ #}
+{% set modes = module_chmodes %}
+{% include "3/_modes_table.md" %}

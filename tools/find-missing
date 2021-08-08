@@ -5,6 +5,7 @@ missing = Array.new
 Dir["#{ROOT}/docs/**/*.md"].each do |file|
 	contents = File.read(file)
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
+		next if link[0].include? "{{"  # Jinja variable
 		next if File.exist? "#{ROOT}/docs/#{link[0]}.md"
 		next if File.exist? "#{ROOT}/docs/#{link[0]}.yml"
 		next if File.exist? "#{ROOT}/docs/#{link[0]}/index.md"

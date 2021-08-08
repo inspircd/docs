@@ -14,6 +14,9 @@ import mkdocs.structure.files
 import jinja2
 import yaml
 
+PACKAGE_DIR = os.path.abspath(os.path.dirname(__file__))
+TEMPLATES_DIR = os.path.join(PACKAGE_DIR, 'templates')
+
 
 @functools.lru_cache(10240)
 def load_yaml(filename):
@@ -51,7 +54,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         super().__init__()
         self._modules = None
         self.env = jinja2.Environment(
-            loader=jinja2.PackageLoader(__name__),
+            loader=jinja2.FileSystemLoader([TEMPLATES_DIR]),
         )
         self.module_template = self.env.get_template("module.md.j2")
 
@@ -79,71 +82,60 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                 self._modules.append(load_yaml(module_file))
         return self._modules
 
-    def chmodes_table(self, config):
+    def chmodes(self, config):
         modules = self.modules(config)
-        template = self.env.get_template("mode_table.md.j2")
-        return template.render(
-            modes=[
-                {**mode, "module": module["name"]}
-                for module in modules
-                if "chmodes" in module
-                for mode in module["chmodes"]["chars"]
-            ]
-        )
+        return [
+            {**mode, "module": module["name"]}
+            for module in modules
+            if "chmodes" in module
+            for mode in module["chmodes"]["chars"]
+        ]
 
-    def umodes_table(self, config):
+    def umodes(self, config):
         modules = self.modules(config)
-        template = self.env.get_template("mode_table.md.j2")
-        return template.render(
-            modes=[
-                {**mode, "module": module["name"]}
-                for module in modules
-                if "umodes" in module
-                for mode in module["umodes"]["chars"]
-            ]
-        )
+        return [
+            {**mode, "module": module["name"]}
+            for module in modules
+            if "umodes" in module
+            for mode in module["umodes"]["chars"]
+        ]
 
-    def extbans_table(self, config, type):
+    def extbans(self, config, type):
         modules = self.modules(config)
-        template = self.env.get_template("extban_table.md.j2")
-        return template.render(
-            extbans=[
-                {**extban, "module": module["name"]}
-                for module in modules
-                if "extbans" in module
-                for extban in module["extbans"]["chars"]
-                if extban["type"] == type
-            ]
-        )
+        return [
+            {**extban, "module": module["name"]}
+            for module in modules
+            if "extbans" in module
+            for extban in module["extbans"]["chars"]
+            if extban["type"] == type
+        ]
 
-    def snomasks_table(self, config):
+    def snomasks(self, config):
         modules = self.modules(config)
-        template = self.env.get_template("snomask_table.md.j2")
-        return template.render(
-            snomasks=[
-                {**snomask, "module": module["name"]}
-                for module in modules
-                if "snomasks" in module
-                for snomask in module["snomasks"]
-            ]
-        )
+        return [
+            {**snomask, "module": module["name"]}
+            for module in modules
+            if "snomasks" in module
+            for snomask in module["snomasks"]
+        ]
 
     def core_config_tags(self, config):
-        template = self.env.get_template("config_tags.md.j2")
         paths = glob.glob(config["docs_dir"] + "/3/configuration/_*.yml")
         paths.sort()  # sorts by command name
-        return template.render(
-            configuration=[load_yaml(path) for path in paths],
-        )
+        return [load_yaml(path) for path in paths]
 
     def on_page_markdown(self, markdown, page, config, files):
-        """Inserts dynamic/generated text in markdown pages."""
-        return (
-            markdown
-            .replace("{{module_chmodes_table}}", self.chmodes_table(config))
-            .replace("{{module_umodes_table}}", self.umodes_table(config))
-            .replace("{{module_acting_extbans_table}}", self.extbans_table(config, "Acting"))
-            .replace("{{module_matching_extbans_table}}", self.extbans_table(config, "Matching"))
-            .replace("{{module_snomasks_table}}", self.snomasks_table(config))
-            .replace("{{core_config_tags}}", self.core_config_tags(config))
+        """Runs Jinja on an input markdown file, to produce another markdown file."""
+        env = jinja2.Environment(
+            loader=jinja2.FileSystemLoader([TEMPLATES_DIR, config["docs_dir"]]),
         )
+        context = {
+            "module_chmodes": self.chmodes(config),
+            "module_umodes": self.umodes(config),
+            "acting_module_extbans": self.extbans(config, "Acting"),
+            "matching_module_extbans": self.extbans(config, "Matching"),
+            "module_snomasks": self.snomasks(config),
+            "core_config_tags": self.core_config_tags(config)
+        }
+        template = env.from_string(markdown)
+        return template.render(context)

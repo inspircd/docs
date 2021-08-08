@@ -5,12 +5,21 @@ PAGES = Dir["#{ROOT}/docs/**/*.md", "#{ROOT}/docs/**/*.yml"]
 linked = Dir["#{ROOT}/docs/index.md", "#{ROOT}/docs/*/configuration/_*.yml"].to_a
 PAGES.each do |file|
 	contents = File.read(file)
+
+	# Markdown links
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
 		linked << "#{ROOT}/docs/#{link[0]}.md"
 		linked << "#{ROOT}/docs/#{link[0]}.yml"
 		linked << "#{ROOT}/docs/#{link[0]}/index.md"
 	end
+
+	# Markdown includes
 	contents.scan(/\{!\s*(\S+)\s*!\}/).each do |fragment|
+		linked << "#{ROOT}/docs/#{fragment[0]}"
+	end
+
+	# Jinja includes
+	contents.scan(/\{%\s*include\s*"(\S+)"\s*%}/).each do |fragment|
 		linked << "#{ROOT}/docs/#{fragment[0]}"
 	end
 end
