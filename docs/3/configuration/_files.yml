@@ -1,6 +1,9 @@
 name: <files>
 description: |-
-  The `<files>` tag reads one or more files, usually long text files. The purpose of these files depends on what field they are defined in.
+  The `<files>` tag reads one or more files, usually long text files. This tag can only be defined once.
+  
+  The purpose of these files depends on what field they are defined in.
+
 
   Note that files are only read on rehash, so changes are not automatically detected.
 attributes:
