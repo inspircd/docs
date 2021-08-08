@@ -14,7 +14,7 @@ attributes:
   description: |-
     A file used as the Message Of The Day, ie. shown to users when they connect or use the `/MOTD` command.
 details: |-
-  Relative paths are relative to InspIRCd's configuration directory. This is `/etc/inspircd` if installed with your package manager, and the main `conf/` directory otherwise. They are **NOT** relative to the current config file.
+  All paths are relative to InspIRCd's configuration directory. This is `/etc/inspircd` if using our binary packages and defaults to `./run/conf` if you have built from source. They are **NOT** relative to the current config file.
 example: |-
   Use the file `examples/motd.txt.example` as Message Of The Day:
 
