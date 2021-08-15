@@ -41,6 +41,6 @@ Once you have configured your server you can start it by running `systemctl star
 
 Configuration files are stored in `/etc/inspircd`.
 
-Data files are stored in `/usr/lib/inspircd/data`.
+Data files are stored in `/var/lib/inspircd`.
 
-Log files are stored in `/usr/lib/inspircd/logs`.
+Log files are stored in `/usr/log/inspircd`.
