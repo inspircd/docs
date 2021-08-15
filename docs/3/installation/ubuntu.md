@@ -43,4 +43,4 @@ Configuration files are stored in `/etc/inspircd`.
 
 Data files are stored in `/var/lib/inspircd`.
 
-Log files are stored in `/usr/log/inspircd`.
+Log files are stored in `/var/log/inspircd`.
