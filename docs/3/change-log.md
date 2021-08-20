@@ -6,6 +6,100 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+ ### InspIRCd 3.11.0
+
+<!-- TODO: ensure changes after commit 066eef82c1b11628b47642ce2f941faa042e8a10 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<connectban:bootwait>` to allow delaying connectban until the specified time period has passed after boot.
+
+- Added `<connectban:splitwait>` to allow delaying connectban until the specified time period has passed after a network partition.
+
+- Added `<gnutls:onrehash>`, `<mbedtls:onrehash>`, and `<openssl:onrehash>` to allow reloading TLS (SSL) profiles on rehash.
+
+- Added `<hostchange:ports>` to allow selection of rules based on the client's connection port.
+
+- Added `<mkpasswd:operonly>` to restrict the `/MKPASSWD` command to server operators.
+
+- Added a check that the filesystem is actually writable before attempting to generate the build system files.
+
+- Added channel list mode limits to the S2S protocol to allow services to not exceed list limits.
+
+- Added config variables for the config, data, log, module, and runtime directories that were configured at build time.
+
+- Added support for building most extra modules on Windows with Conan.
+
+- Added support for setting TLS 1.3+ ciphersuites to ssl_openssl.
+
+- Added support for the `binary.inspircd.org` and `text.inspircd.org` WebSocket subprotocols to allow web clients to override `<websocket:sendastext>`.
+
+- Added the `--disable-ownership` flag to configure to install without setting filesystem permissions or the user/group to run as.
+
+- Change `RPL_WHOISOPERATOR` to say "is a network service" for U-lined clients when `<security:genericoper>` is enabled.
+
+- Changed `<oper:autologin>` to accept a value of `if-host-match` to allow autologin to only proceed if the user's hostname matches the value in `<oper:host>`.
+
+- Changed the delayjoin module to send the original join time on delayed join messages to clients with the `server-time` capability enabled.
+
+- Changed the system-wide runtime directory on Linux to `/run/inspircd` to avoid a symlink issue with AppArmor.
+
+- Developer: added `IRCv3::WriteNeighborsWithCap::GetAlreadySentId()` for getting the event id of the message which was sent.
+
+- Developer: added the OnPostChangeRealHost event which is fired after a user's real hostname has been changed.
+
+- Developer: moved `/WHOIS` numerics from modules to the main module header file.
+
+- Fixed `/MKPASSWD` disconnecting users if an error happened whilst generating a password.
+
+- Fixed `/NAMES` sending `ERR_NOSUCHCHANNEL` when a channel does not exist.
+
+- Fixed `<log:method>` not defaulting to file logging.
+
+- Fixed `<security:userstats>` not having a sensible default value.
+
+- Fixed a compiler error in the sha256 module on Haiku.
+
+- Fixed a race condition relating to hostname lookups and the haproxy module.
+
+- Fixed an off by one error in the `inspircd` help output.
+
+- Fixed building the ssl_mbedtls module on mbedTLS v3.
+
+- Fixed checking [GKZ]-lines on users who are connecting via a gateway.
+
+- Fixed installing the runtime path if it did not exist.
+
+- Fixed mistakenly registering services globally by their subname (e.g. ssl/websocket -> websocket).
+
+- Fixed mistakenly sending `RPL_WHOISHOST` for U-lined clients.
+
+- Fixed not sending the `CHARSET` 005 token when using a non-ASCII casemapping.
+
+- Fixed sending special oper whois when hideoper is enabled.
+
+- Fixed the `/SILENCE` list serialising `TAGMSG` silences in reverse.
+
+- Fixed the `make deinstall` target to actually remove files properly.
+
+- Fixed the httpd module not parsing headers correctly (this broke the httpd_acl module).
+
+- Fixed the name of the strict-rfc1459 casemapping example config.
+
+- Fixed the noctcp module not respecting the `users/ignore-noctcp` privilege and the `u_noctcp` channel mode.
+
+- Fixed the websocket module not parsing HTTP headers properly.
+
+- Fixed timed bans not being expired correctly if they were truncated.
+
+- Fixed unusual list mode values being allowed.
+
+- Fixed various spelling mistakes all over the codebase.
+
+- Removed `RPL_WHOISSERVICE` as it conflicts with the considerably more popular `RPL_WHOISHELPOP` from UnrealIRCd.
+
+- Removed the broken attempt at root dropping in the helper script.
+
 ### InspIRCd 3.10.0
 
 **This version of InspIRCd was released on 2021-05-14.**
