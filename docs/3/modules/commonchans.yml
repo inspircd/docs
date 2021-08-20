@@ -23,7 +23,6 @@ configuration:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: deaf_commonchan
     char: c

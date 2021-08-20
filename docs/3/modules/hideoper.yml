@@ -4,7 +4,6 @@ description: |-
   This module adds user mode `H` (hideoper) which hides the server operator status of a user from unprivileged users.
 
 umodes:
-  description: ""
   chars:
   - name: hideoper
     char: H

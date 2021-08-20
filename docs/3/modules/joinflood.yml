@@ -37,7 +37,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: joinflood
     char: j

@@ -4,7 +4,6 @@ description: |-
   This module adds various channel and user modes relating to services accounts.
 
 chmodes:
-  description: ""
   chars:
   - name: c_registered
     char: r
@@ -30,7 +29,6 @@ chmodes:
   example: ""
 
 umodes:
-  description: ""
   chars:
   - name: regdeaf
     char: R

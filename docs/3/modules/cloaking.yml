@@ -76,7 +76,6 @@ configuration:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: cloak
     char: x

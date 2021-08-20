@@ -21,7 +21,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: invex
     char: I

@@ -21,7 +21,6 @@ configuration:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: hidechans
     char: I

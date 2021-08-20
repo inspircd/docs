@@ -51,7 +51,6 @@ configuration:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: helpop
     char: h

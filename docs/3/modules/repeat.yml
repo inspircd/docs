@@ -57,7 +57,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: repeat
     char: E

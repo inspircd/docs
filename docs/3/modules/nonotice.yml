@@ -4,7 +4,6 @@ description: |-
   This module adds channel mode `T` (nonotice) which allows channels to block messages sent with the `/NOTICE` command.
 
 chmodes:
-  description: ""
   chars:
   - name: nonotice
     char: T

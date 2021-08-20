@@ -23,7 +23,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: nonick
     char: N

@@ -4,7 +4,6 @@ description: |-
   This module adds channel mode `J` (kicknorejoin) which prevents users from rejoining after being kicked from a channel.
 
 chmodes:
-  description: ""
   chars:
   - name: kicknorejoin
     char: J

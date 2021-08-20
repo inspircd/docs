@@ -4,7 +4,6 @@ description: |-
   This module provides support for adding and removing modes via their long names.
 
 chmodes:
-  description: ""
   chars:
   - name: namebase
     char: Z

@@ -41,7 +41,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: noctcp
     char: C
@@ -53,7 +52,6 @@ chmodes:
   example: ""
 
 umodes:
-  description: ""
   chars:
   - name: u_noctcp
     char: T

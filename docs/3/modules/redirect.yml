@@ -6,7 +6,6 @@ description: |-
 configuration: []
 
 chmodes:
-  description: ""
   chars:
   - name: redirect
     char: L
@@ -22,7 +21,6 @@ chmodes:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: antiredirect
     char: L

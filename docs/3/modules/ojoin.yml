@@ -35,7 +35,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: official-join
     char: Y

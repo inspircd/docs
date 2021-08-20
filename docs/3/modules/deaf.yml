@@ -59,7 +59,6 @@ configuration:
     ```
 
 umodes:
-  description: ""
   chars:
   - name: deaf
     char: d

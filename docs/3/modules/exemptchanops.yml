@@ -4,7 +4,6 @@ description: |-
   This module adds channel mode `X` (exemptchanops) which allows channel operators to grant exemptions to various channel-level restrictions.
 
 chmodes:
-  description: ""
   chars:
   - name: exemptchanops
     char: X

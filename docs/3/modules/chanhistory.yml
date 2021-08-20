@@ -43,7 +43,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: history
     char: H

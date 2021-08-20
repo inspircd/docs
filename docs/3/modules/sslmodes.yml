@@ -21,7 +21,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: sslonly
     char: z
@@ -33,7 +32,6 @@ chmodes:
   example: ""
 
 umodes:
-  description: ""
   chars:
   - name: sslqueries
     char: z

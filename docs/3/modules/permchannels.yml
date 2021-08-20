@@ -86,7 +86,6 @@ configuration:
     ```
 
 chmodes:
-  description: ""
   chars:
   - name: permanent
     char: P
