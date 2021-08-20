@@ -34,7 +34,8 @@ exemptions:
 extbans:
   description: ""
   chars:
-  - char: S
+  - name: stripcolor
+    char: S
     type: Acting
     syntax: '`S:<mask>`'
     description: Strips IRC formatting codes from messages sent by users matching &lt;mask&gt;.

@@ -16,7 +16,8 @@ chmodes:
 
 extbans:
   chars:
-  - char: A
+  - name: blockinvite
+    char: A
     type: Acting
     syntax: "`A:<mask>`"
     description: Bans &lt;mask&gt; from using the `/INVITE` command.

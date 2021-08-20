@@ -47,7 +47,8 @@ umodes:
 extbans:
   description: ""
   chars:
-  - char: z
+  - name: sslfp
+    char: z
     type: Matching
     syntax: '`z:<pattern>`'
     description: Checks whether users have an TLS (SSL) client certificate with a fingerprint matching &lt;pattern&gt;.

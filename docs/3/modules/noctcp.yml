@@ -71,7 +71,8 @@ exemptions:
 extbans:
   description: ""
   chars:
-  - char: C
+  - name: noctcp
+    char: C
     type: Acting
     syntax: '`C:<mask>`'
     description: Bans &lt;mask&gt; from sending messages that contain CTCPs.

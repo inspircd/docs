@@ -55,11 +55,13 @@ exemptions:
 extbans:
   description: ""
   chars:
-  - char: R
+  - name: account
+    char: R
     type: Matching
     syntax: '`R:<pattern>`'
     description: Checks whether users are logged into a services account matching &lt;pattern&gt;.
-  - char: U
+  - name: unauthed
+    char: U
     type: Matching
     syntax: '`U:<pattern>`'
     description: Checks whether users matching &lt;pattern&gt; are *not* logged into a services account.

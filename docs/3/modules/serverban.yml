@@ -6,7 +6,8 @@ description: |-
 extbans:
   description: ""
   chars:
-  - char: s
+  - name: server
+    char: s
     type: Matching
     syntax: '`s:<pattern>`'
     description: Checks whether users are on a server matching &lt;pattern&gt;.

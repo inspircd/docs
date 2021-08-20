@@ -64,7 +64,8 @@ exemptions:
 
 extbans:
   chars:
-  - char: B
+  - name: blockcaps
+    char: B
     type: Acting
     syntax: '`B:<mask>`'
     description: Bans &lt;mask&gt; from sending messages with excessive capitalisation.

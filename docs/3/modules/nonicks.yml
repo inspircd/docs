@@ -37,7 +37,8 @@ chmodes:
 extbans:
   description: ""
   chars:
-  - char: N
+  - name: nonick
+    char: N
     type: Acting
     syntax: '`N:<mask>`'
     description: Bans users matching &lt;mask&gt; from changing their nickname whilst in the channel.

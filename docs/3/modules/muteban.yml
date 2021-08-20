@@ -23,7 +23,8 @@ configuration:
 extbans:
   description: ""
   chars:
-  - char: m
+  - name: mute
+    char: m
     type: Acting
     syntax: '`m:<mask>`'
     description: Bans &lt;mask&gt; from speaking in the channel.

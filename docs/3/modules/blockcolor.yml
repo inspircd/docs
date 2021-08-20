@@ -21,7 +21,8 @@ exemptions:
 
 extbans:
   chars:
-  - char: c
+  - name: blockcolor
+    char: c
     type: Acting
     syntax: '`c:<mask>`'
     description: |-

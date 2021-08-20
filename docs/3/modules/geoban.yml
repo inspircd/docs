@@ -6,7 +6,8 @@ description: |-
 extbans:
   description: ""
   chars:
-  - char: G
+  - name: country
+    char: G
     type: Matching
     syntax: '`G:<pattern>`'
     description: Matches against the two letter country code for the country that users are connecting from.

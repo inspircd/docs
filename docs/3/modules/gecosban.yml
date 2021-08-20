@@ -6,11 +6,13 @@ description: |-
 extbans:
   description: ""
   chars:
-  - char: a
+  - name: realmask
+    char: a
     type: Matching
     syntax: '`a:<pattern>`'
     description: Checks whether users have a nick!user@host+real mask matching &lt;pattern&gt;.
-  - char: r
+  - name: realname
+    char: r
     type: Matching
     syntax: '`r:<pattern>`'
     description: Checks whether users have a a real name (gecos) matching &lt;pattern&gt;.

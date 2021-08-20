@@ -6,7 +6,8 @@ description: |-
 extbans:
   description: ""
   chars:
-  - char: j
+  - name: channel
+    char: j
     type: Matching
     syntax: '`j:<pattern>`'
     description: Checks whether users are in a channel matching &lt;pattern&gt;.
