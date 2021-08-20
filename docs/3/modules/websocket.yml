@@ -30,8 +30,9 @@ configuration:
     type: Text
     required: false
     default: None
+    added: 3.5.0
     description: |-
-      [**New in v3.5.0!**](/3/change-log/#inspircd-350) A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
+      A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
   - name: sendastext
     type: Text
     required: false

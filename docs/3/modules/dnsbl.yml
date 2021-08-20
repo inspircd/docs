@@ -99,8 +99,9 @@ configuration:
     type: Duration
     required: false
     default: '*Depends on `<dns:timeout>`*'
+    added: 3.10.0
     description: |-
-      [**New in v3.10.0!**](/3/change-log/#inspircd-3100) The time period to wait for a response from this DNSBL.
+      The time period to wait for a response from this DNSBL.
   - name: type
     type: Text
     required: false

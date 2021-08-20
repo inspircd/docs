@@ -42,8 +42,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.4.0
     description: |-
-      [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to to ignore the case of a FQDN when cloaking.
+      Whether to to ignore the case of a FQDN when cloaking.
   details: |-
     The mode field should be set to one of the following values:
 

@@ -30,14 +30,16 @@ attributes:
   type: Boolean
   required: false
   default: 'Yes'
+  added: 3.10.0
   description: |-
-    [**New in v3.10.0!**](/3/change-log/#inspircd-3100) Whether to ignore config files that don't exist.
+    Whether to ignore config files that don't exist.
 - name: noenv
   type: Boolean
   required: false
   default: Yes (executable)<br>No (directory, file)
+  added: 3.6.0
   description: |-
-    [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to allow environment variables to be used from within the included config.
+    Whether to allow environment variables to be used from within the included config.
 - name: noexec
   type: Boolean
   required: false

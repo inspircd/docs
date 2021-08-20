@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.6.0
     description: |-
-      [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether TLS (SSL) is required to use SASL.
+      Whether TLS (SSL) is required to use SASL.
   - name: target
     type: Text
     required: true

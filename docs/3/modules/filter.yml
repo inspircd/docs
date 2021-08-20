@@ -24,8 +24,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.2.0
     description: |-
-      [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
+      Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
   details: |-
     The engine field should be set to the name of a regular expression engine.
 

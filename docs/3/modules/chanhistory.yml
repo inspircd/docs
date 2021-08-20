@@ -18,8 +18,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.9.0
     description: |-
-      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether user mode `N` (nohistory) is enabled.
+      Whether user mode `N` (nohistory) is enabled.
   - name: maxlines
     type: Number
     required: false
@@ -65,15 +66,13 @@ chmodes:
     ```
 
 umodes:
-  description: |-
-    !!! note "New in v3.9.0!"
-        If you are using an older version you will need to upgrade to use this user mode.
   chars:
   - name: nohistory
     char: N
     type: Switch
     syntax: None
     usable_by: Anyone
+    added: 3.9.0
     description: |-
       Disables receiving channel history on join.
   example: ""

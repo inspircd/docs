@@ -55,8 +55,9 @@ configuration:
     type: Boolean
     required: false
     default: 'yes'
+    added: 3.9.0
     description: |-
-      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether to throttle users in this class when excessive connections are being made to the server.
+      Whether to throttle users in this class when excessive connections are being made to the server.
   details: ""
   example: |-
     Disables connection flood throttling for users in the BNC class:

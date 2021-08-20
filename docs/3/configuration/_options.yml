@@ -66,8 +66,9 @@ attributes:
   type: Boolean
   required: false
   default: 'Yes'
+  added: 3.6.0
   description: |-
-    [**New in v3.6.0!**](/3/change-log/#inspircd-360) Whether to include the current channel modes in the `/LIST` output.
+    Whether to include the current channel modes in the `/LIST` output.
 - name: nosnoticestack
   type: Boolean
   required: false

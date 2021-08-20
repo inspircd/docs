@@ -12,8 +12,9 @@ configuration:
     type: Duration
     required: false
     default: 30s
+    added: 3.8.0
     description: |-
-      [**New in v3.8.0!**](/3/change-log/#inspircd-380) The time period to wait after booting before blocking join floods.
+      The time period to wait after booting before blocking join floods.
   - name: duration
     type: Duration
     required: false
@@ -24,8 +25,9 @@ configuration:
     type: Duration
     required: false
     default: 30s
+    added: 3.8.0
     description: |-
-      [**New in v3.8.0!**](/3/change-log/#inspircd-380) The time period to wait after a netsplit before blocking join floods.
+      The time period to wait after a netsplit before blocking join floods.
   details: ""
   example: |-
     ```xml

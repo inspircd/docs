@@ -36,8 +36,9 @@ attributes:
   type: Text
   required: false
   default: \*
+  added: 3.6.0
   description: |-
-    [**New in v3.6.0!**](/3/change-log/#inspircd-360) The server operator-only snomasks that server operators with this class can change.
+    The server operator-only snomasks that server operators with this class can change.
 details: |+
   {! 3/configuration/_class_privs.md !}
 

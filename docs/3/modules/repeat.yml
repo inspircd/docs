@@ -12,8 +12,9 @@ configuration:
     type: String
     required: false
     default: Repeat flood
+    added: 3.9.0
     description: |-
-      [**New in v3.9.0!**](/3/change-log/#inspircd-390) The message to kick users who repeat flood with.
+      The message to kick users who repeat flood with.
   - name: maxbacklog
     type: Number
     required: false

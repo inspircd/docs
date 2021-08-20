@@ -14,8 +14,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.7.0
     description: |-
-      [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to force bots to use notices.
+      Whether to force bots to use notices.
   details: ""
   example: |-
     ```xml

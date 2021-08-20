@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'Yes'
+    added: 3.7.0
     description: |-
-      [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to send a notice to channel operators when a timed ban is added or expired.
+      Whether to send a notice to channel operators when a timed ban is added or expired.
   details: ""
   example: |-
     ```xml

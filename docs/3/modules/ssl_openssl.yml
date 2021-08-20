@@ -169,14 +169,16 @@ configuration:
     type: Boolean
     required: false
     default: 'Yes'
+    added: 3.2.0
     description: |-
-      [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether the TLSv1.1 protocol is enabled.
+      Whether the TLSv1.1 protocol is enabled.
   - name: tlsv12
     type: Boolean
     required: false
     default: 'Yes'
+    added: 3.2.0
     description: |-
-      [**New in v3.2.0!**](/3/change-log/#inspircd-320) Whether the TLSv1.2 protocol is enabled.
+      Whether the TLSv1.2 protocol is enabled.
   details: |-
     The crlmode field should be set to one of the following values:
 

@@ -18,8 +18,9 @@ configuration:
     type: Duration
     required: false
     default: 5s
+    added: 3.2.0
     description: |-
-      [**New in v3.2.0!**](/3/change-log/#inspircd-320) The time period between attempts to check whether the X-line database needs to be written.
+      The time period between attempts to check whether the X-line database needs to be written.
   details: ""
   example: |-
     ```xml

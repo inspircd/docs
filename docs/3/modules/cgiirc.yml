@@ -123,8 +123,9 @@ commands:
 - name: HEXIP
   param_count: 1
   syntax: '`<hex-ip|real-ip>`'
+  added: 3.9.0
   description: |-
-    [**New in v3.9.0!**](/3/change-log/#inspircd-390) Encodes or decodes an IP between its human readable form and its hex form.
+    Encodes or decodes an IP between its human readable form and its hex form.
 - name: WEBIRC
   param_count: 4-5
   syntax: '`<password> <gateway> <hostname> <address> [<flags>]`'

@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.8.0
     description: |-
-      [**New in v3.8.0!**](/3/change-log/#inspircd-380) Whether to use glob matching instead of case-insensitive string matching.
+      Whether to use glob matching instead of case-insensitive string matching.
   details: ""
   example: |-
     ```xml

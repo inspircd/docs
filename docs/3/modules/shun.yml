@@ -18,20 +18,23 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.9.0
     description: |-
-      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether to only apply shuns to users who have fully connected to the server.
+      Whether to only apply shuns to users who have fully connected to the server.
   - name: allowtags
     type: Boolean
     required: false
     default: 'No'
+    added: 3.8.0
     description: |-
-      [**New in v3.8.0!**](/3/change-log/#inspircd-380) Whether shunned users can send message tags on allowed commands.
+      Whether shunned users can send message tags on allowed commands.
   - name: cleanedcommands
     type: Text
     required: false
     default: AWAY PART QUIT
+    added: 3.8.0
     description: |-
-      [**New in v3.8.0!**](/3/change-log/#inspircd-380) The commands to remove any messages from if allowed.
+      The commands to remove any messages from if allowed.
   - name: enabledcommands
     type: Text
     required: false
@@ -60,8 +63,9 @@ configuration:
   extends: true
   added_values:
   - name: servers/ignore-shuns
+    added: 3.8.0
     description: |-
-      [**New in v3.6.0!**](/3/change-log/#inspircd-360) Allows server operators to ignore shuns.
+      Allows server operators to ignore shuns.
   details: ""
   example: |-
     Allows server operators with the class named BasicOper to ignore shuns.

@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'yes'
+    added: 3.9.0
     description: |-
-      [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether to ban users in this class for making excessive connections to the server.
+      Whether to ban users in this class for making excessive connections to the server.
   details: ""
   example: |-
     Disables excessive connection bans for users in the BNC class:

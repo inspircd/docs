@@ -32,7 +32,7 @@ This page only lists core configuration. For details on the configuration of a s
 <td markdown="1">{{attr.name}}</td>
 <td markdown="1">{{attr.type}}</td>
 <td markdown="1">{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
-<td markdown="1">{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
+<td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
 </tr>
 {% endfor %}
 </tbody>

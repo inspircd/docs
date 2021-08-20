@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'Yes'
+    added: 3.7.0
     description: |-
-      [**New in v3.7.0!**](/3/change-log/#inspircd-370) Whether to allow clients to send client-to-client tags.
+      Whether to allow clients to send client-to-client tags.
   details: ""
   example: |-
     ```xml

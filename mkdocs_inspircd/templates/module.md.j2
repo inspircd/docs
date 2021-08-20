@@ -54,7 +54,7 @@ To load this module use the following `<module>` tag:
 <td markdown="1">{{attr.name}}</td>
 <td markdown="1">{{attr.type}}</td>
 <td markdown="1">{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
-<td markdown="1">{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
+<td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -74,7 +74,7 @@ To load this module use the following `<module>` tag:
 {% for value in tag.added_values %}
 <tr markdown="1">
 <td markdown="1">{{value.name}}</td>
-<td markdown="1">{{value.description}}</td>
+<td markdown="1">{% if value.added %}<a href="/{{ value.added|first }}/change-log/#inspircd-{{ value.added|replace(".", "") }}"><strong>New in v{{ value.added }}!</strong></a> {% endif %}{{value.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -111,7 +111,7 @@ This module requires no other configuration.
 <td markdown="1">{{command.name}}</td>
 <td markdown="1">{{command.param_count}}</td>
 <td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
-<td markdown="1">{{command.description}}</td>
+<td markdown="1">{% if command.added %}<a href="/{{ command.added|first }}/change-log/#inspircd-{{ command.added|replace(".", "") }}"><strong>New in v{{ command.added }}!</strong></a> {% endif %}{{command.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -140,7 +140,7 @@ This module requires no other configuration.
 {% for cap in client_caps %}
 <tr markdown="1">
 <td markdown="1">{{cap.name}}</td>
-<td markdown="1">{{cap.description}}</td>
+<td markdown="1">{% if cap.added %}<a href="/{{ cap.added|first }}/change-log/#inspircd-{{ cap.added|replace(".", "") }}"><strong>New in v{{ cap.added }}!</strong></a> {% endif %}{{cap.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -172,7 +172,7 @@ This module requires no other configuration.
 <td markdown="1">{{mode.type}}</td>
 <td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
 <td markdown="1">{{mode.usable_by}}</td>
-<td markdown="1">{{mode.description}}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -211,7 +211,7 @@ This module requires no other configuration.
 <td markdown="1">{{mode.type}}</td>
 <td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
 <td markdown="1">{{mode.usable_by}}</td>
-<td markdown="1">{{mode.description}}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -239,7 +239,7 @@ This module requires no other configuration.
 {% for exemption in exemptions %}
 <tr markdown="1">
 <td markdown="1">{{exemption.name}}</td>
-<td markdown="1">{{exemption.description}}</td>
+<td markdown="1">{% if exemption.added %}<a href="/{{ exemption.added|first }}/change-log/#inspircd-{{ exemption.added|replace(".", "") }}"><strong>New in v{{ exemption.added }}!</strong></a> {% endif %}{{exemption.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -266,7 +266,7 @@ This module requires no other configuration.
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
 <td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-<td markdown="1">{{mode.description}}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -294,7 +294,7 @@ This module requires no other configuration.
 {% for mask in snomasks %}
 <tr markdown="1">
 <td markdown="1">{{mask.char}}</td>
-<td markdown="1">{{mask.description}}</td>
+<td markdown="1">{% if mask.added %}<a href="/{{ mask.added|first }}/change-log/#inspircd-{{ mask.added|replace(".", "") }}"><strong>New in v{{ mask.added }}!</strong></a> {% endif %}{{mask.description}}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -315,7 +315,7 @@ This module requires no other configuration.
 {% for stat in stats %}
 <tr markdown="1">
 <td markdown="1">{{stat.char}}</td>
-<td markdown="1">{{stat.description}}</td>
+<td markdown="1">{% if stat.added %}<a href="/{{ stat.added|first }}/change-log/#inspircd-{{ stat.added|replace(".", "") }}"><strong>New in v{{ stat.added }}!</strong></a> {% endif %}{{stat.description}}</td>
 </tr>
 {% endfor %}
 </tbody>

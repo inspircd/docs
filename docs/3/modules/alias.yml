@@ -48,8 +48,9 @@ configuration:
     type: Boolean
     required: false
     default: 'No'
+    added: 3.4.0
     description: |-
-        [**New in v3.4.0!**](/3/change-log/#inspircd-340) Whether to strip formatting codes before matching an alias.
+        Whether to strip formatting codes before matching an alias.
   - name: uline
     type: Boolean
     required: false

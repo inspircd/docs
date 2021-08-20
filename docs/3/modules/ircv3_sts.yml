@@ -12,8 +12,9 @@ configuration:
     type: Boolean
     required: false
     default: 'Yes'
+    added: 3.1.0
     description: |-
-      [**New in v3.1.0!**](/3/change-log/#inspircd-310) Whether users in this connect class should have a STS policy advertised to them.
+      Whether users in this connect class should have a STS policy advertised to them.
   details: ""
   example: |-
     Disables STS policy advertisement for users in the LocalIPv4 class:

@@ -6,8 +6,9 @@ attributes:
   type: Boolean
   required: false
   default: 'Yes'
+  added: 3.9.0
   description: |-
-    [**New in v3.9.0!**](/3/change-log/#inspircd-390) Whether DNS lookups are enabled.
+    Whether DNS lookups are enabled.
 - name: server
   type: Text
   required: false

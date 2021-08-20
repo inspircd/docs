@@ -30,8 +30,9 @@ attributes:
   type: Text
   required: false
   default: data
+  added: 3.9.0
   description: |-
-    [**New in v3.9.0!**](/3/change-log/#inspircd-390) The location of the runtime directory.
+    The location of the runtime directory.
 details: ""
 example: |-
   ```xml
