@@ -250,6 +250,7 @@ This module requires no other configuration.
 <table markdown="1">
 <thead>
 <tr>
+<th>Name</th>
 <th>Character</th>
 <th>Type</th>
 <th>Ban Syntax</th>
@@ -260,6 +261,7 @@ This module requires no other configuration.
 {% for mode in extbans.chars %}
 <tr markdown="1">
 <td markdown="1">{{mode.char}}</td>
+<td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.type}}</td>
 <td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
 <td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
