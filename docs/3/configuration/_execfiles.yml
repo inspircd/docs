@@ -1,0 +1,20 @@
+name: <execfiles>
+description: |-
+  The `<execfiles>` tag runs a shell command and reads its output. This tag can only be defined once. The purpose of the output depends on what field commands are defined in.
+
+  Note that commands are only run on rehash, so changes are not automatically detected.
+attributes:
+- name: motd
+  type: Text
+  required: false
+  default: None
+  description: |-
+    A file used as the message of the day, ie. shown to users when they connect or use the `/MOTD` command.
+details: |-
+  The working directory is InspIRCd's configuration directory.
+example: |-
+  Downloads `https://www.example.com/motd.txt` and uses it as the message of the day:
+
+  ```xml
+  <execfiles motd="wget -O - https://www.example.com/motd.txt">
+  ```
