@@ -1,8 +1,6 @@
 name: <execfiles>
 description: |-
-  The `<execfiles>` tag runs a shell command and reads its output. This tag can only be defined once.
-
-  The purpose of the output depends on what field commands are defined in.
+  The `<execfiles>` tag runs a shell command and reads its output. This tag can only be defined once. The purpose of the output depends on what field commands are defined in.
 
   Note that commands are only run on rehash, so changes are not automatically detected.
 attributes:
@@ -15,7 +13,7 @@ attributes:
 details: |-
   The working directory of the directory use to run InspIRCd.
 example: |-
-  Downloads `https://www.example.com/motd.txt` and uses it as Message Of The Day:
+  Downloads `https://www.example.com/motd.txt` and uses it as the message of the day:
 
   ```xml
   <execfiles motd="wget -O - https://www.example.com/motd.txt">

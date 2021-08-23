@@ -1,7 +1,6 @@
 name: <files>
 description: |-
-  The `<files>` tag reads one or more files, usually long text files. This tag can only be defined once.
-  The purpose of these files depends on what field they are defined in.
+  The `<files>` tag reads one or more files. This tag can only be defined once. The purpose of these files depends on what field they are defined in.
 
   Note that files are only read on rehash, so changes are not automatically detected.
 attributes:
@@ -10,7 +9,7 @@ attributes:
   required: false
   default: None
   description: |-
-    A file used as the Message Of The Day, ie. shown to users when they connect or use the `/MOTD` command.
+    A file used as the message of the day, i.e. shown to users when they connect or use the `/MOTD` command.
 details: |-
   All paths are relative to InspIRCd's configuration directory. This is `/etc/inspircd` if using our binary packages and defaults to `./run/conf` if you have built from source. They are **NOT** relative to the current config file.
 example: |-
