@@ -121,7 +121,9 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         ]
 
     def extra_tag_fields(self, config):
-        extra_tag_fields = collections.defaultdict(list)
+        extra_tag_fields = collections.defaultdict(
+            lambda: collections.defaultdict(list)
+        )
 
         for module in self.modules(config):
             for module_tag in module.get("configuration", []):
@@ -134,7 +136,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
                     for name in tag_names:
                         for field in module_tag.get("attributes", []):
-                            extra_tag_fields[name].append(
+                            extra_tag_fields[name][field["name"]].append(
                                 {
                                     "module": module["name"],
                                     **field,

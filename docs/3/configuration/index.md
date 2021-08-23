@@ -53,14 +53,18 @@ Additionally, the following fields are provided by modules:
 </tr>
 </thead>
 <tbody markdown="1">
-{% for field in extra_tag_fields[tag.name]|sort(attribute='name') -%}
+{% for field_name in extra_tag_fields[tag.name].keys()|sort -%}
+{% for field in extra_tag_fields[tag.name][field_name] %}
 <tr markdown="1">
-<td markdown="1">{{field.name}}</td>
-<td markdown="1">{{field.type}}</td>
+{% if loop.first %}
+<td markdown="1" rowspan="{{loop.length}}">{{field.name}}</td>
+<td markdown="1" rowspan="{{loop.length}}">{{field.type}}</td>
+{% endif %}
 <td markdown="1">{% if field.default == "None" %}<em>None</em>{% else %}{{field.default}}{% endif %}</td>
 <td markdown="1">[{{field.module}}](/3/modules/{{field.module}}/)</td>
 <td markdown="1">{% if field.required %}<strong>Required!</strong> {% endif %}{{field.description}}</td>
 </tr>
+{% endfor %}
 {% endfor %}
 </tbody>
 </table>
