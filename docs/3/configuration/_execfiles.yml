@@ -9,7 +9,7 @@ attributes:
   required: false
   default: None
   description: |-
-    A file used as the Message Of The Day, ie. shown to users when they connect or use the `/MOTD` command.
+    A file used as the message of the day, ie. shown to users when they connect or use the `/MOTD` command.
 details: |-
   The working directory is InspIRCd's configuration directory.
 example: |-

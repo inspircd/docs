@@ -13,7 +13,7 @@ attributes:
 details: |-
   All paths are relative to InspIRCd's configuration directory. This is `/etc/inspircd` if using our binary packages and defaults to `./run/conf` if you have built from source. They are **NOT** relative to the current config file.
 example: |-
-  Use the file `examples/motd.txt.example` as Message Of The Day:
+  Use the file `examples/motd.txt.example` as message of the day:
 
   ```xml
   <files motd="examples/motd.txt.example">
