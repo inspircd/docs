@@ -11,7 +11,7 @@ attributes:
   description: |-
     A file used as the Message Of The Day, ie. shown to users when they connect or use the `/MOTD` command.
 details: |-
-  The working directory of the directory use to run InspIRCd.
+  The working directory is InspIRCd's configuration directory.
 example: |-
   Downloads `https://www.example.com/motd.txt` and uses it as the message of the day:
 
