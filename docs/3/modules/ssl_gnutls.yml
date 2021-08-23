@@ -11,10 +11,12 @@ description: |-
 configuration:
 - name: <bind>
   description: |-
-    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following keys:
+    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following fields:
   extends: true
-  added_values:
+  attributes:
   - name: ssl
+    type: Text
+    default: None
     description: |-
       *This MUST be set to the name of a GnuTLS TLS (SSL) profile to listen for secure connections with GnuTLS.*
   details: ""

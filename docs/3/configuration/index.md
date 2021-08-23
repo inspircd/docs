@@ -39,6 +39,37 @@ This page only lists core configuration. For details on the configuration of a s
 </table>
 {% endif %}
 
+{% if extra_tag_fields[tag.name] %}
+Additionally, the following fields are provided by modules:
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for field_name in extra_tag_fields[tag.name].keys()|sort -%}
+{% for field in extra_tag_fields[tag.name][field_name] %}
+<tr markdown="1">
+{% if loop.first %}
+<td markdown="1" rowspan="{{loop.length}}">{{field.name}}</td>
+<td markdown="1" rowspan="{{loop.length}}">{{field.type}}</td>
+<td markdown="1" rowspan="{{loop.length}}">{% if field.default == "None" %}<em>None</em>{% else %}{{field.default}}{% endif %}</td>
+{% endif %}
+<td markdown="1">[{{field.module}}](/3/modules/{{field.module}}/)</td>
+<td markdown="1">{% if field.required %}<strong>Required!</strong> {% endif %}{{field.description}}</td>
+</tr>
+{% endfor %}
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
 {{tag.details}}
 
 #### Example Usage
