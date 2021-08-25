@@ -1,7 +1,7 @@
 name: muteban
 
 description: |-
-  This module adds extended ban `m:` which bans specific masks from speaking in a channel.
+  This module adds extended ban `m:` (mute) which bans specific masks from speaking in a channel.
 
 configuration:
 - name: <muteban>

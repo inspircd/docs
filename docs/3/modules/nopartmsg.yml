@@ -1,7 +1,7 @@
 name: nopartmsg
 
 description: |-
-  This module adds extended ban `p:` which blocks the part message of matching users.
+  This module adds extended ban `p:` (partmsg) which blocks the part message of matching users.
 
 extbans:
   description: ""

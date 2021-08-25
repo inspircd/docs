@@ -1,7 +1,7 @@
 name: channelban
 
 description: |-
-  This module adds extended ban `j:` which checks whether users are in a channel matching the specified glob pattern.
+  This module adds extended ban `j:` (channel) which checks whether users are in a channel matching the specified glob pattern.
 
 extbans:
   description: ""

@@ -1,7 +1,7 @@
 name: classban
 
 description: |-
-  This module adds extended ban `n:` which check whether users are in a connect class matching the specified glob pattern.
+  This module adds extended ban `n:` (class) which check whether users are in a connect class matching the specified glob pattern.
 
 extbans:
   description: ""

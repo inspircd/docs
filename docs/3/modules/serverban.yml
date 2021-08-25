@@ -1,7 +1,7 @@
 name: serverban
 
 description: |-
-  This module adds extended ban `s:` which check whether users are on a server matching the specified glob pattern.
+  This module adds extended ban `s:` (server) which check whether users are on a server matching the specified glob pattern.
 
 extbans:
   description: ""

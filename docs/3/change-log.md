@@ -110,7 +110,7 @@ This page lists changes which have happened between releases.
 
 - Added automatic pruning of expired entries to the chanhistory module.
 
-- Added extended ban `w:` which matches against a WebIRC gateway name.
+- Added extended ban `w:` (gateway) which matches against a WebIRC gateway name.
 
 - Added more logging to the http_acl module to allow debugging access issues.
 
