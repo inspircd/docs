@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to make the server log when a server operator-only command is executed.
 
 configuration:
-- name: <operlog>
+- name: operlog
   description: |-
     The `<operlog>` tag defines settings about how the operlog module should behave. This tag can only be defined once.
   attributes:

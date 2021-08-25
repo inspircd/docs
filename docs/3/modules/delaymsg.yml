@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `d` (delaymsg) which prevents newly joined users from speaking until the specified number of seconds have passed.
 
 configuration:
-- name: <delaymsg>
+- name: delaymsg
   description: |-
     The `<delaymsg>` tag defines settings about how the delaymsg module should behave. This tag can only be defined once.
   attributes:

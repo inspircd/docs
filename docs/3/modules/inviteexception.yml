@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `I` (invex) which allows channel operators to exempt user masks from channel mode `i` (inviteonly).
 
 configuration:
-- name: <inviteexception>
+- name: inviteexception
   description: |-
     The `<inviteexception>` tag defines settings about how the inviteexception module should behave. This tag can only be defined once.
   attributes:

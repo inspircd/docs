@@ -1,4 +1,4 @@
-name: <execfiles>
+name: execfiles
 description: |-
   The `<execfiles>` tag runs a shell command and reads its output. This tag can only be defined once. The purpose of the output depends on what field commands are defined in.
 

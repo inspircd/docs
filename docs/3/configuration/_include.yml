@@ -1,4 +1,4 @@
-name: <include>
+name: include
 description: |-
   The `<include>` tag allows you include the contents of a file or the output of a command into your config file. This tag can be defined as many times as required.
 attributes:

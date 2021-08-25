@@ -4,7 +4,7 @@ description: |-
   This module adds the `/FILTER` command which allows server operators to define regex matches for inappropriate phrases that are not allowed to be used in channel messages, private messages, part messages, or quit messages.
 
 configuration:
-- name: <filteropts>
+- name: filteropts
   description: |-
     The `<filteropts>` tag defines settings about how the filter module should behave. This tag can only be defined once.
   attributes:
@@ -38,7 +38,7 @@ configuration:
                 notifyuser="yes"
                 warnonselfmsg="no">
     ```
-- name: <keyword>
+- name: keyword
   description: |-
     The `<keyword>` tag defines an inappropriate phrase. This tag can be defined as many times as required.
   attributes:

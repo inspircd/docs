@@ -1,4 +1,4 @@
-name: <pid>
+name: pid
 description: |-
   The `<pid>` tag defines the location of the pidfile. This tag can only be defined once.
 attributes:

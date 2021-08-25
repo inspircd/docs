@@ -4,7 +4,7 @@ description: |-
   This module adds the `/MONITOR` command which allows users to find out when their friends are connected to the server.
 
 configuration:
-- name: <monitor>
+- name: monitor
   description: |-
     The `<monitor>` tag defines settings about how the monitor module should behave. This tag can only be defined once.
   attributes:

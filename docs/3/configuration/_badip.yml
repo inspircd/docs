@@ -1,4 +1,4 @@
-name: <badip>
+name: badip
 description: |-
   The `<badip>` tag defines a permanent Z-line. This tag can be defined as many times as required.
 attributes:

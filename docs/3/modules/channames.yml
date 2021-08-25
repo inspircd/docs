@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to define what characters are allowed in channel names.
 
 configuration:
-- name: <channames>
+- name: channames
   description: |-
     The `<channames>` tag defines settings about how the channames module should behave. This tag can only be defined once.
   attributes:

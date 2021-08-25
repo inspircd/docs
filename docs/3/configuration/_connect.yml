@@ -1,4 +1,4 @@
-name: <connect>
+name: connect
 description: |-
   The `<connect>` tag defines a class that users can be filtered into when they connect to the server. This tag can be defined as many times as required.
 attributes:

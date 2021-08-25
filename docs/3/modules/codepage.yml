@@ -8,7 +8,7 @@ description: |-
   This module allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 
 configuration:
-- name: <codepage>
+- name: codepage
   description: |-
     The `<codepage>` tag defines settings about how the codepage module should behave. This tag can only be defined once.
   attributes:
@@ -23,7 +23,7 @@ configuration:
     ```xml
     <codepage name="latin1">
     ```
-- name: <cpcase>
+- name: cpcase
   description: |-
     The `<cpcase>` tag defines a mapping from lower case to upper case for two characters. This tag can be defined as many times as required.
   attributes:
@@ -46,7 +46,7 @@ configuration:
     <cpcase lower="192"
             upper="224">
     ```
-- name: <cpchars>
+- name: cpchars
   description: |-
     The `<cpchars>` tag defines a single character or inclusive range of characters that are allowed in nicknames.
     This tag can be defined as many times as required.

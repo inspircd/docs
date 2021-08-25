@@ -1,4 +1,4 @@
-name: <bind>
+name: bind
 description: |-
   The `<bind>` tag defines an endpoint to listen for connections on. This tag can be defined as many times as required.
 attributes:

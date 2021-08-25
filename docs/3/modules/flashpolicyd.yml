@@ -10,7 +10,7 @@ description: |-
   This module allows connection policies to be served to IRC clients that use Adobe Flash.
 
 configuration:
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
   extends: true
@@ -28,7 +28,7 @@ configuration:
           ...
           type="flashpolicyd">
     ```
-- name: <flashpolicyd>
+- name: flashpolicyd
   description: |-
     The `<flashpolicyd>` tag defines settings about how the flashpolicyd module should behave. This tag can only be defined once.
   attributes:

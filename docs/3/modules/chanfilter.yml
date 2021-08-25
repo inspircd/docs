@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `g` (filter) which allows channel operators to define glob patterns for inappropriate phrases that are not allowed to be used in the channel.
 
 configuration:
-- name: <chanfilter>
+- name: chanfilter
   description: |-
     The `<chanfilter>` tag defines settings about how the chanfilter module should behave. This tag can only be defined once.
   attributes:

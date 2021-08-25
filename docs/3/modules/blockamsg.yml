@@ -4,7 +4,7 @@ description: |-
   This module blocks mass messages sent using the `/AME` and `/AMSG` commands that exist in clients such as mIRC and HexChat.
 
 configuration:
-- name: <blockamsg>
+- name: blockamsg
   description: |-
     The `<blockamsg>` tag defines settings about how the blockamsg module should behave. This tag can only be defined once.
   attributes:

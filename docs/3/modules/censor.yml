@@ -10,7 +10,7 @@ description: |-
   This module allows the server administrator to define inappropriate phrases that are not allowed to be used in private or channel messages.
 
 configuration:
-- name: <badword>
+- name: badword
   description: |-
     The `<badword>` tag defines an inappropriate phrase. This tag can be defined as many times as required.
   attributes:

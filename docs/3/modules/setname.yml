@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SETNAME` command which allows users to change their real name (gecos).
 
 configuration:
-- name: <setname>
+- name: setname
   description: |-
     The `<setname>` tag defines settings about how the setname module should behave. This tag can only be defined once.
   attributes:

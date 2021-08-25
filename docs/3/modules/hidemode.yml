@@ -4,7 +4,7 @@ description: |-
   This module allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 
 configuration:
-- name: <hidemode>
+- name: hidemode
   description: |-
     The `<hidemode>` tag defines settings about how the hidemode module should behave. This tag can be defined as many times as required.
   attributes:

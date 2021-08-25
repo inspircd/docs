@@ -12,7 +12,7 @@ title: v3 Configuration
 This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {% for tag in core_config_tags -%}
-### `{{tag.name}}`
+### `<{{tag.name}}>`
 
 {{tag.description}}
 

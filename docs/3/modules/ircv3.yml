@@ -4,7 +4,7 @@ description: |-
   This module provides the IRCv3 `account-notify`, `away-notify`, and `extended-join` client capabilities.
 
 configuration:
-- name: <ircv3>
+- name: ircv3
   description: |-
     The `<ircv3>` tag defines settings about how the ircv3 module should behave. This tag can only be defined once.
   attributes:

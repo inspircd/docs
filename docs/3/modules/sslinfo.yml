@@ -4,7 +4,7 @@ description: |-
   This module adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the `/SSLINFO` command to look up TLS (SSL) certificate information for other users.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:
@@ -31,7 +31,7 @@ configuration:
              ...
              requiressl="yes">
     ```
-- name: <oper>
+- name: oper
   description: |-
     This module extends [the core `<oper>` tag](/3/configuration#oper) with the following fields:
   attributes:
@@ -62,7 +62,7 @@ configuration:
           fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
           sslonly="yes">
     ```
-- name: <sslinfo>
+- name: sslinfo
   description: |-
     The `<sslinfo>` tag defines settings about how the sethost module should behave. This tag can only be defined once.
   attributes:

@@ -1,4 +1,4 @@
-name: <insane>
+name: insane
 description: |-
   The `<insane>` tag defines limits to protect against overly wide X-lines being created. This tag can only be defined once.
 attributes:

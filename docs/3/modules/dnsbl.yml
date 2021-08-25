@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to check the IP address of connecting users against a [DNSBL](https://en.wikipedia.org/wiki/DNSBL). This is useful for preventing malicious hosts from connecting to the server.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:
@@ -37,7 +37,7 @@ configuration:
              ...
              dnsbl="Proxies">
     ```
-- name: <dnsbl>
+- name: dnsbl
   description: |-
     The `<dnsbl>` tag defines a DNSBL to check connecting users against. This tag can be defined as many times as required.
   attributes:

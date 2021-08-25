@@ -4,7 +4,7 @@ description: |-
   This module adds support for showing the contents of files to users when they execute a command.
 
 configuration:
-- name: <showfile>
+- name: showfile
   description: |-
     The `<showfile>` tag defines a command to show the contents of a file. This tag can be defined as many times as required.
   attributes:

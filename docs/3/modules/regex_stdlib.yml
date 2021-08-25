@@ -10,7 +10,7 @@ description: |-
   This module provides the `stdregex` regular expression engine which uses the [C++11 std::regex](https://en.cppreference.com/w/cpp/regex/syntax_option_type#Constants) regular expression matching system.
 
 configuration:
-- name: <stdregex>
+- name: stdregex
   description: |-
     The `<stdregex>` tag defines settings about how the regex_stdlib module should behave. This tag can only be defined once.
   attributes:

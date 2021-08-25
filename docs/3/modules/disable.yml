@@ -4,7 +4,7 @@ description: |-
   This module allows commands, channel modes, and user modes to be disabled.
 
 configuration:
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true
@@ -24,7 +24,7 @@ configuration:
            ...
            privs="... servers/use-disabled-commands servers/use-disabled-modes ...">
     ```
-- name: <disabled>
+- name: disabled
   description: |-
     The `<disabled>` tag defines commands and modes which normal users can not change. This tag can only be defined once.
   attributes:

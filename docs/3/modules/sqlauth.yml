@@ -6,7 +6,7 @@ description: |-
   It only allows checking clients are allowed to connect (the `PASS` command), and does not provide any sort of user accounts (ie. no nickname registration, NickServ, or SASL).
 
 configuration:
-- name: <sqlauth>
+- name: sqlauth
   description: |-
     The `<sqlauth>` tag defines settings about how the sqlauth module should behave. This tag can only be defined once.
   attributes:

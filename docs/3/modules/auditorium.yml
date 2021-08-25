@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `u` (auditorium) which hides unprivileged users in a channel from each other. This is done by suppressing joins, parts, quits, kicks, `/NAMES` responses, and `/WHO` responses for unprivileged users.
 
 configuration:
-- name: <auditorium>
+- name: auditorium
   description: |-
     The `<auditorium>` tag defines settings about how the auditorium module should behave. This tag can only be defined once.
   attributes:

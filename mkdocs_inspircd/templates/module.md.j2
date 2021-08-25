@@ -31,9 +31,9 @@ To load this module use the following `<module>` tag:
 {% if configuration -%}
 {% for tag in configuration -%}
 {% if tag.name is string %}
-#### `{{tag.name}}`
+#### `<{{tag.name}}>`
 {% else %}
-#### `{{tag.name|join('` &amp; `')}}`
+#### `<{{tag.name|join('>` &amp; `<')}}>`
 {% endif %}
 
 {{tag.description}}

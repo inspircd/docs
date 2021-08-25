@@ -1,4 +1,4 @@
-name: <security>
+name: security
 description: |-
   The `<security>` tag defines configuration options relating to server security. This tag can only be defined once.
 attributes:

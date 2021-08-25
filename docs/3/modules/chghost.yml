@@ -4,7 +4,7 @@ description: |-
   This module adds the `/CHGHOST` command which allows server operators to change the displayed hostname of a user.
 
 configuration:
-- name: <hostname>
+- name: hostname
   description: |-
     The `<hostname>` tag defines settings about how the chghost module should behave. This tag can only be defined once.
   attributes:

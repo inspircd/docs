@@ -4,7 +4,7 @@ description: |-
   This module allows connecting users to be authenticated against an LDAP database.
 
 configuration:
-- name: <ldapauth>
+- name: ldapauth
   description: |-
     The `<ldapauth>` tag defines settings about how the ldapauth module should behave. This tag can only be defined once.
   attributes:
@@ -68,7 +68,7 @@ configuration:
               userfield="no"
               verbose="yes">
     ```
-- name: <ldaprequire>
+- name: ldaprequire
   description: |-
     The `<ldaprequire>` tag defines LDAP attributes that must be set on users in order for them to be able to connect. This tag can only be defined once.
   attributes:
@@ -90,7 +90,7 @@ configuration:
     <ldaprequire attribute="ou"
                  value="People">
     ```
-- name: <ldapwhitelist>
+- name: ldapwhitelist
   description: |-
     The `<ldapwhitelist>` tag defines CIDR ranges which are exempt from the authentication requirement. This tag can only be defined once.
   attributes:

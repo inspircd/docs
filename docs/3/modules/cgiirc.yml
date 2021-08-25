@@ -4,7 +4,7 @@ description: |-
   This module adds the ability for IRC gateways to forward the real IP address of users connecting through them.
 
 configuration:
-- name: <cgiirc>
+- name: cgiirc
   description: |-
     The `<cgiirc>` tag defines settings about how the cgiirc module should behave. This tag can only be defined once.
   attributes:
@@ -20,7 +20,7 @@ configuration:
     <cgiirc opernotice="yes">
     ```
 
-- name: <cgihost>
+- name: cgihost
   description: |-
     The `<cgihost>` tag defines a specific IRC gateway. This tag can be defined as many times as required.
   attributes:
@@ -99,7 +99,7 @@ configuration:
              mask="*.webirc.gateway.example.com">
     ```
 
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SILENCE` command which allows users to ignore other users on server-side.
 
 configuration:
-- name: <silence>
+- name: silence
   description: |-
     The `<silence>` tag defines settings about how the silence module should behave. This tag can only be defined once.
   attributes:

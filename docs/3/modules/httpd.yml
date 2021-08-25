@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to serve various useful resources over HTTP.
 
 configuration:
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
   extends: true
@@ -22,7 +22,7 @@ configuration:
           ...
           type="httpd">
     ```
-- name: <httpd>
+- name: httpd
   description: |-
     The `<httpd>` tag defines settings about how the httpd module should behave. This tag can only be defined once.
   attributes:

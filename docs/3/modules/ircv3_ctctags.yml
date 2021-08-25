@@ -4,7 +4,7 @@ description: |-
   This module provides the IRCv3 `message-tags` client capability.
 
 configuration:
-- name: <ctctags>
+- name: ctctags
   description: |-
     The `<ctctags>` tag defines settings about how the ircv3_ctctags module should behave. This tag can only be defined once.
   attributes:

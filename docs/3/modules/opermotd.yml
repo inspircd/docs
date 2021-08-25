@@ -4,7 +4,7 @@ description: |-
   This module adds the `/OPERMOTD` command which adds a special message of the day for server operators.
 
 configuration:
-- name: [<files>, <execfiles>]
+- name: [files, execfiles]
   description: |-
     This module extends the core `<files>` and `<execfiles>` tags with the following fields:
   extends: true
@@ -30,7 +30,7 @@ configuration:
     <execfiles ...
                opermotd="curl https://www.example.com/opermotd.txt">
     ```
-- name: <opermotd>
+- name: opermotd
   description: |-
     The `<opermotd>` tag defines settings about how the opermotd module should behave. This tag can only be defined once.
   attributes:

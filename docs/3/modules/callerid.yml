@@ -4,7 +4,7 @@ description: |-
   This module provides user mode `g` (callerid) which allows users to require that other users are on their whitelist before messaging them.
 
 configuration:
-- name: <callerid>
+- name: callerid
   description: |-
     The `<callerid>` tag defines settings about how the callerid module should behave. This tag can only be defined once.
   attributes:
@@ -34,7 +34,7 @@ configuration:
               tracknick="no">
     ```
 
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
 

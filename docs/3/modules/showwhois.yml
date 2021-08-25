@@ -4,7 +4,7 @@ description: |-
   This module adds user mode `W` (showwhois) which allows users to be informed when someone does a `/WHOIS` query on their nick.
 
 configuration:
-- name: <showwhois>
+- name: showwhois
   description: |-
     The `<showwhois>` tag defines settings about how the showwhois module should behave. This tag can only be defined once.
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `C` (noctcp) which allows channels to block messages which contain CTCPs and user mode `T` (u_noctcp) which allows users to block private messages that contain CTCPs.
 
 configuration:
-- name: <noctcp>
+- name: noctcp
   description: |-
     The `<noctcp>` tag defines settings about how the noctcp module should behave. This tag can only be defined once.
   attributes:
@@ -19,7 +19,7 @@ configuration:
     ```xml
     <noctcp enableumode="yes">
     ```
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true

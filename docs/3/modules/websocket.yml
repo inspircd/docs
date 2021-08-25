@@ -4,7 +4,7 @@ description: |-
   This module allows WebSocket clients to connect to the IRC server.
 
 configuration:
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following hook types:
   extends: true
@@ -22,7 +22,7 @@ configuration:
           ...
           hook="websocket">
     ```
-- name: <websocket>
+- name: websocket
   description: |-
     The `<websocket>` tag defines settings about how the websocket module should behave. This tag can only be defined once.
   attributes:
@@ -45,7 +45,7 @@ configuration:
     <websocket proxyranges="192.0.2.0/24 198.51.100.*"
                sendastext="yes">
     ```
-- name: <wsorigin>
+- name: wsorigin
   description: |-
     The `<wsorigin>` tag defines an WebSocket origin that is allowed to connect to the server. This tag can be defined as many times as required.
   attributes:

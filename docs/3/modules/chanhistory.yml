@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `H` (history) which allows message history to be viewed on joining the channel.
 
 configuration:
-- name: <chanhistory>
+- name: chanhistory
   description: |-
     The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
   attributes:

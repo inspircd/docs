@@ -1,4 +1,4 @@
-name: <type>
+name: type
 description: |-
   The `<type>` tag defines a type of server operator. This tag can be defined as many times as required.
 attributes:

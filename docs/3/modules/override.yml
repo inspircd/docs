@@ -4,7 +4,7 @@ description: |-
   This module allows server operators to be given privileges that allow them to ignore various channel-level restrictions.
 
 configuration:
-- name: [<oper>, <type>]
+- name: [oper, type]
   description: |-
     This module extends the core `<oper>` and `<type>` tags with the following fields:
   attributes:
@@ -43,7 +43,7 @@ configuration:
           ...
           override="BANWALK INVITE KEY LIMIT">
     ```
-- name: <override>
+- name: override
   description: |-
     The `<override>` tag defines settings about how the override module should behave. This tag can only be defined once.
   attributes:

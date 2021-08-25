@@ -1,4 +1,4 @@
-name: <options>
+name: options
 description: |-
   The `<options>` tag defines general configuration options. This tag can only be defined once.
 attributes:

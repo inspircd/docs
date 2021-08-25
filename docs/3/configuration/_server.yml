@@ -1,4 +1,4 @@
-name: <server>
+name: server
 description: |-
   The `<server>` tag defines settings about the local server. This tag can only be defined once.
 attributes:

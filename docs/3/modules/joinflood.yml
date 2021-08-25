@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `j` (joinflood) which helps protect against spammers which mass-join channels.
 
 configuration:
-- name: <joinflood>
+- name: joinflood
   description: |-
     The `<joinflood>` tag defines settings about how the joinflood module should behave. This tag can only be defined once.
   attributes:

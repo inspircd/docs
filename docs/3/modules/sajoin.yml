@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SAJOIN` command which allows server operators to force users to join one or more channels.
 
 configuration:
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true

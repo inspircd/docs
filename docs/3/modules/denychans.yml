@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to prevent users from joining channels matching a glob.
 
 configuration:
-- name: <badchan>
+- name: badchan
   description: |-
     The `<badchan>` tag defines a channel to prevent users from joining. This tag can be defined as many times as required.
   attributes:
@@ -50,7 +50,7 @@ configuration:
              reason="This network uses British English."
              allowopers="no">
     ```
-- name: <goodchan>
+- name: goodchan
   description: |-
     The `<goodchan>` tag defines an exemption to the rules specified with `<badchan>`. This tag can be defined as many times as required.
   attributes:

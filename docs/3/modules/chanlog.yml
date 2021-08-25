@@ -4,7 +4,7 @@ description: |-
   This module allows messages sent to snomasks to be logged to a channel.
 
 configuration:
-- name: <chanlog>
+- name: chanlog
   description: |-
     The `<chanlog>` tag defines a channel to log server notices to. This tag can be defined as many times as required.
   attributes:

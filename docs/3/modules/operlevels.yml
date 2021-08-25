@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to define ranks for server operators which prevent lower ranked server operators from using `/KILL` on higher ranked server operators.
 
 configuration:
-- name: [<oper>, <type>]
+- name: [oper, type]
   description: |-
     This module extends the core `<oper>` and `<type>` tags with the following fields:
   extends: true

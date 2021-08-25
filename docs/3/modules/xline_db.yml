@@ -4,7 +4,7 @@ description: |-
   This module allows X-lines to be saved and reloaded on restart.
 
 configuration:
-- name: <xlinedb>
+- name: xlinedb
   description: |-
     The `<xlinedb>` tag defines settings about how the xline_db module should behave. This tag can only be defined once.
   attributes:

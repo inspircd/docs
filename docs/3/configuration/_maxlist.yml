@@ -1,4 +1,4 @@
-name: <maxlist>
+name: maxlist
 description: |-
   The `<maxlist>` tag defines the number of list modes which can be created in a channel. This tag can be defined as many times as required.
 attributes:

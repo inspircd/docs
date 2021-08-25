@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SETHOST` command which allows server operators to change their displayed hostname.
 
 configuration:
-- name: <hostname>
+- name: hostname
   description: |-
     The `<hostname>` tag defines settings about how the sethost module should behave. This tag can only be defined once.
   attributes:

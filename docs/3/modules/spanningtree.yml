@@ -4,7 +4,7 @@ description: |-
   This module allows linking multiple servers together as part of one network.
 
 configuration:
-- name: <autoconnect>
+- name: autoconnect
   description: |-
     The `<autoconnect>` tag defines one or more servers to attempt to connect to. This tag can be defined as many times as required.
   attributes:
@@ -28,7 +28,7 @@ configuration:
     <autoconnect period="2m"
                  server="hub1.example.com hub2.example.com hub3.example.com">
     ```
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
   extends: true
@@ -56,7 +56,7 @@ configuration:
           ...
           type="servers">
     ```
-- name: <link>
+- name: link
   description: |-
     The `<link>` tag defines a server to link with. This tag can be defined as many times as required.
   attributes:
@@ -149,7 +149,7 @@ configuration:
           ssl="Servers"
           timeout="15s">
     ```
-- name: <options>
+- name: options
   description: |-
     This module extends [the core `<options>` tag](/3/configuration#options) with the following fields:
   attributes:
@@ -186,7 +186,7 @@ configuration:
              pingwarning="15"
              serverpingfreq="120">
     ```
-- name: <performance>
+- name: performance
   description: |-
     This module extends [the core `<performance>` tag](/3/configuration#performance) with the following fields:
   attributes:
@@ -202,7 +202,7 @@ configuration:
     <performance ...
                  quietbursts="yes">
     ```
-- name: <security>
+- name: security
   description: |-
     This module extends [the core `<security>` tag](/3/configuration#security) with the following fields:
   attributes:
@@ -232,7 +232,7 @@ configuration:
               hidesplits="no"
               hideulines="no">
     ```
-- name: <uline>
+- name: uline
   description: |-
     The `<uline>` tag defines one or more services servers. This tag can be defined as many times as required.
   attributes:

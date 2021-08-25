@@ -1,4 +1,4 @@
-name: <path>
+name: path
 description: |-
   The `<path>` tag defines the location of the config, data, log, and module directories. This tag can only be defined once.
 attributes:

@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to set user modes on connecting users.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:

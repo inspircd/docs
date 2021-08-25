@@ -4,7 +4,7 @@ description: |-
   This module prevents unprivileged users from creating new channels.
 
 configuration:
-- name: <allowchannel>
+- name: allowchannel
   description: |-
     The `<allowchannel>` tag defines a channel which may be created by unprivileged users. This tag can be defined as many times as required.
   attributes:
@@ -27,7 +27,7 @@ configuration:
     ```xml
     <allowchannel name="#user-*">
     ```
-- name: <restrictchans>
+- name: restrictchans
   description: |-
     The `<restrictchans>` tag defines settings about how the restrictchans module should behave. This tag can only be defined once.
   attributes:
@@ -42,7 +42,7 @@ configuration:
     ```xml
     <restrictchans allowregistered="yes">
     ```
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true

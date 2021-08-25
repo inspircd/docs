@@ -1,4 +1,4 @@
-name: <exception>
+name: exception
 description: |-
   The `<exception>` tag defines a permanent E-line. This tag can be defined as many times as required.
 attributes:

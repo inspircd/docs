@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to force users to join one or more channels on connect.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:
@@ -30,7 +30,7 @@ configuration:
              autojoin="#example1,#example2"
              autojoindelay="30s">
     ```
-- name: <autojoin>
+- name: autojoin
   description: |-
     The `<autojoin>` tag defines settings about how the conn_join module should behave. This tag can only be defined once.
   attributes:

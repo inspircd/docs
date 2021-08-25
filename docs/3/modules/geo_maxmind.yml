@@ -8,7 +8,7 @@ description: |-
   This module allows the server to perform geolocation lookups on both IP addresses and users.
 
 configuration:
-- name: <maxmind>
+- name: maxmind
   description: |-
     The `<maxmind>` tag defines settings about how the geo_maxmind module should behave. This tag can only be defined once.
   attributes:

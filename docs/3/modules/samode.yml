@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SAMODE` command which allows server operators to change the modes of a target (channel, user) that they would not otherwise have the privileges to change.
 
 configuration:
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true

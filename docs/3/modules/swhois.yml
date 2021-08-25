@@ -4,7 +4,7 @@ description: |-
   This module adds the `/SWHOIS` command which adds custom lines to a user's WHOIS response.
 
 configuration:
-- name: [<oper>, <type>]
+- name: [oper, type]
   description: |-
     This module extends the core `<oper>` and `<type>` tags with the following fields:
   extends: true

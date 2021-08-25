@@ -1,4 +1,4 @@
-name: <module>
+name: module
 description: |-
   The `<module>` tag defines a module to load. This tag can be defined as many times as required.
 attributes:

@@ -8,7 +8,7 @@ description: |-
   This module allows the server administrator to define what characters are allowed in nicknames and channel names and how those characters should be compared in a case insensitive way.
 
 configuration:
-- name: <nationalchars>
+- name: nationalchars
   description: |-
     The `<nationalchars>` tag defines settings about how the nationalchars module should behave. This tag can only be defined once.
   attributes:

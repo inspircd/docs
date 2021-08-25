@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `E` (repeat) which helps protect against spammers which spam the same message repeatedly.
 
 configuration:
-- name: <repeat>
+- name: repeat
   description: |-
     The `<repeat>` tag defines settings about how the repeat module should behave. This tag can only be defined once.
   attributes:

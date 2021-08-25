@@ -4,7 +4,7 @@ description: |-
   This module adds user mode `x` (cloak) which allows user hostnames to be hidden.
 
 configuration:
-- name: <cloak>
+- name: cloak
   description: |-
     The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
   attributes:

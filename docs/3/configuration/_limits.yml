@@ -1,4 +1,4 @@
-name: <limits>
+name: limits
 description: |-
   The `<limits>` tag defines the maximum length of user-configurable fields. This tag can only be defined once.
 attributes:

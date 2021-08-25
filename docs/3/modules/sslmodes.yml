@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `z` (sslonly) which prevents users who are not connecting using TLS (SSL) from joining the channel and user mode `z` (sslqueries) to prevent messages from non-TLS (SSL) users.
 
 configuration:
-- name: <sslmodes>
+- name: sslmodes
   description: |-
     The `<sslmodes>` tag defines settings about how the sslmodes module should behave. This tag can only be defined once.
   attributes:

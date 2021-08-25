@@ -10,7 +10,7 @@ description: |-
   This module allows other modules to generate [Argon2](https://en.wikipedia.org/wiki/Argon2) hashes.
 
 configuration:
-- name: <argon2>
+- name: argon2
   description: |-
     The `<argon2>` tag defines the defaults for the Argon2 algorithms. This tag can only be defined once.
   attributes:
@@ -74,7 +74,7 @@ configuration:
             saltlength="16"
             version="13">
     ```
-- name: <argon2d>
+- name: argon2d
   description: |-
     The `<argon2d>` tag defines the settings for the Argon2d algorithm. This tag can only be defined once.
   attributes:
@@ -138,7 +138,7 @@ configuration:
              saltlength="16"
              version="13">
     ```
-- name: <argon2i>
+- name: argon2i
   description: |-
     The `<argon2i>` tag defines the settings for the Argon2i algorithm. This tag can only be defined once.
   attributes:
@@ -202,7 +202,7 @@ configuration:
              saltlength="16"
              version="13">
     ```
-- name: <argon2id>
+- name: argon2id
   description: |-
     The `<argon2id>` tag defines the settings for the Argon2id algorithm. This tag can only be defined once.
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to define custom rules for applying hostnames to users.
 
 configuration:
-- name: <hostchange>
+- name: hostchange
   description: |-
     The `<hostchange>` tag defines an hostname setting rule. This tag can be defined as many times as required.
   attributes:

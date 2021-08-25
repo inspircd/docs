@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `f` (flood) which helps protect against spammers which mass-message channels.
 
 configuration:
-- name: <messageflood>
+- name: messageflood
   description: |-
     The `<messageflood>` tag defines settings about how the messageflood module should behave. This tag can only be defined once.
   attributes:

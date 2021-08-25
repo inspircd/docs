@@ -1,4 +1,4 @@
-name: <performance>
+name: performance
 description: |-
   The `<performance>` tag defines configuration options relating to server performance. This tag can only be defined once.
 attributes:

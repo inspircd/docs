@@ -1,4 +1,4 @@
-name: <cidr>
+name: cidr
 description: |-
   The `<cidr>` tag defines the number of bits of an IP address that should be looked at when locating clones. This tag can only be defined once.
 attributes:

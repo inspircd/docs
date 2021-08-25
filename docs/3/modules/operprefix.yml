@@ -4,7 +4,7 @@ description: |-
   This module adds the server operator-only `y` (operprefix) channel prefix mode.
 
 configuration:
-- name: <operprefix>
+- name: operprefix
   description: |-
     The `<operprefix>` tag defines settings about how the operprefix module should behave. This tag can only be defined once.
   attributes:

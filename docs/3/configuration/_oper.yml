@@ -1,4 +1,4 @@
-name: <oper>
+name: oper
 description: |-
   The `<oper>` tag defines a server operator account. This tag can be defined as many times as required.
 attributes:

@@ -1,4 +1,4 @@
-name: <log>
+name: log
 description: |-
   The `<log>` tag defines a location to log to. This tag can be defined as many times as required.
 attributes:

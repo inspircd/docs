@@ -4,7 +4,7 @@ description: |-
   This module Z-lines IP addresses which make excessive connections to the server.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:
@@ -24,7 +24,7 @@ configuration:
              ...
              useconnectban="no">
     ```
-- name: <connectban>
+- name: connectban
   description: |-
     The `<connectban>` tag defines settings about how the connectban module should behave. This tag can only be defined once.
   attributes:

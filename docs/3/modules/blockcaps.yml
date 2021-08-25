@@ -10,7 +10,7 @@ description: |-
   This module adds channel mode `B` (blockcaps) which allows channels to block messages which are excessively capitalised.
 
 configuration:
-- name: <blockcaps>
+- name: blockcaps
   description: |-
     The `<blockcaps>` tag defines settings about how the blockcaps module should behave. This tag can only be defined once.
   attributes:

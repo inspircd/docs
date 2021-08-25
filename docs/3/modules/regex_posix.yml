@@ -10,7 +10,7 @@ description: |-
   This module provides the `posix` regular expression engine which uses the [POSIX.2](https://www.gnu.org/software/libc/manual/html_node/POSIX-Regexp-Compilation.html#POSIX-Regexp-Compilation) regular expression matching system.
 
 configuration:
-- name: <posix>
+- name: posix
   description: |-
     The `<posix>` tag defines settings about how the regex_posix module should behave. This tag can only be defined once.
   attributes:

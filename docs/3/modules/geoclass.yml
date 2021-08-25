@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to assign users to connect classes by the country they are connecting from.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:

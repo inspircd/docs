@@ -4,7 +4,7 @@ description: |-
   This module provides the IRCv3 `tls` client capability.
 
 configuration:
-- name: <starttls>
+- name: starttls
   description: |-
     The `<starttls>` tag defines settings about how the starttls module should behave. This tag can only be defined once.
   attributes:

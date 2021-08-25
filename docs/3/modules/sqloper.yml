@@ -4,7 +4,7 @@ description: |-
   This module allows server operators to be authenticated against an SQL table.
 
 configuration:
-- name: <sqloper>
+- name: sqloper
   description: |-
     The `<sqloper>` tag defines settings about how the sqloper module should behave. This tag can only be defined once.
   attributes:

@@ -1,4 +1,4 @@
-name: <badhost>
+name: badhost
 description: |-
   The `<badhost>` tag defines a permanent K-line. This tag can be defined as many times as required.
 attributes:

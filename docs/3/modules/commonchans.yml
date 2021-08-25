@@ -4,7 +4,7 @@ description: |-
   This module adds user mode `c` (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 
 configuration:
-- name: <class>
+- name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
   extends: true

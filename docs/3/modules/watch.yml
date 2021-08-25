@@ -4,7 +4,7 @@ description: |-
   This module adds the `/WATCH` command which allows users to find out when their friends are connected to the server.
 
 configuration:
-- name: <watch>
+- name: watch
   description: |-
     The `<watch>` tag defines settings about how the watch module should behave. This tag can only be defined once.
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module throttles excessive connections to the server.
 
 configuration:
-- name: <connflood>
+- name: connflood
   description: |-
     The `<connflood>` tag defines settings about how the connflood module should behave. This tag can only be defined once.
   attributes:
@@ -47,7 +47,7 @@ configuration:
                timeout="30s"
                quitmsg="Throttled">
     ```
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:

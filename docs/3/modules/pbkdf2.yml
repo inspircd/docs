@@ -4,7 +4,7 @@ description: |-
   This module allows other modules to generate [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) hashes.
 
 configuration:
-- name: <pbkdf2>
+- name: pbkdf2
   description: |-
     The `<pbkdf2>` tag defines settings about how the pbkdf2 module should behave. This tag can only be defined once.
   attributes:
@@ -26,7 +26,7 @@ configuration:
     <pbkdf2 iterations="12288"
             length="32">
     ```
-- name: <pbkdf2prov>
+- name: pbkdf2prov
   description: |-
     The `<pbkdf2prov>` tag defines settings for a specific hash algorithm. This tag can be defined as many times as required.
   attributes:

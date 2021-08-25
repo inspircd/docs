@@ -4,7 +4,7 @@ description: |-
   This module adds the `/HELPOP` command which allows users to view help on various topics and user mode `h` (helpop) which marks a server operator as being available for help.
 
 configuration:
-- name: <helpmsg>
+- name: helpmsg
   description: |-
     The `<helpmsg>` tag defines responses to the /HELPOP command. This tag can only be defined once.
   attributes:
@@ -19,7 +19,7 @@ configuration:
     ```xml
     <helpmsg nohelp="There is no help for the topic you searched for. Please try again.">
     ```
-- name: <helpop>
+- name: helpop
   description: |-
     The `<helpop>` tag defines a help topic. This tag can be defined as many times as required.
   attributes:

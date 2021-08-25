@@ -4,7 +4,7 @@ description: |-
   This module adds support for the IRCv3 Strict Transport Security specification.
 
 configuration:
-- name: <connect>
+- name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
   attributes:
@@ -25,7 +25,7 @@ configuration:
              ...
              usests="no">
     ```
-- name: <sts>
+- name: sts
   description: |-
     The `<sts>` tag defines settings about how the sts module should behave. This tag can only be defined once.
   attributes:

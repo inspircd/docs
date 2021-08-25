@@ -4,7 +4,7 @@ description: |-
   This module allows the `/PASS` password to be forwarded to a services pseudoclient such as NickServ.
 
 configuration:
-- name: <passforward>
+- name: passforward
   description: |-
     The `<passforward>` tag defines settings about how the passforward module should behave. This tag can only be defined once.
   attributes:

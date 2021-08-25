@@ -4,7 +4,7 @@ description: |-
   This module adds the `/RLINE` command which allows server operators to prevent users matching a nickname!username@hostname+realname regular expression from connecting to the server.
 
 configuration:
-- name: <rline>
+- name: rline
   description: |-
     The `<rline>` tag defines settings about how the rline module should behave. This tag can only be defined once.
   attributes:

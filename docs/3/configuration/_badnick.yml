@@ -1,4 +1,4 @@
-name: <badnick>
+name: badnick
 description: |-
   The `<badnick>` tag defines a permanent Q-line. This tag can be defined as many times as required.
 attributes:

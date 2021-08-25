@@ -9,7 +9,7 @@ description: |-
   This module allows TLS (SSL) encrypted connections using the [OpenSSL](https://www.openssl.org) library.
 
 configuration:
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following fields:
   extends: true
@@ -41,7 +41,7 @@ configuration:
           type="servers">
     ```
 
-- name: <sslprofile>
+- name: sslprofile
   description: |-
     The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
 

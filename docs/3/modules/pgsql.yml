@@ -9,7 +9,7 @@ description: |-
   This module provides the ability for SQL modules to query a PostgreSQL database.
 
 configuration:
-- name: <database>
+- name: database
   description: |-
     The `<database>` tag defines a PostgreSQL database to connect to. This tag can be defined as many times as required.
   attributes:

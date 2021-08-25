@@ -4,7 +4,7 @@ description: |-
   This module allows IRC connections to be made using reverse proxies that implement the HAProxy PROXY protocol.
 
 configuration:
-- name: <bind>
+- name: bind
   description: |-
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following hook types:
   extends: true

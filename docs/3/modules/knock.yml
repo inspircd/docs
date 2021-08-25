@@ -4,7 +4,7 @@ description: |-
   This module adds the `/KNOCK` command which allows users to request access to an invite-only channel and channel mode `K` (noknock) which allows channels to disable usage of this command.
 
 configuration:
-- name: <knock>
+- name: knock
   description: |-
     The `<knock>` tag defines settings about how the knock module should behave. This tag can only be defined once.
   attributes:

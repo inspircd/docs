@@ -4,7 +4,7 @@ description: |-
   This module provides XML-serialised statistics about the server, channels, and users over HTTP via the /stats path.
 
 configuration:
-- name: <httpstats>
+- name: httpstats
   description: |-
     The `<httpstats>` tag defines settings about how the httpd_stats module should behave. This tag can only be defined once.
   attributes:

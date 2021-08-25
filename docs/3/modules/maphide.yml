@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to replace the output of a `/MAP` and `/LINKS` with an URL.
 
 configuration:
-- name: <security>
+- name: security
   description: |-
     This module extends [the core `<security>` tag](/3/configuration#security) with the following fields:
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module adds channel mode `P` (permanent) which prevents the channel from being deleted when the last user leaves.
 
 configuration:
-- name: <permchanneldb>
+- name: permchanneldb
   description: |-
     The `<permchanneldb>` tag defines settings about how the permchannels module should behave. This tag can only be defined once.
   attributes:
@@ -34,7 +34,7 @@ configuration:
                    listmodes="yes"
                    saveperiod="5s">
     ```
-- name: <permchannels>
+- name: permchannels
   description: |-
     The `<permchannels>` tag defines a permanent channel. This tag can be defined as many times as required.
   attributes:

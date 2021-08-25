@@ -1,4 +1,4 @@
-name: <config>
+name: config
 description: |-
   The `<config>` tag allows you to to define how the config is parsed. This tag can be defined as many times as required.
 attributes:

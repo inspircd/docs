@@ -1,4 +1,4 @@
-name: <class>
+name: class
 description: |-
   The `<class>` tag defines a set of server operator privileges. This tag can be defined as many times as required.
 attributes:

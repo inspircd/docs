@@ -4,7 +4,7 @@ description: |-
   This module allows server operators to be authenticated against an LDAP database.
 
 configuration:
-- name: <ldapoper>
+- name: ldapoper
   description: |-
     The `<ldapoper>` tag defines settings about how the ldapoper module should behave. This tag can only be defined once.
   attributes:

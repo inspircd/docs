@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to force server operators to join one or more channels when logging into their server operator account.
 
 configuration:
-- name: [<oper>, <type>]
+- name: [oper, type]
   description: |-
     This module extends the core `<oper>` and `<type>` tags with the following fields:
   extends: true
@@ -32,7 +32,7 @@ configuration:
           ...
           autojoin="#example1,#example2">
     ```
-- name: <operjoin>
+- name: operjoin
   description: |-
     The `<operjoin>` tag defines settings about how the operjoin module should behave. This tag can only be defined once.
   attributes:

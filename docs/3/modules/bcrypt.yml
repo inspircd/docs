@@ -4,7 +4,7 @@ description: |-
   This module allows other modules to generate [bcrypt](https://en.wikipedia.org/wiki/bcrypt) hashes.
 
 configuration:
-- name: <bcrypt>
+- name: bcrypt
   description: |-
     The `<bcrypt>` tag defines settings about how the bcrypt module should behave. This tag can only be defined once.
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to configure custom channel prefix modes.
 
 configuration:
-- name: <customprefix>
+- name: customprefix
   description: |-
     The `<customprefix>` tag defines a custom channel prefix mode. This tag can be defined as many times as required.
   attributes:

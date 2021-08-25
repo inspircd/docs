@@ -4,7 +4,7 @@ description: |-
   This module allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 
 configuration:
-- name: <hidelist>
+- name: hidelist
   description: |-
     The `<hidelist>` tag defines settings about how the hidelist module should behave. This tag can be defined as many times as required.
   attributes:

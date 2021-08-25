@@ -4,7 +4,7 @@ description: |-
   This module adds the `/FPART` and `/REMOVE` commands which allows channel operators to force part users from a channel.
 
 configuration:
-- name: <remove>
+- name: remove
   description: |-
     The `<remove>` tag defines settings about how the remove module should behave. This tag can only be defined once.
   attributes:

@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to control who can access resources served over HTTP with [the httpd module](/3/modules/httpd).
 
 configuration:
-- name: <httpdacl>
+- name: httpdacl
   description: |-
     The `<httpdacl>` tag defines settings about how the httpd_acl module should behave. This tag can be defined as many times as required.
   attributes:

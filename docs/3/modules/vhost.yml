@@ -4,7 +4,7 @@ description: |-
   This module allows the server administrator to define accounts which can grant a custom virtual host.
 
 configuration:
-- name: <vhost>
+- name: vhost
   description: |-
     The `<vhost>` tag defines a virtual host account. This tag can be defined as many times as required.
   attributes:
