@@ -21,6 +21,11 @@ details: |+
   --------------------- | -----------
   `&amp;`               | An ampersand.
   `&apos;`              | [**New in v3.9.0!**](/3/change-log/#inspircd-390) A single quote. This can be used unescaped but is supported for compatibility with XML generators.
+  `&dir.config;         | [**New in v3.11.0!**](/3/change-log/#inspircd-3110) The configuration directory that was configured at build time.
+  `&dir.data;           | [**New in v3.11.0!**](/3/change-log/#inspircd-3110) The data directory that was configured at build time.
+  `&dir.log;            | [**New in v3.11.0!**](/3/change-log/#inspircd-3110) The log directory that was configured at build time.
+  `&dir.module;         | [**New in v3.11.0!**](/3/change-log/#inspircd-3110) The module directory that was configured at build time.
+  `&dir.runtime;        | [**New in v3.11.0!**](/3/change-log/#inspircd-3110) The runtime directory that was configured at build time.
   `&env.NAME;`          | The value of the `NAME` environment variable when InspIRCd was first started.
   `&gt;`                | [**New in v3.9.0!**](/3/change-log/#inspircd-390) A greater than symbol. This can be used unescaped but is supported for compatibility with XML generators.
   `&irc.bold;`          | [**New in v3.9.0!**](/3/change-log/#inspircd-390) Makes subsequent text within an IRC message bold.

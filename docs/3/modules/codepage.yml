@@ -17,11 +17,18 @@ configuration:
     required: true
     default: None
     description: |-
-      The name of the codepage; sent to users in the `005` (RPL_ISUPPORT) numeric.
+      The name of the codepage; sent to users in the `CASEMAPPING` 005 token.
+  - name: charset
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If defined then the character set that the casemapping exists within; sent to users in the `CASEMAPPING` 005 token.
   details: ""
   example: |-
     ```xml
-    <codepage name="latin1">
+    <codepage name="iso-8859-1"
+              charset="iso-8859-1">
     ```
 - name: cpcase
   description: |-

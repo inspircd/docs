@@ -28,18 +28,24 @@ configuration:
   description: |-
     The `<connectban>` tag defines settings about how the connectban module should behave. This tag can only be defined once.
   attributes:
-  - name: duration
-    type: Duration
+  - name: threshold
+    type: Number
     required: false
-    default: 10m
+    default: 10
     description: |-
-      The duration that an IP address should be banned for.
+      The number of times that an IP address can connect within an hour.
   - name: banmessage
     type: Text
     required: false
     default: Your IP range has been attempting to connect too many times in too short a duration. Wait a while, and you will be able to connect.
     description: |-
       The message to give to clients that are connect banned.
+  - name: duration
+    type: Duration
+    required: false
+    default: 10m
+    description: |-
+      The duration that an IP address should be banned for.
   - name: ipv4cidr
     type: Number
     required: false
@@ -52,18 +58,26 @@ configuration:
     default: 128
     description: |-
       The IPv6 CIDR range to treat as equivalent when looking for excessive connections.
-  - name: threshold
-    type: Number
+  - name: bootwait
+    type: Duration
     required: false
-    default: 10
+    default: 2m
     description: |-
-      The number of times that an IP address can connect within an hour.
+      The time period to wait after starting up before enforcing connection bans.
+  - name: splitwait
+    type: Duration
+    required: false
+    default: 2m
+    description: |-
+      The time period to wait after a netsplit before enforcing connection bans.
   details: ""
   example: |-
     ```xml
-    <connectban duration="10m"
+    <connectban threshold="10"
                 banmessage="Your IP range has been attempting to connect too many times in too short a duration. Wait a while, and you will be able to connect."
+                duration="10m"
                 ipv4cidr="32"
                 ipv6cidr="128"
-                threshold="10">
+                bootwait="2m"
+                splitwait="2m">
     ```

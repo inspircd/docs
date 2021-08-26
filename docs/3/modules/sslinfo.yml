@@ -36,9 +36,9 @@ configuration:
     This module extends [the core `<oper>` tag](/3/configuration#oper) with the following fields:
   attributes:
   - name: autologin
-    type: Boolean
+    type: Text
     required: false
-    default: 'No'
+    default: 'no'
     description: |-
       Whether to automatically log server operators in when they connect to the server.
   - name: fingerprint
@@ -53,7 +53,14 @@ configuration:
     default: 'No'
     description: |-
       Whether this server operator must be connected using TLS (SSL) to log into their account.
-  details: ""
+  details: |-
+    The autologin field should be set to one of the following values:
+
+    Value         | Description
+    ------------- | -----------
+    yes           | Automatically log users with the specified client certificate fingerprint into this server operator account.
+    if-host-match | Automatically log users with the specified client certificate fingerprint into this server operator account if their hostname matches `<oper:host>`.
+    no            | Do not automatically log users with the specified client certificate into this server operator account.
   example: |-
     ```xml
     <oper name="Sadie"

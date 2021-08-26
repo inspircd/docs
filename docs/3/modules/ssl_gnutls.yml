@@ -40,6 +40,22 @@ configuration:
           ssl="Servers"
           type="servers">
     ```
+- name: gnutls
+  description: |-
+    The `<gnutls>` tag defines settings about how the ssl_gnutls module should behave. This tag can only be defined once.
+  attributes:
+  - name: onrehash
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether TLS (SSL) profiles (see below) should be reloaded as part of a normal rehash.
+  details: ""
+  example: |-
+    ```xml
+    <gnutls onrehash="yes">
+    ```
+
 - name: sslprofile
   description: |-
     The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.

@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
  ### InspIRCd 3.11.0
 
-<!-- TODO: ensure changes after commit 066eef82c1b11628b47642ce2f941faa042e8a10 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2021-05-14.**
 
 - Added `<connectban:bootwait>` to allow delaying connectban until the specified time period has passed after boot.
 
@@ -86,7 +84,7 @@ This page lists changes which have happened between releases.
 
 - Fixed the name of the strict-rfc1459 casemapping example config.
 
-- Fixed the noctcp module not respecting the `users/ignore-noctcp` privilege and the `u_noctcp` channel mode.
+- Fixed the noctcp module not respecting the `users/ignore-noctcp` privilege and the `u_noctcp` channel mode for mass-messages.
 
 - Fixed the websocket module not parsing HTTP headers properly.
 

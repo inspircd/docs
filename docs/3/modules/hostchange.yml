@@ -10,22 +10,28 @@ configuration:
   attributes:
   - name: action
     type: Text
-    required: false
+    required: true
     default: None
     description: |-
       The action to take when a user matches this rule.
   - name: mask
     type: Text
-    required: false
+    required: true
     default: None
     description: |-
       A glob pattern or CIDR range that a user must be connecting from to match against this rule.
+  - name: class
+    type: Text
+    required: false
+    default: None
+    description: |-
+      If set then the name of the connect class that a user must be in to match against this rule.
   - name: ports
     type: 'No. Range'
     required: false
     default: None
     description: |-
-      A numeric range of ports that a user must be connecting from to match against this rule.
+      If set then a numeric range of ports that a user must be connecting from to match against this rule.
   - name: prefix
     type: Text
     required: false
@@ -37,7 +43,7 @@ configuration:
     required: false
     default: None
     description: |-
-      If set then the value to suffix hsotnames with in hostchange rules that use the addnick or addaccount actions.
+      If set then the value to suffix hostnames with in hostchange rules that use the addnick or addaccount actions.
   - name: value
     type: Text
     required: false
