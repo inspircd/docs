@@ -27,5 +27,6 @@ Name       | Description
 0. If the release is stable then update `misc.currentVersion` in the website config to VERSION.
 0. Update the change log on the documentation site.
 0. If the release fixes a security vulnerability then create an advisory on the documentation site.
+0. Update `INSP_VERSION` in the [Docker container build script](https://github.com/inspircd/inspircd-docker/blob/master/.github/workflows/build-container.yml).
 0. Update the topic in `#InspIRCd` and `#InspIRCd.dev` on ChatSpike.
 0. Post a link to the news post on the [InspIRCd Twitter account](https://twitter.com/InspIRCdTeam) and, if notable, on [/r/irc](https://old.reddit.com/r/irc/).
