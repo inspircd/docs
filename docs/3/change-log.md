@@ -28,7 +28,7 @@ This page lists changes which have happened between releases.
 
 - Added support for building most extra modules on Windows with Conan.
 
-- Added support for setting TLS 1.3+ ciphersuites to ssl_openssl.
+- Added support for setting TLS 1.3+ ciphersuites in ssl_openssl.
 
 - Added support for the `binary.inspircd.org` and `text.inspircd.org` WebSocket subprotocols to allow web clients to override `<websocket:sendastext>`.
 
