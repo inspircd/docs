@@ -8,6 +8,30 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a4
+
+**This pre-release version of InspIRCd was released on 2021-09-01.**
+
+- `/SQUERY` is now unicast to the target service instead of being routed as a `/PRIVMSG`.
+
+- `<oper:autologin>` now always respects the host field when set to `yes` like `if-host-match` from v3.
+
+- Added `<admin:description>` for the second line of the `/ADMIN` output.
+
+- Added `<limits:maxkey>` for configuring the maximum key length.
+
+- Added support to `/CHECK` for finding users by an ident or real name mask.
+
+- Changed the real ip/host field from `RPL_WHOISHOST` to `RPL_WHOISACTUALLY`.
+
+- Changed the second line of `/ADMIN` to be optional instead of the first.
+
+- Merged `<admin:nick>` with `<admin:name>`.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Removed usage of some deprecated OpenSSL APIs.
+
 ### InspIRCd 4.0.0a3
 
 **This pre-release version of InspIRCd was released on 2021-08-01.**
