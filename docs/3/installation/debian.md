@@ -8,7 +8,7 @@ An official package for Debian is maintained by the InspIRCd Team. You can downl
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Debian 10 (Buster) and 11 (Bullseye).
+This package can be installed on all x86-64 systems running Debian 10 (Buster), 11 (Bullseye), and 12 (Bookworm).
 
 ### How do I install this package?
 
