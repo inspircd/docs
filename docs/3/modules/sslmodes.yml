@@ -13,7 +13,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether user mode `z` (sslqueries) is enabled.
+      Whether user mode `z` (sslqueries) is enabled. You must restart after changing this setting for it to be applied.
   details: ""
   example: |-
     ```xml

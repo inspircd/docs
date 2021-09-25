@@ -52,7 +52,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether user mode `O` (override) needs to be enabled to override a restriction.
+      Whether user mode `O` (override) needs to be enabled to override a restriction. You must restart after changing this setting for it to be applied.
   - name: noisy
     type: Boolean
     required: false
