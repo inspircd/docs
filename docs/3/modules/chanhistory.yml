@@ -20,7 +20,7 @@ configuration:
     default: 'No'
     added: 3.9.0
     description: |-
-      Whether user mode `N` (nohistory) is enabled. You must restart after changing this setting. You must restart after changing this setting for it to be applied.
+      Whether user mode `N` (nohistory) is enabled. You must restart after changing this setting for it to be applied.
   - name: maxlines
     type: Number
     required: false
