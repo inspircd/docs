@@ -8,6 +8,20 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a5
+
+**This pre-release version of InspIRCd was released on 2021-10-01.**
+
+- Added the FRHOST S2S command to change the real hostname of a remote user.
+
+- Added the regex_pcre2 module which implements a regex engine that uses the PCRE2 library.
+
+- Changed the operlog module to use the oper snomask instead of its own snomask.
+
+- Fixed sending standard replies with variable parameters.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
 ### InspIRCd 4.0.0a4
 
 **This pre-release version of InspIRCd was released on 2021-09-01.**
