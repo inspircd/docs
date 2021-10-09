@@ -10,9 +10,11 @@ import glob
 import pathlib
 import os.path
 
+import mkdocs.exceptions
 import mkdocs.plugins
 import mkdocs.structure.files
 import jinja2
+import mergedeep;
 import yaml
 
 PACKAGE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -22,8 +24,15 @@ TEMPLATES_DIR = os.path.join(PACKAGE_DIR, 'templates')
 @functools.lru_cache(10240)
 def load_yaml(filename):
     with open(filename) as fd:
-        return yaml.safe_load(fd)
-
+        result = yaml.safe_load(fd)
+        if result is not None and 'INHERIT' in result:
+            relpath = result.pop('INHERIT')
+            abspath = os.path.normpath(os.path.join(os.path.dirname(filename), relpath))
+            if not os.path.exists(abspath):
+                raise mkdocs.exceptions.ConfigurationError(f"Inherited data file '{relpath}' does not exist at '{abspath}'.")
+            parent = load_yaml(abspath)
+            result = mergedeep.merge(parent, result)
+        return result
 
 def yml2md(filename, template):
     return template.render(load_yaml(filename))
