@@ -6,7 +6,7 @@ title: Packaging advice
 
 ### General Advice
 
-Other than to [older branches which are still supported](https://github.com/inspircd/inspircd/security/policy#supported-versions) we do not provide patch backports due to it requiring a significant amount of work on our behalf. Please try to avoid backporting patches by only shipping the latest version of InspIRCd wherever possible.
+Other than to [older branches which are still supported](https://github.com/inspircd/inspircd/security/policy#supported-versions) we generally do not provide patch backports due to it requiring a significant amount of work on our behalf. Please try to avoid backporting patches by only shipping the latest version of InspIRCd wherever possible.
 
 Make sure to pass the `--distribution-label` option with a label that uniquely identifies your specific package and package version (e.g. mewos3.14) to configure when building. This helps us identify distribution packaged versions when people ask for support. See our [official RPM package sources](https://github.com/inspircd/inspircd-packages/blob/master/rpm/inspircd.spec.in) for an example of how to use this.
 
@@ -22,6 +22,9 @@ When performing a system-wide build you may be asked to specify a user and group
 
 # If running as another user.
 ./configure --gid $(id -g) --uid $(id -u) ...
+
+# If you want to configure ownership yourself.
+./configure --disable-ownership ...
 ```
 
 ### Extra Modules
