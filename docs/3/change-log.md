@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.11.0
 
-**This version of InspIRCd was released on 2021-05-14.**
+**This version of InspIRCd was released on 2021-08-27.**
 
 - Added `<connectban:bootwait>` to allow delaying connectban until the specified time period has passed after boot.
 
