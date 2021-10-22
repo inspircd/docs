@@ -3,6 +3,26 @@ name: services_account
 description: |-
   This module adds various channel and user modes relating to services accounts.
 
+configuration:
+- name: connect
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  attributes:
+  - name: requireaccount
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether users must be logged into a services account to use this class.
+  example: |-
+    Requires users to be logged into a services account to be assigned to the Authenticated class:
+
+    ```xml
+    <connect name="Authenticated"
+             ...
+             requireaccount="yes">
+    ```
+
 chmodes:
   chars:
   - name: c_registered
