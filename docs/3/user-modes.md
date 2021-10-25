@@ -5,7 +5,7 @@ title: v3 User Modes
 ## User Modes
 
 !!! note ""
-    This page documents user modes. For channel modes see [the user mode page](/3/channel-modes/).
+    This page documents user modes. For channel modes see [the channel mode page](/3/channel-modes/).
 
 {! 3/_mode_types_table.md !}
 
