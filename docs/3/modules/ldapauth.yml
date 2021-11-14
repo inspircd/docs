@@ -31,7 +31,7 @@ configuration:
     required: true
     default: None
     description: |-
-      The id of the `<database>` tag that contains the required LDAP configuration.
+      The id of the `<database>` tag that contains the required LDAP configuration. See the docs for [the ldap module](/3/modules/ldap) for more information.
   - name: host
     type: Text
     required: false
