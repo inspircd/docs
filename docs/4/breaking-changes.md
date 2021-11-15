@@ -16,6 +16,8 @@ title: v4 Breaking Changes
 
 - OpenSSL 1.1+ is now required by the ssl_openssl module.
 
+- PCRE2 is now required by the regex_pcre module. Most regular expressions should be compatible but if not you can use `./modulemanager install m_regex_oldpcre` to install the a module that uses the PCRE1 library.
+
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
 - `<class:snomasks>` no longer has a default value. In order to keep v3 behaviour you should set it to `*`.

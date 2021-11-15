@@ -8,6 +8,22 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a6
+
+**This pre-release version of InspIRCd was released on 2021-11-15.**
+
+- Developer: Added support for specifying multiple `ModAuthor` directives in contrib modules.
+
+- Developer: Removed support for `ModAuthorMail` in contrib modules.
+
+- Developer: Removed the `time_t TIME` field from the `Tick()` method of timer classes.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Removed the old regex_pcre module that uses the PCRE1 library.
+
+- Renamed regex_pcre2 to regex_pcre to replace the now removed PCRE1 module.
+
 ### InspIRCd 4.0.0a5
 
 **This pre-release version of InspIRCd was released on 2021-10-01.**
