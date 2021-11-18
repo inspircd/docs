@@ -9,6 +9,24 @@ commands:
   syntax: '`<channel> [<action>] [<reason>]`'
   description: |-
     Mass punishes the members of the specified channel.
+  example: |-
+    Kills all members of #spam:
+
+    ```plaintext
+    /CLEARCHAN #spam
+    ```
+
+    Kicks all members of #spam:
+
+    ```plaintext
+    /CLEARCHAN #spam KICK
+    ```
+
+    G-lines all members of #spam with the reason "Spamming is bad":
+
+    ```plaintext
+    /CLEARCHAN #spam G :Spamming is bad
+    ```
 
 command_details: |-
   The action parameter should be set to one of the following values:
@@ -19,22 +37,3 @@ command_details: |-
   KICK  | Kick all members of the channel.
   G     | G-line all members of the channel for one hour.
   Z     | Z-line all members of the channel for one hour.
-
-example_commands: |-
-  Kills all members of #spam:
-
-  ```plaintext
-  /CLEARCHAN #spam
-  ```
-
-  Kicks all members of #spam:
-
-  ```plaintext
-  /CLEARCHAN #spam KICK
-  ```
-
-  G-lines all members of #spam with the reason "Spamming is bad":
-
-  ```plaintext
-  /CLEARCHAN #spam G :Spamming is bad
-  ```

@@ -26,34 +26,33 @@ commands:
   syntax: '`(+|-) <nick>,[<nick>]+`<br>`C`<br>`L`<br>`S`'
   description: |-
     Manipulates the contents of the executing user's monitor list.
+  example: |-
+    Adds Sadie to the monitor list:
 
-example_commands: |-
-  Adds Sadie to the monitor list:
+    ```plaintext
+    /MONITOR + Sadie
+    ```
 
-  ```plaintext
-  /MONITOR + Sadie
-  ```
+    Removes Sadie from the monitor list:
 
-  Removes Sadie from the monitor list:
+    ```plaintext
+    /MONITOR - Sadie
+    ```
 
-  ```plaintext
-  /MONITOR - Sadie
-  ```
+    Removes all users from the monitor list:
 
-  Removes all users from the monitor list:
+    ```plaintext
+    /MONITOR C
+    ```
 
-  ```plaintext
-  /MONITOR C
-  ```
+    Lists all users on the monitor list:
 
-  Lists all users on the monitor list:
+    ```plaintext
+    /MONITOR L
+    ```
 
-  ```plaintext
-  /MONITOR L
-  ```
+    Shows the status of all monitored users:
 
-  Shows the status of all monitored users:
-
-  ```plaintext
-  /MONITOR S
-  ```
+    ```plaintext
+    /MONITOR S
+    ```

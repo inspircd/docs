@@ -28,13 +28,12 @@ commands:
   syntax: '`<hostname>`'
   description: |-
     Changes the displayed hostname of the user to &lt;hostname&gt;.
+  example: |-
+    Changes the hostname of the user to wibble.wobble:
 
-example_commands: |-
-  Changes the hostname of the user to wibble.wobble:
-
-  ```plaintext
-  /SETHOST wibble.wobble
-  ```
+    ```plaintext
+    /SETHOST wibble.wobble
+    ```
 
 special_notes: |-
   This command only changes the displayed hostname of the user. Their real hostname will remain intact and still will match against bans.

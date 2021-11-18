@@ -9,10 +9,9 @@ commands:
   syntax: '`<duration>`'
   description: |-
     Changes the idle time of the user to &lt;duration&gt;.
+  example: |-
+    Changes the idle time of the user to five minutes:
 
-example_commands: |-
-  Changes the idle time of the user to five minutes:
-
-  ```plaintext
-  /SETIDLE 5m
-  ```
+    ```plaintext
+    /SETIDLE 5m
+    ```

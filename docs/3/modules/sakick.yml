@@ -9,10 +9,9 @@ commands:
   syntax: '`<channel> <nick> [<reason>]`'
   description: |-
     Kicks &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+  example: |-
+    Kicks emily from #channel:
 
-example_commands: |-
-  Kicks emily from #channel:
-
-  ```plaintext
-  /SAKICK #channel emily :Your behaviour is inappropriate
-  ```
+    ```plaintext
+    /SAKICK #channel emily :Your behaviour is inappropriate
+    ```

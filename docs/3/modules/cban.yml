@@ -27,25 +27,24 @@ commands:
   syntax: '`<channel> [<duration> [<reason>]]`'
   description: |-
     Allows server operators to add and remove channel bans.
+  example: |-
+    Bans the #example channel for one week:
 
-example_commands: |-
-  Bans the #example channel for one week:
+    ```plaintext
+    /CBAN #example 7d :This channel is banned for a week
+    ```
 
-  ```plaintext
-  /CBAN #example 7d :This channel is banned for a week
-  ```
+    Bans channels that match the glob #example* forever:
 
-  Bans channels that match the glob #example* forever:
+    ```plaintext
+    /CBAN #example* 0 :This channel is banned forever
+    ```
 
-  ```plaintext
-  /CBAN #example* 0 :This channel is banned forever
-  ```
+    Unbans the #example channel:
 
-  Unbans the #example channel:
-
-  ```plaintext
-  /CBAN #example
-  ```
+    ```plaintext
+    /CBAN #example
+    ```
 
 stats:
 - char: C

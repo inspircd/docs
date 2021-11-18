@@ -263,6 +263,12 @@ commands:
   syntax: '`<server>`'
   description: |-
     Attempts to connect the local server to &lt;server&gt;.
+  example: |-
+    Connects the local server to hub.example.com:
+
+    ```plaintext
+    /CONNECT hub.example.com
+    ```
 - name: LINKS
   param_count: 0
   syntax: None
@@ -278,53 +284,46 @@ commands:
   syntax: '`<remote-server-mask> <target-server-mask>`'
   description: |-
     Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
+  example: |-
+    Connects the remote server eu-hub.example.com to us-hub.example.com:
+
+    ```plaintext
+    /RCONNECT eu-hub.example.com us-hub.example.com
+    ```
 - name: RSQUIT
   param_count: 2
   syntax: '`<server-mask> [<reason>]`'
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
+  example: |-
+    Disconnects the remote server eu-hub.example.com with no reason:
+
+    ```plaintext
+    /RSQUIT eu-hub.example.com
+    ```
+
+    Disconnects the remote server us-hub.example.com with the reason "Updating InspIRCd":
+
+    ```plaintext
+    /RSQUIT us-hub.example.com :Updating InspIRCd
+    ```
 - name: SQUIT
   param_count: 2
   syntax: '`<server-mask> [<reason>]`'
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.
+  example: |-
+    Disconnects the local server eu-hub.example.com with no reason:
 
-example_commands: |-
-  Connects the local server to hub.example.com:
+    ```plaintext
+    /SQUIT eu-hub.example.com
+    ```
 
-  ```plaintext
-  /CONNECT hub.example.com
-  ```
+    Disconnects the local server us-hub.example.com with the reason "Updating InspIRCd":
 
-  Connects the remote server eu-hub.example.com to us-hub.example.com:
-
-  ```plaintext
-  /RCONNECT eu-hub.example.com us-hub.example.com
-  ```
-
-  Disconnects the remote server eu-hub.example.com with no reason:
-
-  ```plaintext
-  /RSQUIT eu-hub.example.com
-  ```
-
-  Disconnects the remote server us-hub.example.com with the reason "Updating InspIRCd":
-
-  ```plaintext
-  /RSQUIT us-hub.example.com :Updating InspIRCd
-  ```
-
-  Disconnects the local server eu-hub.example.com with no reason:
-
-  ```plaintext
-  /SQUIT eu-hub.example.com
-  ```
-
-  Disconnects the local server us-hub.example.com with the reason "Updating InspIRCd":
-
-  ```plaintext
-  /SQUIT us-hub.example.com :Updating InspIRCd
-  ```
+    ```plaintext
+    /SQUIT us-hub.example.com :Updating InspIRCd
+    ```
 
 snomasks:
 - char: l

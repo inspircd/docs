@@ -26,34 +26,33 @@ commands:
   syntax: '`[(+|-)<nick>]`<br>`C`<br>`L`<br>`S`'
   description: |-
     Manipulates the contents of the executing user's watch list.
+  example: |-
+    Adds Sadie to the watch list:
 
-example_commands: |-
-  Adds Sadie to the watch list:
+    ```plaintext
+    /WATCH +Sadie
+    ```
 
-  ```plaintext
-  /WATCH +Sadie
-  ```
+    Removes Sadie from the watch list:
 
-  Removes Sadie from the watch list:
+    ```plaintext
+    /WATCH -Sadie
+    ```
 
-  ```plaintext
-  /WATCH -Sadie
-  ```
+    Removes all users from the watch list:
 
-  Removes all users from the watch list:
+    ```plaintext
+    /WATCH C
+    ```
 
-  ```plaintext
-  /WATCH C
-  ```
+    Lists all users on the watch list:
 
-  Lists all users on the watch list:
+    ```plaintext
+    /WATCH C
+    ```
 
-  ```plaintext
-  /WATCH C
-  ```
+    Shows the status of all watched users:
 
-  Shows the status of all watched users:
-
-  ```plaintext
-  /WATCH S
-  ```
+    ```plaintext
+    /WATCH S
+    ```

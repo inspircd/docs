@@ -13,10 +13,9 @@ commands:
   syntax: '`<limit>`'
   description: |-
     Lists all IP addresses from which there are more than &lt;limit&gt; connections.
+  example: |-
+    Lists IP addresses from which there are more than five connections:
 
-example_commands: |-
-  Lists IP addresses from which there are more than five connections:
-
-  ```plaintext
-  /CLONES 5
-  ```
+    ```plaintext
+    /CLONES 5
+    ```

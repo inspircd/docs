@@ -54,10 +54,9 @@ commands:
   syntax: '`<username> <password>`'
   description: |-
     Log into the account with the specified username and password.
+  example: |-
+    Logs into the account with the name Sadie and password fl00fyc4pyb4r4:
 
-example_commands: |-
-  Logs into the account with the name Sadie and password fl00fyc4pyb4r4:
-
-  ```plaintext
-  /VHOST Sadie fl00fyc4pyb4r4
-  ```
+    ```plaintext
+    /VHOST Sadie fl00fyc4pyb4r4
+    ```

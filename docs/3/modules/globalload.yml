@@ -9,50 +9,49 @@ commands:
   syntax: '`<module> [<server>]`'
   description: |-
     Loads &lt;module&gt; on servers matching the  &lt;server&gt; glob pattern. If no pattern is given then it is loaded on all servers.
+  example: |-
+    Loads [the botmode module](/3/modules/botmode) on all servers:
+
+    ```plaintext
+    /GLOADMODULE botmode
+    ```
+
+    Loads [the botmode module](/3/modules/botmode) on servers matching \*.eu.example.com:
+
+    ```plaintext
+    /GLOADMODULE botmode *.eu.example.com
+    ```
 - name: GRELOADMODULE
   param_count: 1-2
   syntax: '`<module> [<server>]`'
   description: |-
     Reloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is reloaded on all servers.
+  example: |-
+    Reloads [the check module](/3/modules/check) on all servers:
+
+    ```plaintext
+    /GRELOADMODULE check
+    ```
+
+    Reloads [the check module](/3/modules/check) on servers matching \*.na.example.com:
+
+    ```plaintext
+    /GRELOADMODULE check *.na.example.com
+    ```
 - name: GUNLOADMODULE
   param_count: 1-2
   syntax: '`<module> [<server>]`'
   description: |-
     Unloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is unloaded on all servers.
+  example: |-
+    Unloads [the gecosban module](/3/modules/gecosban) on all servers:
 
-example_commands: |-
-  Loads [the botmode module](/3/modules/botmode) on all servers:
+    ```plaintext
+    /GUNLOADMODULE gecosban
+    ```
 
-  ```plaintext
-  /GLOADMODULE botmode
-  ```
+    Unloads [the gecosban module](/3/modules/gecosban) on servers matching \*.sea.example.com:
 
-  Loads [the botmode module](/3/modules/botmode) on servers matching \*.eu.example.com:
-
-  ```plaintext
-  /GLOADMODULE botmode *.eu.example.com
-  ```
-
-  Reloads [the check module](/3/modules/check) on all servers:
-
-  ```plaintext
-  /GRELOADMODULE check
-  ```
-
-  Reloads [the check module](/3/modules/check) on servers matching \*.na.example.com:
-
-  ```plaintext
-  /GRELOADMODULE check *.na.example.com
-  ```
-
-  Unloads [the gecosban module](/3/modules/gecosban) on all servers:
-
-  ```plaintext
-  /GUNLOADMODULE gecosban
-  ```
-
-  Unloads [the gecosban module](/3/modules/gecosban) on servers matching \*.sea.example.com:
-
-  ```plaintext
-  /GUNLOADMODULE gecosban *.sea.example.com
-  ```
+    ```plaintext
+    /GUNLOADMODULE gecosban *.sea.example.com
+    ```
