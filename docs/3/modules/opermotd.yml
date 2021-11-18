@@ -59,16 +59,15 @@ commands:
   syntax: '`[<server>]`'
   description: |-
     Requests the server operator message of the day for &lt;server&gt;.
+  example: |-
+    Requests the server operator message of the day for the local server:
 
-example_commands: |-
-  Requests the server operator message of the day for the local server:
+    ```plaintext
+    /OPERMOTD
+    ```
 
-  ```plaintext
-  /OPERMOTD
-  ```
+    Requests the server operator message of the day for irc.example.com:
 
-  Requests the server operator message of the day for irc.example.com:
-
-  ```plaintext
-  /OPERMOTD irc.example.com
-  ```
+    ```plaintext
+    /OPERMOTD irc.example.com
+    ```

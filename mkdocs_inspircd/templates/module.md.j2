@@ -119,11 +119,24 @@ This module requires no other configuration.
 
 {{command_details}}
 
-{% if example_commands %}
+{# Check if any command has example usage. We need to do this before the heading, so we can skip it entirely if its section would be empty. #}
+{# namespace() is used to allow the inner scope (the loop body) to alter the global scope.
+   See <https://jinja.palletsprojects.com/en/3.0.x/templates/#assignments> for details. #}
+{% set ns = namespace(has_example=false) %}
+{% for command in commands %}
+{% if command.example %}
+{% set ns.has_example = true %}
+{% endif %}
+{% endfor %}
+
+{% if ns.has_example %}
 #### Example Usage
 
-{{example_commands}}
+{% for command in commands %}
+{{command.example|default('')}}
+{% endfor %}
 {% endif %}
+
 {% endif %}
 
 {% if client_caps -%}

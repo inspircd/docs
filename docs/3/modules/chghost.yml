@@ -28,13 +28,12 @@ commands:
   syntax: '`<nickname> <hostname>`'
   description: |-
     Changes the displayed hostname of &lt;nickname&gt; to &lt;hostname&gt;.
+  example: |-
+    Changes the hostname of Sadie to wibble.wobble:
 
-example_commands: |-
-  Changes the hostname of Sadie to wibble.wobble:
-
-  ```plaintext
-  /CHGHOST Sadie wibble.wobble
-  ```
+    ```plaintext
+    /CHGHOST Sadie wibble.wobble
+    ```
 
 special_notes: |-
   This command only changes the displayed hostname of a user. Their real hostname will remain intact and still will match against bans.

@@ -9,10 +9,9 @@ commands:
   syntax: '`<nick> <channel>`'
   description: |-
     Withdraws the invite for &lt;nick&gt; to join &lt;channel&gt;
+  example: |-
+    Withdraws the invite for Adam to join #secret:
 
-example_commands: |-
-  Withdraws the invite for Adam to join #secret:
-
-  ```plaintext
-  /UNINVITE Adam #secret
-  ```
+    ```plaintext
+    /UNINVITE Adam #secret
+    ```

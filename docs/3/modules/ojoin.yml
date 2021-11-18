@@ -51,13 +51,12 @@ commands:
   syntax: '`<channel>`'
   description: |-
     Joins &lt;channel&gt; with the server operator-only `Y` (official-join) channel prefix mode.
+  example: |-
+    Joins #example with the server operator-only `Y` (official-join) channel prefix mode:
 
-example_commands: |-
-  Joins #example with the server operator-only `Y` (official-join) channel prefix mode:
-
-  ```plaintext
-  /OJOIN #example
-  ```
+    ```plaintext
+    /OJOIN #example
+    ```
 
 special_notes: |-
   The `Y` (official-join) channel prefix mode can not be directly set by users. To enable this channel prefix mode log into a server operator account and use the `/OJOIN` command.

@@ -9,10 +9,9 @@ commands:
   syntax: '`<old-nick> <new-nick>`'
   description: |-
     Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt;.
+  example: |-
+    Changes the nickname of Sadie to Sadie2:
 
-example_commands: |-
-  Changes the nickname of Sadie to Sadie2:
-
-  ```plaintext
-  /SANICK Sadie Sadie2
-  ```
+    ```plaintext
+    /SANICK Sadie Sadie2
+    ```

@@ -89,28 +89,27 @@ commands:
   syntax: '`[+]<nick> [<time>]`<br>`-<nick>`<br>`HELP`<br>`LIST`'
   description: |-
     Allows users to add other users to their DCC whitelist, remove other users from their DCC whitelist, and view the users on their DCC whitelist.
+  example: |-
+    Lists all users on your DCC whitelist:
 
-example_commands: |-
-  Lists all users on your DCC whitelist:
+    ```plaintext
+    /DCCALLOW LIST
+    ```
 
-  ```plaintext
-  /DCCALLOW LIST
-  ```
+    Adds Adam to your DCC whitelist until the server expires it:
 
-  Adds Adam to your DCC whitelist until the server expires it:
+    ```plaintext
+    /DCCALLOW +Adam
+    ```
 
-  ```plaintext
-  /DCCALLOW +Adam
-  ```
+    Adds Sadie to your DCC whitelist for two hours:
 
-  Adds Sadie to your DCC whitelist for two hours:
+    ```plaintext
+    /DCCALLOW +Sadie 2h
+    ```
 
-  ```plaintext
-  /DCCALLOW +Sadie 2h
-  ```
+    Removes "Attila" from your DCC whitelist:
 
-  Removes "Attila" from your DCC whitelist:
-
-  ```plaintext
-  /DCCALLOW -Attila
-  ```
+    ```plaintext
+    /DCCALLOW -Attila
+    ```

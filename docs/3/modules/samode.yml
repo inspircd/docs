@@ -29,16 +29,15 @@ commands:
   syntax: '`<target> <modes> [<mode-parameters>]+`'
   description: |-
     Changes the modes of &lt;target&gt; to &lt;modes&gt; [&lt;mode-parameters&gt;]+
+  example: |-
+    Removes channel mode `s` (secret) from #channel:
 
-example_commands: |-
-  Removes channel mode `s` (secret) from #channel:
+    ```plaintext
+    /SAMODE #channel -s
+    ```
 
-  ```plaintext
-  /SAMODE #channel -s
-  ```
+    Adds user mode `w` (wallops) to Sadie:
 
-  Adds user mode `w` (wallops) to Sadie:
-
-  ```plaintext
-  /SAMODE Sadie +w
-  ```
+    ```plaintext
+    /SAMODE Sadie +w
+    ```

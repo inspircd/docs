@@ -33,6 +33,30 @@ commands:
   syntax: '`[(+|-)<mask> [<flags>]]`'
   description: |-
     Allows users to add users to their `/SILENCE` list, remove users from their `/SILENCE` list, and list users on their `/SILENCE` list.
+  example: |-
+    Adds a `/SILENCE` entry which blocks all possible messages from users matching `*!*@example.com`:
+
+    ```plaintext
+    /SILENCE *!*@example.com
+    ```
+
+    Adds a `/SILENCE` entry which exempts all possible messages from users matching `*!*@exempt.example.com`:
+
+    ```plaintext
+    /SILENCE *!*@exempt.example.com x
+    ```
+
+    Removes a `/SILENCE` entry which blocked private `NOTICE`, `PRIVMSG`, and `TAGMSG` messages from users matching `*!*@example.com`:
+
+    ```plaintext
+    /SILENCE *!*@example.com NPT
+    ```
+
+    View all entries on the `/SILENCE` list:
+
+    ```plaintext
+    /SILENCE
+    ```
 
 command_details: |-
   The flags in the second parameter should be set to one of the following values:
@@ -50,28 +74,3 @@ command_details: |-
   T    | Matches a TAGMSG targeted at a user.
   t    | Matches a TAGMSG targeted at a channel.
   x    | Exempt the mask from silence rules.
-
-example_commands: |-
-  Adds a `/SILENCE` entry which blocks all possible messages from users matching `*!*@example.com`:
-
-  ```plaintext
-  /SILENCE *!*@example.com
-  ```
-
-  Adds a `/SILENCE` entry which exempts all possible messages from users matching `*!*@exempt.example.com`:
-
-  ```plaintext
-  /SILENCE *!*@exempt.example.com x
-  ```
-
-  Removes a `/SILENCE` entry which blocked private `NOTICE`, `PRIVMSG`, and `TAGMSG` messages from users matching `*!*@example.com`:
-
-  ```plaintext
-  /SILENCE *!*@example.com NPT
-  ```
-
-  View all entries on the `/SILENCE` list:
-
-  ```plaintext
-  /SILENCE
-  ```

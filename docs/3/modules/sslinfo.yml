@@ -91,19 +91,18 @@ commands:
   syntax: '`<target>`'
   description: |-
     Views the TLS (SSL) certificate information for &lt;target&gt;.
+  example: |-
+    Views the TLS (SSL) certificate information for Sadie:
 
-example_commands: |-
-  Views the TLS (SSL) certificate information for Sadie:
+    ```plaintext
+    /SSLINFO Sadie
+    ```
 
-  ```plaintext
-  /SSLINFO Sadie
-  ```
+    [**New in v3.9.0!**](/3/change-log/#inspircd-390) Views the TLS (SSL) certificate information for users in #wibble:
 
-  [**New in v3.9.0!**](/3/change-log/#inspircd-390) Views the TLS (SSL) certificate information for users in #wibble:
-
-  ```plaintext
-  /SSLINFO #wibble
-  ```
+    ```plaintext
+    /SSLINFO #wibble
+    ```
 
 special_notes: |-
   {! 3/modules/_ssl_table.md !}

@@ -45,10 +45,9 @@ commands:
   syntax: '`<channel> <reason>`'
   description: |-
     Requests permission to join &lt;channel&gt; with the reason specified in &lt;reason&gt;.
+  example: |-
+    Knocks on #channel with the reason "Please let me in!":
 
-example_commands: |-
-  Knocks on #channel with the reason "Please let me in!":
-
-  ```plaintext
-  /KNOCK #channel :Please let me in!
-  ```
+    ```plaintext
+    /KNOCK #channel :Please let me in!
+    ```

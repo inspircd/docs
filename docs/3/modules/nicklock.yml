@@ -9,21 +9,21 @@ commands:
   syntax: '`<old-nick> <new-nick>`'
   description: |-
     Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt; and prevents them from changing their nickname.
+  example: |-
+    Changes the nickname of Sadie to Sadie2 and prevents them from changing their nickname:
+
+    ```plaintext
+    /NICKLOCK Sadie Sadie2
+    ```
+
 - name: NICKUNLOCK
   param_count: 1
   syntax: '`<locked-nick>`'
   description: |-
     Allows &lt;locked-nick&gt; to change their nickname.
+  example: |-
+    Allows Sadie2 to change their nickname:
 
-example_commands: |-
-  Changes the nickname of Sadie to Sadie2 and prevents them from changing their nickname:
-
-  ```plaintext
-  /NICKLOCK Sadie Sadie2
-  ```
-
-  Allows Sadie2 to change their nickname:
-
-  ```plaintext
-  /NICKUNLOCK Sadie2
-  ```
+    ```plaintext
+    /NICKUNLOCK Sadie2
+    ```

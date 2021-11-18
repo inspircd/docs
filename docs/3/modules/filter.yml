@@ -121,30 +121,29 @@ commands:
   syntax: '`<pattern>`<br>`<pattern> <action> <flags> [<duration>] <reason>`'
   description: |-
     Allows server operators to add and remove filters.
+  example: |-
+    !!! note ""
+        The following examples assume that the "glob" regex module is being used.
 
-example_commands: |-
-  !!! note ""
-      The following examples assume that the "glob" regex module is being used.
+        See the `<filteropts>` documentation above for more information.
 
-      See the `<filteropts>` documentation above for more information.
+    G-lines users for saying the phrase "fluffy capybara" in `/PRIVMSG` and `/NOTICE` messages:
 
-  G-lines users for saying the phrase "fluffy capybara" in `/PRIVMSG` and `/NOTICE` messages:
+    ```plaintext
+    /FILTER *fluffy?capybara* gline nop 1h :Fluffy capybaras are too cute for this network
+    ```
 
-  ```plaintext
-  /FILTER *fluffy?capybara* gline nop 1h :Fluffy capybaras are too cute for this network
-  ```
+    Kills users who have "spam" in their `/PART` message:
 
-  Kills users who have "spam" in their `/PART` message:
+    ```plaintext
+    /FILTER *spam* kill coP :Spam is off-topic on ExampleNet
+    ```
 
-  ```plaintext
-  /FILTER *spam* kill coP :Spam is off-topic on ExampleNet
-  ```
+    Removes a filter on \*fluffy?capybara\*:
 
-  Removes a filter on \*fluffy?capybara\*:
-
-  ```plaintext
-  /FILTER *fluffy?capybara*
-  ```
+    ```plaintext
+    /FILTER *fluffy?capybara*
+    ```
 
 snomasks:
 - char: f

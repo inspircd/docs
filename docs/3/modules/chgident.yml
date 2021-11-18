@@ -9,10 +9,9 @@ commands:
   syntax: '`<nickname> <username>`'
   description: |-
     Changes the username (ident) of &lt;nickname&gt; to &lt;username&gt;.
+  example: |-
+    Changes the username (ident) of Sadie to wibble:
 
-example_commands: |-
-  Changes the username (ident) of Sadie to wibble:
-
-  ```plaintext
-  /CHGIDENT Sadie wibble
-  ```
+    ```plaintext
+    /CHGIDENT Sadie wibble
+    ```

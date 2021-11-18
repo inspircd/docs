@@ -49,34 +49,33 @@ commands:
   syntax: '`<target> [(+|-)<name> [<value>]]+`'
   description: |-
     Allows users to add, remove, and view the modes of a specific target.
+  example: |-
+    Lists all channel modes set on #channel:
 
-example_commands: |-
-  Lists all channel modes set on #channel:
+    ```plaintext
+    /PROP #channel
+    ```
 
-  ```plaintext
-  /PROP #channel
-  ```
+    Sets channel mode `n` (noextmsg) on #channel:
 
-  Sets channel mode `n` (noextmsg) on #channel:
+    ```plaintext
+    /PROP #channel +noextmsg
+    ```
 
-  ```plaintext
-  /PROP #channel +noextmsg
-  ```
+    Sets channel mode `o` (op) on Sadie in #channel:
 
-  Sets channel mode `o` (op) on Sadie in #channel:
+    ```plaintext
+    /PROP #channel +op Sadie
+    ```
 
-  ```plaintext
-  /PROP #channel +op Sadie
-  ```
+    Removes channel mode `n` (noextmsg) from #channel:
 
-  Removes channel mode `n` (noextmsg) from #channel:
+    ```plaintext
+    /PROP #channel -noextmsg
+    ```
 
-  ```plaintext
-  /PROP #channel -noextmsg
-  ```
+    Removes channel mode `o` (op) from Sadie in #channel:
 
-  Removes channel mode `o` (op) from Sadie in #channel:
-
-  ```plaintext
-  /PROP #channel -op Sadie
-  ```
+    ```plaintext
+    /PROP #channel -op Sadie
+    ```

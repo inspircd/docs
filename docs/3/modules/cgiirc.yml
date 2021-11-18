@@ -126,6 +126,18 @@ commands:
   added: 3.9.0
   description: |-
     Encodes or decodes an IP between its human readable form and its hex form.
+  example: |-
+    Decodes 7f000001 to its human readable form:
+
+    ```plaintext
+    /HEXIP 7f000001
+    ```
+
+    Encodes 127.0.0.1 to its hex form:
+
+    ```plaintext
+    /HEXIP 127.0.0.1
+    ```
 - name: WEBIRC
   param_count: 4-5
   syntax: '`<password> <gateway> <hostname> <address> [<flags>]`'
@@ -136,19 +148,6 @@ command_details: |-
   More information about the `/WEBIRC` command is available on [the IRCv3 website](https://ircv3.net/specs/extensions/webirc.html).
 
 # WEBIRC is not documented here because it is not intended to be executed by users
-
-example_commands: |-
-  Decodes 7f000001 to its human readable form:
-
-  ```plaintext
-  /HEXIP 7f000001
-  ```
-
-  Encodes 127.0.0.1 to its hex form:
-
-  ```plaintext
-  /HEXIP 127.0.0.1
-  ```
 
 extbans:
   chars:
