@@ -4,7 +4,7 @@ description: |-
     This module allows the server administrator to define custom channel commands (e.g. `!kick`) and server commands (e.g. `/OPERSERV`).
 
 configuration:
-- name: "<alias>"
+- name: "alias"
   description: |-
       The `<alias>` tag defines a custom channel or server command. This tag can be defined as many times as required.
 
@@ -87,7 +87,7 @@ configuration:
              uline="yes">
       ```
 
-- name: "<fantasy>"
+- name: "fantasy"
 
   description: |-
       The `<fantasy>` tag defines settings about custom channel commands. This tag can only be defined once.
