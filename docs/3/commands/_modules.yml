@@ -1,0 +1,5 @@
+name: modules
+syntax: >-
+  /MODULES
+description: |-
+  Lists all modules which are loaded on the local server.

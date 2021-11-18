@@ -1,0 +1,17 @@
+name: userhost
+syntax: >-
+  /USERHOST <nick> [<nick>]+
+description: |-
+  Requests the hostname of the specified users.
+example: |-
+  Requests the hostname of Adam:
+
+  ```plaintext
+  /USERHOST Adam
+  ```
+
+  Requests the hostname of Adam and Sadie:
+
+  ```plaintext
+  /USERHOST Adam Sadie
+  ```

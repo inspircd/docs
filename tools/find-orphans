@@ -2,7 +2,11 @@
 ROOT = File.dirname __dir__
 PAGES = Dir["#{ROOT}/docs/**/*.md", "#{ROOT}/docs/**/*.yml"]
 
-linked = Dir["#{ROOT}/docs/index.md", "#{ROOT}/docs/*/configuration/_*.yml"].to_a
+linked = Dir[
+  "#{ROOT}/docs/index.md",
+  "#{ROOT}/docs/*/commands/_*.yml",
+  "#{ROOT}/docs/*/configuration/_*.yml"
+].to_a
 PAGES.each do |file|
 	contents = File.read(file)
 

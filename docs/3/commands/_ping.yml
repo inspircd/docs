@@ -1,0 +1,17 @@
+name: ping
+syntax: >-
+  /PING <cookie> [<server>]
+description: |-
+  Pings `<server>` with the specified `<cookie>`.  If `<server>` is not specified then it defaults to the local server.
+example: |-
+  Pings the local server with the cookie "wibble".
+
+  ```plaintext
+  /PING wibble
+  ```
+
+  Pings `irc2.example.com` with the cookie "wobble".
+
+  ```plaintext
+  /PING wobble irc2.example.com
+  ```

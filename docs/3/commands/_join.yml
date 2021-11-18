@@ -1,0 +1,23 @@
+name: join
+syntax: >-
+  /JOIN <channel>[,<channel>]+ [<key>][,[<key>]+]
+description: |-
+  Joins one or more channels using the specified channel keys if required.
+example: |-
+  Joins #channel:
+
+  ```plaintext
+  /JOIN #channel
+  ```
+
+  Joins #channel with the key hunter2:
+
+  ```plaintext
+  /JOIN #channel hunter2
+  ```
+
+  Joins #channel-one with no key and #channel-two with the key hunter2:
+
+  ```plaintext
+  /JOIN #channel-one,#channel-two ,hunter2
+  ```

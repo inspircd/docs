@@ -155,6 +155,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
     def core_config_tags(self, config):
         paths = glob.glob(config["docs_dir"] + "/3/configuration/_*.yml")
+        paths.sort()  # sorts by config name
+        return [load_yaml(path) for path in paths]
+
+    def core_commands(self, config):
+        paths = glob.glob(config["docs_dir"] + "/3/commands/_*.yml")
         paths.sort()  # sorts by command name
         return [load_yaml(path) for path in paths]
 
@@ -171,6 +176,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "module_snomasks": self.snomasks(config),
             "extra_tag_fields": self.extra_tag_fields(config),
             "core_config_tags": self.core_config_tags(config),
+            "core_commands": self.core_commands(config)
         }
         template = env.from_string(markdown)
         return template.render(context)

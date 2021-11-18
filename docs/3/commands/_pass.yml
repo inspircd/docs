@@ -1,0 +1,11 @@
+name: pass
+syntax: >-
+  /PASS <password>
+description: |-
+  Specifies the password used to log in to the local server.
+example: |-
+  Specifies "hunter2" as the local server password.
+
+  ```plaintext
+  /PASS hunter2
+  ```

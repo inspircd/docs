@@ -1,0 +1,19 @@
+name: time
+syntax: >-
+  /TIME [<server>]
+description: |-
+  If `<server>` is specified then requests the time on the specified server.
+
+  Otherwise, requests the time on the local server.
+example: |-
+  Requests the time on the local server:
+
+  ```plaintext
+  /TIME
+  ```
+
+  Requests the time on remote server irc.eu.example.com:
+
+  ```plaintext
+  /STATS p irc.eu.example.com
+  ```

@@ -1,0 +1,11 @@
+name: whowas
+syntax: >-
+  /WHOWAS <nick>
+description: |-
+  Requests information about a user who was previously connected with the specified nick.
+example: |-
+  Requests information about who previously used the nick Adam:
+
+  ```plaintext
+  /WHOWAS Adam
+  ```

@@ -1,0 +1,19 @@
+name: topic
+syntax: >-
+  /TOPIC <channel> [<newtopic>]
+description: |-
+  If `<newtopic>` is specified then changes the topic for `<channel>` to the specified value.
+
+  Otherwise, requests the topic for the specified channel.
+example: |-
+  Changes the topic for #trains to "choo choo"
+
+  ```plaintext
+  /TOPIC #trains :choo choo
+  ```
+
+  Requests the topic for #trains:
+
+  ```plaintext
+  /TOPIC #trains
+  ```

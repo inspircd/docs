@@ -1,0 +1,11 @@
+name: names
+syntax: >-
+  /NAMES [<channel>[,<channel>]+]
+description: |-
+  Requests a list of users who are in the specified channels.
+example: |-
+  Requests a list of users on channels #one and #two:
+
+  ```plaintext
+  /NAMES #one,#two
+  ```

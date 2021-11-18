@@ -1,0 +1,13 @@
+name: reloadmodule
+syntax: >-
+  /RELOADMODULE <module>
+description: |-
+  Reloads the specified module on the local server.
+
+  This command is only usable by server operators with RELOADMODULE in one of their `<class>` blocks.
+example: |-
+  Reloads the alias module:
+
+  ```plaintext
+  /RELOADMODULE alias
+  ```

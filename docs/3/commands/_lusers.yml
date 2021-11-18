@@ -1,0 +1,5 @@
+name: lusers
+syntax: >-
+  /LUSERS
+description: |-
+  Requests information about the current and total number of servers, server operators, and users.

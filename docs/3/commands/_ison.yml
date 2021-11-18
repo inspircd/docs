@@ -1,0 +1,11 @@
+name: ison
+syntax: >-
+  /ISON <nick> [<nick>]+
+description: |-
+  Determines whether the specified nicknames are currently connected to the network.
+example: |-
+  Checks whether Adam, Attila, and Sadie are currently connected to the network:
+
+  ```plaintext
+  /ISON Adam Attila Sadie
+  ```

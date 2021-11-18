@@ -1,0 +1,19 @@
+name: version
+syntax: >-
+  /VERSION [<server>]
+description: |-
+  If `<server>` is specified then requests the version of the specified server.
+
+  Otherwise, requests the version of the local server.
+example: |-
+  Requests the version of the local server:
+
+  ```plaintext
+  /VERSION
+  ```
+
+  Requests the version of the remote server irc.eu.example.com:
+
+  ```plaintext
+  /VERSION irc.eu.example.com
+  ```

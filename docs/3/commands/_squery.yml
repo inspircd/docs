@@ -1,0 +1,11 @@
+name: squery
+syntax: >-
+  /SQUERY <target> <message>
+description: |-
+  Sends a message to the service specified in `<target>`. This target must be on a U-lined server.
+example: |-
+  Sends a message to NickServ saying "HELP":
+
+  ```plaintext
+  /SQUERY NickServ HELP
+  ```
