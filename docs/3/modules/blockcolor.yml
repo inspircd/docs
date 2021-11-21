@@ -27,9 +27,8 @@ extbans:
     syntax: c:<mask>
     description: |-
       Bans &lt;mask&gt; from sending messages that contain IRC formatting codes.
-  example: |-
-    Bans users matching `*!*@example.com` from sending messages that contain IRC formatting codes:
-
-    ```plaintext
-    /MODE #channel +b c:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending messages that contain IRC formatting codes
+    text: |-
+      /MODE #channel +b c:*!*@example.com

@@ -29,15 +29,12 @@ commands:
   syntax: '[<nick>] <channel>[,<channel>]+'
   description: |-
     Forces &lt;nick&gt; to join &lt;channel&gt;. If no nick is specified, forces the server operator issuing the command to join.
-  example: |-
-    Forces Sadie to join #channel:
-
-    ```plaintext
-    /SAJOIN Sadie #channel
-    ```
-
-    Forces the server operator issuing the command to join #channel:
-
-    ```plaintext
-    /SAJOIN #channel
-    ```
+  example:
+  - description: |-
+      Forces Sadie to join #channel
+    text: |-
+      /SAJOIN Sadie #channel
+  - description: |-
+      Forces the server operator issuing the command to join #channel
+    text: |-
+      /SAJOIN #channel

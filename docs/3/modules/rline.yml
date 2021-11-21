@@ -44,29 +44,23 @@ commands:
   syntax: <regex> [<duration> <reason>]
   description: |-
     Allows server operators to add and remove regular expression bans on nickname!username@hostname+realname masks.
-  example: |-
-    !!! note ""
-        The following examples assume that the "pcre" regex module is being used.
+  example:
+  - note: |-
+      The following examples assume that the "pcre" regex module is being used.
 
-        See the `<rline>` documentation above for more information.
-
-    Bans users connecting from example.com for one week:
-
-    ```plaintext
-    /RLINE ^[^!]+![^@]+@example.com\+.+$ 7d :Trolling is forbidden
-    ```
-
-    Bans users that have "BotBot" in their real name forever:
-
-    ```plaintext
-    /RLINE ^[^!]+![^@]+@[^\+]+\+.*BotBot.*$ 0 :No bots allowed
-    ```
-
-    Unbans users connecting from example.com:
-
-    ```plaintext
-    /RLINE ^[^!]+![^@]+@example.com\+.+$
-    ```
+      See the `<rline>` documentation above for more information.
+    description: |-
+      Bans users connecting from example.com for one week
+    text: |-
+      /RLINE ^[^!]+![^@]+@example.com\+.+$ 7d :Trolling is forbidden
+  - description: |-
+      Bans users that have "BotBot" in their real name forever
+    text: |-
+      /RLINE ^[^!]+![^@]+@[^\+]+\+.*BotBot.*$ 0 :No bots allowed
+  - description: |-
+      Unbans users connecting from example.com
+    text: |-
+      /RLINE ^[^!]+![^@]+@example.com\+.+$
 
 stats:
 - char: R

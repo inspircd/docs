@@ -69,9 +69,8 @@ extbans:
     type: Acting
     syntax: B:<mask>
     description: Bans &lt;mask&gt; from sending messages with excessive capitalisation.
-  example: |-
-    Bans users matching `*!*@example.com` from sending messages with excessive capitalisation:
-
-    ```plaintext
-    /MODE #channel +b B:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending messages with excessive capitalisation
+    text: |-
+      /MODE #channel +b B:*!*@example.com

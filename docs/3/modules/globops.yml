@@ -9,12 +9,11 @@ commands:
   syntax: <message>
   description: |-
     Sends &lt;message&gt; to all server operators with the `g` (globops) snomask.
-  example: |-
-    Sends a server notice saying "I like turtles." to all server operators with the `g` (globops) snomask:
-
-    ```plaintext
-    /GLOBOPS :I like turtles.
-    ```
+  example:
+  - description: |-
+      Sends a server notice saying "I like turtles." to all server operators with the `g` (globops) snomask
+    text: |-
+      /GLOBOPS :I like turtles.
 
 snomasks:
 - char: g

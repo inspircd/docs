@@ -45,12 +45,11 @@ chmodes:
     syntax: (*)<lines>:<seconds>
     usable_by: Channel operators
     description: Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
-  example: |-
-    Prevents more than four messages in the last two seconds:
-
-    ```plaintext
-    /MODE #channel +f 4:2
-    ```
+  example:
+  - description: |-
+      Prevents more than four messages in the last two seconds
+    text: |-
+      /MODE #channel +f 4:2
 
 exemptions:
 - name: flood

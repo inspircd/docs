@@ -29,9 +29,8 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Prevents newly joined users from speaking until &lt;seconds&gt; seconds have passed.
-  example: |-
-    Prevents users from speaking for 60 seconds after joining:
-
-    ```plaintext
-    /MODE #channel +d 60
-    ```
+  example:
+  - description: |-
+      Prevents users from speaking for 60 seconds after joining
+    text: |-
+      /MODE #channel +d 60

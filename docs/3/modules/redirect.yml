@@ -13,12 +13,11 @@ chmodes:
     syntax: <channel>
     usable_by: Channel operators
     description: Redirects all new users to &lt;channel&gt; when the user limit is reached.
-  example: |-
-    Redirects new users from #channel to #channel-full when the user limit is reached.
-
-    ```plaintext
-    /MODE #channel +L #channel-full
-    ```
+  example:
+  - description: |-
+      Redirects new users from #channel to #channel-full when the user limit is reached
+    text: |-
+      /MODE #channel +L #channel-full
 
 umodes:
   chars:

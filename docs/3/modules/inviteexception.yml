@@ -29,15 +29,12 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Exempts users matching &lt;mask&gt; from channel mode `i` (inviteonly).
-  example: |-
-    Exempts users matching `*!*@example.com` from channel mode `i` (inviteonly):
-
-    ```plaintext
-    /MODE #channel +I *!*@example.com
-    ```
-
-    Exempts users logged into the services account named Sadie from channel mode `i` (inviteonly) (requires [the services_account module](/3/modules/services_account)):
-
-    ```plaintext
-    /MODE #channel +I R:Sadie
-    ```
+  example:
+  - description: |-
+      Exempts users matching `*!*@example.com` from channel mode `i` (inviteonly)
+    text: |-
+      /MODE #channel +I *!*@example.com
+  - description: |-
+      Exempts users logged into the services account named Sadie from channel mode `i` (inviteonly) (requires [the services_account module](/3/modules/services_account))
+    text: |-
+      /MODE #channel +I R:Sadie

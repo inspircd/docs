@@ -36,12 +36,11 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Enables blocking excessively capitalised messages.
-  example: |-
-    Kicks users who send a message which is longer than five characters and is more than 75% capital letters:
-
-    ```plaintext
-    /MODE #channel +B kick:5:75
-    ```
+  example:
+  - description: |-
+      Kicks users who send a message which is longer than five characters and is more than 75% capital letters
+    text: |-
+      /MODE #channel +B kick:5:75
 
 exemptions:
 - name: anticaps

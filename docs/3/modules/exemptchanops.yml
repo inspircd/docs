@@ -12,12 +12,11 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Exempts users with the &lt;mode&gt; prefix mode or higher from &lt;restriction&gt;.
-  example: |-
-    Exempts channel operators and above from channel mode `M` (regmoderated) (requires [the services_account module](/3/modules/services_account)):
-
-    ```plaintext
-    /MODE #channel +X regmoderated:o
-    ```
+  example:
+  - description: |-
+      Exempts channel operators and above from channel mode `M` (regmoderated) (requires [the services_account module](/3/modules/services_account))
+    text: |-
+      /MODE #channel +X regmoderated:o
 
 special_notes: |-
   The modules which ship with InspIRCd define the following restrictions:

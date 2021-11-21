@@ -30,33 +30,24 @@ commands:
   - S
   description: |-
     Manipulates the contents of the executing user's monitor list.
-  example: |-
-    Adds Sadie to the monitor list:
-
-    ```plaintext
-    /MONITOR + Sadie
-    ```
-
-    Removes Sadie from the monitor list:
-
-    ```plaintext
-    /MONITOR - Sadie
-    ```
-
-    Removes all users from the monitor list:
-
-    ```plaintext
-    /MONITOR C
-    ```
-
-    Lists all users on the monitor list:
-
-    ```plaintext
-    /MONITOR L
-    ```
-
-    Shows the status of all monitored users:
-
-    ```plaintext
-    /MONITOR S
-    ```
+  example:
+  - description: |-
+      Adds Sadie to the monitor list
+    text: |-
+      /MONITOR + Sadie
+  - description: |-
+      Removes Sadie from the monitor list
+    text: |-
+      /MONITOR - Sadie
+  - description: |-
+      Removes all users from the monitor list
+    text: |-
+      /MONITOR C
+  - description: |-
+      Lists all users on the monitor list
+    text: |-
+      /MONITOR L
+  - description: |-
+      Shows the status of all monitored users
+    text: |-
+      /MONITOR S

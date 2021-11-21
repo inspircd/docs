@@ -16,15 +16,12 @@ extbans:
     type: Matching
     syntax: r:<pattern>
     description: Checks whether users have a a real name (gecos) matching &lt;pattern&gt;.
-  example: |-
-    Bans users with a nick!user@host+real mask matching `*!*@example.com+*example*` from joining the channel:
-
-    ```plaintext
-    /MODE #channel +b a:*!*@example.com+*example*
-    ```
-
-    Bans users with a real name (gecos) matching `*example*` from joining the channel:
-
-    ```plaintext
-    /MODE #channel +b r:*example*
-    ```
+  example:
+  - description: |-
+      Bans users with a nick!user@host+real mask matching `*!*@example.com+*example*` from joining the channel
+    text: |-
+      /MODE #channel +b a:*!*@example.com+*example*
+  - description: |-
+      Bans users with a real name (gecos) matching `*example*` from joining the channel
+    text: |-
+      /MODE #channel +b r:*example*

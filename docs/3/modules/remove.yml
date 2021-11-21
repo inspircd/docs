@@ -33,20 +33,19 @@ commands:
   syntax: <channel> <nick> [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
-  example: |-
-    Force parts Soni from #channel:
+  example:
+  - description: |-
+      Force parts Soni from #channel
+    text: |-
+      /FPART #channel Soni :Disruptive behaviour is not allowed
 
-    ```plaintext
-    /FPART #channel Soni :Disruptive behaviour is not allowed
-    ```
 - name: REMOVE
   param_count: 2-3
   syntax: <nick> <channel> [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
-  example: |-
-    Force parts Soni from #channel:
-
-    ```plaintext
-    /REMOVE Soni #channel :Disruptive behaviour is not allowed
-    ```
+  example:
+  - description: |-
+      Force parts Soni from #channel
+    text: |-
+      /REMOVE Soni #channel :Disruptive behaviour is not allowed

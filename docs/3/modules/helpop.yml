@@ -67,24 +67,19 @@ commands:
   syntax: '[<topic>]'
   description: |-
     Looks up help on a particular topic.
-  example: |-
-    Responds with the help introduction page:
-
-    ```plaintext
-    /HELPOP
-    ```
-
-    Responds with a list of all potential help topics:
-
-    ```plaintext
-    /HELPOP index
-    ```
-
-    Responds with the contents of the "example" help topic:
-
-    ```plaintext
-    /HELPOP example
-    ```
+  example:
+  - description: |-
+      Responds with the help introduction page
+    text: |-
+      /HELPOP
+  - description: |-
+      Responds with a list of all potential help topics
+    text: |-
+      /HELPOP index
+  - description: |-
+      Responds with the contents of the "example" help topic
+    text: |-
+      /HELPOP example
 
 special_notes: |-
   You may find it useful to use the predefined help file which ships with InspIRCd.

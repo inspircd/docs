@@ -12,9 +12,8 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
-  example: |-
-    Prevents kicked users from rejoining for 30 seconds:
-
-    ```plaintext
-    /MODE #channel +J 30
-    ```
+  example:
+  - description: |-
+      Prevents kicked users from rejoining for 30 seconds
+    text: |-
+      /MODE #channel +J 30

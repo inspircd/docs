@@ -72,15 +72,12 @@ commands:
   - (+|-)<nickname>[,(+|-)<nickname>]+
   description: |-
     Allows users to add, remove, and view the users on their callerid whitelist.
-  example: |-
-    Lists all users on your callerid whitelist:
-
-    ```plaintext
-    /ACCEPT *
-    ```
-
-    Adds Sadie to your callerid whitelist and removes Adam from your callerid whitelist:
-
-    ```plaintext
-    /ACCEPT +Sadie,-Adam
-    ```
+  example:
+  - description: |-
+      Lists all users on your callerid whitelist
+    text: |-
+      /ACCEPT *
+  - description: |-
+      Adds Sadie to your callerid whitelist and removes Adam from your callerid whitelist
+    text: |-
+      /ACCEPT +Sadie,-Adam

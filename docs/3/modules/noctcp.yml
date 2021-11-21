@@ -74,12 +74,11 @@ extbans:
     type: Acting
     syntax: C:<mask>
     description: Bans &lt;mask&gt; from sending messages that contain CTCPs.
-  example: |-
-    Bans users matching `*!*@example.com` from sending messages that contain CTCPs:
-
-    ```plaintext
-    /MODE #channel +b C:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending messages that contain CTCPs
+    text: |-
+      /MODE #channel +b C:*!*@example.com
 
 special_notes: |-
   Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.

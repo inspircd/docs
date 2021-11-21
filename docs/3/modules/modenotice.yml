@@ -13,9 +13,8 @@ commands:
   syntax: <modes> <message>
   description: |-
     Sends &lt;message&gt; to all users with the &lt;modes&gt; user modes set.
-  example: |-
-    Sends a message to every user with user mode `i` (invisible) set:
-
-    ```plaintext
-    /MODENOTICE i :Hello invisible people!
-    ```
+  example:
+  - description: |-
+      Sends a message to every user with user mode `i` (invisible) set
+    text: |-
+      /MODENOTICE i :Hello invisible people!

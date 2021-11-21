@@ -9,9 +9,8 @@ commands:
   syntax: <username>
   description: |-
     Changes the username (ident) of the user to &lt;username&gt;.
-  example: |-
-    Changes the username (ident) of the user to wibble:
-
-    ```plaintext
-    /SETIDENT wibble
-    ```
+  example:
+  - description: |-
+      Changes the username (ident) of the user to wibble
+    text: |-
+      /SETIDENT wibble

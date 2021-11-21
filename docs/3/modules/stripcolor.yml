@@ -37,9 +37,8 @@ extbans:
     type: Acting
     syntax: S:<mask>
     description: Strips IRC formatting codes from messages sent by users matching &lt;mask&gt;.
-  example: |-
-    Strips IRC formatting codes from users matching `*!*@example.com`:
-
-    ```plaintext
-    /MODE #channel +b S:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Strips IRC formatting codes from users matching `*!*@example.com`
+    text: |-
+      /MODE #channel +b S:*!*@example.com

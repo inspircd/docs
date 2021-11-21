@@ -12,36 +12,27 @@ chmodes:
     usable_by: Depends on the mode in &lt;name&gt;
     description: |-
       Allows users to add, remove, and view the modes of a specific target.
-  example: |-
-    Lists all channel modes set on #channel:
-
-    ```plaintext
-    /MODE #channel +Z
-    ```
-
-    Sets channel mode `n` (noextmsg) on #channel:
-
-    ```plaintext
-    /MODE #channel +Z noextmsg
-    ```
-
-    Sets channel mode `o` (op) on Sadie in #channel:
-
-    ```plaintext
-    /MODE #channel +Z op=Sadie
-    ```
-
-    Removes channel mode `n` (noextmsg) from #channel:
-
-    ```plaintext
-    /MODE #channel -Z noextmsg
-    ```
-
-    Removes channel mode `o` (op) from Sadie in #channel:
-
-    ```plaintext
-    /MODE #channel -Z op=Sadie
-    ```
+  example:
+  - description: |-
+      Lists all channel modes set on #channel
+    text: |-
+      /MODE #channel +Z
+  - description: |-
+      Sets channel mode `n` (noextmsg) on #channel
+    text: |-
+      /MODE #channel +Z noextmsg
+  - description: |-
+      Sets channel mode `o` (op) on Sadie in #channel
+    text: |-
+      /MODE #channel +Z op=Sadie
+  - description: |-
+      Removes channel mode `n` (noextmsg) from #channel
+    text: |-
+      /MODE #channel -Z noextmsg
+  - description: |-
+      Removes channel mode `o` (op) from Sadie in #channel
+    text: |-
+      /MODE #channel -Z op=Sadie
 
 commands:
 - name: PROP
@@ -49,33 +40,24 @@ commands:
   syntax: <target> [(+|-)<name> [<value>]]+
   description: |-
     Allows users to add, remove, and view the modes of a specific target.
-  example: |-
-    Lists all channel modes set on #channel:
-
-    ```plaintext
-    /PROP #channel
-    ```
-
-    Sets channel mode `n` (noextmsg) on #channel:
-
-    ```plaintext
-    /PROP #channel +noextmsg
-    ```
-
-    Sets channel mode `o` (op) on Sadie in #channel:
-
-    ```plaintext
-    /PROP #channel +op Sadie
-    ```
-
-    Removes channel mode `n` (noextmsg) from #channel:
-
-    ```plaintext
-    /PROP #channel -noextmsg
-    ```
-
-    Removes channel mode `o` (op) from Sadie in #channel:
-
-    ```plaintext
-    /PROP #channel -op Sadie
-    ```
+  example:
+  - description: |-
+      Lists all channel modes set on #channel
+    text: |-
+      /PROP #channel
+  - description: |-
+      Sets channel mode `n` (noextmsg) on #channel
+    text: |-
+      /PROP #channel +noextmsg
+  - description: |-
+      Sets channel mode `o` (op) on Sadie in #channel
+    text: |-
+      /PROP #channel +op Sadie
+  - description: |-
+      Removes channel mode `n` (noextmsg) from #channel
+    text: |-
+      /PROP #channel -noextmsg
+  - description: |-
+      Removes channel mode `o` (op) from Sadie in #channel
+    text: |-
+      /PROP #channel -op Sadie

@@ -9,12 +9,11 @@ commands:
   syntax: <nick> [<nick>]+
   description: |-
     Retrieves the IP address of the specified users.
-  example: |-
-    Looks up the IP address of Sadie:
-
-    ```plaintext
-    /USERIP Sadie
-    ```
+  example:
+  - description: |-
+      Looks up the IP address of Sadie
+    text: |-
+      /USERIP Sadie
 
 special_notes: |-
   The `users/auspex` server operator privilege is required to view the IP address of other users.

@@ -9,9 +9,8 @@ commands:
   syntax: <nickname> <realname>
   description: |-
     Changes the real name (gecos) of &lt;nickname&gt; to &lt;realname&gt;.
-  example: |-
-    Changes the real name (gecos) of Sadie to "Wibble Wobble":
-
-    ```plaintext
-    /CHGNAME Sadie :Wibble Wobble
-    ```
+  example:
+  - description: |-
+      Changes the real name (gecos) of Sadie to "Wibble Wobble"
+    text: |-
+      /CHGNAME Sadie :Wibble Wobble

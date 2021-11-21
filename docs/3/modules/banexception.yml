@@ -12,16 +12,12 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Exempts users matching &lt;mask&gt; from channel mode `b` (ban).
-  example: |-
-    Exempts users matching `*!*@example.com` from channel mode `b` (ban):
-
-    ```plaintext
-    /MODE #channel +e *!*@example.com
-    ```
-
-    Exempts users logged into the services account named Sadie from the `b` (ban)
-    channel mode (requires [the services_account module](/3/modules/services_account)):
-
-    ```plaintext
-    /MODE #channel +e R:Sadie
-    ```
+  example:
+  - description: |-
+      Exempts users matching `*!*@example.com` from channel mode `b` (ban)
+    text: |-
+      /MODE #channel +e *!*@example.com
+  - description: |-
+      Exempts users logged into the services account named Sadie from the `b` (ban) channel mode (requires [the services_account module](/3/modules/services_account))
+    text: |-
+      /MODE #channel +e R:Sadie

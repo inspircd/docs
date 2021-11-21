@@ -93,27 +93,20 @@ commands:
   - LIST
   description: |-
     Allows users to add other users to their DCC whitelist, remove other users from their DCC whitelist, and view the users on their DCC whitelist.
-  example: |-
-    Lists all users on your DCC whitelist:
-
-    ```plaintext
-    /DCCALLOW LIST
-    ```
-
-    Adds Adam to your DCC whitelist until the server expires it:
-
-    ```plaintext
-    /DCCALLOW +Adam
-    ```
-
-    Adds Sadie to your DCC whitelist for two hours:
-
-    ```plaintext
-    /DCCALLOW +Sadie 2h
-    ```
-
-    Removes "Attila" from your DCC whitelist:
-
-    ```plaintext
-    /DCCALLOW -Attila
-    ```
+  example:
+  - description: |-
+      Lists all users on your DCC whitelist
+    text: |-
+      /DCCALLOW LIST
+  - description: |-
+      Adds Adam to your DCC whitelist until the server expires it
+    text: |-
+      /DCCALLOW +Adam
+  - description: |-
+      Adds Sadie to your DCC whitelist for two hours
+    text: |-
+      /DCCALLOW +Sadie 2h
+  - description: |-
+      Removes "Attila" from your DCC whitelist
+    text: |-
+      /DCCALLOW -Attila

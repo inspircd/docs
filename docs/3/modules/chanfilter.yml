@@ -43,12 +43,11 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Prevents users from sending messages that match &lt;glob&gt;.
-  example: |-
-    Prevents users from saying the phrase "fluffy capybara":
-
-    ```plaintext
+example:
+- description: |-
+    Prevents users from saying the phrase "fluffy capybara"
+  text: |-
     /MODE #channel +g *fluffy?capybara*
-    ```
 
 exemptions:
 - name: filter

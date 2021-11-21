@@ -65,12 +65,11 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
-  example: |-
-    Blocks more than two repeated messages in five seconds:
-
-    ```plaintext
-    /MODE #channel +E 2:5
-    ```
+  example:
+  - description: |-
+      Blocks more than two repeated messages in five seconds
+    text: |-
+      /MODE #channel +E 2:5
 
 exemptions:
 - name: repeat

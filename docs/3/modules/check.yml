@@ -9,15 +9,12 @@ commands:
     `<channel> [<server>]`<br>`<nickname> [<server>]`<br>`<ip> [<server>]`<br>`<hostname> [<server>]`
   description: |-
     Looks up information about the specified channel, user, IP address, or hostname.
-  example: |-
-    Looks up details relating to #channel:
-
-    ```plaintext
-    /CHECK #example
-    ```
-
-    Looks up details relating to Sadie on irc2.example.com:
-
-    ```plaintext
-    /CHECK Sadie irc2.example.com
-    ```
+  example:
+  - description: |-
+      Looks up details relating to #channel
+    text: |-
+      /CHECK #example
+  - description: |-
+      Looks up details relating to Sadie on irc2.example.com
+    text: |-
+      /CHECK Sadie irc2.example.com

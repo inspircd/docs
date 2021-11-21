@@ -205,7 +205,23 @@ This module requires no other configuration.
 {% if chmodes.example -%}
 #### Example Usage
 
-{{chmodes.example}}
+{% for example in chmodes.example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{example.note}}
+</div>
+{% endif %}
+
+{% if example.description %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}:
+{% endif %}
+
+```plaintext
+{{example.text}}
+```
+
+{% endfor %}
 
 {% endif -%}
 {% endif -%}
@@ -247,7 +263,23 @@ This module requires no other configuration.
 {% if umodes.example -%}
 #### Example Usage
 
-{{umodes.example}}
+{% for example in umodes.example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{example.note}}
+</div>
+{% endif %}
+
+{% if example.description %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}:
+{% endif %}
+
+```plaintext
+{{example.text}}
+```
+
+{% endfor %}
 
 {% endif -%}
 {% endif -%}
@@ -310,7 +342,23 @@ This module requires no other configuration.
 {% if extbans.example -%}
 #### Example Usage
 
-{{extbans.example}}
+{% for example in extbans.example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{example.note}}
+</div>
+{% endif %}
+
+{% if example.description %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}:
+{% endif %}
+
+```plaintext
+{{example.text}}
+```
+
+{% endfor %}
 
 {% endif -%}
 {% endif -%}

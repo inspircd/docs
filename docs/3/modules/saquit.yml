@@ -9,9 +9,8 @@ commands:
   syntax: <nick> <reason>
   description: |-
     Disconnects &lt;nick&gt; from the server with the reason specified in &lt;reason&gt;.
-  example: |-
-    Disconnects emily from the server:
-
-    ```plaintext
-    /SAQUIT emily :Quitting
-    ```
+  example:
+  - description: |-
+      Disconnects emily from the server
+    text: |-
+      /SAQUIT emily :Quitting

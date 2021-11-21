@@ -12,15 +12,12 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Grants the &lt;status&gt; rank to users matching &lt;mask&gt; on join.
-  example: |-
-    Grants channel operator status on join to users with a mask matching `*!*@example.com`:
-
-    ```plaintext
-    /MODE #channel +w o:*!*@example.com
-    ```
-
-    Grants channel voice status on join to users logged into the services account named Sadie (requires [the services_account module](/3/modules/services_account)):
-
-    ```plaintext
-    /MODE #channel +w v:R:Sadie
-    ```
+  example:
+  - description: |-
+      Grants channel operator status on join to users with a mask matching `*!*@example.com`
+    text: |-
+      /MODE #channel +w o:*!*@example.com
+  - description: |-
+      Grants channel voice status on join to users logged into the services account named Sadie (requires [the services_account module](/3/modules/services_account))
+    text: |-
+      /MODE #channel +w v:R:Sadie

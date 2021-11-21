@@ -33,9 +33,8 @@ commands:
   syntax: <realname>
   description: |-
     Changes the real name (gecos) of the user to &lt;realname&gt;.
-  example: |-
-    Changes the real name (gecos) of the user to "Wibble Wobble":
-
-    ```plaintext
-    /SETNAME :Wibble Wobble
-    ```
+  example:
+  - description: |-
+      Changes the real name (gecos) of the user to "Wibble Wobble"
+    text: |-
+      /SETNAME :Wibble Wobble

@@ -11,15 +11,12 @@ extbans:
     type: Matching
     syntax: G:<pattern>
     description: Matches against the two letter country code for the country that users are connecting from.
-  example: |-
-    Bans users connecting from the United States of America:
-
-    ```plaintext
-    /MODE #channel +b G:US
-    ```
-
-    Bans users whose country of origin can not be determined:
-
-    ```plaintext
-    /MODE #channel +b G:XX
-    ```
+  example:
+  - description: |-
+      Bans users connecting from the United States of America
+    text: |-
+      /MODE #channel +b G:US
+  - description: |-
+      Bans users whose country of origin can not be determined
+    text: |-
+      /MODE #channel +b G:XX

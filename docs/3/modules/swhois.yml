@@ -31,9 +31,8 @@ commands:
   syntax: <nick> <line>
   description: |-
     Sets the custom WHOIS line for &lt;nick&gt; to &lt;line&gt;.
-  example: |-
-    Sets the custom WHOIS line for Sadie to "hates cheese":
-
-    ```plaintext
-    /SWHOIS Sadie :hates cheese
-    ```
+  example:
+  - description: |-
+      Sets the custom WHOIS line for Sadie to "hates cheese"
+    text: |-
+      /SWHOIS Sadie :hates cheese

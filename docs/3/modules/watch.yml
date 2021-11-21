@@ -30,33 +30,24 @@ commands:
   - S
   description: |-
     Manipulates the contents of the executing user's watch list.
-  example: |-
-    Adds Sadie to the watch list:
-
-    ```plaintext
-    /WATCH +Sadie
-    ```
-
-    Removes Sadie from the watch list:
-
-    ```plaintext
-    /WATCH -Sadie
-    ```
-
-    Removes all users from the watch list:
-
-    ```plaintext
-    /WATCH C
-    ```
-
-    Lists all users on the watch list:
-
-    ```plaintext
-    /WATCH C
-    ```
-
-    Shows the status of all watched users:
-
-    ```plaintext
-    /WATCH S
-    ```
+  example:
+  - description: |-
+      Adds Sadie to the watch list
+    text: |-
+      /WATCH +Sadie
+  - description: |-
+      Removes Sadie from the watch list
+    text: |-
+      /WATCH -Sadie
+  - description: |-
+      Removes all users from the watch list
+    text: |-
+      /WATCH C
+  - description: |-
+      Lists all users on the watch list
+    text: |-
+      /WATCH C
+  - description: |-
+      Shows the status of all watched users
+    text: |-
+      /WATCH S

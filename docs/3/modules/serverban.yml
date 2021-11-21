@@ -11,9 +11,8 @@ extbans:
     type: Matching
     syntax: s:<pattern>
     description: Checks whether users are on a server matching &lt;pattern&gt;.
-  example: |-
-    Bans users on irc2.example.com from joining the channel:
-
-    ```plaintext
-    /MODE #channel +b s:irc2.example.com
-    ```
+  example:
+  - description: |-
+      Bans users on irc2.example.com from joining the channel
+    text: |-
+      /MODE #channel +b s:irc2.example.com

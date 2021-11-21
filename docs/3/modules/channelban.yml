@@ -11,15 +11,12 @@ extbans:
     type: Matching
     syntax: j:<pattern>
     description: Checks whether users are in a channel matching &lt;pattern&gt;.
-  example: |-
-    Bans users in #evil from joining the channel:
-
-    ```plaintext
-    /MODE #channel +b j:#evil
-    ```
-
-    Bans users that have channel operator status in #evil from joining the channel:
-
-    ```plaintext
-    /MODE #channel +b j:@#evil
-    ```
+  example:
+  - description: |-
+      Bans users in #evil from joining the channel
+    text: |-
+      /MODE #channel +b j:#evil
+  - description: |-
+      Bans users that have channel operator status in #evil from joining the channel
+    text: |-
+      /MODE #channel +b j:@#evil

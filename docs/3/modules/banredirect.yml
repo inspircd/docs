@@ -9,12 +9,11 @@ chmodes:
     channel mode `b` (ban) to allow ban masks to be suffixed with the name of a channel
     to redirect users who match the ban to.
   chars: []
-  example: |-
-    Redirects users matching `*!*@example.com` to #banned-channel.
-
-    ```plaintext
-    /MODE #channel +b *!*@example.com#banned-channel
-    ```
+  example:
+  - description: |-
+      Redirects users matching `*!*@example.com` to #banned-channel
+    text: |-
+      /MODE #channel +b *!*@example.com#banned-channel
 
 special_notes: |-
   When setting a ban redirect the target channel should exist and the user setting the ban should have channel operator status in it.

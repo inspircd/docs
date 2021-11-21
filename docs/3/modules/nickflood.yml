@@ -29,12 +29,11 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Prevents more than &lt;changes&gt; nickname changes in the last &lt;seconds&gt; seconds.
-  example: |-
-    Prevents more than three nickname changes in the last five seconds:
-
-    ```plaintext
-    /MODE #channel +F 3:5
-    ```
+  example:
+  - description: |-
+      Prevents more than three nickname changes in the last five seconds
+    text: |-
+      /MODE #channel +F 3:5
 
 exemptions:
 - name: flood

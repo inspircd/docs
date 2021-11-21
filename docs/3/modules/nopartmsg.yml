@@ -11,9 +11,8 @@ extbans:
     type: Acting
     syntax: p:<mask>
     description: Bans &lt;mask&gt; from sending a `/PART` message.
-  example: |-
-    Bans users matching `*!*@example.com` from sending a `/PART` message:
-
-    ```plaintext
-    /MODE #channel +b p:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending a `/PART` message
+    text: |-
+      /MODE #channel +b p:*!*@example.com

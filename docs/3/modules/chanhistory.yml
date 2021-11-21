@@ -51,18 +51,15 @@ chmodes:
     usable_by: Channel operators
     description: |-
       Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.
-  example: |-
-    Replays up to 10 messages from the last 30 minutes:
-
-    ```plaintext
-    /MODE #channel +H 10:1800
-    ```
-
-    Replays up to 25 messages from the last two hours:
-
-    ```plaintext
-    /MODE #channel +H 25:2h
-    ```
+  example:
+  - description: |-
+      Replays up to 10 messages from the last 30 minutes
+    text: |-
+      /MODE #channel +H 10:1800
+  - description: |-
+      Replays up to 25 messages from the last two hours
+    text: |-
+      /MODE #channel +H 25:2h
 
 umodes:
   chars:

@@ -83,15 +83,12 @@ extbans:
     type: Matching
     syntax: U:<pattern>
     description: Checks whether users matching &lt;pattern&gt; are *not* logged into a services account.
-  example: |-
-    Bans users logged into the services account named Soni:
-
-    ```plaintext
-    /MODE #channel +b R:Soni
-    ```
-
-    Bans users matching `*!*@example.com` that are not logged into a services account:
-
-    ```plaintext
-    /MODE #channel +b U:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users logged into the services account named Soni
+    text: |-
+      /MODE #channel +b R:Soni
+  - description: |-
+      Bans users matching `*!*@example.com` that are not logged into a services account
+    text: |-
+      /MODE #channel +b U:*!*@example.com

@@ -9,9 +9,8 @@ commands:
   syntax: <channel> <topic>
   description: |-
     Changes the topic of &lt;channel&gt; to &lt;topic&gt;.
-  example: |-
-    Changes the topic of #animals to "I like turtles":
-
-    ```plaintext
-    /SATOPIC #animals :I like turtles
-    ```
+  example:
+  - description: |-
+      Changes the topic of #animals to "I like turtles"
+    text: |-
+      /SATOPIC #animals :I like turtles

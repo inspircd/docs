@@ -21,9 +21,8 @@ extbans:
     type: Acting
     syntax: A:<mask>
     description: Bans &lt;mask&gt; from using the `/INVITE` command.
-  example: |-
-    Bans users matching `*!*@example.com` from using the `/INVITE` command:
-
-    ```plaintext
-    /MODE #channel +b A:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from using the `/INVITE` command
+    text: |-
+      /MODE #channel +b A:*!*@example.com

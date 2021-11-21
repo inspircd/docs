@@ -9,9 +9,8 @@ commands:
   syntax: <nick> <channel>[,<channel>]+ [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
-  example: |-
-    Force parts emily from #channel:
-
-    ```plaintext
-    /SAPART #channel emily :Your behaviour is inappropriate
-    ```
+  example:
+  - description: |-
+      Force parts emily from #channel
+    text: |-
+      /SAPART #channel emily :Your behaviour is inappropriate

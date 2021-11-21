@@ -9,15 +9,12 @@ commands:
   syntax: <channel> <mode> [<pattern>]
   description: |-
     Removes all &lt;mode&gt; list modes matching &lt;pattern&gt;, or all if no pattern is specified.
-  example: |-
-    Removes all bans on #example:
-
-    ```plaintext
-    /RMODE #example b
-    ```
-
-    Removes all bans on #example matching \*foo\*:
-
-    ```plaintext
-    /RMODE #example b *foo*
-    ```
+  example:
+  - description: |-
+      Removes all bans on #example
+    text: |-
+      /RMODE #example b
+  - description: |-
+      Removes all bans on #example matching \*foo\*
+    text: |-
+      /RMODE #example b *foo*

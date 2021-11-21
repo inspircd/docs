@@ -9,9 +9,8 @@ commands:
   syntax: <pattern>
   description: |-
     Determines how many users would be affected by an X-line on &lt;pattern&gt;.
-  example: |-
-    Determines how many users would be affected by an X-line on `*!*@example.com`:
-
-    ```plaintext
-    /TLINE *!*@example.com
-    ```
+  example:
+  - description: |-
+      Determines how many users would be affected by an X-line on `*!*@example.com`
+    text: |-
+      /TLINE *!*@example.com

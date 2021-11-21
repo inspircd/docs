@@ -82,24 +82,19 @@ commands:
   syntax: <pattern>[ [<duration>] <reason>]
   description: |-
     Allows server operators to add and remove shuns on nickname!username@hostname glob patterns.
-  example: |-
-    Shuns users connecting from example.com for one week:
-
-    ```plaintext
-    /SHUN *!*@example.com 7d :Trolling is forbidden
-    ```
-
-    Shuns users connecting from example.com forever:
-
-    ```plaintext
-    /SHUN *!*@example.com :Trolling is forbidden
-    ```
-
-    Removes a shun on users connecting from example.com:
-
-    ```plaintext
-    /SHUN *!*@example.com
-    ```
+  example:
+  - description: |-
+      Shuns users connecting from example.com for one week
+    text: |-
+      /SHUN *!*@example.com 7d :Trolling is forbidden
+  - description: |-
+      Shuns users connecting from example.com forever
+    text: |-
+      /SHUN *!*@example.com :Trolling is forbidden
+  - description: |-
+      Removes a shun on users connecting from example.com
+    text: |-
+      /SHUN *!*@example.com
 
 stats:
 - char: H

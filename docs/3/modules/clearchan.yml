@@ -9,24 +9,19 @@ commands:
   syntax: <channel> [<action>] [<reason>]
   description: |-
     Mass punishes the members of the specified channel.
-  example: |-
-    Kills all members of #spam:
-
-    ```plaintext
-    /CLEARCHAN #spam
-    ```
-
-    Kicks all members of #spam:
-
-    ```plaintext
-    /CLEARCHAN #spam KICK
-    ```
-
-    G-lines all members of #spam with the reason "Spamming is bad":
-
-    ```plaintext
-    /CLEARCHAN #spam G :Spamming is bad
-    ```
+  example:
+  - description: |-
+      Kills all members of #spam
+    text: |-
+      /CLEARCHAN #spam
+  - description: |-
+      Kicks all members of #spam
+    text: |-
+      /CLEARCHAN #spam KICK
+  - description: |-
+      G-lines all members of #spam with the reason "Spamming is bad"
+    text: |-
+      /CLEARCHAN #spam G :Spamming is bad
 
 command_details: |-
   The action parameter should be set to one of the following values:

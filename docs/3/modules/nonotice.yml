@@ -26,9 +26,8 @@ extbans:
     type: Acting
     syntax: T:<mask>
     description: Bans &lt;mask&gt; from sending messages with the `/NOTICE` command.
-  example: |-
-    Bans users matching `*!*@example.com` from sending messages with the `/NOTICE` command:
-
-    ```plaintext
-    /MODE #channel +b T:*!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending messages with the `/NOTICE` command
+    text: |-
+      /MODE #channel +b T:*!*@example.com

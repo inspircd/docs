@@ -27,9 +27,8 @@ commands:
   syntax: <channel> <duration> <banmask>
   description: |-
     Bans &lt;banmask&lt; from &lt;channel&gt; for &lt;duration&gt;.
-  example: |-
-    Bans `*!*@example.com` from #channel for one hour:
-
-    ```plaintext
-    /TBAN #channel 1h *!*@example.com
-    ```
+  example:
+  - description: |-
+      Bans `*!*@example.com` from #channel for one hour
+    text: |-
+      /TBAN #channel 1h *!*@example.com

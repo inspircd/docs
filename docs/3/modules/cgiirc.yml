@@ -126,18 +126,16 @@ commands:
   added: 3.9.0
   description: |-
     Encodes or decodes an IP between its human readable form and its hex form.
-  example: |-
-    Decodes 7f000001 to its human readable form:
+  example:
+  - description: |-
+      Decodes 7f000001 to its human readable form
+    text: |-
+       /HEXIP 7f000001
+  - description: |-
+      Encodes 127.0.0.1 to its hex form
+    text: |-
+      /HEXIP 127.0.0.1
 
-    ```plaintext
-    /HEXIP 7f000001
-    ```
-
-    Encodes 127.0.0.1 to its hex form:
-
-    ```plaintext
-    /HEXIP 127.0.0.1
-    ```
 - name: WEBIRC
   param_count: 4-5
   syntax: <password> <gateway> <hostname> <address> [<flags>]
@@ -156,12 +154,11 @@ extbans:
     type: Matching
     syntax: w:<pattern>
     description: "[**New in v3.10.0!**](/3/change-log/#inspircd-3100) Matches against the name of the gateway that WebIRC users are connecting from."
-  example: |-
-    Bans users connecting via the CGI:IRC gateway:
-
-    ```plaintext
+example:
+- description: |-
+    Bans users connecting via the CGI:IRC gateway
+  text: |-
     /MODE #channel +b w:cgiirc
-    ```
 
 snomasks:
 - char: w
