@@ -25,7 +25,7 @@ chmodes:
   - name: nickflood
     char: F
     type: Parameter
-    syntax: '`<changes>:<seconds>`'
+    syntax: <changes>:<seconds>
     usable_by: Channel operators
     description: |-
       Prevents more than &lt;changes&gt; nickname changes in the last &lt;seconds&gt; seconds.

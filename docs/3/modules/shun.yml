@@ -79,7 +79,7 @@ configuration:
 commands:
 - name: SHUN
   param_count: 1-3
-  syntax: '`<pattern>[ [<duration>] <reason>]`'
+  syntax: <pattern>[ [<duration>] <reason>]
   description: |-
     Allows server operators to add and remove shuns on nickname!username@hostname glob patterns.
   example: |-

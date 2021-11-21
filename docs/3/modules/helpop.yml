@@ -64,7 +64,7 @@ umodes:
 commands:
 - name: HELPOP
   param_count: 0-1
-  syntax: '`[<topic>]`'
+  syntax: '[<topic>]'
   description: |-
     Looks up help on a particular topic.
   example: |-

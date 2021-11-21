@@ -65,7 +65,7 @@ configuration:
 commands:
 - name: TITLE
   param_count: 2
-  syntax: '`<username> <password>`'
+  syntax: <username> <password>
   description: |-
     Log into the account with the specified username and password.
   example: |-

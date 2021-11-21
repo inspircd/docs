@@ -26,6 +26,6 @@ extbans:
   - name: mute
     char: m
     type: Acting
-    syntax: '`m:<mask>`'
+    syntax: m:<mask>
     description: Bans &lt;mask&gt; from speaking in the channel.
   example: ""

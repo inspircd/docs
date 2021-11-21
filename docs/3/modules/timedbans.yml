@@ -24,7 +24,7 @@ configuration:
 commands:
 - name: TBAN
   param_count: 3
-  syntax: '`<channel> <duration> <banmask>`'
+  syntax: <channel> <duration> <banmask>
   description: |-
     Bans &lt;banmask&lt; from &lt;channel&gt; for &lt;duration&gt;.
   example: |-

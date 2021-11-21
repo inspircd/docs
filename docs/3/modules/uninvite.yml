@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: UNINVITE
   param_count: 1
-  syntax: '`<nick> <channel>`'
+  syntax: <nick> <channel>
   description: |-
     Withdraws the invite for &lt;nick&gt; to join &lt;channel&gt;
   example: |-

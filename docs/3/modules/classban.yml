@@ -9,7 +9,7 @@ extbans:
   - name: class
     char: n
     type: Matching
-    syntax: '`n:<pattern>`'
+    syntax: n:<pattern>
     description: Checks whether users are in a connect class &lt;pattern&gt;.
   example: |-
     Bans users in the "webchat" connect class from joining the channel:

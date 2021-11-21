@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: USERIP
   param_count: 1+
-  syntax: '`<nick> [<nick>]+`'
+  syntax: <nick> [<nick>]+
   description: |-
     Retrieves the IP address of the specified users.
   example: |-

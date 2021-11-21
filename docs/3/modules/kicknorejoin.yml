@@ -8,7 +8,7 @@ chmodes:
   - name: kicknorejoin
     char: J
     type: Parameter
-    syntax: '`<seconds>`'
+    syntax: <seconds>
     usable_by: Channel operators
     description: |-
       Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.

@@ -30,7 +30,7 @@ configuration:
 commands:
 - name: FPART
   param_count: 2-3
-  syntax: '`<channel> <nick> [<reason>]`'
+  syntax: <channel> <nick> [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
   example: |-
@@ -41,7 +41,7 @@ commands:
     ```
 - name: REMOVE
   param_count: 2-3
-  syntax: '`<nick> <channel> [<reason>]`'
+  syntax: <nick> <channel> [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
   example: |-

@@ -30,7 +30,7 @@ configuration:
 commands:
 - name: SETNAME
   param_count: 1
-  syntax: '`<realname>`'
+  syntax: <realname>
   description: |-
     Changes the real name (gecos) of the user to &lt;realname&gt;.
   example: |-

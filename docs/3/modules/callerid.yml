@@ -67,7 +67,9 @@ umodes:
 commands:
 - name: ACCEPT
   param_count: 1
-  syntax: '`*`<br>`(+|-)<nickname>[,(+|-)<nickname>]+`'
+  syntax:
+  - '*'
+  - (+|-)<nickname>[,(+|-)<nickname>]+
   description: |-
     Allows users to add, remove, and view the users on their callerid whitelist.
   example: |-

@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: GLOBOPS
   param_count: 1
-  syntax: '`<message>`'
+  syntax: <message>
   description: |-
     Sends &lt;message&gt; to all server operators with the `g` (globops) snomask.
   example: |-

@@ -9,7 +9,7 @@ extbans:
   - name: server
     char: s
     type: Matching
-    syntax: '`s:<pattern>`'
+    syntax: s:<pattern>
     description: Checks whether users are on a server matching &lt;pattern&gt;.
   example: |-
     Bans users on irc2.example.com from joining the channel:

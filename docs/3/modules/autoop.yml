@@ -8,7 +8,7 @@ chmodes:
   - name: autoop
     char: w
     type: List
-    syntax: '`<status>:<mask>`'
+    syntax: <status>:<mask>
     usable_by: Channel operators
     description: |-
       Grants the &lt;status&gt; rank to users matching &lt;mask&gt; on join.

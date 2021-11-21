@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: SETIDENT
   param_count: 1
-  syntax: '`<username>`'
+  syntax: <username>
   description: |-
     Changes the username (ident) of the user to &lt;username&gt;.
   example: |-

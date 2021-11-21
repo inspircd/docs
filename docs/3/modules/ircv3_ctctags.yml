@@ -24,7 +24,7 @@ configuration:
 commands:
 - name: TAGMSG
   param_count: 1
-  syntax: '`<target>`'
+  syntax: <target>
   description: |-
     Sends a message containing only tags to the specified target.
   # TAGMSG is not documented here because it is not intended to be executed by users

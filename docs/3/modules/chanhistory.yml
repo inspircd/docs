@@ -47,7 +47,7 @@ chmodes:
   - name: history
     char: H
     type: Parameter
-    syntax: '`<count>:<period>`'
+    syntax: <count>:<period>
     usable_by: Channel operators
     description: |-
       Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.

@@ -10,7 +10,7 @@ description: |-
 commands:
 - name: LOCKSERV
   param_count: 0-1
-  syntax: '`[<message>]`'
+  syntax: '[<message>]'
   description: |-
     Disables access to the local server with an optional message.
   example: |-

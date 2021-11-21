@@ -24,7 +24,7 @@ extbans:
   - name: nonotice
     char: T
     type: Acting
-    syntax: '`T:<mask>`'
+    syntax: T:<mask>
     description: Bans &lt;mask&gt; from sending messages with the `/NOTICE` command.
   example: |-
     Bans users matching `*!*@example.com` from sending messages with the `/NOTICE` command:

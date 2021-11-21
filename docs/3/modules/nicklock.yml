@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: NICKLOCK
   param_count: 2
-  syntax: '`<old-nick> <new-nick>`'
+  syntax: <old-nick> <new-nick>
   description: |-
     Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt; and prevents them from changing their nickname.
   example: |-
@@ -18,7 +18,7 @@ commands:
 
 - name: NICKUNLOCK
   param_count: 1
-  syntax: '`<locked-nick>`'
+  syntax: <locked-nick>
   description: |-
     Allows &lt;locked-nick&gt; to change their nickname.
   example: |-

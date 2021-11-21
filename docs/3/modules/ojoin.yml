@@ -39,7 +39,7 @@ chmodes:
   - name: official-join
     char: Y
     type: Prefix
-    syntax: '`<nick>`'
+    syntax: <nick>
     usable_by: Server operators
     description: |-
       Grants channel official-join status to &lt;nick&gt;.
@@ -48,7 +48,7 @@ chmodes:
 commands:
 - name: OJOIN
   param_count: 1
-  syntax: '`<channel>`'
+  syntax: <channel>
   description: |-
     Joins &lt;channel&gt; with the server operator-only `Y` (official-join) channel prefix mode.
   example: |-

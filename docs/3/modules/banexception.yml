@@ -8,7 +8,7 @@ chmodes:
   - name: banexception
     char: e
     type: List
-    syntax: '`<mask>`'
+    syntax: <mask>
     usable_by: Channel operators
     description: |-
       Exempts users matching &lt;mask&gt; from channel mode `b` (ban).

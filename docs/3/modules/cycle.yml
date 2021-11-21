@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: CYCLE
   param_count: 1-2
-  syntax: '`<channel> [<reason>]`'
+  syntax: <channel> [<reason>]
   description: |-
     Parts and rejoins the specified channel.
   example: |-

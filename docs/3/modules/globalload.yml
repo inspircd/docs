@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: GLOADMODULE
   param_count: 1-2
-  syntax: '`<module> [<server>]`'
+  syntax: <module> [<server>]
   description: |-
     Loads &lt;module&gt; on servers matching the  &lt;server&gt; glob pattern. If no pattern is given then it is loaded on all servers.
   example: |-
@@ -23,7 +23,7 @@ commands:
     ```
 - name: GRELOADMODULE
   param_count: 1-2
-  syntax: '`<module> [<server>]`'
+  syntax: <module> [<server>]
   description: |-
     Reloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is reloaded on all servers.
   example: |-
@@ -40,7 +40,7 @@ commands:
     ```
 - name: GUNLOADMODULE
   param_count: 1-2
-  syntax: '`<module> [<server>]`'
+  syntax: <module> [<server>]
   description: |-
     Unloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is unloaded on all servers.
   example: |-

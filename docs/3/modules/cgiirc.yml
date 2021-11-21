@@ -122,7 +122,7 @@ configuration:
 commands:
 - name: HEXIP
   param_count: 1
-  syntax: '`<hex-ip|real-ip>`'
+  syntax: <hex-ip|real-ip>
   added: 3.9.0
   description: |-
     Encodes or decodes an IP between its human readable form and its hex form.
@@ -140,7 +140,7 @@ commands:
     ```
 - name: WEBIRC
   param_count: 4-5
-  syntax: '`<password> <gateway> <hostname> <address> [<flags>]`'
+  syntax: <password> <gateway> <hostname> <address> [<flags>]
   description: |-
     Allows gateways to specify the hostname and IP address of users.
 
@@ -154,7 +154,7 @@ extbans:
   - name: gateway
     char: w
     type: Matching
-    syntax: '`w:<pattern>`'
+    syntax: w:<pattern>
     description: "[**New in v3.10.0!**](/3/change-log/#inspircd-3100) Matches against the name of the gateway that WebIRC users are connecting from."
   example: |-
     Bans users connecting via the CGI:IRC gateway:

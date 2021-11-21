@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: SETIDLE
   param_count: 1
-  syntax: '`<duration>`'
+  syntax: <duration>
   description: |-
     Changes the idle time of the user to &lt;duration&gt;.
   example: |-

@@ -56,7 +56,7 @@ configuration:
 commands:
 - name: OPERMOTD
   param_count: 0-1
-  syntax: '`[<server>]`'
+  syntax: '[<server>]'
   description: |-
     Requests the server operator message of the day for &lt;server&gt;.
   example: |-

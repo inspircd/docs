@@ -260,7 +260,7 @@ configuration:
 commands:
 - name: CONNECT
   param_count: 1
-  syntax: '`<server>`'
+  syntax: <server>
   description: |-
     Attempts to connect the local server to &lt;server&gt;.
   example: |-
@@ -281,7 +281,7 @@ commands:
     Shows a textual map of the network architecture.
 - name: RCONNECT
   param_count: 2
-  syntax: '`<remote-server-mask> <target-server-mask>`'
+  syntax: <remote-server-mask> <target-server-mask>
   description: |-
     Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
   example: |-
@@ -292,7 +292,7 @@ commands:
     ```
 - name: RSQUIT
   param_count: 2
-  syntax: '`<server-mask> [<reason>]`'
+  syntax: <server-mask> [<reason>]
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
   example: |-
@@ -309,7 +309,7 @@ commands:
     ```
 - name: SQUIT
   param_count: 2
-  syntax: '`<server-mask> [<reason>]`'
+  syntax: <server-mask> [<reason>]
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.
   example: |-

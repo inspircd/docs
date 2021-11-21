@@ -88,7 +88,7 @@ configuration:
 commands:
 - name: SSLINFO
   param_count: 1
-  syntax: '`<target>`'
+  syntax: <target>
   description: |-
     Views the TLS (SSL) certificate information for &lt;target&gt;.
   example: |-

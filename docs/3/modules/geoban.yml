@@ -9,7 +9,7 @@ extbans:
   - name: country
     char: G
     type: Matching
-    syntax: '`G:<pattern>`'
+    syntax: G:<pattern>
     description: Matches against the two letter country code for the country that users are connecting from.
   example: |-
     Bans users connecting from the United States of America:

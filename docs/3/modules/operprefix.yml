@@ -25,7 +25,7 @@ chmodes:
   - name: operprefix
     char: y
     type: Prefix
-    syntax: '`<nick>`'
+    syntax: <nick>
     usable_by: Server operators
     description: |-
       Grants channel operprefix status to &lt;nick&gt;.

@@ -15,8 +15,11 @@
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
-<td markdown="1">{{mode.usable_by}}</td>
+{% if mode.syntax is string %}
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
+{% endif %}<td markdown="1">{{mode.usable_by}}</td>
 <td markdown="1">[{{mode.module}}](/3/modules/{{mode.module}}/)</td>
 </tr>
 {% endfor %}

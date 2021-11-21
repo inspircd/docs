@@ -118,7 +118,9 @@ configuration:
 commands:
 - name: FILTER
   param_count: 1, 4-5
-  syntax: '`<pattern>`<br>`<pattern> <action> <flags> [<duration>] <reason>`'
+  syntax:
+  - <pattern>
+  - <pattern> <action> <flags> [<duration>] <reason>
   description: |-
     Allows server operators to add and remove filters.
   example: |-

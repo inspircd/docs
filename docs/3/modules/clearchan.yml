@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: CLEARCHAN
   param_count: 2-3
-  syntax: '`<channel> [<action>] [<reason>]`'
+  syntax: <channel> [<action>] [<reason>]
   description: |-
     Mass punishes the members of the specified channel.
   example: |-

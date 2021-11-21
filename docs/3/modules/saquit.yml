@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: SAQUIT
   param_count: 2
-  syntax: '`<nick> <reason>`'
+  syntax: <nick> <reason>
   description: |-
     Disconnects &lt;nick&gt; from the server with the reason specified in &lt;reason&gt;.
   example: |-

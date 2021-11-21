@@ -110,7 +110,11 @@ This module requires no other configuration.
 <tr markdown="1">
 <td markdown="1">{{command.name}}</td>
 <td markdown="1">{{command.param_count}}</td>
-<td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}{{command.syntax}}{% endif %}</td>
+{% if command.syntax is string %}
+<td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}`{{command.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{command.syntax|join('`<br>`')}}`</td>
+{% endif %}
 <td markdown="1">{% if command.added %}<a href="/{{ command.added|first }}/change-log/#inspircd-{{ command.added|replace(".", "") }}"><strong>New in v{{ command.added }}!</strong></a> {% endif %}{{command.description}}</td>
 </tr>
 {% endfor %}
@@ -181,7 +185,11 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+{% if mode.syntax is string %}
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
+{% endif %}
 <td markdown="1">{{mode.usable_by}}</td>
 <td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
@@ -218,7 +226,11 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+{% if mode.syntax is string %}
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
+{% endif %}
 <td markdown="1">{{mode.usable_by}}</td>
 <td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
@@ -276,7 +288,11 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}{{mode.syntax}}{% endif %}</td>
+{% if mode.syntax is string %}
+<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
+{% endif %}
 <td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{mode.description}}</td>
 </tr>
 {% endfor %}

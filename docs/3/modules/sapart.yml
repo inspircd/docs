@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: SAPART
   param_count: 2-3
-  syntax: '`<nick> <channel>[,<channel>]+ [<reason>]`'
+  syntax: <nick> <channel>[,<channel>]+ [<reason>]
   description: |-
     Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
   example: |-

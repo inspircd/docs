@@ -10,7 +10,7 @@ chmodes:
   - name: redirect
     char: L
     type: Parameter
-    syntax: '`<channel>`'
+    syntax: <channel>
     usable_by: Channel operators
     description: Redirects all new users to &lt;channel&gt; when the user limit is reached.
   example: |-

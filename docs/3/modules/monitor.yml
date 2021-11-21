@@ -23,7 +23,11 @@ configuration:
 commands:
 - name: MONITOR
   param_count: 1, 2
-  syntax: '`(+|-) <nick>,[<nick>]+`<br>`C`<br>`L`<br>`S`'
+  syntax:
+  - (+|-) <nick>,[<nick>]+
+  - C
+  - L
+  - S
   description: |-
     Manipulates the contents of the executing user's monitor list.
   example: |-

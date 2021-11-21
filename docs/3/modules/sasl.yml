@@ -31,7 +31,10 @@ configuration:
 commands:
 - name: AUTHENTICATE
   param_count: 1
-  syntax: '`*`<br>`<mechanism>`<br>`<base64>`'
+  syntax:
+  - '*'
+  - <base64>
+  - <mechanism>
   description: |-
     Allows clients to authenticate against a services account.
   # AUTHENTICATE is not documented here because it is not intended to be executed by users

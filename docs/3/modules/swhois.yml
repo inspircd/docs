@@ -28,7 +28,7 @@ configuration:
 commands:
 - name: SWHOIS
   param_count: 2
-  syntax: '`<nick> <line>`'
+  syntax: <nick> <line>
   description: |-
     Sets the custom WHOIS line for &lt;nick&gt; to &lt;line&gt;.
   example: |-

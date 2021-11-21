@@ -76,12 +76,12 @@ extbans:
   - name: account
     char: R
     type: Matching
-    syntax: '`R:<pattern>`'
+    syntax: R:<pattern>
     description: Checks whether users are logged into a services account matching &lt;pattern&gt;.
   - name: unauthed
     char: U
     type: Matching
-    syntax: '`U:<pattern>`'
+    syntax: U:<pattern>
     description: Checks whether users matching &lt;pattern&gt; are *not* logged into a services account.
   example: |-
     Bans users logged into the services account named Soni:

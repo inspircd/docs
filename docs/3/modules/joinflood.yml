@@ -41,7 +41,7 @@ chmodes:
   - name: joinflood
     char: j
     type: Parameter
-    syntax: '`<joins>:<seconds>`'
+    syntax: <joins>:<seconds>
     usable_by: Channel operators
     description: |-
       Prevents more than &lt;joins&gt; joins in the last &lt;seconds&gt; seconds.

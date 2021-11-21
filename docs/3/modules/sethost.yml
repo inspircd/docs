@@ -25,7 +25,7 @@ configuration:
 commands:
 - name: SETHOST
   param_count: 1
-  syntax: '`<hostname>`'
+  syntax: <hostname>
   description: |-
     Changes the displayed hostname of the user to &lt;hostname&gt;.
   example: |-

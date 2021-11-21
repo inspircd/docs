@@ -61,7 +61,7 @@ chmodes:
   - name: repeat
     char: E
     type: Parameter
-    syntax: '`[~|*]<lines>:<sec>[:<difference>][:<backlog>]`'
+    syntax: '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
     usable_by: Channel operators
     description: |-
       Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.

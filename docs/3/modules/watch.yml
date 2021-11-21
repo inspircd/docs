@@ -23,7 +23,11 @@ configuration:
 commands:
 - name: WATCH
   param_count: 1
-  syntax: '`[(+|-)<nick>]`<br>`C`<br>`L`<br>`S`'
+  syntax:
+  - '[(+|-)<nick>]'
+  - C
+  - L
+  - S
   description: |-
     Manipulates the contents of the executing user's watch list.
   example: |-

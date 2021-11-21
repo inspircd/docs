@@ -39,7 +39,7 @@ chmodes:
   - name: filter
     char: g
     type: List
-    syntax: '`<glob>`'
+    syntax: <glob>
     usable_by: Channel operators
     description: |-
       Prevents users from sending messages that match &lt;glob&gt;.

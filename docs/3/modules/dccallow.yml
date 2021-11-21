@@ -86,7 +86,11 @@ configuration:
 commands:
 - name: DCCALLOW
   param_count: 1-2
-  syntax: '`[+]<nick> [<time>]`<br>`-<nick>`<br>`HELP`<br>`LIST`'
+  syntax:
+  - '[+]<nick> [<time>]'
+  - '-<nick>'
+  - HELP
+  - LIST
   description: |-
     Allows users to add other users to their DCC whitelist, remove other users from their DCC whitelist, and view the users on their DCC whitelist.
   example: |-

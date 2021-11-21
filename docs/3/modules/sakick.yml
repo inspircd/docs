@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: SAKICK
   param_count: 2-3
-  syntax: '`<channel> <nick> [<reason>]`'
+  syntax: <channel> <nick> [<reason>]
   description: |-
     Kicks &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
   example: |-

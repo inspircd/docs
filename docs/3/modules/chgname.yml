@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: CHGNAME
   param_count: 2
-  syntax: '`<nickname> <realname>`'
+  syntax: <nickname> <realname>
   description: |-
     Changes the real name (gecos) of &lt;nickname&gt; to &lt;realname&gt;.
   example: |-

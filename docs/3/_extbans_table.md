@@ -13,7 +13,11 @@
 <tr markdown="1">
 <td markdown="1">{{extban.name}}</td>
 <td markdown="1">{{extban.char}}</td>
-<td markdown="1">{% if extban.syntax == "None" %}<em>None</em>{% else %}{{extban.syntax}}{% endif %}</td>
+{% if extban.syntax is string %}
+<td markdown="1">{% if extban.syntax == "None" %}<em>None</em>{% else %}`{{extban.syntax}}`{% endif %}</td>
+{% else %}
+<td markdown="1">`{{extban.syntax|join('`<br>`')}}`</td>
+{% endif %}
 <td markdown="1">[{{extban.module}}](/3/modules/{{extban.module}}/)</td>
 <td markdown="1">{{extban.description}}</td>
 </tr>

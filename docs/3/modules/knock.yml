@@ -42,7 +42,7 @@ chmodes:
 commands:
 - name: KNOCK
   param_count: 2
-  syntax: '`<channel> <reason>`'
+  syntax: <channel> <reason>
   description: |-
     Requests permission to join &lt;channel&gt; with the reason specified in &lt;reason&gt;.
   example: |-

@@ -8,7 +8,7 @@ chmodes:
   - name: exemptchanops
     char: X
     type: List
-    syntax: '`<restriction>:<mode>`'
+    syntax: <restriction>:<mode>
     usable_by: Channel operators
     description: |-
       Exempts users with the &lt;mode&gt; prefix mode or higher from &lt;restriction&gt;.

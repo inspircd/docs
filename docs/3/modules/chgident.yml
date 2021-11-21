@@ -6,7 +6,7 @@ description: |-
 commands:
 - name: CHGIDENT
   param_count: 2
-  syntax: '`<nickname> <username>`'
+  syntax: <nickname> <username>
   description: |-
     Changes the username (ident) of &lt;nickname&gt; to &lt;username&gt;.
   example: |-

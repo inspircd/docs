@@ -25,7 +25,7 @@ chmodes:
   - name: delaymsg
     char: d
     type: Parameter
-    syntax: '`<seconds>`'
+    syntax: <seconds>
     usable_by: Channel operators
     description: |-
       Prevents newly joined users from speaking until &lt;seconds&gt; seconds have passed.

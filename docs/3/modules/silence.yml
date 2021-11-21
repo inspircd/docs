@@ -30,7 +30,7 @@ configuration:
 commands:
 - name: SILENCE
   param_count: 1-2
-  syntax: '`[(+|-)<mask> [<flags>]]`'
+  syntax: '[(+|-)<mask> [<flags>]]'
   description: |-
     Allows users to add users to their `/SILENCE` list, remove users from their `/SILENCE` list, and list users on their `/SILENCE` list.
   example: |-

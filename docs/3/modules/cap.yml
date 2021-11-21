@@ -8,7 +8,12 @@ description: |-
 commands:
 - name: CAP
   param_count: 1-2
-  syntax: '`CLEAR`<br>`END`<br>`LIST`<br>`LS [<version>]`<br>`REQ :[-]<cap>[ [-]<cap>]+`'
+  syntax:
+  - CLEAR
+  - END
+  - LIST
+  - LS [<version>]
+  - REQ :[-]<cap>[ [-]<cap>]+
   description: |-
     Allows clients to enable capabilities, disable capabilities, and view the capabilities they have enabled.
   # CAP is not documented here because it is not intended to be executed by users

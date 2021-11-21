@@ -48,7 +48,7 @@ extbans:
   - name: sslfp
     char: z
     type: Matching
-    syntax: '`z:<pattern>`'
+    syntax: z:<pattern>
     description: Checks whether users have an TLS (SSL) client certificate with a fingerprint matching &lt;pattern&gt;.
   example: |-
     Bans users with an TLS (SSL) client certificate fingerprint of 5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249:

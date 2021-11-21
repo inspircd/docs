@@ -25,7 +25,7 @@ chmodes:
   - name: invex
     char: I
     type: List
-    syntax: '`<mask>`'
+    syntax: <mask>
     usable_by: Channel operators
     description: |-
       Exempts users matching &lt;mask&gt; from channel mode `i` (inviteonly).
