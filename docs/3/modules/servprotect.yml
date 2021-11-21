@@ -8,7 +8,7 @@ umodes:
   - name: servprotect
     char: k
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Servers
     description: |-
       Protects services pseudoclients against kicks, kills, and channel prefix mode changes.

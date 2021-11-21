@@ -12,7 +12,7 @@ configuration:
   - name: swhois
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then defines a custom line to add to the server operator's WHOIS response.
   details: ""

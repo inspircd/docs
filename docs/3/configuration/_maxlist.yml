@@ -5,19 +5,19 @@ attributes:
 - name: chan
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     A glob pattern for channels that this limit applies to.
 - name: mode
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The character or name for the mode this limit applies to. If not defined then it applies to all modes.
 - name: limit
   type: Number
   required: true
-  default: None
+  default: null
   description: |-
     The number of bans which can be created in these channels.
 details: ""

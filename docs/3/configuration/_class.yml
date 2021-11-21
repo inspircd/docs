@@ -5,31 +5,31 @@ attributes:
 - name: name
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A name that uniquely identifies this server operator class.
 - name: commands
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A space-delimited list of server operator-only commands that server operators with this class can execute.
 - name: privs
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A space-delimited list of server operator privileges that server operators with this class have.
 - name: chanmodes
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The server operator-only channel modes that server operators with this class can change.
 - name: usermodes
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The server operator-only user modes that server operators with this class can change.
 - name: snomasks

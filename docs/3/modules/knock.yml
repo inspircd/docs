@@ -33,7 +33,7 @@ chmodes:
   - name: noknock
     char: K
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Disables the usage of the `/KNOCK` command on this channel.

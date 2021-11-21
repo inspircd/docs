@@ -17,7 +17,7 @@ attributes:
 - name: customversion
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A custom string to show in the `/VERSION` output.
 - name: genericoper
@@ -35,13 +35,13 @@ attributes:
 - name: hidekills
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
 - name: hideserver
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the text to show in place of a server name.
 - name: hidesplits
@@ -71,13 +71,13 @@ attributes:
 - name: runasgroup
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the group to switch to after starting up (requires starting as root).
 - name: runasuser
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the user to switch to after starting up (requires starting as root).
 - name: userstats

@@ -25,7 +25,7 @@ umodes:
   - name: hidechans
     char: I
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Hides the channels the user is in from their `/WHOIS` response.

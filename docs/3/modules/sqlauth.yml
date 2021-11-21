@@ -13,19 +13,19 @@ configuration:
   - name: allowpattern
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then a glob pattern for nicknames that are exempted from the authentication requirement.
   - name: column
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The name of the column that the password is located in.
   - name: dbid
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The name of the database connection to execute the query against.
   - name: hash
@@ -37,19 +37,19 @@ configuration:
   - name: kdf
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The name of a KDF to check the password against.
   - name: killreason
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The message to kill users that fail to authenticate with.
   - name: query
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The SQL query to authenticate users with. If this query returns one or more rows it is considered a success otherwise it is considered a failure.
   - name: verbose

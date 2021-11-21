@@ -11,7 +11,7 @@ configuration:
   - name: autojoin
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A comma-delimited list of channels for users in this connect class to be joined to on connect.
   - name: autojoindelay
@@ -37,7 +37,7 @@ configuration:
   - name: channel
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A comma-delimited list of channels for users to be joined to on connect.
   - name: delay

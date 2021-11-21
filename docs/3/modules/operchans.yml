@@ -8,7 +8,7 @@ chmodes:
   - name: operonly
     char: O
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Server operators
     description: |-
       Prevents non-server operators from joining the channel.

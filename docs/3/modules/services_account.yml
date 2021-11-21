@@ -28,21 +28,21 @@ chmodes:
   - name: c_registered
     char: r
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Marks the channel as being registered.
   - name: reginvite
     char: R
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Prevents users who are not logged into a services account from joining the channel.
   - name: regmoderated
     char: M
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Prevents users who are not logged into a services account from speaking in the channel.
@@ -53,14 +53,14 @@ umodes:
   - name: regdeaf
     char: R
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Prevents users who are not logged into a services account from messaging the user.
   - name: u_registered
     char: r
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Marks the user as being logged into a services account.

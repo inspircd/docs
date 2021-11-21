@@ -12,7 +12,7 @@ configuration:
   - name: opermotd
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The file to read or command to execute to obtain the opermotd text.
   details: ""

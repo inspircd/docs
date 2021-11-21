@@ -11,7 +11,7 @@ configuration:
   - name: engine
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The regular expression engine to use for checking matches.
   - name: notifyuser
@@ -45,7 +45,7 @@ configuration:
   - name: action
     type: Text
     required: false
-    default: none
+    default: null
     description: |-
       The action to take when a user does something that matches this filter.
   - name: duration
@@ -63,13 +63,13 @@ configuration:
   - name: pattern
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The regex pattern to match against.
   - name: reason
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The reason to give to users when they are being punished for doing something that matches this filter.
   details: |-

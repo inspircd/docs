@@ -43,19 +43,19 @@ configuration:
   - name: commands
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A space-delimited list of commands to disable.
   - name: chanmodes
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A list of channel modes to disable.
   - name: usermodes
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A list of user modes to disable.
   details: ""

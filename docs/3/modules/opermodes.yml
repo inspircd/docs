@@ -12,7 +12,7 @@ configuration:
   - name: modes
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The user modes to set on server operators when they log into their server operator account.
   details: ""

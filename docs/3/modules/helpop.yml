@@ -26,20 +26,20 @@ configuration:
   - name: key
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The name of this help topic.
   - name: title
     type: Text
     required: false
-    default: None
+    default: null
     added: 3.5.0
     description: |-
       The header for the help topic.
   - name: value
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The contents of this help topic. This can be split over multiple lines if needed.
   details: ""
@@ -55,7 +55,7 @@ umodes:
   - name: helpop
     char: h
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Server operators
     description: |-
       Marks the user as being available for help.

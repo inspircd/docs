@@ -12,7 +12,7 @@ configuration:
   - name: quotes
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The file to read or command to execute to obtain the quotes text.
   details: ""
@@ -43,13 +43,13 @@ configuration:
   - name: prefix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then text to prefix quotes with when sending them to a user.
   - name: suffix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then text to suffix quotes with when sending them to a user.
   details: ""

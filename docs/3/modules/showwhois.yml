@@ -32,7 +32,7 @@ umodes:
   - name: showwhois
     char: W
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Depends on &lt;showwhois:opersonly&gt;
     description: |-
       Informs the user when someone does a `/WHOIS` query on their nick.

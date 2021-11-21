@@ -5,13 +5,13 @@ attributes:
 - name: address
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     *TCP/IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
 - name: port
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     **Required for TCP/IP listeners!** The TCP port to listen for connections on.
 - name: defer
@@ -23,7 +23,7 @@ attributes:
 - name: hook
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the name of a module that provides middleware for this listener.
 - name: free
@@ -35,13 +35,13 @@ attributes:
 - name: path
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     **Required for UNIX listeners!** The UNIX socket endpoint to listen for connections on (not supported on Windows).
 - name: permissions
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     *UNIX listeners only!* The permissions to use for the UNIX socket (only supported on Linux).
 - name: replace

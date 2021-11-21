@@ -11,25 +11,25 @@ configuration:
   - name: user
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The username used when logging into the account.
   - name: pass
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The password used when logging into the account.
   - name: hash
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The algorithm that the password is hashed with.
   - name: host
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The vhost for users who log into this account.
   details: |-

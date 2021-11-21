@@ -58,7 +58,7 @@ umodes:
   - name: callerid
     char: g
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Enables whitelisting of who can message the user.

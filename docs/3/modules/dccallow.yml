@@ -17,7 +17,7 @@ configuration:
   - name: pattern
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for the filename.
   details: |-

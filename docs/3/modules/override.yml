@@ -11,7 +11,7 @@ configuration:
   - name: override
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A space-delimited list of channel-level restrictions that a server operator can ignore.
   details: |-
@@ -78,7 +78,7 @@ umodes:
   - name: override
     char: O
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Server operators
     description: |-
       Allows server operators to opt-in to overriding restrictions.

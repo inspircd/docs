@@ -33,7 +33,7 @@ configuration:
   - name: hash
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The name of the hash algorithm to configure.
   - name: iterations

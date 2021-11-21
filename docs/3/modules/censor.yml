@@ -17,13 +17,13 @@ configuration:
   - name: text
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A phrase to match within a message.
   - name: replace
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then a replacement phrase to replace the matched phrase with instead of blocking the message.
   details: ""
@@ -46,7 +46,7 @@ chmodes:
   - name: censor
     char: G
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables censoring messages sent to the channel.
@@ -57,7 +57,7 @@ umodes:
   - name: u_censor
     char: G
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Enables censoring messages sent to the user.

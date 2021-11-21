@@ -11,13 +11,13 @@ configuration:
   - name: period
     type: Duration
     required: false
-    default: None
+    default: null
     description: |-
       The time period to wait between server connection attempts.
   - name: server
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A space-delimited list of servers to attempt to connect to.
   details: ""
@@ -63,19 +63,19 @@ configuration:
   - name: allowmask
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       One or more CIDR ranges or glob patterns that the remote server can connect from.
   - name: bind
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The IP address to bind to when connecting to the remote server.
   - name: fingerprint
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then the TLS (SSL) client fingerprint of the remote server.
   - name: hidden
@@ -87,37 +87,37 @@ configuration:
   - name: ipaddr
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The IP address or hostname of the remote server.
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The hostname of the IRC server.
   - name: port
     type: Number
     required: false
-    default: None
+    default: null
     description: |-
       If defined then the TCP port to connect to this server on.
   - name: recvpass
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The password that the remote server will use to log into the local server.
   - name: sendpass
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The password that the local server will use to log into the remote server.
   - name: ssl
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then the name of a TLS (SSL) profile to use for encrypting the connection with this server.
   - name: statshidden
@@ -239,7 +239,7 @@ configuration:
   - name: server
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The name of a services server. You must NOT specify a server that normal users can connect to here.
   - name: silent
@@ -271,12 +271,12 @@ commands:
     ```
 - name: LINKS
   param_count: 0
-  syntax: None
+  syntax: null
   description: |-
     Lists all servers connected to the current one.
 - name: MAP
   param_count: 0
-  syntax: None
+  syntax: null
   description: |-
     Shows a textual map of the network architecture.
 - name: RCONNECT

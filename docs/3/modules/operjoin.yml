@@ -12,7 +12,7 @@ configuration:
   - name: autojoin
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A comma-delimited list of channels for server operators to be joined to when logging into their server operator account.
   details: ""
@@ -39,7 +39,7 @@ configuration:
   - name: channel
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A comma-delimited list of channels for server operators to be joined to when logging into their server operator account.
   - name: override

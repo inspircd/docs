@@ -11,7 +11,7 @@ configuration:
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for a channel name which can be created by unprivileged users.
   details: ""

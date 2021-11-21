@@ -11,13 +11,13 @@ configuration:
   - name: bypasschars
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A list of characters that a message to a normal user can begin with that exempt it from the deaf mode.
   - name: bypasscharsuline
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A list of characters that a message to a U-lined user can begin with that exempt it from the deaf mode.
   - name: enableprivdeaf
@@ -63,14 +63,14 @@ umodes:
   - name: deaf
     char: d
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Prevents the user from receiving channel messages.
   - name: privdeaf
     char: D
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Prevents the user from receiving private messages.

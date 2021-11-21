@@ -21,7 +21,7 @@ commands:
     ```
 - name: UNLOCKSERV
   param_count: 0
-  syntax: None
+  syntax: null
   description: |-
     Enables access to the local server.
   example: |-

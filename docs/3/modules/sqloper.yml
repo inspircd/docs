@@ -11,7 +11,7 @@ configuration:
   - name: dbid
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The name of the database connection to execute the query against.
   - name: query

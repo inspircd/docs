@@ -11,7 +11,7 @@ configuration:
   - name: engine
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The regular expression engine to use for checking matches.
   - name: matchonnickchange

@@ -17,19 +17,19 @@ configuration:
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for a channel name that users should be prevented from joining.
   - name: reason
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A message to tell a user who tries to join a channel that matches this rule.
   - name: redirect
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then the name of a channel to join users to who try to join a channel matching this rule.
   details: ""
@@ -57,7 +57,7 @@ configuration:
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for a channel name that users should be allowed to join regardless of any rules banning it.
   details: ""

@@ -8,7 +8,7 @@ umodes:
   - name: hideoper
     char: H
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Server operators
     description: |-
       Hides the user's server operator status from unprivileged users.

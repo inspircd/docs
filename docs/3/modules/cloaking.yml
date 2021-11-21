@@ -17,25 +17,25 @@ configuration:
   - name: mode
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The cloaking method to use.
   - name: prefix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The value to prefix IP address cloaks with.
   - name: suffix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The value to suffix IP address cloaks with.
   - name: key
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the half and full modes!** A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
   - name: ignorecase
@@ -80,7 +80,7 @@ umodes:
   - name: cloak
     char: x
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Enables hiding of the user's hostname.

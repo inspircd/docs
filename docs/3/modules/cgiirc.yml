@@ -27,13 +27,13 @@ configuration:
   - name: fingerprint
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the webirc type if password is not set!** The TLS (SSL) client certificate fingerprint that the WebIRC gateway will authenticate with.
   - name: mask
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The IP address or hostname of the gateway.
   - name: newident
@@ -45,19 +45,19 @@ configuration:
   - name: type
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The type of authentication that the gateway uses.
   - name: password
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the webirc type if fingerprint is not set!** The password that the WebIRC gateway will authenticate with.
   - name: hash
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If the webirc type is used the algorithm that the password is hashed with.
   details: |-
@@ -106,7 +106,7 @@ configuration:
   - name: webirc
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then a glob pattern to match the name of a WebIRC gateway against.
   details: ""

@@ -5,7 +5,7 @@ attributes:
 - name: name
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the real name of the server operator.
 - name: nick

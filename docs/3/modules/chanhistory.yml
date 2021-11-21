@@ -69,7 +69,7 @@ umodes:
   - name: nohistory
     char: N
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     added: 3.9.0
     description: |-

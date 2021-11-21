@@ -11,7 +11,7 @@ configuration:
   - name: maphide
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The URL to provide to users who run the `/MAP` and `/LINKS` commands.
   details: ""

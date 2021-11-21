@@ -8,7 +8,7 @@ chmodes:
   - name: stripcolor
     char: S
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables stripping of IRC formatting codes from channel messages.
@@ -19,7 +19,7 @@ umodes:
   - name: u_stripcolor
     char: S
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Enables stripping of IRC formatting codes from private messages.

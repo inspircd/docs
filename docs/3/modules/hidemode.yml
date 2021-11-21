@@ -11,7 +11,7 @@ configuration:
   - name: mode
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The name of the mode this rule applies to.
   - name: rank

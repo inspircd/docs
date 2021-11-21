@@ -11,13 +11,13 @@ configuration:
   - name: allowrange
     type: 'No. Range'
     required: false
-    default: None
+    default: null
     description: |-
       The character ranges to allow in a channel name. This overrides denyrange if they overlap.
   - name: denyrange
     type: 'No. Range'
     required: false
-    default: None
+    default: null
     description: |-
       The character ranges to disallow in a channel name.
   details: ""

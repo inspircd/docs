@@ -25,7 +25,7 @@ umodes:
   - name: antiredirect
     char: L
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Prevents users from being redirected by channel mode `L` (redirect).

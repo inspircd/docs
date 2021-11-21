@@ -7,7 +7,7 @@ attributes:
 - name: motd
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A file used as the message of the day, i.e. shown to users when they connect or use the `/MOTD` command.
 details: |-

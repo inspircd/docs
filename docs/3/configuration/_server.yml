@@ -5,7 +5,7 @@ attributes:
 - name: name
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The hostname of the local server.
 - name: description
@@ -23,7 +23,7 @@ attributes:
 - name: id
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then a unique server identifier in the format [0-9][0-9A-Z][0-9A-Z].
 details: ""

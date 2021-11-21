@@ -53,7 +53,7 @@ To load this module use the following `<module>` tag:
 <tr markdown="1">
 <td markdown="1">{{attr.name}}</td>
 <td markdown="1">{{attr.type}}</td>
-<td markdown="1">{% if attr.default == "None" %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
+<td markdown="1">{% if attr.default is none %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
 <td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
 </tr>
 {% endfor %}
@@ -110,8 +110,10 @@ This module requires no other configuration.
 <tr markdown="1">
 <td markdown="1">{{command.name}}</td>
 <td markdown="1">{{command.param_count}}</td>
-{% if command.syntax is string %}
-<td markdown="1">{% if command.syntax == "None" %}<em>None</em>{% else %}`{{command.syntax}}`{% endif %}</td>
+{% if command.syntax is none %}
+<td><em>None</em></td>
+{% elif command.syntax is string %}
+<td markdown="1">`{{command.syntax}}`</td>
 {% else %}
 <td markdown="1">`{{command.syntax|join('`<br>`')}}`</td>
 {% endif %}
@@ -185,8 +187,10 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-{% if mode.syntax is string %}
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% if mode.syntax is none %}
+<td><em>None</em></td>
+{% elif mode.syntax is string %}
+<td markdown="1">`{{mode.syntax}}`</td>
 {% else %}
 <td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
 {% endif %}
@@ -226,8 +230,10 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-{% if mode.syntax is string %}
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% if mode.syntax is none %}
+<td><em>None</em></td>
+{% elif mode.syntax is string %}
+<td markdown="1">`{{mode.syntax}}`</td>
 {% else %}
 <td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
 {% endif %}
@@ -288,8 +294,10 @@ This module requires no other configuration.
 <td markdown="1">{{mode.name}}</td>
 <td markdown="1">{{mode.char}}</td>
 <td markdown="1">{{mode.type}}</td>
-{% if mode.syntax is string %}
-<td markdown="1">{% if mode.syntax == "None" %}<em>None</em>{% else %}`{{mode.syntax}}`{% endif %}</td>
+{% if mode.syntax is none %}
+<td><em>None</em></td>
+{% elif mode.syntax is string %}
+<td markdown="1">`{{mode.syntax}}`</td>
 {% else %}
 <td markdown="1">`{{mode.syntax|join('`<br>`')}}`</td>
 {% endif %}

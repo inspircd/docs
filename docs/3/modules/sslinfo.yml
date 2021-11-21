@@ -44,7 +44,7 @@ configuration:
   - name: fingerprint
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then a space-delimited list of fingerprints of this server operator's TLS (SSL) client certificates.
   - name: sslonly

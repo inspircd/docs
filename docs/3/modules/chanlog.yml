@@ -11,13 +11,13 @@ configuration:
   - name: channel
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The name of a channel to log server notices to.
   - name: snomasks
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       One or more snomasks to log to the channel.
   details: ""

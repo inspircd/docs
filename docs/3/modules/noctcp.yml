@@ -45,7 +45,7 @@ chmodes:
   - name: noctcp
     char: C
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables blocking channel messages that contain CTCPs.
@@ -56,7 +56,7 @@ umodes:
   - name: u_noctcp
     char: T
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Enables blocking private messages that contain CTCPs.

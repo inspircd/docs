@@ -25,7 +25,7 @@ chmodes:
   - name: sslonly
     char: z
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Prevents users who are not connected using TLS (SSL) from joining the channel.
@@ -36,7 +36,7 @@ umodes:
   - name: sslqueries
     char: z
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Prevents messages from being sent to or received from a user that is not connected using TLS (SSL).

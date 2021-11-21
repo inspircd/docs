@@ -5,25 +5,25 @@ attributes:
 - name: name
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the name of this connect class.
 - name: allow
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A glob pattern or CIDR range for an IP address which is allowed to connect to the server. If this is defined then `deny` (below) MUST NOT be defined.
 - name: deny
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     A glob pattern or CIDR range for an IP address which is banned from connecting to the server. If this is defined then `allow` (above) MUST NOT be defined.
 - name: commandrate
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The number of millicommands (1000 equals 1 command) per second that a user can execute.
 - name: fakelag
@@ -35,7 +35,7 @@ attributes:
 - name: globalmax
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The maximum number of users who can exist on the entire network from the range specified in the allow field.
 - name: hardsendq
@@ -47,19 +47,19 @@ attributes:
 - name: limit
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The maximum number of users who can be in this connect class.
 - name: localmax
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The maximum number of users who can exist on the local server from the range specified in the allow field.
 - name: maxchans
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the maximum number of channels that a user in this class can be in.
 - name: maxconnwarn
@@ -71,13 +71,13 @@ attributes:
 - name: parent
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the name of the class to inherit most *core* settings from.
 - name: password
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The password that the user must send to be put into this connect class.
 - name: pingfreq
@@ -89,7 +89,7 @@ attributes:
 - name: port
   type: Number
   required: false
-  default: None
+  default: null
   description: |-
     The port on which a client must be connecting to be put into this connect class.
 - name: reason
@@ -113,7 +113,7 @@ attributes:
 - name: registered
   type: Boolean
   required: false
-  default: None
+  default: null
   description: |-
     If defined then whether this connect class matches a user in registration or a client that has completed registration.
 - name: softsendq

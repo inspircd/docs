@@ -5,13 +5,13 @@ attributes:
 - name: host
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     A user@host to K-line.
 - name: reason
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The reason for the K-line being added.
 details: ""

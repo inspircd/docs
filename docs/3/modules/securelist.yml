@@ -11,7 +11,7 @@ configuration:
   - name: exception
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern to match against the hostnames of users that run the `/LIST` command.
   details: ""

@@ -5,43 +5,43 @@ attributes:
 - name: class
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then a connect class to assign users who log into this server operator account to.
 - name: hash
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the hash algorithm that the password field is hashed with.
 - name: host
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     A space-delimited list of glob patterns for the username@hostname mask that users must be connecting from to log into this server operator account.
 - name: name
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The username for this server operator account.
 - name: password
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The password for this server operator account.
 - name: type
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The type of server operator this account is.
 - name: vhost
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then a virtual hostname to set on users who log into this server operator account.
 details: |+

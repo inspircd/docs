@@ -5,13 +5,13 @@ attributes:
 - name: method
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The method to use for storing logs.
 - name: type
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     A space-delimited token list of types of message to log.
 - name: level
@@ -23,7 +23,7 @@ attributes:
 - name: target
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The location to write the log to.
 - name: flush

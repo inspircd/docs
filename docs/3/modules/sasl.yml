@@ -18,7 +18,7 @@ configuration:
   - name: target
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for the server to route SASL requests to. This should usually be set to the name of your services server.
   details: ""

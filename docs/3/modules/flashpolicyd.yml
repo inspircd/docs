@@ -35,7 +35,7 @@ configuration:
   - name: file
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If defined then the location of a file which contains Adobe Flash policy XML to use instead of the default.
   - name: timeout

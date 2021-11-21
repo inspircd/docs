@@ -11,43 +11,43 @@ configuration:
   - name: action
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The action to take when a user matches this rule.
   - name: mask
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern or CIDR range that a user must be connecting from to match against this rule.
   - name: class
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If set then the name of the connect class that a user must be in to match against this rule.
   - name: ports
     type: 'No. Range'
     required: false
-    default: None
+    default: null
     description: |-
       If set then a numeric range of ports that a user must be connecting from to match against this rule.
   - name: prefix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If set then the value to prefix hostnames with in hostchange rules that use the addnick or addaccount actions
   - name: suffix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If set then the value to suffix hostnames with in hostchange rules that use the addnick or addaccount actions.
   - name: value
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the set action!** The hostname to set on this user.
   details: |-

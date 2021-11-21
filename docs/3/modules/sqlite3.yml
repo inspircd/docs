@@ -16,19 +16,19 @@ configuration:
   - name: module
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       *This MUST be set to "sqlite" to connect to a SQLite 3 database.*
   - name: id
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The name that SQL-using modules can refer to this `<database>` tag using.
   - name: hostname
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The path to where the SQLite database is stored.
   details: ""

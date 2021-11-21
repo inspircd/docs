@@ -8,7 +8,7 @@ chmodes:
   - name: blockcolor
     char: c
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables blocking messages that contain IRC formatting codes.

@@ -8,7 +8,7 @@ chmodes:
   - name: allowinvite
     char: A
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: Allows unprivileged users to use the `/INVITE` command.
 

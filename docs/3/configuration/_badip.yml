@@ -5,13 +5,13 @@ attributes:
 - name: ipmask
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     An IP address to Z-line.
 - name: reason
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The reason for the Z-line being added.
 details: ""

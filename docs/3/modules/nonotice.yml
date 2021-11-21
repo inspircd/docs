@@ -8,7 +8,7 @@ chmodes:
   - name: nonotice
     char: T
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables blocking messages sent with the `/NOTICE` command.

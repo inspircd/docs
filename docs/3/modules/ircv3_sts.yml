@@ -32,7 +32,7 @@ configuration:
   - name: host
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for the hostname a user must send to use STS.
   - name: duration
@@ -44,7 +44,7 @@ configuration:
   - name: port
     type: Number
     required: true
-    default: None
+    default: null
     description: |-
       The port that clients should connect on securely.
   - name: preload

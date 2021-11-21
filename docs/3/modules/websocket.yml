@@ -29,7 +29,7 @@ configuration:
   - name: proxyranges
     type: Text
     required: false
-    default: None
+    default: null
     added: 3.5.0
     description: |-
       A space-delimited list of glob or CIDR matches to trust the X-Real-IP or X-Forwarded-For headers from.
@@ -52,7 +52,7 @@ configuration:
   - name: allow
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A glob pattern for an URL of a web page that is allowed to connect.
   details: ""

@@ -11,7 +11,7 @@ configuration:
   - name: country
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       A space-delimited list of [ISO 3166-1 alpha-2 country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) that users must be connecting from to be assigned to this class.
   details: ""

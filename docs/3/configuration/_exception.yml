@@ -5,13 +5,13 @@ attributes:
 - name: host
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     A user@host to E-line.
 - name: reason
   type: Text
   required: true
-  default: None
+  default: null
   description: |-
     The reason for the E-line being added.
 details: ""

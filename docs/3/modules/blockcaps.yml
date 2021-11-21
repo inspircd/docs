@@ -52,7 +52,7 @@ chmodes:
   - name: blockcaps
     char: B
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Channel operators
     description: |-
       Enables blocking excessively capitalised messages.

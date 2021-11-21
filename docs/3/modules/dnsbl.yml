@@ -11,7 +11,7 @@ configuration:
   - name: dnsbl
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       Match users to this connect class by DNSBL name when using the MARK action.
   - name: usednsbl
@@ -44,19 +44,19 @@ configuration:
   - name: action
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The action to take against users who's IP address is in this DNSBL.
   - name: bitmask
     type: Number
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the bitmask type!** A bitmask of DNSBL result types to match against.
   - name: domain
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The domain name of this DNSBL.
   - name: duration
@@ -68,19 +68,19 @@ configuration:
   - name: host
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If action is set to MARK then a new hostname to set on users who's IP address is in this DNSBL.
   - name: ident
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       If action is set to MARK then a new username (ident) to set on users who's IP address is in this DNSBL.
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The human readable name of this DNSBL.
   - name: reason
@@ -92,7 +92,7 @@ configuration:
   - name: records
     type: 'No. Range'
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the record type!** A numeric range of DNSBL result types to match against.
   - name: timeout

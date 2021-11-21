@@ -11,37 +11,37 @@ configuration:
   - name: path
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The path to protect with this ACL rule.
   - name: types
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       A comma-delimited list of types which apply to this ACL rule.
   - name: blacklist
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the blacklist type!** A comma-delimited list of IP addresses to deny access to this path from.
   - name: password
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the password type!** The password that HTTP connections must provide with their request.
   - name: username
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the password type!** The username that HTTP connections must provide with their request.
   - name: whitelist
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       **Required for the blacklist type!** A comma-delimited list of IP addresses to allow access to this path from.
   details: |-

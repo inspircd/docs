@@ -11,43 +11,43 @@ configuration:
   - name: name
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The unique name of the mode.
   - name: letter
     type: Text
     required: true
-    default: None
+    default: null
     description: |-
       The character used for the mode.
   - name: prefix
     type: Text
     required: false
-    default: None
+    default: null
     description: |-
       The prefix character used for the mode.
   - name: rank
     type: Number
     required: false
-    default: None
+    default: null
     description: |-
       The rank of the mode. Users with higher ranked prefix modes have privileges over users with lower ranks or no rank.
   - name: ranktoset
     type: Number
     required: false
-    default: None
+    default: null
     description: |-
       The rank which is required to set this prefix mode.
   - name: ranktounset
     type: Number
     required: false
-    default: None
+    default: null
     description: |-
       The rank which is required to unset this prefix mode.
   - name: depriv
     type: Boolean
     required: false
-    default: None
+    default: null
     description: |-
       Whether a user with this prefix mode can remove it from themself.
   - name: change

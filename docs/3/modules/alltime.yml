@@ -6,6 +6,6 @@ description: |-
 commands:
 - name: ALLTIME
   param_count: 0
-  syntax: None
+  syntax: null
   description: |-
     Causes all servers on the network to respond with the current UTC time on the server.

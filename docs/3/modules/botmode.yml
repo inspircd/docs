@@ -28,7 +28,7 @@ umodes:
   - name: bot
     char: B
     type: Switch
-    syntax: None
+    syntax: null
     usable_by: Anyone
     description: |-
       Marks the user as a bot.

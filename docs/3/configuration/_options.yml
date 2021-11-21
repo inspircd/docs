@@ -35,19 +35,19 @@ attributes:
 - name: exemptchanops
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/3/modules/exemptchanops) for more information.
 - name: fixedpart
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then a static value to replace users' part messages with.
 - name: fixedquit
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then a static value to replace users' quit messages with.
 - name: hostintopic
@@ -78,13 +78,13 @@ attributes:
 - name: prefixpart
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the value to prefix users' part messages with.
 - name: prefixquit
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the value to prefix users' quit messages with.
 - name: splitwhois
@@ -96,13 +96,13 @@ attributes:
 - name: suffixpart
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the value to suffix users' part messages with.
 - name: suffixquit
   type: Text
   required: false
-  default: None
+  default: null
   description: |-
     If defined then the value to suffix users' quit messages with.
 - name: syntaxhints
