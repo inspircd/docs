@@ -139,7 +139,24 @@ This module requires no other configuration.
 #### Example Usage
 
 {% for command in commands %}
-{{command.example|default('')}}
+
+{% for example in command.example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{example.note}}
+</div>
+{% endif %}
+
+{% if example.description %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}:
+{% endif %}
+
+```plaintext
+{{example.text}}
+```
+
+{% endfor %}
 {% endfor %}
 {% endif %}
 
