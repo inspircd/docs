@@ -1,6 +1,6 @@
-name: list
+name: LIST
 syntax: >-
-  /LIST [(>|<)<count>|C(>|<)<minutes>|T(>|<)<minutes>|[!]<pattern>]+
+  [(>|<)<count>|C(>|<)<minutes>|T(>|<)<minutes>|[!]<pattern>]+
 description: |-
   Lists all channels visible to the requesting user which match the specified criteria. If no criteria is specified then all visible channels are listed.
 

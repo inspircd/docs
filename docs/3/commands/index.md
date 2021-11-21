@@ -7,7 +7,7 @@ title: v3 Commands
 This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {% for cmd in core_commands -%}
-### `{{cmd.syntax}}`
+### `/{{cmd.name}} {{cmd.syntax}}`
 
 {{cmd.description}}
 

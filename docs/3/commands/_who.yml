@@ -1,6 +1,6 @@
-name: who
+name: WHO
 syntax: >-
-  /WHO <pattern> [<flags>][%[<fields>[,<querytype>]]] <pattern>
+  <pattern> [<flags>][%[<fields>[,<querytype>]]] <pattern>
 description: |-
   Requests information about users who match the specified condition.
 

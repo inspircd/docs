@@ -1,6 +1,6 @@
-name: reloadmodule
+name: RELOADMODULE
 syntax: >-
-  /RELOADMODULE <module>
+  <module>
 description: |-
   Reloads the specified module on the local server.
 

@@ -1,6 +1,6 @@
-name: pong
+name: PONG
 syntax: >-
-  /PONG <cookie> [<server>]
+  <cookie> [<server>]
 description: |-
   Responds to a ping from `<server>` with the specified `<cookie>`.  If `<server>` is not specified then it defaults to the local server.
 example: |-

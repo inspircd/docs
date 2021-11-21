@@ -1,6 +1,6 @@
-name: motd
+name: MOTD
 syntax: >-
-  /MOTD [<server>]
+  [<server>]
 description: |-
   If `<server>` is specified then requests the message of the day for the specified server.
 

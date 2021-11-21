@@ -1,6 +1,6 @@
-name: names
+name: NAMES
 syntax: >-
-  /NAMES [<channel>[,<channel>]+]
+  [<channel>[,<channel>]+]
 description: |-
   Requests a list of users who are in the specified channels.
 example: |-

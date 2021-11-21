@@ -1,6 +1,6 @@
-name: time
+name: TIME
 syntax: >-
-  /TIME [<server>]
+  [<server>]
 description: |-
   If `<server>` is specified then requests the time on the specified server.
 

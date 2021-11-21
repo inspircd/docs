@@ -1,6 +1,6 @@
-name: away
+name: AWAY
 syntax: >-
-  /AWAY [<message>]
+  [<message>]
 description: |-
   If `<message>` is specified marks yourself as being away with the specified message.
 

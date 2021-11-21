@@ -1,6 +1,6 @@
-name: eline
+name: ELINE
 syntax: >-
-  /ELINE <ident@host> [<duration> <reason>]
+  <ident@host> [<duration> <reason>]
 description: |-
   If `<duration>` and `<reason>` are specified then exempts an ident@host mask from being affected by other (G, K, Z, etc) X-lines. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the E-line will be permanent.
 

@@ -1,6 +1,6 @@
-name: nick
+name: NICK
 syntax: >-
-  /NICK <nick>
+  <nick>
 description: |-
   Changes your nickname to `<nick>`.
 

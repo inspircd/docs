@@ -1,6 +1,6 @@
-name: mode
+name: MODE
 syntax: >-
-  /MODE <channel>|<user> <modes> [<parameters>]+
+  <channel>|<user> <modes> [<parameters>]+
 description: |-
   Changes the modes which are set on a channel or a user.
 

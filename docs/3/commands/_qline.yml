@@ -1,6 +1,6 @@
-name: qline
+name: QLINE
 syntax: >-
-  /QLINE <nick> [<duration> <reason>]
+  <nick> [<duration> <reason>]
 description: |-
   If `<duration>` and `<reason>` are specified then prevents a nickname from being used. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the Q-line will be permanent.
 

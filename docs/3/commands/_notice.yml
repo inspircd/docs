@@ -1,6 +1,6 @@
-name: notice
+name: NOTICE
 syntax: >-
-  /NOTICE <target>[,<target>]+ <message>
+  <target>[,<target>]+ <message>
 description: |-
   Sends a notice to the targets specified in `<target>`. These targets can be a channel, a user, or a server mask (requires the users/mass-message server operator privilege).
 example: |-

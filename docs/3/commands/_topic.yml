@@ -1,6 +1,6 @@
-name: topic
+name: TOPIC
 syntax: >-
-  /TOPIC <channel> [<newtopic>]
+  <channel> [<newtopic>]
 description: |-
   If `<newtopic>` is specified then changes the topic for `<channel>` to the specified value.
 

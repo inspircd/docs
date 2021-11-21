@@ -1,6 +1,6 @@
-name: die
+name: DIE
 syntax: >-
-  /DIE <server>
+  <server>
 description: |-
   Shuts down the local server. The `<server>` parameter MUST match the name of the local server.
 

@@ -1,6 +1,6 @@
-name: ping
+name: PING
 syntax: >-
-  /PING <cookie> [<server>]
+  <cookie> [<server>]
 description: |-
   Pings `<server>` with the specified `<cookie>`.  If `<server>` is not specified then it defaults to the local server.
 example: |-

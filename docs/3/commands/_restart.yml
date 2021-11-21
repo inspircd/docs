@@ -1,6 +1,6 @@
-name: restart
+name: RESTART
 syntax: >-
-  /RESTART <server>
+  <server>
 description: |-
   Restarts the local server. The `<server>` parameter MUST match the name of the local server.
 

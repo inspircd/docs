@@ -1,6 +1,6 @@
-name: gline
+name: GLINE
 syntax: >-
-  /GLINE <ident@host> [<duration> <reason>]
+  <ident@host> [<duration> <reason>]
 description: |-
   If `<duration>` and `<reason>` are specified then bans an ident@host mask from connecting to the network. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the G-line will be permanent.
 

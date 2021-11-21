@@ -1,6 +1,6 @@
-name: kick
+name: KICK
 syntax: >-
-  /KICK <channel> <nick>[,<nick>]+ [<reason>]
+  <channel> <nick>[,<nick>]+ [<reason>]
 description: |-
   Kicks one or more users from the specified channel.
 

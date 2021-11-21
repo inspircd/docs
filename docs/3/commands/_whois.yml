@@ -1,6 +1,6 @@
-name: whois
+name: WHOIS
 syntax: >-
-  /WHOIS [<server>] <nick>[,<nick>]+
+  [<server>] <nick>[,<nick>]+
 description: |-
   Requests information about users who are currently connected with the specified nicks:
 

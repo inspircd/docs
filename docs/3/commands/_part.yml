@@ -1,6 +1,6 @@
-name: part
+name: PART
 syntax: >-
-  /PART <channel>[,<channel>]+ [<reason>]
+  <channel>[,<channel>]+ [<reason>]
 description: |-
   Leaves one or more channels. If `<reason>` is specified then it will be used as the message shown when parting.
 example: |-

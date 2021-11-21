@@ -1,6 +1,6 @@
-name: unloadmodule
+name: UNLOADMODULE
 syntax: >-
-  /UNLOADMODULE <module>
+  <module>
 description: |-
   Unloads the specified module on the local server.
 

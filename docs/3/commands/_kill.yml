@@ -1,6 +1,6 @@
-name: kill
+name: KILL
 syntax: >-
-  /KILL <nick>[,<nick>]+ <reason>
+  <nick>[,<nick>]+ <reason>
 description: |-
   Forcibly disconnects one or more specified users from the network with the specified reason.
 

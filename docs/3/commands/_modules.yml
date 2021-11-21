@@ -1,5 +1,4 @@
-name: modules
-syntax: >-
-  /MODULES
+name: MODULES
+syntax: ""
 description: |-
   Lists all modules which are loaded on the local server.

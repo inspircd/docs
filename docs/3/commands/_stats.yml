@@ -1,6 +1,6 @@
-name: stats
+name: STATS
 syntax: >-
-  /STATS <character> [<server>]
+  <character> [<server>]
 description: |-
   Requests the specified server statistics.
 

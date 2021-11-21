@@ -1,6 +1,6 @@
-name: ison
+name: ISON
 syntax: >-
-  /ISON <nick> [<nick>]+
+  <nick> [<nick>]+
 description: |-
   Determines whether the specified nicknames are currently connected to the network.
 example: |-

@@ -1,6 +1,6 @@
-name: wallops
+name: WALLOPS
 syntax: >-
-  /WALLOPS <message>
+  <message>
 description: |-
   Sends a message to all users with user mode `w` (wallops) enabled:
 

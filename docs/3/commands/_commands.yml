@@ -1,5 +1,4 @@
-name: commands
-syntax: >-
-  /COMMANDS
+name: COMMANDS
+syntax: ""
 description: |-
   Lists all commands that exist on the local server.

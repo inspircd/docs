@@ -1,6 +1,6 @@
-name: admin
+name: ADMIN
 syntax: >-
-  /ADMIN [<server>]
+  [<server>]
 description: |-
   Requests the contact details for the administrator of the specified server.
 

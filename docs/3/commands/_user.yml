@@ -1,6 +1,6 @@
-name: user
+name: USER
 syntax: >-
-  /USER <username> <unused> <unused> <realname>
+  <username> <unused> <unused> <realname>
 description: |-
   Specifies a username (ident) and real name (gecos) when connecting to the server.
 example: |-

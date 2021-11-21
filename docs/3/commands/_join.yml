@@ -1,6 +1,6 @@
-name: join
+name: JOIN
 syntax: >-
-  /JOIN <channel>[,<channel>]+ [<key>][,[<key>]+]
+  <channel>[,<channel>]+ [<key>][,[<key>]+]
 description: |-
   Joins one or more channels using the specified channel keys if required.
 example: |-

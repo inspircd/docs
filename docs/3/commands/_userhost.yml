@@ -1,6 +1,6 @@
-name: userhost
+name: USERHOST
 syntax: >-
-  /USERHOST <nick> [<nick>]+
+  <nick> [<nick>]+
 description: |-
   Requests the hostname of the specified users.
 example: |-

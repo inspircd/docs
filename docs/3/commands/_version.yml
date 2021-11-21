@@ -1,6 +1,6 @@
-name: version
+name: VERSION
 syntax: >-
-  /VERSION [<server>]
+  [<server>]
 description: |-
   If `<server>` is specified then requests the version of the specified server.
 

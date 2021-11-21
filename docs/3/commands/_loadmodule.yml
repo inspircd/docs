@@ -1,6 +1,6 @@
-name: loadmodule
+name: LOADMODULE
 syntax: >-
-  /LOADMODULE <module>
+  <module>
 description: |-
   Loads the specified module on the local server.
 

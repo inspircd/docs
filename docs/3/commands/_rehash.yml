@@ -1,6 +1,6 @@
-name: rehash
+name: REHASH
 syntax: >-
-  /REHASH <server>|-<type>
+  <server>|-<type>
 description: |-
   Reloads the server configuration.
 

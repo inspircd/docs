@@ -1,6 +1,6 @@
-name: whowas
+name: WHOWAS
 syntax: >-
-  /WHOWAS <nick>
+  <nick>
 description: |-
   Requests information about a user who was previously connected with the specified nick.
 example: |-

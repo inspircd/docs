@@ -1,5 +1,4 @@
-name: lusers
-syntax: >-
-  /LUSERS
+name: LUSERS
+syntax: ""
 description: |-
   Requests information about the current and total number of servers, server operators, and users.
