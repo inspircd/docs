@@ -128,7 +128,7 @@ commands:
       The following examples assume that the "glob" regex module is being used.
 
       See the `<filteropts>` documentation above for more information.
-    description:
+    description: |-
       G-lines users for saying the phrase "fluffy capybara" in `/PRIVMSG` and `/NOTICE` messages
     text: |-
       /FILTER *fluffy?capybara* gline nop 1h :Fluffy capybaras are too cute for this network
