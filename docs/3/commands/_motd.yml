@@ -5,15 +5,12 @@ description: |-
   If `<server>` is specified then requests the message of the day for the specified server.
 
   Otherwise, requests the message of the day for the local server.
-example: |-
-  Requests the MOTD for the local server:
-
-  ```plaintext
-  /MOTD
-  ```
-
-  Requests the MOTD for irc2.example.com:
-
-  ```plaintext
-  /MOTD irc2.example.com
-  ```
+example:
+  - description: |-
+      Requests the MOTD for the local server
+    text: |-
+      /MOTD
+  - description: |-
+      Requests the MOTD for irc2.example.com
+    text: |-
+      /MOTD irc2.example.com

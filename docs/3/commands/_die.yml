@@ -5,9 +5,8 @@ description: |-
   Shuts down the local server. The `<server>` parameter MUST match the name of the local server.
 
   This command is only usable by server operators with DIE in one of their `<class>` blocks.
-example: |-
-  Shuts down the local server:
-
-  ```plaintext
-  /DIE irc2.example.com
-  ```
+example:
+  - description: |-
+      Shuts down the local server
+    text: |-
+      /DIE irc2.example.com

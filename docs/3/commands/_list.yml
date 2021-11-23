@@ -19,51 +19,36 @@ description: |-
   If `<pattern>` is specified then only lists channels with a name or a topic matching `<pattern>`.
 
   If `!<pattern>` is specified then only lists channels with a name or a topic not matching `<pattern>`.
-example: |-
-  Lists channels with more than five users:
-
-  ```plaintext
-  /LIST >5
-  ```
-
-  Lists channels with less than five users:
-
-  ```plaintext
-  /LIST <5
-  ```
-
-  Lists channels which were created more than ten minutes ago:
-
-  ```plaintext
-  /LIST C>10
-  ```
-
-  Lists channels which were created less than ten minutes ago:
-
-  ```plaintext
-  /LIST C<10
-  ```
-
-  Lists channels which had the topic changed more than ten minutes ago:
-
-  ```plaintext
-  /LIST T>10
-  ```
-
-  Lists channels which had the topic changed less than ten minutes ago:
-
-  ```plaintext
-  /LIST T<10
-  ```
-
-  Lists all channels with a name or topic matching `*support*`:
-
-  ```plaintext
-  /LIST *support*
-  ```
-
-  Lists all channels with a name or topic not matching `*support*`:
-
-  ```plaintext
-  /LIST !*support*
-  ```
+example:
+  - description: |-
+      Lists channels with more than five users
+    text: |-
+      /LIST >5
+  - description: |-
+      Lists channels with less than five users
+    text: |-
+      /LIST <5
+  - description: |-
+      Lists channels which were created more than ten minutes ago
+    text: |-
+      /LIST C>10
+  - description: |-
+      Lists channels which were created less than ten minutes ago
+    text: |-
+      /LIST C<10
+  - description: |-
+      Lists channels which had the topic changed more than ten minutes ago
+    text: |-
+      /LIST T>10
+  - description: |-
+      Lists channels which had the topic changed less than ten minutes ago
+    text: |-
+      /LIST T<10
+  - description: |-
+      Lists all channels with a name or topic matching `*support*`
+    text: |-
+      /LIST *support*
+  - description: |-
+      Lists all channels with a name or topic not matching `*support*`
+    text: |-
+      /LIST !*support*

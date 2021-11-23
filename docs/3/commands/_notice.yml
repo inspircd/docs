@@ -3,21 +3,16 @@ syntax: >-
   <target>[,<target>]+ <message>
 description: |-
   Sends a notice to the targets specified in `<target>`. These targets can be a channel, a user, or a server mask (requires the users/mass-message server operator privilege).
-example: |-
-  Sends a notice to #channel saying "Hello!":
-
-  ```plaintext
-  /NOTICE #channel :Hello!
-  ```
-
-  Sends a notice to Sadie saying "Hello!":
-
-  ```plaintext
-  /NOTICE Sadie :Hello!
-  ```
-
-  Sends a notice to all users on servers matching the glob pattern `*.example.com` saying "Hello!":
-
-  ```plaintext
-  /NOTICE $*.example.com :Hello!
-  ```
+example:
+  - description: |-
+      Sends a notice to #channel saying "Hello!"
+    text: |-
+      /NOTICE #channel :Hello!
+  - description: |-
+      Sends a notice to Sadie saying "Hello!"
+    text: |-
+      /NOTICE Sadie :Hello!
+  - description: |-
+      Sends a notice to all users on servers matching the glob pattern `*.example.com` saying "Hello!"
+    text: |-
+      /NOTICE $*.example.com :Hello!

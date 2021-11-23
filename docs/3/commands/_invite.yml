@@ -7,27 +7,20 @@ description: |-
   If `<duration>` is specified then the invite will expire after the specified duration passes. This duration can be given as a number of seconds or as a duration in the format 1y2w3d4h5m6s.
 
   Otherwise, if no parameters are specified, then lists the invites which you have been sent that haven't been acted on yet.
-example: |-
-  Lists all pending invites that you have been sent:
-
-  ```plaintext
-  /INVITE
-  ```
-
-  Invites Sadie to #example:
-
-  ```plaintext
-  /INVITE Sadie #example
-  ```
-
-  Invites Sadie to #example with a five minute invite expiry:
-
-  ```plaintext
-  /INVITE Sadie #example 5m
-  ```
-
-  Invites Sadie to #example with a five minute invite expiry:
-
-  ```plaintext
-  /INVITE Sadie #example 300
-  ```
+example:
+  - description: |-
+      Lists all pending invites that you have been sent
+    text: |-
+      /INVITE
+  - description: |-
+      Invites Sadie to #example
+    text: |-
+      /INVITE Sadie #example
+  - description: |-
+      Invites Sadie to #example with a five minute invite expiry
+    text: |-
+      /INVITE Sadie #example 5m
+  - description: |-
+      Invites Sadie to #example with a five minute invite expiry
+    text: |-
+      /INVITE Sadie #example 300

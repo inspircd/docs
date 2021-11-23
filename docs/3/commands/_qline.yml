@@ -7,21 +7,16 @@ description: |-
   Otherwise, if just `<nick>` is specified, removes a reservation on a nickname.
 
   This command is only usable by server operators with QLINE in one of their `<class>` blocks.
-example: |-
-  Q-lines Adam for one day with the reason "Testing":
-
-  ```plaintext
-  /QLINE Adam 1d :Testing
-  ```
-
-  Q-lines Sadie for one day with the reason "Testing":
-
-  ```plaintext
-  /QLINE Sadie 86400 :Testing
-  ```
-
-  Removes a Q-line on Adam:
-
-  ```plaintext
-  /QLINE Adam
-  ```
+example:
+  - description: |-
+      Q-lines Adam for one day with the reason "Testing"
+    text: |-
+      /QLINE Adam 1d :Testing
+  - description: |-
+      Q-lines Sadie for one day with the reason "Testing"
+    text: |-
+      /QLINE Sadie 86400 :Testing
+  - description: |-
+      Removes a Q-line on Adam
+    text: |-
+      /QLINE Adam

@@ -5,27 +5,20 @@ description: |-
   Requests information about users who are currently connected with the specified nicks:
 
   If the `<server>` parameter is specified then only one `<nick>` can be specified and remote information will be fetched about the user if they are not on the local server.
-example: |-
-  Requests locally available information about Adam:
-
-  ```plaintext
-  /WHOIS Adam
-  ```
-
-  Requests remotely available information about Adam by specifying the server they're on:
-
-  ```plaintext
-  /WHOIS irc.example.com Adam
-  ```
-
-  Requests remotely available information about Adam by repeating their nick:
-
-  ```plaintext
-  /WHOIS Adam Adam
-  ```
-
-  Requests locally available information about Adam and Sadie:
-
-  ```plaintext
-  /WHOIS Adam,Sadie
-  ```
+example:
+  - description: |-
+      Requests locally available information about Adam
+    text: |-
+      /WHOIS Adam
+  - description: |-
+      Requests remotely available information about Adam by specifying the server they're on
+    text: |-
+      /WHOIS irc.example.com Adam
+  - description: |-
+      Requests remotely available information about Adam by repeating their nick
+    text: |-
+      /WHOIS Adam Adam
+  - description: |-
+      Requests locally available information about Adam and Sadie
+    text: |-
+      /WHOIS Adam,Sadie

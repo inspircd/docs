@@ -3,9 +3,8 @@ syntax: >-
   <nick> [<nick>]+
 description: |-
   Determines whether the specified nicknames are currently connected to the network.
-example: |-
-  Checks whether Adam, Attila, and Sadie are currently connected to the network:
-
-  ```plaintext
-  /ISON Adam Attila Sadie
-  ```
+example:
+  - description: |-
+      Checks whether Adam, Attila, and Sadie are currently connected to the network
+    text: |-
+      /ISON Adam Attila Sadie

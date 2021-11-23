@@ -7,21 +7,16 @@ description: |-
   Otherwise, if just `<ident@host>` is specified, removes a local server ban on an ident@host mask.
 
   This command is only usable by server operators with KLINE in one of their `<class>` blocks.
-example: |-
-  K-lines sadie@example.com for one day with the reason "Testing":
-
-  ```plaintext
-  /KLINE sadie@example.com 1d :Testing
-  ```
-
-  K-lines sadie@example.com for one day with the reason "Testing":
-
-  ```plaintext
-  /KLINE sadie@example.com 86400 :Testing
-  ```
-
-  Removes a K-line on sadie@example.com:
-
-  ```plaintext
-  /KLINE sadie@example.com
-  ```
+example:
+  - description: |-
+      K-lines sadie@example.com for one day with the reason "Testing"
+    text: |-
+      /KLINE sadie@example.com 1d :Testing
+  - description: |-
+      K-lines sadie@example.com for one day with the reason "Testing"
+    text: |-
+      /KLINE sadie@example.com 86400 :Testing
+  - description: |-
+      Removes a K-line on sadie@example.com
+    text: |-
+      /KLINE sadie@example.com

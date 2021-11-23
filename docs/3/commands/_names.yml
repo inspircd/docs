@@ -3,9 +3,8 @@ syntax: >-
   [<channel>[,<channel>]+]
 description: |-
   Requests a list of users who are in the specified channels.
-example: |-
-  Requests a list of users on channels #one and #two:
-
-  ```plaintext
-  /NAMES #one,#two
-  ```
+example:
+  - description: |-
+      Requests a list of users on channels #one and #two
+    text: |-
+      /NAMES #one,#two

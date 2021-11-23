@@ -3,9 +3,8 @@ syntax: >-
   <password>
 description: |-
   Specifies the password used to log in to the local server.
-example: |-
-  Specifies "hunter2" as the local server password.
-
-  ```plaintext
-  /PASS hunter2
-  ```
+example:
+  - description: |-
+      Specifies "hunter2" as the local server password
+    text: |-
+      /PASS hunter2

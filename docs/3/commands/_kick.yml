@@ -5,21 +5,16 @@ description: |-
   Kicks one or more users from the specified channel.
 
   You must be at least a channel half-operator, or channel operator if that channel mode is not enabled, and must be an equal or higher rank to the user you are kicking.
-example: |-
-  Kicks Soni from #channel with no reason:
-
-  ```plaintext
-  /KICK #channel Soni
-  ```
-
-  Kicks Soni from #channel:
-
-  ```plaintext
-  /KICK #channel Soni :Disruptive behaviour is not allowed
-  ```
-
-  Kicks opal and Soni from #channel:
-
-  ```plaintext
-  /KICK #channel opal,Soni :Disruptive behaviour is not allowed
-  ```
+example:
+  - description: |-
+      Kicks Soni from #channel with no reason
+    text: |-
+      /KICK #channel Soni
+  - description: |-
+      Kicks Soni from #channel
+    text: |-
+      /KICK #channel Soni :Disruptive behaviour is not allowed
+  - description: |-
+      Kicks opal and Soni from #channel
+    text: |-
+      /KICK #channel opal,Soni :Disruptive behaviour is not allowed

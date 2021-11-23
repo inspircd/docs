@@ -14,7 +14,23 @@ This page only lists core commands. For details on the commands of a specific mo
 {% if cmd.example %}
 #### Example Usage
 
-{{cmd.example}}
+{% for example in cmd.example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{example.note}}
+</div>
+{% endif %}
+
+{% if example.description %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}{% if not example.skip_colon %}:{% endif %}
+{% endif %}
+
+```plaintext
+{{example.text}}
+```
+
+{% endfor %}
 {% endif %}
 
 {% endfor %}

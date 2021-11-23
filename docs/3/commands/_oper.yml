@@ -3,9 +3,8 @@ syntax: >-
   <name> <password>
 description: |-
   Logs into a server operator account with the specified name and password.
-example: |-
-  Logs into the server operator account "AzureDiamond" with the password "hunter2":
-
-  ```plaintext
-  /OPER AzureDiamond hunter2
-  ```
+example:
+  - description: |-
+      Logs into the server operator account "AzureDiamond" with the password "hunter2"
+    text: |-
+      /OPER AzureDiamond hunter2

@@ -7,21 +7,16 @@ description: |-
   Otherwise, if just `<ident@host>` is specified, removes an exemption on an ident@host mask.
 
   This command is only usable by server operators with ELINE in one of their `<class>` blocks.
-example: |-
-  E-lines sadie@example.com for one day with the reason "Testing":
-
-  ```plaintext
-  /ELINE sadie@example.com 1d :Testing
-  ```
-
-  E-lines sadie@example.com for one day with the reason "Testing":
-
-  ```plaintext
-  /ELINE sadie@example.com 86400 :Testing
-  ```
-
-  Removes an E-line on sadie@example.com:
-
-  ```plaintext
-  /ELINE sadie@example.com
-  ```
+example:
+  - description: |-
+      E-lines sadie@example.com for one day with the reason "Testing"
+    text: |-
+      /ELINE sadie@example.com 1d :Testing
+  - description: |-
+      E-lines sadie@example.com for one day with the reason "Testing"
+    text: |-
+      /ELINE sadie@example.com 86400 :Testing
+  - description: |-
+      Removes an E-line on sadie@example.com
+    text: |-
+      /ELINE sadie@example.com

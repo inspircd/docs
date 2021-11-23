@@ -41,15 +41,12 @@ description: |-
   s         | Include the user's server name in the response. If the 'x' flag was specified then this is the real server name rather than the masked servername.
   t         | Include the query type in the response.
   u         | Include the user's username in the response.
-example: |-
-  Requests all users on the local server who have an away message matching `*brb*`:
-
-  ```plaintext
-  /WHO *brb* Al
-  ```
-
-  Requests the account name, hostname, and username of Sadie:
-
-  ```plaintext
-  /WHO Sadie n%ahu
-  ```
+example:
+  - description: |-
+      Requests all users on the local server who have an away message matching `*brb*`
+    text: |-
+      /WHO *brb* Al
+  - description: |-
+      Requests the account name, hostname, and username of Sadie
+    text: |-
+      /WHO Sadie n%ahu

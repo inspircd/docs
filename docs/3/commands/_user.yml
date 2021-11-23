@@ -3,9 +3,8 @@ syntax: >-
   <username> <unused> <unused> <realname>
 description: |-
   Specifies a username (ident) and real name (gecos) when connecting to the server.
-example: |-
-  Specifies the username (ident) "jsmith" and the real name "John Smith &lt;jsmith@example.com&gt;":
-
-  ```plaintext
-  /USER jsmith * * :John Smith <jsmith@example.com>
-  ```
+example:
+  - description: |-
+      Specifies the username (ident) "jsmith" and the real name "John Smith &lt;jsmith@example.com&gt;"
+    text: |-
+      /USER jsmith * * :John Smith <jsmith@example.com>
