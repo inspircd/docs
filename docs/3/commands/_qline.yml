@@ -8,15 +8,15 @@ description: |-
 
   This command is only usable by server operators with QLINE in one of their `<class>` blocks.
 example:
-  - description: |-
-      Q-lines Adam for one day with the reason "Testing"
-    text: |-
-      /QLINE Adam 1d :Testing
-  - description: |-
-      Q-lines Sadie for one day with the reason "Testing"
-    text: |-
-      /QLINE Sadie 86400 :Testing
-  - description: |-
-      Removes a Q-line on Adam
-    text: |-
-      /QLINE Adam
+- description: |-
+    Q-lines Adam for one day with the reason "Testing"
+  text: |-
+    /QLINE Adam 1d :Testing
+- description: |-
+    Q-lines Sadie for one day with the reason "Testing"
+  text: |-
+    /QLINE Sadie 86400 :Testing
+- description: |-
+    Removes a Q-line on Adam
+  text: |-
+    /QLINE Adam

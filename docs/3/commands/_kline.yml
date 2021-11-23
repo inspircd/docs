@@ -8,15 +8,15 @@ description: |-
 
   This command is only usable by server operators with KLINE in one of their `<class>` blocks.
 example:
-  - description: |-
-      K-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /KLINE sadie@example.com 1d :Testing
-  - description: |-
-      K-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /KLINE sadie@example.com 86400 :Testing
-  - description: |-
-      Removes a K-line on sadie@example.com
-    text: |-
-      /KLINE sadie@example.com
+- description: |-
+    K-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /KLINE sadie@example.com 1d :Testing
+- description: |-
+    K-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /KLINE sadie@example.com 86400 :Testing
+- description: |-
+    Removes a K-line on sadie@example.com
+  text: |-
+    /KLINE sadie@example.com

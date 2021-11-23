@@ -35,11 +35,11 @@ description: |-
   U         | Show U-lined servers.
 
 example:
-  - description: |-
-      Requests `p` (ports) statistics for the local server
-    text: |-
-      /STATS p
-  - description: |-
-      Requests `p` (ports) statistics for the remote server irc.eu.example.com
-    text: |-
-      /STATS p irc.eu.example.com
+- description: |-
+    Requests `p` (ports) statistics for the local server
+  text: |-
+    /STATS p
+- description: |-
+    Requests `p` (ports) statistics for the remote server irc.eu.example.com
+  text: |-
+    /STATS p irc.eu.example.com

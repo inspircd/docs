@@ -6,11 +6,11 @@ description: |-
 
   Otherwise, requests the time on the local server.
 example:
-  - description: |-
-      Requests the time on the local server
-    text: |-
-      /TIME
-  - description: |-
-      Requests the time on remote server irc.eu.example.com
-    text: |-
-      /STATS p irc.eu.example.com
+- description: |-
+    Requests the time on the local server
+  text: |-
+    /TIME
+- description: |-
+    Requests the time on remote server irc.eu.example.com
+  text: |-
+    /STATS p irc.eu.example.com

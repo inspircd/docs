@@ -6,11 +6,11 @@ description: |-
 
   This command is only usable by server operators with KILL in one of their `<class>` blocks.
 example:
-  - description: |-
-      Forcibly disconnects opal from the network
-    text: |-
-      /KILL opal :Disruptive behaviour is not allowed
-  - description: |-
-      Forcibly disconnects Soni and opal from the network
-    text: |-
-      /KILL Soni,opal :Disruptive behaviour is not allowed
+- description: |-
+    Forcibly disconnects opal from the network
+  text: |-
+    /KILL opal :Disruptive behaviour is not allowed
+- description: |-
+    Forcibly disconnects Soni and opal from the network
+  text: |-
+    /KILL Soni,opal :Disruptive behaviour is not allowed

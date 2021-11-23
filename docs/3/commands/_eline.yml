@@ -8,15 +8,15 @@ description: |-
 
   This command is only usable by server operators with ELINE in one of their `<class>` blocks.
 example:
-  - description: |-
-      E-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /ELINE sadie@example.com 1d :Testing
-  - description: |-
-      E-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /ELINE sadie@example.com 86400 :Testing
-  - description: |-
-      Removes an E-line on sadie@example.com
-    text: |-
-      /ELINE sadie@example.com
+- description: |-
+    E-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /ELINE sadie@example.com 1d :Testing
+- description: |-
+    E-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /ELINE sadie@example.com 86400 :Testing
+- description: |-
+    Removes an E-line on sadie@example.com
+  text: |-
+    /ELINE sadie@example.com

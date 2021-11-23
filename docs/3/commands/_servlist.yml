@@ -4,7 +4,7 @@ syntax: >-
 description: |-
   List network services that are currently connected to the network and visible to you. The optional glob-based nick and oper-type parameters match against the nickname of the network service and the oper type of the network service.
 example:
-  - description: |-
-      Lists all visible network services with a nickname ending in "Serv"
-    text: |-
-      /SERVLIST *Serv
+- description: |-
+    Lists all visible network services with a nickname ending in "Serv"
+  text: |-
+    /SERVLIST *Serv

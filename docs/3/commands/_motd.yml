@@ -6,11 +6,11 @@ description: |-
 
   Otherwise, requests the message of the day for the local server.
 example:
-  - description: |-
-      Requests the MOTD for the local server
-    text: |-
-      /MOTD
-  - description: |-
-      Requests the MOTD for irc2.example.com
-    text: |-
-      /MOTD irc2.example.com
+- description: |-
+    Requests the MOTD for the local server
+  text: |-
+    /MOTD
+- description: |-
+    Requests the MOTD for irc2.example.com
+  text: |-
+    /MOTD irc2.example.com

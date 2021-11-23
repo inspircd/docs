@@ -8,19 +8,19 @@ description: |-
 
   Otherwise, if no parameters are specified, then lists the invites which you have been sent that haven't been acted on yet.
 example:
-  - description: |-
-      Lists all pending invites that you have been sent
-    text: |-
-      /INVITE
-  - description: |-
-      Invites Sadie to #example
-    text: |-
-      /INVITE Sadie #example
-  - description: |-
-      Invites Sadie to #example with a five minute invite expiry
-    text: |-
-      /INVITE Sadie #example 5m
-  - description: |-
-      Invites Sadie to #example with a five minute invite expiry
-    text: |-
-      /INVITE Sadie #example 300
+- description: |-
+    Lists all pending invites that you have been sent
+  text: |-
+    /INVITE
+- description: |-
+    Invites Sadie to #example
+  text: |-
+    /INVITE Sadie #example
+- description: |-
+    Invites Sadie to #example with a five minute invite expiry
+  text: |-
+    /INVITE Sadie #example 5m
+- description: |-
+    Invites Sadie to #example with a five minute invite expiry
+  text: |-
+    /INVITE Sadie #example 300

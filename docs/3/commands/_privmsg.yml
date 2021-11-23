@@ -4,15 +4,15 @@ syntax: >-
 description: |-
   Sends a message to the targets specified in `<target>`. These targets can be a channel, a user, or a server mask (requires the users/mass-message server operator privilege).
 example:
-  - description: |-
-      Sends a message to #channel saying "Hello!"
-    text: |-
-      /PRIVMSG #channel :Hello!
-  - description: |-
-      Sends a message to Sadie saying "Hello!"
-    text: |-
-      /PRIVMSG Sadie :Hello!
-  - description: |-
-      Sends a message to all users on servers matching the glob pattern `*.example.com` saying "Hello!"
-    text: |-
-      /PRIVMSG $*.example.com :Hello!
+- description: |-
+    Sends a message to #channel saying "Hello!"
+  text: |-
+    /PRIVMSG #channel :Hello!
+- description: |-
+    Sends a message to Sadie saying "Hello!"
+  text: |-
+    /PRIVMSG Sadie :Hello!
+- description: |-
+    Sends a message to all users on servers matching the glob pattern `*.example.com` saying "Hello!"
+  text: |-
+    /PRIVMSG $*.example.com :Hello!

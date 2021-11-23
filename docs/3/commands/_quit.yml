@@ -4,11 +4,11 @@ syntax: >-
 description: |-
   Disconnects from the local server. If `<message>` is specified then it will be used as the message shown when quitting. Otherwise, "Client exited" will be used.
 example:
-  - description: |-
-      Quits with "Client exited" as the quit message
-    text: |-
-      /QUIT
-  - description: |-
-      Quits with "Time for bed" as the reason
-    text: |-
-      /QUIT :Time for bed
+- description: |-
+    Quits with "Client exited" as the quit message
+  text: |-
+    /QUIT
+- description: |-
+    Quits with "Time for bed" as the reason
+  text: |-
+    /QUIT :Time for bed

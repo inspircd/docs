@@ -12,15 +12,15 @@ description: |-
 
   This command is only usable by server operators with REHASH in one of their `<class>` blocks.
 example:
-  - description: |-
-      Reloads the local server configuration
-    text: |-
-      /REHASH
-  - description: |-
-      Reloads the server configuration for remote.example.com
-    text: |-
-      /REHASH remote.example.com
-  - description: |-
-      Reloads the TLS (SSL) certificates (requires [the sslinfo module](/3/modules/sslinfo))
-    text: |-
-      /REHASH -ssl
+- description: |-
+    Reloads the local server configuration
+  text: |-
+    /REHASH
+- description: |-
+    Reloads the server configuration for remote.example.com
+  text: |-
+    /REHASH remote.example.com
+- description: |-
+    Reloads the TLS (SSL) certificates (requires [the sslinfo module](/3/modules/sslinfo))
+  text: |-
+    /REHASH -ssl

@@ -8,15 +8,15 @@ description: |-
 
   This command is only usable by server operators with GLINE in one of their `<class>` blocks.
 example:
-  - description: |-
-      G-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /GLINE sadie@example.com 1d :Testing
-  - description: |-
-      G-lines sadie@example.com for one day with the reason "Testing"
-    text: |-
-      /GLINE sadie@example.com 86400 :Testing
-  - description: |-
-      Removes a G-line on sadie@example.com
-    text: |-
-      /GLINE sadie@example.com
+- description: |-
+    G-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /GLINE sadie@example.com 1d :Testing
+- description: |-
+    G-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /GLINE sadie@example.com 86400 :Testing
+- description: |-
+    Removes a G-line on sadie@example.com
+  text: |-
+    /GLINE sadie@example.com

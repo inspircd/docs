@@ -6,7 +6,7 @@ description: |-
 
   This command is only usable by server operators with DIE in one of their `<class>` blocks.
 example:
-  - description: |-
-      Shuts down the local server
-    text: |-
-      /DIE irc2.example.com
+- description: |-
+    Shuts down the local server
+  text: |-
+    /DIE irc2.example.com

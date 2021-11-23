@@ -6,7 +6,7 @@ description: |-
 
   This command is only usable by server operators with RESTART in one of their `<class>` blocks.
 example:
-  - description: |-
-      Restarts the local server
-    text: |-
-      /RESTART irc2.example.com
+- description: |-
+    Restarts the local server
+  text: |-
+    /RESTART irc2.example.com

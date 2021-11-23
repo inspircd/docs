@@ -42,11 +42,11 @@ description: |-
   t         | Include the query type in the response.
   u         | Include the user's username in the response.
 example:
-  - description: |-
-      Requests all users on the local server who have an away message matching `*brb*`
-    text: |-
-      /WHO *brb* Al
-  - description: |-
-      Requests the account name, hostname, and username of Sadie
-    text: |-
-      /WHO Sadie n%ahu
+- description: |-
+    Requests all users on the local server who have an away message matching `*brb*`
+  text: |-
+    /WHO *brb* Al
+- description: |-
+    Requests the account name, hostname, and username of Sadie
+  text: |-
+    /WHO Sadie n%ahu

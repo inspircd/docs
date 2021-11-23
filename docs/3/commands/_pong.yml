@@ -4,11 +4,11 @@ syntax: >-
 description: |-
   Responds to a ping from `<server>` with the specified `<cookie>`.  If `<server>` is not specified then it defaults to the local server.
 example:
-  - description: |-
-      Responds to a ping from the local server with the cookie "wibble"
-    text: |-
-      /PONG wibble
-  - description: |-
-      Responds to a ping from `irc2.example.com` with the cookie "wobble"
-    text: |-
-      /PONG wobble irc2.example.com
+- description: |-
+    Responds to a ping from the local server with the cookie "wibble"
+  text: |-
+    /PONG wibble
+- description: |-
+    Responds to a ping from `irc2.example.com` with the cookie "wobble"
+  text: |-
+    /PONG wobble irc2.example.com

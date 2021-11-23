@@ -6,7 +6,7 @@ description: |-
 
   This command is only usable by server operators with RELOADMODULE in one of their `<class>` blocks.
 example:
-  - description: |-
-      Reloads the alias module
-    text: |-
-      /RELOADMODULE alias
+- description: |-
+    Reloads the alias module
+  text: |-
+    /RELOADMODULE alias

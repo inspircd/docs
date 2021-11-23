@@ -6,11 +6,11 @@ description: |-
 
   Otherwise, requests the topic for the specified channel.
 example:
-  - description: |-
-      Changes the topic for #trains to "choo choo"
-    text: |-
-      /TOPIC #trains :choo choo
-  - description: |-
-      Requests the topic for #trains
-    text: |-
-      /TOPIC #trains
+- description: |-
+    Changes the topic for #trains to "choo choo"
+  text: |-
+    /TOPIC #trains :choo choo
+- description: |-
+    Requests the topic for #trains
+  text: |-
+    /TOPIC #trains

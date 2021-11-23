@@ -4,7 +4,7 @@ syntax: >-
 description: |-
   Determines whether the specified nicknames are currently connected to the network.
 example:
-  - description: |-
-      Checks whether Adam, Attila, and Sadie are currently connected to the network
-    text: |-
-      /ISON Adam Attila Sadie
+- description: |-
+    Checks whether Adam, Attila, and Sadie are currently connected to the network
+  text: |-
+    /ISON Adam Attila Sadie

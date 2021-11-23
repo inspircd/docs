@@ -6,11 +6,11 @@ description: |-
 
   If `<server>` is not specified then it defaults to the local server.
 example:
-  - description: |-
-      Requests the contact details for the local server administrator
-    text: |-
-      /ADMIN
-  - description: |-
-      Requests the contact details for the server administrator of irc.example.com
-    text: |-
-      /ADMIN irc.example.com
+- description: |-
+    Requests the contact details for the local server administrator
+  text: |-
+    /ADMIN
+- description: |-
+    Requests the contact details for the server administrator of irc.example.com
+  text: |-
+    /ADMIN irc.example.com

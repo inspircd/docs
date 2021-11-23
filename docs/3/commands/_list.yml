@@ -20,35 +20,35 @@ description: |-
 
   If `!<pattern>` is specified then only lists channels with a name or a topic not matching `<pattern>`.
 example:
-  - description: |-
-      Lists channels with more than five users
-    text: |-
-      /LIST >5
-  - description: |-
-      Lists channels with less than five users
-    text: |-
-      /LIST <5
-  - description: |-
-      Lists channels which were created more than ten minutes ago
-    text: |-
-      /LIST C>10
-  - description: |-
-      Lists channels which were created less than ten minutes ago
-    text: |-
-      /LIST C<10
-  - description: |-
-      Lists channels which had the topic changed more than ten minutes ago
-    text: |-
-      /LIST T>10
-  - description: |-
-      Lists channels which had the topic changed less than ten minutes ago
-    text: |-
-      /LIST T<10
-  - description: |-
-      Lists all channels with a name or topic matching `*support*`
-    text: |-
-      /LIST *support*
-  - description: |-
-      Lists all channels with a name or topic not matching `*support*`
-    text: |-
-      /LIST !*support*
+- description: |-
+    Lists channels with more than five users
+  text: |-
+    /LIST >5
+- description: |-
+    Lists channels with less than five users
+  text: |-
+    /LIST <5
+- description: |-
+    Lists channels which were created more than ten minutes ago
+  text: |-
+    /LIST C>10
+- description: |-
+    Lists channels which were created less than ten minutes ago
+  text: |-
+    /LIST C<10
+- description: |-
+    Lists channels which had the topic changed more than ten minutes ago
+  text: |-
+    /LIST T>10
+- description: |-
+    Lists channels which had the topic changed less than ten minutes ago
+  text: |-
+    /LIST T<10
+- description: |-
+    Lists all channels with a name or topic matching `*support*`
+  text: |-
+    /LIST *support*
+- description: |-
+    Lists all channels with a name or topic not matching `*support*`
+  text: |-
+    /LIST !*support*

@@ -6,11 +6,11 @@ description: |-
 
   Otherwise, requests the version of the local server.
 example:
-  - description: |-
-      Requests the version of the local server
-    text: |-
-      /VERSION
-  - description: |-
-      Requests the version of the remote server irc.eu.example.com
-    text: |-
-      /VERSION irc.eu.example.com
+- description: |-
+    Requests the version of the local server
+  text: |-
+    /VERSION
+- description: |-
+    Requests the version of the remote server irc.eu.example.com
+  text: |-
+    /VERSION irc.eu.example.com

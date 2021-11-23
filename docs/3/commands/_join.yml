@@ -4,15 +4,15 @@ syntax: >-
 description: |-
   Joins one or more channels using the specified channel keys if required.
 example:
-  - description: |-
-      Joins #channel
-    text: |-
-      /JOIN #channel
-  - description: |-
-      Joins #channel with the key hunter2
-    text: |-
-      /JOIN #channel hunter2
-  - description: |-
-      Joins #channel-one with no key and #channel-two with the key hunter2
-    text: |-
-      /JOIN #channel-one,#channel-two ,hunter2
+- description: |-
+    Joins #channel
+  text: |-
+    /JOIN #channel
+- description: |-
+    Joins #channel with the key hunter2
+  text: |-
+    /JOIN #channel hunter2
+- description: |-
+    Joins #channel-one with no key and #channel-two with the key hunter2
+  text: |-
+    /JOIN #channel-one,#channel-two ,hunter2
