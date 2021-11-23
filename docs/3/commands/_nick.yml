@@ -1,0 +1,16 @@
+name: NICK
+syntax: >-
+  <nick>
+description: |-
+  Changes your nickname to `<nick>`.
+
+  You may also change your nick to your UUID by specifying a nickname of "0".
+example:
+- description: |-
+    Changes your nick to Sadie
+  text: |-
+    /NICK Sadie
+- description: |-
+    Changes your nick to your UUID
+  text: |-
+    /NICK 0

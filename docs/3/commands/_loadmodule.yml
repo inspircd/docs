@@ -1,0 +1,12 @@
+name: LOADMODULE
+syntax: >-
+  <module>
+description: |-
+  Loads the specified module on the local server.
+
+  This command is only usable by server operators with LOADMODULE in one of their `<class>` blocks.
+example:
+- description: |-
+    Loads the botmode module
+  text: |-
+    /LOADMODULE botmode

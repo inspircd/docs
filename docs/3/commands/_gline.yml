@@ -1,0 +1,22 @@
+name: GLINE
+syntax: >-
+  <ident@host> [<duration> <reason>]
+description: |-
+  If `<duration>` and `<reason>` are specified then bans an ident@host mask from connecting to the network. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the G-line will be permanent.
+
+  Otherwise, if just `<ident@host>` is specified, removes a network-wide ban on an ident@host mask.
+
+  This command is only usable by server operators with GLINE in one of their `<class>` blocks.
+example:
+- description: |-
+    G-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /GLINE sadie@example.com 1d :Testing
+- description: |-
+    G-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /GLINE sadie@example.com 86400 :Testing
+- description: |-
+    Removes a G-line on sadie@example.com
+  text: |-
+    /GLINE sadie@example.com

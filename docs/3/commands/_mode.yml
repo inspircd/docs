@@ -1,0 +1,44 @@
+name: MODE
+syntax: >-
+  <channel>|<user> <modes> [<parameters>]+
+description: |-
+  Changes the modes which are set on a channel or a user.
+
+  For a list of modes see the [channel modes](/3/channel-modes) and [user modes](/3/user-modes) pages.
+example:
+- description: |-
+    Sets:
+
+    1. Channel mode `n` (noextmsg).
+    2. Channel parameter-set mode `k` (key) with the value "s3cr3t".
+    3. Channel parameter mode `l` (limit) with the value "100".
+    4. Channel prefix mode `o` (op) with the user "Sadie".
+  skip_colon: true
+  text: |-
+    /MODE #channel +nklo s3cr3t 100 Sadie
+- description: |-
+    Unsets:
+
+    1. Channel mode `n` (noextmsg).
+    2. Channel parameter-set mode `k` (key) with the value "s3cr3t".
+    3. Channel parameter mode `l` (limit).
+    4. Channel prefix mode `o` (op) with the user "Sadie".
+  skip_colon: true
+  text: |-
+    /MODE #channel -nklo s3cr3t Sadie
+- description: |-
+    Sets:
+
+    1. User mode `w` (wallops).
+    2. User parameter mode `s` (snomask) with the value "*".
+  skip_colon: true
+  text: |-
+    /MODE Sadie +ws *
+- description: |-
+    Unsets:
+
+    1. User mode `w` (wallops).
+    2. User parameter mode `s` (snomask).
+  skip_colon: true
+  text: |-
+    /MODE Sadie -ws

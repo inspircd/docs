@@ -1,0 +1,26 @@
+name: REHASH
+syntax: >-
+  <server>|-<type>
+description: |-
+  Reloads the server configuration.
+
+  If `<type>` is specified then a specific module is rehashed on the local server.
+
+  If `<server>` is specified then the specified server's configuration is reloaded.
+
+  Otherwise, if no parameters are specified, the local server's configuration is reloaded.
+
+  This command is only usable by server operators with REHASH in one of their `<class>` blocks.
+example:
+- description: |-
+    Reloads the local server configuration
+  text: |-
+    /REHASH
+- description: |-
+    Reloads the server configuration for remote.example.com
+  text: |-
+    /REHASH remote.example.com
+- description: |-
+    Reloads the TLS (SSL) certificates (requires [the sslinfo module](/3/modules/sslinfo))
+  text: |-
+    /REHASH -ssl
