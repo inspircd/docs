@@ -134,7 +134,7 @@ This page lists changes which have happened between releases.
 
 - Changed the storage engine for the MySQL sqloper module from MyISAM to InnoDB.
 
-- Developer: added subclass of `IOHookProvider` for SSL modules.
+- Developer: added subclass of `IOHookProvider` for TLS (SSL) modules.
 
 - Fixed a `/WHO` request with flags but no fields being considered fuzzy.
 
@@ -270,7 +270,7 @@ This page lists changes which have happened between releases.
 
 - Fixed the fallback linker flags for the argon2 module.
 
-- Fixed the grammar of the message broadcast when reloading the SSL profiles.
+- Fixed the grammar of the message broadcast when reloading the TLS (SSL) profiles.
 
 - Fixed the helper script not storing Valgrind log files in the log directory.
 

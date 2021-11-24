@@ -149,7 +149,7 @@ example: |-
            reason="The 6bone address space is deprecated">
   ```
 
-  Defines an TLS (SSL) only connect class and then a general connect class to inherit from:
+  Defines a TLS (SSL) only connect class and then a general connect class to inherit from:
 
   ```xml
   <connect name="Secure"

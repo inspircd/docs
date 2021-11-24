@@ -49,9 +49,9 @@ extbans:
     char: z
     type: Matching
     syntax: z:<pattern>
-    description: Checks whether users have an TLS (SSL) client certificate with a fingerprint matching &lt;pattern&gt;.
+    description: Checks whether users have a TLS (SSL) client certificate with a fingerprint matching &lt;pattern&gt;.
   example:
   - description: |-
-      Bans users with an TLS (SSL) client certificate fingerprint of 5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
+      Bans users with a TLS (SSL) client certificate fingerprint of 5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
     text: |-
       /MODE #channel +b z:5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249

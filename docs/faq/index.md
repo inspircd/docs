@@ -65,7 +65,7 @@ Server operators do not automatically get channel privileges by default. You can
 
 ### Why does my server tell me "An unexpected TLS packet was received" or "error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record.c" when I try to connect using SSL/TLS?
 
-You are trying to connect using SSL/TLS but your server is not configured to listen for SSL/TLS connections.
+You are trying to connect using TLS (SSL) but your server is not configured to listen for TLS (SSL) connections.
 
 Check that you have a TLS (SSL) module loaded and that your bind tag has the name of a TLS (SSL) profile in `<bind:ssl>`.
 

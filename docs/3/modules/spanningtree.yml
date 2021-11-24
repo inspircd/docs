@@ -38,7 +38,7 @@ configuration:
       Listens for server connections.
   details: ""
   example: |-
-    Listens for TLS encrypted server connections on the *:7002 endpoint with an SSL profile named "Servers":
+    Listens for TLS encrypted server connections on the *:7002 endpoint with a TLS (SSL) profile named "Servers":
 
     ```xml
     <bind address="*"

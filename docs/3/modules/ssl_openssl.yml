@@ -21,7 +21,7 @@ configuration:
       *This MUST be set to the name of an OpenSSL TLS (SSL) profile to listen for secure connections with OpenSSL.*
   details: ""
   example: |-
-    Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint with an [SSL profile](#sslprofile) named "Clients":
+    Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint with an [TLS (SSL) profile](#sslprofile) named "Clients":
 
     ```xml
     <bind address="*"
@@ -31,7 +31,7 @@ configuration:
           type="clients">
     ```
 
-    Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an [SSL profile](#sslprofile) named "Servers":
+    Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an [TLS (SSL) profile](#sslprofile) named "Servers":
 
     ```xml
     <bind address="*"
@@ -61,7 +61,7 @@ configuration:
   description: |-
     The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
 
-    If no `<sslprofile>` tags are defined (including tags for other SSL modules) a default profile named `openssl` will be created. This profile will use the contents of the deprecated `<openssl>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
+    If no `<sslprofile>` tags are defined, including tags for other TLS (SSL) modules, a default profile named `openssl` will be created. This profile will use the contents of the deprecated `<openssl>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
   attributes:
   - name: name
     type: Text
@@ -232,6 +232,6 @@ special_notes: |-
 
   Mozilla publish [documentation on how to configure server-side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations) which can be used for selecting a secure OpenSSL configuration. We recommend using the intermediate profile to allow compatibility with as many clients as possible whilst maintaining a decent level of security.
 
-  SSL profiles are not reloaded as part of a normal rehash. If you wish to reload SSL profiles you should enable `<openssl:onrehash>`, use `/REHASH -ssl`, or load [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload SSL profiles by sending SIGUSR1 to the InspIRCd process.
+  TLS (SSL) profiles are not reloaded as part of a normal rehash. If you wish to reload TLS (SSL) profiles you should enable `<openssl:onrehash>`, use `/REHASH -ssl`, or load [the sslrehashsignal](/3/modules/sslrehashsignal) to allow you to reload TLS (SSL) profiles by sending SIGUSR1 to the InspIRCd process.
 
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.

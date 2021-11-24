@@ -23,4 +23,4 @@ configuration:
 client_caps:
 - name: '[tls](https://ircv3.net/specs/extensions/tls-3.1.html)'
   description: |-
-    Allows plaintext connections to upgrade to SSL (TLS).
+    Allows plaintext connections to upgrade to TLS (SSL).

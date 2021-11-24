@@ -70,13 +70,13 @@ title: v4 Breaking Changes
 
 - `<deaf:enableprivdeaf>` has been removed with no replacement (now always enabled).
 
-- `<gnutls>` has been removed. You should configure an SSL profile instead.
+- `<gnutls>` has been removed. You should configure a TLS (SSL) profile instead.
 
-- `<mbedtls>` has been removed. You should configure an SSL profile instead.
+- `<mbedtls>` has been removed. You should configure a TLS (SSL) profile instead.
 
 - `<noctcp:enableumode>` has been removed with no replacement (now always enabled).
 
-- `<openssl>` has been removed. You should configure an SSL profile instead.
+- `<openssl>` has been removed. You should configure a TLS (SSL) profile instead.
 
 - `<options:allowzerolimit>` has been removed with no replacement (now always disabled).
 
