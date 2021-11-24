@@ -61,7 +61,7 @@ configuration:
   description: |-
     The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
 
-    If no `<sslprofile>` tags are defined a default profile named `mbedtls` will be created. This profile will use the contents of the deprecated `<mbedtls>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
+    If no `<sslprofile>` tags are defined (including tags for other SSL modules) a default profile named `mbedtls` will be created. This profile will use the contents of the deprecated `<mbedtls>` tag if one has been defined. It is strongly recommended that you do not use this as it will be removed in a future release.
   attributes:
   - name: name
     type: Text
