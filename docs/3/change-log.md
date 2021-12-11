@@ -6,6 +6,56 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.12.0
+
+<!-- TODO: ensure changes after commit 1a49cc8be3019245d4ff96c7bec9aded2c5ad5c7 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `/CYCLE` and `/KNOCK` to the list of sanitisable shun commands.
+
+- Added a warning about libdl incompatibilities when building against musl libc.
+
+- Added support for manually specifying the WebIRC properties to trust from a gateway.
+
+- Added support for rejecting WebSocket connections that don't request a subprotocol.
+
+- Added support for retrieving client SSL certificate fingerprints from WebIRC gateways.
+
+- Added the `channels/ignore-repeat` server operator privilege to allow ignoring the repeat mode.
+
+- Changed the `OVERRIDE` 005 token to contain the letter of the mode needed to override.
+
+- Developer: Added the `IOHook::IsHookReady` hook to determine whether an I/O hook is ready to send and receive data.
+
+- Fixed DN strings being inconsistently processed across the TLS (SSL) modules.
+
+- Fixed reading WebSocket proxy headers when the IRC server is behind multiple reverse proxies.
+
+- Fixed sending `ERR_CHANOPRIVSNEEDED` instead of `ERR_RESTRICTED` in cases where privileges will not change the ability to perform an action.
+
+- Fixed the `/SSLINFO` helpop not documenting how to view channel SSL information.
+
+- Fixed the customprefix module allowing the creation of prefix modes with a space in the name.
+
+- Fixed the default server name defaulting to `irc.example.com` instead of the machine name on Linux.
+
+- Fixed the ldap module checking the return value of `ldap_compare_s` incorrectly.
+
+- Fixed the public server name being used as a public server description instead of the network name when `<options:hideserver>` is set.
+
+- Fixed the real server hostname being exposed to users in some cases when `<options:hideserver>` is set.
+
+- Fixed the ssl_gnutls module not compiling on C++17 compilers due to the use of a removed feature.
+
+- Fixed the ssl_openssl module not compiling on LibreSSL.
+
+- Fixed unnecessary repeated mode lookups in the banredirect, messageflood, repeat, and timedbans modules.
+
+- Fixed various text fields not being XML escaped in the httpd_stats output.
+
+- Updated the libraries in the Windows Conan dependency file.
+
 ### InspIRCd 3.11.0
 
 **This version of InspIRCd was released on 2021-08-27.**
