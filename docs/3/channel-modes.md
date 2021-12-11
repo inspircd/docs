@@ -82,3 +82,7 @@ Removes channel voice status from Sadie in \#channel:
 {# use the template defined in mkdocs_inspircd/ #}
 {% set modes = module_chmodes %}
 {% include "3/_modes_table.md" %}
+
+### Configuration-defined modes
+
+Server administrators can also define custom modes for channel privileges, such as `q` (founder/owner), `a` (admin), or `h` (halfop), using the [customprefix](/3/modules/customprefix/) module.
