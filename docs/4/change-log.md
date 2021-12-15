@@ -8,6 +8,18 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a7
+
+**This pre-release version of InspIRCd was released on 2021-12-15.**
+
+- Added snomask `r` (REHASH) and moved all rehash messages to it.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Reject config files from ancient outdated tutorials.
+
+- Removed support for remote `/INFO`.
+
 ### InspIRCd 4.0.0a6
 
 **This pre-release version of InspIRCd was released on 2021-11-15.**
