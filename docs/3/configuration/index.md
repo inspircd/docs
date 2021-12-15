@@ -29,7 +29,15 @@ This page only lists core configuration. For details on the configuration of a s
 <tbody markdown="1">
 {% for attr in tag.attributes %}
 <tr markdown="1">
+{% if attr.name is string %}
 <td markdown="1">{{attr.name}}</td>
+{% else %}
+<td markdown="1">
+{% for name, version in attr.name.items() %}
+{{name }} *({{version}})*{% if not loop.last %}<br>{% endif %}
+{% endfor %}
+</td>
+{% endif %}
 <td markdown="1">{{attr.type}}</td>
 <td markdown="1">{% if attr.default is none %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
 <td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
@@ -57,7 +65,15 @@ Additionally, the following fields are provided by modules:
 {% for field in extra_tag_fields[tag.name][field_name] %}
 <tr markdown="1">
 {% if loop.first %}
+{% if field.name is string %}
 <td markdown="1" rowspan="{{loop.length}}">{{field.name}}</td>
+{% else %}
+<td markdown="1" rowspan="{{loop.length}}">
+{% for name, version in field.name.items() %}
+{{name }} *({{version}})*{% if not loop.last %}<br>{% endif %}
+{% endfor %}
+</td>
+{% endif %}
 <td markdown="1" rowspan="{{loop.length}}">{{field.type}}</td>
 <td markdown="1" rowspan="{{loop.length}}">{% if field.default is none %}<em>None</em>{% else %}{{field.default}}{% endif %}</td>
 {% endif %}

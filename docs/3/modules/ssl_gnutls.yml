@@ -14,7 +14,9 @@ configuration:
     This module extends [the core `<bind>` tags](/3/configuration#bind) with the following fields:
   extends: true
   attributes:
-  - name: ssl
+  - name:
+      sslprofile: since 3.10.0
+      ssl: 3.0.0 to 3.9.0
     type: Text
     default: null
     description: |-
@@ -27,7 +29,7 @@ configuration:
     <bind address="*"
           port="6697"
           ...
-          ssl="Clients"
+          sslprofile="Clients"
           type="clients">
     ```
 
@@ -37,7 +39,7 @@ configuration:
     <bind address="*"
           port="7000"
           ...
-          ssl="Servers"
+          sslprofile="Servers"
           type="servers">
     ```
 - name: gnutls

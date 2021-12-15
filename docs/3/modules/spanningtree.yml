@@ -44,7 +44,7 @@ configuration:
     <bind address="*"
           port="7003"
           ...
-          ssl="Servers"
+          sslprofile="Servers"
           type="servers">
     ```
 
@@ -114,7 +114,9 @@ configuration:
     default: null
     description: |-
       The password that the local server will use to log into the remote server.
-  - name: ssl
+  - name:
+      sslprofile: since 3.10.0
+      ssl: 3.0.0 to 3.9.0
     type: Text
     required: false
     default: null
@@ -146,7 +148,7 @@ configuration:
           port="7000"
           recvpass="incoming!password"
           sendpass="outgoing!password"
-          ssl="Servers"
+          sslprofile="Servers"
           timeout="15s">
     ```
 - name: options

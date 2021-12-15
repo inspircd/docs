@@ -145,7 +145,10 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
                     for name in tag_names:
                         for field in module_tag.get("attributes", []):
-                            extra_tag_fields[name][field["name"]].append(
+                            tagname = field["name"]
+                            if isinstance(tagname, dict):
+                                tagname = next(iter(tagname))
+                            extra_tag_fields[name][tagname].append(
                                 {
                                     "module": module["name"],
                                     **field,
