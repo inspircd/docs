@@ -5,6 +5,7 @@ description: |-
 commands:
 - name: CHECK
   param_count: 1-2
+  oper_only: true
   syntax: |-
     `<channel> [<server>]`<br>`<nickname> [<server>]`<br>`<ip> [<server>]`<br>`<hostname> [<server>]`
   description: |-

@@ -1,4 +1,5 @@
 name: REHASH
+oper_only: true
 syntax: >-
   <server>|-<type>
 description: |-
@@ -9,8 +10,6 @@ description: |-
   If `<server>` is specified then the specified server's configuration is reloaded.
 
   Otherwise, if no parameters are specified, the local server's configuration is reloaded.
-
-  This command is only usable by server operators with REHASH in one of their `<class>` blocks.
 example:
 - description: |-
     Reloads the local server configuration

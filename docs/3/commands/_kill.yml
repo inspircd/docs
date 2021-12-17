@@ -1,10 +1,9 @@
 name: KILL
+oper_only: true
 syntax: >-
   <nick>[,<nick>]+ <reason>
 description: |-
   Forcibly disconnects one or more specified users from the network with the specified reason.
-
-  This command is only usable by server operators with KILL in one of their `<class>` blocks.
 example:
 - description: |-
     Forcibly disconnects opal from the network

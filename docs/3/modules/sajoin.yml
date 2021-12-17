@@ -26,6 +26,7 @@ configuration:
 commands:
 - name: SAJOIN
   param_count: 1-2
+  oper_only: true
   syntax: '[<nick>] <channel>[,<channel>]+'
   description: |-
     Forces &lt;nick&gt; to join &lt;channel&gt;. If no nick is specified, forces the server operator issuing the command to join.

@@ -6,6 +6,7 @@ description: |-
 commands:
 - name: CHGNAME
   param_count: 2
+  oper_only: true
   syntax: <nickname> <realname>
   description: |-
     Changes the real name (gecos) of &lt;nickname&gt; to &lt;realname&gt;.

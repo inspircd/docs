@@ -24,6 +24,7 @@ configuration:
 commands:
 - name: CBAN
   param_count: 1-3
+  oper_only: true
   syntax: <channel> [<duration> [<reason>]]
   description: |-
     Allows server operators to add and remove channel bans.

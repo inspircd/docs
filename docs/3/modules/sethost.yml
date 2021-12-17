@@ -25,6 +25,7 @@ configuration:
 commands:
 - name: SETHOST
   param_count: 1
+  oper_only: true
   syntax: <hostname>
   description: |-
     Changes the displayed hostname of the user to &lt;hostname&gt;.

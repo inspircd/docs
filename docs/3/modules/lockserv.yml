@@ -10,6 +10,7 @@ description: |-
 commands:
 - name: LOCKSERV
   param_count: 0-1
+  oper_only: true
   syntax: '[<message>]'
   description: |-
     Disables access to the local server with an optional message.
@@ -17,9 +18,10 @@ commands:
   - description: |-
       Stops the local server from accepting new connections with the message "Server is under maintenance. Come back later."
     text: |-
-      /LOCKSERV :Server is under maintenance. Come back later
+      /LOCKSERV :Server is under maintenance. Come back later.
 - name: UNLOCKSERV
   param_count: 0
+  oper_only: true
   syntax: null
   description: |-
     Enables access to the local server.

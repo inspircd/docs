@@ -1,10 +1,9 @@
 name: WALLOPS
+oper_only: true
 syntax: >-
   <message>
 description: |-
   Sends a message to all users with user mode `w` (wallops) enabled:
-
-  This command is only usable by server operators with WALLOPS in one of their `<class>` blocks.
 example:
 - description: |-
     Sends "Rebooting for updates at 20:00 UTC" to all users with user mode `w` (wallops) enabled

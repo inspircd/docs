@@ -25,6 +25,7 @@ configuration:
 commands:
 - name: CHGHOST
   param_count: 2
+  oper_only: true
   syntax: <nickname> <hostname>
   description: |-
     Changes the displayed hostname of &lt;nickname&gt; to &lt;hostname&gt;.

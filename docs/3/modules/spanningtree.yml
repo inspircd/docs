@@ -262,6 +262,7 @@ configuration:
 commands:
 - name: CONNECT
   param_count: 1
+  oper_only: true
   syntax: <server>
   description: |-
     Attempts to connect the local server to &lt;server&gt;.
@@ -282,6 +283,7 @@ commands:
     Shows a textual map of the network architecture.
 - name: RCONNECT
   param_count: 2
+  oper_only: true
   syntax: <remote-server-mask> <target-server-mask>
   description: |-
     Attempts to connect &lt;remote-server-mask&gt; to &lt;target-server-mask&gt;
@@ -292,6 +294,7 @@ commands:
       /RCONNECT eu-hub.example.com us-hub.example.com
 - name: RSQUIT
   param_count: 2
+  oper_only: true
   syntax: <server-mask> [<reason>]
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the network with &lt;reason&gt;.
@@ -306,6 +309,7 @@ commands:
       /RSQUIT us-hub.example.com :Updating InspIRCd
 - name: SQUIT
   param_count: 2
+  oper_only: true
   syntax: <server-mask> [<reason>]
   description: |-
     Attempts to disconnect &lt;server-mask&gt; from the local server with &lt;reason&gt;.

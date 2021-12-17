@@ -118,6 +118,7 @@ configuration:
 commands:
 - name: FILTER
   param_count: 1, 4-5
+  oper_only: true
   syntax:
   - <pattern>
   - <pattern> <action> <flags> [<duration>] <reason>

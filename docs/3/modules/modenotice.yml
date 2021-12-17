@@ -10,6 +10,7 @@ description: |-
 commands:
 - name: MODENOTICE
   param_count: 2
+  oper_only: true
   syntax: <modes> <message>
   description: |-
     Sends &lt;message&gt; to all users with the &lt;modes&gt; user modes set.

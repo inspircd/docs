@@ -1,10 +1,9 @@
 name: UNLOADMODULE
+oper_only: true
 syntax: >-
   <module>
 description: |-
   Unloads the specified module on the local server.
-
-  This command is only usable by server operators with UNLOADMODULE in one of their `<class>` blocks.
 example:
 - description: |-
     Unloads the alias module

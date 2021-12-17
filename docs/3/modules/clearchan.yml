@@ -6,6 +6,7 @@ description: |-
 commands:
 - name: CLEARCHAN
   param_count: 2-3
+  oper_only: true
   syntax: <channel> [<action>] [<reason>]
   description: |-
     Mass punishes the members of the specified channel.

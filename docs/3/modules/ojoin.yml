@@ -48,6 +48,7 @@ chmodes:
 commands:
 - name: OJOIN
   param_count: 1
+  oper_only: true
   syntax: <channel>
   description: |-
     Joins &lt;channel&gt; with the server operator-only `Y` (official-join) channel prefix mode.

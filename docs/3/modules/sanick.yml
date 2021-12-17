@@ -6,6 +6,7 @@ description: |-
 commands:
 - name: SANICK
   param_count: 2
+  oper_only: true
   syntax: <old-nick> <new-nick>
   description: |-
     Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt;.

@@ -26,6 +26,7 @@ configuration:
 commands:
 - name: SAMODE
   param_count: 2+
+  oper_only: true
   syntax: <target> <modes> [<mode-parameters>]+
   description: |-
     Changes the modes of &lt;target&gt; to &lt;modes&gt; [&lt;mode-parameters&gt;]+

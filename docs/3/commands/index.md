@@ -11,6 +11,10 @@ This page only lists core commands. For details on the commands of a specific mo
 
 {{cmd.description}}
 
+{% if cmd.oper_only %}
+This command is only usable by server operators with `{{cmd.name}}` in one of their `<class>` blocks.
+{% endif %}
+
 {% if cmd.example %}
 #### Example Usage
 

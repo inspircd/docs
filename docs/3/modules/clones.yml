@@ -10,6 +10,7 @@ description: |-
 commands:
 - name: CLONES
   param_count: 1
+  oper_only: true
   syntax: <limit>
   description: |-
     Lists all IP addresses from which there are more than &lt;limit&gt; connections.

@@ -6,6 +6,7 @@ description: |-
 commands:
 - name: GLOADMODULE
   param_count: 1-2
+  oper_only: true
   syntax: <module> [<server>]
   description: |-
     Loads &lt;module&gt; on servers matching the  &lt;server&gt; glob pattern. If no pattern is given then it is loaded on all servers.
@@ -20,6 +21,7 @@ commands:
       /GLOADMODULE botmode *.eu.example.com
 - name: GRELOADMODULE
   param_count: 1-2
+  oper_only: true
   syntax: <module> [<server>]
   description: |-
     Reloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is reloaded on all servers.
@@ -34,6 +36,7 @@ commands:
       /GRELOADMODULE check *.na.example.com
 - name: GUNLOADMODULE
   param_count: 1-2
+  oper_only: true
   syntax: <module> [<server>]
   description: |-
     Unloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is unloaded on all servers.

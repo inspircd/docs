@@ -6,6 +6,7 @@ description: |-
 commands:
 - name: SATOPIC
   param_count: 2
+  oper_only: true
   syntax: <channel> <topic>
   description: |-
     Changes the topic of &lt;channel&gt; to &lt;topic&gt;.
