@@ -6,3 +6,9 @@ build-dev:
 
 clean:
 	rm -rf site/
+
+serve:
+	mkdocs serve
+
+serve-dev:
+	mkdocs serve --config-file mkdocs_dev.yml
