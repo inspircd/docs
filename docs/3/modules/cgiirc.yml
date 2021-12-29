@@ -60,6 +60,13 @@ configuration:
     default: null
     description: |-
       If the webirc type is used the algorithm that the password is hashed with.
+  - name: trustedflags
+    type: Text
+    required: false
+    default: '*'
+    added: 3.12.0
+    description: |-
+      If the webirc type is used a space-delimited list of flags to trust from a WebIRC gateway.
   details: |-
     !!! warning ""
         The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.

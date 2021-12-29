@@ -1,7 +1,9 @@
 name: passforward
 
 description: |-
-  This module allows the `/PASS` password to be forwarded to a services pseudoclient such as NickServ.
+  This module allows an account password to be forwarded to a services pseudoclient such as NickServ.
+
+  The forwarded password can either be sent with `/PASS` or (since v3.12.0) as the second parameter to the `/NICK` command.
 
 configuration:
 - name: passforward
@@ -13,19 +15,19 @@ configuration:
     required: false
     default: SQUERY $nickrequired :IDENTIFY $pass
     description: |-
-      The command to use when forwarding the `/PASS` password.
+      The command to use when forwarding a password to services.
   - name: forwardmsg
     type: Text
     required: false
     default: NOTICE $nick :*** Forwarding PASS to $nickrequired
     description: |-
-      The command to use when informing the connecting user that their `/PASS` password is being forwarded.
+      The command to use when informing the connecting user that their password is being forwarded.
   - name: nick
     type: Text
     required: false
     default: NickServ
     description: |-
-      The nickname of the user that must be online for a `/PASS` password to be forwarded.
+      The nickname of the user that must be online for a password to be forwarded.
   details: |-
     The cmd and forwardmsg fields can contain any of the following template variables:
 
@@ -38,7 +40,7 @@ configuration:
 
   example: |-
     ```xml
-    <passforward cmd="SQUERY $nickrequired :IDENTIFY $pass"
+    <passforward cmd="SQUERY $nickrequired :IDENTIFY $nick $pass"
                  forwardmsg="NOTICE $nick :*** Forwarding PASS to $nickrequired"
                  nick="NickServ">
     ```

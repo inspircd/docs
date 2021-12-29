@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.12.0
 
-<!-- TODO: ensure changes after commit 9306d5474d0acc010e11b4cb4632e3341d659367 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2021-12-31.**
 
 - Added `/CYCLE` and `/KNOCK` to the list of sanitisable shun commands.
 

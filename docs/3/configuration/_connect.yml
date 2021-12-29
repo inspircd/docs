@@ -134,6 +134,13 @@ attributes:
   default: 1m30s
   description: |-
     The number of seconds after which an unregistered user is timed out.
+- name: uniqueusername
+  type: Boolean
+  required: false
+  default: 'No'
+  added: 3.12.0
+  description: |-
+    Whether users in this class are connecting from a shared host and can be uniquely identified by their username (ident).
 details: |+
   !!! warning ""
       The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
@@ -171,7 +178,8 @@ example: |-
            resolvehostnames="yes"
            softsendq="8192"
            threshold="10"
-           timeout="10">
+           timeout="10"
+           uniqueusername="no">
   ```
 
   #### Special Notes
