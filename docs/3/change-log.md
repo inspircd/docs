@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.12.0
 
-<!-- TODO: ensure changes after commit 1a49cc8be3019245d4ff96c7bec9aded2c5ad5c7 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 9306d5474d0acc010e11b4cb4632e3341d659367 are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
@@ -20,21 +20,35 @@ This page lists changes which have happened between releases.
 
 - Added support for rejecting WebSocket connections that don't request a subprotocol.
 
-- Added support for retrieving client SSL certificate fingerprints from WebIRC gateways.
+- Added support for retrieving client TLS (SSL) certificate fingerprints from WebIRC gateways.
+
+- Added support to the passforward module for forwarding the second parameter of `/NICK` to services.
 
 - Added the `channels/ignore-repeat` server operator privilege to allow ignoring the repeat mode.
+
+- Added the `inspircd.org/account-id` tag to expose immutable account identifiers to users.
 
 - Changed the `OVERRIDE` 005 token to contain the letter of the mode needed to override.
 
 - Developer: Added the `IOHook::IsHookReady` hook to determine whether an I/O hook is ready to send and receive data.
 
+- Fixed automatic bans and xlines on shared providers banning the entire provider.
+
+- Fixed building the ldap module against OpenLDAP 2.5 and newer.
+
 - Fixed DN strings being inconsistently processed across the TLS (SSL) modules.
+
+- Fixed hostname lookups for users where the hostname behind their PTR record points to multiple IP addresses.
+
+- Fixed looking up server IPv4 addresses when the server has one or more IPv6 address.
 
 - Fixed reading WebSocket proxy headers when the IRC server is behind multiple reverse proxies.
 
 - Fixed sending `ERR_CHANOPRIVSNEEDED` instead of `ERR_RESTRICTED` in cases where privileges will not change the ability to perform an action.
 
-- Fixed the `/SSLINFO` helpop not documenting how to view channel SSL information.
+- Fixed showing the `sts` capability to users when no TLS (SSL) modules are loaded.
+
+- Fixed the `/SSLINFO` helpop not documenting how to view channel TLS (SSL) information.
 
 - Fixed the customprefix module allowing the creation of prefix modes with a space in the name.
 
@@ -556,7 +570,7 @@ This page lists changes which have happened between releases.
 
 - Fixed setting the permissions of a UNIX socket listener.
 
-- Fixed showing a malformed sts capability if the configuration was invalid on rehash.
+- Fixed showing a malformed `sts` capability if the configuration was invalid on rehash.
 
 - Fixed silently failing when trying to load more than 31 capabilities.
 
