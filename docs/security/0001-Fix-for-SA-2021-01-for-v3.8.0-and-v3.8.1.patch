@@ -1,0 +1,44 @@
+From 6fbe4dd791e62005c5243762cf6bd01b48ed9d73 Mon Sep 17 00:00:00 2001
+From: Sadie Powell <sadie@witchery.services>
+Date: Fri, 14 May 2021 17:14:07 +0100
+Subject: [PATCH] Fix for SA-2021-01 for v3.8.0 and v3.8.1.
+
+---
+ include/clientprotocolmsg.h          | 7 ++++---
+ src/coremods/core_user/core_user.cpp | 2 +-
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/include/clientprotocolmsg.h b/include/clientprotocolmsg.h
+index 07f32b686..d9d9d4fa8 100644
+--- a/include/clientprotocolmsg.h
++++ b/include/clientprotocolmsg.h
+@@ -668,9 +668,10 @@ struct ClientProtocol::Messages::Pong : public ClientProtocol::Message
+ 	Pong(const std::string& cookie, const std::string& server = "")
+ 		: ClientProtocol::Message("PONG", ServerInstance->Config->ServerName)
+ 	{
+-		PushParamRef(ServerInstance->Config->ServerName);
+-		if (!server.empty())
+-			PushParamRef(server);
++		if (server.empty())
++			PushParamRef(ServerInstance->Config->ServerName);
++		else
++			PushParam(server);
+ 		PushParamRef(cookie);
+ 	}
+ };
+diff --git a/src/coremods/core_user/core_user.cpp b/src/coremods/core_user/core_user.cpp
+index 2431215f3..bccf97aef 100644
+--- a/src/coremods/core_user/core_user.cpp
++++ b/src/coremods/core_user/core_user.cpp
+@@ -83,7 +83,7 @@ class CommandPing : public SplitCommand
+ 			return CMD_FAILURE;
+ 		}
+ 
+-		ClientProtocol::Messages::Pong pong(parameters[0], origin ? parameters[1] : "");
++		ClientProtocol::Messages::Pong pong(parameters[0], origin ? parameters[1] : ServerInstance->Config->ServerName);
+ 		user->Send(ServerInstance->GetRFCEvents().pong, pong);
+ 		return CMD_SUCCESS;
+ 	}
+-- 
+2.25.1
+
