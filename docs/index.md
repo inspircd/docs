@@ -17,6 +17,7 @@ title: Introduction
 ### Developer
 
 - [Release Procedure](/release-procedure)
+- [Server Protocol](/server)
 - [Versioning Policy](/versioning)
 
 </div>
