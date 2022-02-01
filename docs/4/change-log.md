@@ -8,6 +8,32 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a8
+
+**This pre-release version of InspIRCd was released on 2022-02-01.**
+
+- Add support for connect class-specific 005 numerics.
+
+- Developer: Kill vendor_directory in favour of adding the vendor directory to the include path.
+
+- Developer: Refactored exception handling classes.
+
+- Developer: Replaced consolecolors with the vendored rang library.
+
+- Fix an infinite synchronisation loop with automatically synchronised extensibles.
+
+- Fix extensibles being synchronisable when they are marked as non-synchronisable.
+
+- Fix extensions being able to be set on the wrong type of extensible.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Moved DNS stats from the core to core_dns.
+
+- Removed the nationalchars module.
+
+- Replace the inlined md5 implementation with the vendored md5 library.
+
 ### InspIRCd 4.0.0a7
 
 **This pre-release version of InspIRCd was released on 2021-12-15.**

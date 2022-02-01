@@ -50,6 +50,8 @@ title: v4 Breaking Changes
 
 - The modenotice module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_modenotice` to install it.
 
+- The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
+
 - The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_regex_tre` to install it.
 
 - The sha256 module has been renamed to sha2. In order to upgrade you should change your module tag to point to the new name.
