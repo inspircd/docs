@@ -9,3 +9,4 @@ title: InspIRCd Spanning Tree Protocol
 
 The InspIRCd Spanning Tree protocol is the protocol that InspIRCd uses to connect to other servers.
 
+- [Concepts](/server/concepts)
