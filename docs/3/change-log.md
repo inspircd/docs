@@ -6,6 +6,52 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.13.0
+
+<!-- TODO: ensure changes after commit c20ca3382f3488bac46b2c06c294386e5fd42152 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<permchanneldb:operonly>` to allow enabling channel mode `p` (permchannel) to be set by normal users.
+
+- Added support for finding pkg-config at build time via the `PKG_CONFIG` environment variable.
+
+- Added the `channels/ignore-delaymsg` privilege to allow server operators to override channel mode `d` (delaymsg).
+
+- Added the `delaymsg` exemption to allow exempting channel operators from channel mode `d` (delaymsg).
+
+- Changed specifying a DH parameter file in the ssl_openssl module to be optional on GnuTLS 3.6.
+
+- Changed specifying a DH parameter file in the ssl_openssl module to be optional on OpenSSL 3.0.
+
+- Changed the `sasl` module to abort SASL unfinished requests when connection registration completes.
+
+- Fixed accessing stats subpaths in the `httpd_stats` module.
+
+- Fixed building the regex_re2 module with recent versions of the RE2 library.
+
+- Fixed building the spanningtree module on FreeBSD armv7.
+
+- Fixed building the ssl_openssl module on OpenSSL 1.0.
+
+- Fixed building the ssl_openssl module on OpenSSL 3.0 when built without the compatibility layer.
+
+- Fixed duplicate messages when a server connection fails.
+
+- Fixed multi-constraint `/LIST` requests not parsing the constraint field properly.
+
+- Fixed negative duration fields showing a positive duration.
+
+- Fixed server operators being limited to less channels than the normal user limit if configured incorrectly.
+
+- Fixed squitting servers multiple times in some cases.
+
+- Fixed the AppArmor file not allowing access to the SSL certificate and key directorie.s
+
+- Fixed updating connect classes limits when rehashing the config file.
+
+- Updated the IP ranges in the example IRCCloud config file.
+
 ### InspIRCd 3.12.0
 
 **This version of InspIRCd was released on 2021-12-31.**
