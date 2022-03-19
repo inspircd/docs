@@ -81,43 +81,43 @@ configuration:
   - name: memory
     type: Number
     required: false
-    default: '*See &gt;argon2:memory&gt;*'
+    default: '*See &lt;argon2:memory&gt;*'
     description: |-
       The memory hardness in kibibytes of the Argon2d algorithm.
   - name: iterations
     type: Number
     required: false
-    default: '*See &gt;argon2:iterations&gt;*'
+    default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2d algorithm.
   - name: lanes
     type: Number
     required: false
-    default: '*See &gt;argon2:lanes&gt;*'
+    default: '*See &lt;argon2:lanes&gt;*'
     description: |-
       The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
-    default: '*See &gt;argon2:threads&gt;*'
+    default: '*See &lt;argon2:threads&gt;*'
     description: |-
       The number of threads that generating an Argon2d hash can spawn.
   - name: length
     type: Number
     required: false
-    default: '*See &gt;argon2:length&gt;*'
+    default: '*See &lt;argon2:length&gt;*'
     description: |-
       The length of the output in bytes.
   - name: saltlength
     type: Number
     required: false
-    default: '*See &gt;argon2:saltlength&gt;*'
+    default: '*See &lt;argon2:saltlength&gt;*'
     description: |-
       The length of the salt in bytes.
   - name: version
     type: Number
     required: false
-    default: '*See &gt;argon2:version&gt;*'
+    default: '*See &lt;argon2:version&gt;*'
     description: |-
       The version of the Argon2d algorithm to use.
   details: |-
@@ -145,43 +145,43 @@ configuration:
   - name: memory
     type: Number
     required: false
-    default: '*See &gt;argon2:memory&gt;*'
+    default: '*See &lt;argon2:memory&gt;*'
     description: |-
       The memory hardness in kibibytes of the Argon2i algorithm.
   - name: iterations
     type: Number
     required: false
-    default: '*See &gt;argon2:iterations&gt;*'
+    default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2i algorithm.
   - name: lanes
     type: Number
     required: false
-    default: '*See &gt;argon2:lanes&gt;*'
+    default: '*See &lt;argon2:lanes&gt;*'
     description: |-
       The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
-    default: '*See &gt;argon2:threads&gt;*'
+    default: '*See &lt;argon2:threads&gt;*'
     description: |-
       The number of threads that generating an Argon2i hash can spawn.
   - name: length
     type: Number
     required: false
-    default: '*See &gt;argon2:length&gt;*'
+    default: '*See &lt;argon2:length&gt;*'
     description: |-
       The length of the output in bytes.
   - name: saltlength
     type: Number
     required: false
-    default: '*See &gt;argon2:saltlength&gt;*'
+    default: '*See &lt;argon2:saltlength&gt;*'
     description: |-
       The length of the salt in bytes.
   - name: version
     type: Number
     required: false
-    default: '*See &gt;argon2:version&gt;*'
+    default: '*See &lt;argon2:version&gt;*'
     description: |-
       The version of the Argon2i algorithm to use.
   details: |-
@@ -209,43 +209,43 @@ configuration:
   - name: memory
     type: Number
     required: false
-    default: '*See &gt;argon2:memory&gt;*'
+    default: '*See &lt;argon2:memory&gt;*'
     description: |-
       The memory hardness in kibibytes of the Argon2id algorithm.
   - name: iterations
     type: Number
     required: false
-    default: '*See &gt;argon2:iterations&gt;*'
+    default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2id algorithm.
   - name: lanes
     type: Number
     required: false
-    default: '*See &gt;argon2:lanes&gt;*'
+    default: '*See &lt;argon2:lanes&gt;*'
     description: |-
       The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
-    default: '*See &gt;argon2:threads&gt;*'
+    default: '*See &lt;argon2:threads&gt;*'
     description: |-
       The number of threads that generating an Argon2id hash can spawn.
   - name: length
     type: Number
     required: false
-    default: '*See &gt;argon2:length&gt;*'
+    default: '*See &lt;argon2:length&gt;*'
     description: |-
       The length of the output in bytes.
   - name: saltlength
     type: Number
     required: false
-    default: '*See &gt;argon2:saltlength&gt;*'
+    default: '*See &lt;argon2:saltlength&gt;*'
     description: |-
       The length of the salt in bytes.
   - name: version
     type: Number
     required: false
-    default: '*See &gt;argon2:version&gt;*'
+    default: '*See &lt;argon2:version&gt;*'
     description: |-
       The version of the Argon2id algorithm to use.
   details: |-
