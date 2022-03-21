@@ -1,7 +1,7 @@
 name: deaf
 
 description: |-
-  This module adds user mode `d` (deaf) which prevents users from receiving channel messages.
+  This module adds user modes `d` (deaf) and `D` (privdeaf) which prevents users from receiving channel (deaf) or private (privdeaf) messages.
 
 configuration:
 - name: deaf

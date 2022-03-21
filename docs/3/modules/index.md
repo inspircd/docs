@@ -56,7 +56,7 @@ Name                                                      | Description
 [customtitle](/3/modules/customtitle)                     | Allows the server administrator to define accounts which can grant a custom title in /WHOIS and an optional virtual host.
 [cycle](/3/modules/cycle)                                 | Allows channel members to part and rejoin a channel without needing to worry about channel modes such as +i (inviteonly) which might prevent rejoining.
 [dccallow](/3/modules/dccallow)                           | Allows the server administrator to configure what files are allowed to be sent via DCC SEND and allows users to configure who can send them DCC CHAT and DCC SEND requests.
-[deaf](/3/modules/deaf)                                   | Adds user mode d (deaf) which prevents users from receiving channel messages.
+[deaf](/3/modules/deaf)                                   | Adds user modes d (deaf) and D (privdeaf) which prevents users from receiving channel (deaf) or private (privdeaf) messages.
 [delayjoin](/3/modules/delayjoin)                         | Adds channel mode D (delayjoin) which hides JOIN messages from users until they speak.
 [delaymsg](/3/modules/delaymsg)                           | Adds channel mode d (delaymsg) which prevents newly joined users from speaking until the specified number of seconds have passed.
 [denychans](/3/modules/denychans)                         | Allows the server administrator to prevent users from joining channels matching a glob.
