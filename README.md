@@ -24,7 +24,7 @@ mkdocs serve
 
 ### Content
 
-Most of it is in `docs/3/`, which is the documentation of the current major release. The core documentation directly in it, and module documentation in in a subfolder.
+Most of it is in `docs/3/`, which is the documentation of the current major release. The core documentation directly in it, and module documentation in a subfolder.
 Each module is documented by a YAML file, that is formatted by the MkDocs extension using `mkdocs_inspircd/templates/module.md.j2`.
 The data is also interpreted by the documentation to generate tables in the core documentation (eg. to provide a list of all commands of all modules).
 
@@ -32,7 +32,7 @@ The data is also interpreted by the documentation to generate tables in the core
 
 ### MkDocs extension
 
-`mkdocs_inspircd/` contains an extension for MkDocs, that does two things things:
+`mkdocs_inspircd/` contains an extension for MkDocs, that does two things:
 
 #### Rendering module documentation
 
@@ -42,12 +42,12 @@ This avoids inconsistencies, and easier changes in the structure; and to access 
 To do this, the MkDocs extension implements [the `on_files` hook](https://www.mkdocs.org/dev-guide/plugins/#on_files), so MkDocs detects `.yml` files as source files (as if they were `.md`).
 
 It also implements [the `on_page_read_source` hook](https://www.mkdocs.org/dev-guide/plugins/#on_page_read_source) to convert the YAML content to Markdown on the fly, because MkDocs tries to parse it.
-This is done simply by rending `mkdocs_inspircd/templates/module.md.j2` with the YAML content as context.
+This is done simply by rendering `mkdocs_inspircd/templates/module.md.j2` with the YAML content as context.
 
 #### Jinja templating for Markdown
 
 Some pages, like `docs/3/channel-modes.md`, use dynamic data to populate tables (eg. the table of all plugins' channel modes) without duplicating data from plugins.
-This is done by the [the `on_page_markdown` hook](https://www.mkdocs.org/dev-guide/plugins/#on_page_markdown), which is executed just before MkDocs parses renders Markdown.
+This is done by [the `on_page_markdown` hook](https://www.mkdocs.org/dev-guide/plugins/#on_page_markdown), which is executed just before MkDocs parses renders Markdown.
 This hook interprets Markdown documents as if they were Jinja templates, and passes them module data in the context; which produces the final Markdown document.
 
 ### License
