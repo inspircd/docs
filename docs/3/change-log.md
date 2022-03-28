@@ -8,13 +8,21 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.13.0
 
-<!-- TODO: ensure changes after commit c20ca3382f3488bac46b2c06c294386e5fd42152 are added to this list before release. -->
+<!-- TODO: ensure changes after commit e2b50c35511dcbbcdb5ede277ef1d7cb97252f6d are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
+- Added `<commonchans:invite>` to allow user mode `c` (deaf_commonchan) to block invites for users that you do not share a common channel with.
+
 - Added `<permchanneldb:operonly>` to allow enabling channel mode `p` (permchannel) to be set by normal users.
 
+- Added support for filtering `/WHO` requests by country code using the `G` flag to the geoban module.
+
 - Added support for finding pkg-config at build time via the `PKG_CONFIG` environment variable.
+
+- Added support for the `<count>` argument to the `/WHOWAS` command.
+
+- Added the `channels/ignore-chanfilter` server operator privilege to allow server operators to be exempted from channel filters.
 
 - Added the `channels/ignore-delaymsg` privilege to allow server operators to override channel mode `d` (delaymsg).
 
@@ -26,7 +34,13 @@ This page lists changes which have happened between releases.
 
 - Changed the `sasl` module to abort SASL unfinished requests when connection registration completes.
 
+- Developer: Added the ` Who::MatchEventListener` event class to allow modules to match `/WHO` requests.
+
+- Fixed `<chanlog:channel>` accepting targets which are not a valid channel name.
+
 - Fixed accessing stats subpaths in the `httpd_stats` module.
+
+- Fixed being able to load modules with paths on Windows.
 
 - Fixed building the regex_re2 module with recent versions of the RE2 library.
 
@@ -38,6 +52,8 @@ This page lists changes which have happened between releases.
 
 - Fixed duplicate messages when a server connection fails.
 
+- Fixed formatting codes in user real names bleeding into some snotice messages.
+
 - Fixed multi-constraint `/LIST` requests not parsing the constraint field properly.
 
 - Fixed negative duration fields showing a positive duration.
@@ -46,11 +62,21 @@ This page lists changes which have happened between releases.
 
 - Fixed squitting servers multiple times in some cases.
 
+- Fixed the `o` field in `/WHO` returning InspIRCd prefix ranks instead of WHOX op levels.
+
 - Fixed the AppArmor file not allowing access to the SSL certificate and key directorie.s
+
+- Fixed the privdeaf module overriding other private message checks.
 
 - Fixed updating connect classes limits when rehashing the config file.
 
+- Raised the minimum CMake version on Windows to CMake 3.8 to avoid upstream deprecation issues.
+
+- Renamed `<connectban:duration>` to `<connectban:banduration>` to make the purpose more clear.
+
 - Updated the IP ranges in the example IRCCloud config file.
+
+- Updated the libraries in the Windows Conan dependency file.
 
 ### InspIRCd 3.12.0
 
