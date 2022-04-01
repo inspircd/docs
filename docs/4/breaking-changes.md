@@ -24,6 +24,8 @@ title: v4 Breaking Changes
 
 ## Moves
 
+- `<connectban:duration>` has been moved to `<connectban:banduration>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
+
 - `<disabled:fakenonexistant>` has been moved to `<disabled:fakenonexistent>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
 - `<exemptfromfilter:channel>` has been moved to `<exemptfromfilter:target>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.

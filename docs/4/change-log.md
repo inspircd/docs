@@ -8,6 +8,22 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a9
+
+**This pre-release version of InspIRCd was released on 2022-04-01.**
+
+- Added support for numeric mode characters.
+
+- Changed end of list numerics to be automatically generated based on the mode name.
+
+- Fixed disabled commands being shown in `/COMMANDS`.
+
+- Increased the minimum customprefix rank from 0 to 1.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Refactored the opermodes module.
+
 ### InspIRCd 4.0.0a8
 
 **This pre-release version of InspIRCd was released on 2022-02-01.**
