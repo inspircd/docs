@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.13.0
 
-<!-- TODO: ensure changes after commit e2b50c35511dcbbcdb5ede277ef1d7cb97252f6d are added to this list before release. -->
+<!-- TODO: ensure changes after commit 73a4b470b27872f77922a75a323cc1bab1cae06e are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
@@ -34,7 +34,15 @@ This page lists changes which have happened between releases.
 
 - Changed the `sasl` module to abort SASL unfinished requests when connection registration completes.
 
-- Developer: Added the ` Who::MatchEventListener` event class to allow modules to match `/WHO` requests.
+- Changed the setter of server-added X-lines to include the module that added them.
+
+- Developer: Added `ConfigTag::getCharacter` for retrieving a single character from a config tag.
+
+- Developer: Added `ModeParser::FindNearestPrefixMode` for finding the nearest prefix mode to the specified rank.
+
+- Developer: Added the `Who::MatchEventListener` event class to allow modules to match `/WHO` requests.
+
+- Developer: Exposed the invite announcement level from the config via the invite API.
 
 - Fixed `<chanlog:channel>` accepting targets which are not a valid channel name.
 
@@ -58,7 +66,13 @@ This page lists changes which have happened between releases.
 
 - Fixed negative duration fields showing a positive duration.
 
+- Fixed sending channel notices to all members regardless of any specified prefix rank.
+
 - Fixed server operators being limited to less channels than the normal user limit if configured incorrectly.
+
+- Fixed some modules unintentionally sending global X-line snotices instead of local ones.
+
+- Fixed sometimes not showing an empty list properly when a list mode has no entries.
 
 - Fixed squitting servers multiple times in some cases.
 
@@ -66,9 +80,23 @@ This page lists changes which have happened between releases.
 
 - Fixed the AppArmor file not allowing access to the SSL certificate and key directorie.s
 
+- Fixed the connectban CIDR ranges not defaulting to the values from `<cidr>`.
+
+- Fixed the consistency of `ERR_CHANOPRIVSNEEDED` messages.
+
+- Fixed the consistency of X-line snotices sent by modules.
+
+- Fixed the grammar of various X-line messages.
+
 - Fixed the privdeaf module overriding other private message checks.
 
+- Fixed the rmode module using notices instead of the appropriate numerics.
+
+- Fixed the serialisation of permission lists.
+
 - Fixed updating connect classes limits when rehashing the config file.
+
+- Fixed using `ERR_CHANOPRIVSNEEDED` when `ERR_RESTRICTED` or `ERR_UNAVAILRESOURCE` are more appropriate.
 
 - Raised the minimum CMake version on Windows to CMake 3.8 to avoid upstream deprecation issues.
 
