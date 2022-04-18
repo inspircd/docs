@@ -12,8 +12,11 @@ title: Introduction
 - [Frequently Asked Questions](/faq)
 - [License](/license)
 - [Packaging Advice](/packaging)
-- [Release Procedure](/release-procedure)
 - [Security Advisories](/security)
+
+### Developer
+
+- [Release Procedure](/release-procedure)
 - [Versioning Policy](/versioning)
 
 </div>
