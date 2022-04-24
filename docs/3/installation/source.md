@@ -8,7 +8,7 @@ If there is no official InspIRCd package for your system and you don't want to u
 
 ### What systems can InspIRCd be built on?
 
-InspIRCd can be built on on the following platforms:
+InspIRCd can be built on the following platforms:
 
 - Most recent BSD variants using the Clang or GCC compilers and the GNU toolchain (Make, etc).
 
@@ -16,9 +16,9 @@ InspIRCd can be built on on the following platforms:
 
 - The most recent three major releases of macOS using the AppleClang, Clang, or GCC (*not* LLVM-GCC) compilers and the GNU toolchain.
 
-- Windows 7 or newer using the MSVC 14 (Visual Studio 2015) compiler and CMake 2.8 or newer.
-
 Alternate platforms and toolchains may also work but are not officially supported by the InspIRCd team. Generally speaking if you are using a reasonably modern UNIX-like system you should be able to build InspIRCd on it.
+
+If you want to build natively on Windows you should use [the Windows source instructions](/3/installation/windows-source) instead.
 
 ### How do I install from source?
 
@@ -28,7 +28,7 @@ In order to build from source you will need to have the development tools for yo
 
 If you want to use any modules with third-party dependencies you should have pkg-config and the development headers for the dependency installed.
 
-Once you have dependencies installed you need to download the source code. You can choose between building the most recent release or, if you enjoy living on the edge, the latest code committed to Git.
+Once you have the dependencies installed you need to download the source code. You can choose between building the most recent release or, if you enjoy living on the edge, the latest code committed to Git.
 
 #### Release Tarball
 
@@ -36,7 +36,7 @@ To download the most recent release tarball you will need to have a download too
 
 ```sh
 # You can replace `wget` with `curl --remote-name` if using cURL.
-wget "https://github.com/inspircd/inspircd/archive/[VERSION].tar.gz"
+wget "https://github.com/inspircd/inspircd/archive/refs/tags/[VERSION].tar.gz"
 ```
 
 Once the archive has downloaded you can unpack it using an archival tool such as GNU Tar.
@@ -65,7 +65,7 @@ You will initially be shown the installation paths that InspIRCd defaults to. Th
 
 After you have configured the paths you will be asked whether you want to enable extra modules automatically based on whether you have the dependencies installed. If you want to do this then press enter to continue. Otherwise, enter "no", press enter, and select the extra modules that you want to use. You can enable modules later using `./configure --enable-extras foo` if you change your mind..
 
-Finally, if you enabled a TLS (SSL) module in the previous step, you will be asked if you want to generate a self-signed certificate for testing purposes. If you want to do this then press enter to continue and fill in the details it prompts you for. Otherwise, enter "no" , and press enter.
+Finally, if you enabled a TLS (SSL) module in the previous step, you will be asked if you want to generate a self-signed certificate for testing purposes. If you want to do this then input "yes", press enter to continue, and fill in the details it prompts you for. Otherwise, press enter to skip this step.
 
 #### Compilation
 
