@@ -8,13 +8,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.13.0
 
-<!-- TODO: ensure changes after commit 73a4b470b27872f77922a75a323cc1bab1cae06e are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2022-04-29.**
 
 - Added `<commonchans:invite>` to allow user mode `c` (deaf_commonchan) to block invites for users that you do not share a common channel with.
 
-- Added `<permchanneldb:operonly>` to allow enabling channel mode `p` (permchannel) to be set by normal users.
+- Added `<override:timeout>` to allow automatically removing user mode `O` (override) after a defined time period.
+
+- Added `<permchanneldb:operonly>` to allow enabling channel mode `P` (permanent) to be set by normal users.
 
 - Added support for filtering `/WHO` requests by country code using the `G` flag to the geoban module.
 
@@ -22,17 +22,19 @@ This page lists changes which have happened between releases.
 
 - Added support for the `<count>` argument to the `/WHOWAS` command.
 
+- Added support for the IRCv3 `bot` tag to the botmode module.
+
 - Added the `channels/ignore-chanfilter` server operator privilege to allow server operators to be exempted from channel filters.
 
-- Added the `channels/ignore-delaymsg` privilege to allow server operators to override channel mode `d` (delaymsg).
+- Added the `channels/ignore-delaymsg` server operator privilege to allow server operators to override channel mode `d` (delaymsg).
 
 - Added the `delaymsg` exemption to allow exempting channel operators from channel mode `d` (delaymsg).
 
-- Changed specifying a DH parameter file in the ssl_openssl module to be optional on GnuTLS 3.6.
+- Changed specifying a DH parameter file in the ssl_gnutls module to be optional on GnuTLS 3.6.
 
 - Changed specifying a DH parameter file in the ssl_openssl module to be optional on OpenSSL 3.0.
 
-- Changed the `sasl` module to abort SASL unfinished requests when connection registration completes.
+- Changed the sasl module to abort unfinished SASL requests when connection registration completes.
 
 - Changed the setter of server-added X-lines to include the module that added them.
 
@@ -46,9 +48,11 @@ This page lists changes which have happened between releases.
 
 - Fixed `<chanlog:channel>` accepting targets which are not a valid channel name.
 
-- Fixed accessing stats subpaths in the `httpd_stats` module.
+- Fixed accessing stats subpaths in the httpd_stats module.
 
 - Fixed being able to load modules with paths on Windows.
+
+- Fixed building the NSIS installer on Windows.
 
 - Fixed building the regex_re2 module with recent versions of the RE2 library.
 
@@ -58,13 +62,19 @@ This page lists changes which have happened between releases.
 
 - Fixed building the ssl_openssl module on OpenSSL 3.0 when built without the compatibility layer.
 
+- Fixed building various extra modules on Windows.
+
 - Fixed duplicate messages when a server connection fails.
 
 - Fixed formatting codes in user real names bleeding into some snotice messages.
 
-- Fixed multi-constraint `/LIST` requests not parsing the constraint field properly.
+- Fixed knock messages not respecting the invite announcement level.
 
 - Fixed negative duration fields showing a positive duration.
+
+- Fixed not parsing the constraint field properly for multi-constraint `/LIST` requests.
+
+- Fixed not sending `ACCOUNT` messages back to a user on login.
 
 - Fixed sending channel notices to all members regardless of any specified prefix rank.
 
@@ -74,11 +84,9 @@ This page lists changes which have happened between releases.
 
 - Fixed sometimes not showing an empty list properly when a list mode has no entries.
 
-- Fixed squitting servers multiple times in some cases.
-
 - Fixed the `o` field in `/WHO` returning InspIRCd prefix ranks instead of WHOX op levels.
 
-- Fixed the AppArmor file not allowing access to the SSL certificate and key directorie.s
+- Fixed the AppArmor file not allowing access to the SSL certificate and key directories.
 
 - Fixed the connectban CIDR ranges not defaulting to the values from `<cidr>`.
 
@@ -94,9 +102,11 @@ This page lists changes which have happened between releases.
 
 - Fixed the serialisation of permission lists.
 
+- Fixed unintentionally squitting servers multiple times in some cases.
+
 - Fixed updating connect classes limits when rehashing the config file.
 
-- Fixed using `ERR_CHANOPRIVSNEEDED` when `ERR_RESTRICTED` or `ERR_UNAVAILRESOURCE` are more appropriate.
+- Fixed using the `ERR_CHANOPRIVSNEEDED` numeric when `ERR_RESTRICTED` or `ERR_UNAVAILRESOURCE` are more appropriate.
 
 - Raised the minimum CMake version on Windows to CMake 3.8 to avoid upstream deprecation issues.
 
@@ -236,7 +246,7 @@ This page lists changes which have happened between releases.
 
 - Fixed not sending the `CHARSET` 005 token when using a non-ASCII casemapping.
 
-- Fixed sending special oper whois when hideoper is enabled.
+- Fixed sending special server operator whois when hideoper is enabled.
 
 - Fixed the `/SILENCE` list serialising `TAGMSG` silences in reverse.
 
@@ -396,7 +406,7 @@ This page lists changes which have happened between releases.
 
 - Fixed `/MAP` column alignment not taking into account the length of the server version.
 
-- Fixed `<class:snomask>` not being parsed correctly when a type has multiple oper classes.
+- Fixed `<class:snomask>` not being parsed correctly when a type has multiple server operator classes.
 
 - Fixed a bunch of inconsistent Perl version requirements.
 
@@ -458,7 +468,7 @@ This page lists changes which have happened between releases.
 
 - Send `RPL_SAVENICK` numerics (from irc2) whenever a user's nick is forcibly changed to their UUID.
 
-- Updated the `/SERVLIST` command to match against and show the oper type of services pseudoclients.
+- Updated the `/SERVLIST` command to match against and show the server operator type of services pseudoclients.
 
 - Updated the `/SSLINFO` command to allow viewing information about channels.
 
@@ -724,7 +734,7 @@ This page lists changes which have happened between releases.
 
 - Developer: added a status char option to the `TagMessage` constructor for sending status messages.
 
-- Developer: added an "oper only" parameter to `Simple{Channel,User}ModeHandler`.
+- Developer: added an "server operator only" parameter to `Simple{Channel,User}ModeHandler`.
 
 - Developer: added empty string checks to the `Numerics::NoSuch{Channel,Nick}` constructors.
 
@@ -896,17 +906,17 @@ This page lists changes which have happened between releases.
 
 * Developer: added an experimental header which implements the [IRCv3 Standard Replies draft](https://github.com/ircv3/ircv3-specifications/blob/master/extensions/standard-replies.md).
 
-* Developer: added the OnConnectionFail event for suspending a user connection which is about to fail.
-
 * Developer: added the `ExtensionItem::{To,From}{Human,Internal,Network}` methods to convert an extension item to and from various string forms.
 
 * Developer: added the `MessageEventListener` class for adding tags to server messages.
 
+* Developer: added the `OnConnectionFail` event for suspending a user connection which is about to fail.
+
 * Developer: added the `{EventHandler,StreamSocket,UserIOHandler}::SwapInternals` methods to swap the internals of two sockets.
 
-* Developer: deprecated the ServerEventListener class and split the events contained within it into the `ServerProtocol::{BroadcastEventListener,LinkEventListener,SyncEventListener} classes.
-
 * Developer: deprecated the `SerializeFormat` enum, and the `serialize`, `unserialize` methods of the `ExtensionItem` class, and the `LocalExtItem` class.
+
+* Developer: deprecated the `ServerEventListener` class and split the events contained within it into the `ServerProtocol::{BroadcastEventListener,LinkEventListener,SyncEventListener}` classes.
 
 * [Fixed a **crash** in the MySQL module when built against mariadb-connector-c v3.0.5 or newer](/security/2019-02).
 
@@ -920,13 +930,13 @@ This page lists changes which have happened between releases.
 
 * Fixed not being able to use the `O` (oper) extended ban to server operators with a space in their server operator type.
 
-* Fixed referring to registration timeouts as ping timeouts in the `conn_waitpong` module.
+* Fixed referring to registration timeouts as ping timeouts in the conn_waitpong module.
 
 * Fixed sending IRCv3 `account-notify` and `chghost` messages to a user who has not sent the `NICK` and `USER` commands yet.
 
 * Fixed sending IRCv3 `cap-notify` messages for capabilities which are not presently visible in `CAP LS`.
 
-* Fixed the `geo_maxmind` module trying to interpret an `AF_UNIX` endpoint as an IP address.
+* Fixed the geo_maxmind module trying to interpret an `AF_UNIX` endpoint as an IP address.
 
 * Improved the message sent to server operators when the maximum connections for a connect class is reached.
 
