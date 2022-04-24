@@ -65,12 +65,20 @@ configuration:
     default: 'No'
     description: |-
       Whether overriding server operators should have to specify a channel key of `override` when joining a channel.
+  - name: timeout
+    type: Duration
+    required: false
+    default: 0s
+    added: 3.13.0
+    description: |-
+      The time period to remove the override mode after. If set to 0 then it will never be automatically removed.
   details: ""
   example: |-
     ```xml
     <override enableumode="yes"
               noisy="no"
-              requirekey="no">
+              requirekey="no"
+              timeout="30m">
     ```
 
 umodes:

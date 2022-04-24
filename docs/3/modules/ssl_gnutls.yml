@@ -99,7 +99,7 @@ configuration:
     required: false
     default: dhparams.pem
     description: |-
-      The path to the DH parameters in PEM format.
+      The path to the DH parameters in PEM format. Since InspIRCd v3.13.0 this does nothing on GnuTLS 3.6.0+.
   - name: hash
     type: Text
     required: false

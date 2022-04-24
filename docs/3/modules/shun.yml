@@ -38,7 +38,7 @@ configuration:
   - name: enabledcommands
     type: Text
     required: false
-    default: ADMIN OPER PING PONG QUIT *(since 3.6)*<br>PING PONG QUIT *(3.0 to 3.5)*
+    default: ADMIN OPER PING PONG QUIT *(since 3.6.0)*<br>PING PONG QUIT *(3.0.0 to 3.5.0)*
     description: |-
       A space-delimited list of commands that a shunned user is allowed to run.
   - name: notifyuser

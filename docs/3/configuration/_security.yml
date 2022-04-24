@@ -83,7 +83,7 @@ attributes:
 - name: userstats
   type: Text
   required: false
-  default: Pu *(since 3.11)*<br>*None (3.0 to 3.10)*
+  default: Pu *(since 3.11.0)*<br>*None (3.0.0 to 3.10.0)*
   description: |-
     The `/STATS` characters that a non-server operator can view.
 details: |+

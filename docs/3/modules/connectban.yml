@@ -40,22 +40,24 @@ configuration:
     default: Your IP range has been attempting to connect too many times in too short a duration. Wait a while, and you will be able to connect.
     description: |-
       The message to give to clients that are connect banned.
-  - name: duration
+  - name:
+      banduration: since 3.13.0
+      duration: 3.0.0 to 3.12.0
     type: Duration
     required: false
-    default: 10m
+    default: 6h *(since 3.13.0)*<br>10m *(3.0.0 to 3.12.0)*
     description: |-
       The duration that an IP address should be banned for.
   - name: ipv4cidr
     type: Number
     required: false
-    default: 32
+    default: 'Depends on `<cidr:ipv4clone>` *(since 3.13.0)*<br>32 *(3.0.0 to 3.12.0)*'
     description: |-
       The IPv4 CIDR range to treat as equivalent when looking for excessive connections.
   - name: ipv6cidr
     type: Number
     required: false
-    default: 128
+    default: 'Depends on `<cidr:ipv6clone>` *(since 3.13.0)*<br>128 *(3.0.0 to 3.12.0)*'
     description: |-
       The IPv6 CIDR range to treat as equivalent when looking for excessive connections.
   - name: bootwait
@@ -75,7 +77,7 @@ configuration:
     ```xml
     <connectban threshold="10"
                 banmessage="Your IP range has been attempting to connect too many times in too short a duration. Wait a while, and you will be able to connect."
-                duration="10m"
+                banduration="6h"
                 ipv4cidr="32"
                 ipv6cidr="128"
                 bootwait="2m"

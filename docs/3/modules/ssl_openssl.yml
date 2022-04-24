@@ -136,7 +136,7 @@ configuration:
     required: false
     default: dhparams.pem
     description: |-
-      The path to the certificate in PEM format.
+      The path to the DH parameters in PEM format. Since InspIRCd v3.13.0 this does nothing on OpenSSL 3.0.0+.
   - name: ecdhcurve
     type: Text
     required: false

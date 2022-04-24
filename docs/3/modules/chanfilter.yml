@@ -33,7 +33,24 @@ configuration:
                 notifyuser="yes"
                 maxlen="50">
     ```
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-chanfilter
+    added: 3.13.0
+    description: |-
+      Allows server operators to send a message to a channel that matches a filter entry.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send a message to a channel that matches a filter entry.
 
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-chanfilter ...">
+    ```
 chmodes:
   chars:
   - name: filter

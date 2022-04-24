@@ -21,7 +21,7 @@ configuration:
     description: |-
       Whether to also give joining server operators the `o` (op) channel prefix mode.
   - name: prefix
-    type: Text
+    type: Character
     required: false
     default: null
     description: |-

@@ -20,6 +20,13 @@ configuration:
     default: 'No'
     description: |-
       Whether to save list modes to the permchannels configuration file.
+  - name: operonly
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 3.13.0
+    description: |-
+      Whether channel mode `P` (permanent) can only be set by server operators. Changing this is not recommended.
   - name: saveperiod
     type: Duration
     required: false
@@ -32,6 +39,7 @@ configuration:
     ```xml
     <permchanneldb filename="permchannels.conf"
                    listmodes="yes"
+                   operonly="yes"
                    saveperiod="5s">
     ```
 - name: permchannels

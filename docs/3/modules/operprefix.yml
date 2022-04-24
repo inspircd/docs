@@ -9,7 +9,7 @@ configuration:
     The `<operprefix>` tag defines settings about how the operprefix module should behave. This tag can only be defined once.
   attributes:
   - name: prefix
-    type: Text
+    type: Character
     required: false
     default: '!'
     description: |-

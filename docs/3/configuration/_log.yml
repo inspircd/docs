@@ -64,6 +64,7 @@ details: |+
   core_hostname_lookup | debug                       | Messages relating to user hostname lookups.
   core_oper            | sparse<br>default           | Messages relating to server operators.
   core_reloadmodule    | debug                       | Messages relating to the RELOADMODULE command.
+  core_who             | debug                       | Messages relating to the WHO command.
   core_whowas          | default                     | Messages relating to the WHOWAS command.
   m_callerid           | default                     | Messages relating to [the callerid module](/3/modules/callerid).
   m_cap                | debug                       | Messages relating to [the cap module](/3/modules/cap).
