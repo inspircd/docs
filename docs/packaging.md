@@ -16,6 +16,8 @@ If you are performing a system-wide install you should use the `--system` option
 
 When performing a system-wide build you may be asked to specify a user and group to run as. If you want to run as another user or if your package management system automatically handles changing file permissions then you may want to pass one of the following flag options to `./configure`.
 
+You will probably want to set `INSPIRCD_DISABLE_RPATH=1` in the environment to avoid embedding [runtime paths](https://en.wikipedia.org/wiki/Rpath) into the combined binaries.
+
 ```sh
 # If always run as root.
 ./configure --gid 0 --uid 0 ...
