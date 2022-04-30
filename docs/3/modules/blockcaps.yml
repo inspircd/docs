@@ -2,7 +2,7 @@ name: blockcaps
 
 introduction: |-
   !!! warning ""
-      This module has been deprecated and will be removed in the next major version of InspIRCd.
+      This module is deprecated and has been removed in the next major version of InspIRCd.
 
       You should use [the anticaps module](/3/modules/anticaps) instead.
 

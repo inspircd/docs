@@ -2,7 +2,7 @@ name: flashpolicyd
 
 introduction: |-
   !!! warning ""
-      This module has been removed in the next major version of InspIRCd.
+      This module is deprecated and has been removed in the next major version of InspIRCd.
 
       Adobe Flash has been EOL since the end of 2020 and is not supported by modern browsers so you no longer need to provide support for it on your network.
 
