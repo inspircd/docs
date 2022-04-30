@@ -20,6 +20,8 @@ title: v4 Breaking Changes
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
+- Windows 10 build 17061 is now the minimum supported version of Windows.
+
 - `<class:snomasks>` no longer has a default value. In order to keep v3 behaviour you should set it to `*`.
 
 ## Moves
@@ -70,6 +72,8 @@ title: v4 Breaking Changes
 
 - `<channels:users>` has been removed. If you wish to keep this behaviour then set `<connect:maxchans>` instead.
 
+- `<commonchans:invite>` has been removed with no replacement (now always enabled).
+
 - `<config:format>` has been removed with no replacement. If you were previously using compat-style config parsing you will have to go through your config and replace all C-style escape sequences with XML-style escape sequences.
 
 - `<deaf:enableprivdeaf>` has been removed with no replacement (now always enabled).
@@ -101,6 +105,8 @@ title: v4 Breaking Changes
 - Compatibility with the 1202 (v2) protocol has been removed. You will need to link against an intermediary v3 server if you are upgrading from v2.
 
 - Support for Debian GNU/kFreeBSD has been dropped.
+
+- The `/FPART` command has been removed. If you wish to keep this behaviour you should add an alias that calls the `/REMOVE` command.
 
 - The blockcaps module has been removed. If you wish to keep this behaviour then you should load the anticaps module instead. See the documentation in modules.conf.example for more details.
 

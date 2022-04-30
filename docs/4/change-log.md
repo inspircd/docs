@@ -8,6 +8,36 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a10
+
+**This pre-release version of InspIRCd was released on 2022-05-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
+
+- Added `<options:extbanformat>` to allow specifying the format to normalise extbans to.
+
+- Added support for cleaning up malformed extban values.
+
+- Added support for detecting the local hostname on Windows.
+
+- Added support for UNIX socket listeners on Windows.
+
+- Added support for writing a pid file on Windows.
+
+- Cleaned up unnecessary inclusion of system header files.
+
+- Improved cleaning up broken masks specified by users.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Removed support for automatically tidying list mode entries.
+
+- Removed support for changing `<pid:file>` after the server has started.
+
+- Removed validation of list mode entries that were set by a remote server.
+
+- Replaced the command line argument parser with a more user friendly one.
+
 ### InspIRCd 4.0.0a9
 
 **This pre-release version of InspIRCd was released on 2022-04-01.**
