@@ -1,7 +1,7 @@
 name: botmode
 
 description: |-
-  This module adds user mode `B` (bot) which marks users with it set as bots:
+  This module adds user mode `B` (bot) which marks users with it set as bots. This includes:
 
   * in their `/WHOIS` response
   * in `/WHO` responses
