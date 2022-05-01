@@ -3,9 +3,9 @@ name: botmode
 description: |-
   This module adds user mode `B` (bot) which marks users with it set as bots. This includes:
 
-  * in their `/WHOIS` response
-  * in `/WHO` responses
-  * in PRIVMSGs sent by them, using the `draft/bot` (starting with InspIRCd 3.11) and `inpircd.org/bot` tags
+  * their `/WHOIS` response
+  * `/WHO` responses
+  * PRIVMSGs sent by them, using the `draft/bot` (starting with InspIRCd 3.11) and `inpircd.org/bot` tags
 
   Depending on your module-specific configuration this can also prevents a bot from using non-bot aliases (requires [the alias module](/3/modules/alias)) and from receiving channel history on join (requires [the chanhistory module](/3/modules/chanhistory)).
 
