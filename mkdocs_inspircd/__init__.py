@@ -8,7 +8,6 @@ import fnmatch
 import functools
 import glob
 import pathlib
-import os.path
 
 import mkdocs.exceptions
 import mkdocs.plugins
@@ -17,18 +16,18 @@ import jinja2
 import mergedeep;
 import yaml
 
-PACKAGE_DIR = os.path.abspath(os.path.dirname(__file__))
-TEMPLATES_DIR = os.path.join(PACKAGE_DIR, 'templates')
+PACKAGE_DIR = pathlib.Path(__file__).parent.resolve()
+TEMPLATES_DIR = PACKAGE_DIR / "templates"
 
 
 @functools.lru_cache(10240)
 def load_yaml(filename):
-    with open(filename) as fd:
+    with filename.open() as fd:
         result = yaml.safe_load(fd)
         if result is not None and 'INHERIT' in result:
             relpath = result.pop('INHERIT')
-            abspath = os.path.normpath(os.path.join(os.path.dirname(filename), relpath))
-            if not os.path.exists(abspath):
+            abspath = filename.parent / relpath
+            if not abspath.exists():
                 raise mkdocs.exceptions.ConfigurationError(f"Inherited data file '{relpath}' does not exist at '{abspath}'.")
             parent = load_yaml(abspath)
             result = mergedeep.merge(parent, result)
@@ -49,7 +48,7 @@ class ExtendedFile(mkdocs.structure.files.File):
         # but we need to run them again now that .yml are recognized
         # as documentation pages.
         self.dest_path = self._get_dest_path(use_directory_urls)
-        self.abs_dest_path = os.path.normpath(os.path.join(dest_dir, self.dest_path))
+        self.abs_dest_path = pathlib.Path(dest_dir) / self.dest_path
         self.url = self._get_url(use_directory_urls)
 
     def is_documentation_page(self):
@@ -83,14 +82,16 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         """Replaces MkDocs's open() to read source files by reading the file
         directly and pre-rendering it to Markdown."""
         if page.file.is_inspircd_module_yaml():
-            return yml2md(page.file.abs_src_path, template=self.module_template)
+            return yml2md(
+                pathlib.Path(page.file.abs_src_path), template=self.module_template
+            )
 
     def modules(self, config, version):
         if version is None:
             return []
         if self._modules is None:
             self._modules = []
-            for module_file in glob.glob(os.path.join(config["docs_dir"], version, "modules/*.yml")):
+            for module_file in pathlib.Path(config["docs_dir"]).glob(version + "/modules/*.yml"):
                 self._modules.append(load_yaml(module_file))
         return self._modules
 
@@ -161,15 +162,15 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def core_config_tags(self, config, version):
         if version is None:
             return []
-        paths = glob.glob(os.path.join(config["docs_dir"], version, "configuration/_*.yml"))
-        paths.sort()  # sorts by config name
+        paths = pathlib.Path(config["docs_dir"]).glob(version + "/configuration/_*.yml")
+        paths = sorted(paths)  # sorts by config name
         return [load_yaml(path) for path in paths]
 
     def core_commands(self, config, version):
         if version is None:
             return []
-        paths = glob.glob(os.path.join(config["docs_dir"], version, "commands/_*.yml"))
-        paths.sort()  # sorts by command name
+        paths = pathlib.Path(config["docs_dir"]).glob(version + "/commands/_*.yml")
+        paths = sorted(paths)  # sorts by command name
         return [load_yaml(path) for path in paths]
 
     def page_version(self, url):
