@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{# By default, titles defined in 'nav:' in mkdocs.yml override titles defined in file metadata.
+   However, we usually want them to differ (because it is redundant to mention the InspIRCd version in the navigation);
+   so the following block makes file metadata take precedence over the 'nav:' configuration
+   #}
+{% block htmltitle %}
+<title>{% if page.meta.title or page.title %}{{ page.meta.title or page.title }} - {% endif %}{{ config.site_name }}</title>
+{% endblock %}
+
