@@ -27,6 +27,7 @@ theme:
   name: cinder
   highlightjs: true
   disable_nav_previous_next: true
+  custom_dir: theme/
 copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
 repo_url: https://github.com/inspircd/inspircd-docs
 site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
