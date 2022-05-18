@@ -2,6 +2,7 @@
 *.diff
 *.egg-info
 *.pyc
+build
 dist
 site
 
