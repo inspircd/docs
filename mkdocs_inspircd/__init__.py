@@ -85,15 +85,17 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         if page.file.is_inspircd_module_yaml():
             return yml2md(page.file.abs_src_path, template=self.module_template)
 
-    def modules(self, config):
+    def modules(self, config, version):
+        if version is None:
+            return []
         if self._modules is None:
             self._modules = []
-            for module_file in glob.glob(config["docs_dir"] + "/3/modules/*.yml"):
+            for module_file in glob.glob(os.path.join(config["docs_dir"], version, "modules/*.yml")):
                 self._modules.append(load_yaml(module_file))
         return self._modules
 
-    def chmodes(self, config):
-        modules = self.modules(config)
+    def chmodes(self, config, version):
+        modules = self.modules(config, version)
         return [
             {**mode, "module": module["name"]}
             for module in modules
@@ -101,8 +103,8 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             for mode in module["chmodes"]["chars"]
         ]
 
-    def umodes(self, config):
-        modules = self.modules(config)
+    def umodes(self, config, version):
+        modules = self.modules(config, version)
         return [
             {**mode, "module": module["name"]}
             for module in modules
@@ -110,8 +112,8 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             for mode in module["umodes"]["chars"]
         ]
 
-    def extbans(self, config, type):
-        modules = self.modules(config)
+    def extbans(self, config, type, version):
+        modules = self.modules(config, version)
         return [
             {**extban, "module": module["name"]}
             for module in modules
@@ -120,8 +122,8 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             if extban["type"] == type
         ]
 
-    def snomasks(self, config):
-        modules = self.modules(config)
+    def snomasks(self, config, version):
+        modules = self.modules(config, version)
         return [
             {**snomask, "module": module["name"]}
             for module in modules
@@ -129,12 +131,12 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             for snomask in module["snomasks"]
         ]
 
-    def extra_tag_fields(self, config):
+    def extra_tag_fields(self, config, version):
         extra_tag_fields = collections.defaultdict(
             lambda: collections.defaultdict(list)
         )
 
-        for module in self.modules(config):
+        for module in self.modules(config, version):
             for module_tag in module.get("configuration", []):
                 if module_tag.get("extends", False):
                     # Some modules describe two tags at the same time
@@ -156,30 +158,41 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                             )
         return extra_tag_fields
 
-    def core_config_tags(self, config):
-        paths = glob.glob(config["docs_dir"] + "/3/configuration/_*.yml")
+    def core_config_tags(self, config, version):
+        if version is None:
+            return []
+        paths = glob.glob(os.path.join(config["docs_dir"], version, "configuration/_*.yml"))
         paths.sort()  # sorts by config name
         return [load_yaml(path) for path in paths]
 
-    def core_commands(self, config):
-        paths = glob.glob(config["docs_dir"] + "/3/commands/_*.yml")
+    def core_commands(self, config, version):
+        if version is None:
+            return []
+        paths = glob.glob(os.path.join(config["docs_dir"], version, "commands/_*.yml"))
         paths.sort()  # sorts by command name
         return [load_yaml(path) for path in paths]
+
+    def page_version(self, url):
+        segments = url.split("/")
+        if segments[0].isdigit():
+            return segments[0]
 
     def on_page_markdown(self, markdown, page, config, files):
         """Runs Jinja on an input markdown file, to produce another markdown file."""
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader([TEMPLATES_DIR, config["docs_dir"]]),
         )
+        version = self.page_version(page.url)
         context = {
-            "module_chmodes": self.chmodes(config),
-            "module_umodes": self.umodes(config),
-            "acting_module_extbans": self.extbans(config, "Acting"),
-            "matching_module_extbans": self.extbans(config, "Matching"),
-            "module_snomasks": self.snomasks(config),
-            "extra_tag_fields": self.extra_tag_fields(config),
-            "core_config_tags": self.core_config_tags(config),
-            "core_commands": self.core_commands(config)
+            "module_chmodes": self.chmodes(config, version),
+            "module_umodes": self.umodes(config, version),
+            "acting_module_extbans": self.extbans(config, "Acting", version),
+            "matching_module_extbans": self.extbans(config, "Matching", version),
+            "module_snomasks": self.snomasks(config, version),
+            "extra_tag_fields": self.extra_tag_fields(config, version),
+            "core_config_tags": self.core_config_tags(config, version),
+            "core_commands": self.core_commands(config, version),
+            "version": version,
         }
         template = env.from_string(markdown)
         return template.render(context)
