@@ -8,6 +8,40 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a11
+
+**This pre-release version of InspIRCd was released on 2022-06-01.**
+
+- Added support for named and indexed captures in the regex system.
+
+- Added the log_json module for logging machine readable JSON messages to a file.
+
+- Added the log_sql module for logging to an SQL database.
+
+- Added the log_syslog module for logging to the system log on UNIX systems.
+
+- Changed protection from being targeted by kicks/kills/etc to require user mode `k` (servprotect) instead of being on a services server.
+
+- Changed the httpd_stats module to generate the output automatically instead of just emitting raw XML.
+
+- Changed the log levels to better match how log messages are used.
+
+- Deprecated the S2S version and fullversion SINFO keys and added the rawbranch and customversion keys to replace them.
+
+- Fixed building the ISUPPORT token list before all modules have been initialized.
+
+- Fixed log messages not being flushed for hours if a server wasn't particularly busy.
+
+- Fixed repeated lookups of prefix modes by storing a sorted set of mode handlers instead of a string of mode characters.
+
+- Fixed the server operator events duplicating data which is accessible from the user object.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Rewrote the entire account system from scratch.
+
+- Rewrote the entire logging system from scratch.
+
 # InspIRCd 4.0.0a10
 
 **This pre-release version of InspIRCd was released on 2022-05-01.**
