@@ -26,6 +26,13 @@ configuration:
   description: |-
     The `<websocket>` tag defines settings about how the websocket module should behave. This tag can only be defined once.
   attributes:
+  - name: defaultmode
+    type: Text
+    required: false
+    default: text
+    added: 3.12.0
+    description: |-
+      The default action to take when the user does not send a recognised WebSocket subprotocol.
   - name: proxyranges
     type: Text
     required: false
@@ -38,12 +45,20 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
-  details: ""
+      *Deprecated in v3.12.0!* Whether to send messages to WebSocket clients using text frames instead of binary frames. This requires all text to be transcoded to UTF-8.
+  details: |+
+    The defaultmode field should be set to one of the following values:
+
+    Value  | Description
+    ------ | -----------
+    binary | Send binary WebSocket frames to clients.
+    reject | Reject connections that do not explicitly request a subprotocol.
+    text   | Send text WebSocket frames to clients. This requires all text to be transcoded to UTF-8.
+
   example: |-
     ```xml
     <websocket proxyranges="192.0.2.0/24 198.51.100.*"
-               sendastext="yes">
+               defaultmode="text">
     ```
 - name: wsorigin
   description: |-
