@@ -81,10 +81,14 @@ configuration:
 special_notes: |-
   The following HTTP errors are sent by this module:
 
-   - HTTP 400 &mdash; Your WebSocket implementation has not sent the required `Origin` header.
-   - HTTP 403 &mdash; You are attempting to connect from a non-whitelisted origin.
-   - HTTP 501 &mdash; Your WebSocket implementation has not sent the required `Sec-WebSocket-Key` header.
-   - HTTP 503 &mdash; You do not have [the sha1 module](/3/modules/sha1) loaded.
+  Error                   | Reason
+  ----------------------- | ------
+  400 Bad Request         | Your WebSocket implementation has not sent the `Origin` header.
+  400 Bad Request         | `<websocket:proxyranges>` was non-empty and no well-formed `X-Real-IP` or `X-Forwarded-For` header was sent.
+  400 Bad Request         | `<websocket:defaultmode>` was set to `reject` and no recognised WebSocket subprotocol was sent.
+  403 Forbidden           | You are attempting to connect from a non-whitelisted origin.
+  501 Not Implemented     | Your WebSocket implementation has not sent the `Sec-WebSocket-Key` header.
+  503 Service Unavailable | You do not have [the sha1 module](/3/modules/sha1) loaded.
 
   If you add an encrypted WebSocket listener you should create a custom TLS (SSL) profile that has `requestclientcert="no"` set. This is required to allow connections to your server using Google Chrome.
 
