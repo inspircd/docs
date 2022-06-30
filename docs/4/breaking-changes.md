@@ -12,13 +12,15 @@ title: v4 Breaking Changes
 
 - A compiler with C++17 support is now required to build InspIRCd. In practise this means you will need to use at least Clang 5, GCC 7, or MSVC 19.15.
 
-- GnuTLS 3+ is now required by the ssl_gnutls module.
+- GnuTLS 3.3.5+ is now required by the ssl_gnutls module.
 
-- OpenSSL 1.1+ is now required by the ssl_openssl module.
+- OpenSSL 1.1.1+ is now required by the ssl_openssl module.
 
 - PCRE2 is now required by the regex_pcre module. Most regular expressions should be compatible but if not you can use `./modulemanager install m_regex_oldpcre` to install the a module that uses the PCRE1 library.
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
+
+- The syntax of the passforward module's command fields has changed. You should switch your config to use the new style `%foo%` variables.
 
 - Windows 10 build 17061 is now the minimum supported version of Windows.
 
@@ -57,6 +59,8 @@ title: v4 Breaking Changes
 - The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
 
 - The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_regex_tre` to install it.
+
+- The userip module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install userip` to install it.
 
 - The sha256 module has been renamed to sha2. In order to upgrade you should change your module tag to point to the new name.
 

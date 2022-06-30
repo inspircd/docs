@@ -8,6 +8,38 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a12
+
+**This pre-release version of InspIRCd was released on 2022-07-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
+
+- Added `<messageflood:kickmessage>` for customising the message flood kick reason.
+
+- Added a new templating system for config-provided fields that contain variables.
+
+- Added the `%diff%`, `%duration%`, `%lines%`, and `%seconds` template variables to the repeat module ban reason.
+
+- Added the `%dnsbl%` and `%result%` template variables to the dnsbl module ban reason.
+
+- Changed `<shun:cleanedcommands>` and `<shun:enabledcommands>` to use a token list instead of a set.
+
+- Changed the passforward module to use the new templating system.
+
+- Developer: made `ConfigTag::getEnum` return the default instead of throwing.
+
+- Developer: sped up the build by reducing the number of unnecessary global headers.
+
+- Fixed a crash caused by writing to a logger whilst unloading a logger.
+
+- Fixed not blocking the loading, reloading, and unloading of modules by their short names.
+
+- Fixed not shrinking module file names properly on macOS and Windows.
+
+- Made all of the malformed config value error messages have a consistent format.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
 # InspIRCd 4.0.0a11
 
 **This pre-release version of InspIRCd was released on 2022-06-01.**
