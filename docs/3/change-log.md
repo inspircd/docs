@@ -6,6 +6,44 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+ ### InspIRCd 3.14.0
+
+<!-- TODO: ensure changes after commit 4776f39b1a6148b3f05d36b52bf63d841e638730 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added support for exiting with a binary exit code in order not to confuse some init systems.
+
+- Added support for hex colour code escapes in MOTD and config files.
+
+- Added support for the `r` WHO flag for compatibility with UnrealIRCd.
+
+- Allowed specifying `--disable-ownership` with `--gid` and `--uid`.
+
+- Changed the default system-wide binary path from `/usr/sbin` to `/usr/bin`.
+
+- Fixed logrotate not being able to rotate logs without an init system.
+
+- Fixed not being able to compile on Android.
+
+- Fixed the httpd_stats module swallowing some unhandled routes.
+
+- Fixed the logrotate config rotating already rotated logs.
+
+- Fixed the ssl_mbedtls module using internal mbedTLS APIs.
+
+- Fixed the userip module behaving different to other implementations.
+
+- Fixed the websocket module only accepting normalised header names.
+
+- Fixed the Windows installer being out of sync with the latest CMake.
+
+- Fixed various compiler errors on 32-bit x86 systems.
+
+- Improved support for linking servers over UNIX socket connections.
+
+- Updated the libraries in the Windows Conan dependency file.
+
 ### InspIRCd 3.13.0
 
 **This version of InspIRCd was released on 2022-04-29.**
