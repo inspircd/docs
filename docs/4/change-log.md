@@ -8,9 +8,19 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
-# InspIRCd 4.0.0a12
+# InspIRCd 4.0.0a13
 
 **This pre-release version of InspIRCd was released on 2022-07-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
+
+- Added the `~context` server tag to allow services to show a private message, notice, or tag message in a context of a channel.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+# InspIRCd 4.0.0a12
+
+**This pre-release version of InspIRCd was released on 2022-06-01.**
 
 **IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 

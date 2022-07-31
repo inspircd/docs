@@ -100,6 +100,8 @@ title: v4 Breaking Changes
 
 - `<security:allowcoreunload>` has been removed with no replacement (now always disabled).
 
+- `<showwhois:showfromopers>` has been removed. If you wish to make a server operator immune from this mode then give them the `users/secret-whois` privilege.
+
 - `<shun:affectsopers>` has been removed. If you wish to keep this behaviour then give your server operators the `servers/ignore-shuns` privilege.
 
 - `<sslmodes:enableumode>` has been removed with no replacement (now always enabled).
