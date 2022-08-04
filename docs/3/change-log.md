@@ -6,7 +6,7 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
- ### InspIRCd 3.14.0
+### InspIRCd 3.14.0
 
 <!-- TODO: ensure changes after commit 4776f39b1a6148b3f05d36b52bf63d841e638730 are added to this list before release. -->
 
