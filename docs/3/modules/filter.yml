@@ -27,6 +27,20 @@ configuration:
     added: 3.2.0
     description: |-
       Whether to warn server operators instead of applying the assigned punishment when a user sends a message to themself that matches a filter.
+  - name: filename
+    type: String
+    required: false
+    default: null
+    added: 3.10.0
+    description: |-
+      If defined then the location to write a filter configuration file to.
+  - name: saveperiod
+    type: Duration
+    required: false
+    default: 5s
+    added: 3.10.0
+    description: |-
+      The time period between attempts to check whether the filter configuration file needs to be written.
   details: |-
     The engine field should be set to the name of a regular expression engine.
 
@@ -36,7 +50,9 @@ configuration:
     ```xml
     <filteropts engine="glob"
                 notifyuser="yes"
-                warnonselfmsg="no">
+                warnonselfmsg="no"
+                filename="filters.conf"
+                saveperiod="5s">
     ```
 - name: keyword
   description: |-
