@@ -170,3 +170,5 @@ stats:
 
 special_notes: |-
   Having a high number of filters or having filters which take a long time to match can have significant impact on server performance.
+
+  The filter module will never expose the contents of a message that matched a filter to server operators. This is by design and is intended to prevent server operators from covertly snooping on private conversations.
