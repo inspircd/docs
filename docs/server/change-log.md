@@ -40,7 +40,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 ```diff
 - :36D ELINE *@example.com 60 :Example
 - :36D ELINE *@example.com
-+ :36D ADDLINE E *@example.com 60 :Example
++ :36D ADDLINE E *@example.com Sadie 420 60 :Example
 + :36D DELLINE E *@example.com
 ```
 
