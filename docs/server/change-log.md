@@ -82,8 +82,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `JOIN` message has been removed. You should send `FJOIN` instead.
 
 ```diff
-+ :36DAAAAAA JOIN #chan
-- :36D FJOIN #chan 69 + :,36DAAAAAA
+- :36DAAAAAA JOIN #chan
++ :36D FJOIN #chan 69 + :,36DAAAAAA
 ```
 
 - The `KICK` message now has a membership identifier as the third parameter.
@@ -100,7 +100,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + CAPAB CAPABILITIES :FOO=123 MAXREAL=100 BAR=456 ...
 ```
 
-- The `METADATA` message now has the channel creation time as the second parameter.
+- The `METADATA` message when sent with a channel target now has the channel creation time as the second parameter.
 
 ```diff
 - :36D METADATA #channel wibble :wobble
@@ -114,14 +114,14 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + :36DAAAAAA ENCAP * MODENOTICE o :Greetings fellow opers!
 ```
 
-- The `OPERQUIT` message has been replaced with the `operquit` metadata.
+- The `OPERQUIT` message has been replaced with the `operquit` user metadata.
 
 ```diff
 - :36DAAAAAA OPERQUIT :Spammer
 + :36D METADATA 36DAAAAAA operquit :Spammer
 ```
 
-- The `OPERTYPE` message can now handle sending a server operator type that contains a space.
+- The `OPERTYPE` message can now handle sending a server operator type that contains spaces.
 
 ```diff
 - :36DAAAAAA OPERTYPE Network_Administrator
@@ -163,7 +163,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + :36D NUM 36D 36EAAAAAA 372 :irc2.example.com message of the day
 ```
 
-- The `RESYNC` message has been added to resynchronise the state of a channel.
+- The `RESYNC` message has been added to resynchronise the state of a channel if an `IJOIN` is sent for an unknown channel.
 
 ```diff
 + :36D RESYNC #chan
@@ -202,7 +202,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + :36DAAAAAA MODE 36EAAAAAA +o
 ```
 
-- The `SVSSILENCE` message has been replaced with the `silence-list` metadata.
+- The `SVSSILENCE` message has been replaced with the `silence-list` user metadata.
 
 ```diff
 - :36D SVSSILENCE 36EAAAAAA +foo@bar@baz cnpt
