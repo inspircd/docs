@@ -8,6 +8,10 @@ title: InspIRCd Spanning Tree Protocol &mdash; Concepts
 
 This page explains concepts relating to the InspIRCd Spanning Tree protocol.
 
+### Membership Identifier
+
+A membership identifier is an unsigned 64-bit integer that represents a user's membership of a channel. They are specific to a user and channel so multiple memberships may use the same membership id as long as both the user and channel are different.
+
 ### Message Routing
 
 InspIRCd supports three types of message routing.
