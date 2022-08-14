@@ -159,8 +159,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `PUSH` message has been removed. You should use `NUM` for sending numerics instead.
 
 ```diff
-- :36D PUSH 36EAAAAAA ::irc2.example.com 372 Sadie :irc2.example.com message of the day
-+ :36D NUM 36D 36EAAAAAA 372 :irc2.example.com message of the day
+- :36D PUSH 36EAAAAAA ::irc2.example.com 375 Sadie :irc2.example.com message of the day
++ :36D NUM 36D 36EAAAAAA 375 :irc2.example.com message of the day
 ```
 
 - The `RESYNC` message has been added to resynchronise the state of a channel if an `IJOIN` is sent for an unknown channel.
