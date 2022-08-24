@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.14.0
 
-<!-- TODO: ensure changes after commit 4776f39b1a6148b3f05d36b52bf63d841e638730 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2021-08-26.**
 
 - Added support for exiting with a binary exit code in order not to confuse some init systems.
 
@@ -22,9 +20,19 @@ This page lists changes which have happened between releases.
 
 - Changed the default system-wide binary path from `/usr/sbin` to `/usr/bin`.
 
+- Developer: Deprecated the string overloads of `{User,LocalUser}::SetClientIP`.
+
+- Fixed deprecation warnings on compilers that default to C++17 or newer.
+
+- Fixed false positive warnings when building with `-Wmaybe-uninitialised`.
+
 - Fixed logrotate not being able to rotate logs without an init system.
 
 - Fixed not being able to compile on Android.
+
+- Fixed not sending a WebSocket close packet when terminating the connection.
+
+- Fixed remote users that are connected via UNIX sockets not having their endpoints set correctly.
 
 - Fixed the httpd_stats module swallowing some unhandled routes.
 
