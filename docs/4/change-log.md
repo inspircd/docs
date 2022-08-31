@@ -8,6 +8,28 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a14
+
+**This pre-release version of InspIRCd was released on 2022-08-01.**
+
+- Added support for logging JSON to stdout (`json-stdout`) and stderr (`json-stderr`) to the log_json message.
+
+- Developer: changed `irc::sockets::sockaddrs` to be zero-initialized by default.
+
+- Developer: converted `irc::sockets::{ap,un}tosa` to be `irc::sockets::sockaddrs` member functions.
+
+- Developer: refactored the `FOREACH_MOD` and `FIRST_MOD_RESULT` macros.
+
+- Developer: removed the string overload of `User::SetClientIP`.
+
+- Developer: renamed `Module::OnSetUserIP` to `OnChangeRemoteAddress` to make it clear that client socket addresses can refer to a non-IP protocol.
+
+- Developer: renamed the sockaddrs overload of `User::SetClientIP` to `ChangeRemoteAddress` to make it clear that client socket addresses can refer to a non-IP protocol.
+
+- Fixed module loggers not being able to write the actual log time for messages that are cached on startup.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
 # InspIRCd 4.0.0a13
 
 **This pre-release version of InspIRCd was released on 2022-07-01.**
