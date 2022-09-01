@@ -177,7 +177,6 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 
 - The `SERVER` message for indirectly-linked servers can now contain data about the server and no longer includes a dummy password and hop count.
 
-
 ```diff
 - 36D SERVER irc2.example.com 36E * 0 :Server no. 2
 + 36D SERVER irc2.example.com 36E burst=69 hidden=yes :Server no. 2
