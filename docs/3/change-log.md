@@ -6,6 +6,26 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.15.0
+
+<!-- TODO: ensure changes after commit c2e6c819bc6d1bae1e707454a8004d2f8d303281 are added to this list before release. -->
+
+ **This version of InspIRCd has not yet been released.**
+
+- Added the name of the user's I/O serializer to the `/CHECK` output.
+
+- Allowed building the `regex_posix` module against pcreposix on Windows for link compatibility reasons.
+
+- Changed temporary module filenames to be more unique.
+
+- Fixed building the ldap module against the Windows LDAP implementation.
+
+- Fixed including unnecessary build objects in the Windows installer.
+
+- Fixed not sending `ERR_NONICKNAMEGIVEN` in response to empty `/WHOIS` and `/WHOWAS` requests.
+
+- Fixed not sending tags when sending numerics to users.
+
 ### InspIRCd 3.14.0
 
 **This version of InspIRCd was released on 2021-08-26.**
