@@ -8,6 +8,26 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a15
+
+**This pre-release version of InspIRCd was released on 2022-08-01.**
+
+- Changed `<hostname:charmap>` to disallow characters that have special meaning in the IRC wire format.
+
+- Developer: changed command handler penalty to be measured in milliseconds instead of seconds
+
+- Developer: changed command handlers to opt-in to empty trailing parameters instead of opting out.
+
+- Developer: refactored the server notices sent to operators when loading and unloading a module.
+
+- Developer: removed support for serialising and deserialising user data.
+
+- Ensured that the `<hostname:charmap>` is synchronised across the network when linking to a v4 server.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Modernized the Windows compatibility layer.
+
 # InspIRCd 4.0.0a14
 
 **This pre-release version of InspIRCd was released on 2022-08-01.**
