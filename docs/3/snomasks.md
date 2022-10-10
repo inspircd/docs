@@ -62,9 +62,9 @@ X         | Notifications about X-lines being added/removed/expired on a remote 
 <tbody markdown="1">
 {% for snomask in module_snomasks|sort(attribute="char") %}
 <tr markdown="1">
-<td markdown="1">{{snomask.char}}</td>
-<td markdown="1">[{{snomask.module}}](/3/modules/{{snomask.module}}/)</td>
-<td markdown="1">{{snomask.description}}</td>
+<td markdown="1">{{ snomask.char }}</td>
+<td markdown="1">[{{ snomask.module}}](/3/modules/{{snomask.module }}/)</td>
+<td markdown="1">{{ snomask.description }}</td>
 </tr>
 {% endfor %}
 </tbody>

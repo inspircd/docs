@@ -11,17 +11,17 @@
 <tbody markdown="1">
 {% for extban in extbans|sort(attribute="char") %}
 <tr markdown="1">
-<td markdown="1">{{extban.name}}</td>
-<td markdown="1">{{extban.char}}</td>
+<td markdown="1">{{ extban.name }}</td>
+<td markdown="1">{{ extban.char }}</td>
 {% if extban.syntax is none %}
 <td><em>None</em></td>
 {% elif extban.syntax is string %}
-<td markdown="1">`{{extban.syntax}}`</td>
+<td markdown="1">`{{ extban.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{extban.syntax|join('`<br>`')}}`</td>
+<td markdown="1">`{{ extban.syntax|join('`<br>`') }}`</td>
 {% endif %}
-<td markdown="1">[{{extban.module}}](/3/modules/{{extban.module}}/)</td>
-<td markdown="1">{{extban.description}}</td>
+<td markdown="1">[{{ extban.module}}](/3/modules/{{extban.module }}/)</td>
+<td markdown="1">{{ extban.description }}</td>
 </tr>
 {% endfor %}
 </tbody>

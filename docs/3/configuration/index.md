@@ -16,9 +16,9 @@ title: v3 Configuration
 This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {% for tag in core_config_tags -%}
-### `<{{tag.name}}>`
+### `<{{ tag.name }}>`
 
-{{tag.description}}
+{{ tag.description }}
 
 {% if tag.attributes %}
 <table markdown="1">
@@ -34,17 +34,17 @@ This page only lists core configuration. For details on the configuration of a s
 {% for attr in tag.attributes %}
 <tr markdown="1">
 {% if attr.name is string %}
-<td markdown="1">{{attr.name}}</td>
+<td markdown="1">{{ attr.name }}</td>
 {% else %}
 <td markdown="1">
 {% for name, version in attr.name.items() %}
-{{name }} *({{version}})*{% if not loop.last %}<br>{% endif %}
+{{name }} *({{ version }})*{% if not loop.last %}<br>{% endif %}
 {% endfor %}
 </td>
 {% endif %}
-<td markdown="1">{{attr.type}}</td>
-<td markdown="1">{% if attr.default is none %}<em>None</em>{% else %}{{attr.default}}{% endif %}</td>
-<td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{attr.description}}</td>
+<td markdown="1">{{ attr.type }}</td>
+<td markdown="1">{% if attr.default is none %}<em>None</em>{% else %}{{ attr.default }}{% endif %}</td>
+<td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{ attr.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -70,19 +70,19 @@ Additionally, the following fields are provided by modules:
 <tr markdown="1">
 {% if loop.first %}
 {% if field.name is string %}
-<td markdown="1" rowspan="{{loop.length}}">{{field.name}}</td>
+<td markdown="1" rowspan="{{ loop.length}}">{{field.name }}</td>
 {% else %}
-<td markdown="1" rowspan="{{loop.length}}">
+<td markdown="1" rowspan="{{ loop.length }}">
 {% for name, version in field.name.items() %}
-{{name }} *({{version}})*{% if not loop.last %}<br>{% endif %}
+{{name }} *({{ version }})*{% if not loop.last %}<br>{% endif %}
 {% endfor %}
 </td>
 {% endif %}
-<td markdown="1" rowspan="{{loop.length}}">{{field.type}}</td>
-<td markdown="1" rowspan="{{loop.length}}">{% if field.default is none %}<em>None</em>{% else %}{{field.default}}{% endif %}</td>
+<td markdown="1" rowspan="{{ loop.length}}">{{field.type }}</td>
+<td markdown="1" rowspan="{{ loop.length }}">{% if field.default is none %}<em>None</em>{% else %}{{ field.default }}{% endif %}</td>
 {% endif %}
-<td markdown="1">[{{field.module}}](/3/modules/{{field.module}}/)</td>
-<td markdown="1">{% if field.required %}<strong>Required!</strong> {% endif %}{{field.description}}</td>
+<td markdown="1">[{{ field.module}}](/3/modules/{{field.module }}/)</td>
+<td markdown="1">{% if field.required %}<strong>Required!</strong> {% endif %}{{ field.description }}</td>
 </tr>
 {% endfor %}
 {% endfor %}
@@ -90,10 +90,10 @@ Additionally, the following fields are provided by modules:
 </table>
 {% endif %}
 
-{{tag.details}}
+{{ tag.details }}
 
 #### Example Usage
 
-{{tag.example}}
+{{ tag.example }}
 
 {% endfor %}

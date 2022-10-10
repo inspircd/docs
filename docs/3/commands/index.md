@@ -7,12 +7,12 @@ title: v3 Commands
 This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/3/modules).
 
 {% for cmd in core_commands -%}
-### `/{{cmd.name}} {{cmd.syntax}}`
+### `/{{ cmd.name }} {{ cmd.syntax }}`
 
-{{cmd.description}}
+{{ cmd.description }}
 
 {% if cmd.oper_only %}
-This command is only usable by server operators with `{{cmd.name}}` in [one of their `<class>` blocks](/3/configuration/#class).
+This command is only usable by server operators with `{{ cmd.name }}` in [one of their `<class>` blocks](/3/configuration/#class).
 {% endif %}
 
 {% if cmd.example %}
@@ -22,16 +22,16 @@ This command is only usable by server operators with `{{cmd.name}}` in [one of t
 
 {% if example.note %}
 <div class="admonition note" markdown="1">
-{{example.note}}
+{{ example.note }}
 </div>
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{example.description}}{% if not example.skip_colon %}:{% endif %}
+{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}{% if not example.skip_colon %}:{% endif %}
 {% endif %}
 
 ```plaintext
-{{example.text}}
+{{ example.text }}
 ```
 
 {% endfor %}
