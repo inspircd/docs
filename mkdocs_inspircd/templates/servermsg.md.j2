@@ -8,6 +8,21 @@ title: InspIRCd Spanning Tree Protocol &mdash; Messages &mdash; {{ name }}
 
 {{ description }}
 
+### Connection Phases
+
+This message can be used in the following connection phases:
+
+{% if phase is not defined %}
+{% set phase = ["connected"] %}
+{% endif %}
+
+Connection Phase        | Usable?
+----------------------- | -------
+Connecting outbound     | {% if "connecting" in phase %}✔️{% else %}❌{% endif %}
+Authenticating outbound | {% if "wait-auth-1" in phase %}✔️{% else %}❌{% endif %}
+Authenticating inbound  | {% if "wait-auth-2" in phase %}✔️{% else %}❌{% endif %}
+Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% endif %}
+
 ### Syntax
 
 {% if source is defined %}

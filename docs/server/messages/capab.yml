@@ -1,4 +1,8 @@
 name: CAPAB
+phase:
+  - connecting
+  - wait-auth-1
+  - wait-auth-2
 syntax:
   fields:
     capability-key: The name of a server capability.
