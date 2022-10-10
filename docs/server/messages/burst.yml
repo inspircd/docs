@@ -1,0 +1,18 @@
+name: BURST
+source: sid
+syntax:
+  fields:
+    ts: The time at which the remote server started bursting. Used for clock synchronization.
+  text: |-
+    [<ts>]
+description: |-
+  Marks the source server as currently sending the initial network burst.
+example:
+- description: |-
+    Marks server 36D as currently bursting
+  text: |-
+    :36D BURST
+- description: |-
+    Marks server 36D as currently bursting with a clock synchronization timestamp
+  text: |-
+    :36D BURST 1234567890

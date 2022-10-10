@@ -1,0 +1,13 @@
+name: ERROR
+syntax:
+  fields:
+    reason: The reason the protocol error occurred.
+  text: |-
+    :<reason>
+description: |-
+  Informs the directly connected server that a protocol error occurred and the connection is about to be closed.
+example:
+- description: |-
+    Informs the directly connected server that it sent a message containing a null character
+  text: |-
+    ERROR :Read null character from socket

@@ -9,7 +9,7 @@ syntax:
     data: One or more key=value pairs which represent the state of a remote server.
   text:
   - ^<server-name> <password> <unused> <newsid> :<description>
-  - <server-name> <newsid> [<data>...] :<description>
+  - <server-name> <newsid> [<data>]+ :<description>
 description: |-
   Introduces a server to the network.
 extra: |-

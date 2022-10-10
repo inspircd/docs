@@ -1,0 +1,87 @@
+name: CAPAB
+syntax:
+  fields:
+    capability-key: The name of a server capability.
+    capability-value: The value of a server capability.
+    mode-type: The type of mode this entry represents.
+    mode-rank: If this mode is a prefix mode then the rank of the prefix.
+    mode-name: The name of the mode.
+    mode-prefix: If this mode is a prefix mode then the prefix character.
+    mode-char: The character for this mode.
+    module-name: The name of a module that is loaded.
+    module-link-data: Data for checking compatibility between servers.
+    protocol: The server protocol version to use.
+  text:
+    - START <version>
+    - CAPABILITIES :[<capability-key>=<capability-value>]+
+    - MODULES :[<module-name>[=<module-link-data>]]+
+    - MODSUPPORT :[<module-name>[=<module-link-data>]]+
+    - CHANMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
+    - USERMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
+    - END
+
+extra: |-
+  If provided the protocol field can be set to one of the following values:
+
+  Protocol Version | Supported By
+  ---------------- | -------------
+  1202             | InspIRCd v2 &mdash; v3
+  1205             | InspIRCd v3
+
+  If provided the capability-key fields can be set to one of the following values:
+
+  Name             | Example Value        | Description
+  ---------------- | -------------------- | -----------
+  CASEMAPPING      | ascii                | The name of the casemapping system used for nicknames.
+  CHALLENGE        | jHBspL5fA4wN4Zh0i2sR | The challenge key to use for HMAC authentication.
+  CHANMAX          | 64                   | The maximum number of channels a user can normally join.
+  EXTBANS          | ABCDEFabcdef         | The extended bans that exist on the remote server.
+  GLOBOPS          | 1                    | Whether the server supports the GLOBOPS extension.
+  IDENTMAX         | 10                   | The maximum length of a username (ident).
+  MAXAWAY          | 200                  | The maximum length of an away message.
+  MAXHOST          | 64                   | The maximum length of a hostname.
+  MAXKICK          | 255                  | The maximum length of a kick message.
+  MAXLINE          | 512                  | The maximum length of a client protocol IRC line without tags.
+  MAXMODES         | 20                   | The maximum number of non-simple modes that can be set at once.
+  MAXQUIT          | 255                  | The maximum length of a quit message.
+  MAXREAL          | 128                  | The maximum length of a real name.
+  MAXTOPIC         | 307                  | The maximum length of a channel topic.
+  NICKMAX          | 30                   | The maximum length of a nickname.
+
+  If provided the mode-type field can be set to one of the following values:
+
+  Name      | Example         | Description
+  --------- | --------------- | -----------
+  list      | `b` (ban)       | The mode is a list of values.
+  param     | `k` (key)       | The mode requires a parameter when setting and unsetting.
+  param-set | `l` (limit)     | The mode requires a parameter when setting.
+  prefix    | `o` (op)        | The mode confers a channel privilege on users.
+  simple    | `m` (moderated) | The mode is a simple on/off flag.
+
+description: |-
+  Negotiates the capabilities of the remote server. This includes data such as modes, modules, and limits.
+example:
+- description: |-
+    Negotiates protocol 1205 (v3)
+  text: |-
+    CAPAB START 1205
+- description: |-
+    Negotiates required modules
+  text: |-
+    CAPAB MODULES :m_foo.so m_bar.so=wibble m_baz.so
+- description: |-
+    Negotiates optional modules
+  text: |-
+    CAPAB MODSUPPORT :m_foo.so m_bar.so=wibble m_baz.so
+- description: |-
+    Negotiates channel modes
+  text: |-
+    CAPAB CHANMODES :list:ban=b param:key=k param-set:limit=l prefix:30000:op=@o simple:moderated=m
+- description: |-
+    Negotiates user modes
+  text: |-
+    CAPAB CHANMODES :param-set:snomask=s simple:wallops=w
+- description: |-
+    Ends capability negotiation
+  text: |-
+    CAPAB END
