@@ -57,7 +57,6 @@ configuration:
     default: 'No'
     description: Whether the user specified in the requires value must be on a U-lined server.
 
-
   details: |-
       The replace field can contain any of the following template variables:
 

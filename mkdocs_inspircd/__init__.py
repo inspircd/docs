@@ -19,7 +19,6 @@ import yaml
 PACKAGE_DIR = pathlib.Path(__file__).parent.resolve()
 TEMPLATES_DIR = PACKAGE_DIR / "templates"
 
-
 @functools.lru_cache(10240)
 def load_yaml(filename):
     with filename.open() as fd:
@@ -35,7 +34,6 @@ def load_yaml(filename):
 
 def yml2md(filename, template):
     return template.render(load_yaml(filename))
-
 
 class ExtendedFile(mkdocs.structure.files.File):
     """Like the original File class, but can also be a .yml module
