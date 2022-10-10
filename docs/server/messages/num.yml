@@ -1,0 +1,17 @@
+name: NUM
+source: uuid
+syntax:
+  fields:
+    sid: The identifier of the source server.
+    uid: The identifier of the target user.
+    numeric: The three digit numeric.
+    parameters: The parameters to send alongside the mode.
+  text: |-
+    <sid> <uid> <numeric> [<parameters>]+
+description: |-
+  Sends a numeric to a user on a remote server.
+example:
+- description: |-
+    Sends numeric 375 (RPL_MOTDSTART) from server 36D to user 36EAAAAAA
+  text: |-
+    :36D NUM 36D 36EAAAAAA 375 :irc2.example.com message of the day

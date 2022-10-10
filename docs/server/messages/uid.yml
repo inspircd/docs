@@ -1,0 +1,28 @@
+name: UID
+source: sid
+syntax:
+  fields:
+    uid: The UUID of the user who is being introduced
+    ts: The time at which the user was created.
+    nick: The nickname of the user.
+    real-host: The real hostname of the user.
+    displayed-host: The displayed hostname of the user.
+    user: The username of the user.
+    ip: The IPv4 address, IPv6 address, or UNIX socket path of the user.
+    signon: The time at which the user connected.
+    modes: The modes which are set on the user.
+    mode-parameters: The parameters to the modes which are set on the user.
+    real: The real name of the user.
+  text: |-
+    <uid> <ts> <nick> <real-host> <displayed-host> <user> <ip> <signon> <modes> [<mode-parameters>]+ :<real>
+description: |-
+  Introduces a user to the network.
+example:
+- description: |-
+    Introduces a user
+  text: |-
+    :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost wibble.wobble sadie 127.0.0.1 1234567890 +i :Sadie
+- description: |-
+    Introduces a user with mode parameters
+  text: |-
+    :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost wibble.wobble sadie 127.0.0.1 1234567890 +io Aa :Sadie

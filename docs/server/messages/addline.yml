@@ -1,0 +1,19 @@
+name: ADDLINE
+source: uuid
+syntax:
+  fields:
+    type: The type of X-line to add (e.g. E).
+    mask: The type-dependent mask to add the X-line on.
+    setter: The nickname of the user that set the X-line.
+    settime: The UNIX time at which the X-line was added.
+    duration: The number of seconds that the X-line lasts for.
+    reason: The reason given when the X-line was added.
+  text: |-
+    <type> <mask> <setter> <settime> <duration> :<reason>
+description: |-
+  Adds an X-line on a mask with the specified setter, set time, duration, and reason. If the duration is 0 then it is permanent.
+example:
+- description: |-
+    Adds a Z-line on *@192.0.2.0/24 which was set by Sadie on Fri Feb 13 2009 23:31:30 and that lasts for one day with the reason "Spam"
+  text: |-
+    :36D ADDLINE Z *@192.0.2.0/24 Sadie 1234567890 86400 :Spam

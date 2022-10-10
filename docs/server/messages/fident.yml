@@ -1,0 +1,14 @@
+name: FIDENT
+source: uid
+syntax:
+  fields:
+    host: The new username (ident) of the source user.
+  text: |-
+    <username>
+description: |-
+  Changes the username (ident) of the source user to the specified value.
+example:
+- description: |-
+    Changes the displayed hostname of 36DAAAAAA to wibble
+  text: |-
+    :36DAAAAAA FIDENT wibble

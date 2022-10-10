@@ -1,0 +1,22 @@
+name: IDLE
+source: uid
+syntax:
+  fields:
+    target-uid: The remote user who is being remotely WHOISed.
+    reply-uid: The user who sent the remote WHOIS request.
+    signon-ts: The connection time of the remote user.
+    idle: The number of seconds the remote user has been idle for.
+  text:
+  - <target-uid>
+  - <reply-uid> <signon-ts> <idle>
+description: |-
+  If the message has one parameter then it is a remote WHOIS request. Otherwise, it is a remote WHOIS response.
+example:
+- description: |-
+    User 36DAAAAAA requesting the idle time of user 36EAAAAAA
+  text: |-
+    :36DAAAAAA IDLE 36EAAAAAA
+- description: |-
+    User 36EAAAAAA responding with their connection and idle time to user 36EAAAAAA
+  text: |-
+    :36EAAAAAA IDLE 36DAAAAAA 1234567890 69

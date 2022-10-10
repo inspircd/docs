@@ -1,0 +1,9 @@
+name: ENDBURST
+source: sid
+description: |-
+  Marks the source server as no longer bursting.
+example:
+- description: |-
+    Marks server 36D as no longer bursting
+  text: |-
+    :36D ENDBURST

@@ -1,0 +1,20 @@
+name: SVSPART
+source: sid
+syntax:
+  fields:
+    uid: The UUID of the user to part from the specified channel.
+    channel: The channel which the user is being parted from.
+    reason: The reason for parting the user from the channel.
+  text: |-
+    <uid> <channel> [:<reason>]
+description: |-
+  Forces the specified user to part a channel.
+example:
+- description: |-
+    Parts user 36EAAAAAA from #wibble
+  text: |-
+    :36D SVSPART 36EAAAAAA #wibble
+- description: |-
+    Parts user 36EAAAAAA from #wibble with the reason "wobble"
+  text: |-
+    :36D SVSPART 36EAAAAAA #wibble :wobble

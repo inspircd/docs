@@ -1,0 +1,89 @@
+---
+title: InspIRCd Spanning Tree Protocol &mdash; Messages &mdash; {{ name }}
+---
+
+## {{ name }}
+
+{! server/_dev.md !}
+
+{{ description }}
+
+### Syntax
+
+
+{% if source is defined %}
+{% set prefix = " :<" ~ source ~ "> " %}
+{% else %}
+{% set prefix = "" %}
+{% endif %}
+
+{% if syntax is not defined %}
+`{{ prefix }}{{ name }}
+{% elif syntax.text is string %}
+`{{ prefix }}{{ name }} {{ syntax.text }}`
+{% else %}
+{% for syntax_line in syntax.text %}
+{% if syntax_line.startswith("^") %}
+`{{ name }} {{ syntax_line[1:] }}`
+{% else %}
+`{{ prefix }}{{ name }} {{ syntax_line }}`
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if syntax is defined %}
+<table markdown="1">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% if source %}
+<tr markdown="1">
+<td markdown="1">`<{{ source }}>`</td>
+{% if source == "uuid" %}
+<td markdown="1">The unique identifier of the server or user that sent the message.</td>
+{% elif source == "uid" %}
+<td markdown="1">The unique identifier of the user that sent the message.</td>
+{% elif source == "sid" %}
+<td markdown="1">The unique identifier of the server that sent the message.</td>
+{% else %}
+{{ 0/0 }}
+{% endif %}
+</tr>
+{% endif %}
+{% for name, desc in syntax.fields.items() -%}
+<tr markdown="1">
+<td markdown="1">`<{{ name }}>`</td>
+<td markdown="1">{{ desc }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{%  endif %}
+
+{% if extra is defined %}
+{{ extra }}
+{% endif %}
+
+### Example Usage
+
+{% for example in example %}
+
+{% if example.note %}
+<div class="admonition note" markdown="1">
+{{ example.note }}
+</div>
+{% endif %}
+
+{% if example.description %}
+{{ example.description }}:
+{% endif %}
+
+```plaintext
+{{ example.text }}
+```
+
+{% endfor %}

@@ -1,0 +1,15 @@
+name: SNONOTICE
+source: sid
+syntax:
+  fields:
+    snochar: The [server notice character](/3/snomasks) that the message is associated with.
+    message: The message to send to server operators.
+  text: |-
+    <snochar> :<message>
+description: |-
+  Sends a server notice to server operators with the specified mask.
+example:
+- description: |-
+    Sends a server notice to server operators with [the `J` (chancreate)] server notice mask.
+  text: |-
+    :36D SNONOTICE J :Channel #wibble created by foo!bar@baz.bax

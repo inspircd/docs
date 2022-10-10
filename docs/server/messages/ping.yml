@@ -1,0 +1,14 @@
+name: PING
+source: sid
+syntax:
+  fields:
+    target: The identifier of the target server.
+  text: |-
+    <target>
+description: |-
+  Pings the requested server to check that it is still connected.
+example:
+- description: |-
+    Sends a ping from server 36D to server 36E
+  text: |-
+    :36D PING 36E

@@ -1,0 +1,20 @@
+name: FJOIN
+source: sid
+syntax:
+  fields:
+    channel: The channel which is being introduced to the network.
+    ts: The time at which the channel was created.
+    modes: The modes which are set on the channel.
+    mode-parameters: The parameters to the modes which are set on the channel.
+    prefix-modes: The prefix modes that the associated user has.
+    uid: The unique identifier of a user who is on the channel.
+    membid: The unique identifier of the associated user's channel membership.
+  text: |-
+    <channel> <ts> <modes> [<mode-parameters>]+ :[<prefix-modes>,<uid>[:<membid>]]+
+description: |-
+  Introduces a new channel to the network.
+example:
+- description: |-
+    Introduces the #chan channel to the network with two members
+  text: |-
+    :36D FJOIN #chan 1234567890 +nl 69 :o,36DAAAAAA:420 v,36DAAAAAB:69

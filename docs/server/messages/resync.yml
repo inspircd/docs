@@ -1,0 +1,14 @@
+name: RESYNC
+source: sid
+syntax:
+  fields:
+    channel: The channel to resynchronize.
+  text: |-
+    <channel>
+description: |-
+  Resynchronizes the state of the specified channel. Useful for when an [IJOIN](/server/messages/ijoin) is sent for an unknown channel.
+example:
+- description: |-
+    Resynchronises the state of #chan
+  text: |-
+    :36D RESYNC #chan

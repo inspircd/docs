@@ -1,0 +1,30 @@
+name: SERVER
+source: sid
+syntax:
+  fields:
+    server-name: The unique hostname of the new server.
+    password: The password used to authenticate against the new server.
+    newsid: The unique server identifier of the new server.
+    description: A description of the new server.
+    data: One or more key=value pairs which represent the state of a remote server.
+  text:
+  - ^<server-name> <password> <unused> <newsid> :<description>
+  - <server-name> <newsid> [<data>...] :<description>
+description: |-
+  Introduces a server to the network.
+extra: |-
+  If provided the data fields can be set to one of the following values:
+
+  Name             | Example          | Description
+  ---------------- | ---------------- | -----------
+  burst=&lt;ts&gt; | burst=1234567890 | The time at which the remote server started bursting measured in the number of milliseconds since the UNIX epoch.
+  hidden=0\|1      | hidden=1         | Whether the remote server should be hidden from /MAP.
+example:
+- description: |-
+    Introduces a directly linked server:
+  text: |-
+    SERVER irc.eu.example.com meowmeow 0 36D :European IRC server
+- description: |-
+    Introduces an indirectly linked server
+  text: |-
+    :36D SERVER irc.us.example.com 36E hidden=0 :American IRC server

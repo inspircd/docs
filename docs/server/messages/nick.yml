@@ -1,0 +1,15 @@
+name: NICK
+source: uid
+syntax:
+  fields:
+    nick: The new nickname of the source user.
+    ts: The time at which the user first connected.
+  text: |-
+    <nick> <ts>
+description: |-
+  Changes the username (ident) of the source user to the specified value.
+example:
+- description: |-
+    Changes the nickname of 36DAAAAAA to Sadie
+  text: |-
+    :36DAAAAAA NICK Sadie 1234567890

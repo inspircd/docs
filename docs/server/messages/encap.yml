@@ -1,0 +1,20 @@
+name: ENCAP
+source: uuid
+syntax:
+  fields:
+    target: A server identifier or glob pattern for a server name for the target server.
+    message: The name of the message which is being encapsulated.
+    parameters: The parameters for the specified message.
+  text: |-
+    <target> <message> [<parameters>]+
+description: |-
+  Removes an X-line on a mask.
+example:
+- description: |-
+    Sends a notice to all users on server 36E
+  text: |-
+    :36DAAAAAA ENCAP 36E NOTICE $* :Hewwo!
+- description: |-
+    Sends a notice to all users on servers matching *.example.com
+  text: |-
+    :36DAAAAAA ENCAP *.example.com NOTICE $* :Hewwo!

@@ -1,0 +1,24 @@
+name: SVSJOIN
+source: sid
+syntax:
+  fields:
+    uid: The UUID of the user to join to the specified channel.
+    channel: The channel which the user is being joined to.
+    key: The secret key used for joining the channel.
+  text: |-
+    <uid> <channel> [<key>]
+description: |-
+  Forces the specified user to join a channel. If an empty key is specified then override any modes which might prevent the join.
+example:
+- description: |-
+    Joins user 36EAAAAAA to #wibble
+  text: |-
+    :36D SVSJOIN 36EAAAAAA #wibble
+- description: |-
+    Joins user 36EAAAAAA to #wibble with a channel key
+  text: |-
+    :36D SVSJOIN 36EAAAAAA #wibble :secret
+- description: |-
+    Joins user 36EAAAAAA to #wibble overriding any modes
+  text: |-
+    :36D SVSJOIN 36EAAAAAA #wibble :

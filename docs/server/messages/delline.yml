@@ -1,0 +1,15 @@
+name: DELLINE
+source: uuid
+syntax:
+  fields:
+    type: The type of X-line to add (e.g. E).
+    mask: The type-dependent mask to add the X-line on.
+  text: |-
+    <type> <mask>
+description: |-
+  Removes an X-line on a mask.
+example:
+- description: |-
+    Removes a Z-line on *@192.0.2.0/24
+  text: |-
+    :36D DELLINE Z *@192.0.2.0/24

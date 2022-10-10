@@ -1,0 +1,14 @@
+name: OPERTYPE
+source: uid
+syntax:
+  fields:
+    type: The new server operator type of the source user.
+  text: |-
+    :<type>
+description: |-
+  Marks the source user as the specified type of server operator.
+example:
+- description: |-
+    Changes the server operator type of 36DAAAAAA to "Network Administrator"
+  text: |-
+    :36DAAAAAA OPERTYPE :Network Administrator

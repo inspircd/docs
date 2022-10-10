@@ -11,3 +11,4 @@ The InspIRCd Spanning Tree protocol is the protocol that InspIRCd uses to connec
 
 - [Change Log](/server/change-log)
 - [Concepts](/server/concepts)
+- [Messages](/server/messages)

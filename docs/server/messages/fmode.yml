@@ -1,0 +1,17 @@
+name: FMODE
+source: uuid
+syntax:
+  fields:
+    channel: The channel for which the modes are being changed.
+    ts: The creation time of the specified channel.
+    modes: The modes which are being set on the channel.
+    mode-parameters: The parameters to the modes which are being set on the channel.
+  text: |-
+    <channel> <ts> <modes> [<mode-parameters>]+
+description: |-
+  Changes the username (ident) of the source user to the specified value.
+example:
+- description: |-
+    Sets channel modes `n` (noextmsg) and `l` (limit) on #chan
+  text: |-
+    :36D FMODE #chan 1234567890 +nl 69

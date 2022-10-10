@@ -52,11 +52,13 @@ class ExtendedFile(mkdocs.structure.files.File):
         self.url = self._get_url(use_directory_urls)
 
     def is_documentation_page(self):
-        return super().is_documentation_page() or self.is_inspircd_module_yaml()
+        return super().is_documentation_page() or self.is_inspircd_module_yaml() or self.is_inspircd_servermsg_yaml()
 
     def is_inspircd_module_yaml(self):
         return fnmatch.fnmatch(self.src_path, "*/modules/*.yml")
 
+    def is_inspircd_servermsg_yaml(self):
+        return fnmatch.fnmatch(self.src_path, "server/messages/*.yml")
 
 class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
@@ -66,6 +68,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             loader=jinja2.FileSystemLoader([TEMPLATES_DIR]),
         )
         self.module_template = self.env.get_template("module.md.j2")
+        self.servermsg_template = self.env.get_template("servermsg.md.j2")
 
     def on_files(self, files, config):
         """Converts all original mkdocs.structure.files.File files to this
@@ -84,6 +87,10 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         if page.file.is_inspircd_module_yaml():
             return yml2md(
                 pathlib.Path(page.file.abs_src_path), template=self.module_template
+            )
+        elif page.file.is_inspircd_servermsg_yaml():
+            return yml2md(
+                pathlib.Path(page.file.abs_src_path), template=self.servermsg_template
             )
 
     def modules(self, config, version):
@@ -173,6 +180,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         paths = sorted(paths)  # sorts by command name
         return [load_yaml(path) for path in paths]
 
+    def server_messages(self, config):
+        paths = pathlib.Path(config["docs_dir"]).glob("server/messages/*.yml")
+        paths = sorted(paths)  # sorts by message name
+        return [load_yaml(path) for path in paths]
+
     def page_version(self, url):
         segments = url.split("/")
         if segments[0].isdigit():
@@ -193,6 +205,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "extra_tag_fields": self.extra_tag_fields(config, version),
             "core_config_tags": self.core_config_tags(config, version),
             "core_commands": self.core_commands(config, version),
+            "server_messages": self.server_messages(config),
             "version": version,
         }
         template = env.from_string(markdown)

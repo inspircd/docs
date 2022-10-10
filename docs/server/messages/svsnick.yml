@@ -1,0 +1,21 @@
+name: SVSNICK
+source: sid
+syntax:
+  fields:
+    uid: The UUID of the user to change the nickname of.
+    newnick: The new nickname of the target user.
+    newnickts: The time at which this nickname change happened.
+    oldnickts: The time at which the last nickname change happened. If this doesn't match then the nick will not be changed.
+  text: |-
+    <uid> <newnick> <newnickts> [<oldnickts>]
+description: |-
+  Changes the nickname of the specified user.
+example:
+- description: |-
+    Changes the nickname of user 36EAAAAAA to wibble
+  text: |-
+    :36D SVSNICK 36EAAAAAA wibble 1234567890
+- description: |-
+    Changes the nickname of user 36EAAAAAA to wibble with a previous nickname timestamp:
+  text: |-
+    :36D SVSNICK 36EAAAAAA wibble 1234567890 1234567800

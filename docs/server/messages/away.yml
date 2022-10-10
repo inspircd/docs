@@ -1,0 +1,20 @@
+name: AWAY
+source: uid
+syntax:
+  fields:
+    time: The UNIX time at which the user went away.
+    reason: The reason given when the user went away.
+  text:
+  - <time> <reason>
+  - !!str
+description: |-
+  Changes the away state of the source user.
+example:
+- description: |-
+    Marks user 36DAAAAAA as away since Fri Feb 13 2009 23:31:30 with the reason "Sleeping"
+  text: |-
+    :36DAAAAAA AWAY 1234567890 :Sleeping
+- description: |-
+    Marks user 32DAAAAAA as being back
+  text: |-
+    :36DAAAAAA AWAY

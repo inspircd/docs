@@ -1,0 +1,24 @@
+name: SINFO
+source: sid
+syntax:
+  fields:
+    key: The key which is being set.
+    value: The value of the key.
+  text: |-
+    <key> :<value>
+  description: |-
+    Sets some information about the source server.
+extra: |-
+  If provided the key fields can be set to one of the following values:
+
+  Name        | Example                                | Description
+  ----------- | -------------------------------------- | -----------
+  desc        | Wibble IRC Server                      | A description of the server.
+  fullversion | InspIRCd-3.2.1. irc.example.com :[32B] | The output of /VERSION as a server operator.
+  rawversion  | InspIRCd-3.2.1                         | The name and version of the software the server runs.
+  version     | InspIRCd-3. testnet.inspircd.org :     | The output of /VERSION as a normal user.
+example:
+- description: |-
+    Sets the raw version of the remote server
+  text: |-
+    :36D SINFO rawversion :InspIRCd 3.2.1

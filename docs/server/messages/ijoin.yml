@@ -1,0 +1,21 @@
+name: IJOIN
+source: uid
+syntax:
+  fields:
+    channel: The channel that the user is joining.
+    membid: The unique identifier of the associated user's channel membership.
+    ts: The time at which the channel was created.
+    prefix-modes: The prefix modes that the joining user has.
+  text: |-
+    <channel> <membid> [<ts> <prefix-modes>]
+description: |-
+  Joins a user to an already existing channel.
+example:
+- description: |-
+    Joins user 36DAAAAAA to #chan
+  text: |-
+    :36DAAAAAA IJOIN #chan 69
+- description: |-
+    Joins user 36DAAAAAA to #chan with channel prefix mode `o` (op)
+  text: |-
+    :36DAAAAAA IJOIN #chan 69 1234567890 o
