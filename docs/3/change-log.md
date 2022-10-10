@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-<!-- TODO: ensure changes after commit c2e6c819bc6d1bae1e707454a8004d2f8d303281 are added to this list before release. -->
+<!-- TODO: ensure changes after commit c853673b793874e34072e32ed7ebc24eec7b3051 are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
 
@@ -18,6 +18,8 @@ This page lists changes which have happened between releases.
 
 - Changed temporary module filenames to be more unique.
 
+- Developer: fixed the database identifier name accessor returning an empty string.
+
 - Fixed building the ldap module against the Windows LDAP implementation.
 
 - Fixed including unnecessary build objects in the Windows installer.
@@ -25,6 +27,12 @@ This page lists changes which have happened between releases.
 - Fixed not sending `ERR_NONICKNAMEGIVEN` in response to empty `/WHOIS` and `/WHOWAS` requests.
 
 - Fixed not sending tags when sending numerics to users.
+
+- Fixed receiving `ERR_NOSUCHNICK` when sending a tag message to a server.
+
+- Improved building extra modules on Windows.
+
+- Removed error-prone missing/duplicate header warnings from the build system.
 
 ### InspIRCd 3.14.0
 
