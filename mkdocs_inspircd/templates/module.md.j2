@@ -10,7 +10,7 @@ title: "Module Details: {{ name }} (v3)"
 !!! note ""
     This module depends on {{ depends_on.what }} and must be manually enabled at compile time.
 
-    {{depends_on.condition|default('Once you have installed the dependency')}} you can enable this module using the following command:
+    {{ depends_on.condition | default('Once you have installed the dependency') }} you can enable this module using the following command:
 
     <pre><code>./configure --enable-extras {{ name }}</code></pre>
 
@@ -33,7 +33,7 @@ To load this module use the following `<module>` tag:
 {% if tag.name is string %}
 #### `<{{ tag.name }}>`
 {% else %}
-#### `<{{tag.name|join('>` &amp; `<')}}>`
+#### `<{{ tag.name | join('>` &amp; `<') }}>`
 {% endif %}
 
 {{ tag.description }}
@@ -56,13 +56,13 @@ To load this module use the following `<module>` tag:
 {% else %}
 <td markdown="1">
 {% for name, version in attr.name.items() %}
-{{name }} *({{ version }})*{% if not loop.last %}<br>{% endif %}
+{{ name }} *({{ version }})*{% if not loop.last %}<br>{% endif %}
 {% endfor %}
 </td>
 {% endif %}
 <td markdown="1">{{ attr.type }}</td>
 <td markdown="1">{% if attr.default is none %}<em>None</em>{% else %}{{ attr.default }}{% endif %}</td>
-<td markdown="1">{% if attr.added %}<a href="/{{ attr.added|first }}/change-log/#inspircd-{{ attr.added|replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{ attr.description }}</td>
+<td markdown="1">{% if attr.added %}<a href="/{{ attr.added | first }}/change-log/#inspircd-{{ attr.added | replace(".", "") }}"><strong>New in v{{ attr.added }}!</strong></a> {% endif %}{% if attr.required %}<strong>Required!</strong> {% endif %}{{ attr.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -82,7 +82,7 @@ To load this module use the following `<module>` tag:
 {% for value in tag.added_values %}
 <tr markdown="1">
 <td markdown="1">{{ value.name }}</td>
-<td markdown="1">{% if value.added %}<a href="/{{ value.added|first }}/change-log/#inspircd-{{ value.added|replace(".", "") }}"><strong>New in v{{ value.added }}!</strong></a> {% endif %}{{ value.description }}</td>
+<td markdown="1">{% if value.added %}<a href="/{{ value.added | first }}/change-log/#inspircd-{{ value.added | replace(".", "") }}"><strong>New in v{{ value.added }}!</strong></a> {% endif %}{{ value.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -123,9 +123,9 @@ This module requires no other configuration.
 {% elif command.syntax is string %}
 <td markdown="1">`{{ command.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ command.syntax|join('`<br>`') }}`</td>
+<td markdown="1">`{{ command.syntax | join('`<br>`') }}`</td>
 {% endif %}
-<td markdown="1">{% if command.added %}<a href="/{{ command.added|first }}/change-log/#inspircd-{{ command.added|replace(".", "") }}"><strong>New in v{{ command.added }}!</strong></a> {% endif %}{{ command.description }}</td>
+<td markdown="1">{% if command.added %}<a href="/{{ command.added | first }}/change-log/#inspircd-{{ command.added | replace(".", "") }}"><strong>New in v{{ command.added }}!</strong></a> {% endif %}{{ command.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -157,7 +157,7 @@ This module requires no other configuration.
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
+{% if example.added %}<a href="/{{ example.added | first }}/change-log/#inspircd-{{ example.added | replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
 {% endif %}
 
 ```plaintext
@@ -184,7 +184,7 @@ This module requires no other configuration.
 {% for cap in client_caps %}
 <tr markdown="1">
 <td markdown="1">{{ cap.name }}</td>
-<td markdown="1">{% if cap.added %}<a href="/{{ cap.added|first }}/change-log/#inspircd-{{ cap.added|replace(".", "") }}"><strong>New in v{{ cap.added }}!</strong></a> {% endif %}{{ cap.description }}</td>
+<td markdown="1">{% if cap.added %}<a href="/{{ cap.added | first }}/change-log/#inspircd-{{ cap.added | replace(".", "") }}"><strong>New in v{{ cap.added }}!</strong></a> {% endif %}{{ cap.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -217,10 +217,10 @@ This module requires no other configuration.
 {% elif mode.syntax is string %}
 <td markdown="1">`{{ mode.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ mode.syntax|join('`<br>`') }}`</td>
+<td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
 {% endif %}
 <td markdown="1">{{ mode.usable_by }}</td>
-<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added | first }}/change-log/#inspircd-{{ mode.added | replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -239,7 +239,7 @@ This module requires no other configuration.
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
+{% if example.added %}<a href="/{{ example.added | first }}/change-log/#inspircd-{{ example.added | replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
 {% endif %}
 
 ```plaintext
@@ -276,10 +276,10 @@ This module requires no other configuration.
 {% elif mode.syntax is string %}
 <td markdown="1">`{{ mode.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ mode.syntax|join('`<br>`') }}`</td>
+<td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
 {% endif %}
 <td markdown="1">{{ mode.usable_by }}</td>
-<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added | first }}/change-log/#inspircd-{{ mode.added | replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -297,7 +297,7 @@ This module requires no other configuration.
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
+{% if example.added %}<a href="/{{ example.added | first }}/change-log/#inspircd-{{ example.added | replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
 {% endif %}
 
 ```plaintext
@@ -323,7 +323,7 @@ This module requires no other configuration.
 {% for exemption in exemptions %}
 <tr markdown="1">
 <td markdown="1">{{ exemption.name }}</td>
-<td markdown="1">{% if exemption.added %}<a href="/{{ exemption.added|first }}/change-log/#inspircd-{{ exemption.added|replace(".", "") }}"><strong>New in v{{ exemption.added }}!</strong></a> {% endif %}{{ exemption.description }}</td>
+<td markdown="1">{% if exemption.added %}<a href="/{{ exemption.added | first }}/change-log/#inspircd-{{ exemption.added | replace(".", "") }}"><strong>New in v{{ exemption.added }}!</strong></a> {% endif %}{{ exemption.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -356,9 +356,9 @@ This module requires no other configuration.
 {% elif mode.syntax is string %}
 <td markdown="1">`{{ mode.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ mode.syntax|join('`<br>`') }}`</td>
+<td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
 {% endif %}
-<td markdown="1">{% if mode.added %}<a href="/{{ mode.added|first }}/change-log/#inspircd-{{ mode.added|replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
+<td markdown="1">{% if mode.added %}<a href="/{{ mode.added | first }}/change-log/#inspircd-{{ mode.added | replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -376,7 +376,7 @@ This module requires no other configuration.
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
+{% if example.added %}<a href="/{{ example.added | first }}/change-log/#inspircd-{{ example.added | replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}:
 {% endif %}
 
 ```plaintext
@@ -402,7 +402,7 @@ This module requires no other configuration.
 {% for mask in snomasks %}
 <tr markdown="1">
 <td markdown="1">{{ mask.char }}</td>
-<td markdown="1">{% if mask.added %}<a href="/{{ mask.added|first }}/change-log/#inspircd-{{ mask.added|replace(".", "") }}"><strong>New in v{{ mask.added }}!</strong></a> {% endif %}{{ mask.description }}</td>
+<td markdown="1">{% if mask.added %}<a href="/{{ mask.added | first }}/change-log/#inspircd-{{ mask.added | replace(".", "") }}"><strong>New in v{{ mask.added }}!</strong></a> {% endif %}{{ mask.description }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -423,7 +423,7 @@ This module requires no other configuration.
 {% for stat in stats %}
 <tr markdown="1">
 <td markdown="1">{{ stat.char }}</td>
-<td markdown="1">{% if stat.added %}<a href="/{{ stat.added|first }}/change-log/#inspircd-{{ stat.added|replace(".", "") }}"><strong>New in v{{ stat.added }}!</strong></a> {% endif %}{{ stat.description }}</td>
+<td markdown="1">{% if stat.added %}<a href="/{{ stat.added | first }}/change-log/#inspircd-{{ stat.added | replace(".", "") }}"><strong>New in v{{ stat.added }}!</strong></a> {% endif %}{{ stat.description }}</td>
 </tr>
 {% endfor %}
 </tbody>

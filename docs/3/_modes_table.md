@@ -20,10 +20,10 @@
 {% elif mode.syntax is string %}
 <td markdown="1">`{{ mode.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ mode.syntax|join('`<br>`') }}`</td>
+<td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
 {% endif %}
 <td markdown="1">{{ mode.usable_by }}</td>
-<td markdown="1">[{{ mode.module}}](/3/modules/{{mode.module }}/)</td>
+<td markdown="1">[{{ mode.module }}](/3/modules/{{ mode.module }}/)</td>
 </tr>
 {% endfor %}
 </tbody>

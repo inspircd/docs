@@ -4,7 +4,6 @@ title: InspIRCd Spanning Tree Protocol &mdash; Messages
 
 {! server/_dev.md !}
 
-
 ## Syntax
 
 Messages are formatted the same as [a standard IRCv3 message](https://ircv3.net/specs/extensions/message-tags.html#format) other than the following differences:
@@ -27,7 +26,7 @@ This page only lists server messages. For details on user commands that may be s
 </thead>
 {% for msg in server_messages -%}
 <tr markdown="1">
-<td markdown="1">[{{ msg.name}}](/server/messages/{{msg.name|lower }}/)</td>
+<td markdown="1">[{{ msg.name }}](/server/messages/{{ msg.name | lower }}/)</td>
 {% if msg.syntax is not defined %}
 <td markdown="1">`{% if msg.source %}:<{{ msg.source }}> {% endif %}{{ msg.name }}`</td>
 {% elif msg.syntax.text is string %}

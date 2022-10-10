@@ -27,7 +27,7 @@ This command is only usable by server operators with `{{ cmd.name }}` in [one of
 {% endif %}
 
 {% if example.description %}
-{% if example.added %}<a href="/{{ example.added|first }}/change-log/#inspircd-{{ example.added|replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}{% if not example.skip_colon %}:{% endif %}
+{% if example.added %}<a href="/{{ example.added | first }}/change-log/#inspircd-{{ example.added | replace(".", "") }}"><strong>New in v{{ example.added }}!</strong></a> {% endif %}{{ example.description }}{% if not example.skip_colon %}:{% endif %}
 {% endif %}
 
 ```plaintext
