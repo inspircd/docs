@@ -10,6 +10,7 @@ Messages are formatted the same as [a standard IRCv3 message](https://ircv3.net/
 
 - The prefix will be [a SID or UUID](/server/concepts/#uuids) instead of a nick!user@host mask.
 - Lines are terminated with a line feed (`\n`) instead of a carriage return and a line feed (`\r\n`).
+- Support for arbitrary message tags is assumed and does not require negotiating a client capability.
 - Tags that begin with a tilde (`~`) are internal to the server protocol and are not intended to be exposed to users.
 - Once fully authenticated there are no message length limits.
 
