@@ -4,6 +4,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Example Connection
 
 ## Example Connection
 
+{! server/_dev.md !}
+
 This example represents an example connection between two servers.
 
 - Lines beginning with ◀️ are outgoing messages.
