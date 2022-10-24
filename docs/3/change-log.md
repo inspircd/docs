@@ -8,9 +8,11 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-<!-- TODO: ensure changes after commit c853673b793874e34072e32ed7ebc24eec7b3051 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 56aabd8b6ce3ba8361cacec70ac498f3ee59d40f are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
+
+- Added the `inspircd.org/echo` vendor tag to echoed messages.
 
 - Added the name of the user's I/O serializer to the `/CHECK` output.
 
@@ -22,17 +24,27 @@ This page lists changes which have happened between releases.
 
 - Fixed building the ldap module against the Windows LDAP implementation.
 
+- Fixed expired [GKZ]-lines still existing in the ban cache.
+
 - Fixed including unnecessary build objects in the Windows installer.
+
+- Fixed not being able to use STS when a connection is proxied with HAProxy.
 
 - Fixed not sending `ERR_NONICKNAMEGIVEN` in response to empty `/WHOIS` and `/WHOWAS` requests.
 
 - Fixed not sending tags when sending numerics to users.
 
+- Fixed picking channels that are not visible to show in the /WHO output.
+
 - Fixed receiving `ERR_NOSUCHNICK` when sending a tag message to a server.
+
+- Fixed writing an empty topic to the permchannel database when no topic is set.
 
 - Improved building extra modules on Windows.
 
 - Removed error-prone missing/duplicate header warnings from the build system.
+
+- Updated the libraries in the Windows Conan dependency file.
 
 ### InspIRCd 3.14.0
 
