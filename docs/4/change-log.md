@@ -8,9 +8,33 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a16
+
+**This pre-release version of InspIRCd was released on 2022-10-01.**
+
+- Added a compatibility layer to allow loading modules that were renamed in v4 with their names from v3.
+
+- Developer: added a parameter to `UserManager::Find{Nick,UUID,}` to exclude partially connected users.
+
+- Developer: made a bunch of APIs const correct.
+
+- Developer: renamed (connection) registration to avoid a semantic conflict with account registration.
+
+- Enabled services to inform the server of a list of nicknames that belong to an account.
+
+- Fixed linking against v3 servers when the realnameban module is loaded.
+
+- Fixed the sql_log module causing a cascade of snotices when it can't write to a database.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Reduced the memory usage of resolving server hostnames to IP addresses.
+
+- Split the services_account module into two modules (account, services).
+
 # InspIRCd 4.0.0a15
 
-**This pre-release version of InspIRCd was released on 2022-08-01.**
+**This pre-release version of InspIRCd was released on 2022-09-01.**
 
 - Changed `<hostname:charmap>` to disallow characters that have special meaning in the IRC wire format.
 
