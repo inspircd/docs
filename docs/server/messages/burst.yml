@@ -1,6 +1,6 @@
 name: BURST
 phase:
-  - wait-auth-2
+- wait-auth-2
 source: sid
 syntax:
   fields:

@@ -1,8 +1,8 @@
 name: CAPAB
 phase:
-  - connecting
-  - wait-auth-1
-  - wait-auth-2
+- connecting
+- wait-auth-1
+- wait-auth-2
 syntax:
   fields:
     capability-key: The name of a server capability.
@@ -16,13 +16,13 @@ syntax:
     module-link-data: Data for checking compatibility between servers.
     protocol: The server protocol version to use.
   text:
-    - START <version>
-    - CAPABILITIES :[<capability-key>=<capability-value>]+
-    - MODULES :[<module-name>[=<module-link-data>]]+
-    - MODSUPPORT :[<module-name>[=<module-link-data>]]+
-    - CHANMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
-    - USERMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
-    - END
+  - START <version>
+  - CAPABILITIES :[<capability-key>=<capability-value>]+
+  - MODULES :[<module-name>[=<module-link-data>]]+
+  - MODSUPPORT :[<module-name>[=<module-link-data>]]+
+  - CHANMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
+  - USERMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<modechar>]+
+  - END
 
 extra: |-
   If provided the protocol field can be set to one of the following values:

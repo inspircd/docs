@@ -1,9 +1,9 @@
 name: ERROR
 phase:
-  - connecting
-  - wait-auth-1
-  - wait-auth-2
-  - connected
+- connecting
+- wait-auth-1
+- wait-auth-2
+- connected
 syntax:
   fields:
     reason: The reason the protocol error occurred.

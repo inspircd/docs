@@ -6,7 +6,7 @@ syntax:
     reason: The reason given when the user went away.
   text:
   - <time> <reason>
-  - !!str
+  - ''
 description: |-
   Changes the away state of the source user.
 example:
