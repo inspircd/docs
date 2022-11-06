@@ -1,5 +1,4 @@
 ---
-disable_toc: true
 title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 ---
 
@@ -7,9 +6,101 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 
 {! server/_dev.md !}
 
+## 1206 (v4)
+
+!!! danger "InspIRCd v4 is still early in development!"
+    If you implement the 1206 protocol you may experience unannounced breaking changes.
+
+    You probably want to use [the 1205 (v3) protocol](#1205-v3) instead which v4 also supports.
+
+- Channel and user mode `r` (c_registered, u_registered) have been made optional and may no longer exist.
+
+```diff
+- CABAB CHANMODES :... simple:c_registered=r ...
+- CABAB USERMODES :... simple:u_registered=r ...
+```
+
+- Membership metadata can now be synchronised between servers using the `METADATA` message.
+
+```diff
++ :36D METADATA @ 36DAAAAAA #channel 1234567890 2345678901 wibble :wobblw
+```
+
+- Module link data in `CAPAB MODULES` and `CAPAB MODSUPPORT` is now sent as a series of key-value pairs with the same syntax as an URI query string (i.e. `key=1value1&key2;key3=value3;key4`).
+
+```diff
+- CAPAB MODULES :m_foo.so m_bar.so=wibble
++ CAPAB MODULES :foo bar=key1=value1&key2;key3=value%203
+```
+
+- Module names in `CAPAB MODULES` and `CAPAB MODSUPPORT` no longer include the module file extension.
+
+```diff
+- CAPAB MODULES :m_foo.so m_bar.so m_baz.so
++ CAPAB MODULES :m_foo m_bar m_baz
+```
+
+- Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
+
+```diff
+- :36DAAAAAA PRIVMSG NickServ :IDENTIFY hunter2
++ :36DAAAAAA SQUERY NickServ :IDENTIFY hunter2
+````
+
+- The `accountnicks` metadata key may now be sent to inform the server of valid nicknames for a user's account. This replaces channel mode `r` (u_registered).
+
+```diff
+- :36C MODE 36DAAAAAA +r
++ :36C METADATA 36DAAAAAA accountnicks :Sadie Eidas
+````
+
+- The `CHANMAX`, `IDENTMAX`, and `NICKMAX` keys in `CAPAB CAPABILITIES` have been renamed to `MAXCHANNEL`, `MAXUSER`, and `MAXNICK` respectively for consistency.
+
+```diff
+- CAPAB CAPABILITIES :... CHANMAX=60 IDENTMAX=10 NICKMAX=30 ...
++ CAPAB CAPABILITIES :... MAXCHANNEL=60 MAXUSER=60 MAXNICK=30 ...
+```
+
+- The `EXTBANS` key in `CAPAB CAPABILITIES` has been replaced with the `CAPAB EXTBANS` message.
+
+```diff
+- CAPAB CAPABILITIES :... EXTBANS=ABCdef ...
++ CAPAB EXTBANS :acting:mute=m matching:unauthed=U matching:account=R
+```
+
+- The `FRHOST` message can now be sent to change the real hostname of a user.
+
+```diff
++ :36DAAAAAA FRHOST :real.host.name
+```
+
+- The `LMODE` message was added to synchronise the contents of a mode list including the setter and set time.
+
+```diff
++ :36D FMODE #CHANNEL 1234567890 +bb *!*@example.com *!*@example.org
+- :36D LMODE #channel 1234567890 b *!*@example.com 1234567890 Sadie *!*@example.org 2345678901 Adam
+```
+
+- The `version` and `fullversion` keys in `SINFO` were deprecated and replaced with `customversion` and `rawbranch`. If sent the deprecated keys will be parsed to attempt to extract the latter values from them.
+
+```diff
+- :36D SINFO fullversion :InspIRCd-4.0.0-a10. sadie.testnet.inspircd.org :[597] Test
+- :36D SINFO version :InspIRCd-4. testnet.inspircd.org :Test
++ :36D SINFO customversion :Test
++ :36D SINFO rawbranch :InspIRCd-4
+```
+
+- The `~context=<chan>` tag can now be sent to make a user-targeted `PRIVMSG`, `NOTICE`, or `TAGMSG` appear to be sent to a channel.
+
+```diff
+- :36DAAAAAA NOTICE 36EAAAAAA :[#channel] Welcome to #channel. Make sure to introduce yourself.
++ @~context=#channel :36DAAAAAA NOTICE 36EAAAAAA :Welcome to #channel. Make sure to introduce yourself.
+```
+
 ## 1205 (v3)
 
 - IRCv3 message tags are now supported.
+
 ```diff
 - :36D FOO bar baz
 + @foo=bar;baz :36D FOO bar baz
@@ -25,7 +116,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 
 ```diff
 - CAPAB CHANMODES :ban=b key=k limit=l op=@o moderated=m ...
-+ CABAB CHANMODES :list:ban=b param:key=k param-set:limit=l prefix:30000:op=@o moderated=n ...
++ CABAB CHANMODES :list:ban=b param:key=k param-set:limit=l prefix:30000:op=@o simple:moderated=n ...
 ```
 
 - The `CHANMODES` token in the `CAPAB CAPABILITIES` message was removed.  This is now provided in `CAPAB CHANMODES` instead.
@@ -185,7 +276,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `SINFO fullversion` message was added to allow opers to see the full version in `/VERSION`.
 
 ```diff
-+ :36D SINFO fullversion :InspIRCd-3.2.1. irc2.example.com :[36B] ...
++ :36D SINFO fullversion :InspIRCd-3.2.1. irc2.example.com :[36D] ...
 ```
 
 - The `SINFO rawversion` message was added to allow opers to see the full version in `/MAP`.
