@@ -4,10 +4,6 @@ title: Frequently Asked Questions
 
 ## Frequently Asked Questions
 
-More FAQs may be found at:
-
-- [Windows FAQs](/faq/windows)
-
 ### Can I use InspIRCd on my large network?
 
 Yes! InspIRCd is being used on some networks with more than 100,000 clients.
@@ -115,3 +111,9 @@ You may also wish to automatically kill users of unmaintained and insecure clien
              action="kill"
              message="[WARNING] You have been detected as using X-Chat. This client is unmaintained and contains many serious compatibility and security issues. Please migrate to HexChat v2.14.3 or newer to fix this issue.">
 ```
+
+### My antivirus claims that InspIRCd is malware!
+
+This is a false positive. IRC software is often mistaken for malware as it used to be common for cybercriminals to use IRC servers to control their botnets.
+
+If your antivirus software is claiming that InspIRCd is malware you should probably report it to your antivirus vendor as a false-positive or switch to a different antivirus program.
