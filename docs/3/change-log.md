@@ -8,25 +8,35 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-<!-- TODO: ensure changes after commit 56aabd8b6ce3ba8361cacec70ac498f3ee59d40f are added to this list before release. -->
+<!-- TODO: ensure changes after commit ee41348dbd93dc891a3afaccd74db857ea21ed12 are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
+
+- Added support for the IRCv3 `extended-monitor` extension.
 
 - Added the `inspircd.org/echo` vendor tag to echoed messages.
 
 - Added the name of the user's I/O serializer to the `/CHECK` output.
 
+- Added warning messages when a config file is not owned by the user/group the server is running as.
+
 - Allowed building the `regex_posix` module against pcreposix on Windows for link compatibility reasons.
 
 - Changed temporary module filenames to be more unique.
 
+- Developer: fixed being unable to use the IRCv3 replies API with a capability reference.
+
 - Developer: fixed the database identifier name accessor returning an empty string.
+
+- Fixed `inspircd-testssl` being unable to detect the status of some servers.
 
 - Fixed building the ldap module against the Windows LDAP implementation.
 
 - Fixed expired [GKZ]-lines still existing in the ban cache.
 
 - Fixed including unnecessary build objects in the Windows installer.
+
+- Fixed matching bans against partially expanded IPv6 addresses.
 
 - Fixed not being able to use STS when a connection is proxied with HAProxy.
 
@@ -37,6 +47,12 @@ This page lists changes which have happened between releases.
 - Fixed picking channels that are not visible to show in the /WHO output.
 
 - Fixed receiving `ERR_NOSUCHNICK` when sending a tag message to a server.
+
+- Fixed setting malformed Z-lines when a UNIX socket user is banned by the connectban module.
+
+- Fixed the connectban module unnecessarily setting a CIDR Z-line instead of an IP Z-line.
+
+- Fixed the silence module being too strict with unknown flags in silence metadata.
 
 - Fixed writing an empty topic to the permchannel database when no topic is set.
 
