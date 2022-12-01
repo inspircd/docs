@@ -7,7 +7,7 @@ jsmin==3.0.1
 livereload==2.6.3
 lunr==0.5.8
 Markdown==3.3.7
-markdown-include==0.7.0
+markdown-include==0.8.0
 MarkupSafe==2.1.1
 mkdocs==1.4.2
 mkdocs-cinder==1.2.0
