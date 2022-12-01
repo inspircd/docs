@@ -10,6 +10,8 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a17
 
+**This pre-release version of InspIRCd was released on 2022-11-01.**
+
 - Added the `inspircd.org/stats-tags` capability to get statistics data in message tags.
 
 - Allow specifying commands, modes, privileges and snomasks in the oper type and account.
