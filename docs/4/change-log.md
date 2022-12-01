@@ -10,7 +10,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a17
 
-**This pre-release version of InspIRCd was released on 2022-11-01.**
+**This pre-release version of InspIRCd was released on 2022-12-01.**
 
 - Added the `inspircd.org/stats-tags` capability to get statistics data in message tags.
 
@@ -24,7 +24,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a16
 
-**This pre-release version of InspIRCd was released on 2022-10-01.**
+**This pre-release version of InspIRCd was released on 2022-11-01.**
 
 - Added a compatibility layer to allow loading modules that were renamed in v4 with their names from v3.
 
@@ -48,7 +48,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a15
 
-**This pre-release version of InspIRCd was released on 2022-09-01.**
+**This pre-release version of InspIRCd was released on 2022-10-01.**
 
 - Changed `<hostname:charmap>` to disallow characters that have special meaning in the IRC wire format.
 
@@ -68,7 +68,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a14
 
-**This pre-release version of InspIRCd was released on 2022-08-01.**
+**This pre-release version of InspIRCd was released on 2022-09-01.**
 
 - Added support for logging JSON to stdout (`json-stdout`) and stderr (`json-stderr`) to the log_json message.
 
@@ -90,7 +90,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a13
 
-**This pre-release version of InspIRCd was released on 2022-07-01.**
+**This pre-release version of InspIRCd was released on 2022-08-01.**
 
 **IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 
@@ -100,7 +100,7 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a12
 
-**This pre-release version of InspIRCd was released on 2022-06-01.**
+**This pre-release version of InspIRCd was released on 2022-07-01.**
 
 **IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 
