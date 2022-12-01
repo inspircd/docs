@@ -8,6 +8,18 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+# InspIRCd 4.0.0a17
+
+- Added the `inspircd.org/stats-tags` capability to get statistics data in message tags.
+
+- Allow specifying commands, modes, privileges and snomasks in the oper type and account.
+
+- Developer: refactored the oper types and events.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Moved the `o`, `O`, and `P` stats characters to core_oper and rewrote to be actually useful.
+
 # InspIRCd 4.0.0a16
 
 **This pre-release version of InspIRCd was released on 2022-10-01.**
