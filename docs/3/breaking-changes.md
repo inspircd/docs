@@ -6,7 +6,7 @@ title: v3 Breaking Changes
 
 **NOTE** &mdash; This document only lists breaking changes between InspIRCd 2 and InspIRCd 3. There are many backwards compatible changes that have been made which are not listed in this document.
 
-## Changes
+### Changes
 
 - The ldapauth module no longer needs to be enabled at build time but now depends on the new ldap module which does need to be enabled at build time.
 
@@ -66,7 +66,7 @@ title: v3 Breaking Changes
 
 - `<xlinedb:filename>` is now relative to the data directory. Generally all you will need to do in order to upgrade is remove `data/` from the path.
 
-## Moves
+### Moves
 
 - The `/MODENOTICE` command has been moved to the new modenotice module. See the documentation in modules.conf.example for more details.
 
@@ -92,7 +92,7 @@ title: v3 Breaking Changes
 
 - Filter-related server notices have been moved to the 'f' (filter) snomask character.  You will need to update any oper blocks.
 
-## Removals
+### Removals
 
 - The `/RANDQUOTE` command has been removed with no replacement.
 
