@@ -20,8 +20,6 @@ title: v4 Breaking Changes
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
-- The services_account module has been renamed to realnameban. In order to upgrade you should change your module tag to point to the new names. You will still be able to link against v3 servers that use the old names.
-
 - The syntax of the passforward module's command fields has changed. You should switch your config to use the new style `%foo%` variables.
 
 - Windows 10 build 17061 is now the minimum supported version of Windows.
@@ -48,11 +46,7 @@ title: v4 Breaking Changes
 
 - The censor module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_censor` to install it.
 
-- The cgiirc module has been renamed to gateway. In order to upgrade you should change your module tag to point to the new name.
-
 - The clones module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_clones` to install it.
-
-- The gecosban module has been renamed to realnameban. In order to upgrade you should change your module tag to point to the new name. You will still be able to link against v3 servers that use the old name.
 
 - The lockserv module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_lockserv` to install it.
 
@@ -61,8 +55,6 @@ title: v4 Breaking Changes
 - The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
 
 - The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_regex_tre` to install it.
-
-- The sha256 module has been renamed to sha2. In order to upgrade you should change your module tag to point to the new name.
 
 - The userip module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install userip` to install it.
 
