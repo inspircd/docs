@@ -1,5 +1,5 @@
 ---
-title: v{{version}} Source Installation
+title: v{{ version }} Source Installation
 ---
 
 ## Installing InspIRCd 3 from source

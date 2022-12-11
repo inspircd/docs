@@ -1,5 +1,5 @@
 ---
-title: v{{version}} Configuration
+title: v{{ version }} Configuration
 ---
 
 ## Configuration

@@ -1,5 +1,5 @@
 ---
-title: v{{version}} Module List
+title: v{{ version }} Module List
 ---
 
 ## Module List

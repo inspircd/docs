@@ -1,5 +1,5 @@
 ---
-title: v{{version}} Commands
+title: v{{ version }} Commands
 ---
 
 ## Commands
