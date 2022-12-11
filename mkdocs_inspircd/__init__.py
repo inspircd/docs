@@ -61,7 +61,7 @@ class ExtendedFile(mkdocs.structure.files.File):
 class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
         super().__init__()
-        self._modules = None
+        self._modules = {}
         self.env = jinja2.Environment(
             loader=jinja2.FileSystemLoader([TEMPLATES_DIR]),
         )
@@ -94,11 +94,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def modules(self, config, version):
         if version is None:
             return []
-        if self._modules is None:
-            self._modules = []
+        if not version in self._modules:
+            self._modules[version] = []
             for module_file in pathlib.Path(config["docs_dir"]).glob(version + "/modules/*.yml"):
-                self._modules.append(load_yaml(module_file))
-        return self._modules
+                self._modules[version].append(load_yaml(module_file))
+        return self._modules[version]
 
     def chmodes(self, config, version):
         modules = self.modules(config, version)
