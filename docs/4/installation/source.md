@@ -2,6 +2,8 @@
 title: v4 Source Installation
 ---
 
+{! 4/_support.md !}
+
 ## Installing InspIRCd 4 from source
 
 If there is no official InspIRCd package for your system and you don't want to use Docker you can build from source.

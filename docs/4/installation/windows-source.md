@@ -1,6 +1,8 @@
 ---
-title: v4 Windows Source nstallation
+title: v4 Windows Source Installation
 ---
+
+{! 4/_support.md !}
 
 ## Installing InspIRCd 4 from source on Windows
 
