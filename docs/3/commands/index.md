@@ -1,5 +1,5 @@
 ---
-title: v3 Commands
+title: v{{version}} Commands
 ---
 
 ## Commands

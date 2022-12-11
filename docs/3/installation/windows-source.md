@@ -1,5 +1,5 @@
 ---
-title: v3 Windows Source Installation
+title: v{{version}} Windows Source Installation
 ---
 
 ## Installing InspIRCd 3 from source on Windows

@@ -1,5 +1,5 @@
 ---
-title: v3 Channel Modes
+title: v{{version}} Channel Modes
 ---
 
 ## Channel Modes

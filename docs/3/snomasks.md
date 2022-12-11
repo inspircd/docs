@@ -1,5 +1,5 @@
 ---
-title: v3 Server Notice Masks
+title: v{{version}} Server Notice Masks
 ---
 
 ## Server Notice Masks

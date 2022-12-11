@@ -1,5 +1,5 @@
 ---
-title: v3 Rocky Linux Installation
+title: v{{version}} Rocky Linux Installation
 ---
 
 ## Installing InspIRCd 3 using the Rocky Linux package

@@ -1,5 +1,5 @@
 ---
-title: v3 Configuration
+title: v{{version}} Configuration
 ---
 
 ## Useful Configuration Snippets

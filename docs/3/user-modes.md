@@ -1,5 +1,5 @@
 ---
-title: v3 User Modes
+title: v{{version}} User Modes
 ---
 
 ## User Modes
