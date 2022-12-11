@@ -1,5 +1,5 @@
 ---
-title: v3 Server Notice Masks
+title: v4 Server Notice Masks
 ---
 
 ## Server Notice Masks
@@ -45,6 +45,8 @@ o         | Notifications about users logging in and out of server operator acco
 O         | Notifications about users logging in and out of server operator accounts on a remote server.
 q         | Notifications about users disconnecting from the local server.
 Q         | Notifications about users disconnecting from a remote server.
+r         | Notifications about the local server rehashing.
+R         | Notifications about a remote server rehashing.
 t         | Notifications about *local and remote* attempts to use the `/STATS` command.
 x         | Notifications about X-lines being added/removed/expired on the local server.
 X         | Notifications about X-lines being added/removed/expired on a remote server.

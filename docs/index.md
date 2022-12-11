@@ -53,6 +53,7 @@ title: Introduction
 - [Channel Modes](/4/channel-modes)
     - [Extended Bans](/4/extended-bans)
 - [User Modes](/4/user-modes)
+- [SNOMasks](/4/snomasks)
 - [Change Log](/4/change-log)
 
 </div>
