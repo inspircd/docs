@@ -1,5 +1,5 @@
 ---
-title: v3 Module Manager
+title: v{{ version }} Module Manager
 ---
 
 ## Managing third-party modules with Module Manager

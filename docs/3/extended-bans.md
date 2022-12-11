@@ -1,5 +1,5 @@
 ---
-title: v3 Extended Bans
+title: v{{ version }} Extended Bans
 ---
 
 ## Extended Bans

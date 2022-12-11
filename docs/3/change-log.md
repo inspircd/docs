@@ -1,5 +1,5 @@
 ---
-title: v3 Change Log
+title: v{{ version }} Change Log
 ---
 
 ## Change Log

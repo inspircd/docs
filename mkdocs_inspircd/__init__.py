@@ -189,7 +189,9 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             return segments[0]
 
     def on_page_markdown(self, markdown, page, config, files):
-        """Runs Jinja on an input markdown file, to produce another markdown file."""
+        """Runs Jinja on an input markdown file, to produce another markdown file.
+        Also renders metadata at the beginning of the file as a side-effect."""
+
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader([TEMPLATES_DIR, config["docs_dir"]]),
         )
@@ -206,5 +208,13 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "server_messages": self.server_messages(config),
             "version": version,
         }
+
+        # Render page metadata, by mutating arguments.
+        page.meta = {
+            k: env.from_string(v).render(context)
+            for (k, v) in page.meta.items()
+            if isinstance(v, str)
+        }
+
         template = env.from_string(markdown)
         return template.render(context)
