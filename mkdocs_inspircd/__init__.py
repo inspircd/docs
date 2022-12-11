@@ -211,9 +211,8 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
 
         # Render page metadata, by mutating arguments.
         page.meta = {
-            k: env.from_string(v).render(context)
+            k: env.from_string(v).render(context) if isinstance(v, str) else v
             for (k, v) in page.meta.items()
-            if isinstance(v, str)
         }
 
         template = env.from_string(markdown)
