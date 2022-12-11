@@ -16,7 +16,7 @@ nav:
         - Channel Modes: 4/channel-modes.md
         - Extended Bans: 4/extended-bans.md
         - User Modes: 4/user-modes.md
-#       - Modules: 4/modules/index.md
+        - Modules: 4/modules/index.md
         - SNOMasks: 4/snomasks.md
         - Change Log: 4/change-log.md
     - Downloads: https://github.com/inspircd/inspircd/releases/latest
