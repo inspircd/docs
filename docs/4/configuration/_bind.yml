@@ -1,0 +1,102 @@
+name: bind
+description: |-
+  The `<bind>` tag defines an endpoint to listen for connections on. This tag can be defined as many times as required.
+attributes:
+- name: address
+  type: Text
+  required: false
+  default: null
+  description: |-
+    *TCP/IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
+- name: port
+  type: Number
+  required: false
+  default: null
+  description: |-
+    **Required for TCP/IP listeners!** The TCP port to listen for connections on.
+- name: defer
+  type: Duration
+  required: false
+  default: '0'
+  description: |-
+    *TCP/IP listeners only!* The number of seconds to defer a connection for whilst waiting for it to send data (not supported on Windows).
+- name: hook
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the name of a module that provides middleware for this listener.
+- name: free
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    *TCP/IP listeners only!* Whether to allow binding on TCP/IP endpoints which may not be usable yet (not supported on Windows).
+- name: path
+  type: Text
+  required: false
+  default: null
+  description: |-
+    **Required for UNIX listeners!** The UNIX socket endpoint to listen for connections on (not supported on Windows).
+- name: permissions
+  type: Number
+  required: false
+  default: null
+  description: |-
+    *UNIX listeners only!* The permissions to use for the UNIX socket (only supported on Linux).
+- name: replace
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    *UNIX listeners only!* Whether to replace the UNIX socket file if it already exists (not supported on Windows).
+- name: type
+  type: Text
+  required: false
+  default: clients
+  description: |-
+    The type of connection to be allowed on this endpoint.
+details: |+
+  If defined the hook field should be set to one of the following values:
+
+  Value     | Module                            | Description
+  --------- | --------------------------------- | -----------
+  haproxy   | [haproxy](/4/modules/haproxy)     | Listens for connections that use the HAProxy Proxy protocol.
+  websocket | [websocket](/4/modules/websocket) | Listens for connections that use WebSocket framing.
+
+  The type field should be set to one of the following values:
+
+  Value        | Module                                  | Description
+  ------------ | --------------------------------------- | -----------
+  clients      | *None*                                  | Listens for IRC client connections.
+  httpd        | [httpd](/4/modules/httpd)               | Listens for HTTP connections.
+  servers      | [spanningtree](/4/modules/spanningtree) | Listens for IRC server connections.
+
+example: |-
+  Listens for IRC client connections on 192.0.2.1:6667:
+
+  ```xml
+  <bind address="192.0.2.1"
+        port="6667"
+        type="clients"
+        defer="0s"
+        free="no">
+  ```
+
+  Listens for IRC server connections on *:7000:
+
+  ```xml
+  <bind port="7000"
+        type="servers"
+        defer="5s"
+        free="no">
+  ```
+
+  Listens for IRC client connections on `/run/inspircd/inspircd.sock`
+
+  ```xml
+  <bind path="/run/inspircd/inspircd.sock"
+        type="clients"
+        permissions="750"
+        replace="yes">
+  ```

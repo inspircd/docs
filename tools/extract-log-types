@@ -14,20 +14,23 @@ Find.find(ARGV[0]) do |path|
 	next unless File.file? path
 	next unless File.extname(path) == '.cpp'
 
-	File.read(path).scan(/\bLog\(("[^"]+"|MODNAME),\s+LOG_([A-Z]+),/).each do |type, level|
-		if type == 'MODNAME'
+	contents = File.read(path)
+	v3calls = contents.scan(/\bLog\(("[^"]+"|MODNAME),\s+LOG_([A-Z]+),/).map { |type, level| { type: type, level: level }}
+	v4calls = contents.scan(/\b(RawIO|Debug|Normal|Warning|Error)\(("[^"]+"|MODNAME),/).map { |level, type| { level: level, type: type }}
+	(v3calls + v4calls).each do |log|
+		if log[:type] == 'MODNAME'
 			if path =~ /\/((?:m|core)_[a-z0-9_]+)(?:\.cpp|\/)?/
-				type = $~[1]
+				log[:type] = $~[1]
 			else
 				STDERR.puts "WTF: unable to extract module name from #{path}"
 				next
 			end
 		else
-			type = type[1...-1]
+			log[:type] = log[:type][1...-1]
 		end
 
-		types[type] ||= Set.new
-		types[type] << level.downcase
+		types[log[:type]] ||= Set.new
+		types[log[:type]] << log[:level].downcase
 	end
 end
 
@@ -37,7 +40,7 @@ if types.empty?
 end
 
 longest = types.keys.max_by(&:length).length
-levelorder = %w(sparse default verbose debug rawio)
+levelorder = %w(sparse error warning default normal verbose debug rawio)
 types.sort.each do |type, levels|
 	padding = longest - type.length
 	levelstr = levels.to_a.sort_by { |obj| levelorder.index obj }.join('<br>')

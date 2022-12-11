@@ -46,14 +46,13 @@ title: Introduction
 
 **Full docs coming soon**
 
-- [Upgrading from v3](/4/breaking-changes)
-- [Change Log](/4/change-log)
-
-<hr>
-
+- [Configuration](/4/configuration)
+    - [Useful Snippets](/4/configuration/useful-snippets)
+    - [Upgrading from v3](/4/breaking-changes)
 - [Commands](/4/commands)
 - [Channel Modes](/4/channel-modes)
     - [Extended Bans](/4/extended-bans)
 - [User Modes](/4/user-modes)
+- [Change Log](/4/change-log)
 
 </div>

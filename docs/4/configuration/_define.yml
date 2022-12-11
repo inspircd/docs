@@ -1,0 +1,52 @@
+name: define
+description: |-
+  The `<define>` tag allows you to to define XML-style entities which you can use in your config to avoid duplication. This tag can be defined as many times as required.
+attributes:
+- name: name
+  type: Text
+  required: true
+  default: null
+  description: |-
+    The name of the entity.
+- name: value
+  type: Text
+  required: false
+  default: null
+  description: |-
+    The value to replace instances of the entity with.
+details: |+
+  The following entities are already defined:
+
+  Name                  | Description
+  --------------------- | -----------
+  `&amp;`               | An ampersand.
+  `&apos;`              | A single quote. This can be used unescaped but is supported for compatibility with XML generators.
+  `&dir.config;`        | The configuration directory that was configured at build time.
+  `&dir.data;`          | The data directory that was configured at build time.
+  `&dir.log;`           | The log directory that was configured at build time.
+  `&dir.module;`        | The module directory that was configured at build time.
+  `&dir.runtime;`       | The runtime directory that was configured at build time.
+  `&env.NAME;`          | The value of the `NAME` environment variable when InspIRCd was first started.
+  `&gt;`                | A greater than symbol. This can be used unescaped but is supported for compatibility with XML generators.
+  `&irc.bold;`          | Makes subsequent text within an IRC message bold.
+  `&irc.color;`         | Makes subsequent text within an IRC message colored. Should be followed by color codes in the format `FG[,BG]`. See [ircdocs](https://modern.ircdocs.horse/formatting.html#colors) for more information.
+  `&irc.colour;`        | Makes subsequent text within an IRC message colored. Should be followed by color codes in the format `FG[,BG]`. See [ircdocs](https://modern.ircdocs.horse/formatting.html#colors) for more information.
+  `&irc.hexcolor;`      | Makes subsequent text within an IRC message colored. Should be followed by hexadecimal color codes in the format `FRFGFB[,BRBGBB]` (not widely supported).
+  `&irc.hexcolour;`     | Makes subsequent text within an IRC message colored. Should be followed by hexadecimal color codes in the format `FRFGFB[,BRBGBB]` (not widely supported).
+  `&irc.italic;`        | Makes subsequent text within an IRC message italic.
+  `&irc.monospace;`     | Makes subsequent text within an IRC message monospace (not widely supported).
+  `&irc.reset;`         | Disables all text formatting for subsequent text.
+  `&irc.reverse;`       | Makes subsequent text within an IRC message reversed.
+  `&irc.strikethrough;` | Makes subsequent text within an IRC message struckthrough (not widely supported).
+  `&irc.underline;`     | Makes subsequent text within an IRC message underlined
+  `&lt;`                | A less than symbol. This can be used unescaped but is supported for compatibility with XML generators.
+  `&nl;`                | A new line.
+  `&quot;`              | A double quote.
+
+example: |-
+  Creates the `&ServerHost;` entity with a value of "example.com":
+
+  ```xml
+  <define name="ServerHost"
+          value="example.com">
+  ```

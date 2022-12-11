@@ -1,0 +1,134 @@
+name: log
+description: |-
+  The `<log>` tag defines a location to log to. This tag can be defined as many times as required.
+attributes:
+- name: method
+  type: Text
+  required: false
+  default: file
+  description: |-
+    The method to use for storing logs.
+- name: type
+  type: Text
+  required: true
+  default: '*'
+  description: |-
+    A space-delimited token list of types of message to log.
+- name: level
+  type: Text
+  required: false
+  default: normal
+  description: |-
+    The level of messages to log.
+- name: target
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If using the file method the location to write the log to.
+- name: flush
+  type: Number
+  required: false
+  default: '20'
+  description: |-
+    If using the file method after how many lines to flush the log to disk.
+details: |+
+  The method field should be set to one of the following values:
+
+  Value       | Module                              | Description
+  ----------- | ----------------------------------- | ------------
+  file        | *None*                              | Log to a file.
+  json        | [log_json](/4/modules/log_json)     | Log to a file in JSON.
+  json-stderr | [log_json](/4/modules/log_json)     | Log to the standard error stream in JSON.
+  json-stdout | [log_json](/4/modules/log_json)     | Log to the standard output stream in JSON.
+  sql         | [log_sql](/4/modules/log_sql)       | Log to a SQL database.
+  stderr      | *None*                              | Log to the standard error stream.
+  stdout      | *None*                              | Log to the standard output stream.
+  syslog      | [log_syslog](/4/modules/log_syslog) | Log to the system log.
+
+  The type field should be set to one or more of the following values:
+
+  Value                | Logging Levels Used      | Description
+  -------------------- | ------------------------ | -----------
+  BANCACHE             | debug                    | Messages relating to the X-line result cache.
+  CHANNELS             | debug                    | Messages relating to channels.
+  COMMAND              | normal                   | Messages relating to command execution.
+  CONFIG               | normal<br>debug          | Messages relating to the configuration.
+  CONNECTCLASS         | normal<br>debug          | Messages relating to [connect classes](#connect).
+  CULLLIST             | debug                    | Messages relating to object cull lists.
+  LOG                  | normal                   | Messages relating to logging.
+  MODE                 | debug                    | Messages relating to modes.
+  MODULE               | normal<br>debug          | Messages relating to modules.
+  SERVICE              | debug                    | Messages relating to service registration.
+  SOCKET               | normal<br>debug          | Messages relating to network sockets.
+  STARTUP              | normal                   | Messages relating to the startup process.
+  USERINPUT            | rawio                    | Messages relating to user input.
+  USEROUTPUT           | rawio                    | Messages relating to user output.
+  USERS                | normal<br>debug          | Messages relating to users.
+  core_channel         | debug                    | Messages relating to channels.
+  core_dns             | error<br>normal<br>debug | Messages relating to DNS lookups.
+  core_hostname_lookup | debug                    | Messages relating to user hostname lookups.
+  core_oper            | error<br>normal          | Messages relating to server operators.
+  core_reloadmodule    | debug                    | Messages relating to the RELOADMODULE command.
+  core_who             | debug                    | Messages relating to the WHO command.
+  core_whowas          | normal                   | Messages relating to the WHOWAS command.
+  m_callerid           | normal                   | Messages relating to [the m_callerid module](/4/modules/m_callerid)
+  m_cap                | debug                    | Messages relating to [the m_cap module](/4/modules/m_cap)
+  m_chanlog            | normal                   | Messages relating to [the m_chanlog module](/4/modules/m_chanlog)
+  m_cloaking           | normal                   | Messages relating to [the m_cloaking module](/4/modules/m_cloaking)
+  m_codepage           | debug                    | Messages relating to [the m_codepage module](/4/modules/m_codepage)
+  m_connectban         | debug                    | Messages relating to [the m_connectban module](/4/modules/m_connectban)
+  m_customprefix       | debug                    | Messages relating to [the m_customprefix module](/4/modules/m_customprefix)
+  m_customtitle        | normal                   | Messages relating to [the m_customtitle module](/4/modules/m_customtitle)
+  m_dccallow           | debug                    | Messages relating to [the m_dccallow module](/4/modules/m_dccallow)
+  m_disable            | normal<br>debug          | Messages relating to [the m_disable module](/4/modules/m_disable)
+  m_dnsbl              | debug                    | Messages relating to [the m_dnsbl module](/4/modules/m_dnsbl)
+  m_filter             | normal<br>debug          | Messages relating to [the m_filter module](/4/modules/m_filter)
+  m_gateway            | normal<br>debug          | Messages relating to [the m_gateway module](/4/modules/m_gateway)
+  m_geo_maxmind        | debug                    | Messages relating to [the m_geo_maxmind module](/4/modules/m_geo_maxmind)
+  m_hidemode           | debug                    | Messages relating to [the m_hidemode module](/4/modules/m_hidemode)
+  m_httpd              | debug                    | Messages relating to [the m_httpd module](/4/modules/m_httpd)
+  m_httpd_acl          | debug                    | Messages relating to [the m_httpd_acl module](/4/modules/m_httpd_acl)
+  m_httpd_config       | debug                    | Messages relating to [the m_httpd_config module](/4/modules/m_httpd_config)
+  m_httpd_stats        | debug                    | Messages relating to [the m_httpd_stats module](/4/modules/m_httpd_stats)
+  m_ident              | debug                    | Messages relating to [the m_ident module](/4/modules/m_ident)
+  m_ircv3_sts          | debug                    | Messages relating to [the m_ircv3_sts module](/4/modules/m_ircv3_sts)
+  m_ldapauth           | debug                    | Messages relating to [the m_ldapauth module](/4/modules/m_ldapauth)
+  m_mysql              | normal<br>debug          | Messages relating to [the m_mysql module](/4/modules/m_mysql)
+  m_operlog            | normal                   | Messages relating to [the m_operlog module](/4/modules/m_operlog)
+  m_password_hash      | normal                   | Messages relating to [the m_password_hash module](/4/modules/m_password_hash)
+  m_permchannels       | normal<br>debug          | Messages relating to [the m_permchannels module](/4/modules/m_permchannels)
+  m_pgsql              | normal<br>debug          | Messages relating to [the m_pgsql module](/4/modules/m_pgsql)
+  m_sasl               | normal<br>debug          | Messages relating to [the m_sasl module](/4/modules/m_sasl)
+  m_showfile           | normal                   | Messages relating to [the m_showfile module](/4/modules/m_showfile)
+  m_silence            | debug                    | Messages relating to [the m_silence module](/4/modules/m_silence)
+  m_spanningtree       | normal<br>debug<br>rawio | Messages relating to [the m_spanningtree module](/4/modules/m_spanningtree)
+  m_sqlite3            | normal<br>debug          | Messages relating to [the m_sqlite3 module](/4/modules/m_sqlite3)
+  m_sqloper            | error<br>normal          | Messages relating to [the m_sqloper module](/4/modules/m_sqloper)
+  m_ssl_gnutls         | normal<br>debug          | Messages relating to [the m_ssl_gnutls module](/4/modules/m_ssl_gnutls)
+  m_ssl_mbedtls        | normal<br>debug          | Messages relating to [the m_ssl_mbedtls module](/4/modules/m_ssl_mbedtls)
+  m_ssl_openssl        | normal<br>debug          | Messages relating to [the m_ssl_openssl module](/4/modules/m_ssl_openssl)
+  m_sslinfo            | debug                    | Messages relating to [the m_sslinfo module](/4/modules/m_sslinfo)
+  m_sslrehashsignal    | normal                   | Messages relating to [the m_sslrehashsignal module](/4/modules/m_sslrehashsignal)
+  m_topiclock          | normal                   | Messages relating to [the m_topiclock module](/4/modules/m_topiclock)
+  m_vhost              | normal                   | Messages relating to [the m_vhost module](/4/modules/m_vhost)
+  m_xline_db           | debug                    | Messages relating to [the m_xline_db module](/4/modules/m_xline_db)
+
+
+  The level field should be set to one of the following values:
+
+  Value   | Description
+  ------- | -----------
+  rawio   | Log raw I/O traffic.
+  debug   | Log information that is useful for debugging.
+  normal  | Log general information.
+  warning | Log issues that should be investigated.
+  error   | Log critical errors that must be resolved.
+example: |-
+  ```xml
+  <log method="file"
+       type="* -USERINPUT -USEROUTPUT"
+       level="normal"
+       target="ircd.log"
+       flush="20">
+  ```

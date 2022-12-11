@@ -1,0 +1,186 @@
+name: connect
+description: |-
+  The `<connect>` tag defines a class that users can be filtered into when they connect to the server. This tag can be defined as many times as required.
+attributes:
+- name: name
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the name of this connect class.
+- name: allow
+  type: Text
+  required: false
+  default: null
+  description: |-
+    A glob pattern or CIDR range for an IP address which is allowed to connect to the server. If this is defined then `deny` (below) MUST NOT be defined.
+- name: deny
+  type: Text
+  required: false
+  default: null
+  description: |-
+    A glob pattern or CIDR range for an IP address which is banned from connecting to the server. If this is defined then `allow` (above) MUST NOT be defined.
+- name: commandrate
+  type: Number
+  required: false
+  default: null
+  description: |-
+    The number of millicommands (1000 equals 1 command) per second that a user can execute.
+- name: connected
+  type: Boolean
+  required: false
+  default: null
+  description: |-
+    If defined then whether this connect class matches a user that is partially connected or a client that is fully connected.
+- name: fakelag
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether users should have their input/output delayed when they reach a soft limit rather than being killed.
+- name: globalmax
+  type: Number
+  required: false
+  default: null
+  description: |-
+    The maximum number of users who can exist on the entire network from the range specified in the allow field.
+- name: hardsendq
+  type: Number
+  required: false
+  default: '1048576'
+  description: |-
+    The maximum amount of data allowed in a user's send queue before it is killed.
+- name: limit
+  type: Number
+  required: false
+  default: null
+  description: |-
+    The maximum number of users who can be in this connect class.
+- name: localmax
+  type: Number
+  required: false
+  default: null
+  description: |-
+    The maximum number of users who can exist on the local server from the range specified in the allow field.
+- name: maxchans
+  type: Number
+  required: false
+  default: null
+  description: |-
+    If defined then the maximum number of channels that a user in this class can be in.
+- name: maxconnwarn
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to send a server notice when a connect class limit is reached.
+- name: parent
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the name of the class to inherit most *core* settings from.
+- name: password
+  type: Text
+  required: false
+  default: null
+  description: |-
+    The password that the user must send to be put into this connect class.
+- name: pingfreq
+  type: Duration
+  required: false
+  default: 2m
+  description: |-
+    The number of seconds this client can be idle for before sending it a `PING` message.
+- name: port
+  type: Number
+  required: false
+  default: null
+  description: |-
+    The port on which a client must be connecting to be put into this connect class.
+- name: reason
+  type: Text
+  required: false
+  default: Unauthorised connection
+  description: |-
+    If `<connect:deny>` is set then the reason to give when disconnecting a user.
+- name: resolvehostnames
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether to do DNS lookups for the hostnames of users in this class.
+- name: recvq
+  type: Number
+  required: false
+  default: '4096'
+  description: |-
+    The maximum amount of data allowed in a user's receive queue before it is killed.
+- name: softsendq
+  type: Number
+  required: false
+  default: '4096'
+  description: |-
+    The maximum number of bytes of data that can be in a user's send queue before the server stops processing their input to allow the send queue to drain.
+- name: threshold
+  type: Number
+  required: false
+  default: '10'
+  description: |-
+    The maximum amount of penalty that a user can have before being fakelagged or killed if fakelag is turned off.
+- name: timeout
+  type: Duration
+  required: false
+  default: 1m30s
+  description: |-
+    The number of seconds after which a partially connected user is timed out.
+- name: uniqueusername
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether users in this class are connecting from a shared host and can be uniquely identified by their username (ident).
+details: |+
+  !!! warning ""
+      The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
+
+  {! 4/modules/_hash_table.md !}
+
+example: |-
+  Denies connections to clients connecting from 3ffe::0/32:
+
+  ```xml
+  <connect name="6bone"
+           deny="3ffe::0/32"
+           reason="The 6bone address space is deprecated">
+  ```
+
+  Defines a TLS (SSL) only connect class and then a general connect class to inherit from:
+
+  ```xml
+  <connect name="Secure"
+           parent="Main"
+           port="6697">
+
+  <connect name="Main"
+           allow="*"
+           commandrate="1000"
+           fakelag="on"
+           globalmax="3"
+           hardsendq="1M"
+           limit="5000"
+           localmax="3"
+           maxchans="30"
+           maxconnwarn="no"
+           pingfreq="120"
+           recvq="8K"
+           resolvehostnames="yes"
+           softsendq="8192"
+           threshold="10"
+           timeout="10"
+           uniqueusername="no">
+  ```
+
+  #### Special Notes
+
+  If you are also using [the gateway module](/4/modules/gateway) you should disable DNS lookups for your WebIRC gateway.

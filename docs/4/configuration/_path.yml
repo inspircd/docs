@@ -1,0 +1,43 @@
+name: path
+description: |-
+  The `<path>` tag defines the location of the config, data, log, and module directories. This tag can only be defined once.
+attributes:
+- name: configdir
+  type: Text
+  required: false
+  default: conf
+  description: |-
+    The location of the config directory.
+- name: datadir
+  type: Text
+  required: false
+  default: data
+  description: |-
+    The location of the data directory.
+- name: logdir
+  type: Text
+  required: false
+  default: logs
+  description: |-
+    The location of the logs directory.
+- name: moduledir
+  type: Text
+  required: false
+  default: modules
+  description: |-
+    The location of the modules directory.
+- name: runtimedir
+  type: Text
+  required: false
+  default: data
+  description: |-
+    The location of the runtime directory.
+details: ""
+example: |-
+  ```xml
+  <path configdir="conf"
+        datadir="data"
+        logdir="logs"
+        moduledir="modules"
+        runtimedir="data">
+  ```

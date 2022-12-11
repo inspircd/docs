@@ -2,6 +2,10 @@
 title: v{{ version }} Configuration
 ---
 
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+
 ## Configuration
 
 !!! note ""
@@ -13,7 +17,7 @@ title: v{{ version }} Configuration
       - `C:\Program Files\InspIRCd\conf\examples` if using our Windows binary package.
       - `[ROOT]/run/conf/examples` if you have built in your home directory.
 
-This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/3/modules).
+This page only lists core configuration. For details on the configuration of a specific module please refer to [the appropriate page for that module](/{{ version }}/modules).
 
 {% for tag in core_config_tags -%}
 ### `<{{ tag.name }}>`
@@ -81,7 +85,7 @@ Additionally, the following fields are provided by modules:
 <td markdown="1" rowspan="{{ loop.length }}">{{ field.type }}</td>
 <td markdown="1" rowspan="{{ loop.length }}">{% if field.default is none %}<em>None</em>{% else %}{{ field.default }}{% endif %}</td>
 {% endif %}
-<td markdown="1">[{{ field.module }}](/3/modules/{{ field.module }}/)</td>
+<td markdown="1">[{{ field.module }}](/{{ version }}/modules/{{ field.module }}/)</td>
 <td markdown="1">{% if field.required %}<strong>Required!</strong> {% endif %}{{ field.description }}</td>
 </tr>
 {% endfor %}

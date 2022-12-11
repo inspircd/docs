@@ -1,0 +1,29 @@
+name: admin
+description: |-
+  The `<admin>` tag defines contact details for the server administrator. This tag can only be defined once.
+attributes:
+- name: name
+  type: Text
+  required: false
+  default: "[*&lt;server:network&gt;*](#server) Admins"
+  description: |-
+    The nickname, real name, or team name of the server administrator(s).
+- name: description
+  type: Text
+  required: false
+  default: null
+  description: |-
+    A description of the server administrator(s).
+- name: email
+  type: Text
+  required: false
+  default: "noreply@[*&lt;server:name&gt;*](#server)"
+  description: |-
+    The email address at which the server administrator(s) can be contacted in case of issues.
+details: ""
+example: |-
+  ```xml
+  <admin name="Adam Inistrator"
+         description="Supreme Overlord"
+         email="noreply@example.com">
+  ```

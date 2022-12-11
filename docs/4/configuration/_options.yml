@@ -1,0 +1,158 @@
+name: options
+description: |-
+  The `<options>` tag defines general configuration options. This tag can only be defined once.
+attributes:
+- name: cyclehostsfromuser
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to send modes from the user rather than the server when sending a fake rejoin.
+- name: defaultbind
+  type: Text
+  required: false
+  default: auto
+  description: |-
+    The IP version to bind using if an IP address is not specified.
+- name: defaultmodes
+  type: Text
+  required: false
+  default: not
+  description: |-
+    The default modes to apply to newly created channels.
+- name: exemptchanops
+  type: Text
+  required: false
+  default: null
+  description: |-
+    The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/4/modules/exemptchanops) for more information.
+- name: extbanformat
+  type: Text
+  required: false
+  default: any
+  description: |-
+    The method to use for normalising extbans.
+- name: fixedpart
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then a static value to replace users' part messages with.
+- name: fixedquit
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then a static value to replace users' quit messages with.
+- name: hostintopic
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to show the full user mask of a topic setter rather than just their nickname.
+- name: invitebypassmodes
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether being invited to a channel allows the invitee to bypass channel modes which would otherwise prevent them from joining.
+- name: modesinlist
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether to include the current channel modes in the `/LIST` output.
+- name: nosnoticestack
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to stop identical server notices from being stacked with "last message repeated X times".
+- name: prefixpart
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the value to prefix users' part messages with.
+- name: prefixquit
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the value to prefix users' quit messages with.
+- name: splitwhois
+  type: Text
+  required: false
+  default: 'no'
+  description: |-
+    Whether to split private/secret channels from normal channels in WHOIS responses.
+- name: suffixpart
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the value to suffix users' part messages with.
+- name: suffixquit
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the value to suffix users' quit messages with.
+- name: syntaxhints
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to send syntax hints to users who send commands with not enough parameters.
+- name: xlinemessage
+  type: Text
+  required: false
+  default: You're banned!
+  description: |-
+    The message to send to users who have been banned from the server.
+details: |+
+  The defaultbind field should be set to one of the following values:
+
+  Value | Description
+  ----- | -----------
+  auto  | Bind to :: if IPv6 support is available. Otherwise, bind to 0.0.0.0.
+  ipv4  | Bind to 0.0.0.0 by default.
+  ipv6  | Bind to :: by default.
+
+  The extbanformat field should be set to one of the following values:
+
+  Value  | Description
+  ------ | -----------
+  any    | Do not perform any extban normalisation.
+  name   | Normalise extbans to use their name.
+  letter | Normalise extbans to use their letter.
+
+  The splitwhois field should be set to one of the following values:
+
+  Value    | Description
+  -------- | -----------
+  no       | Don't split private/secret channels from normal channels in WHOIS responses.
+  split    | Split private/secret channels from normal channels in WHOIS responses.
+  splitmsg | Split private/secret channels from normal channels in WHOIS responses with an explanation.
+
+example: |-
+  ```xml
+  <options cyclehostsfromuser="no"
+           defaultbind="auto"
+           defaultmodes="nost"
+           exemptchanops=""
+           extbanformat="name"
+           fixedpart=""
+           fixedquit=""
+           hostintopic="yes"
+           invitebypassmodes="yes"
+           nosnoticestack="no"
+           modesinlist="no"
+           prefixpart="&quot;"
+           prefixquit="Quit: "
+           splitwhois="no"
+           suffixpart="&quot;"
+           suffixquit=""
+           syntaxhints="yes"
+           xlinemessage="You're banned. Email abuse@example.com to appeal this decision.">
+  ```

@@ -1,0 +1,85 @@
+name: limits
+description: |-
+  The `<limits>` tag defines the maximum length of user-configurable fields. This tag can only be defined once.
+attributes:
+- name: maxaway
+  type: Number
+  required: false
+  default: '200'
+  description: |-
+    The maximum length of an away message.
+- name: maxchan
+  type: Number
+  required: false
+  default: '64'
+  description: |-
+    The maximum length of a channel name.
+- name: maxhost
+  type: Number
+  required: false
+  default: '64'
+  description: |-
+    The maximum length of a hostname.
+- name: maxident
+  type: Number
+  required: false
+  default: '10'
+  description: |-
+    The maximum length of a username (ident).
+- name: maxkey
+  type: Number
+  required: false
+  default: '30'
+  description: |-
+    The maximum length of a channel key.
+- name: maxkick
+  type: Number
+  required: false
+  default: '255'
+  description: |-
+    The maximum length of a kick message.
+- name: maxmodes
+  type: Number
+  required: false
+  default: '20'
+  description: |-
+    The maximum number of non-flag modes that can be changed in a single `MODE` message.
+- name: maxnick
+  type: Number
+  required: false
+  default: '30'
+  description: |-
+    The maximum length of a nickname.
+- name: maxquit
+  type: Number
+  required: false
+  default: '255'
+  description: |-
+    The maximum length of a quit message.
+- name: maxreal
+  type: Number
+  required: false
+  default: '128'
+  description: |-
+    The maximum length of a real name (gecos).
+- name: maxtopic
+  type: Number
+  required: false
+  default: '307'
+  description: |-
+    The maximum length of a channel topic.
+details: ""
+example: |-
+  ```xml
+  <limits maxaway="200"
+          maxchan="64"
+          maxhost="64"
+          maxident="11"
+          maxkey="30"
+          maxkick="255"
+          maxmodes="20"
+          maxnick="32"
+          maxquit="255"
+          maxreal="128"
+          maxtopic="307">
+  ```

@@ -1,0 +1,43 @@
+name: dns
+description: |-
+  The `<dns>` tag defines the DNS server to use when looking up hostnames. This tag can only be defined once.
+attributes:
+- name: enabled
+  type: Boolean
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether DNS lookups are enabled.
+- name: server
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the DNS server to look up hostnames with. If not set then the first system resolver will be used.
+- name: timeout
+  type: Number
+  required: false
+  default: '5'
+  description: |-
+    The number of seconds before timing out DNS lookups.
+- name: sourceip
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the IP address to connect from when doing DNS lookups.
+- name: sourceport
+  type: Number
+  required: false
+  default: null
+  description: |-
+    If defined then the UDP port to connect from when doing DNS lookups.
+details: ""
+example: |-
+  ```xml
+  <dns enabled="yes"
+       server="127.0.0.53"
+       timeout="5"
+       sourceip=""
+       sourceport="0">
+  ```
