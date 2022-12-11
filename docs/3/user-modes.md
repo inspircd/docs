@@ -2,12 +2,16 @@
 title: v{{ version }} User Modes
 ---
 
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+
 ## User Modes
 
 !!! note ""
-    This page documents user modes. For channel modes see [the channel mode page](/3/channel-modes/).
+    This page documents user modes. For channel modes see [the channel mode page](/{{ version }}/channel-modes).
 
-{! 3/_mode_types_table.md !}
+{% include "3/_mode_types_table.md" %}
 
 ### Core
 
@@ -17,7 +21,7 @@ Name      | Character | Type      | Parameter Syntax  | Usable By        | Descr
 --------- | --------- | --------- | ----------------- | ---------------- | -----------
 invisible | i         | Switch    | *None*            | Anyone           | Marks the user as invisible.
 oper      | o         | Switch    | *None*            | Server operators | Marks the user as a server operator (can only be set by the server).
-snomask   | s         | Parameter | `(+|-)<snomasks>` | Server operators | Enables receiving the specified types of [server operator notice](/3/snomasks).
+snomask   | s         | Parameter | `(+|-)<snomasks>` | Server operators | Enables receiving the specified types of [server operator notice](/{{ version }}/snomasks).
 wallops   | w         | Switch    | *None*            | Anyone           | Enables receiving `/WALLOPS` messages from server operators.
 
 #### Example Usage

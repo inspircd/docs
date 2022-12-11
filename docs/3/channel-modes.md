@@ -2,10 +2,14 @@
 title: v{{ version }} Channel Modes
 ---
 
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+
 ## Channel Modes
 
 !!! note ""
-    This page documents channel modes. For user modes see [the user mode page](/3/user-modes/).
+    This page documents channel modes. For user modes see [the user mode page](/{{ version }}/user-modes).
 
 {% include "3/_mode_types_table.md" %}
 
@@ -84,4 +88,4 @@ Removes channel voice status from Sadie in \#channel:
 
 ### Configuration-defined modes
 
-Server administrators can also define custom prefix modes for channel privileges, such as channel modes `q` (founder), `a` (admin), or `h` (halfop), using the [customprefix](/3/modules/customprefix/) module.
+Server administrators can also define custom prefix modes for channel privileges, such as channel modes `q` (founder), `a` (admin), or `h` (halfop), using the [customprefix](/{{ version }}/modules/customprefix) module.

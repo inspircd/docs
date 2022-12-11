@@ -2,6 +2,10 @@
 title: v{{ version }} Module Manager
 ---
 
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+
 ## Managing third-party modules with Module Manager
 
 ### Summary
@@ -28,7 +32,7 @@ The `./modulemanager list` command shows the names, versions, and descriptions o
 
 If for some reason you are unable to use the Module Manager you can download and install modules manually using the following steps:
 
-1. Download the module you wish to install from [the inspircd-contrib repository on GitHub](https://github.com/inspircd/inspircd-contrib).
+1. Download the module you wish to install from [the inspircd-contrib repository on GitHub](https://github.com/inspircd/inspircd-contrib/tree/master/{{version}}).
 
 2. Move it to the ./src/modules directory.
 

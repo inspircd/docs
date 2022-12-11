@@ -49,4 +49,10 @@ title: Introduction
 - [Upgrading from v3](/4/breaking-changes)
 - [Change Log](/4/change-log)
 
+<hr>
+
+- [Channel Modes](/3/channel-modes)
+    - [Extended Bans](/3/extended-bans)
+- [User Modes](/3/user-modes)
+
 </div>
