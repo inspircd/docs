@@ -34,7 +34,7 @@ configuration:
              query="SELECT username as name, '*' as host, oper_class as type, sha256_password as password, 'sha256' as hash FROM users WHERE oper_class IS NOT NULL">
     ```
 
-     For each row an <oper> will be defined using the field values returned. See the [<oper> configuration docs](https://docs.inspircd.org/3/configuration/#ltopergt) for column names, default values and required columns.
+     For each row an <oper> will be defined using the field values returned. See the [<oper> configuration docs](https://docs.inspircd.org/3/configuration/#oper) for column names, default values and required columns.
 
 special_notes: |-
   {! 3/modules/_sql_table.md !}

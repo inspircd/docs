@@ -51,8 +51,8 @@ title: Introduction
 
 <hr>
 
-- [Channel Modes](/3/channel-modes)
-    - [Extended Bans](/3/extended-bans)
-- [User Modes](/3/user-modes)
+- [Channel Modes](/4/channel-modes)
+    - [Extended Bans](/4/extended-bans)
+- [User Modes](/4/user-modes)
 
 </div>
