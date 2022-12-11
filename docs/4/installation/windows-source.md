@@ -1,14 +1,14 @@
 ---
-title: v3 Windows Source Installation
+title: v4 Windows Source nstallation
 ---
 
-## Installing InspIRCd 3 from source on Windows
+## Installing InspIRCd 4 from source on Windows
 
 If you want to build InspIRCd with contrib modules or non-included extra modules you can build from source.
 
 ### What systems can InspIRCd be built on?
 
-InspIRCd can be built on Windows 7 or newer using the MSVC 14 (Visual Studio 2015) compiler and CMake 3.8 or newer. Some extra modules may require newer versions in order to build.
+InspIRCd can be built on Windows 10 build 17061 or newer using the MSVC 19.15+ (Visual Studio 15.8 2017) compiler and CMake 3.8 or newer. Some extra modules may require newer versions in order to build.
 
 ### How do I install from source?
 
@@ -18,7 +18,7 @@ In order to build from source you will need to have the following development to
 
 0. [The Windows SDK for your system](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/).
 
-0. [Visual Studio 2015 or newer](https://visualstudio.microsoft.com/downloads/).
+0. [Visual Studio 15.8 2017 or newer](https://visualstudio.microsoft.com/downloads/).
 
 0. [CMake 3.8 or newer](https://cmake.org/download/).
 
@@ -49,7 +49,7 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSI
 To download the most recent code committed to Git you will need to have Git installed. You can install this from [the Git website](https://git-scm.com/download/win). Once you have Git installed you can download the latest source with the following command:
 
 ```sh
-git clone --branch insp3 "https://github.com/inspircd/inspircd.git"
+git clone --branch master "https://github.com/inspircd/inspircd.git"
 ```
 
 A copy of the latest InspIRCd source code will now exist in the `inspircd` directory.
@@ -71,4 +71,4 @@ cmake -A x64 ..
 
 When CMake finishes you you can now run the `msbuild PACKAGE.vcxproj` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete. If you prefer you can also just open InspIRCd.sln in Visual Studio and build the PACKAGE target.
 
-Once InspIRCd has been built you can run the installer from the build directory and move on to [configuring it](/3/configuration).
+Once InspIRCd has been built you can run the installer from the build directory and move on to [configuring it](/4/configuration).

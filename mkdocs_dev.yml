@@ -10,7 +10,7 @@ nav:
         - SNOMasks: 3/snomasks.md
         - Change Log: 3/change-log.md
     - InspIRCd 4:
-#       - Installation: 4/installation/index.md
+        - Installation: 4/installation/index.md
         - Configuration: 4/configuration/index.md
         - Commands: 4/commands/index.md
         - Channel Modes: 4/channel-modes.md

@@ -1,5 +1,5 @@
 ---
-title: v{{ version }} Installation
+title: v3 Installation
 ---
 
 ## Installing InspIRCd 3

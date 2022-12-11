@@ -1,8 +1,8 @@
 ---
-title: v3 Source Installation
+title: v4 Source Installation
 ---
 
-## Installing InspIRCd 3 from source
+## Installing InspIRCd 4 from source
 
 If there is no official InspIRCd package for your system and you don't want to use Docker you can build from source.
 
@@ -10,15 +10,15 @@ If there is no official InspIRCd package for your system and you don't want to u
 
 InspIRCd can be built on the following platforms:
 
-- Most recent BSD variants using the Clang or GCC compilers and the GNU toolchain (Make, etc).
+- Most recent BSD variants using the Clang 5+ or GCC 7+ compilers and the GNU toolchains (Make, etc).
 
-- Most recent Linux distributions using the Clang or GCC compilers and the GNU toolchain.
+- Most recent Linux distributions using the Clang 5+ or GCC 7+ compilers and the GNU toolchain.
 
-- The most recent three major releases of macOS using the AppleClang, Clang, or GCC (*not* LLVM-GCC) compilers and the GNU toolchain.
+- The most recent three major releases of macOS using the AppleClang 10, Clang 5+, or GCC 7+ (*not* LLVM-GCC) compilers and the GNU toolchain.
 
 Alternate platforms and toolchains may also work but are not officially supported by the InspIRCd team. Generally speaking if you are using a reasonably modern UNIX-like system you should be able to build InspIRCd on it.
 
-If you want to build natively on Windows you should use [the Windows source instructions](/3/installation/windows-source) instead.
+If you want to build natively on Windows you should use [the Windows source instructions](/4/installation/windows-source) instead.
 
 ### How do I install from source?
 
@@ -52,7 +52,7 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSI
 To download the most recent code committed to Git you will need to have Git installed. You can install this from your system's package manager. Once you have Git installed you can download the latest source with the following command:
 
 ```sh
-git clone --branch insp3 "https://github.com/inspircd/inspircd.git"
+git clone --branch master "https://github.com/inspircd/inspircd.git"
 ```
 
 A copy of the latest InspIRCd source code will now exist in the `inspircd` directory.
@@ -71,4 +71,4 @@ Finally, if you enabled a TLS (SSL) module in the previous step, you will be ask
 
 You can now run the `make install` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete.
 
-Once InspIRCd has been installed you can move on to [configuring it](/3/configuration).
+Once InspIRCd has been installed you can move on to [configuring it](/4/configuration).

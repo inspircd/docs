@@ -46,6 +46,7 @@ title: Introduction
 
 **Full docs coming soon**
 
+- [Installation](/4/installation)
 - [Configuration](/4/configuration)
     - [Useful Snippets](/4/configuration/useful-snippets)
     - [Upgrading from v3](/4/breaking-changes)
