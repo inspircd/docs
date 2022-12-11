@@ -29,6 +29,7 @@ special_notes: |-
   blockcaps      | Exempts users from channel mode `B` (blockcaps). Requires [the blockcaps module](/3/modules/blockcaps).
   blockcolor     | Exempts users from channel mode `c` (blockcolor). Requires [the blockcolor module](/3/modules/blockcolor).
   censor         | Exempts users from channel mode `G` (censor). Requires [the censor module](/3/modules/censor).
+  delaymsg       | Exempts users from channel mode `d` (delaymsg). Requires [the delaymsg module](/3/modules/delaymsg).
   filter         | Exempts users from channel mode `g` (filter). Requires [the chanfilter module](/3/modules/chanfilter).
   flood          | Exempts users from channel mode `f` (flood). Requires [the messageflood module](/3/modules/messageflood).
   nickflood      | Exempts users from channel mode `F` (nickflood). Requires [the nickflood module](/3/modules/nickflood).

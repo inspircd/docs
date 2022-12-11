@@ -1,0 +1,68 @@
+name: messageflood
+
+description: |-
+  This module adds channel mode `f` (flood) which helps protect against spammers which mass-message channels.
+
+configuration:
+- name: messageflood
+  description: |-
+    The `<messageflood>` tag defines settings about how the messageflood module should behave. This tag can only be defined once.
+  attributes:
+  - name: kickmessage
+    type: String
+    required: false
+    default: Message flood (trigger is %lines% messages in %duration%)
+    description: |-
+      The message to use when kicking users that hit the message flood trigger.
+  - name: notice
+    type: Decimal
+    required: false
+    default: 1.0
+    description: |-
+      The number of lines that a single `NOTICE` message is equivalent to.
+  - name: privmsg
+    type: Decimal
+    required: false
+    default: 1.0
+    description: |-
+      The number of lines that a single `PRIVMSG` message is equivalent to.
+  - name: tagmsg
+    type: Decimal
+    required: false
+    default: 0.2
+    description: |-
+      The number of lines that a single `NOTICE` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
+  details: |-
+    The kickmessage field can contain any of the following template variables:
+
+    Variable   | Description
+    ---------- | -----------
+    %duration% | The seconds from the mode value as a duration.
+    %lines%    | The lines from the mode value.
+    %seconds%  | The seconds from the mode value.
+
+  example: |-
+    ```xml
+    <messageflood kickmessage="Message flood (trigger is %lines% messages in %duration%)"
+                  notice="1.0"
+                  privmsg="1.0"
+                  tagmsg="0.2">
+    ```
+
+chmodes:
+  chars:
+  - name: flood
+    char: f
+    type: Parameter
+    syntax: (*)<lines>:<seconds>
+    usable_by: Channel operators
+    description: Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
+  example:
+  - description: |-
+      Prevents more than four messages in the last two seconds
+    text: |-
+      /MODE #channel +f 4:2
+
+exemptions:
+- name: flood
+  description: Allows exempted users to send messages at a higher rate than channel mode `f` (flood) allows.

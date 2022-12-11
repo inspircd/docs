@@ -1,0 +1,33 @@
+name: timedbans
+
+description: |-
+  This module adds the `/TBAN` command which allows channel operators to add bans which will be expired after the specified period.
+
+configuration:
+- name: timedbans
+  description: |-
+    The `<timedbans>` tag defines settings about how the timedbans module should behave. This tag can only be defined once.
+  attributes:
+  - name: sendnotice
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send a notice to channel operators when a timed ban is added or expired.
+  details: ""
+  example: |-
+    ```xml
+    <timedbans sendnotice="yes">
+    ```
+
+commands:
+- name: TBAN
+  param_count: 3
+  syntax: <channel> <duration> <banmask>
+  description: |-
+    Bans &lt;banmask&lt; from &lt;channel&gt; for &lt;duration&gt;.
+  example:
+  - description: |-
+      Bans `*!*@example.com` from #channel for one hour
+    text: |-
+      /TBAN #channel 1h *!*@example.com

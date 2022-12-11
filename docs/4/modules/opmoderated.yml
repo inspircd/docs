@@ -1,0 +1,52 @@
+name: allowinvite
+
+description: |-
+  This module adds channel mode `U` (opmoderated) which hides the messages of unprivileged users from other unprivileged users.
+
+configuration:
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-opmoderated
+    description: |-
+      Allows server operators to send messages to all users of a channel whilst channel mode `U` (opmoderated) is set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send messages to all users of a channel whilst channel mode `U` (opmoderated) is set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-opmoderated ...">
+    ```
+
+chmodes:
+  chars:
+  - name: opmoderated
+    char: U
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Hides the messages of unprivileged users from other unprivileged users.
+  example: ""
+
+exemptions:
+- name: blockcolor
+  description: |-
+    Allows exempted users to send messages to all users of the channel.
+
+extbans:
+  chars:
+  - name: opmoderated
+    char: u
+    type: Acting
+    syntax: A:<mask>
+    description: Bans &lt;mask&gt; from speaking to unprivileged users in the channel.
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from speaking to unprivileged users
+    text: |-
+      /MODE #channel +b u:*!*@example.com

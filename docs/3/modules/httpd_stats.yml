@@ -21,4 +21,4 @@ configuration:
     ```
 
 special_notes: |-
-  Leaking your server statistics over the internet is a privacy and security risk. You should avoid doing this by either configuring [the httpd module](/3/modules/httpd) to only listen for local connections or by using [the httpd_acl module](/3/modules/httpd_acl) to restrict who can view your server configuration.
+  Leaking your server statistics over the internet is a privacy and security risk. You should avoid doing this by either configuring [the httpd module](/{{ version }}/modules/httpd) to only listen for local connections or by using [the httpd_acl module](/{{ version }}/modules/httpd_acl) to restrict who can view your server configuration.

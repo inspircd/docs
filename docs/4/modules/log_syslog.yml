@@ -1,0 +1,29 @@
+name: log_syslog
+
+introduction: ""
+
+depends_on:
+  what: a UNIX-specific system library
+  condition: If you are running on a UNIX system
+
+description: |-
+  This module provides the ability to log to syslog.
+
+configuration:
+- name: log
+  description: |-
+    This module extends [the core `<log>` tags](/4/configuration#log) with the following fields:
+  extends: true
+  attributes:
+  - name: method
+    type: Text
+    required: true
+    default: null
+    description: |-
+      *This MUST be set to stderr to use JSON logging.*
+  example: |-
+    ```xml
+    <log method="syslog"
+         level="normal"
+         type="* -USERINPUT -USEROUTPUT">
+    ```

@@ -1,0 +1,88 @@
+name: account
+
+description: |-
+  This module adds support for user accounts.
+
+configuration:
+- name: connect
+  description: |-
+    This module extends [the core `<connect>` tags](/4/configuration#connect) with the following fields:
+  attributes:
+  - name: requireaccount
+    type: Text
+    required: false
+    default: 'No'
+    description: |-
+      Whether users must be logged into a services account to use this class.
+  details: |-
+    The requireaccount field should be set to one of the following values:
+
+    Value   | Description
+    ------- | -----------
+    nick    | A user must be logged into their nickname to use this class.
+    no      | An account is not required to use this class.
+    yes     | A user must be logged into an account to use this class.
+  example: |-
+    Requires users to be logged into a services account to be assigned to the Authenticated class:
+
+    ```xml
+    <connect name="Authenticated"
+             ...
+             requireaccount="yes">
+    ```
+
+chmodes:
+  chars:
+  - name: reginvite
+    char: R
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Prevents users who are not logged into a services account from joining the channel.
+  - name: regmoderated
+    char: M
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Prevents users who are not logged into a services account from speaking in the channel.
+  example: ""
+
+umodes:
+  chars:
+  - name: regdeaf
+    char: R
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Prevents users who are not logged into a services account from messaging the user.
+  example: ""
+
+exemptions:
+- name: regmoderated
+  description: Allows exempted users to send messages to the channel without being logged in.
+
+extbans:
+  description: ""
+  chars:
+  - name: account
+    char: R
+    type: Matching
+    syntax: R:<pattern>
+    description: Checks whether users are logged into a services account matching &lt;pattern&gt;.
+  - name: unauthed
+    char: U
+    type: Matching
+    syntax: U:<pattern>
+    description: Checks whether users matching &lt;pattern&gt; are *not* logged into a services account.
+  example:
+  - description: |-
+      Bans users logged into the services account named Soni
+    text: |-
+      /MODE #channel +b R:Soni
+  - description: |-
+      Bans users matching `*!*@example.com` that are not logged into a services account
+    text: |-
+      /MODE #channel +b U:*!*@example.com

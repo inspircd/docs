@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: bind
   description: |-
-    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following listener types:
+    This module extends [the core `<bind>` tags](/{{ version }}/configuration#bind) with the following listener types:
   extends: true
   added_values:
   - name: httpd
@@ -41,8 +41,8 @@ configuration:
 special_notes: |-
   The following HTTP resource modules can be used in conjunction with this module:
 
-  Name                                    | Description
-  --------------------------------------- | -----------
-  [httpd_acl](/3/modules/httpd_acl)       | Allows access to other HTTP resources to be restricted.
-  [httpd_config](/3/modules/httpd_config) | Allows the server configuration to be viewed over HTTP.
-  [httpd_stats](/3/modules/httpd_stats)   | Provides statistics about the server and the channels and users on it.
+  Name                                                | Description
+  --------------------------------------------------- | -----------
+  [httpd_acl](/{{ version }}/modules/httpd_acl)       | Allows access to other HTTP resources to be restricted.
+  [httpd_config](/{{ version }}/modules/httpd_config) | Allows the server configuration to be viewed over HTTP.
+  [httpd_stats](/{{ version }}/modules/httpd_stats)   | Provides statistics about the server and the channels and users on it.

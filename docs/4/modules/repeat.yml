@@ -1,0 +1,84 @@
+name: repeat
+
+description: |-
+  This module adds channel mode `E` (repeat) which helps protect against spammers which spam the same message repeatedly.
+
+configuration:
+- name: repeat
+  description: |-
+    The `<repeat>` tag defines settings about how the repeat module should behave. This tag can only be defined once.
+  attributes:
+  - name: kickmessage
+    type: String
+    required: false
+    default: Repeat flood (trigger is %lines% messages in %duration%)
+    description: |-
+      The message to kick users who repeat flood with.
+  - name: maxbacklog
+    type: Number
+    required: false
+    default: 20
+    description: |-
+      The maximum size that can be specified for backlog. Set to 0 to disable multiline matching.
+  - name: maxdistance
+    type: Number
+    required: false
+    default: 50
+    description: |-
+      The maximum percentage of difference between two lines we'll allow to match. Set to 0 to disable edit-distance matching.
+  - name: maxlines
+    type: Number
+    required: false
+    default: 20
+    description: |-
+      The maximum lines of backlog to match against.
+  - name: maxtime
+    type: Duration
+    required: false
+    default: 0
+    description: |-
+      The maximum period of time a user can set. Set to 0 to allow any period.
+  - name: size
+    type: Number
+    required: false
+    default: 512
+    description: |-
+      The maximum number of characters to check for, can be used to truncate messages before they are checked, resulting in less CPU usage.
+  details: |-
+    The kickmessage field can contain any of the following template variables:
+
+    Variable   | Description
+    ---------- | -----------
+    %diff%     | The diff from the mode value.
+    %duration% | The seconds from the mode value as a duration.
+    %lines%    | The lines from the mode value.
+    %seconds%  | The seconds from the mode value.
+
+  example: |-
+    ```xml
+    <repeat kickmessage="Repeat flood (trigger is %lines% messages in %duration%)"
+            maxbacklog="20"
+            maxdistance="50"
+            maxlines="20"
+            maxtime="1h"
+            size="512">
+    ```
+
+chmodes:
+  chars:
+  - name: repeat
+    char: E
+    type: Parameter
+    syntax: '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
+    usable_by: Channel operators
+    description: |-
+      Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.
+  example:
+  - description: |-
+      Blocks more than two repeated messages in five seconds
+    text: |-
+      /MODE #channel +E 2:5
+
+exemptions:
+- name: repeat
+  description: Allows exempted users to send repetitive messages at a higher rate than channel mode `E` (repeat) allows.

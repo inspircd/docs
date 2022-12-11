@@ -1,0 +1,34 @@
+name: ircv3_ctctags
+
+description: |-
+  This module provides the IRCv3 `message-tags` client capability.
+
+configuration:
+- name: ctctags
+  description: |-
+    The `<ctctags>` tag defines settings about how the ircv3_ctctags module should behave. This tag can only be defined once.
+  attributes:
+  - name: allowclientonlytags
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to allow clients to send client-to-client tags.
+  details: ""
+  example: |-
+    ```xml
+    <ctctags allowclientonlytags="yes">
+    ```
+
+commands:
+- name: TAGMSG
+  param_count: 1
+  syntax: <target>
+  description: |-
+    Sends a message containing only tags to the specified target.
+  # TAGMSG is not documented here because it is not intended to be executed by users
+
+client_caps:
+- name: '[message-tags](https://ircv3.net/specs/extensions/message-tags.html)'
+  description: |-
+    Enables support for sending and receiving `TAGMSG` messages.

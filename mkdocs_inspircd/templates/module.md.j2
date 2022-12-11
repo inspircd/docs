@@ -1,8 +1,14 @@
 ---
-title: "Module Details: {{ name }} (v3)"
+title: "Module Details: {{ name }} (v{{ '{{ version }}' }})"
 ---
 
-## The "{{ name }}" Module
+{% raw %}
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+{% endraw %}
+
+## The "{{ name }}" Module (v{{ '{{ version }}' }})
 
 {{ introduction }}
 

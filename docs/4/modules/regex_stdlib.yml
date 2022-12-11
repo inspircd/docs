@@ -1,0 +1,34 @@
+name: regex_stdlib
+
+introduction: ""
+
+description: |-
+  This module provides the `stdregex` regular expression engine which uses the [C++11 std::regex](https://en.cppreference.com/w/cpp/regex/syntax_option_type#Constants) regular expression matching system.
+
+configuration:
+- name: stdregex
+  description: |-
+    The `<stdregex>` tag defines settings about how the regex_stdlib module should behave. This tag can only be defined once.
+  attributes:
+  - name: type
+    type: Text
+    required: false
+    default: ecmascript
+    description: |-
+      The regular expression grammar to use when matching.
+  details: |-
+    The type field should be set to one of the following values:
+
+    Value      | Description
+    ---------- | -----------
+    awk        | Use the regular expression grammar used by the awk utility in POSIX.
+    bre        | Use the basic POSIX regular expression grammar.
+    ecmascript | Use the [modified ECMAScript regular expression grammar](https://en.cppreference.com/w/cpp/regex/ecmascript).
+    egrep      | Use the regular expression grammar used by the grep utility, with the -E option, in POSIX.
+    ere        | Use the extended POSIX regular expression grammar.
+    grep       | Use the regular expression grammar used by the grep utility in POSIX.
+
+  example: |-
+    ```xml
+    <stdregex type="ecmascript">
+    ```

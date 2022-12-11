@@ -21,7 +21,7 @@ configuration:
     description: |-
       The SQL query to retrieve the server operators with.
   details: |-
-    {! 3/modules/_hash_table.md !}
+    {! {{ version }}/modules/_hash_table.md !}
 
   example: |-
     ```xml
@@ -34,9 +34,9 @@ configuration:
              query="SELECT username as name, '*' as host, oper_class as type, sha256_password as password, 'sha256' as hash FROM users WHERE oper_class IS NOT NULL">
     ```
 
-     For each row an <oper> will be defined using the field values returned. See the [<oper> configuration docs](https://docs.inspircd.org/3/configuration/#oper) for column names, default values and required columns.
+     For each row an <oper> will be defined using the field values returned. See [the core `<oper>` tag](/{{ version }}/configuration/#oper) for column names, default values and required columns.
 
 special_notes: |-
   {% include "3/modules/_sql_table.md" %}
 
-  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql). You can define your own schema as long as your query returns the required columns.
+  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/insp3/docs/sql). You can define your own schema as long as your query returns the required columns.

@@ -36,7 +36,7 @@ configuration:
     !!! warning ""
         The `hash` field is currently optional but will be required in the next major version of InspIRCd.
 
-    {! 3/modules/_hash_table.md !}
+    {! {{ version }}/modules/_hash_table.md !}
 
   example: |-
     Adds a virtual host account with the username Sadie and a hashed password:

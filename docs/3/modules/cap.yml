@@ -1,7 +1,7 @@
 name: cap
 
 description: |-
-  This module implements support for [the IRCv3 Client Capability Negotiation extension](https://ircv3.net/specs/core/capability-negotiation.html).
+  This module provides support for [the IRCv3 Client Capability Negotiation extension](https://ircv3.net/specs/core/capability-negotiation.html).
 
   This is used by clients to allow the use of modern IRC features without breaking compatibility with older clients.
 

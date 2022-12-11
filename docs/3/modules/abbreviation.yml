@@ -6,4 +6,4 @@ description: |-
     If more than one command matches the specified abbreviation the server will respond with a list of commands that the abbreviation could possibly match.
 
 special_notes: |-
-    This module will not allow you to abbreviate aliases added by [the alias module](/3/modules/alias) as aliases are not real commands. If you wish to shorten an alias you should add a short form version of that alias.
+    This module will not allow you to abbreviate aliases added by [the alias module](/{{ version }}/modules/alias) as aliases are not real commands. If you wish to shorten an alias you should add a short form version of that alias.

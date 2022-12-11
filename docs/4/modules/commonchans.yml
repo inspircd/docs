@@ -1,0 +1,34 @@
+name: commonchans
+
+description: |-
+  This module adds user mode `c` (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
+
+configuration:
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: users/ignore-commonchans
+    description: |-
+      Allows server operators to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to message a user with the `c` (deaf_commonchan) mode set without sharing a common channel.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... users/ignore-commonchans ...">
+    ```
+
+umodes:
+  chars:
+  - name: deaf_commonchan
+    char: c
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Requires other users to have a common channel before they can message this user.
+  example: ""

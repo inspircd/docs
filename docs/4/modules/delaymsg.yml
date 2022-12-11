@@ -1,0 +1,53 @@
+name: delaymsg
+
+description: |-
+  This module adds channel mode `d` (delaymsg) which prevents newly joined users from speaking until the specified number of seconds have passed.
+
+configuration:
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-delaymsg
+    description: |-
+      Allows server operators to send a message to a newly joined channel whilst channel mode `d` (delaymsg) is set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send a message to a newly joined channel whilst channel mode `d` (delaymsg) is set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-delaymsg ...">
+    ```
+- name: delaymsg
+  description: |-
+    The `<delaymsg>` tag defines settings about how the delaymsg module should behave. This tag can only be defined once.
+  attributes:
+  - name: allownotice
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the delaymsg module also affects notices.
+  details: ""
+  example: |-
+    ```xml
+    <delaymsg allownotice="yes">
+    ```
+
+chmodes:
+  chars:
+  - name: delaymsg
+    char: d
+    type: Parameter
+    syntax: <seconds>
+    usable_by: Channel operators
+    description: |-
+      Prevents newly joined users from speaking until &lt;seconds&gt; seconds have passed.
+  example:
+  - description: |-
+      Prevents users from speaking for 60 seconds after joining
+    text: |-
+      /MODE #channel +d 60

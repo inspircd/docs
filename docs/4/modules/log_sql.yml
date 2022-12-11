@@ -1,0 +1,54 @@
+name: log_sql
+
+introduction: ""
+
+description: |-
+  This module provides the ability to log to a SQL database.
+
+configuration:
+- name: log
+  description: |-
+    This module extends [the core `<log>` tags](/4/configuration#log) with the following fields:
+  extends: true
+  attributes:
+  - name: method
+    type: Text
+    required: true
+    default: null
+    description: |-
+      *This MUST be set to sql to use SQL logging.*
+  - name: dbid
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of the database connection to execute the query against.
+  - name: query
+    type: Text
+    required: false
+    default: INSERT INTO ircd_log (time, type, message) VALUES (FROM_UNIXTIME($time), '$type', '$message');
+    description: |-
+      The query to use to insert a log message into the database.
+  details: |-
+    The query field can contain any of the following template variables:
+
+    Variable | Description
+    -------- | -----------
+    level    | The log level as an integer.
+    levelstr | The log level as a string.
+    message  | The log message.
+    time     | The log time as a UNIX timestamp
+    type     | The log message type.
+  example: |-
+    ```xml
+    <log method="sql"
+         level="normal"
+         type="* -USERINPUT -USEROUTPUT"
+         dbid="sql-log"
+         query="INSERT INTO ircd_log (time, type, message) VALUES (FROM_UNIXTIME($time), '$type', '$message');">
+    ```
+
+special_notes: |-
+  {% include "3/modules/_sql_table.md" %}
+
+  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql). You can define your own schema as long as your query returns the required columns.

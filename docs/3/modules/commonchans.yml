@@ -21,6 +21,22 @@ configuration:
            ...
            privs="... users/ignore-commonchans ...">
     ```
+- name: commonchans
+  description: |-
+    The `<commonchans>` tag defines settings about how the codepage module should behave. This tag can only be defined once.
+  attributes:
+  - name: invite
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 3.13.0
+    description: |-
+      Whether to require a common channel to be able to invite a user with the `c` (deaf_commonchan) mode set.
+  details: ""
+  example: |-
+    ```xml
+    <commonchans invite="yes">
+    ```
 
 umodes:
   chars:

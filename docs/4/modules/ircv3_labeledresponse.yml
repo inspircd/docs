@@ -1,0 +1,11 @@
+name: ircv3_labeledresponse
+
+description: |-
+  This module provides support for [the IRCv3 Labeled Response specification](https://ircv3.net/specs/extensions/labeled-response.html).
+
+  This applies only for **registered** clients who negotiated the `batch` capability in addition to `labeled-response`.
+
+client_caps:
+- name: '[labeled-response](https://ircv3.net/specs/extensions/labeled-response.html)'
+  description: |-
+    Enables support for the IRCv3 Labeled Response specification.

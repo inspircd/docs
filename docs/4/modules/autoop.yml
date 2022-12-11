@@ -1,0 +1,23 @@
+name: autoop
+
+description: |-
+  This module adds channel mode `w` (autoop) which allows channel operators to define an access list which gives status ranks to users on join.
+
+chmodes:
+  chars:
+  - name: autoop
+    char: w
+    type: List
+    syntax: <status>:<mask>
+    usable_by: Channel operators
+    description: |-
+      Grants the &lt;status&gt; rank to users matching &lt;mask&gt; on join.
+  example:
+  - description: |-
+      Grants channel operator status on join to users with a mask matching `*!*@example.com`
+    text: |-
+      /MODE #channel +w o:*!*@example.com
+  - description: |-
+      Grants channel voice status on join to users logged into the services account named Sadie (requires [the account module](/4/modules/account))
+    text: |-
+      /MODE #channel +w v:R:Sadie

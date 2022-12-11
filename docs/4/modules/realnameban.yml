@@ -1,0 +1,27 @@
+name: realnameban
+
+description: |-
+  This module adds extended bans `a:` (realmask) and `r:`(realname) which checks whether users have a real name matching the specified glob pattern.
+
+extbans:
+  description: ""
+  chars:
+  - name: realmask
+    char: a
+    type: Matching
+    syntax: a:<pattern>
+    description: Checks whether users have a nick!user@host+real mask matching &lt;pattern&gt;.
+  - name: realname
+    char: r
+    type: Matching
+    syntax: r:<pattern>
+    description: Checks whether users have a a real name matching &lt;pattern&gt;.
+  example:
+  - description: |-
+      Bans users with a nick!user@host+real mask matching `*!*@example.com+*example*` from joining the channel
+    text: |-
+      /MODE #channel +b a:*!*@example.com+*example*
+  - description: |-
+      Bans users with a real name matching `*example*` from joining the channel
+    text: |-
+      /MODE #channel +b r:*example*

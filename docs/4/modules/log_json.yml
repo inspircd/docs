@@ -1,0 +1,53 @@
+name: log_json
+
+introduction: ""
+
+depends_on:
+  what: a third-party library ([RapidJSON](https://rapidjson.org/))
+
+description: |-
+  This module provides the ability to log to JSON.
+
+configuration:
+- name: log
+  description: |-
+    This module extends [the core `<log>` tags](/4/configuration#log) with the following fields:
+  extends: true
+  attributes:
+  - name: method
+    type: Text
+    required: true
+    default: null
+    description: |-
+      *This MUST be set to json, json-stderr, or json-stdout to use JSON logging.*
+  - name: target
+    type: Text
+    required: true
+    default: null
+    description: |-
+      If using the json method the location to write the log to.
+  example: |-
+    Logs JSON messages to `inspircd.json`:
+
+    ```xml
+    <log method="json"
+         target="inspircd.json"
+         level="normal"
+         type="* -USERINPUT -USEROUTPUT">
+    ```
+
+    Logs JSON messages to the standard error stream:
+
+    ```xml
+    <log method="json-stderr"
+         level="normal"
+         type="* -USERINPUT -USEROUTPUT">
+    ```
+
+    Logs JSON messages to the standard output stream:
+
+    ```xml
+    <log method="json-stdout"
+         level="normal"
+         type="* -USERINPUT -USEROUTPUT">
+    ```

@@ -1,0 +1,26 @@
+name: services
+
+description: |-
+  This module provides support for integrating with a services server.
+
+chmodes:
+  chars:
+  - name: c_registered
+    char: r
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Marks the channel as being registered.
+  example: ""
+
+umodes:
+  chars:
+  - name: u_registered
+    char: r
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Marks the user as being logged into a services account.
+  example: ""

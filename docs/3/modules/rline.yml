@@ -29,7 +29,7 @@ configuration:
   details: |-
     The engine field should be set to the name of a regular expression engine.
 
-    {! 3/modules/_regex_table.md !}
+    {! {{ version }}/modules/_regex_table.md !}
 
   example: |-
     ```xml

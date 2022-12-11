@@ -1,0 +1,67 @@
+name: ircv3_sts
+
+description: |-
+  This module adds support for the IRCv3 Strict Transport Security specification.
+
+configuration:
+- name: connect
+  description: |-
+    This module extends [the core `<connect>` tags](/4/configuration#connect) with the following fields:
+  attributes:
+  - name: usests
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users in this connect class should have a STS policy advertised to them.
+  details: ""
+  example: |-
+    Disables STS policy advertisement for users in the LocalIPv4 class:
+
+    ```xml
+    <connect name="LocalIPv4"
+             allow="127.0.0.0/8"
+             ...
+             usests="no">
+    ```
+- name: sts
+  description: |-
+    The `<sts>` tag defines settings about how the sts module should behave. This tag can only be defined once.
+  attributes:
+  - name: host
+    type: Text
+    required: true
+    default: null
+    description: |-
+      A glob pattern for the hostname a user must send to use STS.
+  - name: duration
+    type: Duration
+    required: false
+    default: 60d
+    description: |-
+      The time period that the STS policy should last for.
+  - name: port
+    type: Number
+    required: true
+    default: null
+    description: |-
+      The port that clients should connect on securely.
+  - name: preload
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether the STS policy can be included in preload lists.
+  details: ""
+  example: |-
+    ```xml
+    <sts host="*.example.com"
+         duration="60d"
+         port="6697"
+         preload="yes">
+    ```
+
+client_caps:
+- name: '[sts](https://ircv3.net/specs/extensions/sts.html)'
+  description: |-
+    Defines a mechanism for clients to upgrade plaintext IRC connections to TLS (SSL).

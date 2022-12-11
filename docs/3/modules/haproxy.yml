@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: bind
   description: |-
-    This module extends [the core `<bind>` tags](/3/configuration#bind) with the following hook types:
+    This module extends [the core `<bind>` tags](/{{ version }}/configuration#bind) with the following hook types:
   extends: true
   added_values:
   - name: haproxy

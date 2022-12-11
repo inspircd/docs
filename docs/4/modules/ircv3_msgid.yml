@@ -1,0 +1,4 @@
+name: ircv3_msgid
+
+description: |-
+  This module provides support for [the IRCv3 Message IDs specification](https://ircv3.net/specs/extensions/message-ids.html).

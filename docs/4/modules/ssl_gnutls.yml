@@ -1,0 +1,164 @@
+name: ssl_gnutls
+
+introduction: ""
+
+depends_on:
+  what: a third-party library ([GnuTLS](https://gnutls.org))
+
+description: |-
+  This module allows TLS (SSL) encrypted connections using the [GnuTLS](https://gnutls.org) library.
+
+configuration:
+- name: bind
+  description: |-
+    This module extends [the core `<bind>` tags](/4/configuration#bind) with the following fields:
+  extends: true
+  attributes:
+  - name: sslprofile
+    type: Text
+    default: null
+    description: |-
+      *This MUST be set to the name of a GnuTLS TLS (SSL) profile to listen for secure connections with GnuTLS.*
+  details: ""
+  example: |-
+    Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint with an [TLS (SSL) profile](#sslprofile) named "Clients":
+
+    ```xml
+    <bind address="*"
+          port="6697"
+          ...
+          sslprofile="Clients"
+          type="clients">
+    ```
+
+    Listens for GnuTLS encrypted server connections on the *:7000 endpoint with an [TLS (SSL) profile](#sslprofile) named "Servers":
+
+    ```xml
+    <bind address="*"
+          port="7000"
+          ...
+          sslprofile="Servers"
+          type="servers">
+    ```
+- name: gnutls
+  description: |-
+    The `<gnutls>` tag defines settings about how the ssl_gnutls module should behave. This tag can only be defined once.
+  attributes:
+  - name: onrehash
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether TLS (SSL) profiles (see below) should be reloaded as part of a normal rehash.
+  details: ""
+  example: |-
+    ```xml
+    <gnutls onrehash="yes">
+    ```
+
+- name: sslprofile
+  description: |-
+    The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of this TLS (SSL) profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+  - name: provider
+    type: Text
+    required: true
+    default: null
+    description: |-
+      *This MUST be set to "gnutls" to use the GnuTLS library.*
+  - name: cafile
+    type: Text
+    required: false
+    default: ca.pem
+    description: |-
+      The path to the CA in PEM format.
+  - name: certfile
+    type: Text
+    required: false
+    default: cert.pem
+    description: |-
+      The path to the certificate in PEM format.
+  - name: crlfile
+    type: Text
+    required: false
+    default: crl.pem
+    description: |-
+      The path to the CRL in PEM format.
+  - name: dhfile
+    type: Text
+    required: false
+    default: dhparams.pem
+    description: |-
+      The path to the DH parameters in PEM format. This does nothing on GnuTLS 3.6.0+.
+  - name: hash
+    type: Text
+    required: false
+    default: sha256
+    description: |-
+      The hash algorithm used for TLS (SSL) client fingerprints.
+  - name: keyfile
+    type: Text
+    required: false
+    default: key.pem
+    description: |-
+      The path to the private key in PEM format.
+  - name: mindhbits
+    type: Number
+    required: false
+    default: 1024
+    description: |-
+      The minimum number of bits of the DH parameters file to use in an Diffie-Hellman key exchange.
+  - name: outrecsize
+    type: Number
+    required: false
+    default: 2048
+    description: |-
+      The maximum size of an outgoing GnuTLS record.
+  - name: priority
+    type: Text
+    required: false
+    default: NORMAL
+    description: |-
+      A [GnuTLS priority string](https://gnutls.org/manual/html_node/Priority-Strings.html).
+  - name: requestclientcert
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to request a TLS (SSL) certificate from clients.
+  - name: strictpriority
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to require that all tokens in the GnuTLS priority string are valid.
+  details: |-
+    The hash field should be set to one of the values shown in `gnutls-cli --list | grep ^Digests:`.
+
+  example: |-
+    ```xml
+    <sslprofile name="Clients"
+                provider="gnutls"
+                cafile=""
+                certfile="cert.pem"
+                crlfile=""
+                dhfile="dhparams.pem"
+                hash="sha256"
+                keyfile="key.pem"
+                mindhbits="1024"
+                outrecsize="2048"
+                priority="SECURE192"
+                requestclientcert="yes"
+                strictpriority="no">
+    ```
+
+special_notes: |-
+  If you are using a version of GnuTLS older than 3.6.0 you will also need to provide a DH parameters file. This file can be generated using `certtool --generate-dh-params --sec-param normal --outfile dhparams.pem` and then be placed in your config directory. You may need to use `gnutls-certtool` instead of `certtool` on macOS.
+
+  If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor (such as our Debian and Ubuntu packages) you may need to edit the AppArmor profile to allow InspIRCd to read them too.

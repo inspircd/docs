@@ -1,0 +1,68 @@
+name: connflood
+
+description: |-
+  This module throttles excessive connections to the server.
+
+configuration:
+- name: connflood
+  description: |-
+    The `<connflood>` tag defines settings about how the connflood module should behave. This tag can only be defined once.
+  attributes:
+  - name: bootwait
+    type: Duration
+    required: false
+    default: 2m
+    description: |-
+      The duration to wait after starting up before connections should be throttled.
+  - name: maxconns
+    type: Number
+    required: false
+    default: null
+    description: |-
+      The maximum number of connections to allow before throttling.
+  - name: period
+    type: Duration
+    required: false
+    default: null
+    description: |-
+      The duration after which the connection counter is reset.
+  - name: timeout
+    type: Duration
+    required: false
+    default: null
+    description: |-
+      The duration to disallow connections for after passing the throttling threshold.
+  - name: quitmsg
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The message to quit throttled users with.
+  details: ""
+  example: |-
+    ```xml
+    <connflood bootwait="2m"
+               maxconns="3"
+               period="30s"
+               timeout="30s"
+               quitmsg="Throttled">
+    ```
+- name: connect
+  description: |-
+    This module extends [the core `<connect>` tags](/4/configuration#connect) with the following fields:
+  attributes:
+  - name: useconnflood
+    type: Boolean
+    required: false
+    default: 'yes'
+    description: |-
+      Whether to throttle users in this class when excessive connections are being made to the server.
+  details: ""
+  example: |-
+    Disables connection flood throttling for users in the BNC class:
+
+    ```xml
+    <connect name="BNC"
+             ...
+             useconnflood="no">
+    ```

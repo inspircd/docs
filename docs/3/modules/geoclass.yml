@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: connect
   description: |-
-    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+    This module extends [the core `<connect>` tags](/{{ version }}/configuration#connect) with the following fields:
   attributes:
   - name: country
     type: Text

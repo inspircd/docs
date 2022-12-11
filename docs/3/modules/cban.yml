@@ -47,5 +47,4 @@ stats:
   description: Lists all channel bans.
 
 special_notes: |-
-  CBANs are expired lazily when a lookup happens for performance reasons.
-  This means that expiry messages may display later than expected.
+  CBANs are expired lazily when a lookup happens for performance reasons. This means that expiry messages may display later than expected.

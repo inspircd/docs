@@ -1,0 +1,50 @@
+name: joinflood
+
+description: |-
+  This module adds channel mode `j` (joinflood) which helps protect against spammers which mass-join channels.
+
+configuration:
+- name: joinflood
+  description: |-
+    The `<joinflood>` tag defines settings about how the joinflood module should behave. This tag can only be defined once.
+  attributes:
+  - name: bootwait
+    type: Duration
+    required: false
+    default: 30s
+    description: |-
+      The time period to wait after booting before blocking join floods.
+  - name: duration
+    type: Duration
+    required: false
+    default: 1m
+    description: |-
+      The time period that a channel should be locked for once a join flood has been detected.
+  - name: splitwait
+    type: Duration
+    required: false
+    default: 30s
+    description: |-
+      The time period to wait after a netsplit before blocking join floods.
+  details: ""
+  example: |-
+    ```xml
+    <joinflood bootwait="30s"
+               duration="1m"
+               splitwait="30s">
+    ```
+
+chmodes:
+  chars:
+  - name: joinflood
+    char: j
+    type: Parameter
+    syntax: <joins>:<seconds>
+    usable_by: Channel operators
+    description: |-
+      Prevents more than &lt;joins&gt; joins in the last &lt;seconds&gt; seconds.
+  example:
+  - description: |-
+      Prevents more than two joins in the last five seconds
+    text: |-
+      /MODE #channel +j 2:5

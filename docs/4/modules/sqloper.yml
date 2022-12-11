@@ -1,0 +1,42 @@
+name: sqloper
+
+description: |-
+  This module allows server operators to be authenticated against an SQL table.
+
+configuration:
+- name: sqloper
+  description: |-
+    The `<sqloper>` tag defines settings about how the sqloper module should behave. This tag can only be defined once.
+  attributes:
+  - name: dbid
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of the database connection to execute the query against.
+  - name: query
+    type: Text
+    required: false
+    default: SELECT * FROM ircd_opers WHERE active=1
+    description: |-
+      The SQL query to retrieve the server operators with.
+  details: |-
+    {! {{ version }}/modules/_hash_table.md !}
+
+  example: |-
+    ```xml
+    <sqloper dbid="sqloper"
+             query="SELECT * FROM ircd_opers WHERE active=1">
+    ```
+
+    ```xml
+    <sqloper dbid="sqloper"
+             query="SELECT username as name, '*' as host, oper_class as type, sha256_password as password, 'sha256' as hash FROM users WHERE oper_class IS NOT NULL">
+    ```
+
+     For each row an <oper> will be defined using the field values returned. See [the core `<oper>` tag](/{{ version }}/configuration/#oper) for column names, default values and required columns.
+
+special_notes: |-
+  {% include "3/modules/_sql_table.md" %}
+
+  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql). You can define your own schema as long as your query returns the required columns.

@@ -1,0 +1,21 @@
+name: operlog
+
+description: |-
+  This module allows the server administrator to make the server log when a server operator-only command is executed.
+
+configuration:
+- name: operlog
+  description: |-
+    The `<operlog>` tag defines settings about how the operlog module should behave. This tag can only be defined once.
+  attributes:
+  - name: tosnomask
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to log to snomask `o` (local) and snomask `O` (remote) as well as writing to the server log.
+  details: ""
+  example: |-
+    ```xml
+    <operlog tosnomask="yes">
+    ```

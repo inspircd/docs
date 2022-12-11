@@ -1,0 +1,49 @@
+name: showwhois
+
+description: |-
+  This module adds user mode `W` (showwhois) which allows users to be informed when someone does a `/WHOIS` query on their nick.
+
+configuration:
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: users/secret-whois
+    description: |-
+      Allows server operators to `/WHOIS` users without informing them.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to `/WHOIS` users without informing them.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... users/secret-whois ...">
+    ```
+- name: showwhois
+  description: |-
+    The `<showwhois>` tag defines settings about how the showwhois module should behave. This tag can only be defined once.
+  attributes:
+  - name: opersonly
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether user mode `W` (showwhois) can only be used by server operators.
+  details: ""
+  example: |-
+    ```xml
+    <showwhois opersonly="no">
+    ```
+
+umodes:
+  chars:
+  - name: showwhois
+    char: W
+    type: Switch
+    syntax: null
+    usable_by: Depends on &lt;showwhois:opersonly&gt;
+    description: |-
+      Informs the user when someone does a `/WHOIS` query on their nick.
+  example: ""

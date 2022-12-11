@@ -1,0 +1,32 @@
+name: cban
+
+description: |-
+  This module adds the `/CBAN` command which allows server operators to prevent channels matching a glob from being created.
+
+commands:
+- name: CBAN
+  param_count: 1-3
+  oper_only: true
+  syntax: <channel> [<duration> [<reason>]]
+  description: |-
+    Allows server operators to add and remove channel bans.
+  example:
+  - description: |-
+      Bans the #example channel for one week
+    text: |-
+      /CBAN #example 7d :This channel is banned for a week
+  - description: |-
+      Bans channels that match the glob #example* forever
+    text: |-
+      /CBAN #example* 0 :This channel is banned forever
+  - description: |-
+      Unbans the #example channel
+    text: |-
+      /CBAN #example
+
+stats:
+- char: C
+  description: Lists all channel bans.
+
+special_notes: |-
+  CBANs are expired lazily when a lookup happens for performance reasons. This means that expiry messages may display later than expected.

@@ -61,4 +61,4 @@ commands:
 special_notes: |-
   The `Y` (official-join) channel prefix mode can not be directly set by users. To enable this channel prefix mode log into a server operator account and use the `/OJOIN` command.
 
-  If you want the `Y` (official-join) channel prefix mode to be active at all times consider using [the operprefix module](/3/modules/operprefix) instead.
+  If you want the `Y` (official-join) channel prefix mode to be active at all times consider using [the operprefix module](/{{ version }}/modules/operprefix) instead.

@@ -12,11 +12,11 @@ commands:
     Loads &lt;module&gt; on servers matching the  &lt;server&gt; glob pattern. If no pattern is given then it is loaded on all servers.
   example:
   - description: |-
-      Loads [the botmode module](/3/modules/botmode) on all servers
+      Loads [the botmode module](/{{ version }}/modules/botmode) on all servers
     text: |-
       /GLOADMODULE botmode
   - description: |-
-      Loads [the botmode module](/3/modules/botmode) on servers matching \*.eu.example.com
+      Loads [the botmode module](/{{ version }}/modules/botmode) on servers matching \*.eu.example.com
     text: |-
       /GLOADMODULE botmode *.eu.example.com
 - name: GRELOADMODULE
@@ -27,11 +27,11 @@ commands:
     Reloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is reloaded on all servers.
   example:
   - description: |-
-      Reloads [the check module](/3/modules/check) on all servers
+      Reloads [the check module](/{{ version }}/modules/check) on all servers
     text: |-
       /GRELOADMODULE check
   - description: |-
-      Reloads [the check module](/3/modules/check) on servers matching \*.na.example.com
+      Reloads [the check module](/{{ version }}/modules/check) on servers matching \*.na.example.com
     text: |-
       /GRELOADMODULE check *.na.example.com
 - name: GUNLOADMODULE
@@ -42,10 +42,10 @@ commands:
     Unloads &lt;module&gt; on servers matching the &lt;server&gt; glob pattern. If no pattern is given then it is unloaded on all servers.
   example:
   - description: |-
-      Unloads [the gecosban module](/3/modules/gecosban) on all servers
+      Unloads [the samode module](/{{ version }}/modules/samode) on all servers
     text: |-
-      /GUNLOADMODULE gecosban
+      /GUNLOADMODULE samode
   - description: |-
-      Unloads [the gecosban module](/3/modules/gecosban) on servers matching \*.sea.example.com
+      Unloads [the samode module](/{{ version }}/modules/samode) on servers matching \*.sea.example.com
     text: |-
-      /GUNLOADMODULE gecosban *.sea.example.com
+      /GUNLOADMODULE samode *.sea.example.com

@@ -1,0 +1,72 @@
+name: chanhistory
+
+description: |-
+  This module adds channel mode `H` (history) which allows message history to be viewed on joining the channel.
+
+configuration:
+- name: chanhistory
+  description: |-
+    The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
+  attributes:
+  - name: bots
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users with the bot user mode (+B) will receive history.
+  - name: enableumode
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user mode `N` (nohistory) is enabled. You must restart after changing this setting for it to be applied.
+  - name: maxlines
+    type: Number
+    required: false
+    default: 50
+    description: |-
+      The maximum number of lines of history that a channel can keep.
+  - name: prefixmsg
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send a notice before sending history.
+  details: ""
+  example: |-
+    ```xml
+    <chanhistory bots="yes"
+                 enableumode="yes"
+                 maxlines="50"
+                 prefixmsg="yes">
+    ```
+
+chmodes:
+  chars:
+  - name: history
+    char: H
+    type: Parameter
+    syntax: <count>:<period>
+    usable_by: Channel operators
+    description: |-
+      Sends up to &lt;count&gt; messages from the last &lt;period&gt; on join.
+  example:
+  - description: |-
+      Replays up to 10 messages from the last 30 minutes
+    text: |-
+      /MODE #channel +H 10:1800
+  - description: |-
+      Replays up to 25 messages from the last two hours
+    text: |-
+      /MODE #channel +H 25:2h
+
+umodes:
+  chars:
+  - name: nohistory
+    char: N
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Disables receiving channel history on join.
+  example: ""

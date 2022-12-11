@@ -1,0 +1,26 @@
+name: check
+
+description: |-
+  This module adds the `/CHECK` command which allows server operators to look up details about a channel, user, IP address, or hostname.
+commands:
+- name: CHECK
+  param_count: 1-2
+  oper_only: true
+  syntax:
+    - <channel> [<server>]
+    - <hostname> [<server>]
+    - <ident> [<server>]
+    - <ip> [<server>]
+    - <nickname> [<server>]
+    - <realname> [<server>]
+  description: |-
+    Looks up information about the specified channel, user, IP address, or hostname.
+  example:
+  - description: |-
+      Looks up details relating to #channel
+    text: |-
+      /CHECK #example
+  - description: |-
+      Looks up details relating to Sadie on irc2.example.com
+    text: |-
+      /CHECK Sadie irc2.example.com
