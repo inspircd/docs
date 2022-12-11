@@ -51,6 +51,7 @@ title: Introduction
 
 <hr>
 
+- [Commands](/4/commands)
 - [Channel Modes](/4/channel-modes)
     - [Extended Bans](/4/extended-bans)
 - [User Modes](/4/user-modes)

@@ -2,9 +2,13 @@
 title: v{{ version }} Commands
 ---
 
+{% if '4' == version %}
+{! 4/_support.md !}
+{% endif %}
+
 ## Commands
 
-This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/3/modules).
+This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/{{ version }}/modules).
 
 {% for cmd in core_commands -%}
 ### `/{{ cmd.name }} {{ cmd.syntax }}`
@@ -12,7 +16,7 @@ This page only lists core commands. For details on the commands of a specific mo
 {{ cmd.description }}
 
 {% if cmd.oper_only %}
-This command is only usable by server operators with `{{ cmd.name }}` in [one of their `<class>` blocks](/3/configuration/#class).
+This command is only usable by server operators with `{{ cmd.name }}` in [one of their `<class>` blocks](/{{ version }}/configuration/#class).
 {% endif %}
 
 {% if cmd.example %}
