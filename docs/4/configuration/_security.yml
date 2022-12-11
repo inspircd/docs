@@ -1,0 +1,116 @@
+name: security
+description: |-
+  The `<security>` tag defines configuration options relating to server security. This tag can only be defined once.
+attributes:
+- name: announceinvites
+  type: Text
+  required: false
+  default: dynamic
+  description: |-
+    Whether to send an announcement when a user is invited to a channel.
+- name: customversion
+  type: Text
+  required: false
+  default: null
+  description: |-
+    A custom string to show in the `/VERSION` output.
+- name: genericoper
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
+- name: hidebans
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to only show X-line messages to server operators.
+- name: hidekills
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the text to show in a kill message instead of the name of the server operator who caused the kill.
+- name: hideserver
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the text to show in place of a server name.
+- name: hidesplits
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to hide server names in netsplit quits from non-server operators.
+- name: hideservicekills
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to hide server notices about kills by users on services servers.
+- name: maxtargets
+  type: Number
+  required: false
+  default: '20'
+  description: |-
+    The maximum number of targets a user may specify in a command.
+- name: restrictbannedusers
+  type: Text
+  required: false
+  default: 'Yes'
+  description: |-
+    Whether to restrict the behaviour of users who are banned in a channel.
+- name: runasgroup
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the group to switch to after starting up (requires starting as root).
+- name: runasuser
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then the user to switch to after starting up (requires starting as root).
+- name: userstats
+  type: Text
+  required: false
+  default: Pu *(since 3.11.0)*<br>*None (3.0.0 to 3.10.0)*
+  description: |-
+    The `/STATS` characters that a non-server operator can view.
+details: |+
+  The announceinvites field should be set to one of the following values:
+
+  Value   | Description
+  ------- | -----------
+  none    | Don't send any invite announcements.
+  ops     | Send invite announcements to channel operators and higher ranked users.
+  dynamic | Send invites to channel half-operators (if available) and higher ranked users.
+  all     | Send invites to all channel members.
+
+  The restrictbannedusers field should be set to one of the following values:
+
+  Value  | Description
+  ------ | -----------
+  yes    | Banned users should be restricted.
+  no     | Banned users should not be restricted.
+  silent | Banned users should be restricted but should not be informed.
+
+example: |-
+  ```xml
+  <security announceinvites="dynamic"
+            customversion=""
+            genericoper="no"
+            hidebans="yes"
+            hidekills=""
+            hideserver=""
+            hidesplits="no"
+            hideservicekills="yes"
+            maxtargets="20"
+            restrictbannedusers="yes"
+            runasgroup=""
+            runasuser=""
+            userstats="Pu">
+  ```
