@@ -9,6 +9,16 @@ nav:
         - Modules: 3/modules/index.md
         - SNOMasks: 3/snomasks.md
         - Change Log: 3/change-log.md
+    - InspIRCd 4:
+#       - Installation: 4/installation/index.md
+        - Configuration: 4/configuration/index.md
+        - Commands: 4/commands/index.md
+        - Channel Modes: 4/channel-modes.md
+        - Extended Bans: 4/extended-bans.md
+        - User Modes: 4/user-modes.md
+#       - Modules: 4/modules/index.md
+#       - SNOMasks: 4/snomasks.md
+        - Change Log: 4/change-log.md
     - Downloads: https://github.com/inspircd/inspircd/releases/latest
     - Issue Tracker: https://github.com/inspircd/inspircd/issues
     - Developer API: https://www.inspircd.org/api/
