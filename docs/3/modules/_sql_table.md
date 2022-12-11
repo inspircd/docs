@@ -2,8 +2,8 @@
 
 The following SQL modules are included with InspIRCd:
 
-Engine  | Module                        | Description
-------- | ----------------------------- | -----------
-mysql   | [mysql](/3/modules/mysql)     | Queries a [MySQL](https://www.mysql.com) database.
-pgsql   | [pgsql](/3/modules/pgsql)     | Queries a [PostgreSQL](https://www.postgresql.org) database.
-sqlite3 | [sqlite3](/3/modules/sqlite3) | Queries an [SQLite](https://www.sqlite.org) database.
+Engine  | Module                                    | Description
+------- | ----------------------------------------- | -----------
+mysql   | [mysql](/{{ version }}/modules/mysql)     | Queries a [MySQL](https://www.mysql.com) database.
+pgsql   | [pgsql](/{{ version }}/modules/pgsql)     | Queries a [PostgreSQL](https://www.postgresql.org) database.
+sqlite3 | [sqlite3](/{{ version }}/modules/sqlite3) | Queries an [SQLite](https://www.sqlite.org) database.

@@ -2,8 +2,8 @@
 
 The following TLS (SSL) modules are included with InspIRCd:
 
-Name    | Module                                | Description
-------- | ------------------------------------- | -----------
-gnutls  | [ssl_gnutls](/3/modules/ssl_gnutls)   | Uses the [GnuTLS](https://www.gnutls.org) library.
-mbedtls | [ssl_mbedtls](/3/modules/ssl_mbedtls) | Uses the [mbedTLS](https://tls.mbed.org) library.
-openssl | [ssl_openssl](/3/modules/ssl_openssl) | Uses the [OpenSSL](https://www.openssl.org) library.
+Name    | Module                                            | Description
+------- | ------------------------------------------------- | -----------
+gnutls  | [ssl_gnutls](/{{ version }}/modules/ssl_gnutls)   | Uses the [GnuTLS](https://www.gnutls.org) library.
+mbedtls | [ssl_mbedtls](/{{ version }}/modules/ssl_mbedtls) | Uses the [mbedTLS](https://tls.mbed.org) library.
+openssl | [ssl_openssl](/{{ version }}/modules/ssl_openssl) | Uses the [OpenSSL](https://www.openssl.org) library.

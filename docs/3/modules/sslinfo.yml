@@ -103,4 +103,4 @@ commands:
       /SSLINFO #wibble
 
 special_notes: |-
-  {! 3/modules/_ssl_table.md !}
+  {% include "3/modules/_ssl_table.md" %}
