@@ -1,5 +1,5 @@
 ---
-title: v{{ version }} Breaking Changes
+title: v3 Breaking Changes
 ---
 
 ## Breaking changes since InspIRCd 2
