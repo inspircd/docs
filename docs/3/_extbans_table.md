@@ -20,7 +20,7 @@
 {% else %}
 <td markdown="1">`{{ extban.syntax | join('`<br>`') }}`</td>
 {% endif %}
-<td markdown="1">[{{ extban.module }}](/3/modules/{{ extban.module }}/)</td>
+<td markdown="1">[{{ extban.module }}](/{{ version }}/modules/{{ extban.module }}/)</td>
 <td markdown="1">{{ extban.description }}</td>
 </tr>
 {% endfor %}

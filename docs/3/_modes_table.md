@@ -23,7 +23,7 @@
 <td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
 {% endif %}
 <td markdown="1">{{ mode.usable_by }}</td>
-<td markdown="1">[{{ mode.module }}](/3/modules/{{ mode.module }}/)</td>
+<td markdown="1">[{{ mode.module }}](/{{ version }}/modules/{{ mode.module }}/)</td>
 </tr>
 {% endfor %}
 </tbody>
