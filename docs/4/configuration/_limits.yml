@@ -11,7 +11,7 @@ attributes:
 - name: maxchan
   type: Number
   required: false
-  default: '64'
+  default: '60'
   description: |-
     The maximum length of a channel name.
 - name: maxhost
@@ -35,7 +35,7 @@ attributes:
 - name: maxkick
   type: Number
   required: false
-  default: '255'
+  default: '300'
   description: |-
     The maximum length of a kick message.
 - name: maxmodes
@@ -53,33 +53,33 @@ attributes:
 - name: maxquit
   type: Number
   required: false
-  default: '255'
+  default: '300'
   description: |-
     The maximum length of a quit message.
 - name: maxreal
   type: Number
   required: false
-  default: '128'
+  default: '130'
   description: |-
     The maximum length of a real name (gecos).
 - name: maxtopic
   type: Number
   required: false
-  default: '307'
+  default: '330'
   description: |-
     The maximum length of a channel topic.
 details: ""
 example: |-
   ```xml
   <limits maxaway="200"
-          maxchan="64"
+          maxchan="60"
           maxhost="64"
           maxident="11"
           maxkey="30"
-          maxkick="255"
+          maxkick="300"
           maxmodes="20"
           maxnick="32"
-          maxquit="255"
-          maxreal="128"
-          maxtopic="307">
+          maxquit="300"
+          maxreal="130"
+          maxtopic="330">
   ```
