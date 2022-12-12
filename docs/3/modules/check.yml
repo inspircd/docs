@@ -7,10 +7,10 @@ commands:
   param_count: 1-2
   oper_only: true
   syntax:
-    - <channel> [<server>]
-    - <nickname> [<server>]
-    - <ip> [<server>]
-    - <hostname> [<server>]
+  - <channel> [<server>]
+  - <nickname> [<server>]
+  - <ip> [<server>]
+  - <hostname> [<server>]
   description: |-
     Looks up information about the specified channel, user, IP address, or hostname.
   example:
