@@ -44,8 +44,6 @@ title: Introduction
 
 ### InspIRCd 4 (development)
 
-**Full docs coming soon**
-
 - [Installation](/4/installation)
 - [Configuration](/4/configuration)
     - [Useful Snippets](/4/configuration/useful-snippets)
