@@ -13,6 +13,7 @@ title: Introduction
 - [License](/license)
 - [Packaging Advice](/packaging)
 - [Security Advisories](/security)
+- [Social Media](/social)
 
 ### Developer
 
