@@ -8,19 +8,29 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-<!-- TODO: ensure changes after commit ee41348dbd93dc891a3afaccd74db857ea21ed12 are added to this list before release. -->
+<!-- TODO: ensure changes after commit 4dff02f7ed5ca4d3e697851b6fcc19136e43c171 are added to this list before release. -->
 
  **This version of InspIRCd has not yet been released.**
+
+- Added `<sslprofile:tlsv13>` to the ssl_openssl module for disabling TLS 1.3.
+
+- Added support for forcing the use of TLS (SSL) in a MySQL database connection.
 
 - Added support for the IRCv3 `extended-monitor` extension.
 
 - Added the `inspircd.org/echo` vendor tag to echoed messages.
 
+- Added the `regex_pcre2` module which provides the `pcre` regex engine with PCRE2.
+
+- Added the `servers/ignore-blockamsg` server operator privilege to allow server operators to send messages to multiple targets at once.
+
+- Added the ability to add multiple [EGKQZ]-lines and shuns at the same time.
+
 - Added the name of the user's I/O serializer to the `/CHECK` output.
 
 - Added warning messages when a config file is not owned by the user/group the server is running as.
 
-- Allowed building the `regex_posix` module against pcreposix on Windows for link compatibility reasons.
+- Allowed building the `regex_posix` module against PCRE2's POSIX compatibility layer on Windows for link compatibility reasons.
 
 - Changed temporary module filenames to be more unique.
 
@@ -32,25 +42,41 @@ This page lists changes which have happened between releases.
 
 - Fixed building the ldap module against the Windows LDAP implementation.
 
+- Fixed building with the Intel C++ compiler.
+
+- Fixed detecting the existence of the modern Clang-based Intel C++ compiler.
+
 - Fixed expired [GKZ]-lines still existing in the ban cache.
 
 - Fixed including unnecessary build objects in the Windows installer.
 
 - Fixed matching bans against partially expanded IPv6 addresses.
 
+- Fixed MOTD lines having a space erroneously prepended to them.
+
 - Fixed not being able to use STS when a connection is proxied with HAProxy.
+
+- Fixed not notifying a server operator when they try to add an X-line that matches more than `<insane:trigger>` of the network.
 
 - Fixed not sending `ERR_NONICKNAMEGIVEN` in response to empty `/WHOIS` and `/WHOWAS` requests.
 
 - Fixed not sending tags when sending numerics to users.
 
+- Fixed not showing why a list of files in the modules directory could not be obtained.
+
 - Fixed picking channels that are not visible to show in the /WHO output.
+
+- Fixed reading the MOTD when `<connect:motd>` is a path instead of a `<files>`/`<execfiles>` key.
 
 - Fixed receiving `ERR_NOSUCHNICK` when sending a tag message to a server.
 
 - Fixed setting malformed Z-lines when a UNIX socket user is banned by the connectban module.
 
+- Fixed some spurious assertions when built against libstdc++ in assert mode.
+
 - Fixed the connectban module unnecessarily setting a CIDR Z-line instead of an IP Z-line.
+
+- Fixed the showfile module erroneously sending messages with no message body.
 
 - Fixed the silence module being too strict with unknown flags in silence metadata.
 
