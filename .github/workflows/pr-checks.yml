@@ -2,6 +2,7 @@ name: Check docs structure
 on:
   - pull_request
   - push
+  - workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
