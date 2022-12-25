@@ -4,6 +4,25 @@ description: |-
   This module adds channel mode `E` (repeat) which helps protect against spammers which spam the same message repeatedly.
 
 configuration:
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-repeat
+    added: 3.12.0
+    description: |-
+      Allows server operators to send repetitive messages to a channel with the `E` (repeat) mode set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send repetitive messages to a channel with the `E` (repeat) mode set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-repeat ...">
+    ```
+
 - name: repeat
   description: |-
     The `<repeat>` tag defines settings about how the repeat module should behave. This tag can only be defined once.

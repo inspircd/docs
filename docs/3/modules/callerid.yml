@@ -37,12 +37,11 @@ configuration:
 - name: class
   description: |-
     This module extends the core `<class:privs>` key with the following values:
-
-    Name                  | Description
-    --------------------- | -----------
-    users/ignore-callerid | Allows server operators to message users using callerid without being on their callerid list.
-  attributes: []
   extends: true
+  added_values:
+  - name: users/ignore-callerid
+    description: |-
+      Allows server operators to message users using callerid without being on their callerid list.
   details: ""
   example: |-
     Allows server operators with the class named BasicOper to message users using callerid without being on their callerid list.
