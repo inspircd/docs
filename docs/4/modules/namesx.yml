@@ -4,6 +4,6 @@ description: |-
   This module provides the IRCv3 `multi-prefix` client capability.
 
 client_caps:
-- name: '[multi-prefix](https://ircv3.net/specs/extensions/multi-prefix-3.1.html)'
+- name: '[multi-prefix](https://ircv3.net/specs/extensions/multi-prefix.html)'
   description: |-
     Causes responses to the `/NAMES` and `/WHO` commands to contain all prefix modes set on users.

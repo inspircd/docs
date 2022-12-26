@@ -4,6 +4,6 @@ description: |-
   This module provides the IRCv3 `userhost-in-names` client capability.
 
 client_caps:
-- name: '[userhost-in-names](https://ircv3.net/specs/extensions/userhost-in-names-3.2.html)'
+- name: '[userhost-in-names](https://ircv3.net/specs/extensions/userhost-in-names.html)'
   description: |-
     Causes responses to the `/NAMES` command to contain the full nick!user@host mask of returned users.

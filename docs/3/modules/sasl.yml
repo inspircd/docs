@@ -40,7 +40,7 @@ commands:
   # AUTHENTICATE is not documented here because it is not intended to be executed by users
 
 client_caps:
-- name: '[sasl](https://ircv3.net/specs/extensions/sasl-3.1.html)'
+- name: '[sasl](https://ircv3.net/specs/extensions/sasl-3.2.html)'
   description: |-
     Enables support for SASL authentication.
 

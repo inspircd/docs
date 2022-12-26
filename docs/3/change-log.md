@@ -776,7 +776,7 @@ This page lists changes which have happened between releases.
 
 - Developer: deprecated the `XLineManager::InvokeStats` methods in favour of a new overload which uses a generic numeric.
 
-- Developer: stabilised support for the [IRCv3 Standard Replies](https://ircv3.net/specs/extensions/standard-replies) specification.
+- Developer: stabilised support for the [IRCv3 Standard Replies](https://ircv3.net/specs/extensions/standard-replies.html) specification.
 
 - [Fixed a **crash** in the pgsql module when connecting to a server fails](/security/2020-01).
 
