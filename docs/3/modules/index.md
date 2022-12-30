@@ -196,6 +196,7 @@ Name                                          | Description
 [mysql](/3/modules/mysql)                     | Provides the ability for SQL modules to query a MySQL database.
 [pgsql](/3/modules/pgsql)                     | Provides the ability for SQL modules to query a PostgreSQL database.
 [regex_pcre](/3/modules/regex_pcre)           | Provides a regular expression engine which uses the PCRE library.
+[regex_pcre2](/3/modules/regex_pcre2)         | Provides a regular expression engine which uses the PCRE2 library.
 [regex_posix](/3/modules/regex_posix)         | Provides a regular expression engine which uses the POSIX.2 regular expression matching system.
 [regex_re2](/3/modules/regex_re2)             | Provides a regular expression engine which uses the RE2 library.
 [regex_stdlib](/3/modules/regex_stdlib)       | Provides a regular expression engine which uses the C++11 std::regex regular expression matching system.

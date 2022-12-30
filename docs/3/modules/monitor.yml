@@ -51,3 +51,8 @@ commands:
       Shows the status of all monitored users
     text: |-
       /MONITOR S
+
+client_caps:
+- name: '[extended-monitor](https://ircv3.net/specs/extensions/extended-monitor)'
+  description: |-
+    Allows sending state change messages (`AWAY`, `ACCOUNT`, `CHGHOST`, `SETNAME`) for monitored clients without a common channel.

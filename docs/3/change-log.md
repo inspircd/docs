@@ -8,15 +8,15 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-<!-- TODO: ensure changes after commit 4dff02f7ed5ca4d3e697851b6fcc19136e43c171 are added to this list before release. -->
-
- **This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2021-12-30.**
 
 - Added `<sslprofile:tlsv13>` to the ssl_openssl module for disabling TLS 1.3.
 
 - Added support for forcing the use of TLS (SSL) in a MySQL database connection.
 
 - Added support for the IRCv3 `extended-monitor` extension.
+
+- Added the WebSocket error message to the body of the response when closing with an error.
 
 - Added the `inspircd.org/echo` vendor tag to echoed messages.
 
@@ -38,6 +38,10 @@ This page lists changes which have happened between releases.
 
 - Developer: fixed the database identifier name accessor returning an empty string.
 
+- Fixed DNSBL marks being overwritten if a user has more than one of them.
+
+- Fixed MOTD lines having a space erroneously prepended to them.
+
 - Fixed `inspircd-testssl` being unable to detect the status of some servers.
 
 - Fixed building the ldap module against the Windows LDAP implementation.
@@ -51,8 +55,6 @@ This page lists changes which have happened between releases.
 - Fixed including unnecessary build objects in the Windows installer.
 
 - Fixed matching bans against partially expanded IPv6 addresses.
-
-- Fixed MOTD lines having a space erroneously prepended to them.
 
 - Fixed not being able to use STS when a connection is proxied with HAProxy.
 

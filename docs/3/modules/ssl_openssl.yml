@@ -199,6 +199,14 @@ configuration:
     added: 3.2.0
     description: |-
       Whether the TLSv1.2 protocol is enabled.
+  - name: tlsv13
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 3.15.0
+    description: |-
+      Whether the TLSv1.3 protocol is enabled.
+
   details: |-
     The crlmode field should be set to one of the following values:
 
@@ -226,7 +234,8 @@ configuration:
                 requestclientcert="yes"
                 tlsv1="no"
                 tlsv11="no"
-                tlsv12="yes">
+                tlsv12="yes"
+                tlsv13="yes">
     ```
 
 special_notes: |-

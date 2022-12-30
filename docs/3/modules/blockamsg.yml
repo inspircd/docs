@@ -36,3 +36,21 @@ configuration:
     <blockamsg delay="5s"
                action="killopers">
     ```
+- name: class
+  description: |-
+    This module extends the core `<class:privs>` key with the following values:
+  extends: true
+  added_values:
+  - name: servers/ignore-blockamsg
+    added: 3.15.0
+    description: |-
+      Allows server operators to send messages with the `/AMSG` and `/AME` commands.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send messages with the `/AMSG` and `/AME` commands.commands
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... servers/ignore-blockamsg ...">
+    ```

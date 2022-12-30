@@ -48,6 +48,7 @@ Module                                        | Library          | License      
 [mysql](/3/modules/mysql)                     | libmysqlclient   | GPLv2               | Yes
 [pgsql](/3/modules/pgsql)                     | libpq            | MIT                 | Yes
 [regex_pcre](/3/modules/regex_pcre)           | libpcre          | BSD 3-Clause        | Yes
+[regex_pcre2](/3/modules/regex_pcre2)         | libpcre2         | BSD 3-Clause        | Yes
 [regex_posix](/3/modules/regex_posix)         | *C stdlib*       | *Depends*           | *Maybe*
 [regex_re2](/3/modules/regex_re2)             | libre2           | BSD 3-Clause        | Yes
 [regex_stdlib](/3/modules/regex_stdlib)       | *C++ stdlib*     | *Depends*           | *Maybe*
