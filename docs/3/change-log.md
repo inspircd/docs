@@ -8,7 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.15.0
 
-**This version of InspIRCd was released on 2021-12-30.**
+**This version of InspIRCd was released on 2022-12-30.**
 
 - Added `<sslprofile:tlsv13>` to the ssl_openssl module for disabling TLS 1.3.
 
@@ -92,7 +92,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.14.0
 
-**This version of InspIRCd was released on 2021-08-26.**
+**This version of InspIRCd was released on 2022-08-26.**
 
 - Added support for exiting with a binary exit code in order not to confuse some init systems.
 
