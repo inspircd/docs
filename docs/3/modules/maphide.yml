@@ -7,6 +7,7 @@ configuration:
 - name: security
   description: |-
     This module extends [the core `<security>` tag](/{{ version }}/configuration#security) with the following fields:
+  extends: true
   attributes:
   - name: maphide
     type: Text

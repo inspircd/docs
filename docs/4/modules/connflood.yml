@@ -50,6 +50,7 @@ configuration:
 - name: connect
   description: |-
     This module extends [the core `<connect>` tags](/4/configuration#connect) with the following fields:
+  extends: true
   attributes:
   - name: useconnflood
     type: Boolean

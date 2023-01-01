@@ -109,6 +109,7 @@ configuration:
 - name: connect
   description: |-
     This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  extends: true
   attributes:
   - name: webirc
     type: Text

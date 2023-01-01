@@ -152,6 +152,7 @@ configuration:
 - name: options
   description: |-
     This module extends [the core `<options>` tag](/4/configuration#options) with the following fields:
+  extends: true
   attributes:
   - name: allowmismatch
     type: Boolean
@@ -189,6 +190,7 @@ configuration:
 - name: performance
   description: |-
     This module extends [the core `<performance>` tag](/4/configuration#performance) with the following fields:
+  extends: true
   attributes:
   - name: quietbursts
     type: Boolean
@@ -205,6 +207,7 @@ configuration:
 - name: security
   description: |-
     This module extends [the core `<security>` tag](/4/configuration#security) with the following fields:
+  extends: true
   attributes:
   - name: flatlinks
     type: Boolean
