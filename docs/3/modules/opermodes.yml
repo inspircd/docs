@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: [oper, type]
   description: |-
-    This module extends the core `<oper>` and `<type>` tags with the following fields:
+    This module extends the core [`<oper>`](/{{ version }}/configuration#oper) and [`<type>`](/{{ version }}/configuration#type) tags with the following fields:
   extends: true
   attributes:
   - name: modes

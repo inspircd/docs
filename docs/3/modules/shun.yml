@@ -59,7 +59,7 @@ configuration:
     ```
 - name: class
   description: |-
-    This module extends the core `<class:privs>` key with the following values:
+    This module extends [the core `<class:privs>` field](/3/configuration#class) with the following values:
   extends: true
   added_values:
   - name: servers/ignore-shuns

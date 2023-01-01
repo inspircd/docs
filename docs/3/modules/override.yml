@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: [oper, type]
   description: |-
-    This module extends the core `<oper>` and `<type>` tags with the following fields:
+    This module extends the core [`<oper>`](/3/configuration#oper) and [`<type>`](/3/configuration#type) tags with the following fields:
   attributes:
   - name: override
     type: Text

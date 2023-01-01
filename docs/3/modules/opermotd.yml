@@ -6,7 +6,7 @@ description: |-
 configuration:
 - name: [files, execfiles]
   description: |-
-    This module extends the core `<files>` and `<execfiles>` tags with the following fields:
+    This module extends the core [`<files>`](/{{ version }}/configuration#files) and [`<execfiles>`](/{{ version }}/configuration#execfiles) tags with the following fields:
   extends: true
   attributes:
   - name: opermotd
