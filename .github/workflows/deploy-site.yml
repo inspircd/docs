@@ -1,7 +1,9 @@
 name: Deploy the docs site
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 permissions:
   contents: read
   id-token: write
@@ -28,16 +30,13 @@ jobs:
           mkdocs build
 
       - name: Upload docs site artifact
-        if: github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./site
 
       - name: Setup GitHub Pages
-        if: github.ref == 'refs/heads/master'
         uses: actions/configure-pages@v2
 
       - name: Deploy docs site to GitHub Pages
-        if: github.ref == 'refs/heads/master'
         id: deployment
         uses: actions/deploy-pages@v1

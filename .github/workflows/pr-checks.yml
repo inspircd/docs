@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies
         run: |
             sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
-            sudo pip3 install -r requirements.txt
+            sudo pip3 install -r requirements.txt .
 
       - name: Check for broken redirects
         run: ./tools/find-broken-redirects
@@ -28,3 +28,8 @@ jobs:
 
       - name: Lint YAML
         run: yamllint docs/
+
+      - name: Build the docs site
+        if: github.event_name != 'push'
+        run: |
+          mkdocs build
