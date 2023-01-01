@@ -30,6 +30,33 @@ configuration:
              ...
              requireaccount="yes">
     ```
+- name: [oper, type]
+  description: |-
+    This module extends the core [`<oper>`](/4/configuration#oper) and [`<type>`](/4/configuration#type) tags with the following fields:
+  extends: true
+  attributes:
+  - name: account
+    type: Text
+    required: false
+    default: null
+    description: |-
+      If defined then a space-delimited list of user account names or account identifiers to check against this server operator's account.
+  example: |-
+    Requires Sadie to be logged into the user account with the name Sadie or identifier 1234567890 in order to log in to their server operator account:
+
+    ```xml
+    <oper name="Sadie"
+          ...
+          account="Sadie 1234567890">
+    ```
+
+    Requires server operators of type NetAdmin to be logged into the user account with the name Sadie or identifier 1234567890 in order to log in to their server operator account:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
+          account="Sadie 1234567890">
+    ```
 
 chmodes:
   chars:

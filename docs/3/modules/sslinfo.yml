@@ -31,9 +31,10 @@ configuration:
              ...
              requiressl="yes">
     ```
-- name: oper
+- name: [oper, type]
   description: |-
-    This module extends [the core `<oper>` tag](/3/configuration#oper) with the following fields:
+    This module extends the core [`<oper>`](/3/configuration#oper) and [`<type>`](/3/configuration#type) tags with the following fields:
+  extends: true
   attributes:
   - name: autologin
     type: Text
@@ -46,7 +47,7 @@ configuration:
     required: false
     default: null
     description: |-
-      If defined then a space-delimited list of fingerprints of this server operator's TLS (SSL) client certificates.
+      If defined then a space-delimited list of TLS (SSL) client certificate fingerprints to check against this server operator's TLS (SSL) client certificate.
   - name: sslonly
     type: Boolean
     required: false
@@ -62,10 +63,21 @@ configuration:
     if-host-match | Automatically log users with the specified client certificate fingerprint into this server operator account if their hostname matches `<oper:host>`.
     no            | Do not automatically log users with the specified client certificate into this server operator account.
   example: |-
+    Requires Sadie to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+
     ```xml
     <oper name="Sadie"
           ...
           autologin="no"
+          fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
+          sslonly="yes">
+    ```
+
+    Requires server operators of type NetAdmin to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
           fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
           sslonly="yes">
     ```

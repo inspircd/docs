@@ -44,6 +44,12 @@ attributes:
   default: null
   description: |-
     If defined then a virtual hostname to set on users who log into this server operator account.
+- name: autologin
+  type: Text
+  required: false
+  default: 'never'
+  description: |-
+    Whether to automatically log server operators in when they connect to the server.
 - name: commands
   type: Text
   required: false
@@ -75,6 +81,14 @@ attributes:
   description: |-
     The server operator-only snomasks that this server operator can change. This is in addition the snomasks from the operator type and operator classes.
 details: |+
+  The autologin field should be set to one of the following values:
+
+  Value   | Description
+  ------- | -----------
+  never   | Do not automatically log users in to this server operator account.
+  relaxed | Automatically log users into this server operator account if their details (account/host/sslonly/etc) match.
+  strict  | Automatically log users into this server operator account if their details (account/host/sslonly/etc) match and their nick is the same as the account name.
+
   {! 4/modules/_hash_table.md !}
 
 example: |-
@@ -86,6 +100,7 @@ example: |-
         host="*@bnc.example.com"
         type="NetAdmin"
         vhost="staff.example.net"
+        autologin="never"
         commands="-* KILL ZLINE"
         privs="users/auspex -servers/auspex"
         chanmodes="-*+P"

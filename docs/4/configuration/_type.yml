@@ -26,6 +26,12 @@ attributes:
   default: null
   description: |-
     If defined then a virtual hostname to set on users who log into a server operator account using this type.
+- name: autologin
+  type: Text
+  required: false
+  default: 'never'
+  description: |-
+    Whether to automatically log server operators using this type in when they connect to the server.
 - name: commands
   type: Text
   required: false
@@ -56,13 +62,21 @@ attributes:
   default: null
   description: |-
     The server operator-only snomasks that server operators of this type can change. This is in addition the snomasks from the operator classes.
-details: ""
+details: |+
+  The autologin field should be set to one of the following values:
+
+  Value   | Description
+  ------- | -----------
+  never   | Do not automatically log users in to a server operator account.
+  relaxed | Automatically log users into a server operator account if their details (account/host/sslonly/etc) match.
+  strict  | Automatically log users into a server operator account if their details (account/host/sslonly/etc) match and their nick is the same as the account name.
 example: |-
   ```xml
   <type name="NetAdmin"
         class="ServerOperators"
         classes="BanControl HostCloak OperChat SACommands ServerLink Shutdown"
         vhost="staff.example.net"
+        autologin="never"
         commands="-* KILL ZLINE"
         privs="users/auspex -servers/auspex"
         chanmodes="-*+P"

@@ -1,1 +1,84 @@
-../../3/modules/opermotd.yml
+name: opermotd
+
+description: |-
+  This module adds the `/OPERMOTD` command which adds a special message of the day for server operators.
+
+configuration:
+- name: [files, execfiles]
+  description: |-
+    This module extends the core [`<files>`](/4/configuration#files) and [`<execfiles>`](/4/configuration#execfiles) tags with the following fields:
+  extends: true
+  attributes:
+  - name: opermotd
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The file to read or command to execute to obtain the opermotd text.
+  details: ""
+  example: |-
+    Obtains the server operator message of the day by reading opermotd.txt:
+
+    ```xml
+    <files ...
+           opermotd="opermotd.txt">
+    ```
+
+    Obtains the server operator message of the day by executing `curl https://www.example.com/opermotd.txt`:
+
+    ```xml
+    <execfiles ...
+               opermotd="curl https://www.example.com/opermotd.txt">
+    ```
+- name: [oper, type]
+  description: |-
+    This module extends the core [`<oper>`](/4/configuration#oper) and [`<type>`](/4/configuration#type) tags with the following fields:
+  extends: true
+  attributes:
+  - name: motd
+    type: Text
+    required: false
+    default: opermotd
+    description: |-
+      The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the server operator message of the day.
+  - name: automotd
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to send the server operator message of the day to server operators when they log into their server operator account.
+  details: ""
+  example: |-
+    Shows an oper MOTD to Sadie when they log into their server operator account:
+
+    ```xml
+    <oper name="Sadie"
+          ...
+          motd="opermotd"
+          automotd="yes">
+    ```
+
+    Shows an oper MOTD to server operators of type NetAdmin when they log into their server operator account:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
+          motd="opermotd"
+          automotd="yes">
+    ```
+commands:
+- name: OPERMOTD
+  param_count: 0-1
+  oper_only: true
+  syntax: '[<server>]'
+  description: |-
+    Requests the server operator message of the day for &lt;server&gt;.
+  example:
+  - description: |-
+      Requests the server operator message of the day for the local server
+    text: |-
+      /OPERMOTD
+  - description: |-
+      Requests the server operator message of the day for irc.example.com
+    text: |-
+      /OPERMOTD irc.example.com

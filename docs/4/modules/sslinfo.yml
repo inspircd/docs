@@ -31,22 +31,17 @@ configuration:
              ...
              requiressl="yes">
     ```
-- name: oper
+- name: [oper, type]
   description: |-
-    This module extends [the core `<oper>` tag](/4/configuration#oper) with the following fields:
+    This module extends the core [`<oper>`](/4/configuration#oper) and [`<type>`](/4/configuration#type) tags with the following fields:
+  extends: true
   attributes:
-  - name: autologin
-    type: Boolean
-    required: false
-    default: 'no'
-    description: |-
-      Whether to automatically log server operators in when they connect to the server.
   - name: fingerprint
     type: Text
     required: false
     default: null
     description: |-
-      If defined then a space-delimited list of fingerprints of this server operator's TLS (SSL) client certificates.
+      If defined then a space-delimited list of TLS (SSL) client certificate fingerprints to check against this server operator's TLS (SSL) client certificate.
   - name: sslonly
     type: Boolean
     required: false
@@ -54,10 +49,20 @@ configuration:
     description: |-
       Whether this server operator must be connected using TLS (SSL) to log into their account.
   example: |-
+    Requires Sadie to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+
     ```xml
     <oper name="Sadie"
           ...
-          autologin="no"
+          fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
+          sslonly="yes">
+    ```
+
+    Requires server operators of type NetAdmin to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+
+    ```xml
+    <type name="NetAdmin"
+          ...
           fingerprint="5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249"
           sslonly="yes">
     ```
