@@ -10,7 +10,9 @@ description: |-
   --------- | -----------
   A         | Show users who have an away message matching `<pattern>`.
   a         | Show users who have an account name matching `<pattern>`.
+  d         | Also show users who have been delay joined (requires [the delayjoin module](/{{ version }}/modules/delayjoin)).
   f         | Only show users on remote (far) servers.
+  G         | Show users who are connecting from a country with an alpha-2 code matching `<pattern>` (requires [the geoban module](/{{ version }}/modules/geoban)).
   h         | Show users who have a hostname matching `<pattern>`. If the 'x' modifier is specified then this will match against the real hostname instead of the display hostname.
   i         | Show users who have an IP address matching `<pattern>`.
   l         | Only show users on the local server.
