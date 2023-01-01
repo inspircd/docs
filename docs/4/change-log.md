@@ -10,6 +10,56 @@ This page lists changes which have happened between releases.
 
 # InspIRCd 4.0.0a17
 
+**This pre-release version of InspIRCd was released on 2023-01-01.**
+
+- Added oper idle information to `/STATS P`.
+
+- Added support for oper type specific MOTDs.
+
+- Added support for overriding extban characters via the config file.
+
+- Added support for overriding mode characters via the config file.
+
+- Added support for requiring an oper to be logged into a user account.
+
+- Changed the clock difference allowance between servers to be stricter (15s/5s for fail/warn vs 60s/15s in v3).
+
+- Changed the default value for `<bind:replace>` to yes.
+
+- Developer: added `ListExtItem` for wrapping a vector/set extension.
+
+- Developer: added `SimpleExtItem::GetRef` to get a constant reference to an extension value using the default it does not exist.
+
+- Developer: added a flag to the oper events that declares if an oper attempt was done automatically.
+
+- Developer: added an option to `Percent::Encode` to encode as lower case.
+
+- Developer: added the `irc::sockets::sockaddrs::is_local` method to determine if a socket address points to a local address.
+
+- Developer: changed the socket address arguments to `Module::OnAcceptConnection` and various `IOHook` functions to be a constant referewnce instead of a pointer.
+
+- Developer: changed various `SocketEngine` methods to take an `EventHandler` instead of a file descriptor.
+
+- Developer: removed the automatic fallback from `ExtensionItem::FromInternal` to `ExtensionItem::FromNetwork`.
+
+- Developer: removed the unused `Extensible` argument to `InspIRCd::PassCompare`.
+
+- Fixed canonicalising an extban when added via the `/TBAN` command.
+
+- Fixed parsing the v3 fallback config in the deaf module.
+
+- Fixed the banredirect module breaking when encountering a long-style extban.
+
+- Improved the log messages when an oper attempt succeeds or fails.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Moved `<oper:autologin>` to the core and reworked the config for it.
+
+- Reworked the levels at which various messages are logged to make more sense.
+
+# InspIRCd 4.0.0a17
+
 **This pre-release version of InspIRCd was released on 2022-12-01.**
 
 - Added the `inspircd.org/stats-tags` capability to get statistics data in message tags.

@@ -80,6 +80,8 @@ title: v4 Breaking Changes
 
 - `<openssl>` has been removed. You should configure a TLS (SSL) profile instead.
 
+- `<oper:autologin>` must now be set to "relaxed" or "strict" instead of "yes". To keep v3 behaviour you should set it to "relaxed".
+
 - `<options:allowzerolimit>` has been removed with no replacement (now always disabled).
 
 - `<options:casemapping>` has been removed with no replacement (ascii casemapping is now the only core option).
