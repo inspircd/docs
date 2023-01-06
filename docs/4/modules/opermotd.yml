@@ -40,7 +40,7 @@ configuration:
     required: false
     default: opermotd
     description: |-
-      The name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the server operator message of the day.
+      The file path or name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the server operator message of the day.
   - name: automotd
     type: Boolean
     required: false
