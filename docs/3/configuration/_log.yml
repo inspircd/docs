@@ -62,6 +62,7 @@ details: |+
   core_channel         | debug                       | Messages relating to channels.
   core_dns             | sparse<br>default<br>debug  | Messages relating to DNS lookups.
   core_hostname_lookup | debug                       | Messages relating to user hostname lookups.
+  core_info            | default                     | Messages relating to server-provided information.
   core_oper            | sparse<br>default           | Messages relating to server operators.
   core_reloadmodule    | debug                       | Messages relating to the RELOADMODULE command.
   core_who             | debug                       | Messages relating to the WHO command.

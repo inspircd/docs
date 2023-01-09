@@ -48,72 +48,74 @@ details: |+
 
   The type field should be set to one or more of the following values:
 
-  Value                | Logging Levels Used      | Description
-  -------------------- | ------------------------ | -----------
-  BANCACHE             | debug                    | Messages relating to the X-line result cache.
-  CHANNELS             | debug                    | Messages relating to channels.
-  COMMAND              | normal                   | Messages relating to command execution.
-  CONFIG               | normal<br>debug          | Messages relating to the configuration.
-  CONNECTCLASS         | normal<br>debug          | Messages relating to [connect classes](#connect).
-  CULLLIST             | debug                    | Messages relating to object cull lists.
-  LOG                  | normal                   | Messages relating to logging.
-  MODE                 | debug                    | Messages relating to modes.
-  MODULE               | normal<br>debug          | Messages relating to modules.
-  SERVICE              | debug                    | Messages relating to service registration.
-  SOCKET               | normal<br>debug          | Messages relating to network sockets.
-  STARTUP              | normal                   | Messages relating to the startup process.
-  USERINPUT            | rawio                    | Messages relating to user input.
-  USEROUTPUT           | rawio                    | Messages relating to user output.
-  USERS                | normal<br>debug          | Messages relating to users.
-  core_channel         | debug                    | Messages relating to channels.
-  core_dns             | error<br>normal<br>debug | Messages relating to DNS lookups.
-  core_hostname_lookup | debug                    | Messages relating to user hostname lookups.
-  core_oper            | error<br>normal          | Messages relating to server operators.
-  core_reloadmodule    | debug                    | Messages relating to the RELOADMODULE command.
-  core_who             | debug                    | Messages relating to the WHO command.
-  core_whowas          | normal                   | Messages relating to the WHOWAS command.
-  m_callerid           | normal                   | Messages relating to [the m_callerid module](/4/modules/m_callerid)
-  m_cap                | debug                    | Messages relating to [the m_cap module](/4/modules/m_cap)
-  m_chanlog            | normal                   | Messages relating to [the m_chanlog module](/4/modules/m_chanlog)
-  m_cloaking           | normal                   | Messages relating to [the m_cloaking module](/4/modules/m_cloaking)
-  m_codepage           | debug                    | Messages relating to [the m_codepage module](/4/modules/m_codepage)
-  m_connectban         | debug                    | Messages relating to [the m_connectban module](/4/modules/m_connectban)
-  m_customprefix       | debug                    | Messages relating to [the m_customprefix module](/4/modules/m_customprefix)
-  m_customtitle        | normal                   | Messages relating to [the m_customtitle module](/4/modules/m_customtitle)
-  m_dccallow           | debug                    | Messages relating to [the m_dccallow module](/4/modules/m_dccallow)
-  m_disable            | normal<br>debug          | Messages relating to [the m_disable module](/4/modules/m_disable)
-  m_dnsbl              | debug                    | Messages relating to [the m_dnsbl module](/4/modules/m_dnsbl)
-  m_filter             | normal<br>debug          | Messages relating to [the m_filter module](/4/modules/m_filter)
-  m_gateway            | normal<br>debug          | Messages relating to [the m_gateway module](/4/modules/m_gateway)
-  m_geo_maxmind        | debug                    | Messages relating to [the m_geo_maxmind module](/4/modules/m_geo_maxmind)
-  m_hidemode           | debug                    | Messages relating to [the m_hidemode module](/4/modules/m_hidemode)
-  m_httpd              | debug                    | Messages relating to [the m_httpd module](/4/modules/m_httpd)
-  m_httpd_acl          | debug                    | Messages relating to [the m_httpd_acl module](/4/modules/m_httpd_acl)
-  m_httpd_config       | debug                    | Messages relating to [the m_httpd_config module](/4/modules/m_httpd_config)
-  m_httpd_stats        | debug                    | Messages relating to [the m_httpd_stats module](/4/modules/m_httpd_stats)
-  m_ident              | debug                    | Messages relating to [the m_ident module](/4/modules/m_ident)
-  m_ircv3_sts          | debug                    | Messages relating to [the m_ircv3_sts module](/4/modules/m_ircv3_sts)
-  m_ldapauth           | debug                    | Messages relating to [the m_ldapauth module](/4/modules/m_ldapauth)
-  m_mysql              | normal<br>debug          | Messages relating to [the m_mysql module](/4/modules/m_mysql)
-  m_operlog            | normal                   | Messages relating to [the m_operlog module](/4/modules/m_operlog)
-  m_password_hash      | normal                   | Messages relating to [the m_password_hash module](/4/modules/m_password_hash)
-  m_permchannels       | normal<br>debug          | Messages relating to [the m_permchannels module](/4/modules/m_permchannels)
-  m_pgsql              | normal<br>debug          | Messages relating to [the m_pgsql module](/4/modules/m_pgsql)
-  m_sasl               | normal<br>debug          | Messages relating to [the m_sasl module](/4/modules/m_sasl)
-  m_showfile           | normal                   | Messages relating to [the m_showfile module](/4/modules/m_showfile)
-  m_silence            | debug                    | Messages relating to [the m_silence module](/4/modules/m_silence)
-  m_spanningtree       | normal<br>debug<br>rawio | Messages relating to [the m_spanningtree module](/4/modules/m_spanningtree)
-  m_sqlite3            | normal<br>debug          | Messages relating to [the m_sqlite3 module](/4/modules/m_sqlite3)
-  m_sqloper            | error<br>normal          | Messages relating to [the m_sqloper module](/4/modules/m_sqloper)
-  m_ssl_gnutls         | normal<br>debug          | Messages relating to [the m_ssl_gnutls module](/4/modules/m_ssl_gnutls)
-  m_ssl_mbedtls        | normal<br>debug          | Messages relating to [the m_ssl_mbedtls module](/4/modules/m_ssl_mbedtls)
-  m_ssl_openssl        | normal<br>debug          | Messages relating to [the m_ssl_openssl module](/4/modules/m_ssl_openssl)
-  m_sslinfo            | debug                    | Messages relating to [the m_sslinfo module](/4/modules/m_sslinfo)
-  m_sslrehashsignal    | normal                   | Messages relating to [the m_sslrehashsignal module](/4/modules/m_sslrehashsignal)
-  m_topiclock          | normal                   | Messages relating to [the m_topiclock module](/4/modules/m_topiclock)
-  m_vhost              | normal                   | Messages relating to [the m_vhost module](/4/modules/m_vhost)
-  m_xline_db           | debug                    | Messages relating to [the m_xline_db module](/4/modules/m_xline_db)
-
+  Value                | Logging Levels Used                 | Description
+  -------------------- | ----------------------------------- | -----------
+  BANCACHE             | debug                               | Messages relating to the X-line result cache.
+  CHANNELS             | debug                               | Messages relating to channels.
+  COMMAND              | debug                               | Messages relating to command execution.
+  CONFIG               | warning<br>normal<br>debug          | Messages relating to the configuration.
+  CONNECTCLASS         | normal<br>debug                     | Messages relating to [connect classes](#connect).
+  CULLLIST             | debug                               | Messages relating to object cull lists.
+  LOG                  | error<br>normal                     | Messages relating to logging.
+  MODE                 | warning                             | Messages relating to modes.
+  MODULE               | error<br>normal<br>debug            | Messages relating to modules.
+  SERVICE              | debug                               | Messages relating to service registration.
+  SOCKET               | warning<br>normal<br>debug          | Messages relating to network sockets.
+  STARTUP              | error<br>warning<br>normal          | Messages relating to the startup process.
+  USERINPUT            | rawio                               | Messages relating to user input.
+  USEROUTPUT           | rawio                               | Messages relating to user output.
+  USERS                | warning<br>debug                    | Messages relating to users.
+  core_channel         | debug                               | Messages relating to channels.
+  core_dns             | error<br>warning<br>normal<br>debug | Messages relating to DNS lookups.
+  core_hostname_lookup | debug                               | Messages relating to user hostname lookups.
+  core_info            | warning                             | Messages relating to server-provided information.
+  core_oper            | error<br>normal                     | Messages relating to server operators.
+  core_reloadmodule    | debug                               | Messages relating to the RELOADMODULE command.
+  core_who             | debug                               | Messages relating to the WHO command.
+  core_whowas          | normal                              | Messages relating to the WHOWAS command.
+  m_argon2             | warning                             | Messages relating to [the argon2 module](/4/modules/argon2).
+  m_callerid           | debug                               | Messages relating to [the callerid module](/4/modules/callerid).
+  m_cap                | debug                               | Messages relating to [the cap module](/4/modules/cap).
+  m_chanlog            | normal                              | Messages relating to [the chanlog module](/4/modules/chanlog).
+  m_cloaking           | normal                              | Messages relating to [the cloaking module](/4/modules/cloaking).
+  m_codepage           | debug                               | Messages relating to [the codepage module](/4/modules/codepage).
+  m_connectban         | debug                               | Messages relating to [the connectban module](/4/modules/connectban).
+  m_customprefix       | debug                               | Messages relating to [the customprefix module](/4/modules/customprefix).
+  m_customtitle        | normal                              | Messages relating to [the customtitle module](/4/modules/customtitle).
+  m_dccallow           | debug                               | Messages relating to [the dccallow module](/4/modules/dccallow).
+  m_disable            | normal<br>debug                     | Messages relating to [the disable module](/4/modules/disable).
+  m_dnsbl              | debug                               | Messages relating to [the dnsbl module](/4/modules/dnsbl).
+  m_filter             | warning<br>normal<br>debug          | Messages relating to [the filter module](/4/modules/filter).
+  m_gateway            | normal<br>debug                     | Messages relating to [the gateway module](/4/modules/gateway).
+  m_geo_maxmind        | debug                               | Messages relating to [the geo_maxmind module](/4/modules/geo_maxmind).
+  m_hidemode           | debug                               | Messages relating to [the hidemode module](/4/modules/hidemode).
+  m_httpd              | debug                               | Messages relating to [the httpd module](/4/modules/httpd).
+  m_httpd_acl          | debug                               | Messages relating to [the httpd_acl module](/4/modules/httpd_acl).
+  m_httpd_config       | debug                               | Messages relating to [the httpd_config module](/4/modules/httpd_config).
+  m_httpd_stats        | debug                               | Messages relating to [the httpd_stats module](/4/modules/httpd_stats).
+  m_ident              | debug                               | Messages relating to [the ident module](/4/modules/ident).
+  m_ircv3_sts          | debug                               | Messages relating to [the ircv3_sts module](/4/modules/ircv3_sts).
+  m_ldapauth           | debug                               | Messages relating to [the ldapauth module](/4/modules/ldapauth).
+  m_mysql              | error<br>debug                      | Messages relating to [the mysql module](/4/modules/mysql).
+  m_operlog            | normal                              | Messages relating to [the operlog module](/4/modules/operlog).
+  m_opermotd           | normal                              | Messages relating to [the opermotd module](/4/modules/opermotd).
+  m_password_hash      | normal                              | Messages relating to [the password_hash module](/4/modules/password_hash).
+  m_permchannels       | error<br>warning<br>debug           | Messages relating to [the permchannels module](/4/modules/permchannels).
+  m_pgsql              | error<br>debug                      | Messages relating to [the pgsql module](/4/modules/pgsql).
+  m_sasl               | normal<br>debug                     | Messages relating to [the sasl module](/4/modules/sasl).
+  m_showfile           | warning                             | Messages relating to [the showfile module](/4/modules/showfile).
+  m_silence            | debug                               | Messages relating to [the silence module](/4/modules/silence).
+  m_spanningtree       | warning<br>normal<br>debug<br>rawio | Messages relating to [the spanningtree module](/4/modules/spanningtree).
+  m_sqlite3            | error<br>debug                      | Messages relating to [the sqlite3 module](/4/modules/sqlite3).
+  m_sqloper            | warning<br>debug                    | Messages relating to [the sqloper module](/4/modules/sqloper).
+  m_ssl_gnutls         | warning<br>normal<br>debug          | Messages relating to [the ssl_gnutls module](/4/modules/ssl_gnutls).
+  m_ssl_mbedtls        | warning<br>normal<br>debug          | Messages relating to [the ssl_mbedtls module](/4/modules/ssl_mbedtls).
+  m_ssl_openssl        | warning<br>normal<br>debug          | Messages relating to [the ssl_openssl module](/4/modules/ssl_openssl).
+  m_sslinfo            | debug                               | Messages relating to [the sslinfo module](/4/modules/sslinfo).
+  m_sslrehashsignal    | normal                              | Messages relating to [the sslrehashsignal module](/4/modules/sslrehashsignal).
+  m_topiclock          | debug                               | Messages relating to [the topiclock module](/4/modules/topiclock).
+  m_vhost              | warning                             | Messages relating to [the vhost module](/4/modules/vhost).
+  m_xline_db           | error<br>debug                      | Messages relating to [the xline_db module](/4/modules/xline_db).
 
   The level field should be set to one of the following values:
 

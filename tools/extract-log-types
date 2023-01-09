@@ -39,10 +39,13 @@ if types.empty?
 	exit 1
 end
 
-longest = types.keys.max_by(&:length).length
+longest_type = types.keys.max_by(&:length).length
+longest_level = types.values.map { |t| t.sum(&:length) + ((t.size - 1) * 4) }.max
 levelorder = %w(sparse error warning default normal verbose debug rawio)
 types.sort.each do |type, levels|
-	padding = longest - type.length
+	type_padding = longest_type - type.length
 	levelstr = levels.to_a.sort_by { |obj| levelorder.index obj }.join('<br>')
-	puts "#{type}#{' ' * padding} | #{levelstr}"
+	level_padding = longest_level - levelstr.length
+	message = type =~ /^m_(.+)$/ ? "Messages relating to [the #{$1} module](/{{ version }}/modules/#{$1})." : ''
+	puts "  #{type}#{' ' * type_padding} | #{levelstr}#{' ' * level_padding} | #{message}"
 end
