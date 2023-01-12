@@ -14,15 +14,15 @@ An official InspIRCd Docker image is available on [Docker Hub](https://hub.docke
 
 The InspIRCd team provide prebuilt packages for some common platforms. If you are using one of these platforms and do not want to install any third party modules it is recommended that you use one of these.
 
-* [CentOS Linux (EL7)](/3/installation/centos)
+* [CentOS (EL7)](/3/installation/centos)
 
-* [Debian Linux](/3/installation/debian)
+* [Debian](/3/installation/debian)
 
-* [Microsoft Windows](/3/installation/windows)
+* [Rocky Linux (EL8, EL9)](/3/installation/rocky)
 
-* [Rocky Linux (EL8)](/3/installation/rocky)
+* [Ubuntu](/3/installation/ubuntu)
 
-* [Ubuntu Linux](/3/installation/ubuntu)
+* [Windows](/3/installation/windows)
 
 Some distributions may ship their own InspIRCd packages. Using these is not recommended as they are frequently out of date and do not contain the latest security fixes applied upstream.
 

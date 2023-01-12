@@ -1,5 +1,5 @@
 ---
-title: v3 Ubuntu Linux Installation
+title: v3 Ubuntu Installation
 ---
 
 ## Installing InspIRCd 3 using the Ubuntu package
