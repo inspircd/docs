@@ -1,7 +1,7 @@
 name: ident
 
 description: |-
-  This module allows the usernames (idents) of users to be looked up using the [RFC 1413 Identification Protocol](https://www.ietf.org/rfc/rfc1413.txt). This is useful for shared hosts where many users may be connecting from one IP address as it allows you to ban specific users without banning the entire provider.
+  This module allows the usernames (idents) of users to be looked up using the [RFC 1413 Identification Protocol](https://www.ietf.org/rfc/rfc1413.txt). This mostly not necessary but can be useful for shared hosts where many users may be connecting from one IP address as it allows you to ban specific users without banning the entire provider.
 
 configuration:
 - name: connect
@@ -64,3 +64,5 @@ configuration:
 
 special_notes: |-
   If you are also using [the cgiirc module](/3/modules/cgiirc) you should disable ident lookups for your WebIRC gateway.
+
+  It is recommended that you only enable ident lookups for hosts that you know are shared as performing ident lookups makes connecting to a server slower.
