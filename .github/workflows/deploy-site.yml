@@ -35,7 +35,7 @@ jobs:
           path: ./site
 
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
 
       - name: Deploy docs site to GitHub Pages
         id: deployment
