@@ -43,7 +43,9 @@ Name                                                      | Description
 [chgname](/4/modules/chgname)                             | Adds the /CHGNAME command which allows server operators to change the real name of a user.
 [classban](/4/modules/classban)                           | Adds extended ban n: (class) which check whether users are in a connect class matching the specified glob pattern.
 [clearchan](/4/modules/clearchan)                         | Adds the /CLEARCHAN command which allows server operators to mass-punish the members of a channel.
-[cloaking](/4/modules/cloaking)                           | Adds user mode x (cloak) which allows user hostnames to be hidden.
+[cloak](/4/modules/cloak)                                 | Adds user mode x (cloak) which allows user hostnames to be hidden.
+[cloak_md5](/4/modules/cloak_md5)                         | This module adds the `half` and `full` cloaking methods for use with the cloak module.
+[cloak_sha256](/4/modules/cloak_sha256)                   | This module adds the `hmac-sha256` and `hmac-sha256-ip` cloaking methods for use with the cloak module.
 [codepage](/4/modules/codepage)                           | Allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 [commonchans](/4/modules/commonchans)                     | Adds user mode c (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 [conn_join](/4/modules/conn_join)                         | Allows the server administrator to force users to join one or more channels on connect.
