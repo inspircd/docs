@@ -1,0 +1,98 @@
+name: cloak_sha256
+
+introduction: |-
+  !!! note ""
+      This module can be built against a third-party library ([libpsl](https://github.com/rockdaboot/libpsl)) to add more features.
+
+description: |-
+  This module adds the `hmac-sha256` and `hmac-sha256-ip` cloaking methods for use with [the cloak module](/4/modules/cloak).
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  values_description: |-
+    This module also extends the [`<cloak:method>`](/4/modules/cloak#cloak) field with the following values:
+  extends: true
+  added_values:
+  - name: hmac-sha256
+    description: |-
+      If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+  - name: hmac-sha256-ip
+    description: |-
+      If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+  attributes:
+  - name: key
+    type: Text
+    required: false
+    default: null
+    description: |-
+      A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
+  - name: prefix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to prefix cloaks with.
+  - name: suffix
+    type: Text
+    required: false
+    default: ip
+    description: |-
+      The value to suffix IP address cloaks with.
+  - name: case
+    type: Text
+    required: false
+    default: lower
+    description: |-
+      Whether to use upper-case or lower-case characters when converting cloak hashes to a human-readable form.
+  - name: hostparts
+    type: Number
+    required: false
+    default: 3
+    description: |-
+      If the hmac-sha256 method is used then the maximum number of DNS hostname segments that should be visible.
+  - name: pathparts
+    type: Number
+    required: false
+    default: 1
+    description: |-
+      The maximum number of UNIX socket path segments that should be visible.
+  - name: psl
+    type: Text
+    required: false
+    default: 1
+    description: |-
+      If defined and the module was built against libpsl then the path to a Public Suffix List database to use instead of `<cloak:hostparts>` for finding the public part of a hostname. Can also be set to `system` to use the system database.
+  details: |-
+    The case field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    lower | Use lower-case characters in the cloak hash.
+    upper | Use upper-case characters in the cloak hash.
+
+  example: |-
+    Cloaking using the hmac-sha256 method:
+
+    ```xml
+    <cloak method="hmac-sha256"
+           key="changeme"
+           prefix="MyNet"
+           suffix="ip"
+           case="lower"
+           hostparts="3"
+           pathparts="1"
+           psl="system">
+    ```
+
+    Cloaking using the hmac-sha256-ip method:
+
+    ```xml
+    <cloak method="hmac-sha256-ip"
+           key="changeme"
+           prefix="MyNet"
+           suffix="ip"
+           case="lower"
+           pathparts="1">
+    ```

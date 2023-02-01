@@ -32,6 +32,12 @@ configuration:
     default: text
     description: |-
       The default action to take when the user does not send a recognised WebSocket subprotocol.
+  - name: nativeping
+    type: Boolean
+    required: true
+    default: true
+    description: |-
+      Whether to check client connectivity using WebSocket ping messages instead of IRC ping messages.
   - name: proxyranges
     type: Text
     required: false
@@ -49,8 +55,9 @@ configuration:
 
   example: |-
     ```xml
-    <websocket proxyranges="192.0.2.0/24 198.51.100.*"
-               defaultmode="text">
+    <websocket defaultmode="text"
+               nativeping="yes"
+               proxyranges="192.0.2.0/24 198.51.100.*">
     ```
 - name: wsorigin
   description: |-

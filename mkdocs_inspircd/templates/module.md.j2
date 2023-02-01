@@ -77,6 +77,9 @@ To load this module use the following `<module>` tag:
 
 {% if tag.added_values %}
 {# typically to extend `<class:privs>` #}
+{% if tag.values_description %}
+{{ tag.values_description }}
+{% endif %}
 <table markdown="1">
 <thead>
 <tr>

@@ -8,9 +8,39 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
-# InspIRCd 4.0.0a17
+# InspIRCd 4.0.0a19
+
+**This pre-release version of InspIRCd was released on 2023-02-01.**
+
+- Added `<websocket:nativeping>` for sending idle pings to WebSocket clients using WebSocket ping packets.
+
+- Added support for SCTP user and server connections.
+
+- Added support for synchronising server operator privileges between servers.
+
+- Added templated variants of `UserManager::Find{Nick,UUID,}` which allow finding a remote or local user.
+
+- Added the cloak_sha256 module which cloaks hostnames using a variant of the HMAC-SHA256 cloaking system from Plexus.
+
+- Developer: moved duration functions from `InspIRCd` to the new `Duration` namespace.
+
+- Developer: replaced `ConfigTag::get{Float,Int,UInt}` with the type safer `getNum` method.
+
+- Developer: replaced `InspIRCd::Format` and `VAFORMAT` with a vendored copy of the {fmt} library.
+
+- Developer: reworked the accessor methods in the User class to have names that make more sense.
+
+- Made all modules which build against third-party dependencies print the library version on load where available.
+
+- Reworked how users are assigned to connect classes and fixed counting class users.
+
+- Split the cloaking module into the `cloak` module (core cloaking logic) and `cloak_md5` (the old md5-based cloaking system).
+
+# InspIRCd 4.0.0a18
 
 **This pre-release version of InspIRCd was released on 2023-01-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 
 - Added oper idle information to `/STATS P`.
 
@@ -75,6 +105,8 @@ This page lists changes which have happened between releases.
 # InspIRCd 4.0.0a16
 
 **This pre-release version of InspIRCd was released on 2022-11-01.**
+
+**IMPORTANT** &mdash; Various breaking changes have also been made. See [the breaking changes page](/4/breaking-changes) for details.
 
 - Added a compatibility layer to allow loading modules that were renamed in v4 with their names from v3.
 

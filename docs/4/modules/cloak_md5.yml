@@ -1,0 +1,71 @@
+name: cloak_md5
+
+description: |-
+  This module adds the `half` and `full` cloaking methods for use with [the cloak module](/4/modules/cloak).
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  values_description: |-
+    This module also extends the [`<cloak:method>`](/4/modules/cloak#cloak) field with the following values:
+  extends: true
+  added_values:
+  - name: half
+    description: |-
+      If the user has a DNS hostname then cloak all but the last few labels with a salted MD5 hash. Otherwise, cloak with a salted MD5 hash of the most unique /16 subnet of a IPv4 address or /48 subnet of a IPv6 address. Does not cloak UNIX socket users.
+  - name: full
+    description: |-
+      Cloak with three salted MD5 hashes of significant ranges of a user's IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Does not cloak UNIX socket users.
+  attributes:
+  - name: domainparts
+    type: Number
+    required: false
+    default: 3
+    description: |-
+      If the half method is used then the maximum number of domain labels that should be visible.
+  - name: prefix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to prefix IP address cloaks with.
+  - name: suffix
+    type: Text
+    required: false
+    default: .IP
+    description: |-
+      The value to suffix IP address cloaks with.
+  - name: key
+    type: Text
+    required: false
+    default: null
+    description: |-
+      A random 30+ character value to use as a secret key when cloaking. The longer this is the more secure it is.
+  - name: ignorecase
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to to ignore the case of a FQDN when cloaking.
+  example: |-
+    Cloaking using the full method:
+
+    ```xml
+    <cloak method="full"
+           key="changeme"
+           prefix="MyNet-"
+           suffix=".IP"
+           ignorecase="yes">
+    ```
+
+    Cloaking using the half method:
+
+    ```xml
+    <cloak method="half"
+           key="changeme"
+           prefix="MyNet-"
+           suffix=".IP"
+           domainparts="3"
+           ignorecase="yes">
+    ```

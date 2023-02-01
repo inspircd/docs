@@ -29,7 +29,7 @@ configuration:
   - name: suffix
     type: Text
     required: false
-    default: null
+    default: .IP
     description: |-
       The value to suffix IP address cloaks with.
   - name: key

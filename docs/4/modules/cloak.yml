@@ -1,0 +1,39 @@
+name: cloak
+
+description: |-
+  This module adds user mode `x` (cloak) which allows user hostnames to be hidden.
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  attributes:
+  - name: method
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The cloaking method to use.
+  details: |-
+    The method field should be set to one of the following values:
+
+    Value          | Module                                  | Description
+    -------------- | --------------------------------------- | -----------
+    full           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* Cloak with three salted MD5 hashes of significant ranges of a user's IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Does not cloak UNIX socket users.
+    half           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* If the user has a DNS hostname then cloak all but the last few labels with a salted MD5 hash. Otherwise, cloak with a salted MD5 hash of the most unique /16 subnet of a IPv4 address or /48 subnet of a IPv6 address. Does not cloak UNIX socket users.
+    hmac-sha256    | [cloak_sha256](/4/modules/cloak_sha256) | If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+    hmac-sha256-ip | [cloak_sha256](/4/modules/cloak_sha256) | If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+
+umodes:
+  chars:
+  - name: cloak
+    char: x
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Enables hiding of the user's hostname.
+  example: ""
+
+special_notes: |-
+  The first `<cloak>` tag will be used for the cloak set when a user enables user mode `x` (cloak). The rest will be generated and used to check bans. This allows you to migrate cloaking mode or to change your cloaking key without breaking your bans.
