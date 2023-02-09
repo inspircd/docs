@@ -5,40 +5,41 @@ attributes:
 - name: configdir
   type: Text
   required: false
-  default: conf
+  default: '[`&dir.config;`](#define)'
   description: |-
     The location of the config directory.
 - name: datadir
   type: Text
   required: false
-  default: data
+  default: '[`&dir.data;`](#define)'
   description: |-
     The location of the data directory.
 - name: logdir
   type: Text
   required: false
-  default: logs
+  default: '[`&dir.log;`](#define)'
   description: |-
     The location of the logs directory.
 - name: moduledir
   type: Text
   required: false
-  default: modules
+  default: '[`&dir.module;`](#define)'
   description: |-
     The location of the modules directory.
 - name: runtimedir
   type: Text
   required: false
-  default: data
+  default: '[`&dir.runtime;`](#define)'
   added: 3.9.0
   description: |-
     The location of the runtime directory.
-details: ""
+details: |-
+  You should make sure to specify absolute paths to avoid resolution issues.
 example: |-
   ```xml
-  <path configdir="conf"
-        datadir="data"
-        logdir="logs"
-        moduledir="modules"
-        runtimedir="data">
+  <path configdir="&dir.config;"
+        datadir="&dir.data;"
+        logdir="&dir.log;"
+        moduledir="&dir.module;"
+        runtimedir="&dir.runtime;">
   ```
