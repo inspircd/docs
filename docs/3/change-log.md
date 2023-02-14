@@ -6,6 +6,36 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.16.0
+
+<!-- TODO: ensure changes after commit 61189c9eb6a949f77be9754c4f9a04852176166b are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added support for the IRCv3 `standard-replies` capability.
+
+- Fixed a DNSBL mark host being overwritten by a user hostname lookup.
+
+- Fixed an away message being set by a module pre-connect not being broadcast on connect.
+
+- Fixed building the PostgreSQL DSN when a config field contains a special character.
+
+- Fixed reading the Argon2 version from the config.
+
+- Fixed reporting the line a config syntax error happened on when no tags have previously been seen.
+
+- Fixed resolving user hosts when the result is a simple hostname (e.g. localhost).
+
+- Fixed the cycle module using a notice instead of `ERR_BANNEDFROMCHAN`.
+
+- Fixed the helper script not forwarding all signals to the server when started in debug mode.
+
+- Fixed the nicklock module using a notice instead of `ERR_NOSUCHNICK`.
+
+- Fixed the uniqueusername state not being broadcast on connect.
+
+- Updated the package lists for extra modules.
+
 ### InspIRCd 3.15.0
 
 **This version of InspIRCd was released on 2022-12-30.**
