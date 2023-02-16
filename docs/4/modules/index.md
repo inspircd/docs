@@ -15,7 +15,7 @@ These modules require no dependencies and will always be available.
 Name                                                      | Description
 --------------------------------------------------------- | -----------
 [abbreviation](/4/modules/abbreviation)                   | Allows commands to be abbreviated by appending a full stop.
-[account](/4/modules/account)                             | Adds various channel and user modes relating to accounts.
+[account](/4/modules/account)                             | Adds support for user accounts.
 [alias](/4/modules/alias)                                 | Allows the server administrator to define custom channel commands (e.g. !kick) and server commands (e.g. /OPERSERV).
 [allowinvite](/4/modules/allowinvite)                     | Adds channel mode A (allowinvite) which allows unprivileged users to use the /INVITE command and extended ban A: (blockinvite) which bans specific masks from using the /INVITE command.
 [alltime](/4/modules/alltime)                             | Adds the /ALLTIME command which allows server operators to see the current UTC time on all of the servers on the network.
@@ -44,8 +44,8 @@ Name                                                      | Description
 [classban](/4/modules/classban)                           | Adds extended ban n: (class) which check whether users are in a connect class matching the specified glob pattern.
 [clearchan](/4/modules/clearchan)                         | Adds the /CLEARCHAN command which allows server operators to mass-punish the members of a channel.
 [cloak](/4/modules/cloak)                                 | Adds user mode x (cloak) which allows user hostnames to be hidden.
-[cloak_md5](/4/modules/cloak_md5)                         | This module adds the `half` and `full` cloaking methods for use with the cloak module.
-[cloak_sha256](/4/modules/cloak_sha256)                   | This module adds the `hmac-sha256` and `hmac-sha256-ip` cloaking methods for use with the cloak module.
+[cloak_md5](/4/modules/cloak_md5)                         | Adds the half and full cloaking methods for use with the cloak module.
+[cloak_sha256](/4/modules/cloak_sha256)                   | Adds the hmac-sha256 and hmac-sha256-ip cloaking methods for use with the cloak module.
 [codepage](/4/modules/codepage)                           | Allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 [commonchans](/4/modules/commonchans)                     | Adds user mode c (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 [conn_join](/4/modules/conn_join)                         | Allows the server administrator to force users to join one or more channels on connect.
@@ -57,7 +57,7 @@ Name                                                      | Description
 [customtitle](/4/modules/customtitle)                     | Allows the server administrator to define accounts which can grant a custom title in /WHOIS and an optional virtual host.
 [cycle](/4/modules/cycle)                                 | Allows channel members to part and rejoin a channel without needing to worry about channel modes such as +i (inviteonly) which might prevent rejoining.
 [dccallow](/4/modules/dccallow)                           | Allows the server administrator to configure what files are allowed to be sent via DCC SEND and allows users to configure who can send them DCC CHAT and DCC SEND requests.
-[deaf](/4/modules/deaf)                                   | Adds user mode d (deaf) which prevents users from receiving channel messages.
+[deaf](/4/modules/deaf)                                   | Adds user modes d (deaf) and D (privdeaf) which prevents users from receiving channel (deaf) or private (privdeaf) messages.
 [delayjoin](/4/modules/delayjoin)                         | Adds channel mode D (delayjoin) which hides JOIN messages from users until they speak.
 [delaymsg](/4/modules/delaymsg)                           | Adds channel mode d (delaymsg) which prevents newly joined users from speaking until the specified number of seconds have passed.
 [denychans](/4/modules/denychans)                         | Allows the server administrator to prevent users from joining channels matching a glob.
@@ -101,7 +101,7 @@ Name                                                      | Description
 [knock](/4/modules/knock)                                 | Adds the /KNOCK command which allows users to request access to an invite-only channel and channel mode K (noknock) which allows channels to disable usage of this command.
 [ldapauth](/4/modules/ldapauth)                           | Allows connecting users to be authenticated against an LDAP database.
 [ldapoper](/4/modules/ldapoper)                           | Allows server operators to be authenticated against an LDAP database.
-[log_sql](/4/modules/log_sql)                             | Provides the ability to write logs to an SQL database.
+[log_sql](/4/modules/log_sql)                             | Provides the ability to log to an SQL database.
 [maphide](/4/modules/maphide)                             | Allows the server administrator to replace the output of a /MAP and /LINKS with an URL.
 [md5](/4/modules/md5)                                     | Allows other modules to generate MD5 hashes.
 [messageflood](/4/modules/messageflood)                   | Adds channel mode f (flood) which helps protect against spammers which mass-message channels.
@@ -125,7 +125,7 @@ Name                                                      | Description
 [opermodes](/4/modules/opermodes)                         | Allows the server administrator to set user modes on server operators when they log into their server operator account.
 [opermotd](/4/modules/opermotd)                           | Adds the /OPERMOTD command which adds a special message of the day for server operators.
 [operprefix](/4/modules/operprefix)                       | Adds the server operator-only y (operprefix) channel prefix mode.
-[opmoderated](/4/modules/opmoderated)                     | Adds the ability for IRC gateways to forward the real IP address of users connecting through them.
+[opmoderated](/4/modules/opmoderated)                     | Adds channel mode U (opmoderated) which hides the messages of unprivileged users from other unprivileged users.
 [override](/4/modules/override)                           | Allows server operators to be given privileges that allow them to ignore various channel-level restrictions.
 [passforward](/4/modules/passforward)                     | Allows an account password to be forwarded to a services pseudoclient such as NickServ.
 [password_hash](/4/modules/password_hash)                 | Allows passwords to be hashed and adds the /MKPASSWD command which allows the generation of hashed passwords for use in the server configuration.
@@ -193,11 +193,11 @@ Name                                          | Description
 [argon2](/4/modules/argon2)                   | Allows other modules to generate Argon2 hashes.
 [geo_maxmind](/4/modules/geo_maxmind)         | Allows the server to perform geolocation lookups on both IP addresses and users.
 [ldap](/4/modules/ldap)                       | Provides the ability for LDAP modules to query a LDAP directory.
-[log_json](/4/modules/log_json)               | Provides the ability to write logs to a JSON file.
-[log_syslog](/4/modules/log_syslog)           | Provides the ability to write logs to syslog.
+[log_json](/4/modules/log_json)               | Provides the ability to log to a JSON file.
+[log_syslog](/4/modules/log_syslog)           | Provides the ability to log to syslog.
 [mysql](/4/modules/mysql)                     | Provides the ability for SQL modules to query a MySQL database.
 [pgsql](/4/modules/pgsql)                     | Provides the ability for SQL modules to query a PostgreSQL database.
-[regex_pcre](/4/modules/regex_pcre)           | Provides the pcre regular expression engine which uses the PCRE library.
+[regex_pcre](/4/modules/regex_pcre)           | Provides the pcre regular expression engine which uses the PCRE2 library.
 [regex_posix](/4/modules/regex_posix)         | Provides the posix regular expression engine which uses the POSIX.2 regular expression matching system.
 [regex_re2](/4/modules/regex_re2)             | Provides the re2 regular expression engine which uses the RE2 library.
 [sqlite3](/4/modules/sqlite3)                 | Provides the ability for SQL modules to query a SQLite 3 database.
