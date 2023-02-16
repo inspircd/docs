@@ -8,7 +8,7 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
-# InspIRCd 4.0.0a19
+### InspIRCd 4.0.0a19
 
 **This pre-release version of InspIRCd was released on 2023-02-01.**
 
@@ -36,7 +36,7 @@ This page lists changes which have happened between releases.
 
 - Split the cloaking module into the `cloak` module (core cloaking logic) and `cloak_md5` (the old md5-based cloaking system).
 
-# InspIRCd 4.0.0a18
+### InspIRCd 4.0.0a18
 
 **This pre-release version of InspIRCd was released on 2023-01-01.**
 
@@ -88,7 +88,7 @@ This page lists changes which have happened between releases.
 
 - Reworked the levels at which various messages are logged to make more sense.
 
-# InspIRCd 4.0.0a17
+### InspIRCd 4.0.0a17
 
 **This pre-release version of InspIRCd was released on 2022-12-01.**
 
@@ -102,7 +102,7 @@ This page lists changes which have happened between releases.
 
 - Moved the `o`, `O`, and `P` stats characters to core_oper and rewrote to be actually useful.
 
-# InspIRCd 4.0.0a16
+### InspIRCd 4.0.0a16
 
 **This pre-release version of InspIRCd was released on 2022-11-01.**
 
@@ -128,7 +128,7 @@ This page lists changes which have happened between releases.
 
 - Split the services_account module into two modules (account, services).
 
-# InspIRCd 4.0.0a15
+### InspIRCd 4.0.0a15
 
 **This pre-release version of InspIRCd was released on 2022-10-01.**
 
@@ -148,7 +148,7 @@ This page lists changes which have happened between releases.
 
 - Modernized the Windows compatibility layer.
 
-# InspIRCd 4.0.0a14
+### InspIRCd 4.0.0a14
 
 **This pre-release version of InspIRCd was released on 2022-09-01.**
 
@@ -170,7 +170,7 @@ This page lists changes which have happened between releases.
 
 - Merged all of the changes from the v3 development branch into the v4 development branch.
 
-# InspIRCd 4.0.0a13
+### InspIRCd 4.0.0a13
 
 **This pre-release version of InspIRCd was released on 2022-08-01.**
 
@@ -180,7 +180,7 @@ This page lists changes which have happened between releases.
 
 - Merged all of the changes from the v3 development branch into the v4 development branch.
 
-# InspIRCd 4.0.0a12
+### InspIRCd 4.0.0a12
 
 **This pre-release version of InspIRCd was released on 2022-07-01.**
 
@@ -212,7 +212,7 @@ This page lists changes which have happened between releases.
 
 - Merged all of the changes from the v3 development branch into the v4 development branch.
 
-# InspIRCd 4.0.0a11
+### InspIRCd 4.0.0a11
 
 **This pre-release version of InspIRCd was released on 2022-06-01.**
 
@@ -246,7 +246,7 @@ This page lists changes which have happened between releases.
 
 - Rewrote the entire logging system from scratch.
 
-# InspIRCd 4.0.0a10
+### InspIRCd 4.0.0a10
 
 **This pre-release version of InspIRCd was released on 2022-05-01.**
 
