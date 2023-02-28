@@ -42,7 +42,7 @@ chmodes:
   - name: flood
     char: f
     type: Parameter
-    syntax: (*)<lines>:<seconds>
+    syntax: '[*]<lines>:<seconds>'
     usable_by: Channel operators
     description: Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
   example:

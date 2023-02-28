@@ -32,7 +32,7 @@ chmodes:
   - name: anticaps
     char: B
     type: Parameter
-    syntax: <ban|block|mute|kick|kickban>:<minlen>:<percent>
+    syntax: '{ban|block|mute|kick|kickban}:<minlen>:<percent>'
     usable_by: Channel operators
     description: |-
       Enables blocking excessively capitalised messages.
