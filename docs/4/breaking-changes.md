@@ -52,9 +52,9 @@ title: v4 Breaking Changes
 
 - `<chanhistory:enableumode>` has been removed with no replacement (now always enabled).
 
-- `<channels:opers>` has been removed. If you wish to keep this behaviour then set `<oper:maxchans>` or `<type:maxchans>` instead.
+- `<channels:opers>` has been removed. If you wish to keep this behaviour then set `<oper:maxchans>` or `<type:maxchans>` instead. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<channels:users>` has been removed. If you wish to keep this behaviour then set `<connect:maxchans>` instead.
+- `<channels:users>` has been removed. If you wish to keep this behaviour then set `<connect:maxchans>` instead. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
 - `<class:snomasks>` no longer has a default value. In order to keep v3 behaviour you should set it to `*`.
 
@@ -70,15 +70,15 @@ title: v4 Breaking Changes
 
 - `<exemptfromfilter:channel>` has been moved to `<exemptfromfilter:target>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<gnutls>` has been removed. You should configure a TLS (SSL) profile instead.
+- `<gnutls>` has been removed (other than `<gnutls:onrehash>`). You should configure a TLS (SSL) profile instead.
 
 - `<limits:maxgecos>` has been moved to `<limits:maxreal>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
-- `<mbedtls>` has been removed. You should configure a TLS (SSL) profile instead.
+- `<mbedtls>` has been removed (other than `<mbedtls:onrehash>`). You should configure a TLS (SSL) profile instead.
 
 - `<noctcp:enableumode>` has been removed with no replacement (now always enabled).
 
-- `<openssl>` has been removed. You should configure a TLS (SSL) profile instead.
+- `<openssl>` has been removed (other than `<openssl:onrehash>`). You should configure a TLS (SSL) profile instead.
 
 - `<oper:autologin>` must now be set to "relaxed" or "strict" instead of "yes". To keep v3 behaviour you should set it to "relaxed".
 

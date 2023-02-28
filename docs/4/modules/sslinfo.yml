@@ -71,6 +71,18 @@ configuration:
   description: |-
     The `<sslinfo>` tag defines settings about how the sethost module should behave. This tag can only be defined once.
   attributes:
+  - name: hash
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The IANA Hash Function Textual Name of the hash algorithm used when getting client certificate fingerprints sent by a WebIRC gateway.
+  - name: localsecure
+    type: Boolean
+    required: true
+    default: 'Yes'
+    description: |-
+      Whether to consider clients connecting from localhost as secure even if they are not using TLS (SSL).
   - name: operonly
     type: Boolean
     required: false
@@ -80,7 +92,9 @@ configuration:
   details: ""
   example: |-
     ```xml
-    <sslinfo operonly="no">
+    <sslinfo hash="sha-256"
+             localsecure="yes"
+             operonly="no">
     ```
 
 commands:

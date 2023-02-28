@@ -1,7 +1,7 @@
-name: helpop
+name: help
 
 description: |-
-  This module adds the `/HELPOP` command which allows users to view help on various topics and user mode `h` (helpop) which marks a server operator as being available for help.
+  This module adds the `/HELP` command which allows users to view help on various topics.
 
 configuration:
 - name: helpmsg
@@ -19,9 +19,9 @@ configuration:
     ```xml
     <helpmsg nohelp="There is no help for the topic you searched for. Please try again.">
     ```
-- name: helpop
+- name: helptopic
   description: |-
-    The `<helpop>` tag defines a help topic. This tag can be defined as many times as required.
+    The `<helptopic>` tag defines a help topic. This tag can be defined as many times as required.
   attributes:
   - name: key
     type: Text
@@ -44,21 +44,10 @@ configuration:
   details: ""
   example: |-
     ```xml
-    <helpop key="test"
-            title="Testing?"
-            value="This is a test!">
+    <helptopic key="test"
+               title="Testing?"
+               value="This is a test!">
     ```
-
-umodes:
-  chars:
-  - name: helpop
-    char: h
-    type: Switch
-    syntax: null
-    usable_by: Server operators
-    description: |-
-      Marks the user as being available for help.
-  example: ""
 
 commands:
 - name: HELPOP
@@ -86,5 +75,5 @@ special_notes: |-
   To use this add the following tag to your configuration:
 
   ```xml
-  <include file="examples/helpop.conf.example">
+  <include file="examples/help.conf.example">
   ```

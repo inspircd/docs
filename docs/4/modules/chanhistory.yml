@@ -20,6 +20,12 @@ configuration:
     default: 'No'
     description: |-
       Whether user mode `N` (nohistory) is enabled. You must restart after changing this setting for it to be applied.
+  - name: maxduration
+    type: Duration
+    required: false
+    default: 4w
+    description: |-
+      The maximum amount of time that a channel can keep history for.
   - name: maxlines
     type: Number
     required: false
@@ -37,6 +43,7 @@ configuration:
     ```xml
     <chanhistory bots="yes"
                  enableumode="yes"
+                 maxduration="4w"
                  maxlines="50"
                  prefixmsg="yes">
     ```

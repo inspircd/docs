@@ -24,6 +24,27 @@ configuration:
     hmac-sha256    | [cloak_sha256](/4/modules/cloak_sha256) | If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
     hmac-sha256-ip | [cloak_sha256](/4/modules/cloak_sha256) | If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
 
+- name: connect
+  description: |-
+    This module extends [the core `<connect>` tags](/3/configuration#connect) with the following fields:
+  extends: true
+  attributes:
+  - name: usecloak
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users in this connect class can be cloaked.
+  details: ""
+  example: |-
+    Disables cloaking for users in the "Example" connect class:
+
+    ```xml
+    <connect name="Example"
+             ...
+             usecloak="no">
+    ```
+
 umodes:
   chars:
   - name: cloak

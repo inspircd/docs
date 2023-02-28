@@ -8,12 +8,19 @@ configuration:
   description: |-
     The `<messageflood>` tag defines settings about how the messageflood module should behave. This tag can only be defined once.
   attributes:
-  - name: kickmessage
+  - name: extended
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to use the extended mode for actions. This allows punishing users with more than just kicking and kickbanning.
+  - name: message
     type: String
     required: false
-    default: Message flood (trigger is %lines% messages in %duration%)
+    default: Message flood (trigger is %messages% messages in %duration%)
     description: |-
-      The message to use when kicking users that hit the message flood trigger.
+      The message to use when punishing users that hit the message flood trigger.
+
   - name: notice
     type: Decimal
     required: false
@@ -38,12 +45,13 @@ configuration:
     Variable   | Description
     ---------- | -----------
     %duration% | The seconds from the mode value as a duration.
-    %lines%    | The lines from the mode value.
+    %messages% | The message count from the mode value.
     %seconds%  | The seconds from the mode value.
 
   example: |-
     ```xml
-    <messageflood kickmessage="Message flood (trigger is %lines% messages in %duration%)"
+    <messageflood extended="yes"
+                  message="Message flood (trigger is %lines% messages in %duration%)"
                   notice="1.0"
                   privmsg="1.0"
                   tagmsg="0.2">
@@ -54,9 +62,11 @@ chmodes:
   - name: flood
     char: f
     type: Parameter
-    syntax: (*)<lines>:<seconds>
+    syntax:
+      - '[*]<lines>:<seconds>'
+      - '{ban|block|mute|kick|kickban}:<messages>:<duration>'
     usable_by: Channel operators
-    description: Kicks users who send more than &lt;lines&gt; messages in the last &lt;seconds&gt; seconds. If prefixed with * then offending users are also banned.
+    description: Kicks users who send more than &lt;messages&gt; messages in the last &lt;duration&gt;. If prefixed with * then offending users are also banned.
   example:
   - description: |-
       Prevents more than four messages in the last two seconds

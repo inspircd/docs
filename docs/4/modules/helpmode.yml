@@ -1,0 +1,39 @@
+name: helpmode
+
+description: |-
+  This module adds user mode `h` (helpop) which marks a user as being available for help.
+
+configuration:
+- name: helpmode
+  description: |-
+    The `<helpmode>` tag defines settings about how the helpmode module should behave. This tag can only be defined once.
+  attributes:
+  - name: ignorehideoper
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to ignore user mode `H` (hideoper) in `/STATS P` if a user has user mode `h` (helpop).
+  - name: markhelpers
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to mark non-operator helpers in the `/STATS P` output.
+  details: ""
+  example: |-
+    ```xml
+    <helpmode ignorehideoper="no"
+              markhelpers="yes">
+    ```
+
+umodes:
+  chars:
+  - name: helpop
+    char: h
+    type: Switch
+    syntax: null
+    usable_by: Server operators
+    description: |-
+      Marks the user as being available for help.
+  example: ""

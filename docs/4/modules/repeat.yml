@@ -26,7 +26,13 @@ configuration:
   description: |-
     The `<repeat>` tag defines settings about how the repeat module should behave. This tag can only be defined once.
   attributes:
-  - name: kickmessage
+  - name: extended
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to use the extended mode for actions. This allows punishing users with more than just blocking, kicking and kickbanning.
+  - name: message
     type: String
     required: false
     default: Repeat flood (trigger is %lines% messages in %duration%)
@@ -74,7 +80,8 @@ configuration:
 
   example: |-
     ```xml
-    <repeat kickmessage="Repeat flood (trigger is %lines% messages in %duration%)"
+    <repeat extended="yes"
+            message="Repeat flood (trigger is %lines% messages in %duration%)"
             maxbacklog="20"
             maxdistance="50"
             maxlines="20"
@@ -87,7 +94,10 @@ chmodes:
   - name: repeat
     char: E
     type: Parameter
-    syntax: '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
+    syntax:
+      - '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
+      - '{ban|block|mute|kick|kickban}:<lines>:<sec>[:<difference>][:<backlog>]'
+
     usable_by: Channel operators
     description: |-
       Configures the messages that should be considered a repeat. If prefixed with ~ the messages are blocked. If prefixed with * then offending users are banned. If not prefixed then offending users are kicked.

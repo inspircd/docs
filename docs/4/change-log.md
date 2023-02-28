@@ -8,6 +8,30 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a20
+
+**This pre-release version of InspIRCd was released on 2023-03-01.**
+
+- Added `<chanhistory:maxduration>` to limit the maximum period to keep chat history for.
+
+- Added `<sslinfo:localsecure>` to allow treating users connecting from localhost as if they were connected with TLS (SSL).
+
+- Added users with user mode `h` (helpop) to the `/STATS P` output.
+
+- Allowed clients to set themselves as away before they are fully connected to the server.
+
+- Developer: exposed the cloak lists to the module API.
+
+- Fixed being able to create a `half` or `full` cloak method without the md5 module loaded.
+
+- Fixed being able to create a `hmac-sha256` or `hmac-sha256-ip` cloak without the sha256 module loaded.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Merged the servprotect module into the services module.
+
+- Split the helpop module into two modules (help, helpmode).
+
 ### InspIRCd 4.0.0a19
 
 **This pre-release version of InspIRCd was released on 2023-02-01.**

@@ -7,19 +7,19 @@ attributes:
   required: false
   default: null
   description: |-
-    *TCP/IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
+    *IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
 - name: port
   type: Number
   required: false
   default: null
   description: |-
-    **Required for TCP/IP listeners!** The TCP port to listen for connections on.
+    **Required for IP listeners!** The port to listen for connections on.
 - name: defer
   type: Duration
   required: false
   default: '0'
   description: |-
-    *TCP/IP listeners only!* The number of seconds to defer a connection for whilst waiting for it to send data (not supported on Windows).
+    *IP listeners only!* The number of seconds to defer a connection for whilst waiting for it to send data (not supported on Windows).
 - name: hook
   type: Text
   required: false
@@ -31,7 +31,13 @@ attributes:
   required: false
   default: 'No'
   description: |-
-    *TCP/IP listeners only!* Whether to allow binding on TCP/IP endpoints which may not be usable yet (not supported on Windows).
+    *IP listeners only!* Whether to allow binding on IP endpoints which may not be usable yet (not supported on Windows).
+- name: protocols
+  type: Text
+  required: false
+  default: 'all'
+  description: |-
+    *IP listeners only!* The protocols to use for listeners on this endpoint.
 - name: path
   type: Text
   required: false
@@ -63,6 +69,14 @@ details: |+
   --------- | --------------------------------- | -----------
   haproxy   | [haproxy](/4/modules/haproxy)     | Listens for connections that use the HAProxy Proxy protocol.
   websocket | [websocket](/4/modules/websocket) | Listens for connections that use WebSocket framing.
+
+  The protocols field should be set to one or more of the following values:
+
+  Value | Description
+  ----- | -----------
+  all   | Listen for TCP connections and (if supported) SCTP connections.
+  tcp   | Listen for TCP connections.
+  sctp  | Listen for SCTP connections.
 
   The type field should be set to one of the following values:
 

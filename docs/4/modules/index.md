@@ -71,7 +71,8 @@ Name                                                      | Description
 [globalload](/4/modules/globalload)                       | Adds the /GLOADMODULE, /GRELOADMODULE, and /GUNLOADMODULE commands which allows server operators to load, reload, and unload modules on remote servers.
 [globops](/4/modules/globops)                             | Adds the /GLOBOPS command which allows server operators to send messages to all server operators with the g (globops) snomask.
 [haproxy](/4/modules/haproxy)                             | Allows IRC connections to be made using reverse proxies that implement the HAProxy PROXY protocol.
-[helpop](/4/modules/helpop)                               | Adds the /HELPOP command which allows users to view help on various topics and user mode h (helpop) which marks a server operator as being available for help.
+[help](/4/modules/help)                                   | Adds the /HELPOP command which allows users to view help on various topics.
+[helpmode](/4/modules/helpmode)                           | Adds user mode h (helpop) which marks a user as being available for help.
 [hidechans](/4/modules/hidechans)                         | Adds user mode I (hidechans) which hides the channels users with it set are in from their /WHOIS response.
 [hidelist](/4/modules/hidelist)                           | Allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 [hidemode](/4/modules/hidemode)                           | Allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
@@ -154,7 +155,6 @@ Name                                                      | Description
 [seenicks](/4/modules/seenicks)                           | Sends a notice to snomasks n (local) and N (remote) when a user changes their nickname.
 [serverban](/4/modules/serverban)                         | Adds extended ban s: (server) which check whether users are on a server matching the specified glob pattern.
 [services](/4/modules/services)                           | Provides support for integrating with a services server.
-[servprotect](/4/modules/servprotect)                     | Adds user mode k (servprotect) which protects services pseudoclients from being kicked, being killed, or having their channel prefix modes changed.
 [sethost](/4/modules/sethost)                             | Adds the /SETHOST command which allows server operators to change their displayed hostname.
 [setident](/4/modules/setident)                           | Adds the /SETIDENT command which allows server operators to change their username (ident).
 [setidle](/4/modules/setidle)                             | Adds the /SETIDLE command which allows server operators to change their idle time.
