@@ -95,8 +95,8 @@ chmodes:
     char: E
     type: Parameter
     syntax:
-      - '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
-      - '{ban|block|mute|kick|kickban}:<lines>:<sec>[:<difference>][:<backlog>]'
+    - '[~|*]<lines>:<sec>[:<difference>][:<backlog>]'
+    - '{ban|block|mute|kick|kickban}:<lines>:<sec>[:<difference>][:<backlog>]'
 
     usable_by: Channel operators
     description: |-

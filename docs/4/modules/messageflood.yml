@@ -63,8 +63,8 @@ chmodes:
     char: f
     type: Parameter
     syntax:
-      - '[*]<lines>:<seconds>'
-      - '{ban|block|mute|kick|kickban}:<messages>:<duration>'
+    - '[*]<lines>:<seconds>'
+    - '{ban|block|mute|kick|kickban}:<messages>:<duration>'
     usable_by: Channel operators
     description: Kicks users who send more than &lt;messages&gt; messages in the last &lt;duration&gt;. If prefixed with * then offending users are also banned.
   example:
