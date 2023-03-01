@@ -79,7 +79,7 @@ configuration:
       The IANA Hash Function Textual Name of the hash algorithm used when getting client certificate fingerprints sent by a WebIRC gateway.
   - name: localsecure
     type: Boolean
-    required: true
+    required: false
     default: 'Yes'
     description: |-
       Whether to consider clients connecting from localhost as secure even if they are not using TLS (SSL).
