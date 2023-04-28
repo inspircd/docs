@@ -8,11 +8,11 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.16.0
 
-<!-- TODO: ensure changes after commit 61189c9eb6a949f77be9754c4f9a04852176166b are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2023-04-28.**
 
 - Added support for the IRCv3 `standard-replies` capability.
+
+- Added support for warning users when their client certificate is about to or has expired.
 
 - Fixed a DNSBL mark host being overwritten by a user hostname lookup.
 
@@ -33,6 +33,8 @@ This page lists changes which have happened between releases.
 - Fixed the nicklock module using a notice instead of `ERR_NOSUCHNICK`.
 
 - Fixed the uniqueusername state not being broadcast on connect.
+
+- Switched the vendored http_parser library to the Debian fork.
 
 - Updated the package lists for extra modules.
 
