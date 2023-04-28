@@ -22,9 +22,6 @@ client_caps:
 - name: inspircd.org/poison
   description: |-
     Rejects any attempt to request it to avoid clients requesting all available capabilities rather than the ones they support.
-- name: inspircd.org/standard-replies
-  description: |-
-    Informs the server that the requesting client is capable of handling arbitrary [standard replies](https://ircv3.net/specs/extensions/standard-replies.html).
 
 special_notes: |-
   The `/CAP` command should generally not be executed by users. It is intended to be an entirely internal feature which is executed automatically by clients. Adding and removing capabilities manually may break your client.

@@ -26,12 +26,20 @@ configuration:
     default: 'Yes'
     description: |-
       Whether the `extended-join` client capability is enabled.
+  - name: standardreplies
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the `standard-replies` client capability is enabled.
+
   details: ""
   example: |-
     ```xml
     <ircv3 accountnotify="yes"
            awaynotify="yes"
-           extendedjoin="yes">
+           extendedjoin="yes"
+           standardreplies="yes">
     ```
 
 client_caps:
@@ -44,3 +52,6 @@ client_caps:
 - name: '[extended-join](https://ircv3.net/specs/extensions/extended-join.html)'
   description: |-
     Extends the server-to-client JOIN message to include the joining user's account name and real name.
+- name: '[standard-replies](https://ircv3.net/specs/extensions/standard-replies)'
+  description: |-
+    Allows clients to receive arbitrary standard replies instead of server notices or custom numerics.
