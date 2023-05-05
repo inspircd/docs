@@ -162,3 +162,5 @@ special_notes: |-
   If you are using a version of GnuTLS older than 3.6.0 you will also need to provide a DH parameters file. This file can be generated using `certtool --generate-dh-params --sec-param normal --outfile dhparams.pem` and then be placed in your config directory. You may need to use `gnutls-certtool` instead of `certtool` on macOS.
 
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor (such as our Debian and Ubuntu packages) you may need to edit the AppArmor profile to allow InspIRCd to read them too.
+
+  If you are using Let's Encrypt and are having problems with missing intermediate certificates then make sure you are using fullchain.pem from Certbot/Dehydrated/etc in `<sslprofile:certfile>` instead of cert.pem as the latter does not contain intermediate certificates.

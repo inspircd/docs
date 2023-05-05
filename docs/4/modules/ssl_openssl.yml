@@ -229,3 +229,5 @@ special_notes: |-
   Mozilla publish [documentation on how to configure server-side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations) which can be used for selecting a secure OpenSSL configuration. We recommend using the intermediate profile to allow compatibility with as many clients as possible whilst maintaining a decent level of security.
 
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor you may need to edit the AppArmor profile to allow InspIRCd to read them too.
+
+  If you are using Let's Encrypt and are having problems with missing intermediate certificates then make sure you are using fullchain.pem from Certbot/Dehydrated/etc in `<sslprofile:certfile>` instead of cert.pem as the latter does not contain intermediate certificates.
