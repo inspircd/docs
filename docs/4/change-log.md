@@ -8,6 +8,50 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a21
+
+<!-- TODO: ensure changes after commit c330aa6250871c4d5c3ecf2f20e6dfa30be08ab0 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added the `<cloak:class>` field to allow cloaking a user based on their connect class.
+
+- Added the `cloak_account` module to cloak users based on their services account name and/or identifier.
+
+- Added the `cloak_nick` module to cloak users based on their nickname.
+
+- Added the `cloak_static` module to cloak users with a fixed value.
+
+- Added the ability to use a prefix character instead of a mode letter in an exemptchanops entry.
+
+- Added the ability to use a prefix character instead of a mode letter with `/RMODE`.
+
+- Allowed modules to specify a numeric to send to a user when a connect class does not match them in `OnPreChangeConnectClass`.
+
+- Fixed a crash when quitting users who do not have a connect class.
+
+- Fixed mistakenly partially expanding user IPv6 addresses that begin with a colon with 0x0 instead of '0'.
+
+- Fixed not being able to have an unlimited number of messages or unlimited time period in `<chanhistory:max{duration,lines}>`.
+
+- Fixed not sending `ERR_NOPERMFORHOST` when a user explictly matches a deny connect class.
+
+- Fixed not sending `ERR_PASSWDMISMATCH` when the user does not specify or specifies the wrong server password.
+
+- Fixed showing the wrong error message when a listener fails to bind on Windows.
+
+- Fixed trying to implicitly multistack SCTP sockets on systems that had support at build time but not at run time.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Removed the `hostchange` module as it has been superceded by the `cloak_{account,nick,static}` modules.
+
+- Replaced `<ldapauth:allowpattern>` and `<ldapwhitelist:cidr>` with `<ldapexemption:mask>` which takes a nick!user@host or nick!user@ip/cidr mask.
+
+- Replaced `<sqlauth:allowpattern>` with `<sqlexemption:mask>` which takes a nick!user@host or nick!user@ip/cidr mask.
+
+- Replaced the `<security:hidebans>` field with `<security:hidelines>` which takes a formattable template string to use as the quit message instead of the X-line reason.
+
 ### InspIRCd 4.0.0a20
 
 **This pre-release version of InspIRCd was released on 2023-03-01.**
