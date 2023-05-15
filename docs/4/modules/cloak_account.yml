@@ -1,0 +1,64 @@
+name: cloak_account
+
+description: |-
+  This module adds the `account` and `account-id` cloaking methods for use with [the cloak module](/4/modules/cloak).
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  values_description: |-
+    This module also extends the [`<cloak:method>`](/4/modules/cloak#cloak) field with the following values:
+  extends: true
+  added_values:
+  - name: account
+    description: |-
+      If the user is logged in to a services account then cloak them with their services account name.
+  - name: account-id
+    description: |-
+      If the user is logged in to a services account then cloak them with their services account identifier.
+  attributes:
+  - name: prefix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to prefix cloaks with.
+  - name: suffix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to suffix cloaks with.
+  - name: sanitize
+    type: Boolean
+    default: true
+    description: |-
+      Whether to strip any characters in the account name/identifier which are not valid within a hostname.
+  - name: class
+    type: String
+    required: false
+    default: null
+    description: |-
+      If non-empty then a comma-delimited list of of [connect classes](/4/configuration#connect) that can receive this cloak.
+
+  example: |-
+    Cloaking using the account method:
+
+    ```xml
+    <cloak method="account"
+           class=""
+           prefix="MyNet/"
+           suffix=""
+           sanitize="yes">
+    ```
+
+    Cloaking using the account-id method:
+
+    ```xml
+    <cloak method="account"
+           class=""
+           prefix="MyNet/"
+           suffix=""
+           sanitize="yes">
+    ```

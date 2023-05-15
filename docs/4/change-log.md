@@ -10,11 +10,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 4.0.0a21
 
-<!-- TODO: ensure changes after commit c330aa6250871c4d5c3ecf2f20e6dfa30be08ab0 are added to this list before release. -->
+**This pre-release version of InspIRCd was released on 2023-05-15.**
 
-**This version of InspIRCd has not yet been released.**
+- Added extended information on when a client certificate expired or is activated to the ssl_cert error reason.
 
 - Added the `<cloak:class>` field to allow cloaking a user based on their connect class.
+
+- Added the `<joinflood:notifyrank>` field to allow customising the lowest rank that can receive the notification about a channel being closed for new joins.
 
 - Added the `cloak_account` module to cloak users based on their services account name and/or identifier.
 
@@ -27,6 +29,8 @@ This page lists changes which have happened between releases.
 - Added the ability to use a prefix character instead of a mode letter with `/RMODE`.
 
 - Allowed modules to specify a numeric to send to a user when a connect class does not match them in `OnPreChangeConnectClass`.
+
+- Developer: moved time functions from `InspIRCd` to the new `Time` namespace.
 
 - Fixed a crash when quitting users who do not have a connect class.
 
@@ -51,6 +55,8 @@ This page lists changes which have happened between releases.
 - Replaced `<sqlauth:allowpattern>` with `<sqlexemption:mask>` which takes a nick!user@host or nick!user@ip/cidr mask.
 
 - Replaced the `<security:hidebans>` field with `<security:hidelines>` which takes a formattable template string to use as the quit message instead of the X-line reason.
+
+- Updated the list of nickname characters always banned by the codepage module to match the Modern IRC specification.
 
 ### InspIRCd 4.0.0a20
 

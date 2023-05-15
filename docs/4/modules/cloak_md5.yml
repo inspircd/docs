@@ -18,6 +18,12 @@ configuration:
     description: |-
       Cloak with three salted MD5 hashes of significant ranges of a user's IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Does not cloak UNIX socket users.
   attributes:
+  - name: class
+    type: String
+    required: false
+    default: null
+    description: |-
+      If non-empty then a comma-delimited list of of [connect classes](/4/configuration#connect) that can receive this cloak.
   - name: domainparts
     type: Number
     required: false
@@ -53,16 +59,17 @@ configuration:
 
     ```xml
     <cloak method="full"
+           class=""
            key="changeme"
            prefix="MyNet-"
-           suffix=".IP"
-           ignorecase="yes">
+           suffix=".IP">
     ```
 
     Cloaking using the half method:
 
     ```xml
     <cloak method="half"
+           class=""
            key="changeme"
            prefix="MyNet-"
            suffix=".IP"

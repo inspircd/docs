@@ -20,12 +20,12 @@ attributes:
   default: 'No'
   description: |-
     Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
-- name: hidebans
-  type: Boolean
+- name: hidelines
+  type: Text
   required: false
-  default: 'No'
+  default: null
   description: |-
-    Whether to only show X-line messages to server operators.
+    If non-empty then the quit message to show to non-server operators instead of the X-Line reason.
 - name: hidekills
   type: Text
   required: false
@@ -77,7 +77,7 @@ attributes:
 - name: userstats
   type: Text
   required: false
-  default: Pu *(since 3.11.0)*<br>*None (3.0.0 to 3.10.0)*
+  default: Pu
   description: |-
     The `/STATS` characters that a non-server operator can view.
 details: |+
@@ -89,6 +89,13 @@ details: |+
   ops     | Send invite announcements to channel operators and higher ranked users.
   dynamic | Send invites to channel half-operators (if available) and higher ranked users.
   all     | Send invites to all channel members.
+
+  The hidebans field can contain any of the following template variables:
+
+  Variable | Description
+  -------- | -----------
+  reason   | The reason the X-line was added.
+  type     | The type of X-line that was added.
 
   The restrictbannedusers field should be set to one of the following values:
 

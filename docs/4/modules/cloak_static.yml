@@ -1,0 +1,38 @@
+name: cloak_static
+
+description: |-
+  This module adds the `static` cloaking method for use with [the cloak module](/4/modules/cloak).
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  values_description: |-
+    This module also extends the [`<cloak:method>`](/4/modules/cloak#cloak) field with the following values:
+  extends: true
+  added_values:
+  - name: static
+    description: |-
+      Cloak users with the specified fixed value.
+  attributes:
+  - name: cloak
+    type: String
+    required: false
+    default: null
+    description: |-
+      The fixed value to cloak users with.
+  - name: class
+    type: String
+    required: false
+    default: null
+    description: |-
+      If non-empty then a comma-delimited list of of [connect classes](/4/configuration#connect) that can receive this cloak.
+
+  example: |-
+    Cloaking users in the Tor class using the static method:
+
+    ```xml
+    <cloak method="static"
+           cloak="tor.example.com"
+           class="Tor">
+    ```

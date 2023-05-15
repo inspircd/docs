@@ -1,1 +1,100 @@
-../../3/modules/ldapauth.yml
+name: ldapauth
+
+description: |-
+  This module allows connecting users to be authenticated against an LDAP database.
+
+configuration:
+- name: ldapauth
+  description: |-
+    The `<ldapauth>` tag defines settings about how the ldapauth module should behave. This tag can only be defined once.
+  attributes:
+  - name: attribute
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The attribute which is used to locate an account by name. On POSIX systems this is usually "uid".
+  - name: baserdn
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The base Distinguished Name to search in for users.
+  - name: dbid
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The id of the `<database>` tag that contains the required LDAP configuration. See the docs for [the ldap module](/{{ version }}/modules/ldap) for more information.
+  - name: host
+    type: Text
+    required: false
+    default: null
+    description: |-
+      If defined then the vhost to set on connecting users.
+  - name: killreason
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The message to kill users that fail to authenticate with.
+  - name: userfield
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to authenticate users against their username (ident) instead of their nick.
+  - name: verbose
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to log failed authentications to snomask `a` (local) and snomask `A` (remote).
+  details: ""
+  example: |-
+    ```xml
+    <ldapauth attribute="uid"
+              baserdn="ou=People,dc=example,dc=com"
+              dbid="ldap-users"
+              host="$cn.example.com"
+              killreason="Access denied"
+              userfield="no"
+              verbose="yes">
+    ```
+- name: ldapexemption
+  description: |-
+    The `<ldapexemption>` tag defines nick!user@host or nick!user@ip/cidr mask which are exempt from the authentication requirement. This tag can be defined as many times as required.
+  attributes:
+  - name: mask
+    type: Text
+    required: true
+    default: null
+    description: |-
+      A nick!user@host or nick!user@ip/cidr mask which is exempt from the authentication requirement.
+  details: ""
+  example: |-
+    ```xml
+    <ldapexemption mask="*!*@127.0.0.0/8">
+    ```
+- name: ldaprequire
+  description: |-
+    The `<ldaprequire>` tag defines LDAP attributes that must be set on users in order for them to be able to connect. This tag can only be defined once.
+  attributes:
+  - name: attribute
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of an LDAP attribute that must be set on a user.
+  - name: value
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The value of an LDAP attribute that must be set on a user.
+  details: ""
+  example: |-
+    ```xml
+    <ldaprequire attribute="ou"
+                 value="People">
+    ```

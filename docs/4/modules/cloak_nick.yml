@@ -1,0 +1,51 @@
+name: cloak_nick
+
+description: |-
+  This module adds the `nick` cloaking method for use with [the cloak module](/4/modules/cloak).
+
+configuration:
+- name: cloak
+  description: |-
+    The `<cloak>` tag defines a cloaking profile. This tag can be defined as many times as required.
+  values_description: |-
+    This module also extends the [`<cloak:method>`](/4/modules/cloak#cloak) field with the following values:
+  extends: true
+  added_values:
+  - name: nick
+    description: |-
+      Cloak users with their currently used nickname.
+  attributes:
+  - name: prefix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to prefix cloaks with.
+  - name: suffix
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The value to suffix cloaks with.
+  - name: sanitize
+    type: Boolean
+    default: true
+    description: |-
+      Whether to strip any characters in the nickname which are not valid within a hostname.
+  - name: class
+    type: String
+    required: false
+    default: null
+    description: |-
+      If non-empty then a comma-delimited list of of [connect classes](/4/configuration#connect) that can receive this cloak.
+
+  example: |-
+    Cloaking using the nick method:
+
+    ```xml
+    <cloak method="nick"
+           class=""
+           prefix="MyNet/"
+           suffix=""
+           sanitize="yes">
+    ```

@@ -64,6 +64,12 @@ configuration:
     default: 1
     description: |-
       If defined and the module was built against libpsl then the path to a Public Suffix List database to use instead of `<cloak:hostparts>` for finding the public part of a hostname. Can also be set to `system` to use the system database.
+  - name: class
+    type: String
+    required: false
+    default: null
+    description: |-
+      If non-empty then a comma-delimited list of of [connect classes](/4/configuration#connect) that can receive this cloak.
   details: |-
     The case field should be set to one of the following values:
 
@@ -83,7 +89,8 @@ configuration:
            case="lower"
            hostparts="3"
            pathparts="1"
-           psl="system">
+           psl="system"
+           class="">
     ```
 
     Cloaking using the hmac-sha256-ip method:
@@ -94,5 +101,6 @@ configuration:
            prefix="MyNet"
            suffix="ip"
            case="lower"
-           pathparts="1">
+           pathparts="1"
+           class="">
     ```

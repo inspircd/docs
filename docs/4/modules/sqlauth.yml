@@ -10,12 +10,6 @@ configuration:
   description: |-
     The `<sqlauth>` tag defines settings about how the sqlauth module should behave. This tag can only be defined once.
   attributes:
-  - name: allowpattern
-    type: Text
-    required: false
-    default: null
-    description: |-
-      If defined then a glob pattern for nicknames that are exempted from the authentication requirement.
   - name: column
     type: Text
     required: false
@@ -78,8 +72,7 @@ configuration:
     Checks the password using the existence of a row returned from the database:
 
     ```xml
-    <sqlauth allowpattern="Guest*"
-             hash="sha256"
+    <sqlauth hash="sha256"
              dbid="sqlauth"
              killreason="Access denied"
              query="SELECT * FROM users WHERE name='$nick' AND password='$sha256pass' LIMIT 1"
@@ -89,13 +82,27 @@ configuration:
     Checks the password by comparing against a database field specified in the config:
 
     ```xml
-    <sqlauth allowpattern="Guest*"
-             column="password"
+    <sqlauth column="password"
              kdf="bcrypt"
              dbid="sqlauth"
              killreason="Access denied"
              query="SELECT * FROM users WHERE name='$nick' LIMIT 1"
              verbose="no">
+    ```
+- name: sqlexemption
+  description: |-
+    The `<sqlexemption>` tag defines nick!user@host or nick!user@ip/cidr mask which are exempt from the authentication requirement. This tag can be defined as many times as required.
+  attributes:
+  - name: mask
+    type: Text
+    required: true
+    default: null
+    description: |-
+      A nick!user@host or nick!user@ip/cidr mask which is exempt from the authentication requirement.
+  details: ""
+  example: |-
+    ```xml
+    <sqlexemption mask="*!*@127.0.0.0/8">
     ```
 
 special_notes: |-

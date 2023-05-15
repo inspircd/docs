@@ -44,8 +44,11 @@ Name                                                      | Description
 [classban](/4/modules/classban)                           | Adds extended ban n: (class) which check whether users are in a connect class matching the specified glob pattern.
 [clearchan](/4/modules/clearchan)                         | Adds the /CLEARCHAN command which allows server operators to mass-punish the members of a channel.
 [cloak](/4/modules/cloak)                                 | Adds user mode x (cloak) which allows user hostnames to be hidden.
+[cloak_account](/4/modules/cloak_account)                 | Adds the account and account-id cloaking methods for use with the cloak module.
 [cloak_md5](/4/modules/cloak_md5)                         | Adds the half and full cloaking methods for use with the cloak module.
+[cloak_nick](/4/modules/cloak_nick)                       | Adds the nick cloaking method for use with the cloak module.
 [cloak_sha256](/4/modules/cloak_sha256)                   | Adds the hmac-sha256 and hmac-sha256-ip cloaking methods for use with the cloak module.
+[cloak_static](/4/modules/cloak_static)                   | Adds the static cloaking method for use with the cloak module.
 [codepage](/4/modules/codepage)                           | Allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 [commonchans](/4/modules/commonchans)                     | Adds user mode c (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 [conn_join](/4/modules/conn_join)                         | Allows the server administrator to force users to join one or more channels on connect.
@@ -77,7 +80,6 @@ Name                                                      | Description
 [hidelist](/4/modules/hidelist)                           | Allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 [hidemode](/4/modules/hidemode)                           | Allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 [hideoper](/4/modules/hideoper)                           | Adds user mode H (hideoper) which hides the server operator status of a user from unprivileged users.
-[hostchange](/4/modules/hostchange)                       | Allows the server administrator to define custom rules for applying hostnames to users.
 [hostcycle](/4/modules/hostcycle)                         | Sends a fake disconnection and reconnection when a user's username (ident) or hostname changes to allow clients to update their internal caches.
 [httpd](/4/modules/httpd)                                 | Allows the server administrator to serve various useful resources over HTTP.
 [httpd_acl](/4/modules/httpd_acl)                         | Allows the server administrator to control who can access resources served over HTTP with the httpd module.
