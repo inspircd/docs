@@ -52,7 +52,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 ```diff
 - :36C MODE 36DAAAAAA +r
 + :36C METADATA 36DAAAAAA accountnicks :Sadie Eidas
-````
+```
 
 - The `CHANMAX`, `IDENTMAX`, and `NICKMAX` keys in `CAPAB CAPABILITIES` have been renamed to `MAXCHANNEL`, `MAXUSER`, and `MAXNICK` respectively for consistency.
 
