@@ -47,7 +47,7 @@ configuration:
   - name: depriv
     type: Boolean
     required: false
-    default: null
+    default: 'Yes'
     description: |-
       Whether a user with this prefix mode can remove it from themself.
   - name: change
