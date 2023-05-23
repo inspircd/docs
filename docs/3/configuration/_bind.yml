@@ -9,11 +9,11 @@ attributes:
   description: |-
     *TCP/IP listeners only!* If defined then the IP address to bind to instead of listening on all available interfaces.
 - name: port
-  type: Number
+  type: No. Range
   required: false
   default: null
   description: |-
-    **Required for TCP/IP listeners!** The TCP port to listen for connections on.
+    **Required for TCP/IP listeners!** The TCP port or range of ports to listen for connections on.
 - name: defer
   type: Duration
   required: false
@@ -79,6 +79,26 @@ example: |-
   ```xml
   <bind address="192.0.2.1"
         port="6667"
+        type="clients"
+        defer="0s"
+        free="no">
+  ```
+
+  Listens for IRC client connections on 192.0.2.1 on port range 6661-6669:
+
+  ```xml
+  <bind address="192.0.2.1"
+        port="6661-6669"
+        type="clients"
+        defer="0s"
+        free="no">
+  ```
+
+  Listens for IRC client connections on 192.0.2.1 on port range 6661-6667 and port 8002:
+
+  ```xml
+  <bind address="192.0.2.1"
+        port="6661-6667,8002"
         type="clients"
         defer="0s"
         free="no">
