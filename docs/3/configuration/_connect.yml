@@ -161,6 +161,7 @@ example: |-
   ```xml
   <connect name="Secure"
            parent="Main"
+           allow="*"
            port="6697">
 
   <connect name="Main"
