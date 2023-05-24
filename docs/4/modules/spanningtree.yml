@@ -42,7 +42,7 @@ configuration:
 
     ```xml
     <bind address="*"
-          port="7003"
+          port="7002"
           ...
           sslprofile="Servers"
           type="servers">
