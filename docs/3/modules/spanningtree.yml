@@ -101,7 +101,7 @@ configuration:
     required: false
     default: null
     description: |-
-      If defined then the TCP port to connect to this server on.
+      *Required for TCP/IP links!* The port that this server connects on.
   - name: recvpass
     type: Text
     required: true
