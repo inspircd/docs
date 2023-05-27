@@ -84,24 +84,30 @@ configuration:
     default: 'No'
     description: |-
       Whether the server IP address is hidden from server operators.
-  - name: ipaddr
-    type: Text
-    required: true
-    default: null
-    description: |-
-      The IP address or hostname of the remote server.
   - name: name
     type: Text
     required: true
     default: null
     description: |-
       The hostname of the IRC server.
+  - name: ipaddr
+    type: Text
+    required: false
+    default: null
+    description: |-
+      **Required for IP links!** The IP address or hostname of the remote server.
   - name: port
     type: Number
     required: false
     default: null
     description: |-
-      *Required for IP links!* The port that this server connects on.
+      **Required for IP links!** The port that this server connects on.
+  - name: path
+    type: Text
+    required: false
+    default: null
+    description: |-
+      **Required for UNIX links!** The path of the UNIX socket that this server connects on.
   - name: recvpass
     type: Text
     required: true
@@ -134,21 +140,47 @@ configuration:
       The number of seconds to wait before declaring a server connection as having failed.
   details: ""
   example: |-
-    Automatically connects to hub1.example.com after 120 seconds, failing over to hub2.example.com and then hub3.example.com if connecting to the previous server fails:
+    A server that connects with TLS (SSL) over a IP socket:
 
     ```xml
     <link allowmask="192.0.2.0/24 198.51.100.*"
           bind="203.0.113.2"
           fingerprint="1fba42fde3c4e76b7cca45764faf5cc1a7c903a77e0f2bc978d990280b15906f"
           hidden="no"
-          ipaddr="server-1a4.example.net"
           name="hub.example.com"
+          ipaddr="server-1a4.example.net"
           port="7000"
           recvpass="incoming!password"
           sendpass="outgoing!password"
           sslprofile="Servers"
           timeout="15s">
     ```
+
+    A server that connects insecurely over a IP socket (only possible for local connections):
+
+    ```xml
+    <link allowmask="127.0.0.0/8"
+          bind="127.0.0.1"
+          hidden="no"
+          name="localhub.example.com"
+          ipaddr="127.0.0.1"
+          port="7000"
+          recvpass="incoming!password"
+          sendpass="outgoing!password"
+          timeout="15s">
+    ```
+
+    A server that connects over a UNIX socket:
+
+    ```xml
+    <link hidden="no"
+          name="services.example.com"
+          path="services.sock"
+          recvpass="incoming!password"
+          sendpass="outgoing!password"
+          timeout="15s">
+    ```
+
 - name: options
   description: |-
     This module extends [the core `<options>` tag](/4/configuration#options) with the following fields:
