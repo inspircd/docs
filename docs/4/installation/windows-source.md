@@ -68,7 +68,8 @@ conan install .. --build=missing
 Once Conan has finished installing all of the third party dependencies you should run CMake to generate the project files.
 
 ```sh
-cmake -A x64 ..
+cmake .. -A x64 -D CMAKE_BUILD_TYPE=Release
+msbuild PACKAGE.vcxproj /P:Configuration=Release
 ```
 
 When CMake finishes you you can now run the `msbuild PACKAGE.vcxproj` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete. If you prefer you can also just open InspIRCd.sln in Visual Studio and build the PACKAGE target.
