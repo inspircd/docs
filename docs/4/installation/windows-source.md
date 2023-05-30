@@ -69,9 +69,8 @@ Once Conan has finished installing all of the third party dependencies you shoul
 
 ```sh
 cmake .. -A x64 -D CMAKE_BUILD_TYPE=Release
-msbuild PACKAGE.vcxproj /P:Configuration=Release
 ```
 
-When CMake finishes you you can now run the `msbuild PACKAGE.vcxproj` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete. If you prefer you can also just open InspIRCd.sln in Visual Studio and build the PACKAGE target.
+When CMake finishes you you can now run the `msbuild PACKAGE.vcxproj /P:Configuration=Release /P:Platform=x64 /VERBOSITY:MINIMAL` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete. If you prefer you can also just open InspIRCd.sln in Visual Studio and build the PACKAGE target.
 
 Once InspIRCd has been built you can run the installer from the build directory and move on to [configuring it](/4/configuration).
