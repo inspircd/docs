@@ -9,7 +9,7 @@ lunr==0.5.8
 Markdown==3.3.7
 markdown-include==0.8.1
 MarkupSafe==2.1.2
-mkdocs==1.4.2
+mkdocs==1.4.3
 mkdocs-cinder==1.2.0
 mkdocs-exclude==1.0.2
 mkdocs-minify-plugin==0.6.4
