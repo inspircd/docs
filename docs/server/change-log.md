@@ -33,11 +33,11 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + CAPAB MODULES :foo bar=key1=value1&key2;key3=value%203
 ```
 
-- Module names in `CAPAB MODULES` and `CAPAB MODSUPPORT` no longer include the module file extension.
+- Module names in `CAPAB MODULES` and `CAPAB MODSUPPORT` no longer include the `m_` prefix or `.so` file extension.
 
 ```diff
 - CAPAB MODULES :m_foo.so m_bar.so m_baz.so
-+ CAPAB MODULES :m_foo m_bar m_baz
++ CAPAB MODULES :foo bar baz
 ```
 
 - Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
