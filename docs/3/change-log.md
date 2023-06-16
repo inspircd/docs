@@ -6,6 +6,20 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.16.1
+
+**This version of InspIRCd was released on 2023-06-16.**
+
+- Developer: fixed some minor Doxygen comment issues.
+
+- Fixed a misleading log message that implied that UNIX server links need a port.
+
+- Fixed not randomising the DNS port on rehash when `<dns:sourceport>` is not set.
+
+- Fixed ssl_openssl marking long-lived TLS (SSL) client certificates as invalid.
+
+- Fixed the regex_re2 module when building against RE2 2023-06-01 or newer.
+
 ### InspIRCd 3.16.0
 
 **This version of InspIRCd was released on 2023-04-28.**
