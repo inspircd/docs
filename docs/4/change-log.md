@@ -8,6 +8,34 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a22
+
+**This pre-release version of InspIRCd has not yet been released.**
+
+- Added support for a cloak method being able to declare itself as being used for link data even if it is not the first cloak provider.
+
+- Added support for SPKI fingerprints to the ssl_gnutls module.
+
+- Added support for SPKI fingerprints to the sslinfo module (for gateway clients).
+
+- Added support for users who are authenticated to a nick group being able to override a SVSHOLD on their nick.
+
+- Added the `ident` cloak method to `cloak_user` to cloak a user with their RFC 1413 username.
+
+- Developer: added support for checking if a specific cloak method is being used to the cloak api.
+
+- Fixed a crash caused by iterator invalidation when the cull list is reallocated whilst culling.
+
+- Fixed extracting data from the old `version` and `fullversion` SINFO keys.
+
+- Fixed leaking server operator real hostnames to normal users in `/STATS P`.
+
+- Fixed not being able to build the cloak_sha256 module against libpsl on Windows.
+
+- Fixed warnings about redefining `FD_SETSIZE` on Windows when building some modules.
+
+- Merged the `cloak_account` and `cloak_nick` module into a new `cloak_user` module.
+
 ### InspIRCd 4.0.0a21
 
 **This pre-release version of InspIRCd was released on 2023-05-15.**
