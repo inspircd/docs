@@ -157,7 +157,7 @@ configuration:
                 keyfile="key.pem"
                 mindhbits="1024"
                 outrecsize="2048"
-                priority="SECURE192"
+                priority="NORMAL"
                 requestclientcert="yes"
                 strictpriority="no">
     ```
