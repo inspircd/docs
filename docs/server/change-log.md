@@ -16,8 +16,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - Channel and user mode `r` (c_registered, u_registered) have been made optional and may no longer exist.
 
 ```diff
-- CABAB CHANMODES :... simple:c_registered=r ...
-- CABAB USERMODES :... simple:u_registered=r ...
+- CABAB CHANMODES :simple:c_registered=r
+- CABAB USERMODES :simple:u_registered=r
 ```
 
 - Membership metadata can now be synchronised between servers using the `METADATA` message.
@@ -40,7 +40,18 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + CAPAB MODULES :foo bar baz
 ```
 
+- Modules which were split, merged, or renamed in v4 will be reported in `CAPAB MODULES` using their new names.
+
+    - `m_cloaking.so` => `cloak`
+    - `m_gecosban.so` => `realnameban`
+    - `m_services_account.so` => `account` and `services`.
+
 - Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
+
+```diff
+- CAPAB MODULES :m_cloaking.so m_gecosban.so m_services_account.so
++ CAPAB MODULES :account cloak realnameban services
+```
 
 ```diff
 - :36DAAAAAA PRIVMSG NickServ :IDENTIFY hunter2
@@ -57,14 +68,14 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `CHANMAX`, `IDENTMAX`, and `NICKMAX` keys in `CAPAB CAPABILITIES` have been renamed to `MAXCHANNEL`, `MAXUSER`, and `MAXNICK` respectively for consistency.
 
 ```diff
-- CAPAB CAPABILITIES :... CHANMAX=60 IDENTMAX=10 NICKMAX=30 ...
-+ CAPAB CAPABILITIES :... MAXCHANNEL=60 MAXUSER=60 MAXNICK=30 ...
+- CAPAB CAPABILITIES :CHANMAX=60 IDENTMAX=10 NICKMAX=30
++ CAPAB CAPABILITIES :MAXCHANNEL=60 MAXUSER=60 MAXNICK=30
 ```
 
 - The `EXTBANS` key in `CAPAB CAPABILITIES` has been replaced with the `CAPAB EXTBANS` message.
 
 ```diff
-- CAPAB CAPABILITIES :... EXTBANS=ABCdef ...
+- CAPAB CAPABILITIES :EXTBANS=ABCdef
 + CAPAB EXTBANS :acting:mute=m matching:unauthed=U matching:account=R
 ```
 
@@ -115,15 +126,15 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `CAPAB CHANMODES` and `CAPAB USERMODES` messages have been extended to include the type of mode and mode rank (if applicable). The new format is `<type>[:<rank>]:<name>=[<prefix>]<letter>`.
 
 ```diff
-- CAPAB CHANMODES :ban=b key=k limit=l op=@o moderated=m ...
-+ CABAB CHANMODES :list:ban=b param:key=k param-set:limit=l prefix:30000:op=@o simple:moderated=n ...
+- CAPAB CHANMODES :ban=b key=k limit=l op=@o moderated=m
++ CABAB CHANMODES :list:ban=b param:key=k param-set:limit=l prefix:30000:op=@o simple:moderated=n
 ```
 
 - The `CHANMODES` token in the `CAPAB CAPABILITIES` message was removed.  This is now provided in `CAPAB CHANMODES` instead.
 
 ```diff
-- CAPAB CAPABILITIES :FOO=123 CHANMODES=b,k,l,imnpstr BAR=456 ...
-+ CAPAB CAPABILITIES :FOO=123 BAR=456 ...
+- CAPAB CAPABILITIES :FOO=123 CHANMODES=b,k,l,imnpstr BAR=456
++ CAPAB CAPABILITIES :FOO=123 BAR=456
 ```
 
 - The `ELINE`, `GLINE`, `KLINE`, `QLINE`, and `ZLINE` messages have been removed. You should use `ADDLINE` and `DELLINE` instead.
@@ -138,8 +149,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `FJOIN` message now includes unique membership identifiers for members.
 
 ```diff
-- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA v,36DAAAAAA ...
-+ :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 o,36DAAAAAB:69 ...
+- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA v,36DAAAAAA
++ :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 o,36DAAAAAB:69
 ```
 
 - The `FMODE` message no longer supports changing user modes. You should use `MODE` instead.
@@ -187,8 +198,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `MAXGECOS` token in the `CAPAB CAPABILITIES` message was renamed to `MAXREAL`.
 
 ```diff
-- CAPAB CAPABILITIES :FOO=123 MAXGECOS=100 BAR=456 ...
-+ CAPAB CAPABILITIES :FOO=123 MAXREAL=100 BAR=456 ...
+- CAPAB CAPABILITIES :FOO=123 MAXGECOS=100 BAR=456
++ CAPAB CAPABILITIES :FOO=123 MAXREAL=100 BAR=456
 ```
 
 - The `METADATA` message when sent with a channel target now has the channel creation time as the second parameter.
@@ -236,14 +247,14 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `PREFIX` token in the `CAPAB CAPABILITIES` message was removed.  This is now provided in `CAPAB CHANMODES` instead.
 
 ```diff
-- CAPAB CAPABILITIES :FOO=123 PREFIX=(ov)@+ BAR=456 ...
-+ CAPAB CAPABILITIES :FOO=123 BAR=456 ...
+- CAPAB CAPABILITIES :FOO=123 PREFIX=(ov)@+ BAR=456
++ CAPAB CAPABILITIES :FOO=123 BAR=456
 ```
 
 - The `PROTOCOL` token in the `CAPAB CAPABILITIES` message was removed. This is now provided as as a parameter to `CAPAB START` instead.
 
 ```diff
-- CAPAB CAPABILITIES :FOO=123 PROTOCOL=1202 BAR=456 ...
+- CAPAB CAPABILITIES :FOO=123 PROTOCOL=1202 BAR=456
 + CAPAB START 1205
 ```
 
@@ -276,7 +287,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `SINFO fullversion` message was added to allow opers to see the full version in `/VERSION`.
 
 ```diff
-+ :36D SINFO fullversion :InspIRCd-3.2.1. irc2.example.com :[36D] ...
++ :36D SINFO fullversion :InspIRCd-3.2.1. irc2.example.com :[36D]
 ```
 
 - The `SINFO rawversion` message was added to allow opers to see the full version in `/MAP`.
@@ -315,21 +326,21 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `USERMODES` token in the `CAPAB CAPABILITIES` message was removed.  This is now provided in `CAPAB USERMODES` instead.
 
 ```diff
-- CAPAB CAPABILITIES :FOO=123 USERMODES=,,s,iow BAR=456 ...
-+ CAPAB CAPABILITIES :FOO=123 BAR=456 ...
+- CAPAB CAPABILITIES :FOO=123 USERMODES=,,s,iow BAR=456
++ CAPAB CAPABILITIES :FOO=123 BAR=456
 ```
 
 - The `VERSION` message has been removed. You should send `SINFO version` instead.
 
 ```diff
-- :36D VERSION :InspIRCd-3.2. irc2.example.com :...
-+ :36D SINFO version :InspIRCd-3.2. irc2.example.com :...
+- :36D VERSION :InspIRCd-3.2. irc2.example.com :
++ :36D SINFO version :InspIRCd-3.2. irc2.example.com :
 ```
 
 - The length of messages post-authentication is no longer limited.
 
 ```diff
-- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 ...
-- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAB:69 ...
-+ :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 ... o,36DAAAAAB:69 ...
+- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420
+- :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAB:69
++ :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 o,36DAAAAAB:69
 ```
