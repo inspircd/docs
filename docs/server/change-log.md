@@ -142,7 +142,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + :36D FJOIN #chan 3133641600 +l 69 :o,36DAAAAAA:420 o,36DAAAAAB:69 ...
 ```
 
-- The `FMODE` message is no longer supports changing user modes. You should use `MODE` instead.
+- The `FMODE` message no longer supports changing user modes. You should use `MODE` instead.
 
 ```diff
 - :36DAAAAAA FMODE 36DAAAAAA 69 +os Aa
