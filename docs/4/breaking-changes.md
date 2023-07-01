@@ -34,6 +34,8 @@ title: v4 Breaking Changes
 
 - The flashpolicyd module has been removed with no replacement. This module is no longer needed as [Flash Player has been retired by Adobe](https://web.archive.org/web/20170801000737/https://blogs.adobe.com/conversations/2017/07/adobe-flash-update.html).
 
+- The hostchange module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install m_hostchange` to install it, or migrate to the [`cloak_static`](/4/modules/cloak_static) module and/or the [`cloak_user`](/4/modules/cloak_user) module.
+
 - The lockserv module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_lockserv` to install it.
 
 - The modenotice module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_modenotice` to install it.
@@ -103,6 +105,8 @@ title: v4 Breaking Changes
 - `<shun:affectsopers>` has been removed. If you wish to keep this behaviour then give your server operators the `servers/ignore-shuns` privilege.
 
 - `<sslmodes:enableumode>` has been removed with no replacement (now always enabled).
+
+- `<svshold:silent>` has been removed with no replacement (now always enabled).
 
 - The syntax of the passforward module's command fields has changed. You should switch your config to use the new style `%foo%` variables.
 
