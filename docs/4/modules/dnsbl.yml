@@ -72,12 +72,12 @@ configuration:
     default: null
     description: |-
       If action is set to mark then a new hostname to set on users who's IP address is in this DNSBL.
-  - name: ident
+  - name: user
     type: Text
     required: false
     default: null
     description: |-
-      If action is set to mark then a new username (ident) to set on users who's IP address is in this DNSBL.
+      If action is set to mark then a new username to set on users who's IP address is in this DNSBL.
   - name: name
     type: Text
     required: true

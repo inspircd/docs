@@ -1,7 +1,7 @@
 name: sslinfo
 
 description: |-
-  This module adds user facing TLS (SSL) information, various TLS (SSL) configuration options, and the `/SSLINFO` command to look up TLS (SSL) certificate information for other users.
+  This module adds user facing TLS information, various TLS configuration options, and the `/SSLINFO` command to look up TLS certificate information for other users.
 
 configuration:
 - name: connect
@@ -14,18 +14,18 @@ configuration:
     required: false
     default: 'no'
     description: |-
-      Whether users must be using TLS (SSL) to use this class.
+      Whether users must be using TLS to use this class.
   details: |-
     The requiressl field should be set to one of the following values:
 
     Value   | Description
     ------- | -----------
-    no      | TLS (SSL) is not required to use this class.
-    trusted | TLS (SSL) is required and and a CA-verified client certificate must be provided to use this class.
-    yes     | TLS (SSL) is required to use this class.
+    no      | TLS is not required to use this class.
+    trusted | TLS is required and and a CA-verified client certificate must be provided to use this class.
+    yes     | TLS is required to use this class.
 
   example: |-
-    Requires users to be using TLS (SSL) to be assigned to the Secure class:
+    Requires users to be using TLS to be assigned to the Secure class:
 
     ```xml
     <connect name="Secure"
@@ -42,15 +42,15 @@ configuration:
     required: false
     default: null
     description: |-
-      If defined then a space-delimited list of TLS (SSL) client certificate fingerprints to check against this server operator's TLS (SSL) client certificate.
+      If defined then a space-delimited list of TLS client certificate fingerprints to check against this server operator's TLS client certificate.
   - name: sslonly
     type: Boolean
     required: false
     default: 'No'
     description: |-
-      Whether this server operator must be connected using TLS (SSL) to log into their account.
+      Whether this server operator must be connected using TLS to log into their account.
   example: |-
-    Requires Sadie to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+    Requires Sadie to connect with TLS with the TLS client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
 
     ```xml
     <oper name="Sadie"
@@ -59,7 +59,7 @@ configuration:
           sslonly="yes">
     ```
 
-    Requires server operators of type NetAdmin to connect with TLS (SSL) with the TLS (SSL) client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
+    Requires server operators of type NetAdmin to connect with TLS with the TLS client certificate fingerprint `5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249` in order to log in to their server operator account:
 
     ```xml
     <type name="NetAdmin"
@@ -76,31 +76,38 @@ configuration:
     required: false
     default: null
     description: |-
-      The IANA Hash Function Textual Name of the hash algorithm used when getting client certificate fingerprints sent by a WebIRC gateway.
+      The IANA Hash Function Textual Name of the hash algorithm used when getting client fingerprints sent by a WebIRC gateway.
   - name: localsecure
     type: Boolean
     required: false
     default: 'Yes'
     description: |-
-      Whether to consider clients connecting from localhost as secure even if they are not using TLS (SSL).
+      Whether to consider clients connecting from localhost as secure even if they are not using TLS.
   - name: operonly
     type: Boolean
     required: false
     default: 'No'
     description: |-
-      Whether user TLS (SSL) certificate fingerprints are only visible to server operators.
+      Whether user TLS certificate fingerprints are only visible to server operators.
+  - name: spkifp
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: warnexpiring
     type: Duration
     required: false
     default: 0s
     description: |-
-      The maximum amount of time left that can be left on a TLS (SSL) client certificate fingerprint before clients start being warned of the expiration time. If set to 0s then no warning will be sent.
+      The maximum amount of time left that can be left on a TLS client certificate before clients start being warned of the expiration time. If set to 0s then no warning will be sent.
   details: ""
   example: |-
     ```xml
     <sslinfo hash="sha-256"
              localsecure="yes"
              operonly="no"
+             spkifp="no"
              warnexpiring="1w">
     ```
 
@@ -109,14 +116,14 @@ commands:
   param_count: 1
   syntax: <target>
   description: |-
-    Views the TLS (SSL) certificate information for &lt;target&gt;.
+    Views the TLS certificate information for &lt;target&gt;.
   example:
   - description: |-
-      Views the TLS (SSL) certificate information for Sadie
+      Views the TLS certificate information for Sadie
     text: |-
       /SSLINFO Sadie
   - description: |-
-      Views the TLS (SSL) certificate information for users in #wibble
+      Views the TLS certificate information for users in #wibble
     text: |-
       /SSLINFO #wibble
 

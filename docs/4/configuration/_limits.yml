@@ -20,12 +20,6 @@ attributes:
   default: '64'
   description: |-
     The maximum length of a hostname.
-- name: maxident
-  type: Number
-  required: false
-  default: '10'
-  description: |-
-    The maximum length of a username (ident).
 - name: maxkey
   type: Number
   required: false
@@ -68,18 +62,24 @@ attributes:
   default: '330'
   description: |-
     The maximum length of a channel topic.
+- name: maxuser
+  type: Number
+  required: false
+  default: '10'
+  description: |-
+    The maximum length of a username.
 details: ""
 example: |-
   ```xml
   <limits maxaway="200"
           maxchan="60"
           maxhost="64"
-          maxident="11"
           maxkey="30"
           maxkick="300"
           maxmodes="20"
-          maxnick="32"
+          maxnick="30"
           maxquit="300"
           maxreal="130"
-          maxtopic="330">
+          maxtopic="330"
+          maxuser="10">
   ```

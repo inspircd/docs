@@ -65,9 +65,9 @@ configuration:
       $1- to $9-   | The values of the parameters at and after the specified position.
       $chan        | If executed as a channel command then the name of the channel.
       $host        | The real hostname of the user that executed the command.
-      $ident       | The username (ident) of the user that executed the command.
       $nick        | The nickname of the user that executed the command.
       $requirement | The nickname specified in the requires field.
+      $user        | The username of the user that executed the command.
       $vhost       | The virtual hostname of the user that executed the command.
 
   example: |-

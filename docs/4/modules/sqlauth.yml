@@ -58,7 +58,6 @@ configuration:
     Variable    | Description
     ----------- | -----------
     $host       | The real hostname of the connecting user.
-    $ident      | The username (ident) of the connecting user.
     $ip         | The IP address of the connecting user.
     $md5pass    | An MD5 hash of the password sent with `/PASS` by the connecting user (requires [the md5 module](/4/modules/md5)).
     $nick       | The nickname of the connecting user.
@@ -66,6 +65,7 @@ configuration:
     $real       | The real name (gecos) of the connecting user.
     $server     | The name of the server the connecting user connected to.
     $sha256pass | A SHA-256 hash of the password sent with `/PASS` by the connecting user (requires [the sha2 module](/4/modules/sha2)).
+    $user       | The username of the connecting user.
     $uuid       | The UUID of the connecting user.
 
   example: |-

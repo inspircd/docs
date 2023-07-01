@@ -39,16 +39,15 @@ Name                                                      | Description
 [channelban](/4/modules/channelban)                       | Adds extended ban j: (channel) which checks whether users are in a channel matching the specified glob pattern.
 [check](/4/modules/check)                                 | Adds the /CHECK command which allows server operators to look up details about a channel, user, IP address, or hostname.
 [chghost](/4/modules/chghost)                             | Adds the /CHGHOST command which allows server operators to change the displayed hostname of a user.
-[chgident](/4/modules/chgident)                           | Adds the /CHGIDENT command which allows server operators to change the username (ident) of a user.
+[chgident](/4/modules/chgident)                           | Adds the /CHGIDENT command which allows server operators to change the username of a user.
 [chgname](/4/modules/chgname)                             | Adds the /CHGNAME command which allows server operators to change the real name of a user.
 [classban](/4/modules/classban)                           | Adds extended ban n: (class) which check whether users are in a connect class matching the specified glob pattern.
 [clearchan](/4/modules/clearchan)                         | Adds the /CLEARCHAN command which allows server operators to mass-punish the members of a channel.
 [cloak](/4/modules/cloak)                                 | Adds user mode x (cloak) which allows user hostnames to be hidden.
-[cloak_account](/4/modules/cloak_account)                 | Adds the account and account-id cloaking methods for use with the cloak module.
 [cloak_md5](/4/modules/cloak_md5)                         | Adds the half and full cloaking methods for use with the cloak module.
-[cloak_nick](/4/modules/cloak_nick)                       | Adds the nick cloaking method for use with the cloak module.
 [cloak_sha256](/4/modules/cloak_sha256)                   | Adds the hmac-sha256 and hmac-sha256-ip cloaking methods for use with the cloak module.
 [cloak_static](/4/modules/cloak_static)                   | Adds the static cloaking method for use with the cloak module.
+[cloak_user](/4/modules/cloak_user)                       | Adds the account, account-id, nickname, and username cloaking methods for use with the cloak module.
 [codepage](/4/modules/codepage)                           | Allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 [commonchans](/4/modules/commonchans)                     | Adds user mode c (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 [conn_join](/4/modules/conn_join)                         | Allows the server administrator to force users to join one or more channels on connect.
@@ -80,12 +79,12 @@ Name                                                      | Description
 [hidelist](/4/modules/hidelist)                           | Allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 [hidemode](/4/modules/hidemode)                           | Allows mode changes to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
 [hideoper](/4/modules/hideoper)                           | Adds user mode H (hideoper) which hides the server operator status of a user from unprivileged users.
-[hostcycle](/4/modules/hostcycle)                         | Sends a fake disconnection and reconnection when a user's username (ident) or hostname changes to allow clients to update their internal caches.
+[hostcycle](/4/modules/hostcycle)                         | Sends a fake disconnection and reconnection when a user's username or hostname changes to allow clients to update their internal caches.
 [httpd](/4/modules/httpd)                                 | Allows the server administrator to serve various useful resources over HTTP.
 [httpd_acl](/4/modules/httpd_acl)                         | Allows the server administrator to control who can access resources served over HTTP with the httpd module.
 [httpd_config](/4/modules/httpd_config)                   | Allows the server configuration to be viewed over HTTP via the /config path.
 [httpd_stats](/4/modules/httpd_stats)                     | Provides XML-serialised statistics about the server, channels, and users over HTTP via the /stats path.
-[ident](/4/modules/ident)                                 | Allows the usernames (idents) of users to be looked up using the RFC 1413 Identification Protocol.
+[ident](/4/modules/ident)                                 | Allows the usernames of users to be looked up using the RFC 1413 Identification Protocol.
 [inviteexception](/4/modules/inviteexception)             | Adds channel mode I (invex) which allows channel operators to exempt user masks from channel mode i (inviteonly).
 [ircv3](/4/modules/ircv3)                                 | Provides the IRCv3 account-notify, away-notify, and extended-join client capabilities.
 [ircv3_accounttag](/4/modules/ircv3_accounttag)           | Provides the IRCv3 account-tag client capability.
@@ -158,7 +157,7 @@ Name                                                      | Description
 [serverban](/4/modules/serverban)                         | Adds extended ban s: (server) which check whether users are on a server matching the specified glob pattern.
 [services](/4/modules/services)                           | Provides support for integrating with a services server.
 [sethost](/4/modules/sethost)                             | Adds the /SETHOST command which allows server operators to change their displayed hostname.
-[setident](/4/modules/setident)                           | Adds the /SETIDENT command which allows server operators to change their username (ident).
+[setident](/4/modules/setident)                           | Adds the /SETIDENT command which allows server operators to change their username.
 [setidle](/4/modules/setidle)                             | Adds the /SETIDLE command which allows server operators to change their idle time.
 [setname](/4/modules/setname)                             | Adds the /SETNAME command which allows users to change their real name.
 [sha1](/4/modules/sha1)                                   | Allows other modules to generate SHA-1 hashes.
@@ -174,7 +173,6 @@ Name                                                      | Description
 [sslmodes](/4/modules/sslmodes)                           | Adds channel mode z (sslonly) which prevents users who are not connecting using TLS from joining the channel and user mode z (sslqueries) to prevent messages from non-TLS users.
 [starttls](/4/modules/starttls)                           | Provides the IRCv3 tls client capability.
 [stripcolor](/4/modules/stripcolor)                       | Adds channel mode S (stripcolor) which allows channels to strip IRC formatting codes from messages.
-[svshold](/4/modules/svshold)                             | Adds the /SVSHOLD command which allows services to reserve nicknames.
 [swhois](/4/modules/swhois)                               | Adds the /SWHOIS command which adds custom lines to a user's WHOIS response.
 [timedbans](/4/modules/timedbans)                         | Adds the /TBAN command which allows channel operators to add bans which will be expired after the specified period.
 [tline](/4/modules/tline)                                 | Adds the /TLINE command which allows server operators to determine how many users would be affected by an X-line on a specified pattern.

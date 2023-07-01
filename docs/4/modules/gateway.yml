@@ -20,12 +20,12 @@ configuration:
     default: null
     description: |-
       The IP address or hostname of the gateway.
-  - name: newident
+  - name: newusername
     type: Text
     required: false
     default: gateway
     description: |-
-      If the ident type is used then the value to replace usernames (idents) that contain hexadecimal-encoded IPv4 addresses.
+      If the username type is used then the value to replace usernames that contain hexadecimal-encoded IPv4 addresses.
   - name: type
     type: Text
     required: true
@@ -58,18 +58,18 @@ configuration:
 
     The type field should be set to one of the following values:
 
-    Value      | Description
-    ---------- | -----------
-    ident      | The IP address of the user will be sent in the username (ident) field in hexadecimal (IPv4 only).
-    webirc     | The IP address of the user will be sent using the `/WEBIRC` command (recommended).
+    Value   | Description
+    ------- | -----------
+    gateway | The IP address of the user will be sent in the username field in hexadecimal (IPv4 only).
+    webirc  | The IP address of the user will be sent using the `/WEBIRC` command (recommended).
 
   example: |-
-    Tells the gateway module that the \*.ident.gateway.example.com gateway will encode the IPv4 address of users into their username (ident).
+    Tells the gateway module that the \*.username.gateway.example.com gateway will encode the IPv4 address of users into their username.
 
     ```xml
-    <gateway type="ident"
-             mask="*.ident.gateway.example.com"
-             newident="wobble">
+    <gateway type="username"
+             mask="*.username.gateway.example.com"
+             newusername="wobble">
     ```
 
     Tells the gateway module that gateways with an IP matching 192.0.2.0/24 will send the IP address of users with the `/WEBIRC` command using TLS (SSL) client certificate fingerprint authentication:

@@ -10,31 +10,49 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 4.0.0a22
 
-**This pre-release version of InspIRCd has not yet been released.**
+**This pre-release version of InspIRCd was released on 2023-07-01.**
 
-- Added support for a cloak method being able to declare itself as being used for link data even if it is not the first cloak provider.
+- Added `<svshold:exemptregistered>` to allow users to override a SVSHOLD on a nickname in their group (requires services support).
 
-- Added support for SPKI fingerprints to the ssl_gnutls module.
+- Added support for Subject Public Key Info (SPKI) fingerprints to the `ssl_gnutls` (GnuTLS) and `sslinfo` (WebIRC gateway clients) modules.
 
-- Added support for SPKI fingerprints to the sslinfo module (for gateway clients).
+- Added support for real usernames which are only visible to server operators and retain the username sent in USER or the lookup result from the identd module.
 
-- Added support for users who are authenticated to a nick group being able to override a SVSHOLD on their nick.
+- Added the `username` cloak method for cloaking users using their real username (useful for shared providers like IRCCloud).
 
-- Added the `ident` cloak method to `cloak_user` to cloak a user with their RFC 1413 username.
+- Added the ability for cloak methods to declare themselves as link sensitive so they will be used for link data instead of the non-sensitive cloak methods in front of them.
 
-- Developer: added support for checking if a specific cloak method is being used to the cloak api.
+- Fixed an occasional crash caused by an iterator invalidation when deleting cullables.
 
-- Fixed a crash caused by iterator invalidation when the cull list is reallocated whilst culling.
+- Fixed being able to evade channel bans via HostServ-granted vidents.
 
-- Fixed extracting data from the old `version` and `fullversion` SINFO keys.
+- Fixed building cloak_sha256 against libpsl on Windows.
 
-- Fixed leaking server operator real hostnames to normal users in `/STATS P`.
+- Fixed command privileges in `/STATS Oo` overflowing the maximum line length.
 
-- Fixed not being able to build the cloak_sha256 module against libpsl on Windows.
+- Fixed erroneous warnings in the log when `<options:defaultbind>` was not explicitly specified.
+
+- Fixed extracting information from the 1205 (v3) `version` and `fullversion` SINFO fields.
+
+- Fixed telling users that they are in deaf mode when user modes `d` (deaf) and `D` (privdeaf) are removed.
+
+- Fixed unnecessarily regenerating user cloak lists when a cloak method is not active.
 
 - Fixed warnings about redefining `FD_SETSIZE` on Windows when building some modules.
 
-- Merged the `cloak_account` and `cloak_nick` module into a new `cloak_user` module.
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Merged the `cloak_account` and `cloak_nick` modules to make a new module called `cloak_user`.
+
+- Merged the `svshold` module into the `services` module.
+
+- Reduced the memory usage of various internal user fields.
+
+- Replaced `<cloak:sanitize>` with `<cloak:invalidchar>` which can be set to "truncate" to truncate at the first invalid character (e.g. `nick|afk` => `nick`).
+
+- Updated all documentation and config fields to use "user(name)" to refer to usernames instead of ident (which only refers to RFC 1413 resolved usernames).
+
+- Updated the S2S `UID` message to also send the real username when using the 1206 (v4) protocol.
 
 ### InspIRCd 4.0.0a21
 
@@ -474,7 +492,7 @@ This page lists changes which have happened between releases.
 
 - Added `<limits:maxkey>` for configuring the maximum key length.
 
-- Added support to `/CHECK` for finding users by an ident or real name mask.
+- Added support to `/CHECK` for finding users by an username or real name mask.
 
 - Changed the real ip/host field from `RPL_WHOISHOST` to `RPL_WHOISACTUALLY`.
 

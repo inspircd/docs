@@ -43,7 +43,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to authenticate users against their username (ident) instead of their nick.
+      Whether to authenticate users against their username instead of their nickname.
   - name: verbose
     type: Boolean
     required: false

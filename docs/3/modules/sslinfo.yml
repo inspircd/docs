@@ -92,7 +92,7 @@ configuration:
     required: false
     default: 0s
     description: |-
-      The maximum amount of time left that can be left on a TLS (SSL) client certificate fingerprint before clients start being warned of the expiration time. If set to 0s then no warning will be sent.
+      The maximum amount of time left that can be left on a TLS (SSL) client certificate before clients start being warned of the expiration time. If set to 0s then no warning will be sent.
 
   details: ""
   example: |-
