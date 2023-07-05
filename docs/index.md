@@ -14,6 +14,7 @@ title: Introduction
 - [Packaging Advice](/packaging)
 - [Security Advisories](/security)
 - [Social Media](/social)
+- [Tutorials](/tutorials)
 
 ### Developer
 
