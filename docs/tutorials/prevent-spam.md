@@ -9,7 +9,7 @@ title: How to prevent spam on your IRC network
 
 Unfortunately spam is still an issue on IRC. However, with the right server configuration you can keep your network safe from the vast majority of spam.
 
-Before applying any mitigations there is something important to remember: **DO NOT FEED THE TROLLS**. Most IRC spammers are often pathetic losers who are trying to waste your time or get a reaction out of you. Do not attempt to follow their spam to complain as they often use false flags to implicate an innocent third party or have traps set up on their own IRC network (e.g. a bot that joins you to channels until your client crashes) to cause further problems. There's nothing you can do to change their behaviour other than block their spam so it's not fun for them anymore.
+Before applying any mitigations there is something important to remember: **DO NOT FEED THE TROLLS**. Most IRC spammers are pathetic losers who are trying to waste your time or get a reaction out of you. Do not attempt to follow their spam to complain as they often use false flags to implicate an innocent third party or have traps set up on their own IRC network (e.g. a bot that joins you to channels until your client crashes) to cause further problems. There's nothing you can do to change their behaviour other than block their spam so it's not fun for them anymore.
 
 ### Require account registration
 
@@ -46,6 +46,25 @@ Preconfigured profiles for these DNSBLs are available in the [on the dnsbl modul
 Even if a spammer is using a host which has not previously been blacklisted for spam you can use a scanner like [HOPM](https://github.com/ircd-hybrid/hopm) to scan all new clients for HTTP/SOCKS/WinGate proxies and insecure software that is often exploited by spammers.
 
 Depending on your local laws and server provider terms of service this may not be legal. However, to our knowledge no IRC admin has ever had any legal trouble for port scanning users for the purposes of spam prevention despite IRC networks doing so for decades. The [NMAP book](https://nmap.org/book/legal-issues.html) contains an article about the legality of port scanning which may be of interest to IRC server admins.
+
+### Required users of shared providers authenticate with SASL
+
+If you can't require all users use an account you should consider requiring users of shared hosts to be authenticated to be allowed to connect. Common shared hosts which spam has been seen from are:
+
+- AWS &mdash; `*.amazonaws.com`
+- Google Cloud &mdash; `*.googleusercontent.com`
+- Linode &mdash; `*.linodeusercontent.com`
+
+A configuration for how to do this can be found on [the useful snippets page](/3/configuration/useful-snippets/#requiring-connections-to-use-sasl).
+
+
+If you want a softer option you can also use [the muteban module](/3/modules/muteban) and the [the services_account module](/3/modules/services_account) to ban unregistered users from those providers in your channels.
+
+```plaintext
+/MODE #channel +b m:U:*!*.amazonaws.com
+/MODE #channel +b m:U:*!*.googleusercontent.com
+/MODE #channel +b m:U:*!*.linodeusercontent.com
+```
 
 ### Require TLS (SSL)
 
