@@ -57,13 +57,12 @@ If you can't require all users use an account you should consider requiring user
 
 A configuration for how to do this can be found on [the useful snippets page](/3/configuration/useful-snippets/#requiring-connections-to-use-sasl).
 
-
 If you want a softer option you can also use [the muteban module](/3/modules/muteban) and the [the services_account module](/3/modules/services_account) to ban unregistered users from those providers in your channels.
 
 ```plaintext
-/MODE #channel +b m:U:*!*.amazonaws.com
-/MODE #channel +b m:U:*!*.googleusercontent.com
-/MODE #channel +b m:U:*!*.linodeusercontent.com
+/MODE #channel +b m:U:*!*@*.amazonaws.com
+/MODE #channel +b m:U:*!*@*.googleusercontent.com
+/MODE #channel +b m:U:*!*@*.linodeusercontent.com
 ```
 
 ### Require TLS (SSL)
