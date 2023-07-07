@@ -23,7 +23,7 @@ attributes:
 - name: commandrate
   type: Number
   required: false
-  default: null
+  default: '1000'
   description: |-
     The number of millicommands (1000 equals 1 command) per second that a user can execute.
 - name: fakelag
@@ -35,9 +35,9 @@ attributes:
 - name: globalmax
   type: Number
   required: false
-  default: null
+  default: '0'
   description: |-
-    The maximum number of users who can exist on the entire network from the range specified in the allow field.
+    The maximum number of users who can exist on the entire network from the range specified in the allow field. Set to 0 for no limit.
 - name: hardsendq
   type: Number
   required: false
@@ -53,9 +53,9 @@ attributes:
 - name: localmax
   type: Number
   required: false
-  default: null
+  default: '0'
   description: |-
-    The maximum number of users who can exist on the local server from the range specified in the allow field.
+    The maximum number of users who can exist on the local server from the range specified in the allow field. Set to 0 for no limit.
 - name: maxchans
   type: Number
   required: false
