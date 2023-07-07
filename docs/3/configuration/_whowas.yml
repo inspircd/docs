@@ -5,15 +5,15 @@ attributes:
 - name: groupsize
   type: Number
   required: false
-  default: '0'
+  default: '10'
   description: |-
-    The maximum number of `/WHOWAS` entries for a nickname.
+    The maximum number of `/WHOWAS` entries for a nickname. If set to 0 then `/WHOWAS` is disabled.
 - name: maxgroups
   type: Number
   required: false
-  default: '0'
+  default: '10240'
   description: |-
-    The maximum number of `/WHOWAS` nickname groups.
+    The maximum number of `/WHOWAS` nickname groups. If set to 0 then `/WHOWAS` is disabled.
 - name: maxkeep
   type: Duration
   required: false
