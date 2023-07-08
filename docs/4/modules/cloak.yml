@@ -19,10 +19,14 @@ configuration:
 
     Value          | Module                                  | Description
     -------------- | --------------------------------------- | -----------
-    full           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* Cloak with three salted MD5 hashes of significant ranges of a user's IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Does not cloak UNIX socket users.
-    half           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* If the user has a DNS hostname then cloak all but the last few labels with a salted MD5 hash. Otherwise, cloak with a salted MD5 hash of the most unique /16 subnet of a IPv4 address or /48 subnet of a IPv6 address. Does not cloak UNIX socket users.
-    hmac-sha256    | [cloak_sha256](/4/modules/cloak_sha256) | If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
-    hmac-sha256-ip | [cloak_sha256](/4/modules/cloak_sha256) | If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64).
+    account        | [cloak_user](/4/modules/cloak_user)     | Cloak the user with their account name. Requires [the account module](/4/configuration/account).
+    account-id     | [cloak_user](/4/modules/cloak_user)     | Cloak the user with their account id. Requires [the account module](/4/configuration/account).
+    full           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* Cloak with three salted MD5 hashes of significant ranges of a user's IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Does not cloak UNIX socket users. Requires [the md5 module](/4/configuration/md5).
+    half           | [cloak_md5](/4/modules/cloak_md5)       | *Deprecated!* If the user has a DNS hostname then cloak all but the last few labels with a salted MD5 hash. Otherwise, cloak with a salted MD5 hash of the most unique /16 subnet of a IPv4 address or /48 subnet of a IPv6 address. Does not cloak UNIX socket users. Requires [the md5 module](/4/configuration/md5).
+    hmac-sha256    | [cloak_sha256](/4/modules/cloak_sha256) | If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Requires [the sha2 module](/4/configuration/sha2).
+    hmac-sha256-ip | [cloak_sha256](/4/modules/cloak_sha256) | If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Requires [the sha2 module](/4/configuration/sha2).
+    nickname       | [cloak_user](/4/modules/cloak_user)     | Cloak the user with their nickname.
+    username       | [cloak_user](/4/modules/cloak_user)     | Cloak the user with their real username.
 
 - name: connect
   description: |-
