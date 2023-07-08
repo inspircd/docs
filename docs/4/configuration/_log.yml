@@ -10,7 +10,7 @@ attributes:
     The method to use for storing logs.
 - name: type
   type: Text
-  required: true
+  required: false
   default: '*'
   description: |-
     A space-delimited token list of types of message to log.

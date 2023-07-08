@@ -16,11 +16,11 @@ attributes:
   description: |-
     If defined then the DNS server to look up hostnames with. If not set then the first system resolver will be used.
 - name: timeout
-  type: Number
+  type: Duration
   required: false
-  default: '5'
+  default: 5s
   description: |-
-    The number of seconds before timing out DNS lookups.
+    The period before timing out DNS lookups.
 - name: sourceip
   type: Text
   required: false
@@ -38,7 +38,7 @@ example: |-
   ```xml
   <dns enabled="yes"
        server="127.0.0.53"
-       timeout="5"
+       timeout="5s"
        sourceip=""
        sourceport="0">
   ```

@@ -37,7 +37,7 @@ attributes:
   required: false
   default: '0'
   description: |-
-    The maximum number of users who can exist on the entire network from the range specified in the allow field. Set to 0 for no limit.
+    The maximum number of clones per host (see [`<cidr>`](#cidr)) that can be on the entire network for users in this connect class. Set to 0 for no limit.
 - name: hardsendq
   type: Number
   required: false
@@ -47,7 +47,7 @@ attributes:
 - name: limit
   type: Number
   required: false
-  default: null
+  default: '5000'
   description: |-
     The maximum number of users who can be in this connect class.
 - name: localmax
@@ -55,7 +55,7 @@ attributes:
   required: false
   default: '0'
   description: |-
-    The maximum number of users who can exist on the local server from the range specified in the allow field. Set to 0 for no limit.
+    The maximum number of clones per host (see [`<cidr>`](#cidr)) that can be on the local server for users in this connect class. Set to 0 for no limit.
 - name: maxchans
   type: Number
   required: false
@@ -85,7 +85,7 @@ attributes:
   required: false
   default: 2m
   description: |-
-    The number of seconds this client can be idle for before sending it a `PING` message.
+    The period this client can be idle for before sending it a `PING` message.
 - name: port
   type: Number
   required: false
@@ -133,7 +133,7 @@ attributes:
   required: false
   default: 1m30s
   description: |-
-    The number of seconds after which an unregistered user is timed out.
+    The period after which an unregistered user is timed out.
 - name: uniqueusername
   type: Boolean
   required: false
@@ -174,7 +174,7 @@ example: |-
            localmax="3"
            maxchans="30"
            maxconnwarn="no"
-           pingfreq="120"
+           pingfreq="2m"
            recvq="8K"
            resolvehostnames="yes"
            softsendq="8192"

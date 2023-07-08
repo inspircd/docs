@@ -5,7 +5,7 @@ attributes:
 - name: method
   type: Text
   required: false
-  default: null
+  default: file
   description: |-
     The method to use for storing logs.
 - name: type

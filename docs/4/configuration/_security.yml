@@ -38,12 +38,6 @@ attributes:
   default: null
   description: |-
     If defined then the text to show in place of a server name.
-- name: hidesplits
-  type: Boolean
-  required: false
-  default: 'No'
-  description: |-
-    Whether to hide server names in netsplit quits from non-server operators.
 - name: hideservicekills
   type: Boolean
   required: false
@@ -113,7 +107,6 @@ example: |-
             hidebans="yes"
             hidekills=""
             hideserver=""
-            hidesplits="no"
             hideservicekills="yes"
             maxtargets="20"
             restrictbannedusers="yes"

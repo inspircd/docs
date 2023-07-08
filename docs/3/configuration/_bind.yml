@@ -19,7 +19,7 @@ attributes:
   required: false
   default: '0'
   description: |-
-    *TCP/IP listeners only!* The number of seconds to defer a connection for whilst waiting for it to send data (not supported on Windows).
+    *TCP/IP listeners only!* The period to defer a connection for whilst waiting for it to send data (not supported on Windows).
 - name: hook
   type: Text
   required: false
