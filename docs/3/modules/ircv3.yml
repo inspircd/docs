@@ -1,7 +1,7 @@
 name: ircv3
 
 description: |-
-  This module provides the IRCv3 `account-notify`, `away-notify`, and `extended-join` client capabilities.
+  This module provides the IRCv3 `account-notify`, `away-notify`, `extended-join`, and `standard-replies` client capabilities.
 
 configuration:
 - name: ircv3
