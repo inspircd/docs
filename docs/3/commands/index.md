@@ -13,6 +13,8 @@ This page only lists core commands. For details on the commands of a specific mo
 {% for cmd in core_commands -%}
 ### `/{{ cmd.name }} {{ cmd.syntax }}`
 
+<class id="{{ cmd.name.lower() }}"></class>
+
 {{ cmd.description }}
 
 {% if cmd.oper_only %}
