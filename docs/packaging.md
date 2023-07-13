@@ -18,6 +18,8 @@ When performing a system-wide build you may be asked to specify a user and group
 
 You will probably want to set `INSPIRCD_DISABLE_RPATH=1` in the environment to avoid embedding [runtime paths](https://en.wikipedia.org/wiki/Rpath) into the compiled binaries.
 
+If your operating system uses an init system that gives special meaning to certain exit codes (e.g. systemd) then you should add `-DINSPIRCD_BINARY_EXIT` to `CXXFLAGS` in the environment to disable the custom exit codes that InspIRCd uses.
+
 ```sh
 # If always run as root.
 ./configure --gid 0 --uid 0 ...
