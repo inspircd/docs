@@ -112,6 +112,8 @@ You may also wish to automatically kill users of unmaintained and insecure clien
              message="[WARNING] You have been detected as using X-Chat. This client is unmaintained and contains many serious compatibility and security issues. Please migrate to HexChat v2.14.3 or newer to fix this issue.">
 ```
 
+If you want to connect to a network with Comic Chat you may wish to use [this](https://gist.github.com/richardg867/bb19ca2b03545f71ae15) gateway to work around several bugs (including this one) in it.
+
 ### My antivirus claims that InspIRCd is malware!
 
 This is a false positive. IRC software is often mistaken for malware as it used to be common for cybercriminals to use IRC servers to control their botnets.
