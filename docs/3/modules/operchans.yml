@@ -21,9 +21,9 @@ extbans:
     char: O
     type: Matching
     syntax: O:<pattern>
-    description: Checks whether users are logged into a server operator account matching &lt;pattern&gt;.
+    description: Checks whether users are logged into a server operator account with an operator type matching &lt;pattern&gt;.
   example:
   - description: |-
-      Bans users logged into server operator accounts matching `Evil*` from joining the channel
+      Bans users logged into server operator accounts with an operator type matching `Evil*` from joining the channel
     text: |-
       /MODE #channel +b O:Evil*
