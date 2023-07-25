@@ -9,7 +9,7 @@ extbans:
   - name: server
     char: s
     type: Matching
-    syntax: s:<pattern>
+    syntax: <pattern>
     description: Checks whether users are on a server matching &lt;pattern&gt;.
   example:
   - description: |-

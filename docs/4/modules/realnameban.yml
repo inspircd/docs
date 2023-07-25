@@ -9,12 +9,12 @@ extbans:
   - name: realmask
     char: a
     type: Matching
-    syntax: a:<pattern>
+    syntax: <pattern>
     description: Checks whether users have a nick!user@host+real mask matching &lt;pattern&gt;.
   - name: realname
     char: r
     type: Matching
-    syntax: r:<pattern>
+    syntax: <pattern>
     description: Checks whether users have a a real name matching &lt;pattern&gt;.
   example:
   - description: |-

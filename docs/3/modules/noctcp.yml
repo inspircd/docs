@@ -72,7 +72,7 @@ extbans:
   - name: noctcp
     char: C
     type: Acting
-    syntax: C:<mask>
+    syntax: <mask>
     description: Bans &lt;mask&gt; from sending messages that contain CTCPs.
   example:
   - description: |-

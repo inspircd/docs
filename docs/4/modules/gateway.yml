@@ -142,7 +142,7 @@ extbans:
   - name: gateway
     char: w
     type: Matching
-    syntax: w:<pattern>
+    syntax: <pattern>
     description: Matches against the name of the gateway that WebIRC users are connecting from.
 example:
 - description: |-

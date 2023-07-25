@@ -356,6 +356,11 @@ This module requires no other configuration.
 </thead>
 <tbody markdown="1">
 {% for mode in extbans.chars %}
+{% if '3' == version %}
+{% set prefix = mode.char ~ ':' %}
+{% else %}
+{% set prefix = '[!]' ~ mode.name ~ ':' %}
+{% endif %}
 <tr markdown="1">
 <td markdown="1">{{ mode.name }}</td>
 <td markdown="1">{{ mode.char }}</td>
@@ -363,9 +368,9 @@ This module requires no other configuration.
 {% if mode.syntax is none %}
 <td><em>None</em></td>
 {% elif mode.syntax is string %}
-<td markdown="1">`{{ mode.syntax }}`</td>
+<td markdown="1">`{{ prefix }}{{ mode.syntax }}`</td>
 {% else %}
-<td markdown="1">`{{ mode.syntax | join('`<br>`') }}`</td>
+<td markdown="1">`{{ prefix }}{{ mode.syntax | join('`<br>{{ prefix }}`') }}`</td>
 {% endif %}
 <td markdown="1">{% if mode.added %}<a href="/{{ mode.added | first }}/change-log/#inspircd-{{ mode.added | replace(".", "") }}"><strong>New in v{{ mode.added }}!</strong></a> {% endif %}{{ mode.description }}</td>
 </tr>

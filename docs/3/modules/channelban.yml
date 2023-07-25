@@ -9,7 +9,7 @@ extbans:
   - name: channel
     char: j
     type: Matching
-    syntax: j:<pattern>
+    syntax: <pattern>
     description: Checks whether users are in a channel matching &lt;pattern&gt;.
   example:
   - description: |-

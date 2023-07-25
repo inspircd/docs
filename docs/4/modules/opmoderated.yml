@@ -43,7 +43,7 @@ extbans:
   - name: opmoderated
     char: u
     type: Acting
-    syntax: A:<mask>
+    syntax: <mask>
     description: Bans &lt;mask&gt; from speaking to unprivileged users in the channel.
   example:
   - description: |-

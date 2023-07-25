@@ -19,7 +19,7 @@ extbans:
   - name: blockinvite
     char: A
     type: Acting
-    syntax: A:<mask>
+    syntax: <mask>
     description: Bans &lt;mask&gt; from using the `/INVITE` command.
   example:
   - description: |-

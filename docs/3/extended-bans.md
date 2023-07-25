@@ -8,7 +8,7 @@ title: v{{ version }} Extended Bans
 
 ## Extended Bans
 
-Some [list modes](/{{ version }}/channel-modes), such as [channel mode `b` (ban)](/{{ version }}/channel-modes), take a `<nick>!<user>@<host>` mask as their parameter. These list modes can be extended to support alternate forms of matching and actions.
+Some [list modes](/{{ version }}/channel-modes), such as [channel mode `b` (ban)](/{{ version }}/channel-modes), take a `<nick>!<user>@<host>` mask as their parameter. These list modes can be extended to support alternate forms of matching and actions. {% if '4' == version %} If prefixed with an `!` then the behaviour is inverted.{% endif %}
 
 ### Acting
 

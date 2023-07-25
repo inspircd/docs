@@ -20,7 +20,7 @@ extbans:
   - name: oper
     char: O
     type: Matching
-    syntax: O:<pattern>
+    syntax: <pattern>
     description: Checks whether users are logged into a server operator account with an operator type matching &lt;pattern&gt;.
   example:
   - description: |-

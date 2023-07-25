@@ -9,7 +9,7 @@ extbans:
   - name: partmsg
     char: p
     type: Acting
-    syntax: p:<mask>
+    syntax: <mask>
     description: Bans &lt;mask&gt; from sending a `/PART` message.
   example:
   - description: |-

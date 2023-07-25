@@ -9,7 +9,7 @@ extbans:
   - name: class
     char: n
     type: Matching
-    syntax: n:<pattern>
+    syntax: <pattern>
     description: Checks whether users are in a connect class &lt;pattern&gt;.
   example:
   - description: |-

@@ -24,7 +24,7 @@ extbans:
   - name: nonotice
     char: T
     type: Acting
-    syntax: T:<mask>
+    syntax: <mask>
     description: Bans &lt;mask&gt; from sending messages with the `/NOTICE` command.
   example:
   - description: |-

@@ -39,7 +39,7 @@ extbans:
   - name: nonick
     char: N
     type: Acting
-    syntax: N:<mask>
+    syntax: <mask>
     description: Bans users matching &lt;mask&gt; from changing their nickname whilst in the channel.
   example:
   - description: |-

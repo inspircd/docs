@@ -24,7 +24,7 @@ extbans:
   - name: blockcolor
     char: c
     type: Acting
-    syntax: c:<mask>
+    syntax: <mask>
     description: |-
       Bans &lt;mask&gt; from sending messages that contain IRC formatting codes.
   example:
