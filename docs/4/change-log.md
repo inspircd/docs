@@ -10,9 +10,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 4.0.0a23
 
-<!-- TODO: ensure changes after commit 43bafdbfcb497c69b3557557bc2286835f8e9fdb are added to this list before release. -->
-
-**This pre-release version of InspIRCd has not yet been released.**
+**This pre-release version of InspIRCd was released on 2023-08-01.**
 
 - Added `<options:xlinequit>` to allow customising the quit message shown to users and opers when they are banned from the server.
 
