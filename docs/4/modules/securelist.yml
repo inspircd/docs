@@ -37,6 +37,12 @@ configuration:
     default: 'No'
     description: |-
       Whether to tell the user that they need to wait before using the `/LIST` command.
+  - name: hidesmallchans
+    type: Number
+    required: false
+    default: 0
+    description: |-
+      The minimum user count for a channel to show up in /LIST after the wait period. If a user is exempt from the wait period this will not apply to them.
   - name: waittime
     type: Duration
     required: false
@@ -67,6 +73,7 @@ configuration:
     <securelist exemptregistered="yes"
                 showmsg="yes"
                 waittime="60s"
+                hidesmallchans="2"
                 fakechans="5"
                 fakechans="5"
                 fakechanprefix="#"

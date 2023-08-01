@@ -12,6 +12,8 @@ title: v4 Breaking Changes
 
 - A compiler with C++17 support is now required to build InspIRCd. In practise this means you will need to use at least Clang 5, GCC 7, or MSVC 19.15.
 
+- CMake 3.20+ is now required to build on Windows.
+
 - Debian GNU/kFreeBSD is no longer supported. It is recommended that you switch to Debian GNU/Linux instead.
 
 - GnuTLS 3.3.5+ is now required by the ssl_gnutls module.
@@ -39,6 +41,8 @@ title: v4 Breaking Changes
 - The lockserv module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_lockserv` to install it.
 
 - The modenotice module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_modenotice` to install it.
+
+- The nopartmsg module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install m_nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
 
 - The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
 

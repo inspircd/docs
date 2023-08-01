@@ -20,7 +20,7 @@ attributes:
   default: 'No'
   description: |-
     Whether to show "is a server operator" in `/WHOIS` instead of the server operator's type.
-- name: hidelines
+- name: publicxlinequit
   type: Text
   required: false
   default: null
@@ -84,12 +84,18 @@ details: |+
   dynamic | Send invites to channel half-operators (if available) and higher ranked users.
   all     | Send invites to all channel members.
 
-  The hidebans field can contain any of the following template variables:
+  The publicxlinequit field can contain any of the following template variables:
 
-  Variable | Description
-  -------- | -----------
-  reason   | The reason the X-line was added.
-  type     | The type of X-line that was added.
+  Variable    | Description
+  ----------- | -----------
+  %created%   |  The date/time at which the X-line was created.
+  %duration%  |  The duration of the X-line.
+  %expiry%    |  The date/time at which the X-line expires.
+  %fulltype%  |  The type of X-line which was matched, suffixed with  "-lined" if its name is one or two characters.
+  %reason%    |  The reason the X-line was added.
+  %remaining% |  The duration remaining on the X-line.
+  %setter%    |  The name of the X-line setter.
+  %type%      |  The type of X-line that was matched.
 
   The restrictbannedusers field should be set to one of the following values:
 
@@ -104,7 +110,7 @@ example: |-
   <security announceinvites="dynamic"
             customversion=""
             genericoper="no"
-            hidebans="yes"
+            publicxlinequit=""
             hidekills=""
             hideserver=""
             hideservicekills="yes"

@@ -32,13 +32,27 @@ configuration:
     default: 5s
     description: |-
       The time period between attempts to check whether the permchannel database needs to be written.
+  - name: backoff
+    type: Number
+    required: false
+    default: 0s
+    description: |-
+      The value to multiply the saveperiod by every time a save fails. When the save succeeds the period will be reset.
+  - name: maxbackoff
+    type: Duration
+    required: false
+    default: 0s
+    description: |-
+      The maximum write period that should be allowed even if incremental backoff is enabled.
   details: ""
   example: |-
     ```xml
     <permchanneldb filename="permchannels.conf"
                    listmodes="yes"
                    operonly="yes"
-                   saveperiod="5s">
+                   saveperiod="5s"
+                   backoff="2"
+                   maxbackoff="5m">
     ```
 - name: permchannels
   description: |-

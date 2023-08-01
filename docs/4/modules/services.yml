@@ -4,9 +4,9 @@ description: |-
   This module provides support for integrating with a services server.
 
 configuration:
-- name: services
+- name: servicesintegration
   description: |-
-    The `<services>` tag defines settings about how the services module should behave. This tag can only be defined once.
+    The `<servicesintegration>` tag defines settings about how the services module should behave. This tag can only be defined once.
   attributes:
   - name: accountoverrideshold
     type: Boolean
@@ -23,8 +23,8 @@ configuration:
   details: ""
   example: |-
     ```xml
-    <services accountoverrideshold="yes"
-              disablemodes="no">
+    <servicesintegration accountoverrideshold="yes"
+                         disablemodes="no">
     ```
 
 chmodes:

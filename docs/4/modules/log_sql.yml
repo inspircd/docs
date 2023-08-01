@@ -32,13 +32,13 @@ configuration:
   details: |-
     The query field can contain any of the following template variables:
 
-    Variable | Description
-    -------- | -----------
-    level    | The log level as an integer.
-    levelstr | The log level as a string.
-    message  | The log message.
-    time     | The log time as a UNIX timestamp
-    type     | The log message type.
+    Variable  | Description
+    --------- | -----------
+    $level    | The log level as an integer.
+    $levelstr | The log level as a string.
+    $message  | The log message.
+    $time     | The log time as a UNIX timestamp
+    $type     | The log message type.
   example: |-
     ```xml
     <log method="sql"

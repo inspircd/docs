@@ -8,6 +8,68 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a23
+
+<!-- TODO: ensure changes after commit 43bafdbfcb497c69b3557557bc2286835f8e9fdb are added to this list before release. -->
+
+**This pre-release version of InspIRCd has not yet been released.**
+
+- Added `<options:xlinequit>` to allow customising the quit message shown to users and opers when they are banned from the server.
+
+- Added `<securelist:hidesmallchans>` to hide small channels in `/LIST` from non-exempt users after the securelist waiting period has ended.
+
+- Added a fallback to killing the user when an X-line fails to add in the DNSBL module.
+
+- Added extra validation for the cloak value to the `cloak_static` module.
+
+- Added incremental write backoff to the filter, permchannels, and xline_db modules.
+
+- Added the `/DNSBL` command to allow a server operator to recheck whether a user is in a DNSBL.
+
+- Added the `H` silence flag to hide the contents of messages instead of blocking them.
+
+- Added the ability to shun users who are in a DNSBL.
+
+- Changed DNSBL lookups to still check E-lined users even if they can not be punished.
+
+- Changed the globops module to be `VF_COMMON` when using the 1206 (v4) protocol.
+
+- Cleaned up the Windows CMake build scripts.
+
+- Developer: Replaced `FileReader` with `ServerConfig::ReadFile`.
+
+- Fixed an iterator invalidation issue in `ActionList`.
+
+- Fixed deleting cullable objects in the same order they were culled.
+
+- Fixed generating cloaks on connecting users too early.
+
+- Fixed not being able to reload TLS certificates specified in `<{exec,}files>` outside of a normal rehash.
+
+- Fixed not hiding a banned user's part message when `<options:restrictbannedusers>` is enabled.
+
+- Fixed removing user mode `r` (u_registered) from users when they change their nickname.
+
+- Fixed showing an incorrect denial notice when a user makes a `/STATS` request.
+
+- Fixed the v3 `<sqlauth:allowpattern>` compatibility code.
+
+- Merged all of the changes from the v3 development branch into the v4 development branch.
+
+- Removed special casing of notices in the delaymsg module.
+
+- Removed the non-standard error codes that InspIRCd exited with in favour of `EXIT_SUCCESS` and `EXIT_FAILURE`.
+
+- Renamed `<security:hidelines>` to `<security:publicxlinequit>` and added more variable options.
+
+- Renamed the services module's `<services>` tag to `<servicesintegration>`.
+
+- Renamed the spanningtree module's `<service>` tag to `<services>`.
+
+- Replaced the fallback random number generation with `<random>`.
+
+- Replaced the vendored rang library with fmtlib's colourised message header.
+
 ### InspIRCd 4.0.0a22
 
 **This pre-release version of InspIRCd was released on 2023-07-01.**

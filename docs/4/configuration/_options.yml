@@ -110,6 +110,12 @@ attributes:
   default: You're banned!
   description: |-
     The message to send to users who have been banned from the server.
+- name: xlinequit
+  type: Text
+  required: false
+  default: '%fulltype%: %reason%'
+  description: |-
+    The quit message to show to opers and affected users when a user is [KGZ]-lined.
 details: |+
   The defaultbind field should be set to one of the following values:
 
@@ -134,6 +140,19 @@ details: |+
   no       | Don't split private/secret channels from normal channels in WHOIS responses.
   split    | Split private/secret channels from normal channels in WHOIS responses.
   splitmsg | Split private/secret channels from normal channels in WHOIS responses with an explanation.
+
+  The xlinequit field can contain any of the following template variables:
+
+  Variable    | Description
+  ----------- | -----------
+  %created%   |  The date/time at which the X-line was created.
+  %duration%  |  The duration of the X-line.
+  %expiry%    |  The date/time at which the X-line expires.
+  %fulltype%  |  The type of X-line which was matched, suffixed with  "-lined" if its name is one or two characters.
+  %reason%    |  The reason the X-line was added.
+  %remaining% |  The duration remaining on the X-line.
+  %setter%    |  The name of the X-line setter.
+  %type%      |  The type of X-line that was matched.
 
 example: |-
   ```xml

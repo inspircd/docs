@@ -59,6 +59,7 @@ command_details: |-
   C    | Matches a CTCP targeted at a user.
   c    | Matches a CTCP targeted at a channel.
   d    | Default behaviour; equivalent to CciNnPpTt.
+  H    | Hide the contents of messages instead of blocking.
   i    | Matches an invite to a channel.
   N    | Matches a NOTICE targeted at a user.
   n    | Matches a NOTICE targeted at a channel.

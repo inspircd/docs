@@ -118,7 +118,6 @@ Name                                                      | Description
 [nokicks](/4/modules/nokicks)                             | Adds channel mode Q (nokick) which prevents privileged users from using the /KICK command.
 [nonicks](/4/modules/nonicks)                             | Adds channel mode N (nonick) which prevents users from changing their nickname whilst in the channel.
 [nonotice](/4/modules/nonotice)                           | Adds channel mode T (nonotice) which allows channels to block messages sent with the /NOTICE command.
-[nopartmsg](/4/modules/nopartmsg)                         | Adds extended ban p: (partmsg) which blocks the part message of matching users.
 [ojoin](/4/modules/ojoin)                                 | Adds the /OJOIN command which allows server operators to join a channel and receive the server operator-only Y (official-join) channel prefix mode.
 [operchans](/4/modules/operchans)                         | Adds channel mode O (operonly) which prevents non-server operators from joining the channel.
 [operjoin](/4/modules/operjoin)                           | Allows the server administrator to force server operators to join one or more channels when logging into their server operator account.

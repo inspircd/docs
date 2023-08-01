@@ -267,9 +267,9 @@ configuration:
               hidesplits="no"
               hideservices="no">
     ```
-- name: service
+- name: services
   description: |-
-    The `<service>` tag defines one or more services servers. This tag can be defined as many times as required.
+    The `<services>` tag defines one or more services servers. This tag can be defined as many times as required.
   attributes:
   - name: server
     type: Text
@@ -288,8 +288,8 @@ configuration:
     Marks services.example.com as a silent services server:
 
     ```xml
-    <service server="services.example.com"
-             silent="yes">
+    <services server="services.example.com"
+              silent="yes">
     ```
 
 commands:
