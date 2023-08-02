@@ -25,7 +25,7 @@ In order to enact this on your network you can:
 
 0. Add [user mode `R` (regdeaf)](/3/modules/services_account/#user-modes) to [`<connect:modes>`](/3/modules/conn_umodes/#connect). This will require that users have to be logged into an account to send a private message to any new users.
 
-0. Add [channel mode `M` (regmoderated)](/3/modules/services_account/#user-modes) to [`<options:defaultmodes>`](3/configuration/#options). This will require that users have to be logged into an account to send a message to any new channels.
+0. Add [channel mode `M` (regmoderated)](/3/modules/services_account/#user-modes) to [`<options:defaultmodes>`](/3/configuration/#options). This will require that users have to be logged into an account to send a message to any new channels.
 
 0. Encourage your existing users to add these modes on existing channels. You can also add these modes manually to existing channels and users using [the /SAMODE command](/3/modules/samode).
 

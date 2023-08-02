@@ -22,15 +22,14 @@ nav:
     - Downloads: https://github.com/inspircd/inspircd/releases/latest
     - Issue Tracker: https://github.com/inspircd/inspircd/issues
     - Developer API: https://www.inspircd.org/api/
+exclude_docs: |
+  **/_*
 markdown_extensions:
     - admonition
     - extra
     - markdown_include.include:
           base_path: docs
 plugins:
-    exclude:
-      glob:
-        - '**/_*'
     inspircd:
     search:
 theme:
@@ -38,6 +37,11 @@ theme:
   highlightjs: true
   disable_nav_previous_next: true
   custom_dir: theme/
+validation:
+  links:
+    absolute_links: ignore
+  nav:
+    omitted_files: ignore
 copyright: All documentation is licensed under the <a href="/license">GNU GPLv2</a>.
 repo_url: https://github.com/inspircd/inspircd-docs
 site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
