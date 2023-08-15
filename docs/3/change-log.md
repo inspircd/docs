@@ -6,6 +6,28 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.17.0
+
+<!-- TODO: ensure changes after commit 84f2c992348171b05253dccaeb9c7b93a60ed63b are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added an example post-deploy hook script for use with CertBot, Dehydrated, or other ACME SSL (TLS) renewal tools.
+
+- Fixed a syntax error in the main manpage.
+
+- Fixed parsing the config when a file ends with a comment and no newline.
+
+- Fixed sending a WATCH away notification when a user changes their nick.
+
+- Fixed showing an error when a client can't send an automatic CTCP response because of the noctcp user mode.
+
+- Fixed the filter module not including the module name when automatically setting an X-line.
+
+- Fixed the geoclass module not rejecting malformed country codes in `<connect:country>`.
+
+- Fixed various issues with the example configs.
+
 ### InspIRCd 3.16.1
 
 **This version of InspIRCd was released on 2023-06-16.**
