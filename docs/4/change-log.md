@@ -8,6 +8,34 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a24
+
+<!-- TODO: ensure changes after commit 759e40563edfdf7acc19d2c2436cf4b5249b8f22 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added extended ban `o:` (oper) to match against an oper account.
+
+- Added support for saving the setter and set times of list modes.
+
+- Fixed adding and removing channel modes `b` (ban), `e` (banexception), and `I` (invex) not respecting the server casemapping.
+
+- Fixed the cloak_md5 and cloak_sha256 link data not checking
+
+- Fixed the watch module not sending `RPL_REAWAY` for compatibility with UnrealIRCd.
+
+- Fixed very large list limits not actually being applied.
+
+- Improved config file cache invalidation by allowing modules to specify a max cache age.
+
+- Renamed extended ban `o:` to opertype to match what it actually does.
+
+- Renamed the `error` log level to `critical`.
+
+- Renamed the namesx module to multiprefix.
+
+- Replaced `<ldapauth:useusername>` with `<ldapauth:field>` to allow disabling reading the username from the password field.
+
 ### InspIRCd 4.0.0a23
 
 **This pre-release version of InspIRCd was released on 2023-08-01.**
