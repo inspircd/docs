@@ -164,3 +164,5 @@ special_notes: |-
   If you are having trouble getting InspIRCd to read your .pem files then check that it has read access to the full path up to the location of them. If you are using a system that uses AppArmor (such as our Debian and Ubuntu packages) you may need to edit the AppArmor profile to allow InspIRCd to read them too.
 
   If you are using Let's Encrypt and are having problems with missing intermediate certificates then make sure you are using fullchain.pem from Certbot/Dehydrated/etc in `<sslprofile:certfile>` instead of cert.pem as the latter does not contain intermediate certificates.
+
+  If you are encountering "Handshake Failed - No supported cipher suites have been found" errors then your server is probably using too strict a value for `<sslprofile:priority>`. If your client is very old then you should consider upgrading; otherwise, setting it to `NORMAL` should solve this problem.
