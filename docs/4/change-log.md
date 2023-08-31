@@ -10,23 +10,35 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 4.0.0a24
 
-<!-- TODO: ensure changes after commit 759e40563edfdf7acc19d2c2436cf4b5249b8f22 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This pre-release version of InspIRCd was released on 2023-09-01.**
 
 - Added extended ban `o:` (oper) to match against an oper account.
 
 - Added support for saving the setter and set times of list modes.
 
+- Changed `<sslprofile>` to allow any TLS module to handle TLS profiles without an explicit provider.
+
+- Fixed `/COMMANDS` not showing the command list to server operators with the `servers/auspex` privilege.
+
 - Fixed adding and removing channel modes `b` (ban), `e` (banexception), and `I` (invex) not respecting the server casemapping.
 
+- Fixed mode characters being hardcoded in several error messages.
+
 - Fixed the cloak_md5 and cloak_sha256 link data not checking
+
+- Fixed the httpd_stats module not terminating the `<metadata>` tag.
+
+- Fixed the link data of the filter module to not prefix the name of the regex engine with `regex/`.
+
+- Fixed the link data of the rline module to not prefix the name of the regex engine with `regex/`.
 
 - Fixed the watch module not sending `RPL_REAWAY` for compatibility with UnrealIRCd.
 
 - Fixed very large list limits not actually being applied.
 
 - Improved config file cache invalidation by allowing modules to specify a max cache age.
+
+- Moved the `inspircd.org/service` tag to the services module.
 
 - Renamed extended ban `o:` to opertype to match what it actually does.
 

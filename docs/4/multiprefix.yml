@@ -1,4 +1,4 @@
-name: namesx
+name: multiprefix
 
 description: |-
   This module provides the IRCv3 `multi-prefix` client capability.

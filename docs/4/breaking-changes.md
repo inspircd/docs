@@ -78,6 +78,8 @@ title: v4 Breaking Changes
 
 - `<gnutls>` has been removed (other than `<gnutls:onrehash>`). You should configure a TLS (SSL) profile instead.
 
+- `<httpstats:enableparams>` has been removed with no replacement (now always enabled).
+
 - `<limits:maxgecos>` has been moved to `<limits:maxreal>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
 - `<mbedtls>` has been removed (other than `<mbedtls:onrehash>`). You should configure a TLS (SSL) profile instead.

@@ -26,6 +26,11 @@ configuration:
     default: null
     description: |-
       The id of the `<database>` tag that contains the required LDAP configuration. See the docs for [the ldap module](/{{ version }}/modules/ldap) for more information.
+  - name: field
+    type: Text
+    default: nickname
+    description: |-
+      The field to read the LDAP username from.
   - name: host
     type: Text
     required: false
@@ -38,19 +43,20 @@ configuration:
     default: null
     description: |-
       The message to kill users that fail to authenticate with.
-  - name: userfield
-    type: Boolean
-    required: false
-    default: 'No'
-    description: |-
-      Whether to authenticate users against their username instead of their nickname.
   - name: verbose
     type: Boolean
     required: false
     default: 'No'
     description: |-
       Whether to log failed authentications to snomask `a` (local) and snomask `A` (remote).
-  details: ""
+  details: |-
+    The field field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    nickname | Use the user's nickname for authenticating against LDAP.
+    username | Use the user's username for authenticating against LDAP.
+    password | Use the user's password (in the format `username:password`) for authenticating against LDAP.
   example: |-
     ```xml
     <ldapauth attribute="uid"

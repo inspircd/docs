@@ -109,9 +109,9 @@ Name                                                      | Description
 [messageflood](/4/modules/messageflood)                   | Adds channel mode f (flood) which helps protect against spammers which mass-message channels.
 [mlock](/4/modules/mlock)                                 | Allows services to lock channel modes so that they can not be changed.
 [monitor](/4/modules/monitor)                             | Adds the /MONITOR command which allows users to find out when their friends are connected to the server.
+[multiprefix](/4/modules/multiprefix)                     | Provides the IRCv3 multi-prefix client capability.
 [muteban](/4/modules/muteban)                             | Adds extended ban m: (mute) which bans specific masks from speaking in a channel.
 [namedmodes](/4/modules/namedmodes)                       | Provides support for adding and removing modes via their long names.
-[namesx](/4/modules/namesx)                               | Provides the IRCv3 multi-prefix client capability.
 [nickflood](/4/modules/nickflood)                         | Adds channel mode F (nickflood) which helps protect against spammers which mass-change nicknames.
 [nicklock](/4/modules/nicklock)                           | Adds the /NICKLOCK command which allows server operators to change a user's nickname and prevent them from changing it again until they disconnect.
 [noctcp](/4/modules/noctcp)                               | Adds channel mode C (noctcp) which allows channels to block messages which contain CTCPs and user mode T (u_noctcp) which allows users to block private messages that contain CTCPs.
