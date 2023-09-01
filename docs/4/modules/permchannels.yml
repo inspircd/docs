@@ -35,7 +35,7 @@ configuration:
   - name: backoff
     type: Number
     required: false
-    default: 0s
+    default: '0'
     description: |-
       The value to multiply the saveperiod by every time a save fails. When the save succeeds the period will be reset.
   - name: maxbackoff
@@ -44,7 +44,20 @@ configuration:
     default: 0s
     description: |-
       The maximum write period that should be allowed even if incremental backoff is enabled.
-  details: ""
+  - name: writeversion
+    type: Number
+    required: false
+    default: '2'
+    description: |-
+      The version of the permchannel database format to write.
+  details: |-
+    The format field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    1     | Write a database compatible with v2 or newer.
+    2     | Write a database compatible with v4 or newer. This preserves the setter and set time of list modes by moving list modes to their own field.
+
   example: |-
     ```xml
     <permchanneldb filename="permchannels.conf"
@@ -52,7 +65,8 @@ configuration:
                    operonly="yes"
                    saveperiod="5s"
                    backoff="2"
-                   maxbackoff="5m">
+                   maxbackoff="5m"
+                   writeversion="2">
     ```
 - name: permchannels
   description: |-
