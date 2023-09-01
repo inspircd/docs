@@ -16,7 +16,7 @@ Find.find(ARGV[0]) do |path|
 
 	contents = File.read(path)
 	v3calls = contents.scan(/\bLog\(("[^"]+"|MODNAME),\s+LOG_([A-Z]+),/).map { |type, level| { type: type, level: level }}
-	v4calls = contents.scan(/\b(RawIO|Debug|Normal|Warning|Error)\(("[^"]+"|MODNAME),/).map { |level, type| { level: level, type: type }}
+	v4calls = contents.scan(/\b(RawIO|Debug|Normal|Warning|Critical)\(("[^"]+"|MODNAME),/).map { |level, type| { level: level, type: type }}
 	(v3calls + v4calls).each do |log|
 		if log[:type] == 'MODNAME'
 			if path =~ /\/((?:m|core)_[a-z0-9_]+)(?:\.cpp|\/)?/
@@ -41,7 +41,7 @@ end
 
 longest_type = types.keys.max_by(&:length).length
 longest_level = types.values.map { |t| t.sum(&:length) + ((t.size - 1) * 4) }.max
-levelorder = %w(sparse error warning default normal verbose debug rawio)
+levelorder = %w(sparse critical warning default normal verbose debug rawio)
 types.sort.each do |type, levels|
 	type_padding = longest_type - type.length
 	levelstr = levels.to_a.sort_by { |obj| levelorder.index obj }.join('<br>')
