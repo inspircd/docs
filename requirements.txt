@@ -1,4 +1,4 @@
-click==8.1.6
+click==8.1.7
 future==0.18.3
 htmlmin==0.1.12
 Jinja2==3.1.2
