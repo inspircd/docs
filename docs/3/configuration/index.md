@@ -56,7 +56,11 @@ This page only lists core configuration. For details on the configuration of a s
 {% endif %}
 
 {% if extra_tag_fields[tag.name] %}
+{% if tag.attributes %}
 Additionally, the following fields are provided by modules:
+{% else %}
+The following fields are provided by modules:
+{% endif %}
 
 <table markdown="1">
 <thead>

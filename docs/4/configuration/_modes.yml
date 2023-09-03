@@ -1,0 +1,94 @@
+name: modes
+description: |-
+  The `<modes>` tag defines the characters used by modes. This tag can only be defined once.
+attributes:
+- name: ban
+  type: Character
+  required: false
+  default: b
+  description: |-
+    Bans users matching &lt;mask&gt; from joining the channel.
+- name: invisible
+  type: Character
+  required: false
+  default: i
+  description: |-
+    Marks the user as invisible.
+- name: inviteonly
+  type: Character
+  required: false
+  default: i
+  description: |-
+    Prevents users from joining the channel without an invite.
+- name: key
+  type: Character
+  required: false
+  default: k
+  description: |-
+    Prevents users from joining the channel who have not specified the &lt;key&gt; password.
+- name: limit
+  type: Character
+  required: false
+  default: l
+  description: |-
+    Allows no more than &lt;count&gt; users to join the channel.
+- name: moderated
+  type: Character
+  required: false
+  default: m
+  description: |-
+    Prevents users without a prefix rank from messaging the channel.
+- name: noextmsg
+  type: Character
+  required: false
+  default: n
+  description: |-
+    Prevents users who are not in the channel from messaging the channel.
+- name: op
+  type: Character
+  required: false
+  default: o
+  description: |-
+    Grants channel operator status to &lt;nick&gt;.
+- name: oper
+  type: Character
+  required: false
+  default: o
+  description: |-
+    Marks the user as a server operator (can only be set by the server).
+- name: private
+  type: Character
+  required: false
+  default: p
+  description: |-
+    Hides the channel in `/WHOIS` from people who are not a member. You probably want channel mode `s` (secret) rather than this.
+- name: secret
+  type: Character
+  required: false
+  default: s
+  description: |-
+    Hides the channel in `/WHOIS` and `/LIST` from people who are not a member.
+- name: snomask
+  type: Character
+  required: false
+  default: s
+  description: |-
+    Enables receiving the specified types of [server operator notice](/4/snomasks).
+- name: topiclock
+  type: Character
+  required: false
+  default: t
+  description: |-
+    Prevents non-channel operators from changing the channel topic.
+- name: voice
+  type: Character
+  required: false
+  default: v
+  description: |-
+    Grants channel voice status to &lt;nick&gt;.
+- name: wallops
+  type: Character
+  required: false
+  default: w
+  description: |-
+    Enables receiving `/WALLOPS` messages from server operators.

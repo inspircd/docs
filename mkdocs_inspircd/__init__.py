@@ -162,6 +162,28 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                                     **field,
                                 }
                             )
+
+        for mode in self.chmodes(config, version) + self.umodes(config, version):
+            extra_tag_fields["modes"][mode["name"]].append(
+                {
+                    "module": mode["module"],
+                    "name": mode["name"],
+                    "type": "Character",
+                    "default": mode["char"],
+                    "description": mode["description"]
+                }
+            )
+
+        for extban in self.extbans(config, "Acting", version) + self.extbans(config, "Matching", version):
+            extra_tag_fields["extbans"][extban["name"]].append(
+                {
+                    "module": extban["module"],
+                    "name": extban["name"],
+                    "type": "Character",
+                    "default": extban["char"],
+                    "description": extban["description"]
+                }
+            )
         return extra_tag_fields
 
     def core_config_tags(self, config, version):

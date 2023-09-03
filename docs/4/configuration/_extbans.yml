@@ -1,0 +1,3 @@
+name: extbans
+description: |-
+  The `<extbans>` tag defines the characters used by [extended bans](/4/extended-bans). This tag can only be defined once.
