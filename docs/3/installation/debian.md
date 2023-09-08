@@ -12,7 +12,15 @@ This package can be installed on all x86-64 systems running Debian 10 (Buster), 
 
 ### How do I install this package?
 
-First, download the .deb package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt-get install wget`.
+If you've previously installed InspIRCd from the Debian repositories you should start by backing up your config and data directories and removing the existing package.
+
+```sh
+cp -r /etc/inspircd conf
+cp -r /var/run/inspircd data
+sudo apt-get purge inspircd
+```
+
+Then, download the .deb package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt-get install wget`.
 
 ```sh
 # Replace the URL here with the URL you obtained from the releases page.
