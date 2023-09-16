@@ -1,4 +1,4 @@
-name: cloak_account
+name: cloak_user
 
 description: |-
   This module adds the `account`, `account-id`, `nickname`, and `username` cloaking methods for use with [the cloak module](/4/modules/cloak).
@@ -90,7 +90,7 @@ configuration:
     Cloaking using the username method:
 
     ```xml
-    <cloak method="nickname"
+    <cloak method="username"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
