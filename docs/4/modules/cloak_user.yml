@@ -70,7 +70,7 @@ configuration:
     Cloaking using the account-id method:
 
     ```xml
-    <cloak method="account"
+    <cloak method="account-id"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
