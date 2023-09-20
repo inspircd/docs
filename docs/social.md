@@ -10,5 +10,6 @@ In addition to [our news feed](https://www.inspircd.org/atom.xml) the InspIRCd t
 - 🐦 Twitter &mdash; [@InspIRCdTeam](https://twitter.com/InspIRCdTeam)
 - 🐘 Mastodon &mdash; [@inspircd@fosstodon.org](https://fosstodon.org/@inspircd)
 - 🐛 Cohost &mdash; [@inspircd](https://cohost.org/inspircd)
+- ☁️ Bluesky &mdash; [@inspircd.bsky.social](https://bsky.app/profile/inspircd.bsky.social)
 
 If you would like news to be posted to any other platform then please ask in our support channel.
