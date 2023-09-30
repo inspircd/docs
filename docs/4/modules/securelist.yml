@@ -75,7 +75,6 @@ configuration:
                 waittime="60s"
                 hidesmallchans="2"
                 fakechans="5"
-                fakechans="5"
                 fakechanprefix="#"
                 fakechantopic="Fake channel for confusing spambots">
     ```
