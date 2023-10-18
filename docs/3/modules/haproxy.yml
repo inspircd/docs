@@ -1,7 +1,7 @@
 name: haproxy
 
 description: |-
-  This module allows IRC connections to be made using reverse proxies that implement the HAProxy PROXY protocol.
+  This module allows IRC connections to be made using reverse proxies that implement version 2 of the HAProxy PROXY protocol.
 
 configuration:
 - name: bind
