@@ -45,6 +45,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
     - `m_cloaking.so` => `cloak`
     - `m_gecosban.so` => `realnameban`
     - `m_services_account.so` => `account` and `services`.
+    - `m_svshold.so` => `services`.
 
 - Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
 
@@ -83,6 +84,20 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 
 ```diff
 + :36DAAAAAA FRHOST :real.host.name
+```
+
+- The `GLOBOPS` key in `CAPAB CAPABILITIES` has been removed. Instead, the globops module can be detected by its presence in `CAPAB MODSUPPORT`.
+
+```diff
+- CAPAB CAPABILITIES :GLOBOPS=0
++ CAPAB MODSUPPORT :globops
+```
+
+- The `UID` message now has an extra field for the real username of the user which is being introduced.
+
+```diff
+- :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost sadie.moe sadie 127.0.0.1 1234567890 +i :Sadie
++ :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost sadie.moe sp91 sadie 127.0.0.1 1234567890 +i :Sadie
 ```
 
 - The `LMODE` message was added to synchronise the contents of a mode list including the setter and set time.
