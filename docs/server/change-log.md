@@ -47,12 +47,12 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
     - `m_services_account.so` => `account` and `services`.
     - `m_svshold.so` => `services`.
 
-- Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
-
 ```diff
 - CAPAB MODULES :m_cloaking.so m_gecosban.so m_services_account.so
 + CAPAB MODULES :account cloak realnameban services
 ```
+
+- Server queries (`SQUERY`) are now sent as unicast messages to their target user instead of being encapsulated in a `PRIVMSG`.
 
 ```diff
 - :36DAAAAAA PRIVMSG NickServ :IDENTIFY hunter2
