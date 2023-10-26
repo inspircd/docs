@@ -98,6 +98,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             self._modules[version] = []
             for module_file in pathlib.Path(config["docs_dir"]).glob(version + "/modules/*.yml"):
                 self._modules[version].append(load_yaml(module_file))
+                self._modules[version][-1]['version'] = version
         return self._modules[version]
 
     def chmodes(self, config, version):
