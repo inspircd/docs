@@ -8,25 +8,39 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.17.0
 
-<!-- TODO: ensure changes after commit 84f2c992348171b05253dccaeb9c7b93a60ed63b are added to this list before release. -->
+<!-- TODO: ensure changes after commit def0285d0d229ed9055d7f9ad6c3b7572e648b82 are added to this list before release. -->
 
 **This version of InspIRCd has not yet been released.**
 
 - Added an example post-deploy hook script for use with CertBot, Dehydrated, or other ACME SSL (TLS) renewal tools.
 
+- Changed SVSHOLDs to also force existing users to change their nick on add.
+
+- Fixed a crash on shutdown on some systems when using `--nofork` and the ssl_gnutls module.
+
 - Fixed a syntax error in the main manpage.
 
 - Fixed parsing the config when a file ends with a comment and no newline.
 
+- Fixed remote servers being able to burst channels with malformed names.
+
 - Fixed sending a WATCH away notification when a user changes their nick.
 
+- Fixed sending nick/user/host changes from the wrong mask when using the ircv3_labeledresponse module.
+
 - Fixed showing an error when a client can't send an automatic CTCP response because of the noctcp user mode.
+
+- Fixed SVSHOLDs to always match against case insensitive nicknames.
 
 - Fixed the filter module not including the module name when automatically setting an X-line.
 
 - Fixed the geoclass module not rejecting malformed country codes in `<connect:country>`.
 
+- Fixed using the helper script to start InspIRCd in newer versions of Valgrind.
+
 - Fixed various issues with the example configs.
+
+- Updated the libraries in the Windows Conan dependency file.
 
 ### InspIRCd 3.16.1
 
