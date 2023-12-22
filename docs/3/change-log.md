@@ -8,11 +8,13 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.17.0
 
-<!-- TODO: ensure changes after commit def0285d0d229ed9055d7f9ad6c3b7572e648b82 are added to this list before release. -->
+**This version of InspIRCd was released on 2023-12-22.**
 
-**This version of InspIRCd has not yet been released.**
+- Added `/LOGIN` and `/LOGOUT` aliases to the generic services example file.
 
 - Added an example post-deploy hook script for use with CertBot, Dehydrated, or other ACME SSL (TLS) renewal tools.
+
+- Added the `$address` variable which contains the user IP address or UNIX socket path for use in aliases.
 
 - Changed SVSHOLDs to also force existing users to change their nick on add.
 
