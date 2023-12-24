@@ -19,7 +19,7 @@ misc: |-
   SIGUSR1 | Reloads the server's TLS (SSL) certificates.
 
 special_notes: |-
-  If you are using an automated tool such as Certbot for renewing your certificates you may find it useful to use the following script as a deploy hook:
+  Since 3.17.0 InspIRCd ships with a script that you can customise for use as a post-deploy hook with [Certbot](https://certbot.eff.org/) to automatically reload your TLS (SSL) certificates when they are updated. For users of older versions this script is replicated below.
 
   ```sh
   #!/bin/sh
@@ -42,9 +42,13 @@ special_notes: |-
       cp "${CERT_DIR}/fullchain.pem" "${INSPIRCD_CONFIG_DIR}/cert.pem"
       cp "${CERT_DIR}/privkey.pem" "${INSPIRCD_CONFIG_DIR}/key.pem"
       chown ${INSPIRCD_OWNER} "${INSPIRCD_CONFIG_DIR}/cert.pem" "${INSPIRCD_CONFIG_DIR}/key.pem"
-      if [ -e ${INSPIRCD_PID_FILE} ]
+
+      if [ -r ${INSPIRCD_PID_FILE} ]
       then
-          kill -USR1 `cat ${INSPIRCD_PID_FILE}`
+          kill -USR1 $(cat ${INSPIRCD_PID_FILE})
+      elif [ -d /lib/systemd ] && systemctl --quiet is-active inspircd
+      then
+          systemctl kill --signal USR1 inspircd
       fi
   fi
   ```
