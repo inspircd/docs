@@ -1,4 +1,4 @@
-name: allowinvite
+name: opmoderated
 
 description: |-
   This module adds channel mode `U` (opmoderated) which hides the messages of unprivileged users from other unprivileged users.
