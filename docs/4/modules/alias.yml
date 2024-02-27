@@ -63,6 +63,7 @@ configuration:
       ------------ | -----------
       $1 to $9     | The value of the parameter at the specified position.
       $1- to $9-   | The values of the parameters at and after the specified position.
+      $address     | The IP address or UNIX socket path of the user that executed the command.
       $chan        | If executed as a channel command then the name of the channel.
       $host        | The real hostname of the user that executed the command.
       $nick        | The nickname of the user that executed the command.

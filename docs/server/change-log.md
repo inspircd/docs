@@ -80,10 +80,22 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + CAPAB EXTBANS :acting:mute=m matching:unauthed=U matching:account=R
 ```
 
-- The `FRHOST` message can now be sent to change the real hostname of a user.
+- The `FHOST` message now takes a second parameter which, if not a `*`, signifies a change of the real hostname of a user .
 
 ```diff
-+ :36DAAAAAA FRHOST :real.host.name
+- :36DAAAAAA FHOST fake.host.name
++ :36DAAAAAA FHOST fake.host.name real.host.name
++ :36DAAAAAA FHOST * real.host.name
++ :36DAAAAAA FHOST fake.host.name *
+```
+
+- The `FIDENT` message now takes a second parameter which, if not a `*`, signifies a change of the real username of a user .
+
+```diff
+- :36DAAAAAA FHOST fake.user.name
++ :36DAAAAAA FHOST fake.user.name real.user.name
++ :36DAAAAAA FHOST * real.user.name
++ :36DAAAAAA FHOST fake.user.name *
 ```
 
 - The `GLOBOPS` key in `CAPAB CAPABILITIES` has been removed. Instead, the globops module can be detected by its presence in `CAPAB MODSUPPORT`.
@@ -96,8 +108,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `UID` message now has an extra field for the real username of the user which is being introduced.
 
 ```diff
-- :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost sadie.moe sadie 127.0.0.1 1234567890 +i :Sadie
-+ :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost sadie.moe sp91 sadie 127.0.0.1 1234567890 +i :Sadie
+- :36D UID 36DAAAAAA 1234567890 Sadie localhost sadie.moe sadie 127.0.0.1 1234567890 +i :Sadie
++ :36D UID 36DAAAAAA 1234567890 Sadie localhost sadie.moe sp91 sadie 127.0.0.1 1234567890 +i :Sadie
 ```
 
 - The `LMODE` message was added to synchronise the contents of a mode list including the setter and set time.

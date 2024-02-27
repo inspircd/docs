@@ -45,9 +45,9 @@ Name                                                      | Description
 [clearchan](/4/modules/clearchan)                         | Adds the /CLEARCHAN command which allows server operators to mass-punish the members of a channel.
 [cloak](/4/modules/cloak)                                 | Adds user mode x (cloak) which allows user hostnames to be hidden.
 [cloak_md5](/4/modules/cloak_md5)                         | Adds the half and full cloaking methods for use with the cloak module.
-[cloak_sha256](/4/modules/cloak_sha256)                   | Adds the hmac-sha256 and hmac-sha256-ip cloaking methods for use with the cloak module.
+[cloak_sha256](/4/modules/cloak_sha256)                   | Adds the hmac-sha256 and hmac-sha256-addr cloaking methods for use with the cloak module.
 [cloak_static](/4/modules/cloak_static)                   | Adds the static cloaking method for use with the cloak module.
-[cloak_user](/4/modules/cloak_user)                       | Adds the account, account-id, nickname, and username cloaking methods for use with the cloak module.
+[cloak_user](/4/modules/cloak_user)                       | Adds the account, account-id, fingerprint, nickname, and username cloaking methods for use with the cloak module.
 [codepage](/4/modules/codepage)                           | Allows the server administrator to define what characters are allowed in nicknames and how characters should be compared in a case insensitive way.
 [commonchans](/4/modules/commonchans)                     | Adds user mode c (deaf_commonchan) which requires users to have a common channel before they can privately message each other.
 [conn_join](/4/modules/conn_join)                         | Allows the server administrator to force users to join one or more channels on connect.
@@ -107,7 +107,6 @@ Name                                                      | Description
 [maphide](/4/modules/maphide)                             | Allows the server administrator to replace the output of a /MAP and /LINKS with an URL.
 [md5](/4/modules/md5)                                     | Allows other modules to generate MD5 hashes.
 [messageflood](/4/modules/messageflood)                   | Adds channel mode f (flood) which helps protect against spammers which mass-message channels.
-[mlock](/4/modules/mlock)                                 | Allows services to lock channel modes so that they can not be changed.
 [monitor](/4/modules/monitor)                             | Adds the /MONITOR command which allows users to find out when their friends are connected to the server.
 [multiprefix](/4/modules/multiprefix)                     | Provides the IRCv3 multi-prefix client capability.
 [muteban](/4/modules/muteban)                             | Adds extended ban m: (mute) which bans specific masks from speaking in a channel.
@@ -175,7 +174,6 @@ Name                                                      | Description
 [swhois](/4/modules/swhois)                               | Adds the /SWHOIS command which adds custom lines to a user's WHOIS response.
 [timedbans](/4/modules/timedbans)                         | Adds the /TBAN command which allows channel operators to add bans which will be expired after the specified period.
 [tline](/4/modules/tline)                                 | Adds the /TLINE command which allows server operators to determine how many users would be affected by an X-line on a specified pattern.
-[topiclock](/4/modules/topiclock)                         | Allows services to lock the channel topic so that it can not be changed.
 [uhnames](/4/modules/uhnames)                             | Provides the IRCv3 userhost-in-names client capability.
 [uninvite](/4/modules/uninvite)                           | Adds the /UNINVITE command which allows users who have invited another user to a channel to withdraw their invite.
 [vhost](/4/modules/vhost)                                 | Allows the server administrator to define accounts which can grant a custom virtual host.

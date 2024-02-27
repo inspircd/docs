@@ -29,4 +29,4 @@ extbans:
       /MODE #channel +b Q:*!*@example.com
 
 special_notes: |-
-  You should consider using [the mlock module](/{{ version }}/modules/mlock) and the mode locking feature of your IRC services to prevent privileged users from evading this mode by unsetting it.
+  You should consider using [the mlock module](/3/modules/mlock) and the mode locking feature of your IRC services to prevent privileged users from evading this mode by unsetting it.

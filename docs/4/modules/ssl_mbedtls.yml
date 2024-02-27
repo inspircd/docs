@@ -114,7 +114,7 @@ configuration:
     required: false
     default: sha256
     description: |-
-      The hash algorithm used for TLS (SSL) client fingerprints.
+      A space-delimited list of hash algorithms used for TLS (SSL) client fingerprints.
   - name: keyfile
     type: Text
     required: false

@@ -34,7 +34,7 @@ chmodes:
   example: ""
 
 exemptions:
-- name: blockcolor
+- name: opmoderated
   description: |-
     Allows exempted users to send messages to all users of the channel.
 

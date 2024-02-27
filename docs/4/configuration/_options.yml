@@ -44,18 +44,24 @@ attributes:
   default: null
   description: |-
     If defined then a static value to replace users' quit messages with.
-- name: hostintopic
-  type: Boolean
-  required: false
-  default: 'No'
-  description: |-
-    Whether to show the full user mask of a topic setter rather than just their nickname.
 - name: invitebypassmodes
   type: Boolean
   required: false
   default: 'Yes'
   description: |-
     Whether being invited to a channel allows the invitee to bypass channel modes which would otherwise prevent them from joining.
+- name: maskinlist
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to show the full user mask of a list mode setter rather than just their nickname.
+- name: maskintopic
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    Whether to show the full user mask of a topic setter rather than just their nickname.
 - name: modesinlist
   type: Boolean
   required: false
@@ -163,9 +169,10 @@ example: |-
            extbanformat="name"
            fixedpart=""
            fixedquit=""
-           hostintopic="yes"
            invitebypassmodes="yes"
            nosnoticestack="no"
+           maskinlist="yes"
+           maskintopic="yes"
            modesinlist="no"
            prefixpart="&quot;"
            prefixquit="Quit: "

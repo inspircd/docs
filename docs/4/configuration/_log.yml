@@ -108,6 +108,7 @@ details: |+
   m_pgsql              | critical<br>normal<br>debug            | Messages relating to [the pgsql module](/4/modules/pgsql).
   m_regex_pcre         | normal                                 | Messages relating to [the regex_pcre module](/4/modules/regex_pcre).
   m_sasl               | normal<br>debug                        | Messages relating to [the sasl module](/4/modules/sasl).
+  m_services           | debug                                  | Messages relating to [the services module](/4/modules/services).
   m_showfile           | warning                                | Messages relating to [the showfile module](/4/modules/showfile).
   m_silence            | debug                                  | Messages relating to [the silence module](/4/modules/silence).
   m_spanningtree       | warning<br>normal<br>debug<br>rawio    | Messages relating to [the spanningtree module](/4/modules/spanningtree).
@@ -118,7 +119,6 @@ details: |+
   m_ssl_openssl        | warning<br>normal<br>debug             | Messages relating to [the ssl_openssl module](/4/modules/ssl_openssl).
   m_sslinfo            | debug                                  | Messages relating to [the sslinfo module](/4/modules/sslinfo).
   m_sslrehashsignal    | normal                                 | Messages relating to [the sslrehashsignal module](/4/modules/sslrehashsignal).
-  m_topiclock          | debug                                  | Messages relating to [the topiclock module](/4/modules/topiclock).
   m_vhost              | warning                                | Messages relating to [the vhost module](/4/modules/vhost).
   m_xline_db           | critical<br>debug                      | Messages relating to [the xline_db module](/4/modules/xline_db).
 

@@ -101,7 +101,7 @@ configuration:
     required: false
     default: sha256
     description: |-
-      The hash algorithm used for TLS (SSL) client fingerprints.
+      A space-delimited list of hash algorithms used for TLS (SSL) client fingerprints. Prefix with `spki-` to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: keyfile
     type: Text
     required: false

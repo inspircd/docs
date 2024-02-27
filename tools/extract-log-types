@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 if ARGV.empty? || !File.directory?(ARGV[0])
-	STDERR.puts "Usage: $PROGRAM_NAME <SOURCE>"
+	STDERR.puts "Usage: #{$PROGRAM_NAME} <SOURCE>"
 	exit 1
 end
 

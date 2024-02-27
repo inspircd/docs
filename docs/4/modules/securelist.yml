@@ -48,7 +48,7 @@ configuration:
     required: false
     default: 1m
     description: |-
-      The time period that must pass before a user can use the `/LIST` command.
+      The time period that must pass before a user can use the `/LIST` command. If `exemptregistered` is enabled then this can be set to 0 to disable `/LIST` for unregistered users.
   - name: fakechans
     type: Number
     required: false

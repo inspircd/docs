@@ -5,7 +5,7 @@ introduction: |-
       This module can be built against a third-party library ([libpsl](https://github.com/rockdaboot/libpsl)) to add more features.
 
 description: |-
-  This module adds the `hmac-sha256` and `hmac-sha256-ip` cloaking methods for use with [the cloak module](/4/modules/cloak).
+  This module adds the `hmac-sha256` and `hmac-sha256-addr` cloaking methods for use with [the cloak module](/4/modules/cloak).
 
 configuration:
 - name: cloak
@@ -18,7 +18,7 @@ configuration:
   - name: hmac-sha256
     description: |-
       If the user has a DNS hostname or is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their hostname and socket path suffixed with the public part of that value. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (see below).
-  - name: hmac-sha256-ip
+  - name: hmac-sha256-addr
     description: |-
       If the user is connecting via a UNIX socket then cloak with an HMAC-SHA256 hash of their socket path suffixed with the public part of the path. Otherwise, cloak with three HMAC-SHA256 hashes of significant ranges of their IP address (see below).
   attributes:
@@ -93,10 +93,10 @@ configuration:
            class="">
     ```
 
-    Cloaking using the hmac-sha256-ip method:
+    Cloaking using the hmac-sha256-addr method:
 
     ```xml
-    <cloak method="hmac-sha256-ip"
+    <cloak method="hmac-sha256-addr"
            key="changeme"
            prefix="MyNet"
            suffix="ip"

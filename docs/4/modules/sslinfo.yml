@@ -76,7 +76,7 @@ configuration:
     required: false
     default: null
     description: |-
-      The IANA Hash Function Textual Name of the hash algorithm used when getting client fingerprints sent by a WebIRC gateway.
+      The IANA Hash Function Textual Name of the hash algorithm used when getting client fingerprints sent by a WebIRC gateway. Prefix with `spki-` to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: localsecure
     type: Boolean
     required: false
@@ -89,34 +89,34 @@ configuration:
     default: 'No'
     description: |-
       Whether user TLS certificate fingerprints are only visible to server operators.
-  - name: spkifp
-    type: Boolean
-    required: false
-    default: 'No'
-    description: |-
-      Whether to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: warnexpiring
     type: Duration
     required: false
     default: 0s
     description: |-
       The maximum amount of time left that can be left on a TLS client certificate before clients start being warned of the expiration time. If set to 0s then no warning will be sent.
+  - name: welcomemsg
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to send a welcome message to users that are connecting using TLS containing their server name, ciphersuite and client fingerprint.
   details: ""
   example: |-
     ```xml
     <sslinfo hash="sha-256"
              localsecure="yes"
              operonly="no"
-             spkifp="no"
-             warnexpiring="1w">
+             warnexpiring="1w"
+             welcomemsg="no">
     ```
 
 commands:
 - name: SSLINFO
   param_count: 1
-  syntax: <target>
+  syntax: [<target>]
   description: |-
-    Views the TLS certificate information for &lt;target&gt;.
+    Views the TLS certificate information for &lt;target&gt;. If no target is specified then it defaults to the executing user.
   example:
   - description: |-
       Views the TLS certificate information for Sadie
@@ -124,6 +124,10 @@ commands:
       /SSLINFO Sadie
   - description: |-
       Views the TLS certificate information for users in #wibble
+    text: |-
+      /SSLINFO
+  - description: |-
+      Views the TLS certificate information for the executing user
     text: |-
       /SSLINFO #wibble
 

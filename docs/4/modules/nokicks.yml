@@ -1,1 +1,32 @@
-../../3/modules/nokicks.yml
+name: nokicks
+
+description: |-
+  This module adds channel mode `Q` (nokick) which prevents privileged users from using the `/KICK` command.
+
+chmodes:
+  chars:
+  - name: nokick
+    char: Q
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Prevents privileged users from using the `/KICK` command.
+  example: ""
+
+extbans:
+  description: ""
+  chars:
+  - name: nokick
+    char: Q
+    type: Acting
+    syntax: <mask>
+    description: Bans privileged users matching &lt;mask&gt; from using the `/KICK` command.
+  example:
+  - description: |-
+      Bans privileged users matching `*!*@example.com` from using the `/KICK` command
+    text: |-
+      /MODE #channel +b Q:*!*@example.com
+
+special_notes: |-
+  You should consider using [the services module](/4/modules/services) and the mode locking feature of your IRC services to prevent privileged users from evading this mode by unsetting it.

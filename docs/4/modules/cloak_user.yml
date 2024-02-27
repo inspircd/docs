@@ -1,7 +1,7 @@
 name: cloak_user
 
 description: |-
-  This module adds the `account`, `account-id`, `nickname`, and `username` cloaking methods for use with [the cloak module](/4/modules/cloak).
+  This module adds the `account`, `account-id`, `fingerprint`, `nickname`, and `username` cloaking methods for use with [the cloak module](/4/modules/cloak).
 
 configuration:
 - name: cloak
@@ -24,6 +24,11 @@ configuration:
     description: |-
       Cloak users with their real username.
   attributes:
+  - name: case
+    type: Text
+    default: preserve
+    description: |-
+      The case to transform the cloaked data to.
   - name: class
     type: String
     required: false
@@ -48,6 +53,14 @@ configuration:
     description: |-
       The value to suffix cloaks with.
   details: |-
+    The case field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    lower    | Convert the cloaked data to lower case.
+    upper    | Convert the cloaked data to upper case.
+    preserve | Preserve the case of the cloaked data.
+
     The invalidchar field should be set to one of the following values:
 
     Value    | Description
@@ -61,6 +74,7 @@ configuration:
 
     ```xml
     <cloak method="account"
+           case="preserve"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
@@ -71,16 +85,32 @@ configuration:
 
     ```xml
     <cloak method="account-id"
+           case="preserve"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
            suffix="">
     ```
 
+    Cloaking using the fingerprint method:
+
+    ```xml
+    <cloak method="fingerprint"
+           case="preserve"
+           class=""
+           invalidchar="strip"
+           length="32"
+           prefix="MyNet/"
+           suffix=""
+           sanitize="yes">
+    ```
+
+
     Cloaking using the nickname method:
 
     ```xml
     <cloak method="nickname"
+           case="preserve"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
@@ -91,6 +121,7 @@ configuration:
 
     ```xml
     <cloak method="username"
+           case="preserve"
            class=""
            invalidchar="strip"
            prefix="MyNet/"
