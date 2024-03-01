@@ -10,7 +10,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 4.0.0a25
 
-**This pre-release version of InspIRCd was released on 2024-02-01.**
+**This pre-release version of InspIRCd was released on 2024-03-01.**
 
 - Added `/LOGIN` and `/LOGOUT` aliases to the generic services example config.
 
