@@ -46,6 +46,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
     - `m_gecosban.so` => `realnameban`
     - `m_services_account.so` => `account` and `services`.
     - `m_svshold.so` => `services`.
+    - `m_topiclock.so` => `services`.
 
 ```diff
 - CAPAB MODULES :m_cloaking.so m_gecosban.so m_services_account.so
