@@ -1,5 +1,4 @@
 name: SNONOTICE
-source: sid
 syntax:
   fields:
     snochar: The [server notice character](/3/snomasks) that the message is associated with.

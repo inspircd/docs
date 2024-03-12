@@ -1,5 +1,4 @@
 name: UID
-source: sid
 syntax:
   fields:
     uid: The UUID of the user who is being introduced

@@ -1,5 +1,4 @@
 name: RESYNC
-source: sid
 syntax:
   fields:
     channel: The channel to resynchronize.

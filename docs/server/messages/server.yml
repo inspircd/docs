@@ -4,7 +4,6 @@ phase:
 - wait-auth-1
 - wait-auth-2
 - connected
-source: sid
 syntax:
   fields:
     server-name: The unique hostname of the new server.
@@ -13,7 +12,7 @@ syntax:
     description: A description of the new server.
     data: One or more key=value pairs which represent the state of a remote server.
   text:
-  - ^<server-name> <password> <unused> <newsid> :<description>
+  - <server-name> <password> <unused> <newsid> :<description>
   - <server-name> <newsid> [<data>]+ :<description>
 description: |-
   Introduces a server to the network.

@@ -1,5 +1,4 @@
 name: PING
-source: sid
 syntax:
   fields:
     target: The identifier of the target server.

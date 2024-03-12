@@ -1,5 +1,4 @@
 name: SINFO
-source: sid
 syntax:
   fields:
     key: The key which is being set.

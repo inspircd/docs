@@ -1,5 +1,4 @@
 name: SVSNICK
-source: sid
 syntax:
   fields:
     uid: The UUID of the user to change the nickname of.

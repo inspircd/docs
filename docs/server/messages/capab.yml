@@ -30,7 +30,8 @@ extra: |-
   Protocol Version | Supported By
   ---------------- | -------------
   1202             | InspIRCd v2 &mdash; v3
-  1205             | InspIRCd v3
+  1205             | InspIRCd v3 & v4 (dev)
+  1206             | InspIRd v4 (dev)
 
   If provided the capability-key fields can be set to one of the following values:
 

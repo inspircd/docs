@@ -26,22 +26,18 @@ Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% end
 ### Syntax
 
 {% if source is defined %}
-{% set prefix = " :<" ~ source ~ "> " %}
+{% set prefix = ":<" ~ source ~ ">" %}
 {% else %}
-{% set prefix = "" %}
+{% set prefix = "[:<sid>]" %}
 {% endif %}
 
 {% if syntax is not defined %}
-`{{ prefix }}{{ name }}
+`{{ prefix }} {{ name }}
 {% elif syntax.text is string %}
-`{{ prefix }}{{ name }} {{ syntax.text }}`
+`{{ prefix }} {{ name }} {{ syntax.text }}`
 {% else %}
 {% for syntax_line in syntax.text %}
-{% if syntax_line.startswith("^") %}
-`{{ name }} {{ syntax_line[1:] }}`
-{% else %}
-`{{ prefix }}{{ name }} {{ syntax_line }}`
-{% endif %}
+`{{ prefix }} {{ name }} {{ syntax_line }}`
 {% endfor %}
 {% endif %}
 

@@ -1,5 +1,4 @@
 name: SAVE
-source: sid
 syntax:
   fields:
     uid: The UUID of the user to resolve the nick collision of.

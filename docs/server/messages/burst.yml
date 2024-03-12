@@ -1,7 +1,6 @@
 name: BURST
 phase:
 - wait-auth-2
-source: sid
 syntax:
   fields:
     ts: The time at which the remote server started bursting. Used for clock synchronization.

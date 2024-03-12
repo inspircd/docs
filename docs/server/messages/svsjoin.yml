@@ -1,5 +1,4 @@
 name: SVSJOIN
-source: sid
 syntax:
   fields:
     uid: The UUID of the user to join to the specified channel.

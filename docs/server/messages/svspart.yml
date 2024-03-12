@@ -1,5 +1,4 @@
 name: SVSPART
-source: sid
 syntax:
   fields:
     uid: The UUID of the user to part from the specified channel.

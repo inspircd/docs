@@ -1,5 +1,4 @@
 name: FJOIN
-source: sid
 syntax:
   fields:
     channel: The channel which is being introduced to the network.

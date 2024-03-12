@@ -1,5 +1,4 @@
 name: ENDBURST
-source: sid
 description: |-
   Marks the source server as no longer bursting.
 example:

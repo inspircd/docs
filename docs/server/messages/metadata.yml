@@ -1,5 +1,4 @@
 name: METADATA
-source: sid
 syntax:
   fields:
     channel: The channel which the metadata applies to.
