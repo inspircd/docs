@@ -4,7 +4,7 @@ syntax: >-
 description: |-
   Requests information about a user who was previously connected with the specified nick.
 
-   If <count> is given, only return the <count> most recent entries.
+   If `<count>` is given, only return the `<count>` most recent entries.
 example:
 - description: |-
     Requests information about who previously used the nick Adam
