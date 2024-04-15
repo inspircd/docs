@@ -115,7 +115,6 @@ details: |+
   m_sqlite3            | critical<br>normal<br>debug            | Messages relating to [the sqlite3 module](/4/modules/sqlite3).
   m_sqloper            | warning<br>debug                       | Messages relating to [the sqloper module](/4/modules/sqloper).
   m_ssl_gnutls         | warning<br>normal<br>debug             | Messages relating to [the ssl_gnutls module](/4/modules/ssl_gnutls).
-  m_ssl_mbedtls        | warning<br>normal<br>debug             | Messages relating to [the ssl_mbedtls module](/4/modules/ssl_mbedtls).
   m_ssl_openssl        | warning<br>normal<br>debug             | Messages relating to [the ssl_openssl module](/4/modules/ssl_openssl).
   m_sslinfo            | debug                                  | Messages relating to [the sslinfo module](/4/modules/sslinfo).
   m_sslrehashsignal    | normal                                 | Messages relating to [the sslrehashsignal module](/4/modules/sslrehashsignal).

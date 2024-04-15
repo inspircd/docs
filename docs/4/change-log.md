@@ -8,6 +8,30 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0a26
+
+**This pre-release version of InspIRCd was released on 2024-04-15.**
+
+- Moved the `ssl_mbedtls` module to inspircd-contrib.
+
+- Fixed a crash when trying to serialise an unset extension item.
+
+- Fixed a crash in the `helpmode` module.
+
+- Changed the `chanhistory` module to not sync chat history to services servers.
+
+- Added support for removing list modes matching a user with the `/RMODE` command.
+
+- Changed the `sasl` module to not automatically cancel sasl-3.2 authentication sessions on connection registration.
+
+- Changed the `SVSCMODE` S2S message to clear modes on the first server it reaches.
+
+- Added the `SVSOPER` S2S message to allow services to grant server operator privileges to a user.
+
+- Added the `auspex` channel metadata to allow services to see messages sent to a channel without a services pseudoclient.
+
+- Renamed the `sslfp` extended ban to `fingerprint`.
+
 ### InspIRCd 4.0.0a25
 
 **This pre-release version of InspIRCd was released on 2024-03-01.**

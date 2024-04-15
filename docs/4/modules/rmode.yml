@@ -1,1 +1,24 @@
-../../3/modules/rmode.yml
+name: rmode
+
+description: |-
+  This module allows removal of channel list modes using glob patterns.
+
+commands:
+- name: RMODE
+  param_count: 2-3
+  syntax: <channel> <mode> [<pattern>]
+  description: |-
+    Removes all &lt;mode&gt; list modes matching &lt;pattern&gt;, or all if no pattern is specified.
+  example:
+  - description: |-
+      Removes all bans on #example
+    text: |-
+      /RMODE #example b
+  - description: |-
+      Removes all bans on #example matching \*foo\*
+    text: |-
+      /RMODE #example b *foo*
+  - description: |-
+      Removes all bans on #example matching the user Sadie
+    text: |-
+      /RMODE #example b Sadie

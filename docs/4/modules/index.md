@@ -199,6 +199,5 @@ Name                                          | Description
 [regex_re2](/4/modules/regex_re2)             | Provides the re2 regular expression engine which uses the RE2 library.
 [sqlite3](/4/modules/sqlite3)                 | Provides the ability for SQL modules to query a SQLite 3 database.
 [ssl_gnutls](/4/modules/ssl_gnutls)           | Allows TLS encrypted connections using the GnuTLS library.
-[ssl_mbedtls](/4/modules/ssl_mbedtls)         | Allows TLS encrypted connections using the mbedTLS library.
 [ssl_openssl](/4/modules/ssl_openssl)         | Allows TLS encrypted connections using the OpenSSL library.
 [sslrehashsignal](/4/modules/sslrehashsignal) | Allows the SIGUSR1 signal to be sent to the server to reload TLS certificates.

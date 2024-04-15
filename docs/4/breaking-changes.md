@@ -48,6 +48,8 @@ title: v4 Breaking Changes
 
 - The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_regex_tre` to install it.
 
+- The ssl_mbedtls module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_ssl_mbedtls` to install it.
+
 - The userip module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install userip` to install it.
 
 ### Config
