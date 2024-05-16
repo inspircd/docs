@@ -116,8 +116,8 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `LMODE` message was added to synchronise the contents of a mode list including the setter and set time.
 
 ```diff
-+ :36D FMODE #CHANNEL 1234567890 +bb *!*@example.com *!*@example.org
-- :36D LMODE #channel 1234567890 b *!*@example.com 1234567890 Sadie *!*@example.org 2345678901 Adam
+- :36D FMODE #CHANNEL 1234567890 +bb *!*@example.com *!*@example.org
++ :36D LMODE #channel 1234567890 b *!*@example.com 1234567890 Sadie *!*@example.org 2345678901 Adam
 ```
 
 - The `version` and `fullversion` keys in `SINFO` were deprecated and replaced with `customversion` and `rawbranch`. If sent the deprecated keys will be parsed to attempt to extract the latter values from them.
