@@ -8,7 +8,7 @@ An official package for Ubuntu is maintained by the InspIRCd Team. You can downl
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Ubuntu 18.04 (Bionic Beaver), 20.04 (Focal Fossa), and 22.04 (Jammy Jellyfish).
+This package can be installed on all x86-64 systems running Ubuntu 20.04 (Focal Fossa), 22.04 (Jammy Jellyfish), and 24.04 (Noble Numbat).
 
 ### How do I install this package?
 

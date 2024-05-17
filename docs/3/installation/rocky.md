@@ -8,7 +8,7 @@ An official package for Rocky Linux is maintained by the InspIRCd Team. You can 
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Rocky Linux 8.
+This package can be installed on all x86-64 systems running Rocky Linux 8 and 9.
 
 ### How do I install this package?
 
