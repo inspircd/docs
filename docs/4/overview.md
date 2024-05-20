@@ -46,7 +46,7 @@ The `--debug` option no longer enables raw I/O logging. To enable raw I/O loggin
 
 Autologin support is now provided by the core and can match on more fields than just the user's TLS client fingerprint. It now also supports only authenticating a user if their nick matches an account name.
 
-Operator accounts can now opt-out of having a password to push security onto other fields such as a services account name (requires the [account](/4/modules/account) module) or a TLS client fingerprint (requires the [sslinfo](/4/modules/ssinfo) module).
+Operator accounts can now opt-out of having a password to push security onto other fields such as a services account name (requires the [account](/4/modules/account) module) or a TLS client fingerprint (requires the [sslinfo](/4/modules/sslinfo) module).
 
 Operator accounts and types can now specify fields directly instead of inheriting them from an operator type or class.
 
