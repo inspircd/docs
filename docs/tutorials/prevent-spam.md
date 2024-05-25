@@ -2,9 +2,6 @@
 title: How to prevent spam on your IRC network
 ---
 
-!!! note ""
-    This page is a work in progress. If you would like to suggest more spam mitigation procedures [please open an issue](https://github.com/inspircd/inspircd-docs/issues/new).
-
 ## How to prevent spam on your IRC network
 
 Unfortunately spam is still an issue on IRC. However, with the right server configuration you can keep your network safe from the vast majority of spam.
