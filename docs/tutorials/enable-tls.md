@@ -23,7 +23,7 @@ If you have these installed before running `./configure` then the appropriate mo
 
 If you have not already acquired a TLS (SSL) certificate and key you will need to do so. The recommended method of acquiring these files is an ACME client like [Certbot](https://certbot.eff.org/). You can acquire this from either your system package manager or from pip. See [the Certbot installation instructions](https://certbot.eff.org/instructions?ws=other&os=pip) for more information on how to install and configure Certbot. Alternatives to Certbot include [Dehydrated](https://github.com/dehydrated-io/dehydrated), [acme.sh](https://github.com/acmesh-official/acme.sh), and [many others](https://letsencrypt.org/docs/client-options/).
 
-InspIRCd ships with a script called `deploy-ssl.sh` that you can customise for use as a post-deploy hook to automatically reload your TLS (SSL) profiles when your TLS (SSL) certificate and key are updated. Generally this should not require much tweaking but you should check it just in case. If you are using this you should also make sure that your IRC server has [the sslrehashsignal module](/3/configuration/sslrehashsignal) loaded (see below).
+InspIRCd ships with a script called `deploy-ssl.sh` that you can customise for use as a post-deploy hook to automatically reload your TLS (SSL) profiles when your TLS (SSL) certificate and key are updated. Generally this should not require much tweaking but you should check it just in case. If you are using this you should also make sure that your IRC server has [the sslrehashsignal module](/3/modules/sslrehashsignal) loaded (see below).
 
 ### Loading and configuring a TLS (SSL) module
 
