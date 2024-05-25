@@ -8,4 +8,5 @@ title: Tutorials
 
 ## Tutorials
 
+- [How to enable TLS (SSL) on your IRC network](/tutorials/enable-tls)
 - [How to prevent spam on your IRC network](/tutorials/prevent-spam)
