@@ -18,5 +18,5 @@ PyYAML==6.0.1
 regex==2024.4.28
 six==1.16.0
 tornado==6.4
-tqdm==4.66.3
+tqdm==4.66.4
 yamllint==1.35.1
