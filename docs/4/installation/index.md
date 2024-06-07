@@ -14,11 +14,9 @@ An official InspIRCd Docker image will be available on [Docker Hub](https://hub.
 
 The InspIRCd team provide prebuilt packages for some common platforms. If you are using one of these platforms and do not want to install any third party modules it is recommended that you use one of these.
 
-* [CentOS (EL7)](/4/installation/centos)
-
 * [Debian](/4/installation/debian)
 
-* [Rocky Linux (EL8, EL9)](/4/installation/rocky)
+* [RHEL](/4/installation/rhel)
 
 * [Ubuntu](/4/installation/ubuntu)
 

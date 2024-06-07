@@ -1,14 +1,14 @@
 ---
-title: v4 Rocky Linux Installation
+title: v4 RHEL Installation
 ---
 
-## Installing InspIRCd 4 using the Rocky Linux package
+## Installing InspIRCd 4 using the RHEL package
 
-An official package for Rocky Linux is maintained by the InspIRCd Team. You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).
+An official package for RHEL is maintained by the InspIRCd Team. You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Rocky Linux 8 and 9.
+This package can be installed on all x86-64 systems running RHEL 8 and 9. You can also install the package on RHEL rebuilds like AlmaLinux and Rocky Linux.
 
 ### How do I install this package?
 
