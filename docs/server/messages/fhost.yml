@@ -2,9 +2,11 @@ name: FHOST
 source: uid
 syntax:
   fields:
-    host: The new hostname of the source user.
-  text: |-
-    <host>
+    display-host: The new displayed hostname of the source user.
+    real-host: The new real hostname of the source user.
+  text:
+  - <display-host>
+  - <display-host>|{*} <real-host>|{*}
 description: |-
   Changes the displayed hostname of the source user to the specified value.
 example:
@@ -12,3 +14,15 @@ example:
     Changes the displayed hostname of 36DAAAAAA to example.com
   text: |-
     :36DAAAAAA FHOST example.com
+- description: |-
+    [**1206+**] Changes the displayed hostname of 36DAAAAAA to example.com
+  text: |-
+    :36DAAAAAA FHOST example.com *
+- description: |-
+    [**1206+**] Changes the real hostname of 36DAAAAAA to example.com
+  text: |-
+    :36DAAAAAA FHOST * example.com
+- description: |-
+    [**1206+**] Changes the displayed and real hostname of 36DAAAAAA to example.com
+  text: |-
+    :36DAAAAAA FHOST example.com example.com

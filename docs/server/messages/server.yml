@@ -13,6 +13,7 @@ syntax:
     data: One or more key=value pairs which represent the state of a remote server.
   text:
   - <server-name> <password> <unused> <newsid> :<description>
+  - <server-name> <password> <newsid> :<description>
   - <server-name> <newsid> [<data>]+ :<description>
 description: |-
   Introduces a server to the network.
@@ -25,9 +26,13 @@ extra: |-
   hidden=0\|1      | hidden=1         | Whether the remote server should be hidden from /MAP.
 example:
 - description: |-
-    Introduces a directly linked server:
+    [**1205**] Introduces a directly linked server:
   text: |-
     SERVER irc.eu.example.com meowmeow 0 36D :European IRC server
+- description: |-
+    [**1206+**] Introduces a directly linked server:
+  text: |-
+    SERVER irc.eu.example.com meowmeow 36D :European IRC server
 - description: |-
     Introduces an indirectly linked server
   text: |-

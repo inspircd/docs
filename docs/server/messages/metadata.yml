@@ -2,6 +2,7 @@ name: METADATA
 syntax:
   fields:
     channel: The channel which the metadata applies to.
+    membid: The membership identifier which the metadata applies to.
     ts: The time at which the channel was created.
     uid: The user which the metadata applies to.
     key: The name of the metadata entry.
@@ -9,6 +10,7 @@ syntax:
   text:
   - <channel> <ts> <key> [<value>]
   - <uid> <key> [<value>]
+  - '{@} <uid> <channel> <ts> <membid> <key> [<value>]'
   - '{*} <key> [<value>]'
 description: |-
   Changes the specified channel, user, or network metadata entry to the specified value.
@@ -16,12 +18,16 @@ example:
 - description: |-
     Changes the mlock channel metadata for #chan to channel modes `n` (noextmsg) and `t` (topiclock)
   text: |-
-    :36D #chan 1234567890 mlock :+nt
+    :36D METADATA #chan 1234567890 mlock :+nt
 - description: |-
     Changes the cap user metadata for user 36DAAAAAA
   text: |-
-    :36D 36DAAAAAA caps :multi-prefix userhost-in-names capversion=3.2
+    :36D METADATA 36DAAAAAA caps :multi-prefix userhost-in-names capversion=3.2
+- description: |-
+    [**1206+**] Changes the wibble membership metadata for user 36DAAAAAA on #chan
+  text: |-
+    :36D METADATA @ 36DAAAAAA #chan 1234567890 123 wibble :Wobble
 - description: |-
     Changes the wibble network metadata
   text: |-
-    :36D * wibble :Wibble Wobble
+    :36D METADATA * wibble :Wibble Wobble

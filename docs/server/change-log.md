@@ -8,11 +8,6 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 
 ## 1206 (v4)
 
-!!! danger "InspIRCd v4 is still early in development!"
-    If you implement the 1206 protocol you may experience unannounced breaking changes.
-
-    You probably want to use [the 1205 (v3) protocol](#1205-v3) instead which v4 also supports.
-
 - Channel and user mode `r` (c_registered, u_registered) have been made optional and may no longer exist.
 
 ```diff
@@ -106,6 +101,13 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + CAPAB MODSUPPORT :globops
 ```
 
+- The `SERVER` message for directly-linked servers no longer contains the hopcount field.
+
+```diff
+- :36D SERVER irc2.example.com password 0 36D :Example Server
++ :36D SERVER irc2.example.com password 36D :Example Server
+```
+
 - The `UID` message now has an extra field for the real username of the user which is being introduced.
 
 ```diff
@@ -116,7 +118,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 - The `LMODE` message was added to synchronise the contents of a mode list including the setter and set time.
 
 ```diff
-- :36D FMODE #CHANNEL 1234567890 +bb *!*@example.com *!*@example.org
+- :36D FMODE #channel 1234567890 +bb *!*@example.com *!*@example.org
 + :36D LMODE #channel 1234567890 b *!*@example.com 1234567890 Sadie *!*@example.org 2345678901 Adam
 ```
 

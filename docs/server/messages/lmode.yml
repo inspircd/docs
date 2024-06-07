@@ -1,0 +1,19 @@
+name: LMODE
+source: sid
+syntax:
+  fields:
+    channel: The channel for which the modes are being changed.
+    ts: The creation time of the specified channel.
+    list-mode: The list mode which is being set on the channel.
+    list-entry: The value of a list mode entry.
+    list-ts: The time at which the list mode entry was added.
+    list-setter: The mask of the user that created the list mode entry.
+  text: |-
+    <channel> <ts> <list-mode> [<list-entry> <list-ts> <list-setter>]+
+description: |-
+  Synchronises the contents of a mode list.
+example:
+- description: |-
+    Synchronises two bans for #channel
+  text: |-
+    :36D LMODE #channel 1234567890 b *!*@example.com 1234567890 Sadie *!*@example.org 2345678901 Adam

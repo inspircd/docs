@@ -1,14 +1,28 @@
-name: FIDENT
+name: FHOST
 source: uid
 syntax:
   fields:
-    host: The new username (ident) of the source user.
-  text: |-
-    <username>
+    display-user: The new displayed username of the source user.
+    real-user: The new real username of the source user.
+  text:
+  - <display-user>
+  - <display-user>|{*} <real-user>|{*}
 description: |-
-  Changes the username (ident) of the source user to the specified value.
+  Changes the displayed username of the source user to the specified value.
 example:
 - description: |-
-    Changes the displayed hostname of 36DAAAAAA to wibble
+    Changes the displayed username of 36DAAAAAA to wibble
   text: |-
-    :36DAAAAAA FIDENT wibble
+    :36DAAAAAA FHOST wibble
+- description: |-
+    [**1206+**] Changes the displayed username of 36DAAAAAA to wibble
+  text: |-
+    :36DAAAAAA FHOST wibble *
+- description: |-
+    [**1206+**] Changes the real username of 36DAAAAAA to wibble
+  text: |-
+    :36DAAAAAA FHOST * wibble
+- description: |-
+    [**1206+**] Changes the displayed and real username of 36DAAAAAA to wibble
+  text: |-
+    :36DAAAAAA FHOST wibble wibble
