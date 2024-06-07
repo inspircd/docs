@@ -76,8 +76,8 @@ extra: |-
   Protocol Version | Supported By
   ---------------- | -------------
   1202             | InspIRCd v2 &mdash; v3
-  1205             | InspIRCd v3 & v4 (dev)
-  1206             | InspIRd v4 (dev)
+  1205             | InspIRCd v3 & v4
+  1206             | InspIRd v4
 
 description: |-
   Negotiates the capabilities of the remote server. This includes data such as modes, modules, and limits.

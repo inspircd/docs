@@ -8,7 +8,7 @@ syntax:
   - <display-user>
   - <display-user>|{*} <real-user>|{*}
 description: |-
-  Changes the displayed username of the source user to the specified value.
+  Changes the username of the source user to the specified value.
 example:
 - description: |-
     Changes the displayed username of 36DAAAAAA to wibble

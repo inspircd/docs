@@ -35,4 +35,3 @@ example:
     [**1206+**] Introduces a user with mode parameters
   text: |-
     :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost wibble.wobble sp91 sadie 127.0.0.1 1234567890 +io Aa :Sadie
-

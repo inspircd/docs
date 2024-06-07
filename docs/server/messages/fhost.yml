@@ -8,7 +8,7 @@ syntax:
   - <display-host>
   - <display-host>|{*} <real-host>|{*}
 description: |-
-  Changes the displayed hostname of the source user to the specified value.
+  Changes the hostname of the source user to the specified value.
 example:
 - description: |-
     Changes the displayed hostname of 36DAAAAAA to example.com
