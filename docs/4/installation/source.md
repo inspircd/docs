@@ -52,7 +52,7 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSI
 To download the most recent code committed to Git you will need to have Git installed. You can install this from your system's package manager. Once you have Git installed you can download the latest source with the following command:
 
 ```sh
-git clone --branch master "https://github.com/inspircd/inspircd.git"
+git clone --branch insp4 "https://github.com/inspircd/inspircd.git"
 ```
 
 A copy of the latest InspIRCd source code will now exist in the `inspircd` directory.

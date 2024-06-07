@@ -51,4 +51,4 @@ configuration:
 special_notes: |-
   {% include "3/modules/_sql_table.md" %}
 
-  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/master/docs/sql). You can define your own schema as long as your query returns the required columns.
+  Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/insp4/docs/sql). You can define your own schema as long as your query returns the required columns.

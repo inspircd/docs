@@ -12,7 +12,19 @@ An official InspIRCd Docker image will be available on [Docker Hub](https://hub.
 
 ### Packages
 
-The InspIRCd team will provide prebuilt packages for some common platforms when v4 is released. Until that happens you will have to build from source.
+The InspIRCd team provide prebuilt packages for some common platforms. If you are using one of these platforms and do not want to install any third party modules it is recommended that you use one of these.
+
+* [CentOS (EL7)](/4/installation/centos)
+
+* [Debian](/4/installation/debian)
+
+* [Rocky Linux (EL8, EL9)](/4/installation/rocky)
+
+* [Ubuntu](/4/installation/ubuntu)
+
+* [Windows](/4/installation/windows)
+
+Some distributions may ship their own InspIRCd packages. Using these is not recommended as they are frequently out of date and do not contain the latest security fixes applied upstream.
 
 ### Source
 

@@ -32,6 +32,12 @@ attributes:
   default: null
   description: |-
     The password for this server operator account.
+- name: nopassword
+  type: Boolean
+  required: false
+  default: 'No'
+  description: |-
+    If enabled then the password field will not be used. You MUST use some other restriction field if this is enabled.
 - name: type
   type: Text
   required: true
@@ -95,6 +101,7 @@ example: |-
   ```xml
   <oper name="Sadie"
         password="7H8Tqm+i$jaG48RHAcoLXSB3Guzaf1bQehaNRNbblMoNrHPdguvU"
+        nopassword="no"
         hash="hmac-sha256"
         class="ServerOperators"
         host="*@bnc.example.com"

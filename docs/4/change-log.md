@@ -6,6 +6,38 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0rc1
+
+**This release candidate version of InspIRCd was released on 2024-06-07.**
+
+- Added `--protocoldebug` to allow the logging of I/O traffic in debug logs.
+
+- Added `<oper:nopassword>` to allow configuring an oper account to rely on other fields instead of a password for authentication.
+
+- Added `<websocket:allowmissingorigin>` to allow configuring whether non-web WebSocket connections are allowed.
+
+- Added nullability attributes to all core module events.
+
+- Added support for SRV record lookup to the `mysql` module.
+
+- Changed `--debug` to only enable logging at the debug level and automatically enable `--nofork`.
+
+- Changed `OnPreMessage` to allow customising the prefix rank of the message target.
+
+- Changed the terminal logger to use a cleaner format.
+
+- Fixed messages from the `opmoderated` module appearing in the channel history.
+
+- Fixed resyncing the customversion when the config reloads.
+
+- Removed support for configuring the Argon2 version in the `argon2` module.
+
+- Removed the unused hops field from the `SERVER` S2S message.
+
+- Updated the credits.
+
+- Windows releases will now be automatically built by CI.
+
 ### InspIRCd 4.0.0a26
 
 **This pre-release version of InspIRCd was released on 2024-04-15.**
