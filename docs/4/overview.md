@@ -54,8 +54,22 @@ Operator privileges are now synchronised over the network so remote servers can 
 
 Services can now grant services privileges to users remotely (requires the [services](/4/modules/services) module).
 
+### Regex
+
+Regular expression support has been entirely rewritten with support for captures and flags.
+
+The regex_pcre and regex_tre modules have been moved to inspircd-contrib as their dependencies are deprecated. It is recommended that you migrate to the [regex_pcre2](/4/modules/regex_pcre) and [regex_stdlib](/4/modules/regex_stdlib) modules respectively.
+
+[The regex_stdlib module](/4/modules/regex_stdlib) is now always built on all platforms. This is now the recommended regex module.
+
+### Spam protection
+
+The opmoderated module has been imported from inspircd-contrib. This module allows you to make unprivileged users messages only visible to channel operators.
+
+The securelist module can now show a fake `/LIST` output to users. It can also hide small channels that may not have an active channel operator from the `/LIST` output.
+
 ### TLS
 
 InspIRCd now has stricter requirements regarding TLS. At least one TLS module must now be enabled at build time and servers which link over the public internet must now be linked via TLS.
 
-Using multiple hash algorithms for client fingerprints is now supported. This allows migrating away from old, insecure algorithms like md5. You can also use Subject Public Key Info (SPKI) fingerprint insteads
+Using multiple hash algorithms for client fingerprints is now supported. This allows migrating away from old, insecure algorithms like md5. You can also use a Subject Public Key Info (SPKI) fingerprint instead of a client certificate fingerprint.
