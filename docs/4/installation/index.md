@@ -2,8 +2,6 @@
 title: v4 Installation
 ---
 
-{! 4/_support.md !}
-
 ## Installing InspIRCd 4
 
 There are many different methods for installing InspIRCd. You should pick the method which fits your needs best.

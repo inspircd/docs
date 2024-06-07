@@ -2,10 +2,6 @@
 title: v{{ version }} Module Manager
 ---
 
-{% if '4' == version %}
-{! 4/_support.md !}
-{% endif %}
-
 ## Managing third-party modules with Module Manager
 
 ### Summary

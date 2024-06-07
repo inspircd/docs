@@ -2,8 +2,6 @@
 title: v4 Breaking Changes
 ---
 
-{! 4/_support.md !}
-
 ## Breaking changes since InspIRCd 3
 
 **NOTE** &mdash; This document only lists breaking changes between InspIRCd 3 and InspIRCd 4. There are many backwards compatible changes that have been made which are not listed in this document.

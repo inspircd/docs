@@ -2,10 +2,6 @@
 title: v{{ version }} Channel Modes
 ---
 
-{% if '4' == version %}
-{! 4/_support.md !}
-{% endif %}
-
 ## Channel Modes
 
 !!! note ""

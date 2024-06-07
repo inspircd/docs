@@ -2,8 +2,6 @@
 title: v4 Configuration
 ---
 
-{! 4/_support.md !}
-
 ## Useful Configuration Snippets
 
 ### Enabling support for connections via hosted clients

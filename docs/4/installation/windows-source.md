@@ -2,8 +2,6 @@
 title: v4 Windows Source Installation
 ---
 
-{! 4/_support.md !}
-
 ## Installing InspIRCd 4 from source on Windows
 
 If you want to build InspIRCd with contrib modules or non-included extra modules you can build from source.

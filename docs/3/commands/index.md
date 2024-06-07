@@ -2,10 +2,6 @@
 title: v{{ version }} Commands
 ---
 
-{% if '4' == version %}
-{! 4/_support.md !}
-{% endif %}
-
 ## Commands
 
 This page only lists core commands. For details on the commands of a specific module please refer to [the appropriate page for that module](/{{ version }}/modules).

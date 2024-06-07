@@ -2,8 +2,6 @@
 title: v4 Change Log
 ---
 
-{! 4/_support.md !}
-
 ## Change Log
 
 This page lists changes which have happened between releases.

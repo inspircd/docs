@@ -2,8 +2,6 @@
 title: v4 Module List
 ---
 
-{! 4/_support.md !}
-
 ## Module List
 
 This is a complete list of all modules that ship with InspIRCd. If you have [installed from source](/4/installation/source) you can also install third-party modules which have been created by the InspIRCd community using the [Module Manager](/4/module-manager).

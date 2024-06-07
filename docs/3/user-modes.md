@@ -2,10 +2,6 @@
 title: v{{ version }} User Modes
 ---
 
-{% if '4' == version %}
-{! 4/_support.md !}
-{% endif %}
-
 ## User Modes
 
 !!! note ""

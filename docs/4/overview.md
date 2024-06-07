@@ -2,8 +2,6 @@
 title: v4 Overview
 ---
 
-{! 4/_support.md !}
-
 !!! note ""
     This page is a work in progress. If you would like to suggest additions to this page [please comment on issue #187](https://github.com/inspircd/inspircd-docs/issues/187).
 

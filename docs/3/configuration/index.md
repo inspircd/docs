@@ -2,10 +2,6 @@
 title: v{{ version }} Configuration
 ---
 
-{% if '4' == version %}
-{! 4/_support.md !}
-{% endif %}
-
 ## Configuration
 
 !!! note ""
