@@ -55,7 +55,7 @@ title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 + :36DAAAAAA SQUERY NickServ :IDENTIFY hunter2
 ```
 
-- The `accountnicks` metadata key may now be sent to inform the server of valid nicknames for a user's account. This replaces channel mode `r` (u_registered).
+- The `accountnicks` metadata key may now be sent to inform the server of valid nicknames for a user's account. This replaces user mode `r` (u_registered).
 
 ```diff
 - :36C MODE 36DAAAAAA +r
