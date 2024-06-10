@@ -27,7 +27,7 @@ Name                                                      | Description
 [blockcolor](/4/modules/blockcolor)                       | Adds channel mode c (blockcolor) which allows channels to block messages which contain IRC formatting codes.
 [botmode](/4/modules/botmode)                             | Adds user mode B (bot) which marks users with it set as bots in their /WHOIS response.
 [callerid](/4/modules/callerid)                           | Provides user mode g (callerid) which allows users to require that other users are on their whitelist before messaging them.
-[cap](/4/modules/cap)                                     | Implements support for the IRCv3 Client Capability Negotiation extension.
+[cap](/4/modules/cap)                                     | Provides support for the IRCv3 Client Capability Negotiation extension.
 [cban](/4/modules/cban)                                   | Adds the /CBAN command which allows server operators to prevent channels matching a glob from being created.
 [chancreate](/4/modules/chancreate)                       | Sends a notice to snomasks j (local) and J (remote) when a channel is created.
 [chanfilter](/4/modules/chanfilter)                       | Adds channel mode g (filter) which allows channel operators to define glob patterns for inappropriate phrases that are not allowed to be used in the channel.
@@ -71,7 +71,7 @@ Name                                                      | Description
 [globalload](/4/modules/globalload)                       | Adds the /GLOADMODULE, /GRELOADMODULE, and /GUNLOADMODULE commands which allows server operators to load, reload, and unload modules on remote servers.
 [globops](/4/modules/globops)                             | Adds the /GLOBOPS command which allows server operators to send messages to all server operators with the g (globops) snomask.
 [haproxy](/4/modules/haproxy)                             | Allows IRC connections to be made using reverse proxies that implement the HAProxy PROXY protocol.
-[help](/4/modules/help)                                   | Adds the /HELPOP command which allows users to view help on various topics.
+[help](/4/modules/help)                                   | Adds the /HELP command which allows users to view help on various topics.
 [helpmode](/4/modules/helpmode)                           | Adds user mode h (helpop) which marks a user as being available for help.
 [hidechans](/4/modules/hidechans)                         | Adds user mode I (hidechans) which hides the channels users with it set are in from their /WHOIS response.
 [hidelist](/4/modules/hidelist)                           | Allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
@@ -84,7 +84,7 @@ Name                                                      | Description
 [httpd_stats](/4/modules/httpd_stats)                     | Provides XML-serialised statistics about the server, channels, and users over HTTP via the /stats path.
 [ident](/4/modules/ident)                                 | Allows the usernames of users to be looked up using the RFC 1413 Identification Protocol.
 [inviteexception](/4/modules/inviteexception)             | Adds channel mode I (invex) which allows channel operators to exempt user masks from channel mode i (inviteonly).
-[ircv3](/4/modules/ircv3)                                 | Provides the IRCv3 account-notify, away-notify, and extended-join client capabilities.
+[ircv3](/4/modules/ircv3)                                 | Provides the IRCv3 account-notify, away-notify, extended-join, and standard-replies client capabilities.
 [ircv3_accounttag](/4/modules/ircv3_accounttag)           | Provides the IRCv3 account-tag client capability.
 [ircv3_batch](/4/modules/ircv3_batch)                     | Provides the IRCv3 batch client capability.
 [ircv3_capnotify](/4/modules/ircv3_capnotify)             | Provides the IRCv3 cap-notify client capability.
@@ -188,7 +188,7 @@ Name                                          | Description
 [argon2](/4/modules/argon2)                   | Allows other modules to generate Argon2 hashes.
 [geo_maxmind](/4/modules/geo_maxmind)         | Allows the server to perform geolocation lookups on both IP addresses and users.
 [ldap](/4/modules/ldap)                       | Provides the ability for LDAP modules to query a LDAP directory.
-[log_json](/4/modules/log_json)               | Provides the ability to log to a JSON file.
+[log_json](/4/modules/log_json)               | Provides the ability to log to JSON.
 [log_syslog](/4/modules/log_syslog)           | Provides the ability to log to syslog.
 [mysql](/4/modules/mysql)                     | Provides the ability for SQL modules to query a MySQL database.
 [pgsql](/4/modules/pgsql)                     | Provides the ability for SQL modules to query a PostgreSQL database.
