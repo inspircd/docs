@@ -63,6 +63,6 @@ configuration:
     ```
 
 special_notes: |-
-  If you are also using [the gateway module](/4/modules/cgiirc) you should disable ident lookups for your WebIRC gateway.
+  If you are also using [the gateway module](/4/modules/gateway) you should disable ident lookups for your WebIRC gateway.
 
   It is recommended that you only enable ident lookups for hosts that you know are shared as performing ident lookups makes connecting to a server slower.

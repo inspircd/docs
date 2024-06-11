@@ -50,8 +50,8 @@ configuration:
 
     Value       | Description
     ----------- | -----------
-    full        | Cloak the user completely using three slices for common CIDR bans (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Requires [the md5 module](/3/configuration/md5).
-    half        | Cloak only the unique portion of a hostname. The last two segments of a hostname, /16 subnet of a IPv4 address, or /48 subnet of a IPv6 adddress will be visible. Requires [the md5 module](/3/configuration/md5).
+    full        | Cloak the user completely using three slices for common CIDR bans (IPv4: /16 /24 /32, IPv6: /32 /48 /64). Requires [the md5 module](/3/modules/md5).
+    half        | Cloak only the unique portion of a hostname. The last two segments of a hostname, /16 subnet of a IPv4 address, or /48 subnet of a IPv6 adddress will be visible. Requires [the md5 module](/3/modules/md5).
 
   example: |-
     Cloaking using the full mode:

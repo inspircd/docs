@@ -114,7 +114,6 @@ special_notes: |-
   12.23.34     | ucctzwrd (2)  | /24
   12.23        | uyclsgi7 (3)  | /16
 
-
   Assuming an IPv6 address of `2001:db8:dead:cafe:beef:feed:f00d:face` and a cloaked part of `2rravfdm:zjmad7mb:l2kirwft` the cloak segments represent:
 
   IPv6 Segment                           | Cloak Segment | CIDR Range

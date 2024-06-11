@@ -105,7 +105,6 @@ configuration:
            sanitize="yes">
     ```
 
-
     Cloaking using the nickname method:
 
     ```xml

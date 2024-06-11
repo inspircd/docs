@@ -2,7 +2,7 @@
 ROOT = File.dirname __dir__
 
 missing = Array.new
-Dir["#{ROOT}/docs/**/*.md"].each do |file|
+Dir["#{ROOT}/docs/**/*.{md,yml}"].each do |file|
 	contents = File.read(file)
 	contents.scan(/\[[^\]]+\]\(\/([^\)]+?)\/?(?:\#[^\)]+|\/)?\)/).each do |link|
 		next if link[0].include? "{{"  # Jinja variable

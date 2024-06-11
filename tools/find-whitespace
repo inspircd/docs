@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 problems = Array.new
-Dir["#{File.dirname __dir__}/docs/**/*.md"].each do |file|
+Dir["#{File.dirname __dir__}/docs/**/*.{md,yml}"].each do |file|
 	contents = File.read file
 	if contents.match /\xA{3,}/
 		problems << { file: file, description: 'three or more consecutive empty lines' }
