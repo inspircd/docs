@@ -18,8 +18,6 @@ title: v4 Breaking Changes
 
 - OpenSSL 1.1.1+ is now required by the ssl_openssl module.
 
-- PCRE2 is now required by the regex_pcre module. Most regular expressions should be compatible but if not you can use `./modulemanager install m_regex_oldpcre` to install the a module that uses the PCRE1 library.
-
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
 - Windows 10 build 17061 is now the minimum supported version of Windows.
@@ -43,6 +41,8 @@ title: v4 Breaking Changes
 - The nopartmsg module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install m_nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
 
 - The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
+
+- The regex_pcre module has been moved to inspircd-contrib. In order to upgrade either migrate remove this module from your configuration, run `./modulemanager install m_regex_pcre` to install it, or migrate to [the regex_pcre2 module](/4/modules/regex_pcre2).
 
 - The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install m_regex_tre` to install it.
 

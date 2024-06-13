@@ -6,6 +6,22 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0rc2
+
+**This release candidate version of InspIRCd was released on 2024-06-14.**
+
+- Fixed formatting the user count percentage in `/MAP`.
+
+- Fixed some references to --debug that should be --protocoldebug now.
+
+- Fixed various compiler warnings.
+
+- Moved the `/GLOBAL` alias to the generic services config file.
+
+- Removed host-based cloak data from the hmac-sha256-addr link data.
+
+- Renamed the regex_pcre module back to regex_pcre2 to avoid upgrading issues.
+
 ### InspIRCd 4.0.0rc1
 
 **This release candidate version of InspIRCd was released on 2024-06-07.**

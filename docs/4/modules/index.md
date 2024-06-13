@@ -192,7 +192,7 @@ Name                                          | Description
 [log_syslog](/4/modules/log_syslog)           | Provides the ability to log to syslog.
 [mysql](/4/modules/mysql)                     | Provides the ability for SQL modules to query a MySQL database.
 [pgsql](/4/modules/pgsql)                     | Provides the ability for SQL modules to query a PostgreSQL database.
-[regex_pcre](/4/modules/regex_pcre)           | Provides the pcre regular expression engine which uses the PCRE2 library.
+[regex_pcre2](/4/modules/regex_pcre2)         | Provides the pcre regular expression engine which uses the PCRE2 library.
 [regex_posix](/4/modules/regex_posix)         | Provides the posix regular expression engine which uses the POSIX.2 regular expression matching system.
 [regex_re2](/4/modules/regex_re2)             | Provides the re2 regular expression engine which uses the RE2 library.
 [sqlite3](/4/modules/sqlite3)                 | Provides the ability for SQL modules to query a SQLite 3 database.

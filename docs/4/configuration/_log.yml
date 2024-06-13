@@ -106,7 +106,7 @@ details: |+
   m_password_hash      | normal                                 | Messages relating to [the password_hash module](/4/modules/password_hash).
   m_permchannels       | critical<br>warning<br>debug           | Messages relating to [the permchannels module](/4/modules/permchannels).
   m_pgsql              | critical<br>normal<br>debug            | Messages relating to [the pgsql module](/4/modules/pgsql).
-  m_regex_pcre         | normal                                 | Messages relating to [the regex_pcre module](/4/modules/regex_pcre).
+  m_regex_pcre2        | normal                                 | Messages relating to [the regex_pcre2 module](/4/modules/regex_pcre2).
   m_sasl               | normal<br>debug                        | Messages relating to [the sasl module](/4/modules/sasl).
   m_services           | debug                                  | Messages relating to [the services module](/4/modules/services).
   m_showfile           | warning                                | Messages relating to [the showfile module](/4/modules/showfile).
