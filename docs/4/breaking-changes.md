@@ -118,7 +118,7 @@ title: v4 Breaking Changes
 
 ### Other
 
-- Compatibility with the 1202 (v2) protocol has been removed. You will need to link against an intermediary v3 server if you are upgrading from v2.
+- Compatibility with the 1202 (v2) protocol has been removed. You will need to link against an intermediary v3 server if you are upgrading from v2. You will also need to do this if you are using Atheme services as it does not yet support the 1205 (v3) protocol. Please [comment on this issue](https://github.com/atheme/atheme/issues/904) to let the Atheme developers know that this is a problem for you.
 
 - `inspircd-genssl` has been removed with no replacement. You should use a CA-validated certificate for your server rather than a self-signed one.
 
