@@ -6,6 +6,28 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.17.1
+
+<!-- TODO: ensure changes after commit fe89a4a2e172c6d520f5b800688084e9c94ac3ae are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Fixed building on recent releases of macOS.
+
+- Fixed erroneously showing `RPL_CHANNELSMSG` when the hidden channel list has been blocked.
+
+- Fixed not comparing server fingerprints case insensitively.
+
+- Fixed not sending `ERR_USERNOTINCHANNEL` when a user tries to give a prefix mode to a user not in the channel.
+
+- Fixed the mysql module not closing the TCP connection properly on connection failure.
+
+- Silenced some warnings in the ssl_mbedtls module.
+
+- Updated the libraries in the Windows Conan dependency file.
+
+- Updated the Windows NSIS install script from the latest in CMake.
+
 ### InspIRCd 3.17.0
 
 **This version of InspIRCd was released on 2023-12-22.**
