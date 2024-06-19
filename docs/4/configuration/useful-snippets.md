@@ -11,7 +11,7 @@ InspIRCd ships with preconfigured files for enabling support for popular hosted 
 To add support for IRCCloud add the following include tag to your configuration:
 
 ```xml
-<include file="examples/providers/irccloud.conf.example">
+<include file="examples/providers/irccloud.example.conf">
 ```
 
 If you run a popular hosted client or a shared bouncer service that supports modern IRC features we would be happy to include configs for your client. Please reach out to us via \#inspircd.dev on irc.inspircd.org and we'll try to work something out.

@@ -1,1 +1,26 @@
-../../3/configuration/_files.yml
+name: files
+description: |-
+  The `<files>` tag reads one or more files. This tag can only be defined once. The purpose of these files depends on what field they are defined in.
+
+  Note that files are only read on rehash, so changes are not automatically detected.
+attributes:
+- name: motd
+  type: Text
+  required: false
+  default: null
+  description: |-
+    A file used as the message of the day, i.e. shown to users when they connect or use the `/MOTD` command.
+details: |-
+  All paths are relative to InspIRCd's configuration directory. This is:
+
+    - `/etc/inspircd` if using our UNIX binary packages.
+    - `C:\Program Files\InspIRCd\conf` if using our Windows binary package.
+    - `[ROOT]/run/conf` if you have built in your home directory.
+
+  File paths are **NOT** relative to the current config file.
+example: |-
+  Use the file `examples/motd.example.txt` as the message of the day:
+
+  ```xml
+  <files motd="examples/motd.example.txt">
+  ```

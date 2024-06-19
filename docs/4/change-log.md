@@ -6,6 +6,24 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.0.0rc3
+
+**This release candidate version of InspIRCd was released on 2024-06-21.**
+
+- Changed directory includes to be included in alphabetical order.
+
+- Changed the default system-wide examples directory to `/usr/share/doc/inspircd/examples`.
+
+- Changed the spanningtree module to default to the latest protocol if capability negotiation is not performed.
+
+- Re-added md5 as a backup fingerprint algorithm in the ssl_gnutls and ssl_mbedtls modules.
+
+- Re-sorted the example module config to be in alphabetical order.
+
+- Renamed example files to use normal file extensions (.conf.example -> .example.conf).
+
+- Updated the Windows dependencies.
+
 ### InspIRCd 4.0.0rc2
 
 **This release candidate version of InspIRCd was released on 2024-06-14.**
