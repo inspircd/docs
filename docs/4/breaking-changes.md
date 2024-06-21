@@ -114,6 +114,8 @@ title: v4 Breaking Changes
 
 - `<svshold:silent>` has been removed with no replacement (now always enabled).
 
+- Several example files have been renamed. If you are including them without modification you will need to update your include files to point to their new names.
+
 - The syntax of the passforward module's command fields has changed. You should switch your config to use the new style `%foo%` variables.
 
 ### Other
