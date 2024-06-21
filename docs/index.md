@@ -26,25 +26,7 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### InspIRCd 3 (stable)
-
-- [Installation](/3/installation)
-- [Configuration](/3/configuration)
-    - [Useful Snippets](/3/configuration/useful-snippets)
-    - [Upgrading from v2](/3/breaking-changes)
-- [Commands](/3/commands)
-- [Channel Modes](/3/channel-modes)
-    - [Extended Bans](/3/extended-bans)
-- [User Modes](/3/user-modes)
-- [Modules](/3/modules)
-- [SNOMasks](/3/snomasks)
-- [Change Log](/3/change-log)
-
-</div>
-
-<div class="col-md-4" markdown="1">
-
-### InspIRCd 4 (development)
+### InspIRCd 4 (stable)
 
 - [Installation](/4/installation)
 - [Configuration](/4/configuration)
@@ -58,5 +40,25 @@ title: Introduction
 - [SNOMasks](/4/snomasks)
 - [Change Log](/4/change-log)
     - [Overview of v4](/4/overview)
+
+</div>
+
+<div class="col-md-4" markdown="1">
+
+### InspIRCd 3 (old stable)
+
+*Supported until the end of 2025*
+
+- [Installation](/3/installation)
+- [Configuration](/3/configuration)
+    - [Useful Snippets](/3/configuration/useful-snippets)
+    - [Upgrading from v2](/3/breaking-changes)
+- [Commands](/3/commands)
+- [Channel Modes](/3/channel-modes)
+    - [Extended Bans](/3/extended-bans)
+- [User Modes](/3/user-modes)
+- [Modules](/3/modules)
+- [SNOMasks](/3/snomasks)
+- [Change Log](/3/change-log)
 
 </div>
