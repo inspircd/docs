@@ -1,5 +1,20 @@
 name: OPERTYPE
 source: uid
+tags:
+  ~automatic: |-
+    [**1206+**] If present then the source user was automatically logged into their server operator account.
+  ~name: |-
+    [**1206+**] The name of the operator account the source user logged into.
+  ~chanmodes: |-
+    [**1206+**] The server operator-only channel modes that the source user has access to (including modes that may not currently exist).
+  ~usermodes: |-
+    [**1206+**] The server operator-only user modes that the source user has access to (including modes that may not currently exist).
+  ~commands: |-
+    [**1206+**] A token list of the server operator-only commands that the source user has access to.
+  ~privileges: |-
+    [**1206+**] A token list of the server operator-only privileges that the source user has.
+  ~snomasks: |-
+    [**1206+**] The server notice masks that the source user has access to (including snomasks that may not currently exist).
 syntax:
   fields:
     type: The new server operator type of the source user.

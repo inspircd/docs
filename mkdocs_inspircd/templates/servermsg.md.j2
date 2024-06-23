@@ -25,10 +25,15 @@ Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% end
 
 ### Syntax
 
+{% set prefix = "" %}
+{% if tags is defined %}
+{% set prefix = "[@<tags>] " %}
+{% endif %}
+
 {% if source is defined %}
-{% set prefix = ":<" ~ source ~ ">" %}
+{% set prefix = prefix ~ ":<" ~ source ~ ">" %}
 {% else %}
-{% set prefix = "[:<sid>]" %}
+{% set prefix = prefix ~ "[:<sid>]" %}
 {% endif %}
 
 {% if syntax is not defined %}
@@ -68,6 +73,25 @@ Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% end
 <tr markdown="1">
 <td markdown="1">`<{{ name }}>`</td>
 <td markdown="1">{{ desc }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% if tags is defined %}
+<table markdown="1">
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody markdown="1">
+{% for tag_name, tag_data in tags.items() -%}
+<tr markdown="1">
+<td markdown="1">`{{ tag_name }}`</td>
+<td markdown="1">{{ tag_data }}</td>
 </tr>
 {% endfor %}
 </tbody>
