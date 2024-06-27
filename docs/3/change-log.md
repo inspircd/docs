@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 3.17.1
 
-<!-- TODO: ensure changes after commit fe89a4a2e172c6d520f5b800688084e9c94ac3ae are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2024-06-28.**
 
 - Fixed building on recent releases of macOS.
 
