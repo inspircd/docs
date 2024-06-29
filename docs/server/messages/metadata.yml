@@ -14,6 +14,25 @@ syntax:
   - '{*} <key> [<value>]'
 description: |-
   Changes the specified channel, user, or network metadata entry to the specified value.
+extra: |-
+  Some possible values for the key field are:
+
+  Name             | Type    | Description
+  ---------------- | ------- | -----------
+  accountid        | User    | The account identifier of the target user.
+  accountname      | User    | The account name of the target user.
+  accountnicks     | User    | A space-delimited list of nicknames associated with the target user's account.
+  auspex           | Channel | Enables services servers receiving messages for the target channel even when it has no users in it.
+  ctitle           | User    | The custom WHOIS title of the target user.
+  filter           | Server  | A filter entry which is set on the originating server.
+  gateway-realhost | User    | The hostname of the WebIRC gateway the target user connected via.
+  gateway-realip   | User    | The IP address of the WebIRC gateway the target user connected via.
+  mlock            | Channel | The modes which are locked on the target channel and can not be changed.
+  modules          | Server  | A module state change on the originating server.
+  operquit         | User    | The quit message to show to server operators when the tatget user quits.
+  swhois           | User    | The custom WHOIS message of the target user.
+  topiclock        | Channel | Marks the target channel as having an immutable topic.
+  webirc-gateway   | User    | The name of the WebIRC gateway that the target user connected via.
 example:
 - description: |-
     Changes the mlock channel metadata for #chan to channel modes `n` (noextmsg) and `t` (topiclock)
