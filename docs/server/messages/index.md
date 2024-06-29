@@ -16,7 +16,7 @@ Messages are formatted the same as [a standard IRCv3 message](https://ircv3.net/
 
 ## Messages
 
-This page only lists server messages. For details on user commands that may be sent across the network see [the core commands page](/3/commands) or for a specific module please refer to [the appropriate page for that module](/3/modules).
+This page only lists server messages. For details on user commands that may be sent across the network see the core commands page ([v4 docs](/4/commands), [v3 docs](/3/commands)) or for a specific module please refer to the appropriate page for that module ([v4 docs](/4/modules), [v3 docs](/3/modules)).
 
 <table markdown="1">
 <thead>
