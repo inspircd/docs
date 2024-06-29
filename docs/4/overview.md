@@ -36,7 +36,7 @@ Logging has been rewritten in InspIRCd v4 and now has support for support for ti
 - JSON (requires [the log_json module](/4/modules/log_json))
 - SQL (requires [the log_sql module](/4/modules/log_sql))
 - Standard error &amp; output streams ([core](/4/configuration#log))
-- syslog (requires [the log_syslog module](/4/modules/log_sql))
+- syslog (requires [the log_syslog module](/4/modules/log_syslog))
 
 The `--debug` option no longer enables raw I/O logging. To enable raw I/O logging the new `--protocoldebug` option must be used.
 
