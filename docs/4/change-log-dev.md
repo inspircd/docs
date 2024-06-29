@@ -2,7 +2,7 @@
 title: v4 Development Change Log
 ---
 
-## Change Log
+## Development Change Log
 
 This page lists changes which have happened between development releases. For the changes since v4.0.0 see [the change log](/4/change-log).
 

@@ -12,4 +12,4 @@ This page lists changes which have happened between releases.
 
 Please see [the overview](/4/overview) for an high level list of changes and [the breaking changes list](/4/breaking-changes) for a list of incompatibilities with v3.
 
-You may also be interested in the [v4 dev changelog](/4/change-log-dev) for the changes that happened between development releases.
+You may also be interested in [the v4 development change log](/4/change-log-dev) for the changes that happened between development releases.
