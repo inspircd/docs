@@ -29,6 +29,14 @@ Extended bans are now a first class feature and have support for match inversion
 
 To help migrate over to named extbans you can set `<options:extbanformat>` to `name` to rewrite entries to the new format.
 
+Extended ban letters are now configurable via [the `<extbans>` tag](/4/configuration#extbans).
+
+### ISupport
+
+Connect class level settings (e.g. `CHANLIMIT`) are now correctly reflected in the ISupport output.
+
+When server features change (e.g. modules with new modes being loaded) a diff of the changes will now be sent to clients.
+
 ### Logging
 
 Logging has been rewritten in InspIRCd v4 and now has support for support for time-based log rotation, more sensible log levels, and support for logging to:
@@ -39,6 +47,12 @@ Logging has been rewritten in InspIRCd v4 and now has support for support for ti
 - syslog (requires [the log_syslog module](/4/modules/log_syslog))
 
 The `--debug` option no longer enables raw I/O logging. To enable raw I/O logging the new `--protocoldebug` option must be used.
+
+### Modes
+
+Numeric mode characters can now be used by modules. This alleviates the lack of free mode characters for contrib modules.
+
+Mode letters are now configurable via [the `<modes>` tag](/4/configuration#modes).
 
 ### Operators
 
@@ -62,6 +76,14 @@ The regex_pcre and regex_tre modules have been moved to inspircd-contrib as thei
 
 [The regex_stdlib module](/4/modules/regex_stdlib) is now always built on all platforms. This is now the recommended regex module.
 
+### Services
+
+Channel mode `r` (registered) and user mode `r` (u_registered) are now optional as they no longer have a use at the IRCd level.
+
+Services can now synchronise the nicknames that belong to an user when they log in. This replaces the behaviour of user mode `r` (u_registered).
+
+Services servers now have to opt-in to receiving channel history messages when no pseudoclient is present. This improves the privacy of channel history and lowers the amount of messages that services have to process.
+
 ### Spam protection
 
 The opmoderated module has been imported from inspircd-contrib. This module allows you to make unprivileged users messages only visible to channel operators.
@@ -73,3 +95,13 @@ The securelist module can now show a fake `/LIST` output to users. It can also h
 InspIRCd now has stricter requirements regarding TLS. At least one TLS module must now be enabled at build time and servers which link over the public internet must now be linked via TLS.
 
 Using multiple hash algorithms for client fingerprints is now supported. This allows migrating away from old, insecure algorithms like md5. You can also use a Subject Public Key Info (SPKI) fingerprint instead of a client certificate fingerprint.
+
+### Other
+
+Modules can now synchronise channel membership metadata between servers.
+
+Support for incremental backoff has been added to the filter, permchannels, and xline_db modules.
+
+The setter and set time of list modes will now be preserved across network bursts and in the permanent channel database.
+
+Various anti-flood modes have been extended to support more methods of punishment.
