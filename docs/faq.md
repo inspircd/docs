@@ -45,9 +45,9 @@ Please do not use IRC for requesting features as your request may be buried and 
 
 Common services packages used with InspIRCd are:
 
-- [Anope](https://anope.org)
+- [Anope](https://anope.org) &mdash; supports InspIRCd v3 and v4
 
-- [Atheme](https://atheme.github.io/atheme.html)
+- [Atheme](https://atheme.github.io/atheme.html) &mdash; only supports InspIRCd v3
 
 ### Why don't I have channel privileges even though I'm a server operator?
 
