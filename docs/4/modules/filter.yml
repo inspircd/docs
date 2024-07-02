@@ -4,6 +4,21 @@ description: |-
   This module adds the `/FILTER` command which allows server operators to define regex matches for inappropriate phrases that are not allowed to be used in channel messages, private messages, part messages, or quit messages.
 
 configuration:
+- name: exemptfromfilter
+  description: |-
+    The `<exemptfromfilter>` tag defines a target that is exempt from filtering. This tag can be defined as many times as required.
+  attributes:
+  - name: target
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The target to exempt from filtering.
+  example: |-
+    ```xml
+    <exemptfromfilter target="#support">
+    ```
+
 - name: filteropts
   description: |-
     The `<filteropts>` tag defines settings about how the filter module should behave. This tag can only be defined once.
