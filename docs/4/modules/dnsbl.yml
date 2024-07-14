@@ -121,11 +121,14 @@ configuration:
 
     The reason field can contain any of the following template variables:
 
-    Variable | Description
-    -------- | -----------
-    %dnsbl%  | The name of the DNSBL (from `<dnsbl:name>`)
-    %ip%     | The IP address of the user.
-    %result% | The record type returned by the DNSBL.
+    Variable      | Description
+    ------------- | -----------
+    %dnsbl%       | The name of the DNSBL (from `<dnsbl:name>`)
+    %dnsbl.url%   | **New in v4.1.0!** The name of the DNSBL (from `<dnsbl:name>`) encoded for use in an URL.
+    %ip%          | The IP address of the user.
+    %network%     | **New in v4.1.0!** The name of the IRC network (from `<server:network>`).
+    %network.url% | **New in v4.1.0!** The name of the IRC network (from `<server:network>`) encoded for use in an URL.
+    %result%      | The record type returned by the DNSBL.
 
     The type field should be set to one of the following values:
 
