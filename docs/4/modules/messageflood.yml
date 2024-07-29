@@ -38,7 +38,7 @@ configuration:
     required: false
     default: 0.2
     description: |-
-      The number of lines that a single `NOTICE` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
+      The number of lines that a single `TAGMSG` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
   details: |-
     The kickmessage field can contain any of the following template variables:
 
