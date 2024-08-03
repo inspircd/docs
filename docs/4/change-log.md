@@ -6,6 +6,36 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.2.0
+
+**This version of InspIRCd was released on 2024-08-03.**
+
+- Added support for the IRCv3 WebSocket subprotocols.
+
+- Developer: added a `Module` constructor overload to allow modules to define the version to show in `/MODULES`.
+
+- Developer: added the `ExtensionItem::OnSync` callback for when an extensible is synchronised across the network.
+
+- Developer: merged `ProtocolServer ` and `Server`.
+
+- Fixed allowing text websockets when the server has a non-utf8 charset.
+
+- Fixed automatic synchronisation of unset extensibles.
+
+- Fixed escaping semicolons in message tags.
+
+- Fixed exposing the real hostname of users when recloaking.
+
+- Fixed parsing S2S `UID` messages from 1205 (v3) servers.
+
+- Fixed unescaping message tags that end with a `\`.
+
+- Silenced some harmless log messages when parsing malformed CIDR ranges.
+
+- Updated the vendored libraries.
+
+- Updated the Windows dependencies.
+
 ### InspIRCd 4.1.0
 
 **This version of InspIRCd was released on 2024-07-14.**
