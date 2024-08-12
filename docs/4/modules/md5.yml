@@ -1,5 +1,9 @@
 name: md5
 
+introduction: |-
+  !!! warning ""
+      This module is deprecated and will be removed in the next major version of InspIRCd.
+
 description: |-
   This module allows other modules to generate [MD5](https://en.wikipedia.org/wiki/MD5) hashes.
 
