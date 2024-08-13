@@ -214,7 +214,7 @@ configuration:
                 compression="no"
                 dhfile="dhparams.pem"
                 ecdhcurve="prime256v1"
-                hash="sha256"
+                hash="sha3-256"
                 keyfile="key.pem"
                 renegotiation="no"
                 requestclientcert="yes"

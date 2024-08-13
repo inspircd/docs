@@ -149,7 +149,7 @@ configuration:
                 certfile="cert.pem"
                 crlfile=""
                 dhfile="dhparams.pem"
-                hash="sha256"
+                hash="sha3-256"
                 keyfile="key.pem"
                 mindhbits="1024"
                 outrecsize="2048"
