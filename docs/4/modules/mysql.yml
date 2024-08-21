@@ -85,3 +85,6 @@ configuration:
               srv="no"
               tls="yes">
     ```
+
+special_notes: |-
+  This module should be broadly compatible with MySQL forks such as MariaDB and Percona. However, you may also need to install a compatibility package and some features added to MySQL since they were forked may not work.
