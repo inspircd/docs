@@ -2,9 +2,9 @@
 title: InspIRCd Spanning Tree Protocol &mdash; Change Log
 ---
 
-##  Change Log
-
 {! server/_dev.md !}
+
+##  Change Log
 
 ## 1206 (v4)
 

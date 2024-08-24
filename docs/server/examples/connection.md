@@ -2,9 +2,9 @@
 title: InspIRCd Spanning Tree Protocol &mdash; Example Connection
 ---
 
-## Example Connection
-
 {! server/_dev.md !}
+
+## Example Connection
 
 This example represents an example connection between two servers.
 

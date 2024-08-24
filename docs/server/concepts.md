@@ -2,9 +2,9 @@
 title: InspIRCd Spanning Tree Protocol &mdash; Concepts
 ---
 
-## Concepts
-
 {! server/_dev.md !}
+
+## Concepts
 
 This page explains concepts relating to the InspIRCd Spanning Tree protocol.
 

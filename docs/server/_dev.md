@@ -2,6 +2,3 @@
 
 !!! note ""
     This page is intended for developers. If you're looking information on for how to link servers you should refer to the spanningtree module ([v4 docs](/4/modules/spanningtree), [v3 docs](/3/modules/spanningtree)) page instead.
-
-!!! warning ""
-    Documentation of the server protocol is still work in progress. It may be incomplete or inaccurate.
