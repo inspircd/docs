@@ -18,6 +18,10 @@ Messages are formatted the same as [a standard IRCv3 message](https://ircv3.net/
 
 This page only lists server messages. For details on user commands that may be sent across the network see the core commands page ([v4 docs](/4/commands), [v3 docs](/3/commands)) or for a specific module please refer to the appropriate page for that module ([v4 docs](/4/modules), [v3 docs](/3/modules)).
 
+### Core Protocol
+
+These messages are provided by the spanningtree module and are always available.
+
 <table markdown="1">
 <thead>
 <tr>
@@ -25,7 +29,7 @@ This page only lists server messages. For details on user commands that may be s
 <th>Syntax</th>
 </tr>
 </thead>
-{% for msg in server_messages -%}
+{% for msg in server_messages if not msg.module -%}
 {% if msg.source is defined %}
 {% set prefix = ":<" ~ msg.source ~ ">" %}
 {% else %}
@@ -33,6 +37,37 @@ This page only lists server messages. For details on user commands that may be s
 {% endif %}
 <tr markdown="1">
 <td markdown="1">[{{ msg.name }}](/server/messages/{{ msg.name | lower }}/)</td>
+{% if msg.syntax is not defined %}
+<td markdown="1">`{{ prefix }} {{ msg.name }}`</td>
+{% else %}
+<td markdown="1">{% for syntax in msg.syntax.text %}`{{ prefix }} {{ msg.name }} {{ syntax }}`{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
+{% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+### Module Extensions
+
+These messages are extensions provided by an optional module which you can load to obtain more features.
+
+<table markdown="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Module</th>
+<th>Syntax</th>
+</tr>
+</thead>
+{% for msg in server_messages if msg.module -%}
+{% if msg.source is defined %}
+{% set prefix = ":<" ~ msg.source ~ ">" %}
+{% else %}
+{% set prefix = "[:<sid>]" %}
+{% endif %}
+<tr markdown="1">
+<td markdown="1">[{{ msg.name }}](/server/messages/{{ msg.name | lower }}/)</td>
+<td markdown="1">{{ msg.module }}</td>
 {% if msg.syntax is not defined %}
 <td markdown="1">`{{ prefix }} {{ msg.name }}`</td>
 {% else %}
