@@ -9,6 +9,7 @@ syntax:
     <uid> <newnick> <newnickts> [<oldnickts>]
 description: |-
   Changes the nickname of the specified user.
+module: services
 example:
 - description: |-
     Changes the nickname of user 36EAAAAAA to wibble

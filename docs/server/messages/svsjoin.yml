@@ -8,6 +8,7 @@ syntax:
     <uid> <channel> [<key>]
 description: |-
   Forces the specified user to join a channel. If an empty key is specified then override any modes which might prevent the join.
+module: services
 example:
 - description: |-
     Joins user 36EAAAAAA to #wibble

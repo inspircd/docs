@@ -6,6 +6,14 @@ title: InspIRCd Spanning Tree Protocol &mdash; Messages &mdash; {{ name }}
 
 {! server/_dev.md !}
 
+{% if module is defined %}
+!!! note ""
+    This message is provided by [the {{ module }} module](/4/modules/{{ module }}). Before sending it you should do one of the following:
+
+    - Check that the {{ module }} message is present in [`CAPAB MODULES` or `CAPAB MODSUPPORT`](/server/messages/capab).
+    - Encapsulate it with [`ENCAP`](/server/messages/encap) if the message being dropped is tolerable.
+{% endif %}
+
 {{ description }}
 
 ### Connection Phases

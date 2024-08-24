@@ -8,6 +8,7 @@ syntax:
     <uid> <channel> [:<reason>]
 description: |-
   Forces the specified user to part a channel.
+module: services
 example:
 - description: |-
     Parts user 36EAAAAAA from #wibble
