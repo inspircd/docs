@@ -26,3 +26,6 @@ example:
     [**1206+**] Changes the displayed and real username of 36DAAAAAA to wibble
   text: |-
     :36DAAAAAA FHOST wibble wibble
+history:
+  1206: |-
+    Support for changing the real username was added.

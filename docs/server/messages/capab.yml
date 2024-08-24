@@ -114,3 +114,18 @@ example:
     Ends capability negotiation
   text: |-
     CAPAB END
+history:
+  1206: |-
+    The `m_` prefix and `.so` suffix were removed from module names in `CAPAB MODULES` and `CAPAB MODSUPPORT`.
+
+    Module link data was changed from a string to a dictionary of URL-encoded key value pairs.
+
+    The `EXTBANS` token in `CAPAB CAPABILITIES` was replaced with `CAPAB EXTBANS`.
+
+    The `GLOBOPS` token in `CAPAB CAPABILITIES` was replaced with the globops module appearing in `CAPAB MODSUPPORT`.
+
+    The following tokens in `CAPAB CAPABILITIES` were renamed:
+
+    - `CHANMAX` &rightarrow; `MAXCHANNEL`
+    - `IDENTMAX` &rightarrow; `MAXUSER`
+    - `NICKMAX` &rightarrow; `MAXNICK`

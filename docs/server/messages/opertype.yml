@@ -27,3 +27,6 @@ example:
     Changes the server operator type of 36DAAAAAA to "Network Administrator"
   text: |-
     :36DAAAAAA OPERTYPE :Network Administrator
+history:
+  1206: |-
+    Tags representing the operator privileges that the source user were added. Before this they were assumed to have all privileges.

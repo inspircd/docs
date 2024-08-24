@@ -23,3 +23,6 @@ example:
     Sets the raw version of the remote server
   text: |-
     :36D SINFO rawversion :InspIRCd 3.2.1
+history:
+  1206: |-
+    The `fullversion` and `version` keys were replaced with the `customversion` and `rawbranch` keys.

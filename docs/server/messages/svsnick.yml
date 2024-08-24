@@ -19,3 +19,6 @@ example:
     Changes the nickname of user 36EAAAAAA to wibble with a previous nickname timestamp:
   text: |-
     :36D SVSNICK 36EAAAAAA wibble 1234567890 1234567800
+history:
+  1206: |-
+    This message is now provided by the services module instead of the spanningtree module. You should check this module is loaded before sending. If this message is received from a link using the 1205 protocol it will be encapsulated before being forwarded to the target.

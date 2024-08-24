@@ -35,3 +35,6 @@ example:
     [**1206+**] Introduces a user with mode parameters
   text: |-
     :36D SVSJOIN 36DAAAAAA 1234567890 Sadie localhost wibble.wobble sp91 sadie 127.0.0.1 1234567890 +io Aa :Sadie
+history:
+  1206: |-
+    The `real-user` field was added. If this message is received from a link using the 1205 protocol then the `displayed-user` field will be used for both.

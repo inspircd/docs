@@ -50,3 +50,6 @@ example:
     Changes the wibble network metadata
   text: |-
     :36D METADATA * wibble :Wibble Wobble
+history:
+  1206: |-
+    Support for membership metadata was added.

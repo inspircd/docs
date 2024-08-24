@@ -26,3 +26,6 @@ example:
     [**1206+**] Changes the displayed and real hostname of 36DAAAAAA to example.com
   text: |-
     :36DAAAAAA FHOST example.com example.com
+history:
+  1206: |-
+    Support for changing the real hostname was added.

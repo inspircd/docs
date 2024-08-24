@@ -37,3 +37,6 @@ example:
     Introduces an indirectly linked server
   text: |-
     :36D SERVER irc.us.example.com 36E hidden=0 :American IRC server
+history:
+  1206: |-
+    The `<unused>` field was removed. This was always set to 0 as a placeholder intended for a feature that was never implemented.

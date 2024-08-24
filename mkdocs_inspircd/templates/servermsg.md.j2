@@ -129,3 +129,17 @@ Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% end
 ```
 
 {% endfor %}
+
+{% if history is defined %}
+
+### History
+
+{% for version, changes in history.items() %}
+
+#### {{ version }}
+
+{{ changes }}
+
+{% endfor %}
+
+{% endif %}
