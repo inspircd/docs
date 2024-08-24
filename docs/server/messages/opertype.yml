@@ -18,8 +18,8 @@ tags:
 syntax:
   fields:
     type: The new server operator type of the source user.
-  text: |-
-    :<type>
+  text:
+  - :<type>
 description: |-
   Marks the source user as the specified type of server operator.
 example:

@@ -2,8 +2,8 @@ name: PONG
 syntax:
   fields:
     target: The identifier of the target server.
-  text: |-
-    <target>
+  text:
+  - <target>
 description: |-
   Replies to a [PING](/server/messages/ping) that was sent to a server.
 example:

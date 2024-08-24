@@ -3,8 +3,8 @@ source: uid
 syntax:
   fields:
     realname: The new real name (gecos) of the source user.
-  text: |-
-    <realname>
+  text:
+  - <realname>
 description: |-
   Changes the real name (gecos) of the source user to the specified value.
 example:

@@ -6,8 +6,8 @@ syntax:
     uid: The identifier of the target user.
     numeric: The three digit numeric.
     parameters: The parameters to send alongside the mode.
-  text: |-
-    <sid> <uid> <numeric> [<parameters>]+
+  text:
+  - <sid> <uid> <numeric> [<parameters>]+
 description: |-
   Sends a numeric to a user on a remote server.
 example:

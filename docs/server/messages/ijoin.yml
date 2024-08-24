@@ -6,8 +6,8 @@ syntax:
     membid: The unique identifier of the associated user's channel membership.
     ts: The time at which the channel was created.
     prefix-modes: The prefix modes that the joining user has.
-  text: |-
-    <channel> <membid> [<ts> <prefix-modes>]
+  text:
+  - <channel> <membid> [<ts> <prefix-modes>]
 description: |-
   Joins a user to an already existing channel.
 example:

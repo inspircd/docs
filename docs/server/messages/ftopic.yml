@@ -7,8 +7,8 @@ syntax:
     topic-ts: The time at which the channel topic was last changed.
     setter: The user who changed the topic instead of the sender.
     new-topic: The new topic for the channel.
-  text: |-
-    <channel> <channel-ts> <topic-ts> [<setter>] :<new-topic>
+  text:
+  - <channel> <channel-ts> <topic-ts> [<setter>] :<new-topic>
 description: |-
   Changes the username (ident) of the source user to the specified value.
 example:

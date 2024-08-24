@@ -35,8 +35,6 @@ This page only lists server messages. For details on user commands that may be s
 <td markdown="1">[{{ msg.name }}](/server/messages/{{ msg.name | lower }}/)</td>
 {% if msg.syntax is not defined %}
 <td markdown="1">`{{ prefix }} {{ msg.name }}`</td>
-{% elif msg.syntax.text is string %}
-<td markdown="1">`{{ prefix }} {{ msg.name }} {{ msg.syntax.text }}`</td>
 {% else %}
 <td markdown="1">{% for syntax in msg.syntax.text %}`{{ prefix }} {{ msg.name }} {{ syntax }}`{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
 {% endif %}

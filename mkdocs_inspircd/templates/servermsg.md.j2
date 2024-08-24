@@ -50,9 +50,7 @@ Fully connected         | {% if "connected" in phase %}✔️{% else %}❌{% end
 {% endif %}
 
 {% if syntax is not defined %}
-`{{ prefix }} {{ name }}
-{% elif syntax.text is string %}
-`{{ prefix }} {{ name }} {{ syntax.text }}`
+`{{ prefix }} {{ name }}`
 {% else %}
 {% for syntax_line in syntax.text %}
 `{{ prefix }} {{ name }} {{ syntax_line }}`

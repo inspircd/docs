@@ -7,8 +7,8 @@ phase:
 syntax:
   fields:
     reason: The reason the protocol error occurred.
-  text: |-
-    :<reason>
+  text:
+  - :<reason>
 description: |-
   Informs the directly connected server that a protocol error occurred and the connection is about to be closed.
 example:

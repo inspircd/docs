@@ -4,8 +4,8 @@ syntax:
     uid: The UUID of the user to part from the specified channel.
     channel: The channel which the user is being parted from.
     reason: The reason for parting the user from the channel.
-  text: |-
-    <uid> <channel> [:<reason>]
+  text:
+  - <uid> <channel> [:<reason>]
 description: |-
   Forces the specified user to part a channel.
 module: services

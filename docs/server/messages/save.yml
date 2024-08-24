@@ -3,8 +3,8 @@ syntax:
   fields:
     uid: The UUID of the user to resolve the nick collision of.
     ts: The time at which the user originally connected.
-  text: |-
-    <uid> <ts>
+  text:
+  - <uid> <ts>
 description: |-
   Resolves a nickname collision by changing a user's nickname to their UUID.
 example:

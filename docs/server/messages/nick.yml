@@ -4,8 +4,8 @@ syntax:
   fields:
     nick: The new nickname of the source user.
     ts: The time at which the user first connected.
-  text: |-
-    <nick> <ts>
+  text:
+  - <nick> <ts>
 description: |-
   Changes the username (ident) of the source user to the specified value.
 example:

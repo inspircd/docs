@@ -2,8 +2,8 @@ name: PING
 syntax:
   fields:
     target: The identifier of the target server.
-  text: |-
-    <target>
+  text:
+  - <target>
 description: |-
   Pings the requested server to check that it is still connected.
 example:

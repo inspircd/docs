@@ -3,8 +3,8 @@ syntax:
   fields:
     key: The key which is being set.
     value: The value of the key.
-  text: |-
-    <key> :<value>
+  text:
+  - <key> :<value>
   description: |-
     Sets some information about the source server.
 extra: |-

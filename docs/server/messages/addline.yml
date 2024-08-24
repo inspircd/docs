@@ -8,8 +8,8 @@ syntax:
     settime: The UNIX time at which the X-line was added.
     duration: The number of seconds that the X-line lasts for.
     reason: The reason given when the X-line was added.
-  text: |-
-    <type> <mask> <setter> <settime> <duration> :<reason>
+  text:
+  - <type> <mask> <setter> <settime> <duration> :<reason>
 description: |-
   Adds an X-line on a mask with the specified setter, set time, duration, and reason. If the duration is 0 then it is permanent.
 example:

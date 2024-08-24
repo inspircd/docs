@@ -8,8 +8,8 @@ syntax:
     prefix-modes: The prefix modes that the associated user has.
     uid: The unique identifier of a user who is on the channel.
     membid: The unique identifier of the associated user's channel membership.
-  text: |-
-    <channel> <ts> <modes> [<mode-parameters>]+ :[<prefix-modes>,<uid>[:<membid>]]+
+  text:
+  - <channel> <ts> <modes> [<mode-parameters>]+ :[<prefix-modes>,<uid>[:<membid>]]+
 description: |-
   Introduces a new channel to the network.
 example:
