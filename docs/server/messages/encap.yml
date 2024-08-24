@@ -8,7 +8,7 @@ syntax:
   text: |-
     <target> <message> [<parameters>]+
 description: |-
-  Removes an X-line on a mask.
+  Encapsulates a message to the specified target. If the target does not exist or the encapsulated message type is unknown then the message is non-fatally dropped.
 example:
 - description: |-
     Sends a notice to all users on server 36E
