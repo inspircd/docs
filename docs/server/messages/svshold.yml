@@ -1,0 +1,32 @@
+name: SVSHOLD
+syntax:
+  fields:
+    nick: The nickname that a services hold is being placed on or removed from.
+    duration: The duration of the services hold.
+    reason: The reason the services hold was placed.
+  text:
+  - <nick>
+  - <nick> <duration> :<reason>
+description: |-
+  If `<duration>` and `<reason>` are specified then place a services hold on the specified nickname. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the services hold will be permanent.
+
+  Otherwise, if just `<nick>` is specified, removes a services hold on a nickname.
+
+  This is similar to a Q-line only it is more suitable for nickname enforcement as:
+
+  - It can only be applied by a services server.
+  - It does not notify server operators.
+  - It can be bypassed the user of a registered account.
+module: services
+example:
+- description: |-
+    Places a services hold on Sadie wth the reason "Reserved for a registered user"
+  text: |-
+    :36D SVSHOLD Sadie :Reserved for a registered user
+- description: |-
+    Removes a services hold on val
+  text: |-
+    :36D SVSHOLD val
+history:
+  1206: |-
+    This message is now provided by the services module instead of the svshold module.

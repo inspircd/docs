@@ -1,0 +1,27 @@
+name: SVSTOPIC
+syntax:
+  fields:
+    channel: The channel for which the topic is being changed.
+    topic-ts: The time at which the channel topic was changed.
+    setter: The user who changed the topic.
+    new-topic: The new topic for the channel.
+  text:
+  - <channel> <topic-ts> <setter> :<new-topic>
+  - <channel>
+description: |-
+  Forcibly changes the topic. This overrides the existing topic even if `<topic-ts>` is older than the current topic set time.
+
+  If only `<channel>` is specified then the topic will be unset. Otherwise, it will be set to the specified values.
+module: services
+example:
+- description: |-
+    Server 36D changing the topic of #chan
+  text: |-
+    :36D SVSTOPIC #chan 1248163264 Sadie :Welcome!
+- description: |-
+    User 36DAAAAAA unsetting the topic of #chan
+  text: |-
+    :36DAAAAAA SVSTOPIC #chan
+history:
+  1206: |-
+    This message is now provided by the services module instead of the topiclock module.

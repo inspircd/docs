@@ -1,0 +1,17 @@
+name: SVSCMODE
+syntax:
+  fields:
+    uid: The user to remove matching list modes for.
+    channel: The channel to remove list modes on.
+    list-modes: One or more list modes to remove matching entries from.
+  text:
+  - <uid> <channel> <list-modes>
+description: |-
+  Asks the directly-connected server to remove the `<list-modes>` modes on `<channel>` that match the `<uid>` user.
+added: 1206
+module: services
+example:
+- description: |-
+    Requests that all bans matching 36DAAAAAA are removed from #opers
+  text: |-
+    :36D SVSCMODE 36DAAAAAA #opers b

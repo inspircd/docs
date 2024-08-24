@@ -1,0 +1,19 @@
+name: SVSOPER
+tags:
+  ~automatic: |-
+    If present then the source user was automatically logged into their server operator account.
+syntax:
+  fields:
+    uid: The user to grant server operator privileges to.
+    oper-type: The type of server operator to make the user.
+  text:
+  - <uid> :<oper-type>
+description: |-
+  Makes `<uid>` a a server operator using the `<oper-type>` operator type.
+added: 1206
+module: services
+example:
+- description: |-
+    Makes 36DAAAAAA a server operator using the "Network Administrator" operator type
+  text: |-
+    :36D SVSOPER 36DAAAAAA :Network Administrator
