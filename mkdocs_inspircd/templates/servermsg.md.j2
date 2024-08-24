@@ -6,6 +6,11 @@ title: InspIRCd Spanning Tree Protocol &mdash; Messages &mdash; {{ name }}
 
 {! server/_dev.md !}
 
+{% if added is defined %}
+!!! note ""
+    This message was added in the {{ added }} protocol.
+{% endif %}
+
 {% if module is defined %}
 !!! note ""
     This message is provided by [the {{ module }} module](/4/modules/{{ module }}). Before sending it you should do one of the following:

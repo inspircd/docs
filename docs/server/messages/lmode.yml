@@ -10,6 +10,7 @@ syntax:
     list-setter: The mask of the user that created the list mode entry.
   text: |-
     <channel> <ts> <list-mode> [<list-entry> <list-ts> <list-setter>]+
+added: 1206
 description: |-
   Synchronises the contents of a mode list.
 example:
