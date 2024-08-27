@@ -37,6 +37,6 @@ configuration:
      For each row an <oper> will be defined using the field values returned. See [the core `<oper>` tag](/{{ version }}/configuration/#oper) for column names, default values and required columns.
 
 special_notes: |-
-  {% include "3/modules/_sql_table.md" %}
+  {% include "4/modules/_sql_table.md" %}
 
   Example schemas for the server operator database are available in [the `sql` subdirectory of the InspIRCd configuration directory](https://github.com/inspircd/inspircd/tree/insp3/docs/sql). You can define your own schema as long as your query returns the required columns.

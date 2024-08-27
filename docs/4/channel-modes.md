@@ -7,7 +7,7 @@ title: v{{ version }} Channel Modes
 !!! note ""
     This page documents channel modes. For user modes see [the user mode page](/{{ version }}/user-modes).
 
-{% include "3/_mode_types_table.md" %}
+{% include "4/_mode_types_table.md" %}
 
 ### Core
 
@@ -80,7 +80,7 @@ Removes channel voice status from Sadie in \#channel:
 ### Modules
 
 {% set modes = module_chmodes %}
-{% include "3/_modes_table.md" %}
+{% include "4/_modes_table.md" %}
 
 ### Configuration-defined modes
 

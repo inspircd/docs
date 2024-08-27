@@ -40,7 +40,7 @@ attributes:
   description: |-
     The server operator-only snomasks that server operators with this class can change.
 details: |+
-  {! 3/configuration/_class_privs.md !}
+  {! 4/configuration/_class_privs.md !}
 
 example: |-
   ```xml

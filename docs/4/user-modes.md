@@ -7,7 +7,7 @@ title: v{{ version }} User Modes
 !!! note ""
     This page documents user modes. For channel modes see [the channel mode page](/{{ version }}/channel-modes).
 
-{% include "3/_mode_types_table.md" %}
+{% include "4/_mode_types_table.md" %}
 
 ### Core
 
@@ -43,4 +43,4 @@ Disables all enabled snomasks:
 ### Modules
 
 {% set modes = module_umodes %}
-{% include "3/_modes_table.md" %}
+{% include "4/_modes_table.md" %}

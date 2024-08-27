@@ -52,4 +52,4 @@ X         | Notifications about X-lines being added/removed/expired on a remote 
 ### Module SNOMasks
 
 {% set snomasks = module_snomasks %}
-{% include "3/_snomasks_table.md" %}
+{% include "4/_snomasks_table.md" %}
