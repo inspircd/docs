@@ -1,1 +1,28 @@
-../../3/modules/allowinvite.yml
+name: allowinvite
+
+description: |-
+  This module adds channel mode `A` (allowinvite) which allows unprivileged users to use the `/INVITE` command and extended ban `A:` (blockinvite) which bans specific masks from using the `/INVITE` command.
+
+chmodes:
+  chars:
+  - name: allowinvite
+    char: A
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: Allows unprivileged users to use the `/INVITE` command.
+
+  example: ""
+
+extbans:
+  chars:
+  - name: blockinvite
+    char: A
+    type: Acting
+    syntax: <mask>
+    description: Bans &lt;mask&gt; from using the `/INVITE` command.
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from using the `/INVITE` command
+    text: |-
+      /MODE #channel +b A:*!*@example.com

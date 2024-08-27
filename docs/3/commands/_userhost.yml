@@ -1,14 +1,1 @@
-name: USERHOST
-syntax: >-
-  <nick> [<nick>]+
-description: |-
-  Requests the hostname of the specified users.
-example:
-- description: |-
-    Requests the hostname of Adam
-  text: |-
-    /USERHOST Adam
-- description: |-
-    Requests the hostname of Adam and Sadie
-  text: |-
-    /USERHOST Adam Sadie
+../../4/commands/_userhost.yml

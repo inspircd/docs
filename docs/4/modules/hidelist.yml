@@ -1,1 +1,44 @@
-../../3/modules/hidelist.yml
+name: hidelist
+
+description: |-
+  This module allows list mode lists to be hidden from users without a prefix mode ranked equal to or higher than a defined level.
+
+configuration:
+- name: hidelist
+  description: |-
+    The `<hidelist>` tag defines settings about how the hidelist module should behave. This tag can be defined as many times as required.
+  attributes:
+  - name: mode
+    type: Text
+    required: false
+    default: null
+    description: |-
+      The name of the mode this rule applies to.
+  - name: rank
+    type: Number
+    required: false
+    default: 0
+    description: |-
+      The rank to restrict viewing this list mode list to.
+  details: ""
+  example: |-
+    Hides channel mode `g` (filter) from non-channel operators:
+
+    ```xml
+    <hidelist mode="filter"
+              rank="30000">
+    ```
+
+    Hides channel mode `I` (invex) from non-channel members:
+
+    ```xml
+    <hidelist mode="invex"
+              rank="0">
+    ```
+
+special_notes: |-
+  The ranks of the built-in channel prefix modes are:
+
+  - op (+o) &mdash; 30000
+
+  - voice (+v) &mdash; 10000

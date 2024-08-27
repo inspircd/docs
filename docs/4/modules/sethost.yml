@@ -1,1 +1,39 @@
-../../3/modules/sethost.yml
+name: sethost
+
+description: |-
+  This module adds the `/SETHOST` command which allows server operators to change their displayed hostname.
+
+configuration:
+- name: hostname
+  description: |-
+    The `<hostname>` tag defines settings about how the sethost module should behave. This tag can only be defined once.
+  attributes:
+  - name: charmap
+    type: Text
+    required: false
+    default: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-_/0123456789
+    description: |-
+      The characters which are allowed in a hostname.
+  details: ""
+  example: |-
+    Allows hostnames to contain letters, numbers, `/`, `-`, `.', and `__`.
+
+    ```xml
+    <hostname charmap="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.-_/0123456789">
+    ```
+
+commands:
+- name: SETHOST
+  param_count: 1
+  oper_only: true
+  syntax: <hostname>
+  description: |-
+    Changes the displayed hostname of the user to &lt;hostname&gt;.
+  example:
+  - description: |-
+      Changes the hostname of the user to wibble.wobble
+    text: |-
+      /SETHOST wibble.wobble
+
+special_notes: |-
+  This command only changes the displayed hostname of the user. Their real hostname will remain intact and still will match against bans.

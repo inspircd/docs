@@ -1,9 +1,1 @@
-name: ircv3_echomessage
-
-description: |-
-  This module provides the IRCv3 `echo-message` client capability.
-
-client_caps:
-- name: '[echo-message](https://ircv3.net/specs/extensions/echo-message.html)'
-  description: |-
-    Echoes `NOTICE`, `PRIVMSG`, and `TAGMSG` messages back to the sender.
+../../4/modules/ircv3_echomessage.yml

@@ -1,1 +1,19 @@
-../../3/modules/kicknorejoin.yml
+name: kicknorejoin
+
+description: |-
+  This module adds channel mode `J` (kicknorejoin) which prevents users from rejoining after being kicked from a channel.
+
+chmodes:
+  chars:
+  - name: kicknorejoin
+    char: J
+    type: Parameter
+    syntax: <seconds>
+    usable_by: Channel operators
+    description: |-
+      Prevents who have been kicked from rejoining until &lt;seconds&gt; seconds have passed.
+  example:
+  - description: |-
+      Prevents kicked users from rejoining for 30 seconds
+    text: |-
+      /MODE #channel +J 30

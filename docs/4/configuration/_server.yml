@@ -1,1 +1,36 @@
-../../3/configuration/_server.yml
+name: server
+description: |-
+  The `<server>` tag defines settings about the local server. This tag can only be defined once.
+attributes:
+- name: name
+  type: Text
+  required: true
+  default: null
+  description: |-
+    The hostname of the local server.
+- name: description
+  type: Text
+  required: false
+  default: Configure Me
+  description: |-
+    A description of the local server.
+- name: network
+  type: Text
+  required: false
+  default: Network
+  description: |-
+    The name of the IRC network the local server is attached to.
+- name: id
+  type: Text
+  required: false
+  default: null
+  description: |-
+    If defined then a unique server identifier in the format [0-9][0-9A-Z][0-9A-Z].
+details: ""
+example: |-
+  ```xml
+  <server name="irc.eu.example.com"
+          description="ExampleNet's European server"
+          network="ExampleNet"
+          id="34C">
+  ```

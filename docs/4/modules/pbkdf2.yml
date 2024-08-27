@@ -1,1 +1,57 @@
-../../3/modules/pbkdf2.yml
+name: pbkdf2
+
+description: |-
+  This module allows other modules to generate [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) hashes.
+
+configuration:
+- name: pbkdf2
+  description: |-
+    The `<pbkdf2>` tag defines settings about how the pbkdf2 module should behave. This tag can only be defined once.
+  attributes:
+  - name: iterations
+    type: Number
+    required: false
+    default: 12288
+    description: |-
+      The number of iterations of the hashing function that should be performed.
+  - name: length
+    type: Number
+    required: false
+    default: 32
+    description: |-
+      The length of the derived key.
+  details: ""
+  example: |-
+    ```xml
+    <pbkdf2 iterations="12288"
+            length="32">
+    ```
+- name: pbkdf2prov
+  description: |-
+    The `<pbkdf2prov>` tag defines settings for a specific hash algorithm. This tag can be defined as many times as required.
+  attributes:
+  - name: hash
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of the hash algorithm to configure.
+  - name: iterations
+    type: Number
+    required: false
+    default: 12288
+    description: |-
+      The number of iterations of the hashing function that should be performed.
+  - name: length
+    type: Number
+    required: false
+    default: 32
+    description: |-
+      The length of the derived key.
+  details: ""
+  example: |-
+    ```xml
+    <pbkdf2prov hash="sha256"
+                iterations="12288"
+                length="32">
+    ```

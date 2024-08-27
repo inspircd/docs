@@ -1,4 +1,1 @@
-name: MODULES
-syntax: ""
-description: |-
-  Lists all modules which are loaded on the local server.
+../../4/commands/_modules.yml

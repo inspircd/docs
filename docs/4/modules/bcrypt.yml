@@ -1,1 +1,21 @@
-../../3/modules/bcrypt.yml
+name: bcrypt
+
+description: |-
+  This module allows other modules to generate [bcrypt](https://en.wikipedia.org/wiki/bcrypt) hashes.
+
+configuration:
+- name: bcrypt
+  description: |-
+    The `<bcrypt>` tag defines settings about how the bcrypt module should behave. This tag can only be defined once.
+  attributes:
+  - name: rounds
+    type: Number
+    required: false
+    default: 10
+    description: |-
+      The number of rounds of the EksBlowfishSetup algorithm that should be used.
+  details: ""
+  example: |-
+    ```xml
+    <bcrypt rounds="10">
+    ```

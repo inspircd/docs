@@ -1,1 +1,15 @@
-../../3/modules/delayjoin.yml
+name: delayjoin
+
+description: |-
+  This module adds channel mode `D` (delayjoin) which hides JOIN messages from users until they speak.
+
+chmodes:
+  chars:
+  - name: delayjoin
+    char: D
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Prevents users from receiving JOIN messages until the joining user speaks.
+  example: ""

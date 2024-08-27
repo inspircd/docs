@@ -1,1 +1,23 @@
-../../3/modules/maphide.yml
+name: maphide
+
+description: |-
+  This module allows the server administrator to replace the output of a `/MAP` and `/LINKS` with an URL.
+
+configuration:
+- name: security
+  description: |-
+    This module extends [the core `<security>` tag](/{{ version }}/configuration#security) with the following fields:
+  extends: true
+  attributes:
+  - name: maphide
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The URL to provide to users who run the `/MAP` and `/LINKS` commands.
+  details: ""
+  example: |-
+    ```xml
+    <security ...
+              maphide="https://www.example.com/servers">
+    ```

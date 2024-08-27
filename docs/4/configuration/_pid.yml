@@ -1,1 +1,15 @@
-../../3/configuration/_pid.yml
+name: pid
+description: |-
+  The `<pid>` tag defines the location of the pidfile. This tag can only be defined once.
+attributes:
+- name: file
+  type: Text
+  required: false
+  default: inspircd.pid
+  description: |-
+    The location of the pidfile.
+details: ""
+example: |-
+  ```xml
+  <pid file="inspircd.pid">
+  ```

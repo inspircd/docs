@@ -1,1 +1,17 @@
-../../3/modules/satopic.yml
+name: satopic
+
+description: |-
+  This module adds the `/SATOPIC` command which allows server operators to change the topic of a channel that they would not otherwise have the privileges to change.
+
+commands:
+- name: SATOPIC
+  param_count: 2
+  oper_only: true
+  syntax: <channel> <topic>
+  description: |-
+    Changes the topic of &lt;channel&gt; to &lt;topic&gt;.
+  example:
+  - description: |-
+      Changes the topic of #animals to "I like turtles"
+    text: |-
+      /SATOPIC #animals :I like turtles

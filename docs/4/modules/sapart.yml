@@ -1,1 +1,17 @@
-../../3/modules/sapart.yml
+name: sapart
+
+description: |-
+  This module adds the `/SAPART` command which allows server operators to force part users from one or more channels without having any privileges in these channels.
+
+commands:
+- name: SAPART
+  param_count: 2-3
+  oper_only: true
+  syntax: <nick> <channel>[,<channel>]+ [<reason>]
+  description: |-
+    Force parts &lt;nick&gt; from &lt;channel&gt; optionally with the reason specified in &lt;reason&gt;.
+  example:
+  - description: |-
+      Force parts emily from #channel
+    text: |-
+      /SAPART #channel emily :Your behaviour is inappropriate

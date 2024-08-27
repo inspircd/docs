@@ -1,4 +1,1 @@
-name: INFO
-syntax: ""
-description: |-
-  Requests information on the developers and supporters who made the creation and continued development of this IRC server possible.
+../../4/commands/_info.yml

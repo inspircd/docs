@@ -1,16 +1,1 @@
-name: VERSION
-syntax: >-
-  [<server>]
-description: |-
-  If `<server>` is specified then requests the version of the specified server.
-
-  Otherwise, requests the version of the local server.
-example:
-- description: |-
-    Requests the version of the local server
-  text: |-
-    /VERSION
-- description: |-
-    Requests the version of the remote server irc.eu.example.com
-  text: |-
-    /VERSION irc.eu.example.com
+../../4/commands/_version.yml

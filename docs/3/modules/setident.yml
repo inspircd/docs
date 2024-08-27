@@ -1,17 +1,1 @@
-name: setident
-
-description: |-
-  This module adds the `/SETIDENT` command which allows server operators to change their username (ident).
-
-commands:
-- name: SETIDENT
-  param_count: 1
-  oper_only: true
-  syntax: <username>
-  description: |-
-    Changes the username (ident) of the user to &lt;username&gt;.
-  example:
-  - description: |-
-      Changes the username (ident) of the user to wibble
-    text: |-
-      /SETIDENT wibble
+../../4/modules/setident.yml

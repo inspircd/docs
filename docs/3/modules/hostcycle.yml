@@ -1,4 +1,1 @@
-name: hostcycle
-
-description: |-
-  This module sends a fake disconnection and reconnection when a user's username (ident) or hostname changes to allow clients to update their internal caches.
+../../4/modules/hostcycle.yml

@@ -1,1 +1,12 @@
-../../3/modules/alltime.yml
+name: alltime
+
+description: |-
+  This module adds the `/ALLTIME` command which allows server operators to see the current UTC time on all of the servers on the network.
+
+commands:
+- name: ALLTIME
+  param_count: 0
+  oper_only: true
+  syntax: null
+  description: |-
+    Causes all servers on the network to respond with the current UTC time on the server.

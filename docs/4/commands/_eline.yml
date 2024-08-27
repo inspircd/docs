@@ -1,1 +1,21 @@
-../../3/commands/_eline.yml
+name: ELINE
+oper_only: true
+syntax: >-
+  <ident@host>[,<ident@host>]+ [<duration> <reason>]
+description: |-
+  If `<duration>` and `<reason>` are specified then exempts an ident@host mask from being affected by other (G, K, Z, etc) X-lines. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the E-line will be permanent.
+
+  Otherwise, if just `<ident@host>` is specified, removes an exemption on an ident@host mask.
+example:
+- description: |-
+    E-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /ELINE sadie@example.com 1d :Testing
+- description: |-
+    E-lines sadie@example.com for one day with the reason "Testing"
+  text: |-
+    /ELINE sadie@example.com 86400 :Testing
+- description: |-
+    Removes an E-line on sadie@example.com
+  text: |-
+    /ELINE sadie@example.com

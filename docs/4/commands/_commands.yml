@@ -1,1 +1,4 @@
-../../3/commands/_commands.yml
+name: COMMANDS
+syntax: ""
+description: |-
+  Lists all commands that exist on the local server.

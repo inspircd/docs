@@ -1,1 +1,44 @@
-../../3/modules/stripcolor.yml
+name: stripcolor
+
+description: |-
+  This module adds channel mode `S` (stripcolor) which allows channels to strip IRC formatting codes from messages.
+
+chmodes:
+  chars:
+  - name: stripcolor
+    char: S
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Enables stripping of IRC formatting codes from channel messages.
+  example: ""
+
+umodes:
+  chars:
+  - name: u_stripcolor
+    char: S
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Enables stripping of IRC formatting codes from private messages.
+  example: ""
+
+exemptions:
+- name: stripcolor
+  description: Allows exempted users to send messages that contain IRC formatting codes.
+
+extbans:
+  description: ""
+  chars:
+  - name: stripcolor
+    char: S
+    type: Acting
+    syntax: <mask>
+    description: Strips IRC formatting codes from messages sent by users matching &lt;mask&gt;.
+  example:
+  - description: |-
+      Strips IRC formatting codes from users matching `*!*@example.com`
+    text: |-
+      /MODE #channel +b S:*!*@example.com

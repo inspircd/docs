@@ -1,1 +1,10 @@
-../../3/commands/_squery.yml
+name: SQUERY
+syntax: >-
+  <target> <message>
+description: |-
+  Sends a message to the service specified in `<target>`. This target must be on a U-lined server.
+example:
+- description: |-
+    Sends a message to NickServ saying "HELP"
+  text: |-
+    /SQUERY NickServ HELP

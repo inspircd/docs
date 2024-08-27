@@ -1,1 +1,69 @@
-../../3/modules/disable.yml
+name: disable
+
+description: |-
+  This module allows commands, channel modes, and user modes to be disabled.
+
+configuration:
+- name: class
+  description: |-
+    This module extends [the core `<class:privs>` field](/{{ version }}/configuration#class) with the following values:
+  extends: true
+  added_values:
+  - name: servers/use-disabled-commands
+    description: |-
+      Allows server operators to use disabled commands.
+  - name: servers/use-disabled-modes
+    description: |-
+      Allows server operators to use disabled modes.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to use disabled commands and modes.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... servers/use-disabled-commands servers/use-disabled-modes ...">
+    ```
+- name: disabled
+  description: |-
+    The `<disabled>` tag defines commands and modes which normal users can not change. This tag can only be defined once.
+  attributes:
+  - name: fakenonexistent
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to pretend that a disabled command/mode does not exist.
+  - name: notifyopers
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to send a notice to snomask `a` when a user is prevented from using a disabled command or mode.
+  - name: commands
+    type: Text
+    required: false
+    default: null
+    description: |-
+      A space-delimited list of commands to disable.
+  - name: chanmodes
+    type: Text
+    required: false
+    default: null
+    description: |-
+      A list of channel modes to disable.
+  - name: usermodes
+    type: Text
+    required: false
+    default: null
+    description: |-
+      A list of user modes to disable.
+  details: ""
+  example: |-
+    ```xml
+    <disabled fakenonexistent="no"
+              notifyopers="no"
+              commands="MODE TOPIC"
+              chanmodes="kp"
+              usermodes="iw">
+    ```

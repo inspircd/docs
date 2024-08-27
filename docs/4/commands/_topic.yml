@@ -1,1 +1,16 @@
-../../3/commands/_topic.yml
+name: TOPIC
+syntax: >-
+  <channel> [<newtopic>]
+description: |-
+  If `<newtopic>` is specified then changes the topic for `<channel>` to the specified value.
+
+  Otherwise, requests the topic for the specified channel.
+example:
+- description: |-
+    Changes the topic for #trains to "choo choo"
+  text: |-
+    /TOPIC #trains :choo choo
+- description: |-
+    Requests the topic for #trains
+  text: |-
+    /TOPIC #trains

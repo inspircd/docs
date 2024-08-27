@@ -1,1 +1,22 @@
-../../3/configuration/_badip.yml
+name: badip
+description: |-
+  The `<badip>` tag defines a permanent Z-line. This tag can be defined as many times as required.
+attributes:
+- name: ipmask
+  type: Text
+  required: true
+  default: null
+  description: |-
+    An IP address to Z-line.
+- name: reason
+  type: Text
+  required: true
+  default: null
+  description: |-
+    The reason for the Z-line being added.
+details: ""
+example: |-
+  ```xml
+  <badip ipmask="192.0.2.0/24"
+         reason="Spamming">
+  ```

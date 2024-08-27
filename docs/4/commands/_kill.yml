@@ -1,1 +1,15 @@
-../../3/commands/_kill.yml
+name: KILL
+oper_only: true
+syntax: >-
+  <nick>[,<nick>]+ <reason>
+description: |-
+  Forcibly disconnects one or more specified users from the network with the specified reason.
+example:
+- description: |-
+    Forcibly disconnects opal from the network
+  text: |-
+    /KILL opal :Disruptive behaviour is not allowed
+- description: |-
+    Forcibly disconnects Soni and opal from the network
+  text: |-
+    /KILL Soni,opal :Disruptive behaviour is not allowed

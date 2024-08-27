@@ -1,1 +1,22 @@
-../../3/commands/_part.yml
+name: PART
+syntax: >-
+  <channel>[,<channel>]+ [<reason>]
+description: |-
+  Leaves one or more channels. If `<reason>` is specified then it will be used as the message shown when parting.
+example:
+- description: |-
+    Leaves \#channel with no reason
+  text: |-
+    /PART #channel
+- description: |-
+    Leaves \#channel-one and \#channel-two with no reason
+  text: |-
+    /PART #channel-one,#channel-two
+- description: |-
+    Leaves \#channel with the reason "Going to bed"
+  text: |-
+    /PART #channel :Going to bed
+- description: |-
+    Leaves \#channel-one and \#channel-two with the reason "Going to bed"
+  text: |-
+    /PART #channel-one,#channel-two :Going to bed

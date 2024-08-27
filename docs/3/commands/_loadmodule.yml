@@ -1,11 +1,1 @@
-name: LOADMODULE
-oper_only: true
-syntax: >-
-  <module>
-description: |-
-  Loads the specified module on the local server.
-example:
-- description: |-
-    Loads the botmode module
-  text: |-
-    /LOADMODULE botmode
+../../4/commands/_loadmodule.yml

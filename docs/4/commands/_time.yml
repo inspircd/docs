@@ -1,1 +1,16 @@
-../../3/commands/_time.yml
+name: TIME
+syntax: >-
+  [<server>]
+description: |-
+  If `<server>` is specified then requests the time on the specified server.
+
+  Otherwise, requests the time on the local server.
+example:
+- description: |-
+    Requests the time on the local server
+  text: |-
+    /TIME
+- description: |-
+    Requests the time on remote server irc.eu.example.com
+  text: |-
+    /STATS p irc.eu.example.com

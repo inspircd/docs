@@ -1,1 +1,35 @@
-../../3/modules/clearchan.yml
+name: clearchan
+
+description: |-
+  This module adds the `/CLEARCHAN` command which allows server operators to mass-punish the members of a channel.
+
+commands:
+- name: CLEARCHAN
+  param_count: 2-3
+  oper_only: true
+  syntax: <channel> [<action>] [<reason>]
+  description: |-
+    Mass punishes the members of the specified channel.
+  example:
+  - description: |-
+      Kills all members of #spam
+    text: |-
+      /CLEARCHAN #spam
+  - description: |-
+      Kicks all members of #spam
+    text: |-
+      /CLEARCHAN #spam KICK
+  - description: |-
+      G-lines all members of #spam with the reason "Spamming is bad"
+    text: |-
+      /CLEARCHAN #spam G :Spamming is bad
+
+command_details: |-
+  The action parameter should be set to one of the following values:
+
+  Value | Description
+  ----- | -----------
+  KILL  | Kill all members of the channel (default behaviour).
+  KICK  | Kick all members of the channel.
+  G     | G-line all members of the channel for one hour.
+  Z     | Z-line all members of the channel for one hour.

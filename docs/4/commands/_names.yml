@@ -1,1 +1,10 @@
-../../3/commands/_names.yml
+name: NAMES
+syntax: >-
+  [<channel>[,<channel>]+]
+description: |-
+  Requests a list of users who are in the specified channels.
+example:
+- description: |-
+    Requests a list of users on channels #one and #two
+  text: |-
+    /NAMES #one,#two

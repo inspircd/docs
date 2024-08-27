@@ -1,1 +1,15 @@
-../../3/modules/hideoper.yml
+name: hideoper
+
+description: |-
+  This module adds user mode `H` (hideoper) which hides the server operator status of a user from unprivileged users.
+
+umodes:
+  chars:
+  - name: hideoper
+    char: H
+    type: Switch
+    syntax: null
+    usable_by: Server operators
+    description: |-
+      Hides the user's server operator status from unprivileged users.
+  example: ""

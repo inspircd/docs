@@ -1,1 +1,11 @@
-../../3/commands/_restart.yml
+name: RESTART
+oper_only: true
+syntax: >-
+  <server>
+description: |-
+  Restarts the local server. The `<server>` parameter MUST match the name of the local server.
+example:
+- description: |-
+    Restarts the local server
+  text: |-
+    /RESTART irc2.example.com

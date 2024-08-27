@@ -1,11 +1,1 @@
-name: WALLOPS
-oper_only: true
-syntax: >-
-  <message>
-description: |-
-  Sends a message to all users with user mode `w` (wallops) enabled:
-example:
-- description: |-
-    Sends "Rebooting for updates at 20:00 UTC" to all users with user mode `w` (wallops) enabled
-  text: |-
-    /WALLOPS :Rebooting for updates at 20:00 UTC
+../../4/commands/_wallops.yml

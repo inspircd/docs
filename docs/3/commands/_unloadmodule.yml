@@ -1,11 +1,1 @@
-name: UNLOADMODULE
-oper_only: true
-syntax: >-
-  <module>
-description: |-
-  Unloads the specified module on the local server.
-example:
-- description: |-
-    Unloads the alias module
-  text: |-
-    /UNLOADMODULE alias
+../../4/commands/_unloadmodule.yml

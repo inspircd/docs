@@ -1,1 +1,11 @@
-../../3/commands/_die.yml
+name: DIE
+oper_only: true
+syntax: >-
+  <server>
+description: |-
+  Shuts down the local server. The `<server>` parameter MUST match the name of the local server.
+example:
+- description: |-
+    Shuts down the local server
+  text: |-
+    /DIE irc2.example.com

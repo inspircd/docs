@@ -1,1 +1,17 @@
-../../3/modules/setidle.yml
+name: setidle
+
+description: |-
+  This module adds the `/SETIDLE` command which allows server operators to change their idle time.
+
+commands:
+- name: SETIDLE
+  param_count: 1
+  oper_only: true
+  syntax: <duration>
+  description: |-
+    Changes the idle time of the user to &lt;duration&gt;.
+  example:
+  - description: |-
+      Changes the idle time of the user to five minutes
+    text: |-
+      /SETIDLE 5m

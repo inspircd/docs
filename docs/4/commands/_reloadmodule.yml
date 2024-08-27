@@ -1,1 +1,11 @@
-../../3/commands/_reloadmodule.yml
+name: RELOADMODULE
+oper_only: true
+syntax: >-
+  <module>
+description: |-
+  Reloads the specified module on the local server.
+example:
+- description: |-
+    Reloads the alias module
+  text: |-
+    /RELOADMODULE alias

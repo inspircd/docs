@@ -1,7 +1,1 @@
-name: httpd_config
-
-description: |-
-  This module allows the server configuration to be viewed over HTTP via the /config path.
-
-special_notes: |-
-  Leaking your server configuration over the internet is a privacy and security risk. You should avoid doing this by either configuring [the httpd module](/{{ version }}/modules/httpd) to only listen for local connections or by using [the httpd_acl module](/{{ version }}/modules/httpd_acl) to restrict who can view your server configuration.
+../../4/modules/httpd_config.yml

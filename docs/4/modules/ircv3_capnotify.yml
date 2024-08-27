@@ -1,1 +1,9 @@
-../../3/modules/ircv3_capnotify.yml
+name: ircv3_capnotify
+
+description: |-
+  This module provides the IRCv3 `cap-notify` client capability.
+
+client_caps:
+- name: '[cap-notify](https://ircv3.net/specs/extensions/capability-negotiation.html#cap-notify)'
+  description: |-
+    Notifies users when client capabilities are added or removed.

@@ -1,10 +1,1 @@
-name: seenicks
-
-description: |-
-  This module sends a notice to snomasks `n` (local) and `N` (remote) when a user changes their nickname.
-
-snomasks:
-- char: n
-  description: Notifications about nicknames being changed on the local server.
-- char: N
-  description: Notifications about nicknames being changed on a remote server.
+../../4/modules/seenicks.yml

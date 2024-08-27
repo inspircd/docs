@@ -1,1 +1,10 @@
-../../3/commands/_ison.yml
+name: ISON
+syntax: >-
+  <nick> [<nick>]+
+description: |-
+  Determines whether the specified nicknames are currently connected to the network.
+example:
+- description: |-
+    Checks whether Adam, Attila, and Sadie are currently connected to the network
+  text: |-
+    /ISON Adam Attila Sadie

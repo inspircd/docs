@@ -1,17 +1,1 @@
-name: saquit
-
-description: |-
-  This module adds the `/SAQUIT` command which allows server operators to disconnect users from the server.
-
-commands:
-- name: SAQUIT
-  param_count: 2
-  oper_only: true
-  syntax: <nick> <reason>
-  description: |-
-    Disconnects &lt;nick&gt; from the server with the reason specified in &lt;reason&gt;.
-  example:
-  - description: |-
-      Disconnects emily from the server
-    text: |-
-      /SAQUIT emily :Quitting
+../../4/modules/saquit.yml

@@ -1,4 +1,1 @@
-name: restrictmsg
-
-description: |-
-  This module prevents users who are not server operators from messaging each other.
+../../4/modules/restrictmsg.yml

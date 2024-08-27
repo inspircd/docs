@@ -1,1 +1,14 @@
-../../3/commands/_ping.yml
+name: PING
+syntax: >-
+  <cookie> [<server>]
+description: |-
+  Pings `<server>` with the specified `<cookie>`.  If `<server>` is not specified then it defaults to the local server.
+example:
+- description: |-
+    Pings the local server with the cookie "wibble"
+  text: |-
+    /PING wibble
+- description: |-
+    Pings `irc2.example.com` with the cookie "wobble"
+  text: |-
+    /PING wobble irc2.example.com

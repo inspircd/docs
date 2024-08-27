@@ -1,16 +1,1 @@
-name: AWAY
-syntax: >-
-  [<message>]
-description: |-
-  If `<message>` is specified marks yourself as being away with the specified message.
-
-  Otherwise, marks yourself as being no longer away.
-example:
-- description: |-
-    Marks yourself away with the message "Washing my hair"
-  text: |-
-    /AWAY :Washing my hair
-- description: |-
-    Marks yourself as no longer being away
-  text: |-
-    /AWAY
+../../4/commands/_away.yml

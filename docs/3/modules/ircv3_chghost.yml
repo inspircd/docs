@@ -1,9 +1,1 @@
-name: ircv3_chghost
-
-description: |-
-  This module provides the IRCv3 `chghost` client capability.
-
-client_caps:
-- name: '[chghost](https://ircv3.net/specs/extensions/chghost.html)'
-  description: |-
-    Notifies users when the username (ident) or hostname of a user they share a channel with changes.
+../../4/modules/ircv3_chghost.yml

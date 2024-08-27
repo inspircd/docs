@@ -1,1 +1,54 @@
-../../3/commands/_list.yml
+name: LIST
+syntax: >-
+  [(>|<)<count>|C(>|<)<minutes>|T(>|<)<minutes>|[!]<pattern>]+
+description: |-
+  Lists all channels visible to the requesting user which match the specified criteria. If no criteria is specified then all visible channels are listed.
+
+  If `><count>` is specified then only lists channels which contain more than `<count>` users.
+
+  If `<<count>` is specified then only lists channels which contain less than `<count>` users.
+
+  If `C><minutes>` is specified then only lists channels which were created more than `<minutes>` minutes ago.
+
+  If `C<<minutes>` is specified then only lists channels which were created less than `<minutes>` minutes ago.
+
+  If `T><minutes>` is specified then only lists channels which have had the topic changed more than `<minutes>` minutes ago.
+
+  If `T<<minutes>` is specified then only lists channels which have had the topic changed less than `<minutes>` minutes ago.
+
+  If `<pattern>` is specified then only lists channels with a name or a topic matching `<pattern>`.
+
+  If `!<pattern>` is specified then only lists channels with a name or a topic not matching `<pattern>`.
+example:
+- description: |-
+    Lists channels with more than five users
+  text: |-
+    /LIST >5
+- description: |-
+    Lists channels with less than five users
+  text: |-
+    /LIST <5
+- description: |-
+    Lists channels which were created more than ten minutes ago
+  text: |-
+    /LIST C>10
+- description: |-
+    Lists channels which were created less than ten minutes ago
+  text: |-
+    /LIST C<10
+- description: |-
+    Lists channels which had the topic changed more than ten minutes ago
+  text: |-
+    /LIST T>10
+- description: |-
+    Lists channels which had the topic changed less than ten minutes ago
+  text: |-
+    /LIST T<10
+- description: |-
+    Lists all channels with a name or topic matching `*support*`
+  text: |-
+    /LIST *support*
+- description: |-
+    Lists all channels with a name or topic not matching `*support*`
+  text: |-
+    /LIST !*support*

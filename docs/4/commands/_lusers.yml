@@ -1,1 +1,4 @@
-../../3/commands/_lusers.yml
+name: LUSERS
+syntax: ""
+description: |-
+  Requests information about the current and total number of servers, server operators, and users.

@@ -1,1 +1,35 @@
-../../3/modules/haproxy.yml
+name: haproxy
+
+description: |-
+  This module allows IRC connections to be made using reverse proxies that implement version 2 of the HAProxy PROXY protocol.
+
+configuration:
+- name: bind
+  description: |-
+    This module extends [the core `<bind>` tags](/{{ version }}/configuration#bind) with the following hook types:
+  extends: true
+  added_values:
+  - name: haproxy
+    description: |-
+      Listens for haproxy connections.
+  details: ""
+  example: |-
+    Listens for plaintext haproxy connections on the /run/inspircd/haproxy.sock UNIX socket endpoint:
+
+    ```xml
+    <bind path="/run/inspircd/haproxy.sock"
+          ...
+          hook="haproxy">
+    ```
+
+    Listens for plaintext haproxy connections on the 127.0.0.1:29583 endpoint:
+
+    ```xml
+    <bind address="127.0.0.1"
+          port="29583"
+          ...
+          hook="haproxy">
+    ```
+
+special_notes: |-
+  If you are using this module you must terminate TLS (SSL) connections at your reverse proxy.

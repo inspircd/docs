@@ -1,1 +1,22 @@
-../../3/modules/geoban.yml
+name: geoban
+
+description: |-
+  This module adds extended ban `G:` (country) which matches against two letter country codes.
+
+extbans:
+  description: ""
+  chars:
+  - name: country
+    char: G
+    type: Matching
+    syntax: <pattern>
+    description: Matches against the two letter country code for the country that users are connecting from.
+  example:
+  - description: |-
+      Bans users connecting from the United States of America
+    text: |-
+      /MODE #channel +b G:US
+  - description: |-
+      Bans users whose country of origin can not be determined
+    text: |-
+      /MODE #channel +b G:XX

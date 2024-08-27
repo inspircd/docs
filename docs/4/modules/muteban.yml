@@ -1,1 +1,31 @@
-../../3/modules/muteban.yml
+name: muteban
+
+description: |-
+  This module adds extended ban `m:` (mute) which bans specific masks from speaking in a channel.
+
+configuration:
+- name: muteban
+  description: |-
+    The `<muteban>` tag defines settings about how the muteban module should behave. This tag can only be defined once.
+  attributes:
+  - name: notifyuser
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether to notify users who try to message a channel whilst mutebanned.
+  details: ""
+  example: |-
+    ```xml
+    <muteban notifyuser="yes">
+    ```
+
+extbans:
+  description: ""
+  chars:
+  - name: mute
+    char: m
+    type: Acting
+    syntax: <mask>
+    description: Bans &lt;mask&gt; from speaking in the channel.
+  example: ""

@@ -1,1 +1,10 @@
-../../3/commands/_pass.yml
+name: PASS
+syntax: >-
+  <password>
+description: |-
+  Specifies the password used to log in to the local server.
+example:
+- description: |-
+    Specifies "hunter2" as the local server password
+  text: |-
+    /PASS hunter2

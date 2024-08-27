@@ -1,1 +1,30 @@
-../../3/modules/chanlog.yml
+name: chanlog
+
+description: |-
+  This module allows messages sent to snomasks to be logged to a channel.
+
+configuration:
+- name: chanlog
+  description: |-
+    The `<chanlog>` tag defines a channel to log server notices to. This tag can be defined as many times as required.
+  attributes:
+  - name: channel
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of a channel to log server notices to.
+  - name: snomasks
+    type: Text
+    required: true
+    default: null
+    description: |-
+      One or more snomasks to log to the channel.
+  details: ""
+  example: |-
+    Logs the `cq` snomasks (local connections and quits) to #example:
+
+    ```xml
+    <chanlog channel="#example"
+             snomasks="cq">
+    ```

@@ -1,9 +1,1 @@
-name: ircv3_accounttag
-
-description: |-
-  This module provides the IRCv3 `account-tag` client capability.
-
-client_caps:
-- name: '[account-tag](https://ircv3.net/specs/extensions/account-tag.html)'
-  description: |-
-    Adds an `account` tag with the services account of the sender to all messages.
+../../4/modules/ircv3_accounttag.yml

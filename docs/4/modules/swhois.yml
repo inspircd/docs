@@ -1,1 +1,39 @@
-../../3/modules/swhois.yml
+name: swhois
+
+description: |-
+  This module adds the `/SWHOIS` command which adds custom lines to a user's WHOIS response.
+
+configuration:
+- name: [oper, type]
+  description: |-
+    This module extends the core [`<oper>`](/{{ version }}/configuration#oper) and [`<type>`](/{{ version }}/configuration#type) tags with the following fields:
+  extends: true
+  attributes:
+  - name: swhois
+    type: Text
+    required: false
+    default: null
+    description: |-
+      If defined then defines a custom line to add to the server operator's WHOIS response.
+  details: ""
+  example: |-
+    Adds "hates cheese" to Sadie's WHOIS response:
+
+    ```xml
+    <oper name="Sadie"
+          ...
+          swhois="hates cheese">
+    ```
+
+commands:
+- name: SWHOIS
+  param_count: 2
+  oper_only: true
+  syntax: <nick> <line>
+  description: |-
+    Sets the custom WHOIS line for &lt;nick&gt; to &lt;line&gt;.
+  example:
+  - description: |-
+      Sets the custom WHOIS line for Sadie to "hates cheese"
+    text: |-
+      /SWHOIS Sadie :hates cheese

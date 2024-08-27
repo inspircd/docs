@@ -1,17 +1,1 @@
-name: sanick
-
-description: |-
-  This module adds the `/SANICK` command which allows server operators to change the nickname of a user.
-
-commands:
-- name: SANICK
-  param_count: 2
-  oper_only: true
-  syntax: <old-nick> <new-nick>
-  description: |-
-    Changes the nickname of &lt;old-nick&gt; to &lt;new-nick&gt;.
-  example:
-  - description: |-
-      Changes the nickname of Sadie to Sadie2
-    text: |-
-      /SANICK Sadie Sadie2
+../../4/modules/sanick.yml

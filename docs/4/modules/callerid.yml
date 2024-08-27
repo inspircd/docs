@@ -1,1 +1,82 @@
-../../3/modules/callerid.yml
+name: callerid
+
+description: |-
+  This module provides user mode `g` (callerid) which allows users to require that other users are on their whitelist before messaging them.
+
+configuration:
+- name: callerid
+  description: |-
+    The `<callerid>` tag defines settings about how the callerid module should behave. This tag can only be defined once.
+  attributes:
+  - name: cooldown
+    type: Number
+    required: false
+    default: 10
+    description: |-
+      The number of seconds between notifying users of other users that want to message them.
+  - name: maxaccepts
+    type: Number
+    required: false
+    default: 30
+    description: |-
+      The maximum number of users who can be on a user's callerid whitelist.
+  - name: tracknick
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to track nickname changes for users on a callerid whitelist.
+  details: ""
+  example: |-
+    ```xml
+    <callerid cooldown="10"
+              maxaccepts="30"
+              tracknick="no">
+    ```
+
+- name: class
+  description: |-
+    This module extends [the core `<class:privs>` field](/{{ version }}/configuration#class) with the following values:
+  extends: true
+  added_values:
+  - name: users/ignore-callerid
+    description: |-
+      Allows server operators to message users using callerid without being on their callerid list.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to message users using callerid without being on their callerid list.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... users/ignore-callerid ...">
+    ```
+
+umodes:
+  chars:
+  - name: callerid
+    char: g
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Enables whitelisting of who can message the user.
+  example: ""
+
+commands:
+- name: ACCEPT
+  param_count: 1
+  syntax:
+  - '*'
+  - (+|-)<nickname>[,(+|-)<nickname>]+
+  description: |-
+    Allows users to add, remove, and view the users on their callerid whitelist.
+  example:
+  - description: |-
+      Lists all users on your callerid whitelist
+    text: |-
+      /ACCEPT *
+  - description: |-
+      Adds Sadie to your callerid whitelist and removes Adam from your callerid whitelist
+    text: |-
+      /ACCEPT +Sadie,-Adam
