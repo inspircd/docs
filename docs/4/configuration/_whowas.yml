@@ -11,19 +11,27 @@ attributes:
 - name: maxgroups
   type: Number
   required: false
-  default: '10240'
+  default: '10000 *(since v4.3.0)*<br>10240 *(before v4.3.0)*'
   description: |-
     The maximum number of `/WHOWAS` nickname groups. If set to 0 then `/WHOWAS` is disabled.
 - name: maxkeep
   type: Duration
   required: false
-  default: 1h
+  default: '7d *(since v4.3.0)*<br>1h *(before v4.3.0)*'
   description: |-
     The period of time to keep `/WHOWAS` records for.
+- name: nickupdate
+  type: Boolean
+  required: false
+  default: 'Yes'
+  added: 4.3.0
+  description: |-
+    Whether to update the `/WHOWAS` database on nick change as well as quit.
 details: ""
 example: |-
   ```xml
   <whowas groupsize="10"
-          maxgroups="100000"
-          maxkeep="3d">
+          maxgroups="10000"
+          maxkeep="7d"
+          nickupdate="yes">
   ```

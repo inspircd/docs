@@ -146,11 +146,21 @@ attributes:
   default: 'No'
   description: |-
     Whether users in this class are connecting from a shared host and can be uniquely identified by their username.
+- name: motd
+  type: Text
+  required: false
+  default: 'motd'
+  description: |-
+    The file path or name of the field in &lt;files&gt; / &lt;execfiles&gt; to use when reading the message of the day.
 details: |+
   !!! warning ""
       The `hash` field is currently optional but will be required in the next major version of InspIRCd when using password authentication.
 
   {! 4/modules/_hash_table.md !}
+
+  The file specified in the motd field can contain the following formatting codes:
+
+  {! 4/_motd.md !}
 
 example: |-
   Denies connections to clients connecting from 3ffe::0/32:
@@ -185,7 +195,8 @@ example: |-
            softsendq="8192"
            threshold="10"
            timeout="10"
-           uniqueusername="no">
+           uniqueusername="no"
+           motd="motd">
   ```
 
   #### Special Notes

@@ -57,6 +57,10 @@ configuration:
     description: |-
       If the method field is set to numeric then the numeric to use to show the response.
   details: |-
+    The file specified in the file field can contain the following formatting codes:
+
+    {! 4/_motd.md !}
+
     The method field should be set to one of the following values:
 
     Value   | Description

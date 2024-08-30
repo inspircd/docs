@@ -6,6 +6,72 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.3.0
+
+<!-- TODO: ensure changes after commit 4dc6c98d986dfed9c92649f66c26926648d89702 are added to this list before release. -->
+
+**This version of InspIRCd has not yet been released.**
+
+- Added `<whowas:nickupdate>` to allow updating the whowas database on nick change as well as quit.
+
+- Added support for building against yyjson to the log_json module.
+
+- Added support for human readable colour names in MOTD files using `\c[fg-color,bg-color]`
+
+- Added the `&dir.example;` config variable to make it easier to include example configs on system-wide installs.
+
+- Changed command processing to check whether a command is usable before registration before the parameter count is checked .
+
+- Changed the example `<define>` tags to be actually useful.
+
+- Developer: added `InspIRCd::ProcessColors(std::string)` and deprecated the vector overload.
+
+- Developer: added formatting overloads for `{Membership,User}::WriteNotice`.
+
+- Developer: added the `Numeric::push_fmt` method to push a formatted parameter onto a numeric.
+
+- Developer: deprecated the non-printable overload of `InspIRCd::GenRandomStr` in favour of `GenRandom`.
+
+- Developer: refactored the `InspIRCd` and `ServerStats` types.
+
+- Fixed `/AUTHENTICATE` being silently dropped when the user does not have the `sasl` capability or when a malformed `<trailing>` parameter is sent.
+
+- Fixed `/WHOWAS` not showing the real server name to operators with the `services/auspex` privilege.
+
+- Fixed `InspIRCd::StripColor` not stripping the value of hex colours.
+
+- Fixed `InspIRCd::StripColor` stripping some legitimate non-formatting characters.
+
+- Fixed bursting metadata between servers.
+
+- Fixed downgrading `LMODE` messages when broadcasting to remote servers.
+
+- Fixed downgrading `SINFO` messages when broadcasting to remote servers.
+
+- Fixed exceptions from loggers not being handled.
+
+- Fixed measuring the CPU load on Windows.
+
+- Fixed retrieving database rows in the MySQL module.
+
+- Fixed the argon2 module erroneously treating lanes as separate to threads.
+
+- Fixed the blockcolor module blocking some legitimate non-formatting characters.
+
+- Fixed the build when compiling with C++20 or newer.
+
+- Made it clear that the cloak_md5 and md5 modules are deprecated.
+
+- Reduced the memory usage of the whowas database.
+
+- Refactored the Perl init script somewhat.
+
+- Replaced the InspIRCd-specific `RPL_WHOWASIP` numeric with `RPL_WHOISACTUALLY`.
+
+- Tweaked the defaults for `<whowas>` to make more sense for most networks.
+
+- Tweaked the message for `RPL_WHOISCERTFP` to make it clear if the fingerprint is hashed using a compatibility algorithm.
+
 ### InspIRCd 4.2.0
 
 **This version of InspIRCd was released on 2024-08-03.**

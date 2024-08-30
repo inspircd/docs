@@ -23,12 +23,6 @@ configuration:
     default: 3
     description: |-
       The time hardness of the Argon2 algorithms.
-  - name: lanes
-    type: Number
-    required: false
-    default: 1
-    description: |-
-      The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
@@ -52,7 +46,6 @@ configuration:
     ```xml
     <argon2 memory="128MB"
             iterations="3"
-            lanes="1"
             threads="1"
             length="32"
             saltlength="16">
@@ -73,12 +66,6 @@ configuration:
     default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2d algorithm.
-  - name: lanes
-    type: Number
-    required: false
-    default: '*See &lt;argon2:lanes&gt;*'
-    description: |-
-      The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
@@ -102,7 +89,6 @@ configuration:
     ```xml
     <argon2d memory="128MB"
              iterations="3"
-             lanes="1"
              threads="1"
              length="32"
              saltlength="16">
@@ -123,12 +109,6 @@ configuration:
     default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2i algorithm.
-  - name: lanes
-    type: Number
-    required: false
-    default: '*See &lt;argon2:lanes&gt;*'
-    description: |-
-      The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
@@ -152,7 +132,6 @@ configuration:
     ```xml
     <argon2i memory="128MB"
              iterations="3"
-             lanes="1"
              threads="1"
              length="32"
              saltlength="16">
@@ -173,12 +152,6 @@ configuration:
     default: '*See &lt;argon2:iterations&gt;*'
     description: |-
       The time hardness of the Argon2id algorithm.
-  - name: lanes
-    type: Number
-    required: false
-    default: '*See &lt;argon2:lanes&gt;*'
-    description: |-
-      The number of parallel chains to run at once.
   - name: threads
     type: Number
     required: false
@@ -202,7 +175,6 @@ configuration:
     ```xml
     <argon2id memory="128MB"
               iterations="3"
-              lanes="1"
               threads="1"
               length="32"
               saltlength="16">

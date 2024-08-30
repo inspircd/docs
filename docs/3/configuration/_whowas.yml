@@ -1,1 +1,29 @@
-../../4/configuration/_whowas.yml
+name: whowas
+description: |-
+  The `<whowas>` tag defines the configuration of the `/WHOWAS` database. This tag can only be defined once.
+attributes:
+- name: groupsize
+  type: Number
+  required: false
+  default: '10'
+  description: |-
+    The maximum number of `/WHOWAS` entries for a nickname. If set to 0 then `/WHOWAS` is disabled.
+- name: maxgroups
+  type: Number
+  required: false
+  default: '10240'
+  description: |-
+    The maximum number of `/WHOWAS` nickname groups. If set to 0 then `/WHOWAS` is disabled.
+- name: maxkeep
+  type: Duration
+  required: false
+  default: 1h
+  description: |-
+    The period of time to keep `/WHOWAS` records for.
+details: ""
+example: |-
+  ```xml
+  <whowas groupsize="10"
+          maxgroups="100000"
+          maxkeep="3d">
+  ```

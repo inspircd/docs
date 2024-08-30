@@ -47,7 +47,11 @@ configuration:
     default: 'Yes'
     description: |-
       Whether to send the server operator message of the day to server operators when they log into their server operator account.
-  details: ""
+  details: |-
+    The file specified in the motd field can contain the following formatting codes:
+
+    {! 4/_motd.md !}
+
   example: |-
     Shows an oper MOTD to Sadie when they log into their server operator account:
 
