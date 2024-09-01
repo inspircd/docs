@@ -6,7 +6,7 @@ joblib==1.4.2
 jsmin==3.0.1
 livereload==2.7.0
 lunr==0.7.0.post1
-Markdown==3.6
+Markdown==3.7
 markdown-include==0.8.1
 MarkupSafe==2.1.5
 mkdocs==1.6.0
