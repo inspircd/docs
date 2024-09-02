@@ -6,4 +6,4 @@ description: |-
 client_caps:
 - name: '[chghost](https://ircv3.net/specs/extensions/chghost.html)'
   description: |-
-    Notifies users when the username or hostname of a user they share a channel with changes.
+    Notifies users when the username (ident) or hostname of a user they share a channel with changes.

@@ -1,7 +1,7 @@
 name: setident
 
 description: |-
-  This module adds the `/SETIDENT` command which allows server operators to change their username (ident).
+  This module adds the `/SETIDENT` command which allows server operators to change their username.
 
 commands:
 - name: SETIDENT
@@ -9,9 +9,9 @@ commands:
   oper_only: true
   syntax: <username>
   description: |-
-    Changes the username (ident) of the user to &lt;username&gt;.
+    Changes the username of the user to &lt;username&gt;.
   example:
   - description: |-
-      Changes the username (ident) of the user to wibble
+      Changes the username of the user to wibble
     text: |-
       /SETIDENT wibble

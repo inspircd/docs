@@ -1,7 +1,7 @@
 name: chgname
 
 description: |-
-  This module adds the `/CHGNAME` command which allows server operators to change the real name (gecos) of a user.
+  This module adds the `/CHGNAME` command which allows server operators to change the real name of a user.
 
 commands:
 - name: CHGNAME
@@ -9,9 +9,9 @@ commands:
   oper_only: true
   syntax: <nickname> <realname>
   description: |-
-    Changes the real name (gecos) of &lt;nickname&gt; to &lt;realname&gt;.
+    Changes the real name of &lt;nickname&gt; to &lt;realname&gt;.
   example:
   - description: |-
-      Changes the real name (gecos) of Sadie to "Wibble Wobble"
+      Changes the real name of Sadie to "Wibble Wobble"
     text: |-
       /CHGNAME Sadie :Wibble Wobble

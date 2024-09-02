@@ -1,1 +1,17 @@
-../../4/modules/chgname.yml
+name: chgname
+
+description: |-
+  This module adds the `/CHGNAME` command which allows server operators to change the real name (gecos) of a user.
+
+commands:
+- name: CHGNAME
+  param_count: 2
+  oper_only: true
+  syntax: <nickname> <realname>
+  description: |-
+    Changes the real name (gecos) of &lt;nickname&gt; to &lt;realname&gt;.
+  example:
+  - description: |-
+      Changes the real name (gecos) of Sadie to "Wibble Wobble"
+    text: |-
+      /CHGNAME Sadie :Wibble Wobble

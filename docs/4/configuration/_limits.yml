@@ -55,7 +55,7 @@ attributes:
   required: false
   default: '130'
   description: |-
-    The maximum length of a real name (gecos).
+    The maximum length of a real name.
 - name: maxtopic
   type: Number
   required: false

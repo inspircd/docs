@@ -1,7 +1,7 @@
 name: setname
 
 description: |-
-  This module adds the `/SETNAME` command which allows users to change their real name (gecos).
+  This module adds the `/SETNAME` command which allows users to change their real name.
 
 configuration:
 - name: setname
@@ -33,9 +33,9 @@ commands:
   oper_only: true
   syntax: <realname>
   description: |-
-    Changes the real name (gecos) of the user to &lt;realname&gt;.
+    Changes the real name of the user to &lt;realname&gt;.
   example:
   - description: |-
-      Changes the real name (gecos) of the user to "Wibble Wobble"
+      Changes the real name of the user to "Wibble Wobble"
     text: |-
       /SETNAME :Wibble Wobble
