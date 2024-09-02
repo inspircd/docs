@@ -8,7 +8,7 @@ title: Packaging advice
 
 Other than to [older branches which are still supported](https://github.com/inspircd/inspircd/security/policy#supported-versions) we generally do not provide non-security patch backports due to it requiring a significant amount of work on our behalf. Please try to avoid backporting patches by only shipping the latest version of InspIRCd wherever possible.
 
-Make sure to pass the `--distribution-label` option with a label that uniquely identifies your specific package and package version (e.g. mewos3.14) to configure when building. This helps us identify distribution packaged versions when people ask for support. See our [official RPM package sources](https://github.com/inspircd/inspircd-packages/blob/v4/rpm/inspircd.spec.in) for an example of how to use this.
+Make sure to pass the `--distribution-label` option with a label that uniquely identifies your specific package and package version (e.g. mewos3.14) to configure when building. This helps us identify distribution packaged versions when people ask for support. See our [official RPM package sources](https://github.com/inspircd/package-builder/blob/v4/rpm/inspircd.spec.in) for an example of how to use this.
 
 Please don't ship preconfigured config files as they become outdated very quickly and result in us having to answer the same support questions over and over again. Our example files should be well documented enough for users to create their own config files.
 

@@ -4,7 +4,7 @@ title: Tutorials
 ---
 
 !!! note ""
-    This page is a work in progress. If you would like to suggest a new tutorial [please open an issue](https://github.com/inspircd/inspircd-docs/issues/new).
+    This page is a work in progress. If you would like to suggest a new tutorial [please open an issue](https://github.com/inspircd/docs/issues/new).
 
 ## Tutorials
 

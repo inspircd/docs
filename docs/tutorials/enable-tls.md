@@ -3,7 +3,7 @@ title: How to enable TLS (SSL) on your IRC network
 ---
 
 !!! note ""
-    This page is a work in progress. If you find any part of it to be unclear [please open an issue](https://github.com/inspircd/inspircd-docs/issues/new).
+    This page is a work in progress. If you find any part of it to be unclear [please open an issue](https://github.com/inspircd/docs/issues/new).
 
 ## How to enable TLS (SSL) on your IRC network
 

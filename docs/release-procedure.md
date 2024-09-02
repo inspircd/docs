@@ -29,8 +29,8 @@ Name       | Description
 0. Mark the new news post as featured and unmark the old one.
 0. If the release is stable then update `misc.currentVersion` in the website config to VERSION.
 0. Update the change log on the documentation site.
-0. Run the [API documentation workflow](https://github.com/inspircd/inspircd-api/actions/workflows/build.yml).
+0. Run the [API documentation workflow](https://github.com/inspircd/api-docs/actions/workflows/build.yml).
 0. If the release fixes a security vulnerability then create an advisory on the documentation site.
-0. Update `INSP_VERSION` in the [Docker container build script](https://github.com/inspircd/inspircd-docker/blob/master/.github/workflows/build-container.yml).
+0. Update `INSP_VERSION` in the [Docker container build script](https://github.com/inspircd/docker/blob/master/.github/workflows/build-container.yml).
 0. Update the topic in `#InspIRCd` and `#InspIRCd.dev` on ChatSpike.
 0. Post a link to the news post on the [InspIRCd social media accounts](/social).
