@@ -1,9 +1,1 @@
-name: regex_pcre2
-
-introduction: ""
-
-depends_on:
-  what: a third-party library ([PCRE2](https://www.pcre.org))
-
-description: |-
-  This module provides the `pcre` regular expression engine which uses the [PCRE2](https://www.pcre.org) library.
+../../4/modules/regex_pcre2.yml
