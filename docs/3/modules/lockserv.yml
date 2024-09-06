@@ -2,7 +2,7 @@ name: lockserv
 
 introduction: |-
   !!! warning ""
-      This module has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+      This module is deprecated and has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
 
 description: |-
   This module adds the `/LOCKSERV` and `/UNLOCKSERV` commands which allows server operators to control whether users can connect to the local server.

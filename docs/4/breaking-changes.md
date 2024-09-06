@@ -38,9 +38,9 @@ title: v4 Breaking Changes
 
 - The modenotice module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install modenotice` to install it.
 
-- The nopartmsg module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
-
 - The nationalchars module has been removed. In order to upgrade you should switch to the codepage module instead.
+
+- The nopartmsg module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
 
 - The regex_pcre module has been moved to inspircd-contrib. In order to upgrade either migrate remove this module from your configuration, run `./modulemanager install regex_pcre` to install it, or migrate to [the regex_pcre2 module](/4/modules/regex_pcre2).
 

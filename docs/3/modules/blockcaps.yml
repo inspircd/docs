@@ -4,7 +4,7 @@ introduction: |-
   !!! warning ""
       This module is deprecated and has been removed in the next major version of InspIRCd.
 
-      You should use [the anticaps module](/3/modules/anticaps) instead.
+      You should consider using [the anticaps module](/3/modules/anticaps) instead.
 
 description: |-
   This module adds channel mode `B` (blockcaps) which allows channels to block messages which are excessively capitalised.

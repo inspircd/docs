@@ -1,6 +1,10 @@
 name: ssl_mbedtls
 
-introduction: ""
+introduction: |-
+  !!! warning ""
+      This module is deprecated and has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+
+      You should consider using [the ssl_gnutls module](/3/modules/ssl_gnutls) instead.
 
 depends_on:
   what: a third-party library ([mbedTLS](https://tls.mbed.org))
