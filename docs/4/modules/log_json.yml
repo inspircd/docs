@@ -3,7 +3,7 @@ name: log_json
 introduction: ""
 
 depends_on:
-  what: a third-party library ([RapidJSON](https://rapidjson.org/))
+  what: a third-party library ([yyjson](https://github.com/ibireme/yyjson))
 
 description: |-
   This module provides the ability to log to JSON.
