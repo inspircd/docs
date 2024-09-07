@@ -6,11 +6,9 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
-## InspIRCd 4.3.0
+### InspIRCd 4.3.0
 
-<!-- TODO: ensure changes after commit 4dc6c98d986dfed9c92649f66c26926648d89702 are added to this list before release. -->
-
-**This version of InspIRCd has not yet been released.**
+**This version of InspIRCd was released on 2024-09-07.**
 
 - Added `<whowas:nickupdate>` to allow updating the whowas database on nick change as well as quit.
 
