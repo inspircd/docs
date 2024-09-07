@@ -40,23 +40,23 @@ By default the extra modules for which the dependencies are installed are automa
 
 It is recommended that you ship as many extra modules as possible but due to GPLv2 conflicts not all modules can legally be shipped in binary form. Below is a list of the modules shipped with the latest version and their legal status.
 
-Module                                        | Library          | License             | GPLv2 compatible?
---------------------------------------------- | ---------------- | ------------------- | -----------------
-[argon2](/4/modules/argon2)                   | libargon2        | Apache 2.0 / CC0    | Yes
-[geo_maxmind](/4/modules/geo_maxmind)         | libmaxminddb     | Apache 2.0          | **No**
-[ldap](/4/modules/ldap)                       | libldap2         | BSD-style           | Yes
-[log_json](/4/modules/log_json)               | RapidJSON        | MIT                 | Yes
-[log_syslog](/4/modules/log_syslog)           | *C stdlib*       | *Depends*           | *Maybe*
-[mysql](/4/modules/mysql)                     | libmysqlclient   | GPLv2               | Yes
-[pgsql](/4/modules/pgsql)                     | libpq            | MIT                 | Yes
-[regex_pcre2](/4/modules/regex_pcre2)         | libpcre2         | BSD 3-Clause        | Yes
-[regex_posix](/4/modules/regex_posix)         | *C stdlib*       | *Depends*           | *Maybe*
-[regex_re2](/4/modules/regex_re2)             | libre2           | BSD 3-Clause        | Yes
-[regex_stdlib](/4/modules/regex_stdlib)       | *C++ stdlib*     | *Depends*           | *Maybe*
-[sqlite3](/4/modules/sqlite3)                 | libsqlite3       | Public Domain       | Yes
-[ssl_gnutls](/4/modules/ssl_gnutls)           | libgnutls        | LGPL2.1+            | Yes
-[ssl_openssl](/4/modules/ssl_openssl)         | libcrypto libssl | Custom / Apache 2.0 | **No**
-[sslrehashsignal](/4/modules/sslrehashsignal) | *C stdlib*       | *Depends*           | *Maybe*
+Module                                        | Library                         | License             | GPLv2 compatible?
+--------------------------------------------- | ------------------------------- | ------------------- | -----------------
+[argon2](/4/modules/argon2)                   | libargon2                       | Apache 2.0 / CC0    | Yes
+[geo_maxmind](/4/modules/geo_maxmind)         | libmaxminddb                    | Apache 2.0          | **No**
+[ldap](/4/modules/ldap)                       | libldap2                        | BSD-style           | Yes
+[log_json](/4/modules/log_json)               | yyjson / RapidJSON (deprecated) | MIT                 | Yes
+[log_syslog](/4/modules/log_syslog)           | *C stdlib*                      | *Depends*           | *Maybe*
+[mysql](/4/modules/mysql)                     | libmysqlclient                  | GPLv2               | Yes
+[pgsql](/4/modules/pgsql)                     | libpq                           | MIT                 | Yes
+[regex_pcre2](/4/modules/regex_pcre2)         | libpcre2                        | BSD 3-Clause        | Yes
+[regex_posix](/4/modules/regex_posix)         | *C stdlib*                      | *Depends*           | *Maybe*
+[regex_re2](/4/modules/regex_re2)             | libre2                          | BSD 3-Clause        | Yes
+[regex_stdlib](/4/modules/regex_stdlib)       | *C++ stdlib*                    | *Depends*           | *Maybe*
+[sqlite3](/4/modules/sqlite3)                 | libsqlite3                      | Public Domain       | Yes
+[ssl_gnutls](/4/modules/ssl_gnutls)           | libgnutls                       | LGPL2.1+            | Yes
+[ssl_openssl](/4/modules/ssl_openssl)         | libcrypto libssl                | Custom / Apache 2.0 | **No**
+[sslrehashsignal](/4/modules/sslrehashsignal) | *C stdlib*                      | *Depends*           | *Maybe*
 
 ### Patches
 
