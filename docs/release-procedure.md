@@ -32,5 +32,5 @@ Name       | Description
 0. Run the [API documentation workflow](https://github.com/inspircd/api-docs/actions/workflows/build.yml).
 0. If the release fixes a security vulnerability then create an advisory on the documentation site.
 0. Update `INSP_VERSION` in the [Docker container build script](https://github.com/inspircd/docker/blob/master/.github/workflows/build-container.yml).
-0. Update the topic in `#InspIRCd` and `#InspIRCd.dev` on ChatSpike.
+0. Update the topic in the InspIRCd IRC channels.
 0. Post a link to the news post on the [InspIRCd social media accounts](/social).
