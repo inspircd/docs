@@ -19,13 +19,13 @@ configuration:
     required: false
     default: 30
     description: |-
-      The maximum number of users who can be on a user's callerid whitelist.
+      The maximum number of users who can be on a user's accept list.
   - name: tracknick
     type: Boolean
     required: false
     default: 'No'
     description: |-
-      Whether to track nickname changes for users on a callerid whitelist.
+      Whether to track nickname changes for users on a accept list.
   details: ""
   example: |-
     ```xml
@@ -70,13 +70,13 @@ commands:
   - '*'
   - (+|-)<nickname>[,(+|-)<nickname>]+
   description: |-
-    Allows users to add, remove, and view the users on their callerid whitelist.
+    Allows users to add, remove, and view the users on their accept list.
   example:
   - description: |-
-      Lists all users on your callerid whitelist
+      Lists all users on your accept list
     text: |-
       /ACCEPT *
   - description: |-
-      Adds Sadie to your callerid whitelist and removes Adam from your callerid whitelist
+      Adds Sadie to your accept list and removes Adam from your accept list
     text: |-
       /ACCEPT +Sadie,-Adam

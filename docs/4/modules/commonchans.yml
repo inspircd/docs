@@ -32,3 +32,6 @@ umodes:
     description: |-
       Requires other users to have a common channel before they can message this user.
   example: ""
+
+special_notes: |-
+  If you have a user on your [accept list](/4/modules/callerid/#commands) they will be exempt from user mode `c` (deaf_commonchan).

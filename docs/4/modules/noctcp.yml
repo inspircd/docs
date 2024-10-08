@@ -82,3 +82,5 @@ extbans:
 
 special_notes: |-
   Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.
+
+  If you have a user on your [accept list](/4/modules/callerid/#commands) they will be exempt from user mode `C` (noctcp).

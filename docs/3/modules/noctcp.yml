@@ -1,1 +1,84 @@
-../../4/modules/noctcp.yml
+name: noctcp
+
+description: |-
+  This module adds channel mode `C` (noctcp) which allows channels to block messages which contain CTCPs and user mode `T` (u_noctcp) which allows users to block private messages that contain CTCPs.
+
+configuration:
+- name: noctcp
+  description: |-
+    The `<noctcp>` tag defines settings about how the noctcp module should behave. This tag can only be defined once.
+  attributes:
+  - name: enableumode
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether user mode `T` (u_noctcp) is enabled. You must restart after changing this setting for it to be applied.
+  details: ""
+  example: |-
+    ```xml
+    <noctcp enableumode="yes">
+    ```
+- name: class
+  description: |-
+    This module extends [the core `<class:privs>` field](/{{ version }}/configuration#class) with the following values:
+  extends: true
+  added_values:
+  - name: channels/ignore-noctcp
+    description: |-
+      Allows server operators to send a CTCP to a channel with the `C` (noctcp) mode set.
+  - name: users/ignore-noctcp
+    description: |-
+      Allows server operators to send a CTCP to a user with the `T` (u_noctcp) mode set.
+  details: ""
+  example: |-
+    Allows server operators with the class named BasicOper to send a CTCP to a channel or user with the respective mode set.
+
+    ```xml
+    <class name="BasicOper"
+           ...
+           privs="... channels/ignore-noctcp users/ignore-noctcp ...">
+    ```
+
+chmodes:
+  chars:
+  - name: noctcp
+    char: C
+    type: Switch
+    syntax: null
+    usable_by: Channel operators
+    description: |-
+      Enables blocking channel messages that contain CTCPs.
+  example: ""
+
+umodes:
+  chars:
+  - name: u_noctcp
+    char: T
+    type: Switch
+    syntax: null
+    usable_by: Anyone
+    description: |-
+      Enables blocking private messages that contain CTCPs.
+  example: ""
+
+exemptions:
+- name: noctcp
+  description: Allows exempted users to send messages that contain CTCPs.
+
+extbans:
+  description: ""
+  chars:
+  - name: noctcp
+    char: C
+    type: Acting
+    syntax: <mask>
+    description: Bans &lt;mask&gt; from sending messages that contain CTCPs.
+  example:
+  - description: |-
+      Bans users matching `*!*@example.com` from sending messages that contain CTCPs
+    text: |-
+      /MODE #channel +b C:*!*@example.com
+
+special_notes: |-
+  Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.

@@ -114,3 +114,6 @@ extbans:
       Bans users matching `*!*@example.com` that are not logged into a services account
     text: |-
       /MODE #channel +b U:*!*@example.com
+
+special_notes: |-
+  If you have a user on your [accept list](/4/modules/callerid/#commands) they will be exempt from user mode `R` (regdeaf).
