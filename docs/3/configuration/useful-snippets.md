@@ -14,7 +14,7 @@ To add support for IRCCloud add the following include tag to your configuration:
 <include file="examples/providers/irccloud.conf.example">
 ```
 
-If you run a popular hosted client or a shared bouncer service that supports modern IRC features we would be happy to include configs for your client. Please reach out to us via \#inspircd.dev on irc.chatspike.net and we'll try to work something out.
+If you run a popular hosted client or a shared bouncer service that supports modern IRC features we would be happy to include configs for your client. Please [open a feature request](https://github.com/inspircd/inspircd/issues/new?template=FEATURE_REQUEST.md) and we'll try to work something out.
 
 ### Requiring connections to use SASL
 
