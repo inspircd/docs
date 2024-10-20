@@ -175,12 +175,6 @@ configuration:
     default: 0
     description: |-
       Raw integer value of options to set on the server context.  Don't change this unless you know what you are doing.
-  - name: tlsv1
-    type: Boolean
-    required: false
-    default: 'No'
-    description: |-
-      Whether the insecure TLSv1.0 protocol is enabled.
   - name: tlsv11
     type: Boolean
     required: false
@@ -193,6 +187,12 @@ configuration:
     default: 'Yes'
     description: |-
       Whether the TLSv1.2 protocol is enabled.
+  - name: tlsv13
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether the TLSv1.3 protocol is enabled.
   details: |-
     The crlmode field should be set to one of the following values:
 
@@ -218,9 +218,9 @@ configuration:
                 keyfile="key.pem"
                 renegotiation="no"
                 requestclientcert="yes"
-                tlsv1="no"
                 tlsv11="no"
-                tlsv12="yes">
+                tlsv12="yes"
+                tlsv13="yes">
     ```
 
 special_notes: |-

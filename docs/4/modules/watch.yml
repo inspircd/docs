@@ -11,13 +11,13 @@ configuration:
   - name: maxwatch
     type: Number
     required: false
-    default: 32
+    default: 30
     description: |-
       The maximum number of entries on a user's watch list.
   details: ""
   example: |-
     ```xml
-    <watch maxwatch="32">
+    <watch maxwatch="30">
     ```
 
 commands:

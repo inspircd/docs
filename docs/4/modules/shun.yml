@@ -8,12 +8,6 @@ configuration:
   description: |-
     The `<shun>` tag defines settings about how the shun module should behave. This tag can only be defined once.
   attributes:
-  - name: affectopers
-    type: Boolean
-    required: false
-    default: 'No'
-    description: |-
-      Whether server operators are affected by shuns.
   - name: allowconnect
     type: Boolean
     required: false
@@ -47,8 +41,7 @@ configuration:
   details: ""
   example: |-
     ```xml
-    <shun affectopers="no"
-          allowconnect="yes"
+    <shun allowconnect="yes"
           allowtags="no"
           cleanedcommands="AWAY PART QUIT"
           enabledcommands="ADMIN PING PONG QUIT"

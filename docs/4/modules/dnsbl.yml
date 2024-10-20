@@ -63,7 +63,7 @@ configuration:
   - name: duration
     type: Duration
     required: false
-    default: 1m
+    default: 1h
     description: |-
       If action is set to gline, kline, or zline then the duration for an X-line to last for.
   - name: host
