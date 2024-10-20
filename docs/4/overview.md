@@ -66,7 +66,7 @@ Operator MOTDs can now be customised depending on the type of the operator.
 
 Operator privileges are now synchronised over the network so remote servers can check them.
 
-Services can now grant services privileges to users remotely (requires the [services](/4/modules/services) module).
+Services can now grant server operator privileges to users remotely (requires the [services](/4/modules/services) module).
 
 ### Regex
 
