@@ -29,7 +29,7 @@ configuration:
   - name: maxbackoff
     type: Duration
     required: false
-    default: 0s
+    default: 120 * `backoff`
     description: |-
       The maximum write period that should be allowed even if incremental backoff is enabled.
   details: ""
