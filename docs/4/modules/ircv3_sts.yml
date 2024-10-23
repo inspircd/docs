@@ -68,6 +68,4 @@ client_caps:
     Defines a mechanism for clients to upgrade plaintext IRC connections to TLS (SSL).
 
 special_notes: |-
-  The default duration of 5 minutes is a safety precaution aimed at initial implementation and testing of an STS policy.
-
-  Once you're comfortable with the configuration the duration should be raised to a month or more for effective enforcement.
+  The default duration of 5 minutes is a safety precaution aimed at initial implementation and testing of an STS policy. Once you're comfortable with the configuration the duration should be raised to a month or more for effective enforcement.
