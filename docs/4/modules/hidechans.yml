@@ -14,16 +14,10 @@ configuration:
     default: 'No'
     description: |-
       Whether server operators are affected by the user mode.
-  - name: hideservices
-    type: Boolean
-    required: false
-    default: 'Yes'
-    description: |-
-      Whether channels which services users are in are hidden even from server operators.
   details: ""
   example: |-
     ```xml
-    <hidechans affectsopers="no" hideservices="yes">
+    <hidechans affectsopers="no">
     ```
 
 umodes:
