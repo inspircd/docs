@@ -39,7 +39,7 @@ configuration:
   - name: duration
     type: Duration
     required: false
-    default: 60d
+    default: 5m *(since 3.6.0)*<br>60d *(3.0.0 to 3.5.0)*
     description: |-
       The time period that the STS policy should last for.
   - name: port
@@ -67,3 +67,6 @@ client_caps:
 - name: '[sts](https://ircv3.net/specs/extensions/sts.html)'
   description: |-
     Defines a mechanism for clients to upgrade plaintext IRC connections to TLS (SSL).
+
+special_notes: |-
+  The default duration of 5 minutes is a safety precaution aimed at initial implementation and testing of an STS policy. Once you're comfortable with the configuration the duration should be raised to a month or more for effective enforcement.

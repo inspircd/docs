@@ -17,7 +17,7 @@ configuration:
   - name: listmodes
     type: Boolean
     required: false
-    default: 'No'
+    default: 'Yes'
     description: |-
       Whether to save list modes to the permchannels configuration file.
   - name: operonly
@@ -41,7 +41,7 @@ configuration:
   - name: maxbackoff
     type: Duration
     required: false
-    default: 0s
+    default: 120 * `<permchanneldb:backoff>`
     description: |-
       The maximum write period that should be allowed even if incremental backoff is enabled.
   - name: writeversion

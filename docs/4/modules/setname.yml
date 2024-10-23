@@ -11,7 +11,7 @@ configuration:
   - name: notifyopers
     type: Boolean
     required: false
-    default: 'Yes'
+    default: Inverse of `opersonly`
     description: |-
       Whether to notify server operators when a user changes their real name.
   - name: operonly
