@@ -13,7 +13,6 @@ title: Introduction
 - [License](/license)
 - [Packaging Advice](/packaging)
 - [Security Advisories](/security)
-- [Social Media](/social)
 - [Support](/support)
 - [Tutorials](/tutorials)
 
