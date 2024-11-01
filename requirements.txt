@@ -8,7 +8,7 @@ livereload==2.7.0
 lunr==0.7.0.post1
 Markdown==3.7
 markdown-include==0.8.1
-MarkupSafe==2.1.5
+MarkupSafe==3.0.2
 mkdocs==1.6.1
 mkdocs-cinder==1.2.0
 mkdocs-minify-plugin==0.8.0
