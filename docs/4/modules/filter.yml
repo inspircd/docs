@@ -29,6 +29,12 @@ configuration:
     default: null
     description: |-
       The regular expression engine to use for checking matches.
+  - name: enableflags
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to allow regex flags (`/pattern/flags`) to be used in a filter regular expression.
   - name: notifyuser
     type: Boolean
     required: false
@@ -74,6 +80,7 @@ configuration:
   example: |-
     ```xml
     <filteropts engine="glob"
+                enableflags="yes"
                 notifyuser="yes"
                 warnonselfmsg="no"
                 filename="filters.conf"

@@ -21,7 +21,7 @@ syntax:
   text:
   - START <protocol>
   - CAPABILITIES :[<capability-key>=<capability-value>]+
-  - EXTBANS :[<extban-type>:<extban-name>=<extban-char>]+
+  - EXTBANS :[<extban-type>:<extban-name>[=<extban-char>]]+
   - MODULES :[<module-name>[=<module-link-data>]]+
   - MODSUPPORT :[<module-name>[=<module-link-data>]]+
   - CHANMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<mode-char>]+

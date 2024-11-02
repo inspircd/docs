@@ -8,12 +8,6 @@ configuration:
   description: |-
     The `<chanhistory>` tag defines settings about how the chanhistory module should behave. This tag can only be defined once.
   attributes:
-  - name: bots
-    type: Boolean
-    required: false
-    default: 'Yes'
-    description: |-
-      Whether users with the bot user mode (+B) will receive history.
   - name: maxduration
     type: Duration
     required: false
@@ -32,13 +26,29 @@ configuration:
     default: 'Yes'
     description: |-
       Whether to send a notice before sending history.
+  - name:
+      bots: 4.0.0 to 4.3.0
+      sendtobots: since 4.4.0
+    type: Boolean
+    required: false
+    default: 'Yes'
+    description: |-
+      Whether users with the bot user mode (+B) will receive history.
+  - name: savefrombots
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.4.0
+    description: |-
+      Whether messages from users with the bot user mode (+B) will be saved in the history.
   details: ""
   example: |-
     ```xml
-    <chanhistory bots="yes"
-                 maxduration="4w"
+    <chanhistory maxduration="4w"
                  maxlines="50"
-                 prefixmsg="yes">
+                 prefixmsg="yes"
+                 savefrombots="yes"
+                 sendtobots="yes">
     ```
 
 chmodes:

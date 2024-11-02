@@ -35,9 +35,9 @@ configuration:
   - name: message
     type: String
     required: false
-    default: Repeat flood (trigger is %lines% messages in %duration%)
+    default: Repeat flood detected (trigger is %lines% messages in %duration%)
     description: |-
-      The message to kick users who repeat flood with.
+      The message to use when punishing users that hit the repeat flood trigger.
   - name: maxbacklog
     type: Number
     required: false
@@ -69,10 +69,11 @@ configuration:
     description: |-
       The maximum number of characters to check for, can be used to truncate messages before they are checked, resulting in less CPU usage.
   details: |-
-    The kickmessage field can contain any of the following template variables:
+    The message field can contain any of the following template variables:
 
     Variable   | Description
     ---------- | -----------
+    %channel%  | **New in v4.4.0!** The name of the channel the mode is set on.
     %diff%     | The diff from the mode value.
     %duration% | The seconds from the mode value as a duration.
     %lines%    | The lines from the mode value.
@@ -81,7 +82,7 @@ configuration:
   example: |-
     ```xml
     <repeat extended="yes"
-            message="Repeat flood (trigger is %lines% messages in %duration%)"
+            message="Repeat flood detected (trigger is %lines% messages in %duration%)"
             maxbacklog="20"
             maxdistance="50"
             maxlines="20"

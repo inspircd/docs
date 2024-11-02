@@ -6,6 +6,72 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.4.0
+
+**This version of InspIRCd was released on 2024-11-02.**
+
+- Added `<anticaps:message>` to allow customising the error shown when blocking an overly capitalised message.
+
+- Added `<chanhistory:savefrombots>` to allow omitting messages from bots.
+
+- Added `<hidechans:hideservices>` to allow showing the channel list of services pseudoclients to server operators.
+
+- Added a `/STATS` character to the sslinfo module for viewing ciphersuite info.
+
+- Added a faster method of converting values to a string for types that support it.
+
+- Added advertisement of the preferred extban format for services.
+
+- Added support for matching account bans against the entire nick group.
+
+- Added support for name-only extended bans.
+
+- Added support for named DNSBL replies and the `%reason%` variable in `<dnsbl:reason>`.
+
+- Added support for regex flags to the filter module.
+
+- Added the "opers" option to `<options:modesinlist>` to allow only showing modes to an operator with the `channels/auspex` privilege.
+
+- Added the `%channel%` template variable to the messageflood and repeat error messages.
+
+- Changed the ldap module to use the Windows API for parsing LDAP URLs.
+
+- Changed the minimum value for `<connectban:threshold>` from 1 to 2.
+
+- Developer: added `Time::FromNow` to convert a duration into a future timestamp.
+
+- Developer: moved core numerics back to a global header again.
+
+- Developer: switched several methods to take a string_view instead of a string.
+
+- Fixed "no tags to send" errors on some clients when `<ctctags:allowclientonlytags>` is disabled.
+
+- Fixed extbans silently overwriting extbans with the same character from other modules.
+
+- Fixed potentially generating a malformed permchannels database.
+
+- Fixed rebuilding the 004 numeric when core_info is reloaded.
+
+- Fixed resending the 005 numerics when a user changes connect class.
+
+- Fixed the connectban module potentially generating a Z-line on a malformed CIDR range.
+
+- Fixed users not being removed from the services list when their server stops being a services server.
+
+- Fixed warning users about raw I/O logging after a rehash when started with `--nolog`.
+
+- Improved the restrictchans error message.
+
+- Improved the xline_db log messages.
+
+- Renamed `<chanhistory:bots>` to `<chanhistory:sendtobots>`.
+
+- Reverted omission of services pseudoclients from the user count in `/LUSERS`.
+
+- Updated the location of the InspIRCd IRC channels.
+
+- Updated the Windows dependencies.
+
 ### InspIRCd 4.3.0
 
 **This version of InspIRCd was released on 2024-09-07.**

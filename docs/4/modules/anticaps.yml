@@ -8,6 +8,12 @@ configuration:
   description: |-
     The `<anticaps>` tag defines settings about how the anticaps module should behave. This tag can only be defined once.
   attributes:
+  - name: message
+    type: Text
+    required: false
+    default: Your message exceeded the %percent%%% upper case character threshold for %channel%
+    description: |-
+      The message to use when punishing users that hit the upper case character threshold.
   - name: lowercase
     type: Text
     required: false
@@ -20,10 +26,22 @@ configuration:
     default: ABCDEFGHIJKLMNOPQRSTUVWXYZ
     description: |-
       A list of characters to treat as upper case letters.
-  details: ""
+  details: |-
+    The message field can contain any of the following template variables:
+
+    Variable      | Description
+    ------------- | -----------
+    %channel%     | The name of the channel the mode is set on.
+    %lower%       | The number of lower case characters.
+    %minlen%      | The minimum length from the mode value.
+    %percent%     | The percentage from the mode value.
+    %punctuation% | The number of punctuation (non upper or lower) characters.
+    %upper%       | The number of upper case characters.
+
   example: |-
     ```xml
-    <anticaps lowercase="abcdefghijklmnopqrstuvwxyz"
+    <anticaps message="Your message exceeded the %percent%%% upper case character threshold for %channel%"
+              lowercase="abcdefghijklmnopqrstuvwxyz"
               uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
     ```
 

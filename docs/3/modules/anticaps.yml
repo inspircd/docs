@@ -1,1 +1,47 @@
-../../4/modules/anticaps.yml
+name: anticaps
+
+description: |-
+  This module adds channel mode `B` (anticaps) which allows channels to block messages which are excessively capitalised.
+
+configuration:
+- name: anticaps
+  description: |-
+    The `<anticaps>` tag defines settings about how the anticaps module should behave. This tag can only be defined once.
+  attributes:
+  - name: lowercase
+    type: Text
+    required: false
+    default: abcdefghijklmnopqrstuvwxyz
+    description: |-
+      A list of characters to treat as lower case letters.
+  - name: uppercase
+    type: Text
+    required: false
+    default: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    description: |-
+      A list of characters to treat as upper case letters.
+  details: ""
+  example: |-
+    ```xml
+    <anticaps lowercase="abcdefghijklmnopqrstuvwxyz"
+              uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+    ```
+
+chmodes:
+  chars:
+  - name: anticaps
+    char: B
+    type: Parameter
+    syntax: '{ban|block|mute|kick|kickban}:<minlen>:<percent>'
+    usable_by: Channel operators
+    description: |-
+      Enables blocking excessively capitalised messages.
+  example:
+  - description: |-
+      Kicks users who send a message which is longer than five characters and is more than 75% capital letters
+    text: |-
+      /MODE #channel +B kick:5:75
+
+exemptions:
+- name: anticaps
+  description: Allows exempted users to send overly capitalised messages.

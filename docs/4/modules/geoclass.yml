@@ -27,4 +27,4 @@ configuration:
 
 stats:
 - char: G
-  description: Lists the number of users currently connected from each country.
+  description: Lists the number of local users currently connected from each country.

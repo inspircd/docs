@@ -128,6 +128,7 @@ configuration:
     %ip%          | The IP address of the user.
     %network%     | **New in v4.1.0!** The name of the IRC network (from `<server:network>`).
     %network.url% | **New in v4.1.0!** The name of the IRC network (from `<server:network>`) encoded for use in an URL.
+    %reason%      | **New in v4.4.0!** A human readable description of the DNSBL result (from `<dnsblreply>`).
     %result%      | The record type returned by the DNSBL.
 
     The type field should be set to one of the following values:
@@ -173,6 +174,38 @@ configuration:
            action="zline"
            duration="7d"
            reason="Tor exit nodes are not allowed on this network. See https://metrics.torproject.org/rs.html#search/%ip% for more information.">
+    ```
+- name: dnsblreply
+  description: |-
+    The `<dnsblreply>` tag defines the meaning of a reply from a DNSBL. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: null
+    description: |-
+      The name of the DNSBL this reply applies to.
+  - name: reply
+    type: Number
+    required: true
+    default: null
+    description: |-
+      The DNSBL reply that this tag specifies a meaning for.
+  - name: description
+    type: Text
+    required: true
+    default: null
+    description: |-
+      A human readable description of the DNSBL reply.
+  details: ""
+  example: |-
+    Specifies that a result of 42 from the SpamBL DNSBL means that the user is connecting from an infected host.
+
+    ```xml
+    <dnsblreply name="SpamBL"
+                reply="42"
+                description="Infected host">
+
     ```
 
 snomasks:

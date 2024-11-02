@@ -131,5 +131,9 @@ commands:
     text: |-
       /SSLINFO #wibble
 
+stats:
+- char: t
+  description: Lists the number of local users currently connected using each ciphersuite.
+
 special_notes: |-
   {% include "4/modules/_ssl_table.md" %}

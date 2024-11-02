@@ -63,9 +63,9 @@ attributes:
   description: |-
     Whether to show the full user mask of a topic setter rather than just their nickname.
 - name: modesinlist
-  type: Boolean
+  type: Text
   required: false
-  default: 'Yes'
+  default: opers
   description: |-
     Whether to include the current channel modes in the `/LIST` output.
 - name: nosnoticestack
@@ -139,6 +139,14 @@ details: |+
   name   | Normalise extbans to use their name.
   letter | Normalise extbans to use their letter.
 
+  The modesinlist field should be set to one of the following values:
+
+  Value | Description
+  ----- | -----------
+  yes   | Show the current channel modes to all users.
+  opers | [**New in v4.4.0!**](/4/change-log/#inspircd-440) Show the current channel modes to server operators with the `channels/auspex` privilege.
+  no    | Do not show the current channel modes in /LIST.
+
   The splitwhois field should be set to one of the following values:
 
   Value    | Description
@@ -173,7 +181,7 @@ example: |-
            nosnoticestack="no"
            maskinlist="yes"
            maskintopic="yes"
-           modesinlist="no"
+           modesinlist="opers"
            prefixpart="&quot;"
            prefixquit="Quit: "
            splitwhois="no"
