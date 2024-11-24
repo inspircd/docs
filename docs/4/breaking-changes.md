@@ -52,6 +52,8 @@ title: v4 Breaking Changes
 
 ### Config
 
+- `<bind:ssl>` has been moved to `<bind:sslprofile>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
+
 - `<cban:glob>` has been removed with no replacement (now always enabled).
 
 - `<cgiirc:opernotice>` has been removed. If you wish to keep this behaviour you can use server operator snomask privileges instead.
@@ -81,6 +83,8 @@ title: v4 Breaking Changes
 - `<httpstats:enableparams>` has been removed with no replacement (now always enabled).
 
 - `<limits:maxgecos>` has been moved to `<limits:maxreal>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
+
+- `<link:ssl>` has been moved to `<link:sslprofile>`. This move originally happened in v3 so if you are using a v3 config you probably don't need to do anything.
 
 - `<mbedtls>` has been removed (other than `<mbedtls:onrehash>`). You should configure a TLS (SSL) profile instead.
 
