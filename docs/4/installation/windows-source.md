@@ -8,7 +8,7 @@ If you want to build InspIRCd with contrib modules or non-included extra modules
 
 ### What systems can InspIRCd be built on?
 
-InspIRCd can be built on Windows 10 build 17061 or newer using the MSVC 19.15+ (Visual Studio 15.8 2017) compiler and CMake 3.20 or newer. Some extra modules may require newer versions in order to build.
+InspIRCd can be built on Windows 10 April 2018 Update or newer using the MSVC 19.15+ (Visual Studio 15.8 2017) compiler and CMake 3.20 or newer. Some extra modules may require newer versions in order to build.
 
 ### How do I install from source?
 

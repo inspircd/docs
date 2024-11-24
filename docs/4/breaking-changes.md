@@ -20,7 +20,7 @@ title: v4 Breaking Changes
 
 - Perl 5.26+ is now required by `./configure` and all of the included Perl tools.
 
-- Windows 10 build 17061 is now the minimum supported version of Windows.
+- Windows 10 April 2018 Update is now the minimum supported version of Windows.
 
 ### Modules
 
