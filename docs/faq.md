@@ -47,7 +47,7 @@ Common services packages used with InspIRCd are:
 
 - [Anope](https://anope.org) &mdash; supports InspIRCd v3 and v4
 
-- [Atheme](https://atheme.github.io/atheme.html) &mdash; only supports InspIRCd v3
+- [Atheme](https://atheme.github.io/atheme.html) &mdash; supports InspIRCd v3 and v4 (requires Atheme v7.3 from Git)
 
 ### Why don't I have channel privileges even though I'm a server operator?
 
