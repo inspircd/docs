@@ -6,6 +6,26 @@ title: v3 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 3.18.0
+
+**This version of InspIRCd was released on 2024-12-27.**
+
+- Backported support for IRCv3 WebSocket subprotocols from the v4 branch.
+
+- Fixed hiding the server correctly when sending local chanlog messages.
+
+- Fixed some compiler warnings in the pgsql module.
+
+- Fixed the connectban module potentially generating a Z-line on a malformed CIDR range.
+
+- Fixed users not being removed from the services list when their server stops being a services server.
+
+- Updated the location of the InspIRCd IRC channels.
+
+- Updated the vendored libraries.
+
+- Updated the Windows dependencies.
+
 ### InspIRCd 3.17.1
 
 **This version of InspIRCd was released on 2024-06-28.**
