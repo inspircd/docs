@@ -6,6 +6,30 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.5.0
+
+**This version of InspIRCd was released on 2025-01-04.**
+
+- Added a "sslrehash" command to the helper script (requires the sslrehashsignal module).
+
+- Added support for explicitly disabling the ojoin and operprefix characters.
+
+- Fixed a compiler warning on BSD.
+
+- Fixed a crash from {fmt} when writing the pid file fails.
+
+- Fixed clearing the output buffer in the pgsql module.
+
+- Fixed matching extended bans when multiple bans of a specific type are set.
+
+- Fixed stripping multiple formatting codes in a row.
+
+- Fixed various compiler warnings on Haiku.
+
+- Improved the format of the RPL_CREATED numeric message.
+
+- Updated the vendored libraries.
+
 ### InspIRCd 4.4.0
 
 **This version of InspIRCd was released on 2024-11-02.**
