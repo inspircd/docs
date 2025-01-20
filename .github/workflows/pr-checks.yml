@@ -5,14 +5,19 @@ on:
   - workflow_dispatch
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
             sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
-            sudo pip3 install -r requirements.txt .
+
+      - name: Create the Python virtual environment
+        run: |
+            python3 -mvenv venv
+            source ./venv/bin/activate
+            pip3 install --requirement requirements.txt .
 
       - name: Check for broken redirects
         run: ./tools/find-broken-redirects

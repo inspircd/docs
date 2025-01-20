@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,10 +23,16 @@ jobs:
       - name: Install dependencies
         run: |
             sudo apt-get install python3-pip python3-setuptools python3-wheel --assume-yes --install-recommends
-            sudo pip3 install -r requirements.txt .
+
+      - name: Create the Python virtual environment
+        run: |
+            python3 -mvenv venv
+            source ./venv/bin/activate
+            pip3 install --requirement requirements.txt .
 
       - name: Build the docs site
         run: |
+          source ./venv/bin/activate
           mkdocs build
 
       - name: Upload docs site artifact
