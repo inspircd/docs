@@ -17,6 +17,7 @@ nav:
         - Extended Bans: 4/extended-bans.md
         - User Modes: 4/user-modes.md
         - Modules: 4/modules/index.md
+        - Exemptions: 4/exemptions.md
         - SNOMasks: 4/snomasks.md
         - Change Log: 4/change-log.md
     - Downloads: https://github.com/inspircd/inspircd/releases/latest

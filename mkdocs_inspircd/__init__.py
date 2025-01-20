@@ -119,6 +119,15 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             for mode in module["umodes"]["chars"]
         ]
 
+    def exemptions(self, config, version):
+        modules = self.modules(config, version)
+        return [
+            {**exemption, "module": module["name"]}
+            for module in modules
+            if "exemptions" in module
+            for exemption in module["exemptions"]
+        ]
+
     def extbans(self, config, type, version):
         modules = self.modules(config, version)
         return [
@@ -222,6 +231,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         context = {
             "module_chmodes": self.chmodes(config, version),
             "module_umodes": self.umodes(config, version),
+            "module_exemptions": self.exemptions(config, version),
             "acting_module_extbans": self.extbans(config, "Acting", version),
             "matching_module_extbans": self.extbans(config, "Matching", version),
             "module_snomasks": self.snomasks(config, version),

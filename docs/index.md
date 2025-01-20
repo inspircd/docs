@@ -37,6 +37,7 @@ title: Introduction
     - [Extended Bans](/4/extended-bans)
 - [User Modes](/4/user-modes)
 - [Modules](/4/modules)
+- [Exemptions](/4/exemptions)
 - [SNOMasks](/4/snomasks)
 - [Change Log](/4/change-log)
     - [Overview of v4](/4/overview)

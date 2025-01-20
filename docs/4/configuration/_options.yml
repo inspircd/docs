@@ -25,7 +25,7 @@ attributes:
   required: false
   default: null
   description: |-
-    The privileges to exempt ranked channel users from. See the notes for [the exemptchanops module](/4/modules/exemptchanops) for more information.
+    The privileges to exempt ranked channel users from. See the [the exemptions page](/4/exemptions) for more information.
 - name: extbanformat
   type: Text
   required: false
