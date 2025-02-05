@@ -6,6 +6,60 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.6.0
+
+**This version of InspIRCd was released on 2025-03-01.**
+
+- Added the `RPL_STATSCONN` numeric for compatibility with ircu.
+
+- Added the creating user's IP address to the chancreate oper snotice.
+
+- Added the real hostname and IP address of proxied WebSocket users to the whois output.
+
+- Added the user's IP address and userhost to the seenicks oper snotice.
+
+- Added the WebIRC origin name to the whois output.
+
+- Changed the `/ALLTIME` command to use the RPL_TIME numeric instead of a notice.
+
+- Changed the `/CBAN`, `/ELINE`, `/GLINE`, `/KLINE`, `/QLINE`, `/RLINE`, and `/ZLINE` commands to make the duration field optional (defaults to permanent).
+
+- Changed the dnsbl module to default to the record type if not otherwise specified.
+
+- Changed the httpd_stats module to pad base 64 output.
+
+- Deprecated support for bitmask-type DNSBL entries.
+
+- Fixed building the 005 numerics for users in removed connect classes.
+
+- Fixed finding the config file on portable installations (i.e. Windows).
+
+- Fixed linking against v3 servers when using the repeat module.
+
+- Fixed removing regular bans that look like an extban.
+
+- Fixed sending some rehash snotices to the announcement snomask character.
+
+- Fixed showing the correct mask when removing an extended ban.
+
+- Fixed the accuracy of human-readable durations when converting from the number of seconds.
+
+- Fixed the list of exemptions in the help.
+
+- Fixed the list of server notice masks.
+
+- Fixed TLS fingerprint fallback in SASL when using Atheme.
+
+- Improved the performance of the logging system.
+
+- Improved the time format used in `RPL_TIME`.
+
+- Optimised counting the local and global servers in `/LUSERS`.
+
+- Removed obsolete snotices sent when a server operator specifies the wrong server name in `/DIE` and `/RESTART`.
+
+- Updated the vendored libraries.
+
 ### InspIRCd 4.5.0
 
 **This version of InspIRCd was released on 2025-01-04.**

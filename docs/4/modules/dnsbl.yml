@@ -53,7 +53,7 @@ configuration:
     required: false
     default: null
     description: |-
-      **Required for the bitmask type!** A bitmask of DNSBL result types to match against.
+      **Required for the bitmask type!** *Deprecated!* A bitmask of DNSBL result types to match against.
   - name: domain
     type: Text
     required: true
@@ -135,7 +135,7 @@ configuration:
 
     Value   | Description
     ------- | -----------
-    bitmask | DNSBL results will be compared against the [bit mask](https://en.wikipedia.org/wiki/Mask_(computing)) specified in the bitmask field to see if the IP address in question is in a DNSBL. For example, `15` would match against DNSBL result types 1, 2, 4, and 8.
+    bitmask | *Deprecated!* DNSBL results will be compared against the [bit mask](https://en.wikipedia.org/wiki/Mask_(computing)) specified in the bitmask field to see if the IP address in question is in a DNSBL. For example, `15` would match against DNSBL result types 1, 2, 4, and 8.
     record  | DNSBL results will be compared against a numeric range of values. For example, `1-3,4,5` would match all DNSBL result types between 1 and 5.
 
   example: |-

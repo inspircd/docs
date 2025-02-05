@@ -1,1 +1,21 @@
-../../4/commands/_qline.yml
+name: QLINE
+oper_only: true
+syntax: >-
+  <nick>[,<nick>]+ [<duration> <reason>]
+description: |-
+  If `<duration>` and `<reason>` are specified then prevents a nickname from being used. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero then the Q-line will be permanent.
+
+  Otherwise, if just `<nick>` is specified, removes a reservation on a nickname.
+example:
+- description: |-
+    Q-lines Adam for one day with the reason "Testing"
+  text: |-
+    /QLINE Adam 1d :Testing
+- description: |-
+    Q-lines Sadie for one day with the reason "Testing"
+  text: |-
+    /QLINE Sadie 86400 :Testing
+- description: |-
+    Removes a Q-line on Adam
+  text: |-
+    /QLINE Adam
