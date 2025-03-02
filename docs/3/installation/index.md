@@ -6,10 +6,6 @@ title: v3 Installation
 
 There are many different methods for installing InspIRCd. You should pick the method which fits your needs best.
 
-### Docker
-
-An official InspIRCd Docker image is available on [Docker Hub](https://hub.docker.com/r/inspircd/inspircd-docker/).
-
 ### Packages
 
 The InspIRCd team provide prebuilt packages for some common platforms. If you are using one of these platforms and do not want to install any third party modules it is recommended that you use one of these.

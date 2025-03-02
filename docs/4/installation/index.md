@@ -8,7 +8,7 @@ There are many different methods for installing InspIRCd. You should pick the me
 
 ### Docker
 
-An official InspIRCd Docker image will be available on [Docker Hub](https://hub.docker.com/r/inspircd/inspircd-docker/) when v4 is released. Until that happens you will have to build from source.
+An official InspIRCd Docker image is available on [Docker Hub](https://hub.docker.com/r/inspircd/inspircd-docker/).
 
 ### Packages
 
