@@ -36,5 +36,5 @@ chmodes:
       /MODE #channel +F 3:5
 
 exemptions:
-- name: flood
+- name: nickflood
   description: Allows exempted users to change nicknames at a higher rate than channel mode `F` (nickflood) allows.
