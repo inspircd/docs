@@ -33,6 +33,10 @@ chmodes:
       Prevents users from changing their nickname whilst in the channel.
   example: ""
 
+exemptions:
+- name: nonick
+  description: Allows exempted users to change their nick when on a channel with the `N` (nonick) mode set.
+
 extbans:
   description: ""
   chars:

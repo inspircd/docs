@@ -36,3 +36,7 @@ chmodes:
       Prevents users from speaking for 60 seconds after joining
     text: |-
       /MODE #channel +d 60
+
+exemptions:
+- name: delaymsg
+  description: Allows exempted users to send a message to a newly joined channel whilst channel mode `d` (delaymsg) is set.
