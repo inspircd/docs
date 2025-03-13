@@ -1,5 +1,5 @@
 ---
-title: v{{ version }} Module Manager
+title: v4 Module Manager
 ---
 
 ## Managing third-party modules with Module Manager
@@ -24,12 +24,16 @@ To upgrade modules use the `./modulemanager upgrade` command. All outdated modul
 
 The `./modulemanager list` command shows the names, versions, and descriptions of all available modules.
 
-### Other Methods
+### Other methods
 
 If for some reason you are unable to use the Module Manager you can download and install modules manually using the following steps:
 
-1. Download the module you wish to install from [the inspircd-contrib repository on GitHub](https://github.com/inspircd/inspircd-contrib/tree/master/{{version}}).
+1. Download the module you wish to install from [the inspircd-contrib repository on GitHub](https://github.com/inspircd/inspircd-contrib/tree/master/4).
 
 2. Move it to the ./src/modules directory.
 
 3. Run `make install` to build and install the module.
+
+### Moved modules
+
+When a module is removed from the main repository we will often move it to the Module Manager. See [the moved modules page](/4/moved-modules) for more information.
