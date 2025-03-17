@@ -2,9 +2,6 @@
 title: v4 Overview
 ---
 
-!!! note ""
-    This page is a work in progress. If you would like to suggest additions to this page [please comment on issue #187](https://github.com/inspircd/docs/issues/187).
-
 ## v4 Overview
 
 This page contains an overview of the biggest changes in InspIRCd v4.
