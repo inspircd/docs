@@ -36,6 +36,11 @@ To load this module use the following `<module>` tag:
 #### `<{{ tag.name | join('>` &amp; `<') }}>`
 {% endif %}
 
+{% if tag.added %}
+!!! note "[New in v{{ tag.added }}!](/{{ tag.added | first }}/change-log/#inspircd-{{ tag.added | replace(".", "") }})"
+    If you are using an older version you will need to upgrade to use this tag.
+{% endif %}
+
 {{ tag.description }}
 
 {% if tag.attributes %}
