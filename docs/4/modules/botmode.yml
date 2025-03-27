@@ -1,7 +1,7 @@
 name: botmode
 
 description: |-
-  This module adds user mode `B` (bot) which marks users with it set as bots in their `/WHOIS` response.
+  This module adds user mode `B` (bot) which marks users with it set as bots. See [the IRCv3 Bot Mode specification](https://ircv3.net/specs/extensions/bot-mode) for details.
 
   Depending on your module-specific configuration this can also prevents a bot from using non-bot aliases (requires [the alias module](/4/modules/alias)) and from receiving channel history on join (requires [the chanhistory module](/4/modules/chanhistory)).
 
