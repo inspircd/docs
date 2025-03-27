@@ -55,7 +55,13 @@ attributes:
   required: false
   default: 'never'
   description: |-
-    Whether to automatically log server operators in when they connect to the server.
+    Whether to automatically log this server operator in when they connect to the server.
+- name: maxchans
+  type: Number
+  required: false
+  default: '20'
+  description: |-
+    If defined then the maximum number of channels this server operator can be in.
 - name: commands
   type: Text
   required: false
@@ -108,6 +114,7 @@ example: |-
         type="NetAdmin"
         vhost="staff.example.net"
         autologin="never"
+        maxchans="100"
         commands="-* KILL ZLINE"
         privs="users/auspex -servers/auspex"
         chanmodes="-*+P"
