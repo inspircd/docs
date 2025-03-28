@@ -4,6 +4,29 @@ description: |-
   This module adds user mode `h` (helpop) which marks a user as being available for help.
 
 configuration:
+- name: helpchan
+  added: 4.7.0
+  description: |-
+    The `<helpchan>` tag defines a channel which helpers are granted privileges in. This tag can be defined as many times as required.
+  attributes:
+  - name: name
+    type: Text
+    required: true
+    default: null
+    description: |-
+      A glob pattern for a channel name.
+  - name: prefix
+    type: Text
+    required: false
+    default: 'o'
+    description: |-
+      One or more channel prefix modes to grant on join.
+  details: ""
+  example: |-
+    ```xml
+    <goodchan name="#help-*"
+              prefix="o">
+    ```
 - name: helpmode
   description: |-
     The `<helpmode>` tag defines settings about how the helpmode module should behave. This tag can only be defined once.

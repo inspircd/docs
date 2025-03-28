@@ -6,6 +6,36 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.7.0
+
+**This version of InspIRCd was released on 2025-03-29.**
+
+- [Fixed a **crash** when a server operator with a custom connect class quits.](/security/2025-01)
+
+- Added extban names to help.example.conf.
+
+- Added support for help channels in which users with user mode `h` (helpop) will be automatically granted a channel prefix mode.
+
+- Added support to Module Manager for linking to module documentation on install.
+
+- Added the `%duration.long%` and `%remaining.long%` template variables to `<options:xlinequit>` and `<security:publicxlinequit>`.
+
+- Added the `SAFERATE` 005 token to allow modern clients (e.g. Soju) to know when fakelag is enabled and relax their internal message buffering.
+
+- Changed various messages to use long duration strings (e.g. "1 day, 2 hours, 3 minutes") instead of short duration strings (e.g. 1d2h3m).
+
+- Developer: added `Duration::ToLongString` to convert a duration to a format which is more readable.
+
+- Developer: added a formatting overload of the `ModuleException` constructor.
+
+- Developer: added constants to the `Time` namespace for commonly used time formats.
+
+- Fixed flushing the standard output stream after startup when not forking into the background.
+
+- Fixed help.example.conf to correctly list all current exemptions, extbans, and modes.
+
+- Improved the performance of formatting various messages.
+
 ### InspIRCd 4.6.0
 
 **This version of InspIRCd was released on 2025-03-01.**

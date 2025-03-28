@@ -4,6 +4,10 @@ title: Security Advisories
 
 This page lists all security advisories which have been released for InspIRCd since the start of 2019.
 
+## 2025
+
+* [2025-01](/security/2025-01) &mdash; Unhandled exception from the {fmt} library.
+
 ## 2024
 
 * [2024-01](/security/2024-01) &mdash; Null pointer dereference in the spanningtree module.
