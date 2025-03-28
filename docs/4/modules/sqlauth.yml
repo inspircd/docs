@@ -27,7 +27,7 @@ configuration:
     required: false
     default: md5,sha256
     description: |-
-      A comma-delimited list of hash algorithms to check the password against.
+      *Deprecated!* A comma-delimited list of hash algorithms to check the password against.
   - name: kdf
     type: Text
     required: false
@@ -61,27 +61,17 @@ configuration:
     $dhost      | The public hostname of the connecting user.
     $duser      | The public username of the connecting user.
     $host       | The real hostname of the connecting user.
-    $md5pass    | An MD5 hash of the password sent with `/PASS` by the connecting user (requires [the md5 module](/4/modules/md5)).
+    $md5pass    | *Deprecated!* An MD5 hash of the password sent with `/PASS` by the connecting user (requires [the md5 module](/4/modules/md5)).
     $nick       | The nickname of the connecting user.
-    $pass       | The password sent with `/PASS` by the connecting user.
+    $pass       | *Deprecated!* The password sent with `/PASS` by the connecting user.
     $real       | The real name of the connecting user.
     $server     | The name of the server the connecting user connected to.
     $sid        | The unique identifier of the server the connecting user connected to.
-    $sha256pass | A SHA-256 hash of the password sent with `/PASS` by the connecting user (requires [the sha2 module](/4/modules/sha2)).
+    $sha256pass | *Deprecated!* A SHA-256 hash of the password sent with `/PASS` by the connecting user (requires [the sha2 module](/4/modules/sha2)).
     $user       | The real username of the connecting user.
     $uuid       | The UUID of the connecting user.
 
   example: |-
-    Checks the password using the existence of a row returned from the database:
-
-    ```xml
-    <sqlauth hash="sha256"
-             dbid="sqlauth"
-             killreason="Access denied"
-             query="SELECT * FROM users WHERE name='$nick' AND password='$sha256pass' LIMIT 1"
-             verbose="no">
-    ```
-
     Checks the password by comparing against a database field specified in the config:
 
     ```xml
@@ -92,6 +82,17 @@ configuration:
              query="SELECT * FROM users WHERE name='$nick' LIMIT 1"
              verbose="no">
     ```
+
+    *Deprecated!* Checks the password using the existence of a row returned from the database:
+
+    ```xml
+    <sqlauth hash="sha256"
+             dbid="sqlauth"
+             killreason="Access denied"
+             query="SELECT * FROM users WHERE name='$nick' AND password='$sha256pass' LIMIT 1"
+             verbose="no">
+    ```
+
 - name: sqlexemption
   description: |-
     The `<sqlexemption>` tag defines nick!user@host or nick!user@ip/cidr mask which are exempt from the authentication requirement. This tag can be defined as many times as required.
@@ -109,4 +110,6 @@ configuration:
     ```
 
 special_notes: |-
+  {% include "4/modules/_hash_table.md" %}
+
   {% include "4/modules/_sql_table.md" %}
