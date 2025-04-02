@@ -138,7 +138,7 @@ Name                                                      | Description
 [repeat](/4/modules/repeat)                               | Adds channel mode E (repeat) which helps protect against spammers which spam the same message repeatedly.
 [restrictchans](/4/modules/restrictchans)                 | Prevents unprivileged users from creating new channels.
 [restrictmsg](/4/modules/restrictmsg)                     | Prevents users who are not server operators from messaging each other.
-[rline](/4/modules/rline)                                 | Adds the /RLINE command which allows server operators to prevent users matching a nickname!username@hostname+realname regular expression from connecting to the server.
+[rline](/4/modules/rline)                                 | Adds the /RLINE command which allows server operators to prevent users matching a "nickname!username@hostname realname" regular expression from connecting to the server.
 [rmode](/4/modules/rmode)                                 | Allows removal of channel list modes using glob patterns.
 [sajoin](/4/modules/sajoin)                               | Adds the /SAJOIN command which allows server operators to force users to join one or more channels.
 [sakick](/4/modules/sakick)                               | Adds the /SAKICK command which allows server operators to kick users from a channel without having any privileges in the channel.
