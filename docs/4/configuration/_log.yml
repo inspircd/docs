@@ -56,7 +56,7 @@ details: |+
   CONFIG               | warning<br>normal<br>debug             | Messages relating to the configuration.
   CONNECTCLASS         | normal<br>debug                        | Messages relating to [connect classes](#connect).
   CULL                 | debug                                  | Messages relating to object culling.
-  LOG                  | critical<br>normal                     | Messages relating to logging.
+  LOG                  | critical<br>normal<br>debug            | Messages relating to logging.
   MODE                 | warning                                | Messages relating to modes.
   MODULE               | critical<br>normal<br>debug            | Messages relating to modules.
   SERVICE              | debug                                  | Messages relating to service registration.
@@ -69,7 +69,7 @@ details: |+
   core_channel         | debug                                  | Messages relating to channels.
   core_dns             | critical<br>warning<br>normal<br>debug | Messages relating to DNS lookups.
   core_hostname_lookup | debug                                  | Messages relating to user hostname lookups.
-  core_info            | warning                                | Messages relating to server-provided information.
+  core_info            | warning<br>debug                       | Messages relating to server-provided information.
   core_oper            | critical<br>normal                     | Messages relating to server operators.
   core_reloadmodule    | debug                                  | Messages relating to the RELOADMODULE command.
   core_who             | debug                                  | Messages relating to the WHO command.
@@ -78,6 +78,7 @@ details: |+
   m_cap                | debug                                  | Messages relating to [the cap module](/4/modules/cap).
   m_chanlog            | normal                                 | Messages relating to [the chanlog module](/4/modules/chanlog).
   m_cloak              | debug                                  | Messages relating to [the cloak module](/4/modules/cloak).
+  m_cloak_md5          | normal                                 | Messages relating to [the cloak_md5 module](/4/modules/cloak_md5).
   m_cloak_sha256       | normal                                 | Messages relating to [the cloak_sha256 module](/4/modules/cloak_sha256).
   m_cloak_user         | debug                                  | Messages relating to [the cloak_user module](/4/modules/cloak_user).
   m_codepage           | debug                                  | Messages relating to [the codepage module](/4/modules/codepage).
@@ -86,7 +87,7 @@ details: |+
   m_customtitle        | normal                                 | Messages relating to [the customtitle module](/4/modules/customtitle).
   m_dccallow           | debug                                  | Messages relating to [the dccallow module](/4/modules/dccallow).
   m_disable            | normal<br>debug                        | Messages relating to [the disable module](/4/modules/disable).
-  m_dnsbl              | debug                                  | Messages relating to [the dnsbl module](/4/modules/dnsbl).
+  m_dnsbl              | normal<br>debug                        | Messages relating to [the dnsbl module](/4/modules/dnsbl).
   m_filter             | warning<br>normal<br>debug             | Messages relating to [the filter module](/4/modules/filter).
   m_gateway            | normal<br>debug                        | Messages relating to [the gateway module](/4/modules/gateway).
   m_geo_maxmind        | normal<br>debug                        | Messages relating to [the geo_maxmind module](/4/modules/geo_maxmind).
