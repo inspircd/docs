@@ -26,29 +26,29 @@ title: v4 Breaking Changes
 
 - The blockcaps module has been removed. If you wish to keep this behaviour then you should load the anticaps module instead. See the documentation in modules.example.conf for more details.
 
-- The censor module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install censor` to install it.
+- The censor module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration or run `./modulemanager install censor` to install it.
 
-- The clones module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install clones` to install it.
+- The clones module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration or run `./modulemanager install clones` to install it.
 
 - The flashpolicyd module has been removed with no replacement. This module is no longer needed as [Flash Player has been retired by Adobe](https://web.archive.org/web/20170801000737/https://blogs.adobe.com/conversations/2017/07/adobe-flash-update.html).
 
-- The hostchange module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install hostchange` to install it, or migrate to the [`cloak_static`](/4/modules/cloak_static) module and/or the [`cloak_user`](/4/modules/cloak_user) module.
+- The hostchange module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install hostchange` to install it, or migrate to the [`cloak_static`](/4/modules/cloak_static) module and/or the [`cloak_user`](/4/modules/cloak_user) module.
 
-- The lockserv module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install lockserv` to install it.
+- The lockserv module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration or run `./modulemanager install lockserv` to install it.
 
-- The modenotice module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration or run `./modulemanager install modenotice` to install it.
+- The modenotice module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration or run `./modulemanager install modenotice` to install it.
 
 - The nationalchars module has been removed. In order to upgrade you should migrate to [the codepage module](/4/modules/codepage).
 
-- The nopartmsg module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
+- The nopartmsg module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install nopartmsg` to install it, or migrate to [the muteban module](/4/modules/muteban) which now also applies to part messages.
 
-- The regex_pcre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_pcre` to install it, or migrate to [the regex_pcre2 module](/4/modules/regex_pcre2) which also provides the "pcre" regex engine so it should be a drop-in replacement.
+- The regex_pcre module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_pcre` to install it, or migrate to [the regex_pcre2 module](/4/modules/regex_pcre2) which also provides the "pcre" regex engine so it should be a drop-in replacement.
 
-- The regex_tre module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_tre` to install it, or migrate to [the regex_stdlib module](/4/modules/regex_stdlib).
+- The regex_tre module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_tre` to install it, or migrate to [the regex_stdlib module](/4/modules/regex_stdlib).
 
-- The ssl_mbedtls module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install ssl_mbedtls` to install it, or migrate to either [the ssl_gnutls module](/4/modules/ssl_gnutls) or [the ssl_openssl module](/4/modules/ssl_openssl).
+- The ssl_mbedtls module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install ssl_mbedtls` to install it, or migrate to either [the ssl_gnutls module](/4/modules/ssl_gnutls) or [the ssl_openssl module](/4/modules/ssl_openssl).
 
-- The userip module has been moved to inspircd-contrib. In order to upgrade either remove this module from your configuration, run `./modulemanager install userip` to install it, or migrate to [the check module](/4/modules/check).
+- The userip module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install userip` to install it, or migrate to [the check module](/4/modules/check).
 
 ### Config
 
@@ -128,4 +128,4 @@ title: v4 Breaking Changes
 
 - The `/FPART` command has been removed. If you wish to keep this behaviour you should add an alias that calls the `/REMOVE` command.
 
-- The `/PROTOCTL` command has been moved to inspircd-contrib. If you wish to keep this behaviour then you can run `./modulemanager install protoctl` to install it.
+- The `/PROTOCTL` command has been [moved to inspircd-contrib](/4/moved-modules). If you wish to keep this behaviour then you can run `./modulemanager install protoctl` to install it.
