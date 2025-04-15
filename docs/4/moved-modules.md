@@ -12,7 +12,7 @@ These modules will not be updated to the next major version of InspIRCd. If you 
 
 ### censor
 
-This module is trivial to bypass as it only provides basic text matching. It is recommended that you migrate to [the filter module](/4/modules/filter) for server-wide message blocking using regular expressions. You might also find [the chanfilter](/4/modules/chanfilter) module useful to allow channels to configure their own filtered messages using glob patterns.
+This module is trivial to bypass as it only provides basic text matching. It also requires config accesss to add or remove entries. It is recommended that you migrate to [the filter module](/4/modules/filter) for server-wide message blocking using regular expressions. You might also find [the chanfilter](/4/modules/chanfilter) module useful to allow channels to configure their own filtered messages using glob patterns.
 
 ### clones
 
@@ -20,7 +20,7 @@ This module was intended for finding clones used for flooding but the way malici
 
 ### hostchange
 
-This module is obsolete thanks to the new v4 cloaking system which implements the same behaviour. Users of this module should consider migrating to [the cloak_user module](/4/modules/cloak_user) if they use the "addaccount" or "addnick" actions and [the cloak_static module](/4/modules/cloak_static) if they use the "set" action.
+This module is obsolete thanks to the new v4 cloaking system which implements the same behaviour. It also only applies hostnames on connect which means that hostnames are not updated on change and non-SASL account logins will not result in a hostname change. Users of this module should consider migrating to [the cloak_user module](/4/modules/cloak_user) if they use the "addaccount" or "addnick" actions and [the cloak_static module](/4/modules/cloak_static) if they use the "set" action.
 
 ### lockserv
 
@@ -44,7 +44,7 @@ This module depends on TRE library which is less commonly used. The main benefit
 
 ### ssl_mbedtls
 
-This module was never really feature complete to the same level as the ssl_gnutls or ssl_openssl modules. Most notably it never gained SNI support or support for SPKI fingerprints. Additionally, the current mbedTLS maintainers have also broken C++ support multiple times (e.g. mbedTLS bugs #7087 and #8866) and relicensed the library from GPLv2 to the Apache License which means we can no longer ship binaries linked against it. Considering these factors it was decided to remove the module. Users are recommended to migrate to [the ssl_gnutls module](/4/modules/ssl_gnutls).
+This module was never really feature complete to the same level as the ssl_gnutls and ssl_openssl modules. Most notably it never gained SNI support or support for SPKI fingerprints. Additionally, the current mbedTLS maintainers have also broken C++ support multiple times (e.g. mbedTLS bugs #7087 and #8866) and relicensed the library from GPLv2 to the Apache License which means we can no longer ship binaries linked against it. Considering these factors it was decided to remove the module. Users are recommended to migrate to [the ssl_gnutls module](/4/modules/ssl_gnutls).
 
 ### userip
 
