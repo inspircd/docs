@@ -43,7 +43,7 @@ attributes:
   required: false
   default: null
   description: |-
-    **Required for UNIX listeners!** The UNIX socket endpoint to listen for connections on (not supported on Windows).
+    **Required for UNIX listeners!** The UNIX socket endpoint to listen for connections on.
 - name: permissions
   type: Number
   required: false
@@ -55,7 +55,7 @@ attributes:
   required: false
   default: 'No'
   description: |-
-    *UNIX listeners only!* Whether to replace the UNIX socket file if it already exists (not supported on Windows).
+    *UNIX listeners only!* Whether to replace the UNIX socket file if it already exists.
 - name: type
   type: Text
   required: false
