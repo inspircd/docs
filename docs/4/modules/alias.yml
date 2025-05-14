@@ -117,11 +117,11 @@ special_notes: |-
   If you are using Anope for your services add the following tag to your configuration:
 
   ```xml
-  <include file="examples/services/anope.example.conf">
+  <include file="&dir.example;/services/anope.example.conf">
   ```
 
   If you are using Atheme for your services add the following tag to your configuration:
 
   ```xml
-  <include file="examples/services/atheme.example.conf">
+  <include file="&dir.example;/services/atheme.example.conf">
   ```

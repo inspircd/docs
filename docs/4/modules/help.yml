@@ -75,5 +75,5 @@ special_notes: |-
   To use this add the following tag to your configuration:
 
   ```xml
-  <include file="examples/help.example.conf">
+  <include file="&dir.example;/help.example.conf">
   ```

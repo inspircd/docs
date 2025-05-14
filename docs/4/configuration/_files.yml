@@ -19,8 +19,8 @@ details: |-
 
   File paths are **NOT** relative to the current config file.
 example: |-
-  Use the file `examples/motd.example.txt` as the message of the day:
+  Use the file `&dir.example;/motd.example.txt` as the message of the day:
 
   ```xml
-  <files motd="examples/motd.example.txt">
+  <files motd="&dir.example;/motd.example.txt">
   ```

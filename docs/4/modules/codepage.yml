@@ -99,8 +99,8 @@ special_notes: |-
 
   Code page       | Include Tag
   --------------- | -----------
-  ascii           | `<include file="examples/codepages/ascii.example.conf">`
-  iso-8859-1      | `<include file="examples/codepages/iso-8859-1.example.conf">`
-  iso-8859-2      | `<include file="examples/codepages/iso-8859-2.example.conf">`
-  rfc1459         | `<include file="examples/codepages/rfc1459.example.conf">`
-  strict-rfc1459  | `<include file="examples/codepages/strict-rfc1459.example.conf">`
+  ascii           | `<include file="&dir.example;/codepages/ascii.example.conf">`
+  iso-8859-1      | `<include file="&dir.example;/codepages/iso-8859-1.example.conf">`
+  iso-8859-2      | `<include file="&dir.example;/codepages/iso-8859-2.example.conf">`
+  rfc1459         | `<include file="&dir.example;/codepages/rfc1459.example.conf">`
+  strict-rfc1459  | `<include file="&dir.example;/codepages/strict-rfc1459.example.conf">`
