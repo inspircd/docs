@@ -112,6 +112,16 @@ configuration:
     ```
 
 special_notes: |-
+  Unfortunately some clients do not forward unknown commands to the server which can break aliases. To get around this:
+
+  * If using Irssi load [dispatch.pl](https://github.com/irssi/scripts.irssi.org/blob/master/scripts/dispatch.pl).
+
+  * If using WeeChat run `/set irc.network.send_unknown_commands on`.
+
+  * Otherwise, try prefixing the alias with `/QUOTE` or `/RAW`.
+
+  ---
+
   If you are using services you may find it useful to use one of the predefined service files which ship with InspIRCd.
 
   If you are using Anope for your services add the following tag to your configuration:
