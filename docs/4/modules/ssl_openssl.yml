@@ -163,6 +163,13 @@ configuration:
     default: 'Yes'
     description: |-
       Whether to request a TLS (SSL) certificate from clients.
+  - name: securitylevel
+    type: Number
+    required: false
+    default: 0
+    added: 4.8.0
+    description: |-
+      The [OpenSSL security level](https://docs.openssl.org/master/man3/SSL_CTX_set_security_level/#default-callback-behaviour) to use. Must be set to at least 1; 0 disables setting the security level.
   - name: serverclearoptions
     type: Number
     required: false
@@ -218,6 +225,7 @@ configuration:
                 keyfile="key.pem"
                 renegotiation="no"
                 requestclientcert="yes"
+                securitylevel="0"
                 tlsv11="no"
                 tlsv12="yes"
                 tlsv13="yes">

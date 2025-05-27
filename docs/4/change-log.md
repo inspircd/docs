@@ -6,6 +6,50 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.8.0
+
+**This version of InspIRCd was released on 2025-08-02.**
+
+- Added `<sslprofile:securitylevel>` to the ssl_openssl module for setting the OpenSSL security level.
+
+- Added an OpenRC init script to the scripts directory.
+
+- Added support for building against system packages for vendored libraries.
+
+- Added support for regex flags to the rline module.
+
+- Changed --portable to imply --disable-ownership.
+
+- Changed some config keys removed in v4 to hard error in order to help upgrading users.
+
+- Developer: added a method to the DNS manager for getting the default timeout.
+
+- Fixed a confusing error message from the sqlite3 moduile.
+
+- Fixed a loop caused by logging from logger when using a module logger.
+
+- Fixed configuring files with a junk group and user when configured with --disable-ownership.
+
+- Fixed enforcing the use of the Public Suffix List in link data.
+
+- Fixed link data being emitted with an empty value instead of no value.
+
+- Fixed mapping the deprecated verbose log level to debug as intended.
+
+- Fixed sorting the `/COMMANDS` output.
+
+- Fixed the permissions of the launchd service plist.
+
+- Fixed the system PSL database not being included in the AppArmor profile.
+
+- Improved the performance of the `/COMMANDS` command.
+
+- Updated the vendored libraries.
+
+- Updated the Windows dependencies.
+
+- Upgraded the Windows dependency system to use Conan 2.
+
 ### InspIRCd 4.7.0
 
 **This version of InspIRCd was released on 2025-03-29.**

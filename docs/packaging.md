@@ -4,6 +4,10 @@ title: Packaging advice
 
 ## Packaging Advice
 
+### Mailing List
+
+Sadie provides release notifications for package maintainers via email. If you want to be added to Sadie's email list please ask in [#inspircd.dev on Teranova](/support).
+
 ### General Advice
 
 Other than to [older branches which are still supported](https://github.com/inspircd/inspircd/security/policy#supported-versions) we generally do not provide non-security patch backports due to it requiring a significant amount of work on our behalf. Please try to avoid backporting patches by only shipping the latest version of InspIRCd wherever possible.
@@ -27,6 +31,18 @@ When performing a system-wide build you may be asked to specify a user and group
 
 # If you want to configure ownership yourself.
 ./configure --disable-ownership ...
+```
+
+## System Libraries
+
+If your distribution's policies require building against specific versions of libraries rather than using our vendored versions you can specify some environment variables to enable this (requires InspIRCd 4.8.0 or newer):
+
+```sh
+# Build against the nodejs http_parser library from the system.
+export SYSTEM_HTTP_PARSER=1
+
+# Build against the UTF8-CPP library from the system.
+export SYSTEM_UTFCPP=1
 ```
 
 ### Extra Modules

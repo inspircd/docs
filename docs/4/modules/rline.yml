@@ -20,6 +20,12 @@ configuration:
     default: 'No'
     description: |-
       Whether to attempt to match users when they change their nickname.
+  - name: useflags
+    type: Boolean
+    required: false
+    default: 'No'
+    description: |-
+      Whether to allow regex flags (`/pattern/flags`) to be used in a filter regular expression.
   - name: zlineonmatch
     type: Boolean
     required: false
@@ -35,6 +41,7 @@ configuration:
     ```xml
     <rline engine="pcre"
            matchonnickchange="no"
+           useflags="yes"
            zlineonmatch="no">
     ```
 

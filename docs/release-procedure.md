@@ -34,3 +34,4 @@ Name       | Description
 0. Update `INSP_VERSION` in the [Docker container build script](https://github.com/inspircd/docker/blob/master/.github/workflows/build-container.yml).
 0. Update the topic in the InspIRCd IRC channels.
 0. Post a link to the news post on the [InspIRCd social media accounts](/support).
+0. Email package maintainers informing them of the release (if not already done in advance).

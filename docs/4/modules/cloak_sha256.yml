@@ -64,6 +64,13 @@ configuration:
     default: null
     description: |-
       If defined and the module was built against libpsl then the path to a Public Suffix List database to use instead of `<cloak:hostparts>` for finding the public part of a hostname. Can also be set to `system` to use the system database.
+  - name: enforcepsl
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 4.8.0
+    description: |-
+      Whether to enforce PSL usage across servers. This exists to work around a bug in older v4 releases and should always be enabled on new servers.
   - name: class
     type: String
     required: false
@@ -90,6 +97,7 @@ configuration:
            hostparts="3"
            pathparts="1"
            psl="system"
+           enforcepsl="yes"
            class="">
     ```
 
