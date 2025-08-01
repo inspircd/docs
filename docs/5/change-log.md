@@ -10,7 +10,7 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 5.0.0dev1
 
-**This development snapshot version of InspIRCd was released on 2023-09-01.**
+**This development snapshot version of InspIRCd was released on 2025-08-01.**
 
 - Added `<cloak:username>` for cloak_user cloaks to allow assigning a static username.
 
