@@ -48,4 +48,3 @@ repo_url: https://github.com/inspircd/docs
 site_description: InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Windows systems.
 site_name: InspIRCd Documentation
 site_url: https://docs.inspircd.org/
-use_directory_urls: true
