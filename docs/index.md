@@ -15,6 +15,7 @@ title: Introduction
 - [Security Advisories](/security)
 - [Support](/support)
 - [Tutorials](/tutorials)
+- [Project Rules](/rules)
 
 ### Developer
 
