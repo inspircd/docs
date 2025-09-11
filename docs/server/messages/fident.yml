@@ -1,4 +1,4 @@
-name: FHOST
+name: FIDENT
 source: uid
 syntax:
   fields:
@@ -13,19 +13,19 @@ example:
 - description: |-
     Changes the displayed username of 36DAAAAAA to wibble
   text: |-
-    :36DAAAAAA FHOST wibble
+    :36DAAAAAA FIDENT wibble
 - description: |-
     [**1206+**] Changes the displayed username of 36DAAAAAA to wibble
   text: |-
-    :36DAAAAAA FHOST wibble *
+    :36DAAAAAA FIDENT wibble *
 - description: |-
     [**1206+**] Changes the real username of 36DAAAAAA to wibble
   text: |-
-    :36DAAAAAA FHOST * wibble
+    :36DAAAAAA FIDENT * wibble
 - description: |-
     [**1206+**] Changes the displayed and real username of 36DAAAAAA to wibble
   text: |-
-    :36DAAAAAA FHOST wibble wibble
+    :36DAAAAAA FIDENT wibble wibble
 history:
   1206: |-
     Support for changing the real username was added.
