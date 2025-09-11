@@ -31,7 +31,7 @@ extra: |-
   modules            | Server  | N/A                                   | A module state change on the originating server.
   operquit           | User    | N/A                                   | The quit message to show to server operators when the tatget user quits.
   swhois             | User    | swhois                                | The custom WHOIS message of the target user.
-  topiclock          | Channel | topiclock (v3), services (v4)         | Marks the target channel as having an immutable topic.
+  topiclock          | Channel | topiclock (v3)<br>services (v4)       | Marks the target channel as having an immutable topic.
   webirc-gateway     | User    | cgiirc (v3)<br>gateway (v4)           | The name of the WebIRC gateway that the target user connected via.
   websocket-origin   | User    | websocket (v4)                        | The URL of the WebSocket origin the target user is connecting from.
   websocket-realhost | User    | websocket (v4)                        | The hostname of the reverse proxy the target user connected via.
