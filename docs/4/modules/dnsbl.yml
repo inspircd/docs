@@ -124,11 +124,11 @@ configuration:
     Variable      | Description
     ------------- | -----------
     %dnsbl%       | The name of the DNSBL (from `<dnsbl:name>`)
-    %dnsbl.url%   | **New in v4.1.0!** The name of the DNSBL (from `<dnsbl:name>`) encoded for use in an URL.
+    %dnsbl.url%   | [**New in v4.1.0!**](/4/change-log/#inspircd-410) The name of the DNSBL (from `<dnsbl:name>`) encoded for use in an URL.
     %ip%          | The IP address of the user.
-    %network%     | **New in v4.1.0!** The name of the IRC network (from `<server:network>`).
-    %network.url% | **New in v4.1.0!** The name of the IRC network (from `<server:network>`) encoded for use in an URL.
-    %reason%      | **New in v4.4.0!** A human readable description of the DNSBL result (from `<dnsblreply>`).
+    %network%     | [**New in v4.1.0!**](/4/change-log/#inspircd-410) The name of the IRC network (from `<server:network>`).
+    %network.url% | [**New in v4.1.0!**](/4/change-log/#inspircd-410) The name of the IRC network (from `<server:network>`) encoded for use in an URL.
+    %reason%      | [**New in v4.4.0!**](/4/change-log/#inspircd-440) A human readable description of the DNSBL result (from `<dnsblreply>`).
     %result%      | The record type returned by the DNSBL.
 
     The type field should be set to one of the following values:

@@ -73,7 +73,7 @@ configuration:
 
     Variable   | Description
     ---------- | -----------
-    %channel%  | **New in v4.4.0!** The name of the channel the mode is set on.
+    %channel%  | [**New in v4.4.0!**](/4/change-log/#inspircd-440) The name of the channel the mode is set on.
     %diff%     | The diff from the mode value.
     %duration% | The seconds from the mode value as a duration.
     %lines%    | The lines from the mode value.
