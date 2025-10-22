@@ -88,14 +88,16 @@ details: |+
 
   Variable    | Description
   ----------- | -----------
-  %created%   |  The date/time at which the X-line was created.
-  %duration%  |  The duration of the X-line.
-  %expiry%    |  The date/time at which the X-line expires.
-  %fulltype%  |  The type of X-line which was matched, suffixed with  "-lined" if its name is one or two characters.
-  %reason%    |  The reason the X-line was added.
-  %remaining% |  The duration remaining on the X-line.
-  %setter%    |  The name of the X-line setter.
-  %type%      |  The type of X-line that was matched.
+  %created%        | The date/time at which the X-line was created.
+  %duration%       | The duration of the X-line.
+  %duration.long%  | [**New in v4.7.0!**](/4/change-log/#inspircd-470) The long duration of the X-line.
+  %expiry%         | The date/time at which the X-line expires.
+  %fulltype%       | The type of X-line which was matched, suffixed with  "-lined" if its name is one or two characters.
+  %reason%         | The reason the X-line was added.
+  %remaining%      | The duration remaining on the X-line.
+  %remaining.long% | [**New in v4.7.0!**](/4/change-log/#inspircd-470) The long duration remaining on the X-line.
+  %setter%         | The name of the X-line setter.
+  %type%           | The type of X-line that was matched.
 
   The restrictbannedusers field should be set to one of the following values:
 
