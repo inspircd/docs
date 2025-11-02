@@ -58,10 +58,10 @@ configuration:
 
     The type field should be set to one of the following values:
 
-    Value   | Description
-    ------- | -----------
-    gateway | The IP address of the user will be sent in the username field in hexadecimal (IPv4 only).
-    webirc  | The IP address of the user will be sent using the `/WEBIRC` command (recommended).
+    Value    | Description
+    -------- | -----------
+    username | The IP address of the user will be sent in the username field in hexadecimal (IPv4 only).
+    webirc   | The IP address of the user will be sent using the `/WEBIRC` command (recommended).
 
   example: |-
     Tells the gateway module that the \*.username.gateway.example.com gateway will encode the IPv4 address of users into their username.
