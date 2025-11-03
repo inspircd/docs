@@ -221,7 +221,7 @@ configuration:
     ```xml
     <sslprofile name="Clients"
                 provider="openssl"
-                cafile="ca.pem"
+                cafile=""
                 certfile="cert.pem"
                 crlfile=""
                 ciphers="DEFAULT"
