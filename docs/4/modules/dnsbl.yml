@@ -208,6 +208,22 @@ configuration:
 
     ```
 
+commands:
+- name: DNSBL
+  param_count: 1
+  syntax: <nick> [<reason>]
+  description:
+    Rechecks whether a user is in a DNSBL.
+  example:
+  - description: |-
+      Checks whether "test" is in a DNSBL
+    text: |-
+      /DNSBL test
+  - description: |-
+      Checks whether "test" is in a DNSBL with a reason for other server operators
+    text: |-
+      /DNSBL test :IP has been added to DroneBL by ProxyBot
+
 snomasks:
 - char: d
   description: Notifications about DNSBL hits on the local server.
