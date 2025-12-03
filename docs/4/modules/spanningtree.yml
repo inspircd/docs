@@ -8,6 +8,14 @@ configuration:
   description: |-
     The `<autoconnect>` tag defines one or more servers to attempt to connect to. This tag can be defined as many times as required.
   attributes:
+  - name: bootperiod
+    type: Duration
+    required: false
+    default: null
+    default: '*The value of &lt;autoconnect:period&gt;*'
+    added: 4.9.0
+    description: |-
+      The time period to wait after boot before attempting to link servers.
   - name: period
     type: Duration
     required: false
@@ -22,10 +30,11 @@ configuration:
       A space-delimited list of servers to attempt to connect to.
   details: ""
   example: |-
-    Automatically connects to hub1.example.com after 120 seconds, failing over to hub2.example.com and then hub3.example.com if connecting to the previous server fails:
+    Automatically connects to hub1.example.com after 15 seconds on boot and 120 seconds at other times, failing over to hub2.example.com and then hub3.example.com if connecting to the previous server fails:
 
     ```xml
-    <autoconnect period="2m"
+    <autoconnect bootperiod="15s"
+                 period="2m"
                  server="hub1.example.com hub2.example.com hub3.example.com">
     ```
 - name: bind

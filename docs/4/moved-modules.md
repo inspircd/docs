@@ -38,10 +38,6 @@ This module was not included with v3 but provides support for an obsolete protoc
 
 This module depends on PCRE which [is no longer maintained by its author](https://lists.exim.org/lurker/message/20210615.162400.c16ff8a3.en.html). The author's recommendation is that you should migrate to PCRE2. Support for the newer PCRE2 library is provided by [the regex_pcre2 module](/4/modules/regex_pcre2) which provides a regular expression engine with the same internal name so it shouild be a drop-in replacement.
 
-### regex_tre
-
-This module depends on TRE library which is less commonly used. The main benefit of it was that it has time and memory consumption linear to the size of the input but this is a feature also provided by more widely used RE2 library as provided by [the regex_re2 module](/4/modules/regex_re2).
-
 ### ssl_mbedtls
 
 This module was never really feature complete to the same level as the ssl_gnutls and ssl_openssl modules. Most notably it never gained SNI support or support for SPKI fingerprints. Additionally, the current mbedTLS maintainers have also broken C++ support multiple times (e.g. mbedTLS bugs #7087 and #8866) and relicensed the library from GPLv2 to the Apache License which means we can no longer ship binaries linked against it. Considering these factors it was decided to remove the module. Users are recommended to migrate to [the ssl_gnutls module](/4/modules/ssl_gnutls).

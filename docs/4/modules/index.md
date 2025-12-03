@@ -134,6 +134,7 @@ Name                                                      | Description
 [redirect](/4/modules/redirect)                           | Allows users to be redirected to another channel when the user limit is reached.
 [regex_glob](/4/modules/regex_glob)                       | Provides the glob regular expression engine which uses the built-in glob matching system.
 [regex_stdlib](/4/modules/regex_stdlib)                   | Provides the stdregex regular expression engine which uses the C++11 std::regex regular expression matching system.
+[regex_tre](/4/modules/regex_tre)                         | Provides a regular expression engine which uses the TRE library.
 [remove](/4/modules/remove)                               | Adds the /REMOVE command which allows channel operators to force part users from a channel.
 [repeat](/4/modules/repeat)                               | Adds channel mode E (repeat) which helps protect against spammers which spam the same message repeatedly.
 [restrictchans](/4/modules/restrictchans)                 | Prevents unprivileged users from creating new channels.

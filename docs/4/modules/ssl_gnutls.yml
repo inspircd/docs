@@ -137,7 +137,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to require that all tokens in the GnuTLS priority string are valid.
+      Whether to require that all tokens in the GnuTLS priority string are valid. If disabled invalid tokens will be skipped.
   details: |-
     The hash field should be set to one of the values shown in `gnutls-cli --list | grep ^Digests:`.
 

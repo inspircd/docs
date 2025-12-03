@@ -133,12 +133,24 @@ configuration:
     default: dhparams.pem
     description: |-
       The path to the DH parameters in PEM format. This does nothing on OpenSSL 3.0.0+.
-  - name: ecdhcurve
+  - name:
+      groups: since 4.9.0
+      ecdhcurve: 4.0.0 to 4.8.0
     type: Text
     required: false
-    default: prime256v1
+    default: >-
+      prime256v1 **(4.0.0 to 4.8.0)**
+      <br>
+      X25519MLKEM768:X25519:prime256v1 **(since 4.9.0)**
     description: |-
-      The ECDH curve.
+      If defined then a colon-delimited list of TLS groups.
+  - name: strictgroups
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.9.0
+    description: |-
+      Whether to require that all TLS groups are valid. If disabled invalid TLS groups will be skipped.
   - name: hash
     type: Text
     required: false
@@ -220,7 +232,8 @@ configuration:
                 ciphers="DEFAULT"
                 compression="no"
                 dhfile="dhparams.pem"
-                ecdhcurve="prime256v1"
+                groups=""
+                strictgroups="yes"
                 hash="sha3-256"
                 keyfile="key.pem"
                 renegotiation="no"

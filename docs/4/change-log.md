@@ -6,6 +6,54 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 4.9.0
+
+**This version of InspIRCd was released on 2025-12-06.**
+
+- Added `<autoconnect:bootperiod>` to allow autoconnecting faster on first boot.
+
+- Added `<messageflood:resetonhit>` to allow opting-out of the new flood enforcement behaviour.
+
+- Added support for multiple groups when using the ssl_openssl module.
+
+- Added the `%duration.long%` template variable to `<messageflood:message>`.
+
+- Added the `%duration.long%` template variable to `<repeat:message>`.
+
+- Changed the default of `<messageflood:tagmsg>` from 0.2 to 0.1.
+
+- Changed the messageflood module to use a per-user flood counter.
+
+- Fixed a dead link in the example configs.
+
+- Fixed a lack of error message sanitisation in the pgsql module.
+
+- Fixed being able to use expired or otherwise invalid client certificates in some circumstances.
+
+- Fixed channel mode `f` (flood) only blocking the first flood message.
+
+- Fixed not using the OpenSSL security level when connecting as a client.
+
+- Fixed the core_dns module logging a debug message at the critical level.
+
+- Fixed the ssl_gnutls module mistakenly marking self-signed client certificates as invalid.
+
+- Fixed the ssl_openssl module logging CA errors when a custom CA has not been specified.
+
+- Fixed the syntax of the `/DNSBL` command.
+
+- Improved the diagnostic errors logged when a oper fails to log in because of an incorrect client certificate.
+
+- Improved the diagnostic errors logged when a server fails to link because of an incorrect client certificate.
+
+- Improved the error messages from the config parser.
+
+- Re-imported a cut-down version of the the genssl script for generating long-lasting certificates for server linking.
+
+- Re-imported the regex_tre module now TRE is maintained again.
+
+- Updated the vendored libraries.
+
 ### InspIRCd 4.8.0
 
 **This version of InspIRCd was released on 2025-08-02.**

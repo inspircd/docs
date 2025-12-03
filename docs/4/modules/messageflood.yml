@@ -17,9 +17,19 @@ configuration:
   - name: message
     type: String
     required: false
-    default: Message flood detected (trigger is %messages% messages in %duration%)
+    default: >-
+      Message flood detected (trigger is %messages% messages in %duration%)<br>*(4.0.0 to 4.8.0)*
+      <br><br>
+      Message flood detected (trigger is %messages% messages in %duration.long%)<br>*(since 4.9.0)*
     description: |-
       The message to use when punishing users that hit the message flood trigger.
+  - name: resetonhit
+    type: Boolean
+    required: false
+    default: '*Opposite of `<messageflood:extended>`*'
+    added: 4.9.0
+    description: |-
+      Whether to reset the flood counter after a user is punished.
   - name: notice
     type: Decimal
     required: false
@@ -35,22 +45,26 @@ configuration:
   - name: tagmsg
     type: Decimal
     required: false
-    default: 0.2
+    default: >-
+      0.1 *(since 4.9.0)*
+      <br>
+      0.2 *(4.0.0 to 4.8.0)*
     description: |-
       The number of lines that a single `TAGMSG` message is equivalent to. This should be lower than the other commands to avoid users being kicked by automated client features such as typing notifications.
   details: |-
     The kickmessage field can contain any of the following template variables:
 
-    Variable   | Description
-    ---------- | -----------
-    %duration% | The seconds from the mode value as a duration.
-    %messages% | The message count from the mode value.
-    %seconds%  | The seconds from the mode value.
+    Variable        | Description
+    --------------- | -----------
+    %duration%      | The seconds from the mode value as a duration.
+    %duration.long% | [**New in v4.9.0!**](/4/change-log/#inspircd-490) The seconds from the mode value as a long duration.
+    %messages%      | The message count from the mode value.
+    %seconds%       | The seconds from the mode value.
 
   example: |-
     ```xml
     <messageflood extended="yes"
-                  message="Message flood detected (trigger is %lines% messages in %duration%)"
+                  message="Message flood detected (trigger is %lines% messages in %duration.long%)"
                   notice="1.0"
                   privmsg="1.0"
                   tagmsg="0.2">

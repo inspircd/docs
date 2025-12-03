@@ -9,3 +9,4 @@ pcre     | [regex_pcre2](/4/modules/regex_pcre2)   | Matches using a [PCRE](http
 posix    | [regex_posix](/4/modules/regex_posix)   | Matches using a [POSIX](http://man7.org/linux/man-pages/man7/regex.7.html) regular expression.
 re2      | [regex_re2](/4/modules/regex_re2)       | Matches using a [RE2](https://github.com/google/re2/wiki/Syntax) regular expression.
 stdregex | [regex_stdlib](/4/modules/regex_stdlib) | Matches using a [C++11 `std::regex`](http://cpprocks.com/files/c++11-regex-cheatsheet.pdf) regular expression.
+tre      | [regex_tre](/4/modules/regex_tre)       | Matches using a [TRE](https://laurikari.net/tre/documentation/regex-syntax/) regular expression.

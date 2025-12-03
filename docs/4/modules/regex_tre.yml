@@ -1,5 +1,9 @@
 name: regex_tre
 
+introduction: |-
+  !!! note "New in v4.9.0!"
+      If you are using an older version you will need to upgrade to use this module.
+
 depends_on:
   what: a third-party library ([TRE](https://laurikari.net/tre/))
 

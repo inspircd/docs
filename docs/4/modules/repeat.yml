@@ -35,7 +35,10 @@ configuration:
   - name: message
     type: String
     required: false
-    default: Repeat flood detected (trigger is %lines% messages in %duration%)
+    default: >-
+      Repeat flood detected (trigger is %lines% messages in %duration%)<br>**(4.0.0 to 4.8.0)**
+      <br><br>
+      Repeat flood detected (trigger is %lines% messages in %duration.long%)<br>**(since 4.9.0)**
     description: |-
       The message to use when punishing users that hit the repeat flood trigger.
   - name: maxbacklog
@@ -71,18 +74,19 @@ configuration:
   details: |-
     The message field can contain any of the following template variables:
 
-    Variable   | Description
-    ---------- | -----------
-    %channel%  | [**New in v4.4.0!**](/4/change-log/#inspircd-440) The name of the channel the mode is set on.
-    %diff%     | The diff from the mode value.
-    %duration% | The seconds from the mode value as a duration.
-    %lines%    | The lines from the mode value.
-    %seconds%  | The seconds from the mode value.
+    Variable        | Description
+    --------------- | -----------
+    %channel%       | [**New in v4.4.0!**](/4/change-log/#inspircd-440) The name of the channel the mode is set on.
+    %diff%          | The diff from the mode value.
+    %duration%      | The seconds from the mode value as a duration.
+    %duration.long% | [**New in v4.9.0!**](/4/change-log/#inspircd-490) The seconds from the mode value as a long duration.
+    %lines%         | The lines from the mode value.
+    %seconds%       | The seconds from the mode value.
 
   example: |-
     ```xml
     <repeat extended="yes"
-            message="Repeat flood detected (trigger is %lines% messages in %duration%)"
+            message="Repeat flood detected (trigger is %lines% messages in %duration.long%)"
             maxbacklog="20"
             maxdistance="50"
             maxlines="20"

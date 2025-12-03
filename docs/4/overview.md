@@ -69,7 +69,7 @@ Services can now grant server operator privileges to users remotely (requires th
 
 Regular expression support has been entirely rewritten with support for captures and flags.
 
-The regex_pcre and regex_tre modules have been moved to inspircd-contrib as their dependencies are deprecated. It is recommended that you migrate to the [regex_pcre2](/4/modules/regex_pcre2) and [regex_stdlib](/4/modules/regex_stdlib) modules respectively.
+The regex_pcre module has been moved to inspircd-contrib as its dependency is deprecated. It is recommended that you migrate to the [regex_pcre2](/4/modules/regex_pcre2) module.
 
 [The regex_stdlib module](/4/modules/regex_stdlib) is now always built on all platforms. This is now the recommended regex module.
 

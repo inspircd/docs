@@ -44,8 +44,6 @@ title: v4 Breaking Changes
 
 - The regex_pcre module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_pcre` to install it, or migrate to [the regex_pcre2 module](/4/modules/regex_pcre2) which also provides the "pcre" regex engine so it should be a drop-in replacement.
 
-- The regex_tre module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install regex_tre` to install it, or migrate to [the regex_stdlib module](/4/modules/regex_stdlib).
-
 - The ssl_mbedtls module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install ssl_mbedtls` to install it, or migrate to either [the ssl_gnutls module](/4/modules/ssl_gnutls) or [the ssl_openssl module](/4/modules/ssl_openssl).
 
 - The userip module has been [moved to inspircd-contrib](/4/moved-modules). In order to upgrade either remove this module from your configuration, run `./modulemanager install userip` to install it, or migrate to [the check module](/4/modules/check).
