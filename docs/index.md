@@ -49,7 +49,9 @@ title: Introduction
 
 ### InspIRCd 3 (old stable)
 
-*Supported until the end of 2025*
+*EOL since 2026-01-01*
+
+*Please upgrade ASAP*
 
 - [Installation](/3/installation)
 - [Configuration](/3/configuration)
