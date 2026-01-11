@@ -4,7 +4,7 @@ title: v3 Module List
 
 ## Module List
 
-This is a complete list of all modules that ship with InspIRCd. If you have [installed from source](/3/installation/source) you can also install third-party modules which have been created by the InspIRCd community using the [Module Manager](/3/module-manager).
+This is a complete list of all modules that ship with InspIRCd. If you have installed from source you can also install third-party modules which have been created by the InspIRCd community using the [Module Manager](/3/module-manager).
 
 ### Default Modules
 

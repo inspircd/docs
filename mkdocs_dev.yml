@@ -1,6 +1,5 @@
 nav:
     - InspIRCd 3:
-        - Installation: 3/installation/index.md
         - Configuration: 3/configuration/index.md
         - Commands: 3/commands/index.md
         - Channel Modes: 3/channel-modes.md

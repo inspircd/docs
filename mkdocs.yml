@@ -13,6 +13,14 @@ plugins:
       redirect_maps:
           3/configuration-changes.md: 3/breaking-changes.md
           3/index.md: index.md
+          3/installation/centos.md: 4/installation/rhel.md
+          3/installation/debian.md: 4/installation/debian.md
+          3/installation/index.md: 4/installation/index.md
+          3/installation/rocky.md: 4/installation/rhel.md
+          3/installation/source.md: 4/installation/source.md
+          3/installation/ubuntu.md: 4/installation/ubuntu.md
+          3/installation/windows-source.md: 4/installation/windows-source.md
+          3/installation/windows.md: 4/installation/windows.md
           3/modes.md: 3/channel-modes.md
           4/index.md: index.md
           faq/windows.md: faq.md

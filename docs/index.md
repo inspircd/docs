@@ -50,10 +50,9 @@ title: Introduction
 ### InspIRCd 3 (old stable)
 
 *EOL since 2026-01-01*
-
+<br>
 *Please upgrade ASAP*
 
-- [Installation](/3/installation)
 - [Configuration](/3/configuration)
     - [Useful Snippets](/3/configuration/useful-snippets)
     - [Upgrading from v2](/3/breaking-changes)
