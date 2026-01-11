@@ -8,7 +8,7 @@ An official package for RHEL is maintained by the InspIRCd Team. You can downloa
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running RHEL 8 and 9. You can also install the package on RHEL rebuilds like AlmaLinux and Rocky Linux.
+This package can be installed on all x86-64 systems running RHEL 8, 9, and 10. You can also install the package on RHEL rebuilds like AlmaLinux and Rocky Linux.
 
 ### How do I install this package?
 
