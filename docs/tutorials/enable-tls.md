@@ -30,7 +30,6 @@ First you must add a `<module>` tag for the name of the TLS (SSL) module you wan
 
 Once this is added you need to create a TLS (SSL) profile. The syntax of these depend on the TLS (SSL) module that you are using.
 
-
 - [ssl_gnutls](/4/modules/ssl_gnutls#sslprofile)
 - [ssl_openssl](/4/modules/ssl_openssl#sslprofile)
 
