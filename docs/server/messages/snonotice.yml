@@ -1,7 +1,7 @@
 name: SNONOTICE
 syntax:
   fields:
-    snochar: The server notice character ([v4 docs](/4/snomasks), [v3 docs](/3/snomasks)) that the message is associated with.
+    snochar: The [server notice character](/4/snomasks) that the message is associated with.
     message: The message to send to server operators.
   text:
   - <snochar> :<message>

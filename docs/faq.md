@@ -81,7 +81,7 @@ This bug is known to be fixed in:
 - WeeChat v2.5 (released June 2019).
 - ZNC 1.8 (released May 2020).
 
-If you want to warn users to upgrade their client you can install the clientcheck contrib module via the Module Manager ([v4 docs](/4/module-manager), [v3 docs](/3/module-manager)) and use the following config:
+If you want to warn users to upgrade their client you can install the clientcheck contrib module via [the Module Manager](/4/module-manager)) and use the following config:
 
 ```xml
 <module name="clientcheck">

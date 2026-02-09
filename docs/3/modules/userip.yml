@@ -2,7 +2,7 @@ name: userip
 
 introduction: |-
   !!! warning ""
-      This module is deprecated and has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+      This module is deprecated and has been [moved to inspircd-contrib](/4/moved-modules) in the next major version of InspIRCd.
 
 description: |-
   This module adds the `/USERIP` command which allows users to find out the IP address of one or more connected users.

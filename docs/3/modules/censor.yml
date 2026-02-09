@@ -2,7 +2,7 @@ name: censor
 
 introduction: |-
   !!! warning ""
-      This module is deprecated and has been moved to [inspircd-contrib](/3/module-manager) in the next major version of InspIRCd.
+      This module is deprecated and has been [moved to inspircd-contrib](/4/moved-modules) in the next major version of InspIRCd.
 
       You should consider using [the filter module](/3/modules/filter) instead.
 

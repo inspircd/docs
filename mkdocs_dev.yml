@@ -1,12 +1,7 @@
 nav:
     - InspIRCd 3:
         - Configuration: 3/configuration/index.md
-        - Commands: 3/commands/index.md
-        - Channel Modes: 3/channel-modes.md
-        - Extended Bans: 3/extended-bans.md
-        - User Modes: 3/user-modes.md
         - Modules: 3/modules/index.md
-        - SNOMasks: 3/snomasks.md
         - Change Log: 3/change-log.md
     - InspIRCd 4:
         - Installation: 4/installation/index.md

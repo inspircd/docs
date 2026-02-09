@@ -11,7 +11,10 @@ plugins:
     # Don't need redirects in dev
     redirects:
       redirect_maps:
+          3/channel-modes.md: 4/channel-modes.md
+          3/commands/index.md: 4/commands/index.md
           3/configuration-changes.md: 3/breaking-changes.md
+          3/extended-bans.md: 4/extended-bans.md
           3/index.md: index.md
           3/installation/centos.md: 4/installation/rhel.md
           3/installation/debian.md: 4/installation/debian.md
@@ -21,7 +24,7 @@ plugins:
           3/installation/ubuntu.md: 4/installation/ubuntu.md
           3/installation/windows-source.md: 4/installation/windows-source.md
           3/installation/windows.md: 4/installation/windows.md
-          3/modes.md: 3/channel-modes.md
+          3/snomasks.md: 4/snomasks.md
+          3/user-modes.md: 4/user-modes.md
           4/index.md: index.md
-          faq/windows.md: faq.md
           social.md: support.md
