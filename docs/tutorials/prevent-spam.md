@@ -52,7 +52,7 @@ If you can't require all users use an account you should consider requiring user
 
 A configuration for how to do this can be found on [the useful snippets page](/4/configuration/useful-snippets/#requiring-connections-to-use-sasl).
 
-If you want a softer option you can also use [the muteban module](/4/modules/muteban) and the [the account module](/4/modules/services_account) to ban unregistered users from those providers in your channels.
+If you want a softer option you can also use [the muteban module](/4/modules/muteban) and the [the account module](/4/modules/account) to ban unregistered users from those providers in your channels.
 
 ```plaintext
 /MODE #channel +b mute:unauthed:*!*@*.amazonaws.com
