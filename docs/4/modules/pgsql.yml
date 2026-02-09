@@ -42,7 +42,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to connect to the PostgreSQL server using TLS (SSL).
+      Whether to connect to the PostgreSQL server using TLS.
   - name: user
     type: Text
     required: true

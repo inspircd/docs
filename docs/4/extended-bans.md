@@ -15,7 +15,7 @@ Acting extended bans allow restricting actions that users can perform. Such acti
 
 ### Matching
 
-Matching extended bans allow matching against extended user attributes such as connect class (requires [the classban module](/{{ version }}/modules/classban)) or TLS (SSL) fingerprint (requires [the sslmodes module](/{{ version }}/modules/sslmodes)).
+Matching extended bans allow matching against extended user attributes such as connect class (requires [the classban module](/{{ version }}/modules/classban)) or TLS fingerprint (requires [the sslmodes module](/{{ version }}/modules/sslmodes)).
 
 {% set extbans = matching_module_extbans %}
 {% include "4/_extbans_table.md" %}

@@ -23,7 +23,7 @@ description: |-
   r         | Show users who have a real name matching `<pattern>`.
   s         | Show users who are on a server with a name matching `<pattern>`. If the 'x' modifier is specified then this will match against the real server name instead of the masked server name.
   t         | Show users who have connected in the last `<pattern>` seconds.
-  u         | Show users who have an ident (username) matching `<pattern>`.
+  u         | Show users who have a username matching `<pattern>`.
   x         | Show sensitive data like real user hostnames and, when hideserver is enabled, real server hostnames.
 
   One or more of the following fields may be used:

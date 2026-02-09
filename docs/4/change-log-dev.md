@@ -346,7 +346,7 @@ This page lists changes which have happened between development releases. For th
 
 - Added `<chanhistory:maxduration>` to limit the maximum period to keep chat history for.
 
-- Added `<sslinfo:localsecure>` to allow treating users connecting from localhost as if they were connected with TLS (SSL).
+- Added `<sslinfo:localsecure>` to allow treating users connecting from localhost as if they were connected with TLS.
 
 - Added users with user mode `h` (helpop) to the `/STATS P` output.
 

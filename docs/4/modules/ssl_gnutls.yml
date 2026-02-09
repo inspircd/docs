@@ -6,7 +6,7 @@ depends_on:
   what: a third-party library ([GnuTLS](https://gnutls.org))
 
 description: |-
-  This module allows TLS (SSL) encrypted connections using the [GnuTLS](https://gnutls.org) library.
+  This module allows TLS encrypted connections using the [GnuTLS](https://gnutls.org) library.
 
 configuration:
 - name: bind
@@ -18,10 +18,10 @@ configuration:
     type: Text
     default: null
     description: |-
-      *This MUST be set to the name of a GnuTLS TLS (SSL) profile to listen for secure connections with GnuTLS.*
+      *This MUST be set to the name of a GnuTLS TLS profile to listen for secure connections with GnuTLS.*
   details: ""
   example: |-
-    Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint with an [TLS (SSL) profile](#sslprofile) named "Clients":
+    Listens for GnuTLS encrypted IRC connections on the *:6697 endpoint with an [TLS profile](#sslprofile) named "Clients":
 
     ```xml
     <bind address="*"
@@ -31,7 +31,7 @@ configuration:
           type="clients">
     ```
 
-    Listens for GnuTLS encrypted server connections on the *:7000 endpoint with an [TLS (SSL) profile](#sslprofile) named "Servers":
+    Listens for GnuTLS encrypted server connections on the *:7000 endpoint with an [TLS profile](#sslprofile) named "Servers":
 
     ```xml
     <bind address="*"
@@ -49,7 +49,7 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether TLS (SSL) profiles (see below) should be reloaded as part of a normal rehash.
+      Whether TLS profiles (see below) should be reloaded as part of a normal rehash.
   details: ""
   example: |-
     ```xml
@@ -58,14 +58,14 @@ configuration:
 
 - name: sslprofile
   description: |-
-    The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
+    The `<sslprofile>` tag defines a TLS profile for sockets to use. This tag can be defined as many times as required.
   attributes:
   - name: name
     type: Text
     required: true
     default: null
     description: |-
-      The name of this TLS (SSL) profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+      The name of this TLS profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
   - name: provider
     type: Text
     required: true
@@ -101,7 +101,7 @@ configuration:
     required: false
     default: sha256
     description: |-
-      A space-delimited list of hash algorithms used for TLS (SSL) client fingerprints. Prefix with `spki-` to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
+      A space-delimited list of hash algorithms used for TLS client fingerprints. Prefix with `spki-` to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: keyfile
     type: Text
     required: false
@@ -131,7 +131,7 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether to request a TLS (SSL) certificate from clients.
+      Whether to request a TLS certificate from clients.
   - name: strictpriority
     type: Boolean
     required: false

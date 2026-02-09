@@ -7,7 +7,7 @@ depends_on:
   condition: If you are building on a UNIX platform
 
 description: |-
-  This module allows the `SIGUSR1` signal to be sent to the server to reload TLS (SSL) certificates.
+  This module allows the `SIGUSR1` signal to be sent to the server to reload TLS certificates.
 
 configuration: []
 
@@ -16,10 +16,10 @@ misc: |-
 
   Name    | Description
   ------- | -----------
-  SIGUSR1 | Reloads the server's TLS (SSL) certificates.
+  SIGUSR1 | Reloads the server's TLS certificates.
 
 special_notes: |-
-  Since 3.17.0 InspIRCd ships with a script that you can customise for use as a post-deploy hook with [Certbot](https://certbot.eff.org/) to automatically reload your TLS (SSL) certificates when they are updated. For users of older versions this script is replicated below.
+  Since 3.17.0 InspIRCd ships with a script that you can customise for use as a post-deploy hook with [Certbot](https://certbot.eff.org/) to automatically reload your TLS certificates when they are updated. For users of older versions this script is replicated below.
 
   ```sh
   #!/bin/sh

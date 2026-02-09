@@ -13,7 +13,7 @@ configuration:
     required: false
     default: null
     description: |-
-      **Required for the webirc type if password is not set!** The TLS (SSL) client certificate fingerprint that the WebIRC gateway will authenticate with.
+      **Required for the webirc type if password is not set!** The TLS client certificate fingerprint that the WebIRC gateway will authenticate with.
   - name: mask
     type: Text
     required: true
@@ -72,7 +72,7 @@ configuration:
              newusername="wobble">
     ```
 
-    Tells the gateway module that gateways with an IP matching 192.0.2.0/24 will send the IP address of users with the `/WEBIRC` command using TLS (SSL) client certificate fingerprint authentication:
+    Tells the gateway module that gateways with an IP matching 192.0.2.0/24 will send the IP address of users with the `/WEBIRC` command using TLS client certificate fingerprint authentication:
 
     ```xml
     <gateway type="webirc"

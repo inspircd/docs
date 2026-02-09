@@ -212,7 +212,7 @@ commands:
 - name: DNSBL
   param_count: 1
   syntax: <nick> [<reason>]
-  description:
+  description: |-
     Rechecks whether a user is in a DNSBL.
   example:
   - description: |-

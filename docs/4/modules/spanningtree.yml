@@ -46,7 +46,7 @@ configuration:
       Listens for server connections.
   details: ""
   example: |-
-    Listens for TLS encrypted server connections on the *:7002 endpoint with a TLS (SSL) profile named "Servers":
+    Listens for TLS encrypted server connections on the *:7002 endpoint with a TLS profile named "Servers":
 
     ```xml
     <bind address="*"
@@ -85,7 +85,7 @@ configuration:
     required: false
     default: null
     description: |-
-      If defined then the TLS (SSL) client fingerprint of the remote server.
+      If defined then the TLS client fingerprint of the remote server.
   - name: hidden
     type: Boolean
     required: false
@@ -133,7 +133,7 @@ configuration:
     required: false
     default: null
     description: |-
-      If defined then the name of a TLS (SSL) profile to use for encrypting the connection with this server.
+      If defined then the name of a TLS profile to use for encrypting the connection with this server.
   - name: statshidden
     type: Boolean
     required: false
@@ -148,7 +148,7 @@ configuration:
       The number of seconds to wait before declaring a server connection as having failed.
   details: ""
   example: |-
-    A server that connects with TLS (SSL) over a IP socket:
+    A server that connects with TLS over a IP socket:
 
     ```xml
     <link allowmask="192.0.2.0/24 198.51.100.*"
@@ -377,4 +377,4 @@ stats:
   description: Lists servers which the server may connect to or allow connections from.
 
 special_notes: |-
-  Linking non-local servers without TLS (SSL) is a serious privacy risk and will be removed in the next major version of InspIRCd.
+  Linking non-local servers without TLS is a serious privacy risk and will be removed in the next major version of InspIRCd.

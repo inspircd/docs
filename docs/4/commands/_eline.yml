@@ -1,11 +1,11 @@
 name: ELINE
 oper_only: true
 syntax: >-
-  <ident@host>[,<ident@host>]+ [[<duration>] <reason>]
+  <user@host>[,<user@host>]+ [[<duration>] <reason>]
 description: |-
-  If `<ident@host>` and `<reason>` are specified then exempts an ident@host mask from being affected by other (G, K, Z, etc) X-lines. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero or (since v4.6.0) is not specified then the E-line will be permanent.
+  If `<user@host>` and `<reason>` are specified then exempts an user@host mask from being affected by other (G, K, Z, etc) X-lines. The `<duration>` may be specified as a number of seconds or as a duration in the format 1y2w3d4h5m6s. If the duration is zero or (since v4.6.0) is not specified then the E-line will be permanent.
 
-  Otherwise, if just `<ident@host>` is specified, removes an exemption on an ident@host mask.
+  Otherwise, if just `<user@host>` is specified, removes an exemption on an user@host mask.
 example:
 - description: |-
     E-lines sadie@example.com for one day with the reason "Testing"

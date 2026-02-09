@@ -65,7 +65,7 @@ configuration:
 client_caps:
 - name: '[sts](https://ircv3.net/specs/extensions/sts.html)'
   description: |-
-    Defines a mechanism for clients to upgrade plaintext IRC connections to TLS (SSL).
+    Defines a mechanism for clients to upgrade plaintext IRC connections to TLS.
 
 special_notes: |-
   The default duration of 5 minutes is a safety precaution aimed at initial implementation and testing of an STS policy. Once you're comfortable with the configuration the duration should be raised to a month or more for effective enforcement.

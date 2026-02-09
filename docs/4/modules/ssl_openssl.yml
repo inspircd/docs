@@ -6,7 +6,7 @@ depends_on:
   what: a third-party library ([OpenSSL](https://www.openssl.org))
 
 description: |-
-  This module allows TLS (SSL) encrypted connections using the [OpenSSL](https://www.openssl.org) library.
+  This module allows TLS encrypted connections using the [OpenSSL](https://www.openssl.org) library.
 
 configuration:
 - name: bind
@@ -18,10 +18,10 @@ configuration:
     type: Text
     default: null
     description: |-
-      *This MUST be set to the name of an OpenSSL TLS (SSL) profile to listen for secure connections with OpenSSL.*
+      *This MUST be set to the name of an OpenSSL TLS profile to listen for secure connections with OpenSSL.*
   details: ""
   example: |-
-    Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint with an [TLS (SSL) profile](#sslprofile) named "Clients":
+    Listens for OpenSSL encrypted IRC connections on the *:6697 endpoint with an [TLS profile](#sslprofile) named "Clients":
 
     ```xml
     <bind address="*"
@@ -31,7 +31,7 @@ configuration:
           type="clients">
     ```
 
-    Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an [TLS (SSL) profile](#sslprofile) named "Servers":
+    Listens for OpenSSL encrypted server connections on the *:7000 endpoint with an [TLS profile](#sslprofile) named "Servers":
 
     ```xml
     <bind address="*"
@@ -50,7 +50,7 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether TLS (SSL) profiles (see below) should be reloaded as part of a normal rehash.
+      Whether TLS profiles (see below) should be reloaded as part of a normal rehash.
   details: ""
   example: |-
     ```xml
@@ -59,14 +59,14 @@ configuration:
 
 - name: sslprofile
   description: |-
-    The `<sslprofile>` tag defines a TLS (SSL) profile for sockets to use. This tag can be defined as many times as required.
+    The `<sslprofile>` tag defines a TLS profile for sockets to use. This tag can be defined as many times as required.
   attributes:
   - name: name
     type: Text
     required: true
     default: null
     description: |-
-      The name of this TLS (SSL) profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
+      The name of this TLS profile. This is used in `<bind:ssl>` for incoming connections and `<link:ssl>` for outgoing server connections.
   - name: provider
     type: Text
     required: true
@@ -108,7 +108,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether insecure TLS (SSL) compression is enabled.
+      Whether insecure TLS compression is enabled.
   - name: crlfile
     type: Text
     required: false
@@ -156,7 +156,7 @@ configuration:
     required: false
     default: sha256
     description: |-
-      A space-delimited list of hash algorithms used for TLS (SSL) client fingerprints.
+      A space-delimited list of hash algorithms used for TLS client fingerprints.
   - name: keyfile
     type: Text
     required: false
@@ -168,13 +168,13 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether insecure TLS (SSL) renegotiation is enabled.
+      Whether insecure TLS renegotiation is enabled.
   - name: requestclientcert
     type: Boolean
     required: false
     default: 'Yes'
     description: |-
-      Whether to request a TLS (SSL) certificate from clients.
+      Whether to request a TLS certificate from clients.
   - name: securitylevel
     type: Number
     required: false

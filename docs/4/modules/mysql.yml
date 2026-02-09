@@ -70,7 +70,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to connect to the MySQL server using TLS (SSL). Requires MySQL 8.0 or newer.
+      Whether to connect to the MySQL server using TLS. Requires MySQL 8.0 or newer.
   details: ""
   example: |-
     ```xml

@@ -13,7 +13,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether TLS (SSL) is required to use SASL.
+      Whether TLS is required to use SASL.
   - name: target
     type: Text
     required: true

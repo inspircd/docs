@@ -89,6 +89,6 @@ special_notes: |-
   501 Not Implemented     | Your WebSocket implementation has not sent the `Sec-WebSocket-Key` header.
   503 Service Unavailable | You do not have [the sha1 module](/4/modules/sha1) loaded.
 
-  If you add an encrypted WebSocket listener you should create a custom TLS (SSL) profile that has `requestclientcert="no"` set. This is required to allow connections to your server using Google Chrome.
+  If you add an encrypted WebSocket listener you should create a custom TLS profile that has `requestclientcert="no"` set. This is required to allow connections to your server using Google Chrome.
 
   Some reverse proxy providers (e.g. Cloudflare) drop idle WebSocket connections which can cause problems with this module. It is recommended that you avoid these providers.

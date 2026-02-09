@@ -20,6 +20,6 @@ example:
   text: |-
     /REHASH remote.example.com
 - description: |-
-    Reloads the TLS (SSL) certificates (requires [the sslinfo module](/{{ version }}/modules/sslinfo))
+    Reloads the TLS certificates (requires [the sslinfo module](/{{ version }}/modules/sslinfo))
   text: |-
     /REHASH -ssl

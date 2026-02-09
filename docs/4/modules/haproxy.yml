@@ -32,4 +32,4 @@ configuration:
     ```
 
 special_notes: |-
-  If you are using this module you must terminate TLS (SSL) connections at your reverse proxy.
+  If you are using this module you must terminate TLS connections at your reverse proxy.
