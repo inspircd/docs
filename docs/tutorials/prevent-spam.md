@@ -16,19 +16,17 @@ Some bots may attempt to register accounts to bypass filters on networks that do
 
 In order to enact this on your network you can:
 
-0. Load [the conn_umodes module](/3/modules/conn_umodes) if not already loaded.
+0. Load [the account module](/4/modules/account) and [the conn_umodes module](/4/modules/conn_umodes) if not already loaded.
 
-0. Load [the services_account module](/3/modules/services_account) if not already loaded.
+0. Add [user mode `R` (regdeaf)](/4/modules/account/#user-modes) to [`<connect:modes>`](/4/modules/conn_umodes/#connect). This will require that users have to be logged into an account to send a private message to any new users.
 
-0. Add [user mode `R` (regdeaf)](/3/modules/services_account/#user-modes) to [`<connect:modes>`](/3/modules/conn_umodes/#connect). This will require that users have to be logged into an account to send a private message to any new users.
+0. Add [channel mode `M` (regmoderated)](/4/modules/account/#user-modes) to [`<options:defaultmodes>`](/4/configuration/#options). This will require that users have to be logged into an account to send a message to any new channels.
 
-0. Add [channel mode `M` (regmoderated)](/3/modules/services_account/#user-modes) to [`<options:defaultmodes>`](/3/configuration/#options). This will require that users have to be logged into an account to send a message to any new channels.
-
-0. Encourage your existing users to add these modes on existing channels. You can also add these modes manually to existing channels and users using [the /SAMODE command](/3/modules/samode).
+0. Encourage your existing users to add these modes on existing channels. You can also add these modes manually to existing channels and users using [the /SAMODE command](/4/modules/samode).
 
 ### Check connections against a DNSBL
 
-Many other IRC networks will be encountering the same bots as you and have may already added them to a DNSBL. You can scan new users against these lists by loading [the dnsbl module](/3/modules/dnsbl) and configuring some DNSBLs to check against.
+Many other IRC networks will be encountering the same bots as you and have may already added them to a DNSBL. You can scan new users against these lists by loading [the dnsbl module](/4/modules/dnsbl) and configuring some DNSBLs to check against.
 
 There are three main DNSBLs which are typically used by InspIRCd networks:
 
@@ -36,7 +34,7 @@ There are three main DNSBLs which are typically used by InspIRCd networks:
 - [EFnet RBL](https://rbl.efnetrbl.org/)
 - [torexit.dan.me.uk](https://www.dan.me.uk/dnsbl)
 
-Preconfigured profiles for these DNSBLs are available in the [on the dnsbl module page](https://docs.inspircd.org/3/modules/dnsbl/#dnsbl).
+Preconfigured profiles for these DNSBLs are available in the [on the dnsbl module page](https://docs.inspircd.org/4/modules/dnsbl/#dnsbl).
 
 ### Check connections with a proxy scanner
 
@@ -52,14 +50,14 @@ If you can't require all users use an account you should consider requiring user
 - Google Cloud &mdash; `*.googleusercontent.com`
 - Linode &mdash; `*.linodeusercontent.com`
 
-A configuration for how to do this can be found on [the useful snippets page](/3/configuration/useful-snippets/#requiring-connections-to-use-sasl).
+A configuration for how to do this can be found on [the useful snippets page](/4/configuration/useful-snippets/#requiring-connections-to-use-sasl).
 
-If you want a softer option you can also use [the muteban module](/3/modules/muteban) and the [the services_account module](/3/modules/services_account) to ban unregistered users from those providers in your channels.
+If you want a softer option you can also use [the muteban module](/4/modules/muteban) and the [the account module](/4/modules/services_account) to ban unregistered users from those providers in your channels.
 
 ```plaintext
-/MODE #channel +b m:U:*!*@*.amazonaws.com
-/MODE #channel +b m:U:*!*@*.googleusercontent.com
-/MODE #channel +b m:U:*!*@*.linodeusercontent.com
+/MODE #channel +b mute:unauthed:*!*@*.amazonaws.com
+/MODE #channel +b mute:unauthed:*!*@*.googleusercontent.com
+/MODE #channel +b mute:unauthed:*!*@*.linodeusercontent.com
 ```
 
 ### Require TLS (SSL)
@@ -77,29 +75,27 @@ Some IRC spambots are very poorly written and do not support TLS (SSL). You can 
 
 # These go above your main connect class
 <connect allow="*"
-         registered="no"
+         connected="no"
          port="6667">
 
 <connect deny="*"
-         registered="yes"
+         connected="yes"
          port="6667"
          reason="Plain text connections are not allowed on this server. Please reconnect to irc.example.com/+6697 using TLS.">
 ```
 
 ### Filtering messages
 
-If the other methods on this page are not feasible or you are still having issues you can use [the filter module](/3/modules/filter) to block messages that are sent by spammers.
+If the other methods on this page are not feasible or you are still having issues you can use [the filter module](/4/modules/filter) to block messages that are sent by spammers.
 
 ### Useful third-party modules
 
 The `inspircd-contrib` repository contains several third-party modules which may be useful for spam prevention. These modules are checked for obvious issues by the InspIRCd Team before they are merged but may not meet the same levels of stability as the official modules shipped with InspIRCd.
 
-- [blockhighlight](https://github.com/inspircd/inspircd-contrib/blob/master/3/m_blockhighlight.cpp) (`./modulemanager install m_blockhighlight`) &mdash; Adds channel mode `V` (blockhighlight) which kills users who attempt to highlight multiple users.
+- [blockhighlight](https://github.com/inspircd/inspircd-contrib/blob/master/4/m_blockhighlight.cpp) (`./modulemanager install m_blockhighlight`) &mdash; Adds channel mode `V` (blockhighlight) which kills users who attempt to highlight multiple users.
 
-- [fakelist](https://github.com/inspircd/inspircd-contrib/blob/master/3/m_fakelist.cpp) (`./modulemanager install m_fakelist`) &mdash; An alternative to [the securelist module](/3/modules/securelist) that responds to `/LIST` with a list of spamtrap channels that kill users who join them.
+- [kill_idle](https://github.com/inspircd/inspircd-contrib/blob/master/4/m_kill_idle.cpp) (`./modulemanager install m_kill_idle`) &mdash; Allows killing users who are idle. Can be configured to kill users that have been connected for a while but have not joined any channels which is a common tactic used by spambots to evade spamfilters.
 
-- [kill_idle](https://github.com/inspircd/inspircd-contrib/blob/master/3/m_kill_idle.cpp) (`./modulemanager install m_kill_idle`) &mdash; Allows killing users who are idle. Can be configured to kill users that have been connected for a while but have not joined any channels which is a common tactic used by spambots to evade spamfilters.
+- [solvemsg](https://github.com/inspircd/inspircd-contrib/blob/master/4/m_solvemsg.cpp) (`./modulemanager install m_solvemsg`) &mdash; Requires users solve a basic maths problem before they can message others.
 
-- [solvemsg](https://github.com/inspircd/inspircd-contrib/blob/master/3/m_solvemsg.cpp) (`./modulemanager install m_solvemsg`) &mdash; Requires users solve a basic maths problem before they can message others.
-
-- [tgchange](https://github.com/inspircd/inspircd-contrib/blob/master/3/m_tgchange.cpp) (`./modulemanager install m_tgchange`) &mdash; Prevents users from messaging lots of targets at the same time.
+- [tgchange](https://github.com/inspircd/inspircd-contrib/blob/master/4/m_tgchange.cpp) (`./modulemanager install m_tgchange`) &mdash; Prevents users from messaging lots of targets at the same time.

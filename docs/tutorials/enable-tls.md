@@ -11,9 +11,8 @@ title: How to enable TLS (SSL) on your IRC network
 
 If you are building from source you will need to enable a TLS (SSL) module. Your current options are:
 
-- ssl_gnutls ([v4 docs](/4/modules/ssl_gnutls), [v3 docs](/3/modules/ssl_gnutls)) &mdash; requires [the GnuTLS library](https://gnutls.org).
-- ssl_mbedtls ([v3 docs](/3/modules/ssl_mbedtls)) &mdash; requires [the mbedTLS library](https://tls.mbed.org).
-- ssl_openssl ([v4 docs](/4/modules/ssl_openssl), [v3 docs](/3/modules/ssl_openssl)) &mdash; requires [the OpenSSL library](https://www.openssl.org).
+- [ssl_gnutls](/4/modules/ssl_gnutls) &mdash; requires [the GnuTLS library](https://gnutls.org).
+- [ssl_openssl](/4/modules/ssl_openssl) &mdash; requires [the OpenSSL library](https://www.openssl.org).
 
 You will also need to install [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/).
 
@@ -23,7 +22,7 @@ If you have these installed before running `./configure` then the appropriate mo
 
 If you have not already acquired a TLS (SSL) certificate and key you will need to do so. The recommended method of acquiring these files is an ACME client like [Certbot](https://certbot.eff.org/). You can acquire this from either your system package manager or from pip. See [the Certbot installation instructions](https://certbot.eff.org/instructions?ws=other&os=pip) for more information on how to install and configure Certbot. Alternatives to Certbot include [Dehydrated](https://github.com/dehydrated-io/dehydrated), [acme.sh](https://github.com/acmesh-official/acme.sh), and [many others](https://letsencrypt.org/docs/client-options/).
 
-InspIRCd ships with a script called `deploy-ssl.sh` that you can customise for use as a post-deploy hook to automatically reload your TLS (SSL) profiles when your TLS (SSL) certificate and key are updated. Generally this should not require much tweaking but you should check it just in case. If you are using this you should also make sure that your IRC server has the sslrehashsignal module ([v4 docs](/4/modules/sslrehashsignal), [v3 docs](/3/modules/sslrehashsignal)) loaded (see below).
+InspIRCd ships with a script called `deploy-ssl.sh` that you can customise for use as a post-deploy hook to automatically reload your TLS (SSL) profiles when your TLS (SSL) certificate and key are updated. Generally this should not require much tweaking but you should check it just in case. If you are using this you should also make sure that your IRC server has [the sslrehashsignal module](/4/modules/sslrehashsignal) loaded (see below).
 
 ### Loading and configuring a TLS (SSL) module
 
@@ -31,13 +30,13 @@ First you must add a `<module>` tag for the name of the TLS (SSL) module you wan
 
 Once this is added you need to create a TLS (SSL) profile. The syntax of these depend on the TLS (SSL) module that you are using.
 
-- ssl_gnutls ([v4 docs](/4/modules/ssl_gnutls#sslprofile), [v3 docs](/3/modules/ssl_gnutls#sslprofile))
-- ssl_mbedtls ([v3 docs](/3/modules/ssl_mbedtls#sslprofile))
-- ssl_openssl ([v4 docs](/4/modules/ssl_openssl#sslprofile), [v3 docs](/3/modules/ssl_openssl#sslprofile))
+
+- [ssl_gnutls](/4/modules/ssl_gnutls#sslprofile)
+- [ssl_openssl](/4/modules/ssl_openssl#sslprofile)
 
 You should note down the value of `<sslprofile:name>` as you will need this in the next step.
 
-Now you have a TLS (SSL) profile you can create a `<bind>` tag ([v4 docs](/4/configuration/#bind), [v3 docs](/3/configuration/#bind)) with the `sslprofile` key set to the name you specified in `<sslprofile:name>`. This might vary depending on your configuration but it will look something like this:
+Now you have a TLS (SSL) profile you can create [a `<bind>` tag](/4/configuration/#bind) with the `sslprofile` key set to the name you specified in `<sslprofile:name>`. This might vary depending on your configuration but it will look something like this:
 
 ```xml
 <bind address="*"
