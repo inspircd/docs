@@ -11,7 +11,7 @@ description: |-
 configuration:
 - name: database
   description: |-
-    The `<database>` tag defines a PostgreSQL database to connect to. This tag can be defined as many times as required.
+    The `<database>` tag defines a LDAP database to connect to. This tag can be defined as many times as required.
   attributes:
   - name: module
     type: Text
