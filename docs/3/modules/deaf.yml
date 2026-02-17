@@ -25,7 +25,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether user mode `D` (privdeaf) is enabled. You must restart after changing this setting for it to be applied.
+      Whether user mode `D` (privdeaf) is enabled. You must restart or globally reload this module after changing this setting for it to be applied.
   - name: privdeafuline
     type: Boolean
     required: false
