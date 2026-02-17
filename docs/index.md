@@ -47,6 +47,12 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
+### InspIRCd 5 (development)
+
+*Currently still early in development*
+
+- [Change Log](/5/change-log)
+
 ### InspIRCd 3 (old stable)
 
 *EOL since 2026-01-01*
@@ -60,15 +66,3 @@ title: Introduction
 - [Change Log](/3/change-log)
 
 </div>
-
-<!--
-<div class="col-md-4" markdown="1">
-
-### InspIRCd 5 (development)
-
-**Currently still early in development**
-
-- [Change Log](/5/change-log)
-
-</div>
--->
