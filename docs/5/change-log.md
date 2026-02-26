@@ -10,21 +10,27 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 5.0.0dev2
 
-<!-- TODO: ensure changes after commit 448c43477189e575e0d288fa04427992bba85bb7 are added to this list before release. -->
-
-**This development snapshot version of InspIRCd has not yet been released.**
+**This development snapshot version of InspIRCd was released on 2026-03-01.**
 
 - Added spanningtree server protocol 1207.
 
+- Added support for networking standard replies.
+
 - Added support for not propagating X-lines.
+
+- Added support for per-command maximum targets.
 
 - Added support for using extbans with the `/SILENCE` command.
 
 - Added the join time to channel memberships.
 
+- Cleaned up `ERR_NOPRIVILEGES` messages.
+
 - Merged all of the changes from the v4 development branch into the v5 development branch.
 
 - Modularised user I/O handling and moved socket user I/O handling from the core to the core_clients module.
+
+- Moved support for sending standard replies to the core.
 
 - Moved the `<security:maphide>` configuration tag to `<maphide:url>`.
 
@@ -34,9 +40,14 @@ This page lists changes which have happened between releases.
 
 - Removed the `<sslinfo:welcomemsg>` setting with no replacement (now always disabled).
 
-- Removed the u_ prefix from the names of channel mode `C` (noctcp), `r` (registered), and `S` (stripcolor).
+- Removed the c_ prefix from the name of channel mode `r` (registered).
+
+- Removed the u_ prefix from the names of user mode `C` (noctcp), `r` (registered), and `S` (stripcolor).
 
 - Renamed user mode `z` (sslqueries) to sslonly.
+
+- Rewrote the `sajoin`, `sakick`, `samode`, `sanick`, `sapart`, `saquit`, and `satopic` modules from
+scratch and merged into one `sacommands` module.
 
 - Rewrote the `swhois` module from scratch with support for multiple swhois entries.
 
