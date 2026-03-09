@@ -1,5 +1,11 @@
 name: starttls
 
+introduction: |-
+  !!! warning ""
+      This module is deprecated and will be removed in the next major version of InspIRCd.
+
+      This capability has been deprecated by IRCv3. It is recommended that you use [the ircv3_sts module](/4/modules/ircv3_sts) instead.
+
 description: |-
   This module provides the IRCv3 `tls` client capability.
 
