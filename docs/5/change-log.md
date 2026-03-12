@@ -8,6 +8,40 @@ title: v5 Change Log
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 5.0.0dev3
+
+<!-- TODO: ensure changes after commit e9664f13ebac1de56fb28bd6483779a988aac28a are added to this list before release. -->
+
+**This development snapshot version of InspIRCd has not yet been released.**
+
+- Added an optional target nickname parameter to the `/SETHOST`, `/SETIDENT`, and `/SETNAME` commands.
+
+- Added support for configuring per-command target limits using the `<maxlimits>` tag.
+
+- Added support for resending ISUPPORT entries when a server operator's config gives them different limits.
+
+- Added the time the server configuration was read to the output of the `httpd_stats` module.
+
+- Converted the `abbreviation` and `uninvite` module to use standard replies instead of InspIRCd-specific numerics.
+
+- Converted the `cban`, `dnsbl`, `gateway`, `rline`, `shun`, `sethost`, `setident`, and `setname` modules to use standard replies instead of server notices.
+
+- Developer: Added support for checking if a user matches any list mode entry instead of just a ban.
+
+- Developer: Converted the `IS_*` free functions to `Is*` and `As*` member functions.
+
+- Developer: Redesigned the internal service system to treat all services the same and split the service type from the name.
+
+- Developer: Rewrote the mkauthors tool from Perl to Python.
+
+- Merged all of the changes from the v4 development branch into the v5 development branch.
+
+- Moved the `banredirect` module to inspircd-contrib as it is obsolete now the `redirect` module can handle ban redirects.
+
+- Moved translation of command paramerers from the core to the spanningtree module.
+
+- Removed the `chghost`, `chgident`, and `chgname` modules as their functionality has been merged into the `sethost`, `setident`, and `setname` modules respectively.
+
 ### InspIRCd 5.0.0dev2
 
 **This development snapshot version of InspIRCd was released on 2026-03-01.**
