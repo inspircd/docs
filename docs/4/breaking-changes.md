@@ -2,7 +2,7 @@
 title: v4 Breaking Changes
 ---
 
-## Breaking changes since InspIRCd 3
+## Breaking changes between InspIRCd v3 and v4
 
 **NOTE** &mdash; This document only lists breaking changes between InspIRCd 3 and InspIRCd 4. There are many backwards compatible changes that have been made which are not listed in this document.
 
