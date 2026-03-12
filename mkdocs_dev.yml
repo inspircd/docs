@@ -1,8 +1,4 @@
 nav:
-    - InspIRCd 3:
-        - Configuration: 3/configuration/index.md
-        - Modules: 3/modules/index.md
-        - Change Log: 3/change-log.md
     - InspIRCd 4:
         - Installation: 4/installation/index.md
         - Configuration: 4/configuration/index.md
