@@ -9,7 +9,7 @@ syntax:
   text:
   - <channel> <ts> <modes> [<mode-parameters>]+
 description: |-
-  Changes the username (ident) of the source user to the specified value.
+  Changes the username of the source user to the specified value.
 example:
 - description: |-
     Sets channel modes `n` (noextmsg) and `l` (limit) on #chan

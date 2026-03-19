@@ -10,7 +10,7 @@ syntax:
   text:
   - <channel> <channel-ts> <topic-ts> [<setter>] :<new-topic>
 description: |-
-  Changes the username (ident) of the source user to the specified value.
+  Changes the username of the source user to the specified value.
 example:
 - description: |-
     User 36DAAAAAA changing the topic of #chan

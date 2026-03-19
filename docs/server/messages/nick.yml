@@ -7,7 +7,7 @@ syntax:
   text:
   - <nick> <ts>
 description: |-
-  Changes the username (ident) of the source user to the specified value.
+  Changes the username of the source user to the specified value.
 example:
 - description: |-
     Changes the nickname of 36DAAAAAA to Sadie

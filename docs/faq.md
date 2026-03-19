@@ -59,11 +59,11 @@ Server operators do not automatically get channel privileges by default. You can
 
 - Giving yourself channel operator status using [the samode module](/4/modules/samode).
 
-### Why does my server tell me "An unexpected TLS packet was received" or "error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record.c" when I try to connect using SSL/TLS?
+### Why does my server tell me "An unexpected TLS packet was received" or "error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record.c" when I try to connect using TLS?
 
-You are trying to connect using TLS (SSL) but your server is not configured to listen for TLS (SSL) connections.
+You are trying to connect using TLS but your server is not configured to listen for TLS connections.
 
-Check that you have a TLS (SSL) module loaded and that your bind tag has the name of a TLS (SSL) profile in `<bind:ssl>`.
+Check that you have a TLS module loaded and that your bind tag has the name of a TLS profile in `<bind:ssl>`.
 
 If you're using v3.7.0 or newer you can also use the `inspircd-testssl` script to help diagnose this issue.
 

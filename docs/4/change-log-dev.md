@@ -104,13 +104,13 @@ This page lists changes which have happened between development releases. For th
 
 - Added `<options:maskinlist>` to allow saving the full user mask of a list mode setter.
 
-- Added `<sslinfo:welcomemessage>` to control sending the SSL connection information message to connecting users.
+- Added `<sslinfo:welcomemessage>` to control sending the TLS connection information message to connecting users.
 
-- Added a zero-parameter version of `/SSLINFO` to view your own SSL certificate information.
+- Added a zero-parameter version of `/SSLINFO` to view your own TLS certificate information.
 
-- Added checks to help users migrate from v2-style SSL config.
+- Added checks to help users migrate from v2-style TLS config.
 
-- Added support for multiple SSL fingerprints to allow migrating between hash algorithms.
+- Added support for multiple TLS fingerprints to allow migrating between hash algorithms.
 
 - Added the `$address` variable to the alias module.
 

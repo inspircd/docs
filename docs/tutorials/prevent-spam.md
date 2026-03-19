@@ -60,9 +60,9 @@ If you want a softer option you can also use [the muteban module](/4/modules/mut
 /MODE #channel +b mute:unauthed:*!*@*.linodeusercontent.com
 ```
 
-### Require TLS (SSL)
+### Require TLS
 
-Some IRC spambots are very poorly written and do not support TLS (SSL). You can break these bots by requiring TLS (SSL) on your IRC network. This also has the benefit of preventing your users from having their chats snooped on. To do this you can either disable your plaintext listeners entirely or better still use the IRCv3 STS (Strict Transport Security) feature to redirect users of modern clients to your TLS (SSL) port.
+Some IRC spambots are very poorly written and do not support TLS. You can break these bots by requiring TLS on your IRC network. This also has the benefit of preventing your users from having their chats snooped on. To do this you can either disable your plaintext listeners entirely or better still use the IRCv3 STS (Strict Transport Security) feature to redirect users of modern clients to your TLS port.
 
 ```xml
 # These can go anywhere in your configuration

@@ -8,6 +8,6 @@ title: Tutorials
 
 ## Tutorials
 
-- [How to enable TLS (SSL) on your IRC network](/tutorials/enable-tls)
+- [How to enable TLS on your IRC network](/tutorials/enable-tls)
 - [How to install and configure InspIRCd](/4/installation)
 - [How to prevent spam on your IRC network](/tutorials/prevent-spam)
