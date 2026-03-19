@@ -9,6 +9,6 @@ description: |-
   Resolves a nickname collision by changing a user's nickname to their UUID.
 example:
 - description: |-
-    Changes the real name (gecos) of 36DAAAAAA to "Wibble Wobble"
+    Changes the nickname of 36DAAAAAA to their UUID.
   text: |-
     :36D SAVE 36DAAAAAA 1234567890
