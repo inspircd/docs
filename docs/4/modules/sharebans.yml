@@ -1,0 +1,39 @@
+name: classban
+
+introduction: |-
+  !!! note "New in v4.10.0!"
+      If you are using an older version you will need to upgrade to use this module.
+
+description: |-
+  This module adds extended ban `b:` (share) which allows sharing bans between channels.
+
+configuration:
+- name: sharebans
+  description: |-
+    The `<sharebans>` tag defines settings about how the sharebans module should behave. This tag can only be defined once.
+  attributes:
+  - name: maxdepth
+    type: Number
+    required: false
+    default: '2'
+    description: |-
+      The number of channels the extended ban should be able to check through for matching entries.
+  details: ""
+  example: |-
+    ```xml
+    <sharebans maxdepth="2">
+    ```
+
+extbans:
+  description: ""
+  chars:
+  - name: share
+    char: b
+    type: Acting
+    syntax: <channel>
+    description: Checks the ban list of &lt;channel&gt; for matching entries.
+  example:
+  - description: |-
+      Checks the ban list of #channel when a user joins #channel.alt
+    text: |-
+      /MODE #channel.alt +b share:#channel

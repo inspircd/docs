@@ -6,6 +6,74 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.10.0
+
+**This version of InspIRCd was released on 2026-04-04.**
+
+- Added `<ctctags:clientonlytags>` as a replacement for `<ctctags:allowclientonlytags>`  with an additional `known` option to allow filtering to known IRCv3 message tags.
+
+- Added an example config file that contains `<securehost>` tags for known safe IRC crawlers.
+
+- Added extended ban `d:` (redirect) to the redirect module.
+
+- Added support for the IRCv3 ACCOUNTEXTBAN ISupport token.
+
+- Added support for the IRCv3 no-implicit-names specification to the ircv3 module.
+
+- Added support for the IRCv3 UTF8ONLY specification.
+
+- Added support for validating extended bans before they are set.
+
+- Added the `<classban:operonly>` option to allow restricting setting extended ban `n:` (class) to server operators.
+
+- Added the `zline` and `zlineopers` options for `<blockamsg:action>` which Z-lines users who send mass-messages.
+
+- Added the ability to mark modules as deprecated.
+
+- Added the sharebans module which allows bans to be shared between channels.
+
+- Changed extended ban `z:` (fingerprint) to be only settable by server operators when TLS fingerprints are only visible to server operators (with an opt-out config option).
+
+- Deduplicated checking command access.
+
+- Deprecated the banredirect module in favour of extended ban `d:` (redirect) from the redirect module.
+
+- Documented the existence of the `/DNSBL` command.
+
+- Fixed cap-notify to not send `CAP DEL` before `CAP NEW` when the value of a capability changes.
+
+- Fixed channel mode `f` (messageflood) miscounting user messages when a memory address is reused.
+
+- Fixed checking the length limit for usernames, hostnames, and real names.
+
+- Fixed counting the number of connections the server has had.
+
+- Fixed erroneously being able to message unencrypted users when user mode `z` (sslqueries) is set.
+
+- Fixed erroneously networking some user metadata for partially connected users.
+
+- Fixed erroneously sending `MONITOR` notifications for partially-connected users.
+
+- Fixed extended ban `a:` (realmask) and `r:` (realname) being unable to ban real names containing spaces.
+
+- Fixed not being able to message TLS-using users who are not on your accept list when user mode `z` (sslqueries) is set.
+
+- Fixed reading the help channel list.
+
+- Fixed sending a `FAIL` message when a `NOTE` message should have been sent when using the `/CLOAK` command.
+
+- Fixed sending the wrong username in the `ERR_INVALIDUSERNAME` numeric.
+
+- Fixed sending too many `RPL_ENDOFNAMES` numerics when the user list of multiple channels is requested.
+
+- Fixed some S2S commands erroneously being case sensitive.
+
+- Improved the documentation of extended bans in the example help config.
+
+- Increased the amount of modes the redirect module can redirect users to include banned users, uninvited users, and users beyond the limit.
+
+- Updated the Windows dependencies.
+
 ### InspIRCd 4.9.0
 
 **This version of InspIRCd was released on 2025-12-06.**
@@ -104,7 +172,7 @@ This page lists changes which have happened between releases.
 
 - [Fixed a **crash** when a server operator with a custom connect class quits.](/security/2025-01)
 
-- Added extban names to help.example.conf.
+- Added extended ban names to help.example.conf.
 
 - Added support for help channels in which users with user mode `h` (helpop) will be automatically granted a channel prefix mode.
 
@@ -124,7 +192,7 @@ This page lists changes which have happened between releases.
 
 - Fixed flushing the standard output stream after startup when not forking into the background.
 
-- Fixed help.example.conf to correctly list all current exemptions, extbans, and modes.
+- Fixed help.example.conf to correctly list all current exemptions, extended bans, and modes.
 
 - Improved the performance of formatting various messages.
 
@@ -158,7 +226,7 @@ This page lists changes which have happened between releases.
 
 - Fixed linking against v3 servers when using the repeat module.
 
-- Fixed removing regular bans that look like an extban.
+- Fixed removing regular bans that look like an extended ban.
 
 - Fixed sending some rehash snotices to the announcement snomask character.
 
@@ -220,7 +288,7 @@ This page lists changes which have happened between releases.
 
 - Added a faster method of converting values to a string for types that support it.
 
-- Added advertisement of the preferred extban format for services.
+- Added advertisement of the preferred extended ban format for services.
 
 - Added support for matching account bans against the entire nick group.
 
@@ -246,7 +314,7 @@ This page lists changes which have happened between releases.
 
 - Fixed "no tags to send" errors on some clients when `<ctctags:allowclientonlytags>` is disabled.
 
-- Fixed extbans silently overwriting extbans with the same character from other modules.
+- Fixed extended bans silently overwriting extended bans with the same character from other modules.
 
 - Fixed potentially generating a malformed permchannels database.
 
@@ -390,7 +458,7 @@ This page lists changes which have happened between releases.
 
 - Fixed mistakenly skipping empty lines in MOTD files.
 
-- Fixed unregistering extbans when a module unloads.
+- Fixed unregistering extended bans when a module unloads.
 
 - Merged the build time compiler validation checks.
 

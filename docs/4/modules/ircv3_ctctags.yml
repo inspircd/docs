@@ -13,11 +13,27 @@ configuration:
     required: false
     default: 'Yes'
     description: |-
-      Whether to allow clients to send client-to-client tags.
-  details: ""
+      *Deprecated in v4.10.0!* Whether to allow clients to send client-only tags. You should use `clientonlytags` instead of this.
+  - name: clientonlytags
+    type: Text
+    required: false
+    default: all
+    added: 4.10.0
+    description: |-
+      What client-only tags to allow clients to send.
+
+  details: |-
+    The clientonlytags field should be set to one of the following values:
+
+    Value | Description
+    ----- | -----------
+    all   | [**New in v4.10.0!**](/4/change-log/#inspircd-4100) Allow all client-only tags.
+    known | [**New in v4.10.0!**](/4/change-log/#inspircd-4100) Allow known client-only tags.
+    none  | [**New in v4.10.0!**](/4/change-log/#inspircd-4100) Do not allow client-only tags.
+
   example: |-
     ```xml
-    <ctctags allowclientonlytags="yes">
+    <ctctags clientonlytags="all">
     ```
 
 commands:

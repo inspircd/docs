@@ -1,0 +1,4 @@
+name: ircv3_msgid
+
+description: |-
+  This module provides support for [the IRCv3 UTF8ONLY specification](https://ircv3.net/specs/extensions/utf8-only).

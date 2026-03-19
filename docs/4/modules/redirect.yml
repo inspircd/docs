@@ -1,9 +1,57 @@
 name: redirect
 
 description: |-
-  This module allows users to be redirected to another channel when the user limit is reached.
+  This module allows users to be redirected to another channel.
 
-configuration: []
+configuration:
+- name: redirect
+  description: |-
+    The `<redirect>` tag defines settings about how the redirect module should behave. This tag can only be defined once.
+  attributes:
+  - name: ban
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 4.10.0
+    description: |-
+      Whether to redirect users who are banned from the channel.
+  - name: extban
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 4.10.0
+    description: |-
+      Whether to enable extended ban `d:` (redirect).
+  - name: inviteonly
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.10.0
+    description: |-
+      Whether to redirect users who have not been invited.
+  - name: key
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.10.0
+    description: |-
+      Whether to redirect users who did not specify the correct channel key.
+  - name: limit
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.10.0
+    description: |-
+      Whether to redirect users when the channel is full.
+  details: ""
+  example: |-
+    ```xml
+    <redirect ban="no"
+              extban="yes"
+              inviteonly="yes"
+              key="yes"
+              limit="yes">
+    ```
 
 chmodes:
   chars:
@@ -12,12 +60,12 @@ chmodes:
     type: Parameter
     syntax: <channel>
     usable_by: Channel operators
-    description: Redirects all new users to &lt;channel&gt; when the user limit is reached.
+    description: Redirects all new users who can't join the channel to &lt;channel&gt;.
   example:
   - description: |-
-      Redirects new users from #channel to #channel-full when the user limit is reached
+      Redirects new users who can't join #channel to #channel-overflow
     text: |-
-      /MODE #channel +L #channel-full
+      /MODE #channel +L #channel-overflow
 
 umodes:
   chars:
@@ -29,6 +77,19 @@ umodes:
     description: |-
       Prevents users from being redirected by channel mode `L` (redirect).
   example: ""
+
+extbans:
+  chars:
+  - name: redirect
+    char: d
+    type: Acting
+    syntax: <channel>:<mask>
+    description: Redirects users matching &lt;mask&gt; to &lt;channel&gt;.
+  example:
+  - description: |-
+      Redirects users matching `*!*@example.com` to `#example`
+    text: |-
+      /MODE #channel +b d:#example:*!*@example.com
 
 special_notes: |-
   When setting a redirect the target channel should exist and the user setting the redirect should have channel operator status in it.

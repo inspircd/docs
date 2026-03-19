@@ -1,5 +1,11 @@
 name: banredirect
 
+introduction: |-
+  !!! warning ""
+      This module is deprecated and will be removed in the next major version of InspIRCd.
+
+      It is recommended that you use the extban of [the redirect module](/4/modules/redirect) instead.
+
 description: |-
   This module allows specifying a channel to redirect a banned user to in the ban mask.
 

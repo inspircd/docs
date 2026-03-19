@@ -26,6 +26,13 @@ configuration:
     default: 'Yes'
     description: |-
       Whether the `extended-join` client capability is enabled.
+  - name: no-implicit-names
+    type: Boolean
+    required: false
+    default: 'Yes'
+    added: 4.10.0
+    description: |-
+      Whether the `no-implicit-names` client capability is enabled.
   - name: standardreplies
     type: Boolean
     required: false
@@ -39,6 +46,7 @@ configuration:
     <ircv3 accountnotify="yes"
            awaynotify="yes"
            extendedjoin="yes"
+           noimplicitnames="yes"
            standardreplies="yes">
     ```
 
@@ -52,6 +60,9 @@ client_caps:
 - name: '[extended-join](https://ircv3.net/specs/extensions/extended-join.html)'
   description: |-
     Extends the server-to-client JOIN message to include the joining user's account name and real name.
+- name: '[no-implicit-names](https://ircv3.net/specs/extensions/no-implicit-names.html)'
+  description: |-
+    Allows clients to opt-out of automatically receiving a NAMES list when joining a channel.
 - name: '[standard-replies](https://ircv3.net/specs/extensions/standard-replies)'
   description: |-
     Allows clients to receive arbitrary standard replies instead of server notices or custom numerics.

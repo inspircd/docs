@@ -3,6 +3,24 @@ name: classban
 description: |-
   This module adds extended ban `n:` (class) which check whether users are in a connect class matching the specified glob pattern.
 
+configuration:
+- name: classban
+  description: |-
+    The `<classban>` tag defines settings about how the classban module should behave. This tag can only be defined once.
+  attributes:
+  - name: operonly
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 4.10.0
+    description: |-
+      Whether extended ban `n:` (class) can only be set by server operators.
+  details: ""
+  example: |-
+    ```xml
+    <classban operonly="no">
+    ```
+
 extbans:
   description: ""
   chars:
