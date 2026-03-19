@@ -26,7 +26,7 @@ extbans:
   - description: |-
       Bans privileged users matching `*!*@example.com` from using the `/KICK` command
     text: |-
-      /MODE #channel +b Q:*!*@example.com
+      /MODE #channel +b nokick:*!*@example.com
 
 special_notes: |-
   You should consider using [the services module](/4/modules/services) and the mode locking feature of your IRC services to prevent privileged users from evading this mode by unsetting it.

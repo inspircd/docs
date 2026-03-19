@@ -20,4 +20,4 @@ chmodes:
   - description: |-
       Exempts users logged into the services account named Sadie from the `b` (ban) channel mode (requires [the account module](/4/modules/account))
     text: |-
-      /MODE #channel +e R:Sadie
+      /MODE #channel +e account:Sadie

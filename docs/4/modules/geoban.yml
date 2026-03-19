@@ -15,8 +15,8 @@ extbans:
   - description: |-
       Bans users connecting from the United States of America
     text: |-
-      /MODE #channel +b G:US
+      /MODE #channel +b country:US
   - description: |-
       Bans users whose country of origin can not be determined
     text: |-
-      /MODE #channel +b G:XX
+      /MODE #channel +b country:XX

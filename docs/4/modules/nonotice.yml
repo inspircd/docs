@@ -30,4 +30,4 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from sending messages with the `/NOTICE` command
     text: |-
-      /MODE #channel +b T:*!*@example.com
+      /MODE #channel +b nonotice:*!*@example.com

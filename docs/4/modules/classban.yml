@@ -15,4 +15,4 @@ extbans:
   - description: |-
       Bans users in the "webchat" connect class from joining the channel
     text: |-
-      /MODE #channel +b n:webchat
+      /MODE #channel +b class:webchat

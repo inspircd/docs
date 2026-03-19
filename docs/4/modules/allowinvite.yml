@@ -25,4 +25,4 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from using the `/INVITE` command
     text: |-
-      /MODE #channel +b A:*!*@example.com
+      /MODE #channel +b blockinvite:*!*@example.com

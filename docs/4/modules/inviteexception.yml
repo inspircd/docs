@@ -37,4 +37,4 @@ chmodes:
   - description: |-
       Exempts users logged into the services account named Sadie from channel mode `i` (inviteonly) (requires [the account module](/4/modules/account))
     text: |-
-      /MODE #channel +I R:Sadie
+      /MODE #channel +I account:Sadie

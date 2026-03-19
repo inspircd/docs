@@ -49,4 +49,4 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from changing their nickname whilst in the channel
     text: |-
-      /MODE #channel +b N:*!*@example.com
+      /MODE #channel +b nonick:*!*@example.com

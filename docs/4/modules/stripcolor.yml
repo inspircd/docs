@@ -41,4 +41,4 @@ extbans:
   - description: |-
       Strips IRC formatting codes from users matching `*!*@example.com`
     text: |-
-      /MODE #channel +b S:*!*@example.com
+      /MODE #channel +b stripcolor:*!*@example.com

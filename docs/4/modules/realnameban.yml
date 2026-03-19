@@ -20,8 +20,8 @@ extbans:
   - description: |-
       Bans users with a nick!user@host+real mask matching `*!*@example.com+*example*` from joining the channel
     text: |-
-      /MODE #channel +b a:*!*@example.com+*example*
+      /MODE #channel +b realmask:*!*@example.com+*example*
   - description: |-
       Bans users with a real name matching `*example*` from joining the channel
     text: |-
-      /MODE #channel +b r:*example*
+      /MODE #channel +b realname:*example*

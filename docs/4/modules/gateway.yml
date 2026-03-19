@@ -148,7 +148,7 @@ example:
 - description: |-
     Bans users connecting via the CGI:IRC gateway
   text: |-
-    /MODE #channel +b w:cgiirc
+    /MODE #channel +b gateway:cgiirc
 
 snomasks:
 - char: w

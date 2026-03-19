@@ -28,7 +28,7 @@ umodes:
 extbans:
   description: ""
   chars:
-  - name: sslfp
+  - name: fingerprint
     char: z
     type: Matching
     syntax: <pattern>
@@ -37,7 +37,7 @@ extbans:
   - description: |-
       Bans users with a TLS client certificate fingerprint of 5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
     text: |-
-      /MODE #channel +b z:5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
+      /MODE #channel +b fingerprint:5d7499e1a3537687a2e875fed60b171508a4d1384351e276c4f961ab80729249
 
 special_notes: |-
   If you have a user on your [accept list](/4/modules/callerid/#commands) they will be exempt from user mode `z` (sslqueries).

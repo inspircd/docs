@@ -31,4 +31,4 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from sending messages that contain IRC formatting codes
     text: |-
-      /MODE #channel +b c:*!*@example.com
+      /MODE #channel +b blockcolor:*!*@example.com

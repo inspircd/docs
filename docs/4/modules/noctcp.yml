@@ -63,7 +63,7 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from sending messages that contain CTCPs
     text: |-
-      /MODE #channel +b C:*!*@example.com
+      /MODE #channel +b noctcp:*!*@example.com
 
 special_notes: |-
   Actions (i.e. /ME) use a CTCP internally but are not blocked by this module.

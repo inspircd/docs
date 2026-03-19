@@ -15,4 +15,4 @@ extbans:
   - description: |-
       Bans users on irc2.example.com from joining the channel
     text: |-
-      /MODE #channel +b s:irc2.example.com
+      /MODE #channel +b server:irc2.example.com

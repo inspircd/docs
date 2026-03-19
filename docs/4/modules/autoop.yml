@@ -20,4 +20,4 @@ chmodes:
   - description: |-
       Grants channel voice status on join to users logged into the services account named Sadie (requires [the account module](/4/modules/account))
     text: |-
-      /MODE #channel +w v:R:Sadie
+      /MODE #channel +w v:account:Sadie

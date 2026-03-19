@@ -31,8 +31,8 @@ extbans:
   - description: |-
       Bans users logged into server operator accounts with a name matching `Evil*` from joining the channel
     text: |-
-      /MODE #channel +b o:Evil*
+      /MODE #channel +b oper:Evil*
   - description: |-
       Bans users logged into server operator accounts with an operator type matching `Evil*` from joining the channel
     text: |-
-      /MODE #channel +b O:Evil*
+      /MODE #channel +b opertype:Evil*

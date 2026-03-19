@@ -49,4 +49,4 @@ extbans:
   - description: |-
       Bans users matching `*!*@example.com` from speaking to unprivileged users
     text: |-
-      /MODE #channel +b u:*!*@example.com
+      /MODE #channel +b opmoderated:*!*@example.com
