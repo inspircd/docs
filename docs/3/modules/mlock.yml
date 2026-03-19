@@ -1,4 +1,0 @@
-name: mlock
-
-description: |-
-  This module allows services to lock channel modes so that they can not be changed.

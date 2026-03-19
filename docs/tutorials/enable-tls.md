@@ -54,7 +54,7 @@ InspIRCd ships with a tool named `inspircd-testssl` on binary installations and 
 
 In older versions of InspIRCd you configured TLS (SSL) by setting `<bind:ssl>` to the name of a TLS (SSL) module and configuring the TLS (SSL) certificate and key in `<gnutls>`, `<mbedtls>`, or `<openssl>`. Configuring TLS (SSL) in this way is deprecated and will not work if you have a TLS (SSL) profile defined. It is strongly recommended that you do not use this method as it has been removed in the development branch.
 
-In v3 TLS (SSL) certificates are not reloaded by default on a regular config rehash. You need to use `/REHASH -ssl` to reload TLS (SSL) certificates or load [the sslrehashsignal module](/3/modules/sslrehashsignal) and send SIGUSR1 to your IRC server. You can also set `<gnutls onrehash="yes">`, `<mbedtls onrehash="yes">`. or `<openssl onrehash="yes>` to reload your TLS (SSL) certificates on rehash.
+In v3 TLS (SSL) certificates are not reloaded by default on a regular config rehash. You need to use `/REHASH -ssl` to reload TLS (SSL) certificates or load [the sslrehashsignal module](/4/modules/sslrehashsignal) and send SIGUSR1 to your IRC server. You can also set `<gnutls onrehash="yes">`, `<mbedtls onrehash="yes">`. or `<openssl onrehash="yes>` to reload your TLS (SSL) certificates on rehash.
 
 Certbot provides multiple TLS (SSL) certificate files. If you are getting client errors about missing intermediary certificates you have probably used `cert.pem` as your certificate instead of `fullchain.pem`.
 

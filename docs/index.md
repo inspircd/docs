@@ -59,10 +59,7 @@ title: Introduction
 <br>
 *Please upgrade ASAP*
 
-- [Configuration](/3/configuration)
-    - [Useful Snippets](/3/configuration/useful-snippets)
-    - [Upgrading from v2](/3/breaking-changes)
-- [Modules](/3/modules)
+- [Upgrading from v2](/3/breaking-changes)
 - [Change Log](/3/change-log)
 
 </div>
