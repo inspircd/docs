@@ -99,7 +99,7 @@ configuration:
   - name: hash
     type: Text
     required: false
-    default: sha256
+    default: sha256 md5
     description: |-
       A space-delimited list of hash algorithms used for TLS client fingerprints. Prefix with `spki-` to use a Subject Public Key Info (SPKI) fingerprint for WebIRC gateway clients instead of a certificate fingerprint.
   - name: keyfile
