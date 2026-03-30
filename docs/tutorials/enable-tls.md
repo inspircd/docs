@@ -52,7 +52,7 @@ InspIRCd ships with a tool named `inspircd-testssl` on binary installations and 
 
 ### Common mistakes
 
-In older versions of InspIRCd you configured TLS by setting `<bind:ssl>` to the name of a TLS module and configuring the TLS certificate and key in `<gnutls>`, `<mbedtls>`, or `<openssl>`. Configuring TLS in this way is deprecated and will not work if you have a TLS profile defined. It is strongly recommended that you do not use this method as it has been removed in the development branch.
+In older versions of InspIRCd you configured TLS by setting `<bind:ssl>` to the name of a TLS module and configuring the TLS certificate and key in `<gnutls>`, `<mbedtls>`, or `<openssl>`. Configuring TLS in this way will not work in v4. You must now configure a `<sslprofile>` instead.
 
 In v3 TLS certificates are not reloaded by default on a regular config rehash. You need to use `/REHASH -ssl` to reload TLS certificates or load [the sslrehashsignal module](/4/modules/sslrehashsignal) and send SIGUSR1 to your IRC server. You can also set `<gnutls onrehash="yes">`, `<mbedtls onrehash="yes">`. or `<openssl onrehash="yes>` to reload your TLS certificates on rehash.
 

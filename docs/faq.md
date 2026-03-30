@@ -63,7 +63,7 @@ Server operators do not automatically get channel privileges by default. You can
 
 You are trying to connect using TLS but your server is not configured to listen for TLS connections.
 
-Check that you have a TLS module loaded and that your bind tag has the name of a TLS profile in `<bind:ssl>`.
+Check that you have a TLS module loaded and that your bind tag has the name of a TLS profile in `<bind:sslprofile>`.
 
 If you're using v3.7.0 or newer you can also use the `inspircd-testssl` script to help diagnose this issue.
 
