@@ -35,7 +35,7 @@ sudo yum install "./inspircd-[VERSION].el8.x86_64.rpm"
 
 The package should now be installed and you can proceed to set up your [configuration](/4/configuration).
 
-Once you have configured your server you can start it by running `systemctl start inspircd.service` or, if you prefer not to use systemd, by running `inspircd`.
+Once you have configured your server you can start it by running `systemctl start inspircd.service` or, if you prefer not to use systemd, by running `sudo -g inspircd -u inspircd inspircd`.
 
 ### Where does this package store important files?
 

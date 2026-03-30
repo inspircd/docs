@@ -43,7 +43,7 @@ sudo apt-get install "./inspircd_[VERSION]_amd64.deb"
 
 The package should now be installed and you can proceed to set up your [configuration](/4/configuration).
 
-Once you have configured your server you can start it by running `systemctl start inspircd.service` or, if you prefer not to use systemd, by running `inspircd`.
+Once you have configured your server you can start it by running `systemctl start inspircd.service` or, if you prefer not to use systemd, by running `sudo -g irc -u irc inspircd`.
 
 ### Where does this package store important files?
 
