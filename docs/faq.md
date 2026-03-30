@@ -31,7 +31,7 @@ sudo systemctl enable inspircd.service
 
 ### I have found a bug where should I report it?
 
-Security bugs should be emailed privately to an InspIRCd core developer. All other bugs should be reported on our [issue tracker](https://github.com/inspircd/inspircd/issues).
+Security bugs should be sent privately to a maintainer [following our security policy](https://github.com/inspircd/inspircd/blob/insp4/.github/SECURITY.md). All other bugs should be reported on our [issue tracker](https://github.com/inspircd/inspircd/issues).
 
 Please do not use IRC for reporting bugs as your report may be buried and forgotten about.
 
