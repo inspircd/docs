@@ -10,11 +10,11 @@ This page lists changes which have happened between releases.
 
 ### InspIRCd 5.0.0dev3
 
-<!-- TODO: ensure changes after commit e9664f13ebac1de56fb28bd6483779a988aac28a are added to this list before release. -->
-
-**This development snapshot version of InspIRCd has not yet been released.**
+**This development snapshot version of InspIRCd was released on 2026-04-01.**
 
 - Added an optional target nickname parameter to the `/SETHOST`, `/SETIDENT`, and `/SETNAME` commands.
+
+- Added methods for encoding and decoding individual elements to `ListExtItem`.
 
 - Added support for configuring per-command target limits using the `<maxlimits>` tag.
 
@@ -22,11 +22,19 @@ This page lists changes which have happened between releases.
 
 - Added the time the server configuration was read to the output of the `httpd_stats` module.
 
+- Changed the `sasl` module to rely on the `services` module for determining the services server.
+
+- Changed the contributor list in `/INFO` to be automatically generated from Git.
+
 - Converted the `abbreviation` and `uninvite` module to use standard replies instead of InspIRCd-specific numerics.
 
 - Converted the `cban`, `dnsbl`, `gateway`, `rline`, `shun`, `sethost`, `setident`, and `setname` modules to use standard replies instead of server notices.
 
 - Developer: Added support for checking if a user matches any list mode entry instead of just a ban.
+
+- Developer: Changed extensions to use `std::shared_ptr<>` instead of raw pointers.
+
+- Developer: Changed modules to use `std::shared_ptr<>` instead of `reference<>`.
 
 - Developer: Converted the `IS_*` free functions to `Is*` and `As*` member functions.
 
@@ -36,11 +44,15 @@ This page lists changes which have happened between releases.
 
 - Merged all of the changes from the v4 development branch into the v5 development branch.
 
+- Moved channel settings from `<options>` and `<security>` to `<channels>`.
+
 - Moved the `banredirect` module to inspircd-contrib as it is obsolete now the `redirect` module can handle ban redirects.
 
 - Moved translation of command paramerers from the core to the spanningtree module.
 
 - Removed the `chghost`, `chgident`, and `chgname` modules as their functionality has been merged into the `sethost`, `setident`, and `setname` modules respectively.
+
+- Reworked how IRC case-insensitive strings are casemapped.
 
 ### InspIRCd 5.0.0dev2
 
