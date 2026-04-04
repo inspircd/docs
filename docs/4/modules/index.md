@@ -96,6 +96,7 @@ Name                                                      | Description
 [ircv3_msgid](/4/modules/ircv3_msgid)                     | Provides support for the IRCv3 Message IDs specification.
 [ircv3_servertime](/4/modules/ircv3_servertime)           | Provides the IRCv3 server-time client capability.
 [ircv3_sts](/4/modules/ircv3_sts)                         | Adds support for the IRCv3 Strict Transport Security specification.
+[ircv3_utf8only](/4/modules/ircv3_utf8only)               | Provides support for the IRCv3 UTF8ONLY specification.
 [joinflood](/4/modules/joinflood)                         | Adds channel mode j (joinflood) which helps protect against spammers which mass-join channels.
 [kicknorejoin](/4/modules/kicknorejoin)                   | Adds channel mode J (kicknorejoin) which prevents users from rejoining after being kicked from a channel.
 [knock](/4/modules/knock)                                 | Adds the /KNOCK command which allows users to request access to an invite-only channel and channel mode K (noknock) which allows channels to disable usage of this command.
@@ -134,7 +135,6 @@ Name                                                      | Description
 [redirect](/4/modules/redirect)                           | Allows users to be redirected to another channel when the user limit is reached.
 [regex_glob](/4/modules/regex_glob)                       | Provides the glob regular expression engine which uses the built-in glob matching system.
 [regex_stdlib](/4/modules/regex_stdlib)                   | Provides the stdregex regular expression engine which uses the C++11 std::regex regular expression matching system.
-[regex_tre](/4/modules/regex_tre)                         | Provides a regular expression engine which uses the TRE library.
 [remove](/4/modules/remove)                               | Adds the /REMOVE command which allows channel operators to force part users from a channel.
 [repeat](/4/modules/repeat)                               | Adds channel mode E (repeat) which helps protect against spammers which spam the same message repeatedly.
 [restrictchans](/4/modules/restrictchans)                 | Prevents unprivileged users from creating new channels.
@@ -159,6 +159,7 @@ Name                                                      | Description
 [setname](/4/modules/setname)                             | Adds the /SETNAME command which allows users to change their real name.
 [sha1](/4/modules/sha1)                                   | Allows other modules to generate SHA-1 hashes.
 [sha2](/4/modules/sha2)                                   | Allows other modules to generate SHA-2 hashes.
+[sharebans](/4/modules/sharebans)                         | Adds extended ban b: (share) which allows sharing bans between channels.
 [showfile](/4/modules/showfile)                           | Adds support for showing the contents of files to users when they execute a command.
 [showwhois](/4/modules/showwhois)                         | Adds user mode W (showwhois) which allows users to be informed when someone does a /WHOIS query on their nick.
 [shun](/4/modules/shun)                                   | Adds the /SHUN command which allows server operators to prevent users from executing commands.
@@ -196,6 +197,7 @@ Name                                          | Description
 [regex_pcre2](/4/modules/regex_pcre2)         | Provides the pcre regular expression engine which uses the PCRE2 library.
 [regex_posix](/4/modules/regex_posix)         | Provides the posix regular expression engine which uses the POSIX.2 regular expression matching system.
 [regex_re2](/4/modules/regex_re2)             | Provides the re2 regular expression engine which uses the RE2 library.
+[regex_tre](/4/modules/regex_tre)             | Provides a regular expression engine which uses the TRE library.
 [sqlite3](/4/modules/sqlite3)                 | Provides the ability for SQL modules to query a SQLite 3 database.
 [ssl_gnutls](/4/modules/ssl_gnutls)           | Allows TLS encrypted connections using the GnuTLS library.
 [ssl_openssl](/4/modules/ssl_openssl)         | Allows TLS encrypted connections using the OpenSSL library.

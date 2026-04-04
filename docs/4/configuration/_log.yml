@@ -58,7 +58,7 @@ details: |+
   CULL                 | debug                                  | Messages relating to object culling.
   LOG                  | critical<br>normal<br>debug            | Messages relating to logging.
   MODE                 | warning                                | Messages relating to modes.
-  MODULE               | critical<br>normal<br>debug            | Messages relating to modules.
+  MODULE               | critical<br>warning<br>normal<br>debug | Messages relating to modules.
   SERVICE              | debug                                  | Messages relating to service registration.
   SIGNAL               | debug                                  | Messages relating to signal handling.
   SOCKET               | warning<br>normal<br>debug             | Messages relating to network sockets.
