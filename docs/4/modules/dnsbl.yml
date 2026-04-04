@@ -115,7 +115,7 @@ configuration:
     ----- | -----------
     gline | G-line users who's IP address is in the DNSBL.
     kill  | Kill users who's IP address is in the DNSBL.
-    kline | K-line users who's IP address is in the DNSBL.
+    kline | *Deprecated in v4.10.0!* K-line users who's IP address is in the DNSBL.
     mark  | Marks users who's IP address is in the DNSBL.
     zline | Z-line users who's IP address is in the DNSBL.
 
