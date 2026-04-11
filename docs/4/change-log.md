@@ -6,6 +6,16 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.10.1
+
+**This version of InspIRCd was released on 2026-04-11.**
+
+- Fixed the Windows binary containing the wrong version in the main executable.
+
+- Relaxed validation of usernames in `USER` as it broke some clients.
+
+- Whitelisted the `+channel-context` tag in the ircv3_ctctags module.
+
 ## InspIRCd 4.10.0
 
 **This version of InspIRCd was released on 2026-04-04.**
