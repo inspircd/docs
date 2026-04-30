@@ -2,11 +2,53 @@
 title: v5 Change Log
 ---
 
+<!--
+TODO: create the pages that link to these:
+
+[.](/5/moved-modules)
+-->
+
 {! 5/_support.md !}
 
 ## Change Log
 
 This page lists changes which have happened between releases.
+
+### InspIRCd 5.0.0dev4
+
+**This development snapshot version of InspIRCd was released on 2026-05-01.**
+
+* Added a new interactive Python configure script that invokes CMake.
+
+* Changed from a hand-made build system to using CMake on all platforms.
+
+* Changed the Windows compatibility layer to build as a static library that is then linked into the core.
+
+* Changed vendored libraries to be built as static libraries which then get linked to the appropriate modules.
+
+* Developer: Added utility methods for finding pointer elements in a container.
+
+* Developer: Changed `ListExtItem` to allow custom encoding for each list element.
+
+* Developer: Moved various remaining methods from the stdalgo header to a new container utility header.
+
+* Developer: Removed the type field from I/O hooks.
+
+* Developer: Rewrote the internal TLS interface.
+
+* Fixed some compiler warnings on CHERI systems like Arm Morello.
+
+* Increased the amount of information in the long-form `/SSLINFO` output.
+
+* Increased the security of TLS server links by either requiring a CA-validated certificate or a self-signed certificate with a pinned fingerprint.
+
+* Moved enabling and disabling extra modules to the new Module Manager.
+
+* Moved installed contrib modules to their own sub-directory.
+
+* Replaced the `ssl_cert` metadata with the new `tls-cert` metadata.
+
+* Rewrote the Module Manager from scratch in Python.
 
 ### InspIRCd 5.0.0dev3
 

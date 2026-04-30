@@ -1,5 +1,5 @@
 ---
-title: v4 Modules moved to Module Manager
+title: Modules moved to Module Manager in v4
 ---
 
 ## Modules moved to Module Manager

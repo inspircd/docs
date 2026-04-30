@@ -17,8 +17,8 @@ Name       | Description
 0. Run `tools/mkdescriptions` to update the module descriptions.
 0. Run `tools/mkheaders` to update the copyright headers.
 0. If ABI breakages have been made then update `MODULE_ABI` in `include/moduledefs.h`.
-0. Update the version in `src/version.sh`.
-0. Commit the changes to `include/moduledefs.h` and `src/version.sh` with the message `Release VERSION.`.
+0. Update the version in `src/version.sh` (v4) or `src/cmake/version.cmake` (v5).
+0. Commit the changes to `include/moduledefs.h`, `src/version.sh`, and `src/cmake/version.cmake`` with the message `Release VERSION.`.
 0. Ensure that the branch tip builds with no warnings. Checking [GitHub Actions](https://github.com/inspircd/inspircd/actions) is helpful as it builds with `-Werror`.
 0. Tag the release with `git tag VERSION`.
 0. Run `git push UPSTREAM BRANCH` and `git push UPSTREAM VERSION`.
