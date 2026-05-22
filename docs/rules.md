@@ -51,7 +51,7 @@ These rules also apply to non-InspIRCd spaces in cases where an individual is re
 
 The InspIRCd Team are responsible for interpreting and enforcing these rules. Members of the InspIRCd Team have channel prefix modes `a` (admin) and `o` (op) on IRC and are marked as "Member" on GitHub. On IRC some people have been deputised to help enforce the rules. These people have channel prefix mode `h` (halfop).
 
-We aim to enforce these rules fairly against everyone and may forgive people who make amends. To appeal a moderation action you can message Sadie on Teranova or email her at [sadie@witchery.services](mailto:sadie@witchery.services).
+We aim to enforce these rules fairly against everyone and may forgive people who make amends. To appeal a moderation action you can message Sadie on Teranova or email her at [sadie@sadiepowell.dev](mailto:sadie@sadiepowell.dev).
 
 Evasion or sending abuse in response to a moderation action will result in a permanent ban.
 
