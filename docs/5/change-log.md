@@ -14,6 +14,28 @@ TODO: create the pages that link to these:
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 5.0.0dev5
+
+**This development snapshot version of InspIRCd was released on 2026-06-01.**
+
+* Changed `/SETIDLE` to also accept a nickname the same as other `/SET*` commands.
+
+* Changed the build system use use the mold, lld, or gold linkers if available on UNIX systems.
+
+* Changed the httpd module to use llhttp and yuarel instead of http_parser.
+
+* Fixed automatically enabling extra modules.
+
+* Fixed case mapping strings in some scenarios.
+
+* Fixed the filesystem paths being lost when the build system reruns.
+
+* Increased the default for `<sslprofile:mindhbits>` to 2048 in the ssl_gnutls module.
+
+* Merged all of the changes from the v4 development branch into the v5 development branch.
+
+* Switched back to the default NSIS template on Windows.
+
 ### InspIRCd 5.0.0dev4
 
 **This development snapshot version of InspIRCd was released on 2026-05-01.**
