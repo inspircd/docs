@@ -29,7 +29,7 @@ extbans:
   chars:
   - name: share
     char: b
-    type: Acting
+    type: Matching
     syntax: <channel>
     description: Checks the ban list of &lt;channel&gt; for matching entries.
   example:

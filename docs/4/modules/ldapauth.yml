@@ -64,7 +64,7 @@ configuration:
               dbid="ldap-users"
               host="$cn.example.com"
               killreason="Access denied"
-              userfield="no"
+              field="nickname"
               verbose="yes">
     ```
 - name: ldapexemption

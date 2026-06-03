@@ -42,7 +42,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to connect to the PostgreSQL server using TLS.
+      Whether to connect to the PostgreSQL server using TLS. This is only necessary if connecting over the public internet.
   - name: user
     type: Text
     required: true
@@ -68,7 +68,7 @@ configuration:
               id="opers"
               host="localhost"
               port="5432"
-              tls="yes"
+              tls="no"
               user="ircd_opers"
               pass="changeme"
               name="inspircd">

@@ -20,17 +20,33 @@ configuration:
     default: 1m
     description: |-
       The time period that a channel should be locked for once a join flood has been detected.
+  - name: notifyrank
+    type: Number
+    required: false
+    default: 0
+    description: |-
+      The lowest prefix rank that can receive a notification that a join flood has been detected.
   - name: splitwait
     type: Duration
     required: false
     default: 30s
     description: |-
       The time period to wait after a netsplit before blocking join floods.
-  details: ""
+  details: |+
+    The notifyrank field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    0        | All users on the channel can receive join flood messages.
+    10000    | Users with channel prefix mode `v` (voice) and above can receive join flood messages.
+    30000    | Users with channel prefix mode `o` (op) and above can receive join flood messages.
+    *custom* | Users with a channel prefix mode created by [the customprefix module](/4/modules/customprefix) can receive join flood messages.
+
   example: |-
     ```xml
     <joinflood bootwait="30s"
                duration="1m"
+               notifyrank="0"
                splitwait="30s">
     ```
 
