@@ -8,9 +8,7 @@ This page lists changes which have happened between releases.
 
 ## InspIRCd 4.11.0
 
-**This version of InspIRCd has not yet been released.**
-
-<!--d53fb7a3b32a5e4da030a1125fcef6d7f16c02d9-->
+**This version of InspIRCd was released on 2026-06-06.**
 
 - Added `<nickflood:notifyrank>` to allow controlling who gets nick flood messages.
 
