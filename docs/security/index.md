@@ -4,6 +4,10 @@ title: Security Advisories
 
 This page lists all security advisories which have been released for InspIRCd since the start of 2019.
 
+## 2026
+
+* [2026-01](/security/2026-01) &mdash; Unescaped search filter in the ldapauth and ldapoper modules.
+
 ## 2025
 
 * [2025-01](/security/2025-01) &mdash; Unhandled exception from the {fmt} library.
