@@ -10,6 +10,13 @@ configuration:
   description: |-
     The `<botmode>` tag defines settings about how the botmode module should behave. This tag can only be defined once.
   attributes:
+  - name: extban
+    type: Boolean
+    required: false
+    default: 'No'
+    added: 4.11.0
+    description: |-
+      Whether to enable extended ban `B:` (bot).
   - name: forcenotice
     type: Boolean
     required: false
@@ -19,7 +26,8 @@ configuration:
   details: ""
   example: |-
     ```xml
-    <botmode forcenotice="no">
+    <botmode extban="yes"
+             forcenotice="no">
     ```
 
 umodes:
@@ -32,3 +40,17 @@ umodes:
     description: |-
       Marks the user as a bot.
   example: ""
+
+extbans:
+  description: ""
+  chars:
+  - name: bot
+    char: B
+    type: Matching
+    syntax: <pattern>
+    description: Checks whether users matching &lt;pattern&gt; are bots.
+  example:
+  - description: |-
+      Bans bots matching `*!*@annoying.host` from joining the channel.
+    text: |-
+      /MODE #channel +b bot:*!*@annoying.host

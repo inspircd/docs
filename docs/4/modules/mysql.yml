@@ -70,7 +70,7 @@ configuration:
     required: false
     default: 'No'
     description: |-
-      Whether to connect to the MySQL server using TLS. Requires MySQL 8.0 or newer.
+      Whether to connect to the MySQL server using TLS. This is only necessary if connecting over the public internet.
   details: ""
   example: |-
     ```xml
@@ -83,7 +83,7 @@ configuration:
               name="inspircd"
               charset="utf8mb4"
               srv="no"
-              tls="yes">
+              tls="no">
     ```
 
 special_notes: |-

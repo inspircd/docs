@@ -6,6 +6,50 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.11.0
+
+**This version of InspIRCd has not yet been released.**
+
+<!--d53fb7a3b32a5e4da030a1125fcef6d7f16c02d9-->
+
+- Added `<nickflood:notifyrank>` to allow controlling who gets nick flood messages.
+
+- Added a warning if a server has a potentially insecure `<wsorigin>` configured.
+
+- Added extended ban `B:` (bot) to the botmode module.
+
+- Added support for forwarding TLS fingerprints from HAProxy using a custom TLV.
+
+- Added the percentage of users in each category to the `/STATS t` output.
+
+- Developer: Added methods to the LDAP interface for escaping DNs and search filters.
+
+- Fixed `<database:tls>` on MySQL forks that use the old API.
+
+- Fixed a crash on shutdown when unloading some modules.
+
+- Fixed a null pointer dereference caused by services synchronising a dccallow or silence list (to our knowledge no services do this).
+
+- Fixed detecting `getentropy()` support on macOS.
+
+- Fixed falling back to `<sslinfo:operonly>` in the sslmodes module.
+
+- Fixed never receiving a labelled response in response to the `/QUIT` message.
+
+- Fixed sending malformed line-wrapped FJOINs for large channels in the v3 protocol compatibility layer.
+
+- Fixed some edge cases relating to `/LIST` filters.
+
+- Fixed the ircv3_ctctags module telling users the wrong mode when they can't send a tag message to a moderated channel.
+
+- [Fixed the ldapauth and ldapoper not escaping user-provided values that are used in a search filter.](/security/2026-01)
+
+- Fixed the log_json module not writing messages correctly when built against yyjson.
+
+- Fixed unnecessary truncation of numbers in the output of some `/STATS` characters.
+
+- Updated the Windows dependencies.
+
 ## InspIRCd 4.10.1
 
 **This version of InspIRCd was released on 2026-04-11.**

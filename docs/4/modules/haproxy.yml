@@ -33,3 +33,11 @@ configuration:
 
 special_notes: |-
   If you are using this module you must terminate TLS connections at your reverse proxy.
+
+  HAProxy does not forward client TLS certificate fingerprints by default which breaks SASL EXTERNAL. Since v4.11.0 you can configure it to send a custom TLV containing the TLS fingerprint using a configuration similar to this:
+
+  ```
+  server inspircd_sha1   <ip>:<port> send-proxy-v2-ssl set-proxy-v2-tlv-fmt(0xe0) "%[ssl_c_der,sha1,hex,lower]"
+  server inspircd_sha256 <ip>:<port> send-proxy-v2-ssl set-proxy-v2-tlv-fmt(0xe0) "%[ssl_c_der,sha2(256),hex,lower]"
+  server inspircd_sha512 <ip>:<port> send-proxy-v2-ssl set-proxy-v2-tlv-fmt(0xe0) "%[ssl_c_der,sha2(512),hex,lower]"
+  ```

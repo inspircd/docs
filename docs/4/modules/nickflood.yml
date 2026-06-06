@@ -14,10 +14,26 @@ configuration:
     default: 1m
     description: |-
       The time period that nick changes should be locked for once a nick flood has been detected.
-  details: ""
+  - name: notifyrank
+    type: Number
+    required: false
+    default: 0
+    added: 4.11.0
+    description: |-
+      The lowest prefix rank that can receive a notification that a nick flood has been detected.
+  details: |+
+    The notifyrank field should be set to one of the following values:
+
+    Value    | Description
+    -------- | -----------
+    0        | All users on the channel can receive nick flood messages.
+    10000    | Users with channel prefix mode `v` (voice) and above can receive nick flood messages.
+    30000    | Users with channel prefix mode `o` (op) and above can receive nick flood messages.
+    *custom* | Users with a channel prefix mode created by [the customprefix module](/4/modules/customprefix) can receive nick flood messages.
   example: |-
     ```xml
-    <nickflood duration="60s">
+    <nickflood duration="1m"
+               notifyrank="0">
     ```
 
 chmodes:
