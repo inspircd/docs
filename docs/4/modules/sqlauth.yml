@@ -15,7 +15,7 @@ configuration:
     required: false
     default: null
     description: |-
-      The name of the column that the password is located in.
+      If `kdf` is defined then the name of the column that the password is located in.
   - name: dbid
     type: Text
     required: true
@@ -27,7 +27,7 @@ configuration:
     required: false
     default: md5,sha256
     description: |-
-      *Deprecated!* A comma-delimited list of hash algorithms to check the password against.
+      *Deprecated!* If `kdf` is not defined then a comma-delimited list of hash algorithms to generate `$*pass` variables for.
   - name: kdf
     type: Text
     required: false
@@ -45,7 +45,7 @@ configuration:
     required: true
     default: null
     description: |-
-      The SQL query to authenticate users with. If this query returns one or more rows it is considered a success otherwise it is considered a failure.
+      The SQL query to authenticate users with.
   - name: verbose
     type: Boolean
     required: false
@@ -79,7 +79,7 @@ configuration:
              kdf="bcrypt"
              dbid="sqlauth"
              killreason="Access denied"
-             query="SELECT * FROM users WHERE name='$nick' LIMIT 1"
+             query="SELECT * FROM users WHERE name='$nick'"
              verbose="no">
     ```
 
@@ -110,6 +110,10 @@ configuration:
     ```
 
 special_notes: |-
+  If `kdf` is defined then then the password from `/PASS` is compared using the specified KDF against the password field of each row in the query result and the user is considered to have authenticated successfully if any password matches.
+
+  Otherwise, if `kdf` is not defined a user is considered to have authenticated successfully if the query returns one or more rows. This authentication method is deprecated as it only works with plaintext and unsalted passwords.
+
   {% include "4/modules/_hash_table.md" %}
 
   {% include "4/modules/_sql_table.md" %}
