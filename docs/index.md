@@ -20,6 +20,7 @@ title: Introduction
 ### Developer
 
 - [Release Procedure](/release-procedure)
+- [Contribution Guide](/contributing)
 - [Server Protocol](/server)
 - [Versioning Policy](/versioning)
 
