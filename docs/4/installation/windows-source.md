@@ -49,7 +49,7 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSI
 To download the most recent code committed to Git you will need to have Git installed. You can install this from [the Git website](https://git-scm.com/download/win). Once you have Git installed you can download the latest source with the following command:
 
 ```sh
-git clone --branch insp4 "https://github.com/inspircd/inspircd.git"
+git clone --branch insp4 "https://github.com/inspircd/inspircd.git" ".\InspIRCd"
 ```
 
 A copy of the latest InspIRCd source code will now exist in the `inspircd` directory.
@@ -59,14 +59,14 @@ A copy of the latest InspIRCd source code will now exist in the `inspircd` direc
 First you will need to install the extra module dependencies. If you want to enable any modules which aren't built by default for legal reasons you should uncomment their dependencies in `conanfile.txt` now. Once you have done this you should install the dependencies.
 
 ```sh
-cd "[SOURCE]\win\build"
-conan install .. --build=missing
+cd ".\InspIRCd\win\build"
+conan install .. --build missing --deployer runtime_deploy --deployer-folder extradll --output-folder .
 ```
 
 Once Conan has finished installing all of the third party dependencies you should run CMake to generate the project files.
 
 ```sh
-cmake .. -A x64 -D CMAKE_BUILD_TYPE=Release
+cmake .. -A x64 -D "CMAKE_BUILD_TYPE=Release" -D "CMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake"
 ```
 
 When CMake finishes you you can now run the `msbuild PACKAGE.vcxproj /P:Configuration=Release /P:Platform=x64 /VERBOSITY:MINIMAL` command to build InspIRCd from source. On modern hardware this should take less than ten minutes to complete. If you prefer you can also just open InspIRCd.sln in Visual Studio and build the PACKAGE target.
