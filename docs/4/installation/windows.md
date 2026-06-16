@@ -16,14 +16,14 @@ First, download the package installer. If you have access to a PowerShell termin
 
 ```sh
 # Replace the URL here with the URL you obtained from the releases page.
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/inspircd/inspircd/releases/download/[VERSION]/InspIRCd-[VERSION].exe", "InspIRCd-[VERSION].exe")
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/inspircd/inspircd/releases/download/v{{ config.extra.releases.v4 }}/InspIRCd-{{ config.extra.releases.v4 }}.exe", "InspIRCd-{{ config.extra.releases.v4 }}.exe")
 ```
 
 Once the package installer has downloaded you can either double click it to install or run the following command:
 
 ```sh
 # Replace the filename here with the name of the file you obtained from the releases page.
-Start-Process ".\InspIRCd-[VERSION].exe"
+Start-Process ".\InspIRCd-{{ config.extra.releases.v4 }}.exe"
 ```
 
 ### Where does this package store important files?

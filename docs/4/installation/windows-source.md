@@ -33,13 +33,13 @@ Once you have the development tools installed you need to download the source co
 To download the most recent release tarball you will need to have access to a PowerShell terminal.
 
 ```sh
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/inspircd/inspircd/archive/refs/tags/[VERSION].zip" ".\inspircd-[VERSION].zip"
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/inspircd/inspircd/archive/refs/tags/v{{ config.extra.releases.v4 }}.zip" ".\InspIRCd-{{ config.extra.releases.v4 }}.zip"
 ```
 
 Once the archive has downloaded you can unpack it.
 
 ```sh
-Expand-Archive -Path ".\inspircd-[VERSION].zip" -DestinationPath ".\inspircd-[VERSION]"
+Expand-Archive -Path ".\InspIRCd-{{ config.extra.releases.v4 }}.zip" -DestinationPath ".\InspIRCd-{{ config.extra.releases.v4 }}"
 ```
 
 A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSION]` directory.
