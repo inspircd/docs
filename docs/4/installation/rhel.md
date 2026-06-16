@@ -1,5 +1,9 @@
 ---
 title: v4 RHEL Installation
+packages:
+    RHEL 8: inspircd-{{ config.extra.releases.v4 }}-1.el8.x86_64.rpm
+    RHEL 9: inspircd-{{ config.extra.releases.v4 }}-1.el9.x86_64.rpm
+    RHEL 10: inspircd-{{ config.extra.releases.v4 }}-1.el10.x86_64.rpm
 ---
 
 ## Installing InspIRCd 4 using the RHEL package
@@ -8,29 +12,42 @@ An official package for RHEL is maintained by the InspIRCd Team. You can downloa
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running RHEL 8, 9, and 10. You can also install the package on RHEL rebuilds like AlmaLinux and Rocky Linux.
+This package can be installed on all x86-64 systems running:
+
+{% for package in page.packages %}
+* {{ package }}
+{% endfor %}
+
+You can also install the package on RHEL rebuilds like AlmaLinux and Rocky Linux.
 
 ### How do I install this package?
 
 First, download the RPM package to your server using Wget. If you do not have Wget installed you can install it using `sudo yum install wget`.
 
 ```sh
-# Replace the URL here with the URL you obtained from the releases page.
-wget "https://github.com/inspircd/inspircd/releases/download/[VERSION]/inspircd-[VERSION].el8.x86_64.rpm"
+{%- for package in page.packages %}
+# Use this package on {{ package }} and rebuilds.
+wget "https://github.com/inspircd/inspircd/releases/download/v{{ config.extra.releases.v4 }}/{{ page.packages[package] }}"{% if not loop.last %}
+{% endif %}
+{%- endfor %}
 ```
 
 Once the package has downloaded ensure that the file has not been corrupted during download by running `sha256sum` and comparing its output to the hash specified on the releases page.
 
 ```sh
-# Replace the filename here with the name of the file you obtained from the releases page.
-sha256sum "./inspircd-[VERSION].el8.x86_64.rpm"
+# Use the appropriate command for your distribution.
+{%- for package in page.packages %}
+sha256sum "./{{ page.packages[package] }}" # {{ package }}
+{%- endfor %}
 ```
 
 If the hash matches the one specified on the releases page you can proceed to install the package.
 
 ```sh
-# Replace the filename here with the name of the file you obtained from the releases page.
-sudo yum install "./inspircd-[VERSION].el8.x86_64.rpm"
+# Use the appropriate command for your distribution.
+{%- for package in page.packages %}
+sudo yum install "./{{ page.packages[package] }}" # {{ package }}
+{%- endfor %}
 ```
 
 The package should now be installed and you can proceed to set up your [configuration](/4/configuration).

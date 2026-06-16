@@ -15,6 +15,9 @@ nav:
     - Developer API: https://api.inspircd.org
 exclude_docs: |
   **/_*
+extra:
+  releases:
+    v4: 4.11.0
 markdown_extensions:
     - admonition
     - extra

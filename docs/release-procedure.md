@@ -23,7 +23,8 @@ Name       | Description
 0. Tag the release with `git tag VERSION`.
 0. Run `git push UPSTREAM BRANCH` and `git push UPSTREAM VERSION`.
 0. Add a [GitHub release](https://github.com/inspircd/inspircd/tags) for the VERSION tag.
-0. Update the change log on the documentation site.
+0. Build UNIX packages for the release using [the package builder](https://github.com/inspircd/package-builder).
+0. Update the change log and the version in `extra.releases` on the documentation site.
 0. If the release fixes a security vulnerability then create an advisory on the documentation site.
 0. Create a news post on the website using the change log from the previous step.
 0. Mark the new news post as featured and unmark the previous one.

@@ -220,6 +220,15 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         if segments[0].isdigit():
             return segments[0]
 
+    def deep_render(self, value, env, context):
+        if isinstance(value, str):
+            return env.from_string(value).render(context)
+        elif isinstance(value, dict):
+            return {k: self.deep_render(v, env, context) for k, v in value.items()}
+        elif isinstance(value, list):
+            return [self.deep_render(item, env, context) for item in value]
+        return value
+
     def on_page_markdown(self, markdown, page, config, files):
         """Runs Jinja on an input markdown file, to produce another markdown file.
         Also renders metadata at the beginning of the file as a side-effect."""
@@ -239,14 +248,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "core_config_tags": self.core_config_tags(config, version),
             "core_commands": self.core_commands(config, version),
             "server_messages": self.server_messages(config),
+            "config": config,
             "version": version,
         }
 
         # Render page metadata, by mutating arguments.
-        page.meta = {
-            k: env.from_string(v).render(context) if isinstance(v, str) else v
-            for (k, v) in page.meta.items()
-        }
-
+        page.meta = context["page"] = self.deep_render(page.meta, env, context)
         template = env.from_string(markdown)
         return template.render(context)
