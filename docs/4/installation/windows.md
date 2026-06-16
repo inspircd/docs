@@ -8,7 +8,7 @@ An official package for Windows is maintained by the InspIRCd Team. You can down
 
 ### What systems are supported by this package?
 
-This package can be installed on all x86-64 systems running Windows 8 or newer.
+This package can be installed on all x86-64 systems running Windows 10 April 2018 Update or newer.
 
 ### How do I install this package?
 
