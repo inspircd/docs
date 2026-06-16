@@ -23,6 +23,9 @@ markdown_extensions:
     - extra
     - markdown_include.include:
           base_path: docs
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
 plugins:
     inspircd:
     search:
