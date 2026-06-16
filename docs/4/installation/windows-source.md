@@ -22,7 +22,7 @@ In order to build from source you will need to have the following development to
 
 0. [CMake 3.20 or newer](https://cmake.org/download/).
 
-0. [Conan](https://conan.io/downloads.html).
+0. [Conan 2.5 or newer](https://conan.io/downloads.html).
 
 0. [NSIS](https://nsis.sourceforge.io/Download).
 
@@ -42,7 +42,7 @@ Once the archive has downloaded you can unpack it.
 Expand-Archive -Path ".\InspIRCd-{{ config.extra.releases.v4 }}.zip" -DestinationPath ".\InspIRCd-{{ config.extra.releases.v4 }}"
 ```
 
-A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSION]` directory.
+A copy of the latest InspIRCd source code will now exist in the `InspIRCd-{{ config.extra.releases.v4 }}` directory.
 
 #### Git
 

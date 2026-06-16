@@ -36,16 +36,16 @@ To download the most recent release tarball you will need to have a download too
 
 ```sh
 # You can replace `wget` with `curl --remote-name` if using cURL.
-wget "https://github.com/inspircd/inspircd/archive/refs/tags/[VERSION].tar.gz"
+wget "https://github.com/inspircd/inspircd/archive/refs/tags/v{{ config.extra.releases.v4 }}.tar.gz"
 ```
 
 Once the archive has downloaded you can unpack it using an archival tool such as GNU Tar.
 
 ```sh
-tar -xvf "./inspircd-[VERSION].tar.gz"
+tar -xvf "./v{{ config.extra.releases.v4 }}.tar.gz"
 ```
 
-A copy of the latest InspIRCd source code will now exist in the `inspircd-[VERSION]` directory.
+A copy of the latest InspIRCd source code will now exist in the `inspircd-{{ config.extra.releases.v4 }}` directory.
 
 #### Git
 
