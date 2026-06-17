@@ -45,7 +45,7 @@ These rules also apply to non-InspIRCd spaces in cases where an individual is re
 
 * Do not privately message individuals asking for support unless invited to. The fastest way of obtaining support is asking in \#inspircd and waiting for someone to help you. The only exception to this is if the channel is moderated during a bot attack you can message an op to ask to be voiced.
 
-* Well-behaved bots are allowed but must not speak unless spoken to and must not be used for breaking these rules, ban evasion, or public logging.
+* Well-behaved bots are allowed but must not speak unless spoken to and must not be used for breaking these rules, ban evasion, or public logging. You should mark your bot using user mode +B (bot) if possible.
 
 ### Enforcement
 
