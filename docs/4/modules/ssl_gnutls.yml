@@ -151,7 +151,7 @@ configuration:
                 dhfile="dhparams.pem"
                 hash="sha3-256"
                 keyfile="key.pem"
-                mindhbits="1024"
+                mindhbits="2048"
                 outrecsize="2048"
                 priority="NORMAL"
                 requestclientcert="yes"
