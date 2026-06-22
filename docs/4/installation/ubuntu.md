@@ -8,7 +8,7 @@ packages:
 
 ## Installing InspIRCd 4 using the Ubuntu package
 
-An official package for Ubuntu is maintained by the InspIRCd Team. You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/latest).
+An official package for Ubuntu is maintained by the InspIRCd Team. You can download this from [the releases page](https://github.com/inspircd/inspircd/releases/v{{ config.extra.releases.v4 }}).
 
 ### What systems are supported by this package?
 
@@ -20,15 +20,26 @@ This package can be installed on all x86-64 systems running:
 
 ### How do I install this package?
 
+#### Remove the Ubuntu repository package
+
 If you've previously installed InspIRCd from the Ubuntu repositories you should start by backing up your config and data directories and removing the existing package.
 
 ```sh
-cp -r /etc/inspircd conf
-cp -r /var/run/inspircd data
-sudo apt-get purge inspircd
+cp -r /etc/inspircd ~/inspircd-conf
+cp -r /var/run/inspircd ~/inspircd-data
+sudo apt purge inspircd
 ```
 
-Then, download the .deb package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt-get install wget`.
+Once you have installed the new package you can copy these files back.
+
+```sh
+cp -r ~/inspircd-conf/* /etc/inspircd
+cp -r ~/inspircd-data/* /var/lib/inspircd
+```
+
+#### Download the package
+
+To start, download the .deb package to your server using Wget. If you do not have Wget installed you can install it using `sudo apt install wget`.
 
 ```sh
 {%- for package in page.packages %}
@@ -38,23 +49,44 @@ wget "https://github.com/inspircd/inspircd/releases/download/v{{ config.extra.re
 {%- endfor %}
 ```
 
-Once the package has downloaded ensure that the file has not been corrupted during download by running `sha256sum` and comparing its output to the hash specified on the releases page.
+#### Validate the package integrity (optional)
+
+If you want to validate the integrity of the downloaded package, SHA-256 checksums are available on the releases page. If you have `jq` installed you can automate fetching the release checksum using:
 
 ```sh
-# Use the appropriate command for your distribution.
 {%- for package in page.packages %}
-sha256sum "./{{ page.packages[package] }}" # {{ package }}
+# Fetches the expected checksum of the {{ package  }} package
+wget --quiet --output-document - "https://api.github.com/repos/inspircd/inspircd/releases/tags/v{{ config.extra.releases.v4 }}" | jq --raw-output 'first(.assets[] | select(.name == "{{ page.packages[package] }}").digest | ltrimstr("sha256:"))'{% if not loop.last %}
+{% endif %}
 {%- endfor %}
 ```
 
-If the hash matches the one specified on the releases page you can proceed to install the package.
+Once you have obtained the expected checksum for the package you can validate the integrity of the downloaded package by comparing it to the actual checksum from `sha256sum`.
 
 ```sh
-# Use the appropriate command for your distribution.
 {%- for package in page.packages %}
-sudo apt-get install "./{{ page.packages[package] }}" # {{ package }}
+# Calculates the actual checksum of the {{ package }} package
+sha256sum "./{{ page.packages[package] }}"{% if not loop.last %}
+{% endif %}
 {%- endfor %}
 ```
+
+If the checksum matches the one specified on the releases page you can proceed to install the package. Otherwise, you should redownload the package.
+
+#### Install the package
+
+To install the package pass the filename to `apt install`. If you want to check what extra packages will be installed first you can use the `--dry-run` flag.
+
+
+```sh
+{%- for package in page.packages %}
+# Installs the package on {{ package }}
+sudo apt install "./{{ page.packages[package] }}"{% if not loop.last %}
+{% endif %}
+{%- endfor %}
+```
+
+#### Configuration
 
 The package should now be installed and you can proceed to set up your [configuration](/4/configuration).
 
