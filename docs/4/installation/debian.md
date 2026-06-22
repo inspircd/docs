@@ -77,7 +77,6 @@ If the checksum matches the one specified on the releases page you can proceed t
 
 To install the package pass the filename to `apt install`. If you want to check what extra packages will be installed first you can use the `--dry-run` flag.
 
-
 ```sh
 {%- for package in page.packages %}
 # Installs the package on {{ package }}
