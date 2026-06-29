@@ -25,7 +25,7 @@ syntax:
   - MODULES :[<module-name>[=<module-link-data>]]+
   - MODSUPPORT :[<module-name>[=<module-link-data>]]+
   - CHANMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<mode-char>]+
-  - USERMODES :[<mode-type>:[<mode-rank>]:<mode-name>=[<mode-prefix>]<mode-char>]+
+  - USERMODES :[<mode-type>:<mode-name>=<mode-char>]+
   - END
 
 extra: |-
