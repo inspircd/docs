@@ -8,7 +8,7 @@ Occasionally we move modules that previously shipped with the previous major ver
 
 These modules will not be updated to the next major version of InspIRCd. If you wish to take over maintainership of one of these modules feel free to send a pull request updating the `ModAuthor` directive to your name and email address.
 
-## Modules moved in v4
+## Modules moved in v5
 
 ### banredirect
 
