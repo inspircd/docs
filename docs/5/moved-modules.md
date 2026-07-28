@@ -16,7 +16,7 @@ This module uses complicated ban parsing that does not work with extended bans. 
 
 ### cloak_md5
 
-This module was deprecated in v4 as it relies on insecure cryptography and, in the case of the half cloaking method, can be bypassed by anyone who is capable of doing IPv4 enumeration over at the most 65,536 addresses. There shouldn't be a use to need this anymore. All users should migrate to the cloak_sha256 module.
+This module was deprecated in v4 as it relies on insecure cryptography (MD-5) and, in the case of the half cloaking method, can be bypassed by anyone who is capable of doing IPv4 enumeration over at the most 65,536 addresses. All users should migrate to the cloak_sha256 module.
 
 ### customtitle
 
