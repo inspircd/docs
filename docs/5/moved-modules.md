@@ -12,7 +12,7 @@ These modules will not be updated to the next major version of InspIRCd. If you 
 
 ### banredirect
 
-This module uses complicated ban parsing that does not work with extended bans. Its behaviour has been replaced with extended ban `d:` (redirect) from the redirect module which will automatically rewrite banredirect bans into extended bans.
+This module uses complicated ban parsing that does not work with extended bans. Its behaviour has been replaced with extended ban `d:` (redirect) from the redirect module from v4.10.0 which will automatically rewrite banredirect bans into extended bans.
 
 ### cloak_md5
 
@@ -22,9 +22,9 @@ This module was deprecated in v4 as it relies on insecure cryptography (MD-5) an
 
 This module has been replaced by the newly rewritten swhois module. All users should migrate to the swhois module.
 
-### hash_md5
+### md5
 
-This module was deprecated in v4 as it implements an obsolete hashing algorithm. It is extremely insecure to use this for passwords and the only other use (hash_md5) was also deprecated and moved to contrib in v5.
+This module was deprecated in v4 as it implements an obsolete hashing algorithm. It is extremely insecure to use this for passwords and the only other use (cloak_md5) was also deprecated and moved to contrib in v5.
 
 ### starttls
 
