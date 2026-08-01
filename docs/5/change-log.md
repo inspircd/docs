@@ -14,6 +14,62 @@ TODO: create the pages that link to these:
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 5.0.0dev6
+
+**This development snapshot version of InspIRCd was released on 2026-08-01.**
+
+* Added support for LTO on release builds.
+
+* Developer: Added `close_range()` existence check to the global config header.
+
+* Developer: Added a method for comparing whether a name refers to a specific mode.
+
+* Developer: Added a method for consistently getting a description of a user for logging.
+
+* Developer: Added support for initializing message parameters from an initializer list.
+
+* Developer: Moved restarting from cmd_restart to the core.
+
+* Developer: Moved various mode methods only used for building ISUPPORT to core_info.
+
+* Developer: Removed `sigabbrev_np()` existence check from the global config header.
+
+* Developer: Reworked shutting down to allow specifying a reason to pass to users on disconnect.
+
+* Fixed `--disable-ownership` when building using the configure wrapper script.
+
+* Fixed building with PIE on some systems like Haiku that require extra build flags.
+
+* Fixed parsing special whois flags in the swhois module.
+
+* Fixed setting the special whois priority in the swhois module.
+
+* Fixed various time calculations overflowing if given a large value.
+
+* Fixed various warnings caused by non-virtual destructors in types with virtual methods.
+
+* Improved feature matching by requiring S2S capabilities to match in order to link.
+
+* Improved preprocessing scripts in the build system.
+
+* Merged all of the changes from the v4 development branch into the v5 development branch.
+
+* Moved S2S challenge authentication token to its own capability negotiation subcommand.
+
+* Moved Windows build configuration from a header to CMake.
+
+* Removed the `directive` tool and all remaining code relating to build directives.
+
+* Removed the long-obsolete Windows memory compatibility layer.
+
+* Reworked how list limits are read and applied to hopefully improve performance.
+
+* Reworked how S2S capability negotiation works to provide better error messages.
+
+* Reworked how time strings are built to avoid multithreading issues.
+
+* Updated the vendored libraries.
+
 ### InspIRCd 5.0.0dev5
 
 **This development snapshot version of InspIRCd was released on 2026-06-01.**
