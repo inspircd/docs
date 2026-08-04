@@ -29,6 +29,12 @@ software:
   description:
       InspIRCd package for FreeBSD.
 
+- name: Gentoo
+  website: https://packages.gentoo.org/packages/net-irc/inspircd
+  maintainer: Wade Cline
+  description:
+      InspIRCd package for Gentoo.
+
 - name: macOS (Homebrew)
   website: https://formulae.brew.sh/formula/inspircd
   maintainer: '*Several*'
