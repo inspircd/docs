@@ -7,7 +7,7 @@ name: Services
 description: |-
   Services manage nickname and channel ownership.
 
-  The version is the minimum required to work with the latest version of InspIRCd (v4).
+  The version is the minimum required to work with the latest stable branch of InspIRCd (v4).
 
 software:
 - name: Anope
