@@ -1,0 +1,23 @@
+# In order to be added to this list services MUST:
+#
+# * Work with the latest InspIRCd release.
+# * Comply with the project rules (https://docs.inspircd.org/rules/).
+
+name: Services
+description: |-
+  Services manage nickname and channel ownership.
+
+  The version is the minimum required to work with the latest version of InspIRCd (v4).
+
+software:
+- name: Anope
+  website: https://www.anope.org/
+  version: 2.0.7
+  description: |-
+    Anope is an open source set of IRC services. It is highly modular, with a vast number of configurable parameters, and is the most used IRC services package.
+
+- name: Atheme
+  website: https://atheme.github.io/atheme.html
+  version: 7.3.0-git
+  description: |-
+    Atheme is a set of IRC services designed for large IRC networks with high scalability requirements.

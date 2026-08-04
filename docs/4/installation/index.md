@@ -22,7 +22,7 @@ The InspIRCd team provide prebuilt packages for some common platforms. If you ar
 
 * [Windows](/4/installation/windows)
 
-Some distributions may ship their own InspIRCd packages. Using these is not recommended as they are frequently out of date and do not contain the latest security fixes applied upstream.
+Some distributions may ship their own InspIRCd packages. Using these is generally not recommended as they are often out of date and do not contain the latest security fixes applied upstream. We maintain a list of third-party packages that are kept up to date [here](/software/#packages).
 
 ### Source
 

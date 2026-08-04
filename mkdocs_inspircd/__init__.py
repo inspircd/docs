@@ -215,6 +215,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         paths = sorted(paths)  # sorts by message name
         return [load_yaml(path) for path in paths]
 
+    def software(self, config):
+        paths = pathlib.Path(config["docs_dir"]).glob("software/_*.yml")
+        paths = sorted(paths)  # sorts by software type
+        return [load_yaml(path) for path in paths]
+
     def page_version(self, url):
         segments = url.split("/")
         if segments[0].isdigit():
@@ -248,6 +253,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
             "core_config_tags": self.core_config_tags(config, version),
             "core_commands": self.core_commands(config, version),
             "server_messages": self.server_messages(config),
+            "software": self.software(config),
             "config": config,
             "version": version,
         }

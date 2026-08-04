@@ -1,0 +1,42 @@
+# In order to be added to this list packages MUST:
+#
+# * Be regularly kept up to date with the latest release.
+# * Receive minimal changes and have all relevant patches sent upstream.
+# * Comply with the project rules (https://docs.inspircd.org/rules/).
+
+name: Packages
+description: |-
+  InspIRCd packages for various distributions.
+
+  We only include third-party packages that are regularly updated on this list. For a full list of distribution packages please refer to [Repology](https://repology.org/project/inspircd/versions).
+
+software:
+- name: Alpine Linux
+  website: https://pkgs.alpinelinux.org/package/edge/community/x86_64/inspircd
+  maintainer: Ferass El Hafidi
+  description: |-
+    InspIRCd package for Alpine Linux.
+
+- name: Arch Linux (AUR)
+  website: https://aur.archlinux.org/packages/inspircd
+  maintainer: xiota
+  description: |-
+    InspIRCd AUR package for Arch Linux.
+
+- name: FreeBSD
+  website: https://www.freshports.org/irc/inspircd
+  maintainer: Dries Michiels
+  description:
+      InspIRCd package for FreeBSD.
+
+- name: macOS (Homebrew)
+  website: https://formulae.brew.sh/formula/inspircd
+  maintainer: '*Several*'
+  description:
+      InspIRCd Homebrew package for macOS.
+
+- name: NixOS
+  website: https://search.nixos.org/packages?channel=unstable&query=inspircd
+  maintainer: Lukas Epple
+  description: |-
+    InspIRCd package for NixOS.

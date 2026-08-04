@@ -7,15 +7,19 @@ title: Introduction
 
 <div class="col-md-4" markdown="1">
 
-### General
+### Support
 
 - [Frequently Asked Questions](/faq)
-- [License](/license)
-- [Packaging Advice](/packaging)
-- [Security Advisories](/security)
 - [Support](/support)
 - [Tutorials](/tutorials)
+
+### General
+
+- [License](/license)
+- [Packaging Advice](/packaging)
 - [Project Rules](/rules)
+- [Security Advisories](/security)
+- [Third-party Software](/software)
 
 ### Developer
 

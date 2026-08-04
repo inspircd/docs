@@ -1,0 +1,13 @@
+# In order to be added to this list software MUST:
+#
+# * Comply with the project rules (https://docs.inspircd.org/rules/).
+
+name: Other
+description: |-
+  Software that does not fit into another category.
+
+software:
+- name: irctest
+  website: https://github.com/progval/irctest
+  description: |-
+    Semi-automated conformance checking for IRC implementations.
