@@ -10,6 +10,7 @@ import jinja2
 
 from . import yml2md
 
+
 def main(filename):
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + "/templates"),
@@ -17,6 +18,7 @@ def main(filename):
     module_template = env.get_template("module.md.j2")
 
     print(yml2md(filename, module_template))
+
 
 if __name__ == "__main__":
     (_, filename) = sys.argv

@@ -6,34 +6,38 @@ be built by MkDocs like regular pages.
 import collections
 import fnmatch
 import functools
-import glob
 import pathlib
 
+import jinja2
+import mergedeep
 import mkdocs.exceptions
 import mkdocs.plugins
 import mkdocs.structure.files
-import jinja2
-import mergedeep;
 import yaml
 
 PACKAGE_DIR = pathlib.Path(__file__).parent.resolve()
 TEMPLATES_DIR = PACKAGE_DIR / "templates"
 
+
 @functools.lru_cache(10240)
 def load_yaml(filename):
     with filename.open() as fd:
         result = yaml.safe_load(fd)
-        if result is not None and 'INHERIT' in result:
-            relpath = result.pop('INHERIT')
+        if result is not None and "INHERIT" in result:
+            relpath = result.pop("INHERIT")
             abspath = filename.parent / relpath
             if not abspath.exists():
-                raise mkdocs.exceptions.ConfigurationError(f"Inherited data file '{relpath}' does not exist at '{abspath}'.")
+                raise mkdocs.exceptions.ConfigurationError(
+                    f"Inherited data file '{relpath}' does not exist at '{abspath}'."
+                )
             parent = load_yaml(abspath)
             result = mergedeep.merge(parent, result)
         return result
 
+
 def yml2md(filename, template):
     return template.render(load_yaml(filename))
+
 
 class ExtendedFile(mkdocs.structure.files.File):
     """Like the original File class, but can also be a .yml module
@@ -50,13 +54,18 @@ class ExtendedFile(mkdocs.structure.files.File):
         self.url = self._get_url(use_directory_urls)
 
     def is_documentation_page(self):
-        return super().is_documentation_page() or self.is_inspircd_module_yaml() or self.is_inspircd_servermsg_yaml()
+        return (
+            super().is_documentation_page()
+            or self.is_inspircd_module_yaml()
+            or self.is_inspircd_servermsg_yaml()
+        )
 
     def is_inspircd_module_yaml(self):
         return fnmatch.fnmatch(self.src_path, "*/modules/*.yml")
 
     def is_inspircd_servermsg_yaml(self):
         return fnmatch.fnmatch(self.src_path, "server/messages/*.yml")
+
 
 class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def __init__(self):
@@ -94,11 +103,11 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
     def modules(self, config, version):
         if version is None:
             return []
-        if not version in self._modules:
+        if version not in self._modules:
             self._modules[version] = []
             for module_file in pathlib.Path(config["docs_dir"]).glob(version + "/modules/*.yml"):
                 self._modules[version].append(load_yaml(module_file))
-                self._modules[version][-1]['version'] = version
+                self._modules[version][-1]["version"] = version
         return self._modules[version]
 
     def chmodes(self, config, version):
@@ -148,9 +157,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
         ]
 
     def extra_tag_fields(self, config, version):
-        extra_tag_fields = collections.defaultdict(
-            lambda: collections.defaultdict(list)
-        )
+        extra_tag_fields = collections.defaultdict(lambda: collections.defaultdict(list))
 
         for module in self.modules(config, version):
             for module_tag in module.get("configuration", []):
@@ -180,7 +187,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                     "name": mode["name"],
                     "type": "Character",
                     "default": mode["char"],
-                    "description": mode["description"]
+                    "description": mode["description"],
                 }
             )
 
@@ -191,7 +198,7 @@ class InspircdPlugin(mkdocs.plugins.BasePlugin):
                     "name": extban["name"],
                     "type": "Character",
                     "default": extban["char"],
-                    "description": extban["description"]
+                    "description": extban["description"],
                 }
             )
         return extra_tag_fields
