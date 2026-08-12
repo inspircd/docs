@@ -17,7 +17,7 @@ These rules apply to all InspIRCd project spaces including but not limited to:
 
 * The InspIRCd testnet at testnet.inspircd.org
 
-* The InspIRCd GitHub organisation
+* The InspIRCd GitHub and Codeberg organisations
 
 * The InspIRCd accounts on Bluesky and Mastodon
 
