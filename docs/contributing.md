@@ -2,8 +2,7 @@
 title: Contribution Guide
 ---
 
-!!! warning "Work in progress!"
-	This page is still being worked on. Please be patient until we are finished.
+{! _wip.md !}
 
 ## Contribution Guide
 
