@@ -32,6 +32,8 @@ configuration:
     ```
 
 special_notes: |-
+  HAProxy does not support authentication so you should make sure your IRCd listener is not accessible from the public internet to avoid origin spoofing.
+
   If you are using this module you must terminate TLS connections at your reverse proxy.
 
   HAProxy does not forward client TLS certificate fingerprints by default which breaks SASL EXTERNAL. Since v4.11.0 you can configure it to send a custom TLV containing the TLS fingerprint using a configuration similar to this:
