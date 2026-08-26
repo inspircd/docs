@@ -57,6 +57,7 @@ title: Introduction
 *Currently still early in development*
 
 - [Change Log](/5/change-log)
+    - [Overview of v5](/5/overview)
 
 ### InspIRCd 3 (old stable)
 
