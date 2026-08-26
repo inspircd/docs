@@ -20,7 +20,7 @@ All contributors are required to comply with the [project rules](/rules). Most o
 
 As well as our support channel `#inspircd` we also have `#inspircd.dev` where the latest development commits are announced. Joining this channel allows you to take part in discussions about the development of InspIRCd.
 
-## Tasks we need help with
+### Tasks we need help with
 
 ### Testing
 
