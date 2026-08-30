@@ -16,4 +16,4 @@ Non-security bugs and feature requests can be reported on our [issue tracker](ht
 If you don't need immediate support but want to be notified about releases you can keep up to date with InspIRCd news via [our news feed](https://www.inspircd.org/atom.xml) or via our social media accounts:
 
 - 🐘 Mastodon &mdash; [@inspircd@fosstodon.org](https://fosstodon.org/@inspircd)
-- ☁️ Bluesky &mdash; [@inspircd.bsky.social](https://bsky.app/profile/inspircd.bsky.social)
+- ☁️ Bluesky &mdash; [@inspircd.org](https://bsky.app/profile/inspircd.org)
