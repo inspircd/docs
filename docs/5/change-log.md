@@ -14,6 +14,38 @@ TODO: create the pages that link to these:
 
 This page lists changes which have happened between releases.
 
+### InspIRCd 5.0.0dev7
+
+**This development snapshot version of InspIRCd was released on 2026-09-01.**
+
+* Developer: Added `PrefixMode::IsPrefixChar` to allow checking if a character is valid for use as a mode prefix.
+
+* Developer: Added the `SKIP` and `PREFIX` options to `build_modules()`.
+
+* Developer: Automated the default implementation of events using the `DEFAULT_MODULE_EVENT` macro.
+
+* Developer: Moved enumerations relating to module properties and module event priorities to the `Module` class.
+
+* Developer: Removed the `VF_` prefix from module property flags.
+
+* Developer: Reordered the checks in `Module::GetPropertyString` to put the vendor module flag before core module flag.
+
+* Developer: Replaced `MODULE_ABI` with `INSPIRCD_MODULE_ABI` which is generated automatically based on the version.
+
+* Fixed various Python lint errors discovered by Ruff.
+
+* Merged all of the changes from the v4 development branch into the v5 development branch.
+
+* Moved the `randquote` module to inspircd-contrib.
+
+* Removed the `core_` prefix from the core module source files.
+
+* Removed the remainder of the Perl modules left over in the `make` directory.
+
+* Restricted what characters are allowed to be used as mode prefixes.
+
+* Split `<modes>` into `<channelmodes>` and `<usermodes>`.
+
 ### InspIRCd 5.0.0dev6
 
 **This development snapshot version of InspIRCd was released on 2026-08-01.**
