@@ -6,6 +6,76 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.12.0
+
+**This version of InspIRCd was released on 2026-09-05.**
+
+* Added network filtering to the AppArmor profile.
+
+* Added short flags to the `inspircd.1` man page.
+
+* Added support for the `FORCE_COLOR` and `NO_COLOR` environment variables to the build system.
+
+* Added support for UNIX socket bind paths containing spaces.
+
+* Added support for WebSocket-specific STS policies in the ircv3_sts module.
+
+* Allowed access to the example directory in the AppArmor profile.
+
+* Changed extended ban `R:` (account) to also match against account identifiers.
+
+* Changed ident snotices to use a consistent message format.
+
+* Changed the ircv3 module to tag `away-notify` messages with the original away time if the `server-time` extension is enabled.
+
+* Changed the sasl module to send an abort message to services when a user disconnects mid-authentication.
+
+* Fixed `/WEBIRC` erroneously not allowing an empty `<flags>` parameter.
+
+* Fixed build errors on OpenSSL 4.
+
+* Fixed checking whether OpenLDAP was built as re-entrant.
+
+* Fixed erroneously allowing HAProxy-sent UNIX socket paths with invalid characters.
+
+* Fixed erroneously exiting with the failure code on `/DIE`.
+
+* Fixed erroneously not prefixing usernames when an ident lookup throws an exception.
+
+* Fixed erroneously rejecting TLS groups without a nid in ssl_openssl.
+
+* Fixed erroneously sending `/CAP` responses with trailing whitespace.
+
+* Fixed erroneously sending malformed `ERR_NOSUCH{CHANNEL,NICK,SERVER}` messages when the value is from a `<trailing>` message.
+
+* Fixed flushing WebSocket frames when using native pings.
+
+* Fixed ident lookups failing when a user is very slow to connect.
+
+* Fixed occasional "Read null character from socket" errors when linking servers.
+
+* Fixed the encoding of the example quotes file to be UTF-8.
+
+* Fixed the escaping TLS certificate DN and issuer DN in the server protocol.
+
+* Fixed UNIX timestamps in `RPL_CHECK` erroneously being set to the current time.
+
+* Fixed user IP address strings erroneously being able to contain spaces.
+
+* Increased the default DNS timeout from 5 seconds to 10 seconds.
+
+* Made various internal changes in preparation for the IRCv3 extended-isupport specification.
+
+* Restored the protocol version to `CAPAB CAPABILITIES` in the server protocol.
+
+* Reworked the terminal output on startup to be more helpful.
+
+* Updated the documentation regarding MMDB vendors.
+
+* Updated the vendored libraries.
+
+* Updated the Windows dependencies.
+
 ## InspIRCd 4.11.0
 
 **This version of InspIRCd was released on 2026-06-06.**
