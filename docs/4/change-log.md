@@ -48,6 +48,8 @@ This page lists changes which have happened between releases.
 
 * Fixed erroneously sending malformed `ERR_NOSUCH{CHANNEL,NICK,SERVER}` messages when the value is from a `<trailing>` message.
 
+* Fixed escaping of a user's TLS certificate DN and issuer DN in the server protocol.
+
 * Fixed flushing WebSocket frames when using native pings.
 
 * Fixed ident lookups failing when a user is very slow to connect.
@@ -55,8 +57,6 @@ This page lists changes which have happened between releases.
 * Fixed occasional "Read null character from socket" errors when linking servers.
 
 * Fixed the encoding of the example quotes file to be UTF-8.
-
-* Fixed the escaping TLS certificate DN and issuer DN in the server protocol.
 
 * Fixed UNIX timestamps in `RPL_CHECK` erroneously being set to the current time.
 
