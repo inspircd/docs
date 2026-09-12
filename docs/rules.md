@@ -37,6 +37,12 @@ These rules also apply to non-InspIRCd spaces in cases where an individual is re
 
 * Feature requests and bug reports must be filed on GitHub only. The only exception to this is that security issues must be reported following [our security policy](https://github.com/inspircd/inspircd/security/policy).
 
+### Developer-specific rules
+
+* You must only contribute code that is your own work or that you have permission from the author to share. All code must also be contributed under the [GNU General Public License v2](/license).
+
+* Generative AI (Copilot, ChatGPT, etc) must not be used to create any part of your contribution. Generative AI produces low-quality code of questionable legality that the developer often does not understand and we do not have the resources to properly review such contributions.
+
 #### IRC-specific rules
 
 * The purpose of \#inspircd is to support users of InspIRCd and the purpose of \#inspircd.dev is to have technical discussions about InspIRCd. Off-topic discussion is allowed in these channels but please keep it to a minimum when on-topic discussion is happening.
