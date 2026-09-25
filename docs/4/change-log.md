@@ -6,6 +6,20 @@ title: v4 Change Log
 
 This page lists changes which have happened between releases.
 
+## InspIRCd 4.12.1
+
+**This version of InspIRCd was released on 2026-09-26.**
+
+* Applied a patch to a vendored library to fix building on 32-bit x86 systems.
+
+* Backported various minor docs changes from the master branch.
+
+* Fixed an issue with the v3 protocol compatibility layer where big channels with parameter modes set would not be synchronised correctly.
+
+* Fixed the httpd module rejecting HTTP requests that are split across multiple TCP packets.
+
+* Updated the vendored libraries.
+
 ## InspIRCd 4.12.0
 
 **This version of InspIRCd was released on 2026-09-05.**
