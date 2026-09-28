@@ -37,7 +37,7 @@ These rules also apply to non-InspIRCd spaces in cases where an individual is re
 
 * Feature requests and bug reports must be filed on GitHub only. The only exception to this is that security issues must be reported following [our security policy](https://github.com/inspircd/inspircd/security/policy).
 
-### Developer-specific rules
+#### Developer-specific rules
 
 * You must only contribute code that is your own work or that you have permission from the author to share. All code must also be contributed under the [GNU General Public License v2](/license).
 
