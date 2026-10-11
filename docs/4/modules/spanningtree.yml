@@ -377,4 +377,4 @@ stats:
   description: Lists servers which the server may connect to or allow connections from.
 
 special_notes: |-
-  Linking non-local servers without TLS is a serious privacy risk and will be removed in the next major version of InspIRCd.
+  For security reasons TLS is required to link non-local servers. You can still use a self-signed certificate for server links but it is strongly recommended that you use fingerprint pinning via `<link:fingerprint>` to avoid potential MITM attacks.
