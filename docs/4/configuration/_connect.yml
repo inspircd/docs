@@ -162,6 +162,8 @@ details: |+
 
   {! 4/_motd.md !}
 
+  Users receive a command-specific amount of penalty for each message sent which is then drained at a rate of `<connect:commandrate>` per second. If they hit the limit specified in `<connect:threshold> * 1000` their message processing is either delayed (if `<connect:fakelag>` is on) or are killed with the message "Excess Flood" (if `<connect:fakelag>` is off).
+
 example: |-
   Denies connections to clients connecting from 3ffe::0/32:
 
