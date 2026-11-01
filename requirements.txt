@@ -1,4 +1,4 @@
-Markdown==3.11
+Markdown==3.11.2
 markdown-include==0.8.1
 mkdocs==1.6.1
 mkdocs-cinder==1.2.0
